@@ -4,12 +4,33 @@
 // tested 2026-08-22) — that section is fetched live client-side via the whitelisted
 // TradeJournal Pro Vercel proxy instead (see script.js).
 
-import { writeFile, mkdir } from 'node:fs/promises';
+import { writeFile, mkdir, readFile } from 'node:fs/promises';
+
+// Le flux JSON gratuit de ForexFactory ne contient JAMAIS de valeur 'actual'
+// (vérifié en direct). Elle est récupérée séparément par scripts/fetch-actuals.mjs
+// (Apify, 1x/jour) et écrite dans data/eco-calendar.json. Ce script tournant
+// toutes les 5min, il doit donc préserver les 'actual' déjà présents au lieu de
+// les écraser à chaque passage.
+async function loadPreviousActuals() {
+  try {
+    const prev = JSON.parse(await readFile('data/eco-calendar.json', 'utf-8'));
+    const map = new Map();
+    for (const e of prev.events || []) {
+      if (e.actual) map.set(`${e.title}|${e.country}|${e.date.slice(0, 10)}`, e.actual);
+    }
+    return map;
+  } catch {
+    return new Map();
+  }
+}
 
 async function fetchEcoCalendar() {
-  const res = await fetch('https://nfs.faireconomy.media/ff_calendar_thisweek.json', {
-    headers: { 'User-Agent': 'Mozilla/5.0' },
-  });
+  const [res, previousActuals] = await Promise.all([
+    fetch('https://nfs.faireconomy.media/ff_calendar_thisweek.json', {
+      headers: { 'User-Agent': 'Mozilla/5.0' },
+    }),
+    loadPreviousActuals(),
+  ]);
   if (!res.ok) throw new Error(`ForexFactory HTTP ${res.status}`);
   const raw = await res.json();
   if (!Array.isArray(raw)) throw new Error('eco-cal: invalid response (not array)');
@@ -22,7 +43,7 @@ async function fetchEcoCalendar() {
       impact: e.impact,
       forecast: e.forecast || '',
       previous: e.previous || '',
-      actual: e.actual || '',
+      actual: e.actual || previousActuals.get(`${e.title}|${e.country}|${e.date.slice(0, 10)}`) || '',
     }));
 }
 
