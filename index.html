@@ -22,6 +22,30 @@
     </div>
   </header>
 
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+      "symbols": [
+        { "proName": "FX:EURUSD", "title": "EUR/USD" },
+        { "proName": "FX:GBPUSD", "title": "GBP/USD" },
+        { "proName": "FX:USDJPY", "title": "USD/JPY" },
+        { "proName": "FX:USDCHF", "title": "USD/CHF" },
+        { "proName": "FX:AUDUSD", "title": "AUD/USD" },
+        { "proName": "FX:USDCAD", "title": "USD/CAD" },
+        { "proName": "FX:NZDUSD", "title": "NZD/USD" },
+        { "proName": "OANDA:XAUUSD", "title": "Gold" },
+        { "proName": "BITSTAMP:BTCUSD", "title": "Bitcoin" }
+      ],
+      "showSymbolLogo": true,
+      "isTransparent": true,
+      "displayMode": "adaptive",
+      "colorTheme": "dark",
+      "locale": "fr"
+    }
+    </script>
+  </div>
+
   <main>
     <section class="panel">
       <h2>Force des Devises</h2>

@@ -66,6 +66,11 @@ body {
 }
 #refreshBtn:hover { border-color: var(--accent); color: var(--accent); }
 
+.tradingview-widget-container {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
 main {
   max-width: 900px;
   margin: 0 auto;
