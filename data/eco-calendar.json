@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-22T23:23:38.567Z",
+  "timestamp": "2026-08-22T23:30:34.779Z",
   "events": [
     {
       "title": "BusinessNZ Services Index",
@@ -440,15 +440,6 @@
       "impact": "Low",
       "forecast": "3.3%",
       "previous": "3.0%",
-      "actual": ""
-    },
-    {
-      "title": "ECB President Lagarde Speaks",
-      "country": "EUR",
-      "date": "2026-08-19T03:10:00-04:00",
-      "impact": "Medium",
-      "forecast": "",
-      "previous": "",
       "actual": ""
     },
     {

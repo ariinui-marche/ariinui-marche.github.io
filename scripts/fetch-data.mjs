@@ -6,45 +6,59 @@
 
 import { writeFile, mkdir, readFile } from 'node:fs/promises';
 
-// Le flux JSON gratuit de ForexFactory ne contient JAMAIS de valeur 'actual'
-// (vérifié en direct). Elle est récupérée séparément par scripts/fetch-actuals.mjs
-// (Apify, 1x/jour) et écrite dans data/eco-calendar.json. Ce script tournant
-// toutes les 5min, il doit donc préserver les 'actual' déjà présents au lieu de
-// les écraser à chaque passage.
-async function loadPreviousActuals() {
+// Le flux JSON gratuit de ForexFactory ne couvre QUE la semaine en cours (pas
+// d'historique, pas de semaines futures au-delà) et ne contient JAMAIS de valeur
+// 'actual' (vérifié en direct). Ce script tournant toutes les 5min et écrasant
+// data/eco-calendar.json à chaque fois, on accumule désormais les événements
+// au lieu de les remplacer : chaque nouvelle semaine s'ajoute aux précédentes
+// déjà enregistrées (clé title|country|jour), qui restent inchangées. L'historique
+// se construit ainsi progressivement à partir d'aujourd'hui (rien de rétroactif
+// avant la mise en place de ce mécanisme).
+async function loadPreviousEvents() {
   try {
     const prev = JSON.parse(await readFile('data/eco-calendar.json', 'utf-8'));
-    const map = new Map();
-    for (const e of prev.events || []) {
-      if (e.actual) map.set(`${e.title}|${e.country}|${e.date.slice(0, 10)}`, e.actual);
-    }
-    return map;
+    return prev.events || [];
   } catch {
-    return new Map();
+    return [];
   }
 }
 
+function eventKey(e) {
+  return `${e.title}|${e.country}|${e.date.slice(0, 10)}`;
+}
+
 async function fetchEcoCalendar() {
-  const [res, previousActuals] = await Promise.all([
+  const [res, previousEvents] = await Promise.all([
     fetch('https://nfs.faireconomy.media/ff_calendar_thisweek.json', {
       headers: { 'User-Agent': 'Mozilla/5.0' },
     }),
-    loadPreviousActuals(),
+    loadPreviousEvents(),
   ]);
   if (!res.ok) throw new Error(`ForexFactory HTTP ${res.status}`);
   const raw = await res.json();
   if (!Array.isArray(raw)) throw new Error('eco-cal: invalid response (not array)');
-  return raw
-    .filter((e) => e.impact !== 'Non-Economic')
-    .map((e) => ({
+
+  const merged = new Map();
+  for (const e of previousEvents) merged.set(eventKey(e), e);
+
+  for (const e of raw) {
+    if (e.impact === 'Non-Economic') continue;
+    const fresh = {
       title: e.title,
       country: e.country,
       date: e.date,
       impact: e.impact,
       forecast: e.forecast || '',
       previous: e.previous || '',
-      actual: e.actual || previousActuals.get(`${e.title}|${e.country}|${e.date.slice(0, 10)}`) || '',
-    }));
+      actual: '',
+    };
+    const key = eventKey(fresh);
+    const old = merged.get(key);
+    fresh.actual = e.actual || old?.actual || '';
+    merged.set(key, fresh);
+  }
+
+  return [...merged.values()].sort((a, b) => new Date(a.date) - new Date(b.date));
 }
 
 function decodeEntities(s) {
