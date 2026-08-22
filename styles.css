@@ -90,6 +90,22 @@ main {
   color: var(--text-dim);
 }
 
+.panel-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+.panel-toggle .chevron {
+  font-size: 12px;
+  transition: transform 0.15s ease;
+}
+.panel-toggle[aria-expanded="false"] .chevron { transform: rotate(-90deg); }
+.panel-toggle[aria-expanded="false"] { margin-bottom: 0; }
+
+.currency-grid.collapsed { display: none; }
+
 .currency-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));

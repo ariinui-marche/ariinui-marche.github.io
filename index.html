@@ -24,8 +24,11 @@
 
   <main>
     <section class="panel">
-      <h2>Force des Devises</h2>
-      <div id="currencyGrid" class="currency-grid"></div>
+      <h2 class="panel-toggle" id="currencyToggle" aria-expanded="false" aria-controls="currencyGrid">
+        Force des Devises
+        <span class="chevron">▾</span>
+      </h2>
+      <div id="currencyGrid" class="currency-grid collapsed"></div>
     </section>
 
     <section class="panel">

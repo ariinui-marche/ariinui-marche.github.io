@@ -280,6 +280,11 @@ async function loadAll() {
 }
 
 document.getElementById('refreshBtn').addEventListener('click', loadAll);
+document.getElementById('currencyToggle').addEventListener('click', (e) => {
+  const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
+  e.currentTarget.setAttribute('aria-expanded', String(!expanded));
+  document.getElementById('currencyGrid').classList.toggle('collapsed', expanded);
+});
 document.getElementById('impactFilters').addEventListener('click', (e) => {
   const btn = e.target.closest('.filter-btn');
   if (!btn) return;
