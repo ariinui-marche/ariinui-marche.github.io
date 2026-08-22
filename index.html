@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marché — Ariinui</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Marché</h1>
+    <div class="update-info">
+      <span id="updateStatus">Chargement…</span>
+      <button id="refreshBtn" title="Rafraîchir">⟳</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Force des Devises</h2>
+      <div id="currencyGrid" class="currency-grid"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Calendrier Économique</h2>
+      <div class="filters" id="impactFilters">
+        <button class="filter-btn active" data-impact="all">Tout</button>
+        <button class="filter-btn" data-impact="High">High</button>
+        <button class="filter-btn" data-impact="Medium">Medium</button>
+        <button class="filter-btn" data-impact="Low">Low</button>
+      </div>
+      <div id="ecoList" class="eco-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Données : BabyPips MarketMilk + ForexFactory · rafraîchi automatiquement toutes les 5 min</span>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
