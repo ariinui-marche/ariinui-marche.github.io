@@ -1,12 +1,54 @@
 {
-  "timestamp": "2026-08-22T11:57:58.659Z",
+  "timestamp": "2026-08-22T12:31:18.407Z",
   "items": [
     {
       "title": "2026-08-22 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-22T11:51:59.000Z",
+      "pubDate": "2026-08-22T12:30:59.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "BofA maintains underperform ratings on six BDC stocks",
+      "link": "https://www.investing.com/news/stock-market-news/bofa-maintains-underperform-ratings-on-six-bdc-stocks-93CH-4872361",
+      "pubDate": "2026-08-22T12:09:48.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Wolfe Research sees CNH stock flat 2027 outlook on commodity prices",
+      "link": "https://www.investing.com/news/stock-market-news/wolfe-research-sees-cnh-stock-flat-2027-outlook-on-commodity-prices-93CH-4872360",
+      "pubDate": "2026-08-22T12:05:56.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Jefferies sees metals breakout on currency concerns",
+      "link": "https://www.investing.com/news/stock-market-news/jefferies-sees-metals-breakout-on-currency-concerns-93CH-4872341",
+      "pubDate": "2026-08-22T11:56:55.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "US hits Canadian goods with 50% tariffs after trade talks fail",
+      "link": "https://www.investing.com/news/commodities-news/us-canadian-trade-teams-to-meet-again-as-tariffs-deadline-looms-4871745",
+      "pubDate": "2026-08-22T11:48:43.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Gamma, dealer hedging, and the 0DTE effect on market dynamics",
+      "link": "https://www.investing.com/news/stock-market-news/gamma-dealer-hedging-and-the-0dte-effect-on-market-dynamics-93CH-4872338",
+      "pubDate": "2026-08-22T11:45:15.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "BofA says CTA Treasury shorts stable, euro short-cover risk rises",
+      "link": "https://www.investing.com/news/stock-market-news/bofa-says-cta-treasury-shorts-stable-euro-shortcover-risk-rises-93CH-4872336",
+      "pubDate": "2026-08-22T11:40:48.000Z",
+      "description": "",
+      "source": "Investing.com"
     },
     {
       "title": "e.l.f. Beauty SVP Joshua Franks sells $571,800 in common stock",
@@ -42,48 +84,6 @@
       "pubDate": "2026-08-22T10:59:29.000Z",
       "description": "XRP price suffered a brutal 37% flash crash on Saturday, August 22, as roughly $500 million in leveraged long positions were liquidated across the crypto market within minutes. The move came just days after XRP had rallied more than 60% ove",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Braze CBO Astha Malik sells $464,910 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/braze-cbo-astha-malik-sells-464910-in-stock-93CH-4872327",
-      "pubDate": "2026-08-22T10:16:29.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Bitcoin holds above $77,000 after Treasury-fuelled short squeeze",
-      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-holds-above-77000-after-treasuryfuelled-short-squeeze-4872323",
-      "pubDate": "2026-08-22T10:01:31.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Braze CTO Hyman sells $282,288 of company stock",
-      "link": "https://www.investing.com/news/insider-trading-news/braze-cto-hyman-sells-282288-of-company-stock-93CH-4872326",
-      "pubDate": "2026-08-22T10:01:06.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Trinet SVP Anthony Treadway sells $74,546 in company stock",
-      "link": "https://www.investing.com/news/insider-trading-news/trinet-svp-anthony-treadway-sells-74546-in-company-stock-93CH-4872325",
-      "pubDate": "2026-08-22T10:00:57.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Heritage Insurance president Johns sells $117,864 in company stock",
-      "link": "https://www.investing.com/news/insider-trading-news/heritage-insurance-president-johns-sells-117864-in-company-stock-93CH-4872322",
-      "pubDate": "2026-08-22T09:46:03.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Iran leaders urge end to war as U.S. prepares tougher sanctions",
-      "link": "https://www.investing.com/news/economy-news/us-iran-trade-warnings-as-new-sanctions-loom-and-hormuz-oil-flows-stall-4872251",
-      "pubDate": "2026-08-22T09:34:34.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Zcash Price Hits 8-Year High as Grayscale ETF Gets Closer",
@@ -401,13 +401,6 @@
       "source": "Reuters"
     },
     {
-      "title": "Treasury buyback renews dollar-debasement fears",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMkkwenhydmpyZmx1Z0lxTjNQN0NXRDJtbjd4UEFkLVllcks3M05JM1VlQnJ5WDNmRDJTbHhValJwSmt0SnpFdllKYnRUcGNyY3lDNDBYZ1ZTWWtDaklOeDgzVUFqbzZyeWRLQ05waUV1aUd3LTRyRGlqc1FYaHNvNm1SZE83S0ZOYXNrejRwNXZ2N19BRWNka2FuTzB6ay01OUNuREtR?oc=5",
-      "pubDate": "2026-08-21T14:03:54.000Z",
-      "description": "Treasury buyback renews dollar-debasement fears&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "Gold Above $4,600 on Weaker Dollar, Debt Fears",
       "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNVHRaU0k0N2ZxMk9HQnMwSElUZEkyVy1xZGd1VURRenRLbWc5NS1FSTVBLXdSLTUwMnd5MVk5X3F3VHNERkRoWEI3S0NpUHVYemdybWVXREpOeDBIVlVRcjdUZld1Ylh3V0NDRU1LeWRrZExBYkxHZmV4bW5fTnotVUExYllodkVpX1BhNS0zUzBGTnhTdXc?oc=5",
       "pubDate": "2026-08-21T13:15:00.000Z",
@@ -490,6 +483,13 @@
       "pubDate": "2026-08-21T07:00:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "Treasury buyback renews dollar-debasement fears",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMkkwenhydmpyZmx1Z0lxTjNQN0NXRDJtbjd4UEFkLVllcks3M05JM1VlQnJ5WDNmRDJTbHhValJwSmt0SnpFdllKYnRUcGNyY3lDNDBYZ1ZTWWtDaklOeDgzVUFqbzZyeWRLQ05waUV1aUd3LTRyRGlqc1FYaHNvNm1SZE83S0ZOYXNrejRwNXZ2N19BRWNka2FuTzB6ay01OUNuREtR?oc=5",
+      "pubDate": "2026-08-21T05:04:00.000Z",
+      "description": "Treasury buyback renews dollar-debasement fears&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "Making Sense of the Growing Chorus for Faster Rate Hikes in Japan - Bloomberg",
