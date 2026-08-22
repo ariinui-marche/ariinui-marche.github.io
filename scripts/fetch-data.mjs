@@ -62,6 +62,12 @@ const NEWS_FEEDS = [
 const REUTERS_QUERY =
   'site:reuters.com (intitle:forex OR intitle:currency OR intitle:currencies OR intitle:dollar OR intitle:yen OR intitle:euro OR intitle:sterling OR intitle:gold OR intitle:bitcoin) when:2d';
 
+// Grands médias financiers (hors Reuters, déjà couvert séparément) — évite le
+// bruit d'un Google News sans restriction de source (sport, actu générale...)
+const GOOGLE_NEWS_QUERY =
+  '(site:cnbc.com OR site:bloomberg.com OR site:wsj.com OR site:marketwatch.com OR site:forbes.com) ' +
+  '(intitle:forex OR intitle:currency OR intitle:currencies OR intitle:dollar OR intitle:yen OR intitle:euro OR intitle:sterling OR intitle:gold OR intitle:bitcoin) when:1d';
+
 async function fetchOneFeed({ url, source }) {
   const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
   if (!res.ok) throw new Error(`${source} RSS HTTP ${res.status}`);
@@ -79,9 +85,19 @@ async function fetchReutersFeed() {
     .filter((it) => !/\|\s*Stock Price/i.test(it.title));
 }
 
+async function fetchGoogleNewsFeed() {
+  const url = `https://news.google.com/rss/search?q=${encodeURIComponent(GOOGLE_NEWS_QUERY)}&hl=en-US&gl=US&ceid=US:en`;
+  const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  if (!res.ok) throw new Error(`Google News RSS HTTP ${res.status}`);
+  const xml = await res.text();
+  return parseRSS(xml, 'Google News')
+    .map((it) => ({ ...it, title: it.title.replace(/\s*-\s*(CNBC|Bloomberg\.com|WSJ|MarketWatch|Forbes)\s*$/i, '') }))
+    .filter((it) => !/\|\s*Stock Price/i.test(it.title));
+}
+
 async function fetchMarketNews() {
-  const feedFetches = [...NEWS_FEEDS.map(fetchOneFeed), fetchReutersFeed()];
-  const feedNames = [...NEWS_FEEDS.map((f) => f.source), 'Reuters'];
+  const feedFetches = [...NEWS_FEEDS.map(fetchOneFeed), fetchReutersFeed(), fetchGoogleNewsFeed()];
+  const feedNames = [...NEWS_FEEDS.map((f) => f.source), 'Reuters', 'Google News'];
   const results = await Promise.allSettled(feedFetches);
 
   const items = [];
