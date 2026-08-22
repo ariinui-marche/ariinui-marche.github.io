@@ -1,12 +1,19 @@
 {
-  "timestamp": "2026-08-22T08:58:37.666Z",
+  "timestamp": "2026-08-22T09:24:31.323Z",
   "items": [
     {
       "title": "2026-08-22 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-22T08:55:00.000Z",
+      "pubDate": "2026-08-22T09:15:01.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "Ukrainian drones hit Ozon warehouse as Russia reports major overnight attack",
+      "link": "https://www.investing.com/news/economy-news/ukrainian-drones-hit-ozon-warehouse-as-russia-reports-major-overnight-attack-4872319",
+      "pubDate": "2026-08-22T08:50:16.000Z",
+      "description": "",
+      "source": "Investing.com"
     },
     {
       "title": "Iran grants permission for a number of Iraqi oil tankers to pass through Hormuz",
@@ -75,13 +82,6 @@
       "title": "Vatican to build €100 million renewable energy plant, sources say",
       "link": "https://www.investing.com/news/commodities-news/vatican-to-build-100-million-renewable-energy-plant-sources-say-4872308",
       "pubDate": "2026-08-22T07:12:37.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Bitcoin RSI hits 87 with MFI maxed at 100: Hourly levels",
-      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-coiled-at-63591-with-volatility-at-6month-lows-live-levels-93CH-4862234",
-      "pubDate": "2026-08-22T07:02:24.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -193,7 +193,7 @@
     {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-21T20:00:04.000Z",
+      "pubDate": "2026-08-21T19:59:45.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
     },
@@ -408,6 +408,13 @@
       "source": "Reuters"
     },
     {
+      "title": "Treasury buyback renews dollar-debasement fears",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMkkwenhydmpyZmx1Z0lxTjNQN0NXRDJtbjd4UEFkLVllcks3M05JM1VlQnJ5WDNmRDJTbHhValJwSmt0SnpFdllKYnRUcGNyY3lDNDBYZ1ZTWWtDaklOeDgzVUFqbzZyeWRLQ05waUV1aUd3LTRyRGlqc1FYaHNvNm1SZE83S0ZOYXNrejRwNXZ2N19BRWNka2FuTzB6ay01OUNuREtR?oc=5",
+      "pubDate": "2026-08-21T14:03:54.000Z",
+      "description": "Treasury buyback renews dollar-debasement fears&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
       "title": "Gold Above $4,600 on Weaker Dollar, Debt Fears",
       "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNVHRaU0k0N2ZxMk9HQnMwSElUZEkyVy1xZGd1VURRenRLbWc5NS1FSTVBLXdSLTUwMnd5MVk5X3F3VHNERkRoWEI3S0NpUHVYemdybWVXREpOeDBIVlVRcjdUZld1Ylh3V0NDRU1LeWRrZExBYkxHZmV4bW5fTnotVUExYllodkVpX1BhNS0zUzBGTnhTdXc?oc=5",
       "pubDate": "2026-08-21T13:15:00.000Z",
@@ -490,13 +497,6 @@
       "pubDate": "2026-08-21T07:00:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
-    },
-    {
-      "title": "Treasury buyback renews dollar-debasement fears",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMkkwenhydmpyZmx1Z0lxTjNQN0NXRDJtbjd4UEFkLVllcks3M05JM1VlQnJ5WDNmRDJTbHhValJwSmt0SnpFdllKYnRUcGNyY3lDNDBYZ1ZTWWtDaklOeDgzVUFqbzZyeWRLQ05waUV1aUd3LTRyRGlqc1FYaHNvNm1SZE83S0ZOYXNrejRwNXZ2N19BRWNka2FuTzB6ay01OUNuREtR?oc=5",
-      "pubDate": "2026-08-21T05:04:00.000Z",
-      "description": "Treasury buyback renews dollar-debasement fears&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "Making Sense of the Growing Chorus for Faster Rate Hikes in Japan",
