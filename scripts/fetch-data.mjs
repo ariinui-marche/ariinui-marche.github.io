@@ -37,7 +37,8 @@ function decodeEntities(s) {
 
 function parseRSS(xml, source) {
   const items = [];
-  const itemBlocks = xml.match(/<item>[\s\S]*?<\/item>/g) || [];
+  // [^>]* accepte les attributs (ex. <item rdf:about="..."> en RSS 1.0/RDF)
+  const itemBlocks = xml.match(/<item[^>]*>[\s\S]*?<\/item>/g) || [];
   for (const block of itemBlocks) {
     const get = (tag) => {
       const m = block.match(new RegExp(`<${tag}>(?:<!\\[CDATA\\[)?([\\s\\S]*?)(?:\\]\\]>)?<\\/${tag}>`));
@@ -45,7 +46,8 @@ function parseRSS(xml, source) {
     };
     const title = get('title');
     const link = get('link');
-    const pubDate = get('pubDate');
+    // RSS 1.0/RDF (ex. RBA, Bank of Canada) utilise <dc:date> au lieu de <pubDate>
+    const pubDate = get('pubDate') || get('dc:date');
     const description = get('description').replace(/<[^>]+>/g, '').slice(0, 240);
     if (!title || !link) continue;
     items.push({ title, link, pubDate: new Date(pubDate).toISOString(), description, source });
@@ -64,6 +66,9 @@ const NEWS_FEEDS = [
   { url: 'https://www.federalreserve.gov/feeds/speeches.xml', source: 'Federal Reserve' },
   // Flux combiné (communiqués + discours + conférences de presse)
   { url: 'https://www.ecb.europa.eu/rss/press.html', source: 'European Central Bank' },
+  { url: 'https://www.boj.or.jp/en/rss/whatsnew.xml', source: 'Bank of Japan' },
+  { url: 'https://www.rba.gov.au/rss/rss-cb-media-releases.xml', source: 'Reserve Bank of Australia' },
+  { url: 'https://www.bankofcanada.ca/content_type/press-releases/feed/', source: 'Bank of Canada' },
 ];
 
 const REUTERS_QUERY =

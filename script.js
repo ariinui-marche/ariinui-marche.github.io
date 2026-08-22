@@ -3,6 +3,9 @@ const SOURCE_CURRENCY = {
   'Bank of England': 'GBP',
   'Federal Reserve': 'USD',
   'European Central Bank': 'EUR',
+  'Bank of Japan': 'JPY',
+  'Reserve Bank of Australia': 'AUD',
+  'Bank of Canada': 'CAD',
 };
 
 const CURRENCY_FLAGS = {
