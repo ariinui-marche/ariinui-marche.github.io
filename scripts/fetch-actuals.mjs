@@ -20,6 +20,8 @@ const APIFY_TOKEN = process.env.APIFY_TOKEN;
 if (!APIFY_TOKEN) throw new Error('APIFY_TOKEN manquant (secret GitHub Actions)');
 
 const today = new Date().toISOString().slice(0, 10);
+const startDate = process.env.ACTUALS_START_DATE || today;
+const endDate = process.env.ACTUALS_END_DATE || today;
 
 const res = await fetch(
   `https://api.apify.com/v2/acts/scrapemint~forexfactory-economic-calendar/run-sync-get-dataset-items?token=${APIFY_TOKEN}`,
@@ -28,8 +30,8 @@ const res = await fetch(
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       range: 'custom',
-      startDate: today,
-      endDate: today,
+      startDate,
+      endDate,
       impactLevels: ['high'],
       currencies: [],
     }),
@@ -40,19 +42,32 @@ const items = await res.json();
 
 const norm = (s) => (s || '').trim().toLowerCase();
 
-const actualsByKey = new Map();
+// Groupé par titre+devise seulement : le jour calendaire d'un même événement peut
+// différer d'1 jour entre le site (ex. release GBP à 02:00 EDT) et l'Actor
+// (constaté : GBP Claimant Count Change daté 17/08 côté Actor vs 18/08 côté flux
+// JSON qu'on utilise déjà). On tolère donc ±1 jour au moment du merge plutôt que
+// d'exiger une date strictement identique.
+const actualsByTitleCcy = new Map();
 for (const it of items) {
   if (!it.actual) continue;
-  actualsByKey.set(`${norm(it.title)}|${norm(it.currency)}|${it.date}`, it.actual);
+  const key = `${norm(it.title)}|${norm(it.currency)}`;
+  const list = actualsByTitleCcy.get(key) || [];
+  list.push({ date: new Date(`${it.date}T00:00:00Z`), actual: it.actual });
+  actualsByTitleCcy.set(key, list);
 }
+
+const ONE_DAY_MS = 24 * 60 * 60 * 1000;
 
 const file = JSON.parse(await readFile('data/eco-calendar.json', 'utf-8'));
 let updated = 0;
 for (const ev of file.events) {
-  const key = `${norm(ev.title)}|${norm(ev.country)}|${ev.date.slice(0, 10)}`;
-  const actual = actualsByKey.get(key);
-  if (actual && ev.actual !== actual) {
-    ev.actual = actual;
+  const key = `${norm(ev.title)}|${norm(ev.country)}`;
+  const candidates = actualsByTitleCcy.get(key);
+  if (!candidates) continue;
+  const evDate = new Date(`${ev.date.slice(0, 10)}T00:00:00Z`);
+  const match = candidates.find((c) => Math.abs(c.date - evDate) <= ONE_DAY_MS);
+  if (match && ev.actual !== match.actual) {
+    ev.actual = match.actual;
     updated++;
   }
 }

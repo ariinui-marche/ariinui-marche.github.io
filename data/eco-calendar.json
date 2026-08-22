@@ -125,7 +125,7 @@
       "impact": "High",
       "forecast": "0.4%",
       "previous": "-0.4%",
-      "actual": ""
+      "actual": "0.5%"
     },
     {
       "title": "Median CPI y/y",
@@ -134,7 +134,7 @@
       "impact": "High",
       "forecast": "2.0%",
       "previous": "1.9%",
-      "actual": ""
+      "actual": "2.0%"
     },
     {
       "title": "Trimmed CPI y/y",
@@ -143,7 +143,7 @@
       "impact": "High",
       "forecast": "1.8%",
       "previous": "1.8%",
-      "actual": ""
+      "actual": "1.9%"
     },
     {
       "title": "Common CPI y/y",
@@ -215,7 +215,7 @@
       "impact": "High",
       "forecast": "16.5K",
       "previous": "6.7K",
-      "actual": ""
+      "actual": "-11.0K"
     },
     {
       "title": "Average Earnings Index 3m/y",
@@ -404,7 +404,7 @@
       "impact": "High",
       "forecast": "2.9%",
       "previous": "2.6%",
-      "actual": ""
+      "actual": "2.9%"
     },
     {
       "title": "Core CPI y/y",
@@ -575,7 +575,7 @@
       "impact": "High",
       "forecast": "11.7K",
       "previous": "76.3K",
-      "actual": ""
+      "actual": "-15.8K"
     },
     {
       "title": "Unemployment Rate",
@@ -584,7 +584,7 @@
       "impact": "High",
       "forecast": "4.4%",
       "previous": "4.4%",
-      "actual": ""
+      "actual": "4.5%"
     },
     {
       "title": "German PPI m/m",
