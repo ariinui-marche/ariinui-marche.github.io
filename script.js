@@ -220,10 +220,13 @@ function formatTimestamp(iso) {
 async function loadAll() {
   document.getElementById('updateStatus').textContent = 'Chargement…';
   try {
-    const [currencyData, ecoData, newsData] = await Promise.all([
+    const [currencyData, ecoData, newsData, localNewsData] = await Promise.all([
       fetchCurrencyStrength().catch((err) => { console.error(err); return null; }),
       loadJSON('./data/eco-calendar.json').catch(() => null),
       loadJSON('./data/market-news.json').catch(() => null),
+      // Local-only (Reuters via Google News) — absent on the public site, only
+      // present if fetch-local-news.mjs was run on this machine. 404 silently.
+      loadJSON('./data/market-news-local.json').catch(() => null),
     ]);
 
     renderCurrencies(currencyData);
@@ -231,12 +234,13 @@ async function loadAll() {
     currentEvents = (ecoData?.events || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
     renderEvents();
 
-    currentNews = (newsData?.items || [])
+    const allNewsItems = [...(newsData?.items || []), ...(localNewsData?.items || [])];
+    currentNews = allNewsItems
       .map((n) => ({ ...n, currencies: detectCurrencies(n.title + ' ' + n.description) }))
       .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
     renderNews();
 
-    const latest = [currencyData?.timestamp, ecoData?.timestamp, newsData?.timestamp].filter(Boolean).sort().pop();
+    const latest = [currencyData?.timestamp, ecoData?.timestamp, newsData?.timestamp, localNewsData?.timestamp].filter(Boolean).sort().pop();
     document.getElementById('updateStatus').textContent = `Mis à jour : ${formatTimestamp(latest)}`;
   } catch (err) {
     document.getElementById('updateStatus').textContent = 'Erreur de chargement';

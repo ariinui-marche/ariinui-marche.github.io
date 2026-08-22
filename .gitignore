@@ -1,0 +1,3 @@
+# Local-only Reuters feed (Google News RSS) — never publish, ToS restricts
+# usage to a personal feed reader, not a published website.
+data/market-news-local.json
