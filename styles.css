@@ -243,6 +243,8 @@ main {
 }
 .news-source { font-weight: 600; color: var(--accent); }
 .news-title { font-size: 13px; line-height: 1.4; }
+.news-title-pos { color: var(--green); }
+.news-title-neg { color: var(--red); }
 
 footer {
   text-align: center;

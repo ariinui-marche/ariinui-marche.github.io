@@ -190,6 +190,21 @@ function detectCurrencies(text) {
   return [...found];
 }
 
+// Heuristique par mots-clés — pas une vraie analyse sémantique. Compte les mots
+// haussiers/baissiers dans le titre, prend le camp dominant. Ne distingue pas
+// quel actif précis bénéficie/pâtit dans un titre mentionnant plusieurs actifs
+// en sens opposés (ex. "Gold rallies on weaker dollar") — limite assumée.
+const BULLISH_RE = /\b(rise|rises|rising|rose|rall(?:y|ies|ied|ying)|gain(?:s|ed|ing)?|strengthen(?:s|ed|ing)?|surge(?:s|d)?|climb(?:s|ed|ing)?|advance(?:s|d)?|jump(?:s|ed)?|rebound(?:s|ed)?|soar(?:s|ed|ing)?|higher|bulls?|bullish|outperform(?:s)?|boost(?:s|ed)?|extends? gains|hits? (?:a )?(?:new )?high|record high|strong|firmer)\b/i;
+const BEARISH_RE = /\b(fall(?:s|ing)?|fell|drop(?:s|ped|ping)?|declin(?:es|ed|ing)?|weaken(?:s|ed|ing)?|slide(?:s|d)?|sliding|tumbl(?:es|ed|ing)|sink(?:s|ing)?|sank|retreat(?:s|ed|ing)?|soft(?:er)?|lower|bears?|bearish|underperform(?:s)?|slump(?:s|ed)?|plung(?:es|ed|ing)|extends? losses|hits? (?:a )?(?:new )?low|record low|weak)\b/i;
+
+function detectSentiment(text) {
+  const pos = (text.match(new RegExp(BULLISH_RE, 'gi')) || []).length;
+  const neg = (text.match(new RegExp(BEARISH_RE, 'gi')) || []).length;
+  if (pos > neg) return 'pos';
+  if (neg > pos) return 'neg';
+  return 'neutral';
+}
+
 let currentNews = [];
 let currentNewsFilter = 'all';
 
@@ -208,13 +223,14 @@ function renderNews() {
     const d = new Date(n.pubDate);
     const time = isNaN(d) ? '' : d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
     const dateLabel = isNaN(d) ? '' : d.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' });
+    const sentiment = detectSentiment(n.title);
     return `
       <a class="news-item" href="${n.link}" target="_blank" rel="noopener noreferrer">
         <div class="news-meta">
           <span class="news-source">${n.source}</span>
           <span class="news-time">${dateLabel} ${time}</span>
         </div>
-        <div class="news-title">${n.title}</div>
+        <div class="news-title news-title-${sentiment}">${n.title}</div>
       </a>`;
   }).join('');
 }
