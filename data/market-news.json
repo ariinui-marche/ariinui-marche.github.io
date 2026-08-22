@@ -1,12 +1,19 @@
 {
-  "timestamp": "2026-08-22T10:29:21.679Z",
+  "timestamp": "2026-08-22T10:49:43.624Z",
   "items": [
     {
       "title": "2026-08-22 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-22T10:22:01.000Z",
+      "pubDate": "2026-08-22T10:47:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "Braze CBO Astha Malik sells $464,910 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/braze-cbo-astha-malik-sells-464910-in-stock-93CH-4872327",
+      "pubDate": "2026-08-22T10:16:29.000Z",
+      "description": "",
+      "source": "Investing.com"
     },
     {
       "title": "Bitcoin holds above $77,000 after Treasury-fuelled short squeeze",
@@ -82,13 +89,6 @@
       "title": "Goosehead Insurance director Serena Jones sells $2.05m in stock",
       "link": "https://www.investing.com/news/insider-trading-news/goosehead-insurance-director-serena-jones-sells-205m-in-stock-93CH-4872317",
       "pubDate": "2026-08-22T08:31:13.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Fossil group director Pamela Edwards buys $40,220 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/fossil-group-director-pamela-edwards-buys-40220-in-stock-93CH-4872316",
-      "pubDate": "2026-08-22T08:31:07.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -207,7 +207,7 @@
     {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-21T19:59:38.000Z",
+      "pubDate": "2026-08-21T19:59:42.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
     },
