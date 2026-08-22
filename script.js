@@ -106,11 +106,105 @@ function parseEmoji(el) {
 let currentEvents = [];
 let currentFilter = 'High';
 
+// ── Mini calendrier mensuel (Calendrier Économique) ─────────────────────────
+
+function localDateStr(d) {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
+const IMPACT_RANK = { High: 3, Medium: 2, Low: 1 };
+function impactColor(impact) {
+  if (impact === 'High') return 'var(--red)';
+  if (impact === 'Medium') return 'var(--orange)';
+  return 'var(--gray)';
+}
+
+const today = new Date();
+let calViewYear = today.getFullYear();
+let calViewMonth = today.getMonth();
+let calSelectedDate = null;
+
+function renderEcoCalendar() {
+  const el = document.getElementById('ecoCalendar');
+
+  const dateMap = new Map();
+  for (const e of currentEvents) {
+    const d = new Date(e.date);
+    if (isNaN(d)) continue;
+    const key = localDateStr(d);
+    const info = dateMap.get(key) || { count: 0, impact: null };
+    info.count++;
+    if ((IMPACT_RANK[e.impact] || 0) > (IMPACT_RANK[info.impact] || 0)) info.impact = e.impact;
+    dateMap.set(key, info);
+  }
+
+  const daysInMonth = new Date(calViewYear, calViewMonth + 1, 0).getDate();
+  const firstDow = new Date(calViewYear, calViewMonth, 1).getDay();
+  const startOffset = firstDow === 0 ? 6 : firstDow - 1;
+  const monthLabel = new Date(calViewYear, calViewMonth).toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
+  const todayStr = localDateStr(today);
+
+  let cells = '';
+  for (let i = 0; i < startOffset; i++) cells += '<div></div>';
+  for (let day = 1; day <= daysInMonth; day++) {
+    const dateStr = `${calViewYear}-${String(calViewMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+    const info = dateMap.get(dateStr);
+    const cls = ['cal-day'];
+    if (dateStr === todayStr) cls.push('today');
+    if (dateStr === calSelectedDate) cls.push('selected');
+    cells += `
+      <button class="${cls.join(' ')}" data-date="${dateStr}" ${info ? `title="${info.count} événement${info.count > 1 ? 's' : ''}"` : ''}>
+        ${day}
+        ${info ? `<span class="cal-dot" style="background:${impactColor(info.impact)}"></span>` : ''}
+      </button>`;
+  }
+
+  el.innerHTML = `
+    <div class="cal-header">
+      <button class="cal-nav" id="calPrev">‹</button>
+      <span class="cal-month-label">${monthLabel}</span>
+      <button class="cal-nav" id="calNext">›</button>
+    </div>
+    <div class="cal-weekdays">${['Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa', 'Di'].map((d) => `<div>${d}</div>`).join('')}</div>
+    <div class="cal-grid">${cells}</div>
+    <div class="cal-footer">
+      ${calSelectedDate ? '<button class="cal-link" id="calShowAll">Tout afficher</button>' : ''}
+      ${calSelectedDate !== todayStr ? '<button class="cal-link" id="calToday">Aujourd\'hui</button>' : ''}
+    </div>`;
+}
+
+document.getElementById('ecoCalendar').addEventListener('click', (e) => {
+  if (e.target.closest('#calPrev')) {
+    if (calViewMonth === 0) { calViewMonth = 11; calViewYear--; } else { calViewMonth--; }
+  } else if (e.target.closest('#calNext')) {
+    if (calViewMonth === 11) { calViewMonth = 0; calViewYear++; } else { calViewMonth++; }
+  } else if (e.target.closest('#calShowAll')) {
+    calSelectedDate = null;
+  } else if (e.target.closest('#calToday')) {
+    calViewYear = today.getFullYear();
+    calViewMonth = today.getMonth();
+    calSelectedDate = localDateStr(today);
+  } else {
+    const dayBtn = e.target.closest('.cal-day');
+    if (!dayBtn) return;
+    const date = dayBtn.dataset.date;
+    calSelectedDate = calSelectedDate === date ? null : date;
+  }
+  renderEcoCalendar();
+  renderEvents();
+});
+
 function renderEvents() {
   const list = document.getElementById('ecoList');
-  const filtered = currentFilter === 'all'
+  let filtered = currentFilter === 'all'
     ? currentEvents
     : currentEvents.filter((e) => e.impact === currentFilter);
+  if (calSelectedDate) {
+    filtered = filtered.filter((e) => {
+      const d = new Date(e.date);
+      return !isNaN(d) && localDateStr(d) === calSelectedDate;
+    });
+  }
 
   if (!filtered.length) {
     list.innerHTML = '<div class="empty-state">Aucun événement</div>';
@@ -256,6 +350,7 @@ async function loadAll() {
     renderCurrencies(currencyData);
 
     currentEvents = (ecoData?.events || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
+    renderEcoCalendar();
     renderEvents();
 
     currentNews = (newsData?.items || [])
