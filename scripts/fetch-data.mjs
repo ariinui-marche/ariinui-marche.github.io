@@ -57,9 +57,11 @@ const NEWS_FEEDS = [
   { url: 'https://www.fxstreet.com/rss/news', source: 'FXStreet' },
   { url: 'https://www.investing.com/rss/news.rss', source: 'Investing.com' },
   { url: 'https://beincrypto.com/feed/', source: 'BeInCrypto' },
-  // Source officielle GBP — communication gouvernementale, librement republiable
+  // Sources officielles par devise — communication gouvernementale, librement republiable
   { url: 'https://www.bankofengland.co.uk/rss/news', source: 'Bank of England' },
   { url: 'https://www.bankofengland.co.uk/rss/speeches', source: 'Bank of England' },
+  { url: 'https://www.federalreserve.gov/feeds/press_all.xml', source: 'Federal Reserve' },
+  { url: 'https://www.federalreserve.gov/feeds/speeches.xml', source: 'Federal Reserve' },
 ];
 
 const REUTERS_QUERY =

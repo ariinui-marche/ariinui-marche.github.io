@@ -1,3 +1,9 @@
+// Sources officielles dédiées à une seule devise par nature
+const SOURCE_CURRENCY = {
+  'Bank of England': 'GBP',
+  'Federal Reserve': 'USD',
+};
+
 const CURRENCY_FLAGS = {
   USD: '🇺🇸', EUR: '🇪🇺', GBP: '🇬🇧', JPY: '🇯🇵',
   CHF: '🇨🇭', AUD: '🇦🇺', CAD: '🇨🇦', NZD: '🇳🇿',
@@ -234,8 +240,11 @@ async function loadAll() {
     currentNews = (newsData?.items || [])
       .map((n) => {
         const currencies = detectCurrencies(n.title + ' ' + n.description);
-        // Source 100% GBP par nature (Bank of England) — tag même sans mot-clé explicite dans le titre
-        if (n.source === 'Bank of England' && !currencies.includes('GBP')) currencies.push('GBP');
+        // Sources 100% dédiées à une devise par nature — tag forcé même sans
+        // mot-clé explicite dans le titre (ex. un communiqué Fed technique
+        // qui ne mentionne jamais littéralement "USD"/"dollar")
+        const forcedCcy = SOURCE_CURRENCY[n.source];
+        if (forcedCcy && !currencies.includes(forcedCcy)) currencies.push(forcedCcy);
         return { ...n, currencies };
       })
       .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
