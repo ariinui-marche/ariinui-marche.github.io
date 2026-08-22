@@ -2,6 +2,7 @@
 const SOURCE_CURRENCY = {
   'Bank of England': 'GBP',
   'Federal Reserve': 'USD',
+  'European Central Bank': 'EUR',
 };
 
 const CURRENCY_FLAGS = {

@@ -62,6 +62,8 @@ const NEWS_FEEDS = [
   { url: 'https://www.bankofengland.co.uk/rss/speeches', source: 'Bank of England' },
   { url: 'https://www.federalreserve.gov/feeds/press_all.xml', source: 'Federal Reserve' },
   { url: 'https://www.federalreserve.gov/feeds/speeches.xml', source: 'Federal Reserve' },
+  // Flux combiné (communiqués + discours + conférences de presse)
+  { url: 'https://www.ecb.europa.eu/rss/press.html', source: 'European Central Bank' },
 ];
 
 const REUTERS_QUERY =
