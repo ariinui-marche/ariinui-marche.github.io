@@ -21,6 +21,46 @@ async function loadJSON(path) {
   return res.json();
 }
 
+const CURRENCY_NAMES = {
+  USD: 'Dollar US', EUR: 'Euro', GBP: 'Livre Sterling', JPY: 'Yen Japonais',
+  CHF: 'Franc Suisse', AUD: 'Dollar Australien', CAD: 'Dollar Canadien', NZD: 'Dollar Néo-Zélandais',
+};
+
+// Force Devise: live proxy déjà utilisé par TradeJournal Pro (BabyPips bloque les IPs
+// cloud génériques type GitHub Actions, ce proxy Vercel est whitelisté — voir décision session)
+const MARKET_DATA_URL = 'https://ariinuiirgina.vercel.app/api/market-data';
+
+async function fetchCurrencyStrength() {
+  const res = await fetch(MARKET_DATA_URL);
+  if (!res.ok) throw new Error(`market-data: HTTP ${res.status}`);
+  const json = await res.json();
+  if (json.error) throw new Error(json.error);
+  const raw = json?.data?.currencies || [];
+
+  const changes = raw.map((c) => {
+    const id = (c.id?.includes(':') ? c.id.split(':').pop() : c.id || '').toUpperCase();
+    return { id, name: CURRENCY_NAMES[id] || c.name, changePct: (c.change?.indicator?.pct || 0) * 100 };
+  }).filter((c) => CURRENCY_NAMES[c.id]); // garde les 8 devises forex, écarte XAU/BTC de cette section
+
+  const pctValues = changes.map((c) => c.changePct);
+  const min = Math.min(...pctValues);
+  const max = Math.max(...pctValues);
+  const range = max - min || 1;
+
+  const currencies = changes
+    .map((c) => ({
+      id: c.id,
+      name: c.name,
+      score: Math.round(((c.changePct - min) / range) * 100),
+      changePct: c.changePct,
+      rank: 0,
+    }))
+    .sort((a, b) => b.score - a.score)
+    .map((c, i) => ({ ...c, rank: i + 1 }));
+
+  return { timestamp: new Date().toISOString(), currencies };
+}
+
 function renderCurrencies(data) {
   const grid = document.getElementById('currencyGrid');
   if (!data?.currencies?.length) {
@@ -95,7 +135,7 @@ async function loadAll() {
   document.getElementById('updateStatus').textContent = 'Chargement…';
   try {
     const [currencyData, ecoData] = await Promise.all([
-      loadJSON('./data/currency-strength.json').catch(() => null),
+      fetchCurrencyStrength().catch((err) => { console.error(err); return null; }),
       loadJSON('./data/eco-calendar.json').catch(() => null),
     ]);
 
