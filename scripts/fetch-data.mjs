@@ -53,24 +53,35 @@ function parseRSS(xml, source) {
   return items;
 }
 
-async function fetchMarketNews() {
-  const [fxRes, investingRes] = await Promise.all([
-    fetch('https://www.fxstreet.com/rss/news', { headers: { 'User-Agent': 'Mozilla/5.0' } }),
-    fetch('https://www.investing.com/rss/news.rss', { headers: { 'User-Agent': 'Mozilla/5.0' } }),
-  ]);
-  if (!fxRes.ok) throw new Error(`FXStreet RSS HTTP ${fxRes.status}`);
-  if (!investingRes.ok) throw new Error(`Investing.com RSS HTTP ${investingRes.status}`);
+const NEWS_FEEDS = [
+  { url: 'https://www.fxstreet.com/rss/news', source: 'FXStreet' },
+  { url: 'https://www.investing.com/rss/news.rss', source: 'Investing.com' },
+  { url: 'https://beincrypto.com/feed/', source: 'BeInCrypto' },
+];
 
-  const [fxXml, investingXml] = await Promise.all([fxRes.text(), investingRes.text()]);
-  const items = [
-    ...parseRSS(fxXml, 'FXStreet'),
-    ...parseRSS(investingXml, 'Investing.com'),
-  ]
+async function fetchOneFeed({ url, source }) {
+  const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  if (!res.ok) throw new Error(`${source} RSS HTTP ${res.status}`);
+  const xml = await res.text();
+  return parseRSS(xml, source);
+}
+
+async function fetchMarketNews() {
+  const results = await Promise.allSettled(NEWS_FEEDS.map(fetchOneFeed));
+
+  const items = [];
+  for (let i = 0; i < results.length; i++) {
+    if (results[i].status === 'fulfilled') {
+      items.push(...results[i].value);
+    } else {
+      console.error(`${NEWS_FEEDS[i].source} fetch failed:`, results[i].reason.message);
+    }
+  }
+
+  return items
     .filter((it) => !isNaN(new Date(it.pubDate)))
     .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate))
-    .slice(0, 80);
-
-  return items;
+    .slice(0, 100);
 }
 
 async function main() {
