@@ -1,12 +1,33 @@
 {
-  "timestamp": "2026-08-22T10:01:17.435Z",
+  "timestamp": "2026-08-22T10:29:21.679Z",
   "items": [
     {
       "title": "2026-08-22 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-22T09:52:00.000Z",
+      "pubDate": "2026-08-22T10:22:01.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "Bitcoin holds above $77,000 after Treasury-fuelled short squeeze",
+      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-holds-above-77000-after-treasuryfuelled-short-squeeze-4872323",
+      "pubDate": "2026-08-22T10:01:31.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Braze CTO Hyman sells $282,288 of company stock",
+      "link": "https://www.investing.com/news/insider-trading-news/braze-cto-hyman-sells-282288-of-company-stock-93CH-4872326",
+      "pubDate": "2026-08-22T10:01:06.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Trinet SVP Anthony Treadway sells $74,546 in company stock",
+      "link": "https://www.investing.com/news/insider-trading-news/trinet-svp-anthony-treadway-sells-74546-in-company-stock-93CH-4872325",
+      "pubDate": "2026-08-22T10:00:57.000Z",
+      "description": "",
+      "source": "Investing.com"
     },
     {
       "title": "Heritage Insurance president Johns sells $117,864 in company stock",
@@ -72,32 +93,11 @@
       "source": "Investing.com"
     },
     {
-      "title": "CoreCivic EVP David Garfinkle sells $1.7m in CXW stock",
-      "link": "https://www.investing.com/news/insider-trading-news/corecivic-evp-david-garfinkle-sells-17m-in-cxw-stock-93CH-4872315",
-      "pubDate": "2026-08-22T08:31:00.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "The Sandbox Contains Bridge Exploit After Unbacked SAND Minted on Base and BSC",
       "link": "https://beincrypto.com/sandbox-sand-bridge-exploit-base-bsc/",
       "pubDate": "2026-08-22T08:20:49.000Z",
       "description": "The Sandbox said it has contained a vulnerability in the SAND cross-chain bridge on Base and BNB Smart Chain after an attacker minted unbacked tokens on both networks. The project put the impact at under 0.01% of the total SAND supply. It s",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "PTC Therapeutics director Schmertzler disposes of $1.8m in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/ptc-therapeutics-director-schmertzler-disposes-of-18m-in-stock-93CH-4872314",
-      "pubDate": "2026-08-22T08:16:17.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Where are central banks keeping their gold?",
-      "link": "https://www.investing.com/news/economy-news/where-are-central-banks-keeping-their-gold-4872312",
-      "pubDate": "2026-08-22T08:03:55.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Coinbase CEO Brian Armstrong Sees Crypto Bull Market Starting Soon",
