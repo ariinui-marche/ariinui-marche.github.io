@@ -57,6 +57,9 @@ const NEWS_FEEDS = [
   { url: 'https://www.fxstreet.com/rss/news', source: 'FXStreet' },
   { url: 'https://www.investing.com/rss/news.rss', source: 'Investing.com' },
   { url: 'https://beincrypto.com/feed/', source: 'BeInCrypto' },
+  // Source officielle GBP — communication gouvernementale, librement republiable
+  { url: 'https://www.bankofengland.co.uk/rss/news', source: 'Bank of England' },
+  { url: 'https://www.bankofengland.co.uk/rss/speeches', source: 'Bank of England' },
 ];
 
 const REUTERS_QUERY =
@@ -109,10 +112,29 @@ async function fetchMarketNews() {
     }
   }
 
-  return items
+  const valid = items
     .filter((it) => !isNaN(new Date(it.pubDate)))
-    .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate))
-    .slice(0, 100);
+    .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+
+  // Répartition garantie par source : un flux peu fréquent (ex. Bank of England,
+  // quelques posts/mois) se ferait sinon totalement éjecter par le tri global
+  // face à des sources très actives (FXStreet, plusieurs/heure).
+  const MIN_PER_SOURCE = 5;
+  const TOTAL_CAP = 100;
+  const guaranteed = [];
+  const bySource = new Map();
+  for (const it of valid) {
+    const count = bySource.get(it.source) || 0;
+    if (count < MIN_PER_SOURCE) {
+      guaranteed.push(it);
+      bySource.set(it.source, count + 1);
+    }
+  }
+  const guaranteedLinks = new Set(guaranteed.map((it) => it.link));
+  const remainingSlots = Math.max(0, TOTAL_CAP - guaranteed.length);
+  const rest = valid.filter((it) => !guaranteedLinks.has(it.link)).slice(0, remainingSlots);
+
+  return [...guaranteed, ...rest].sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
 }
 
 async function main() {

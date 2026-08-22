@@ -232,7 +232,12 @@ async function loadAll() {
     renderEvents();
 
     currentNews = (newsData?.items || [])
-      .map((n) => ({ ...n, currencies: detectCurrencies(n.title + ' ' + n.description) }))
+      .map((n) => {
+        const currencies = detectCurrencies(n.title + ' ' + n.description);
+        // Source 100% GBP par nature (Bank of England) — tag même sans mot-clé explicite dans le titre
+        if (n.source === 'Bank of England' && !currencies.includes('GBP')) currencies.push('GBP');
+        return { ...n, currencies };
+      })
       .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
     renderNews();
 
