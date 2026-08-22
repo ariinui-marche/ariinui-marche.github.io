@@ -93,7 +93,7 @@ function parseEmoji(el) {
 }
 
 let currentEvents = [];
-let currentFilter = 'all';
+let currentFilter = 'High';
 
 function renderEvents() {
   const list = document.getElementById('ecoList');
