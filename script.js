@@ -85,6 +85,11 @@ function renderCurrencies(data) {
         </div>
       </div>`;
   }).join('');
+  parseEmoji(grid);
+}
+
+function parseEmoji(el) {
+  if (window.twemoji) twemoji.parse(el, { folder: 'svg', ext: '.svg' });
 }
 
 let currentEvents = [];
@@ -105,11 +110,11 @@ function renderEvents() {
 
   list.innerHTML = filtered.map((e) => {
     const d = new Date(e.date);
-    const time = isNaN(d) ? '--:--' : d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    const time = isNaN(d) ? '--:--' : d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
     const dateKey = isNaN(d) ? '' : d.toDateString();
     const dateLabel = isNaN(d)
       ? ''
-      : d.toLocaleDateString([], { weekday: 'long', day: '2-digit', month: '2-digit', year: 'numeric' });
+      : d.toLocaleDateString('fr-FR', { weekday: 'long', day: '2-digit', month: '2-digit', year: 'numeric' });
     const showDateHeader = dateKey && dateKey !== lastDateKey;
     lastDateKey = dateKey || lastDateKey;
 
@@ -130,6 +135,7 @@ function renderEvents() {
         ${e.previous ? `<span>Previous: <b class="${valueColorClass(e.previous)}">${e.previous}</b></span>` : ''}
       </div>` : ''}`;
   }).join('');
+  parseEmoji(list);
 }
 
 function valueColorClass(val) {

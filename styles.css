@@ -14,6 +14,12 @@
 
 * { box-sizing: border-box; }
 
+img.emoji {
+  height: 1.15em;
+  width: 1.15em;
+  vertical-align: -0.15em;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
