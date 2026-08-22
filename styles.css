@@ -66,18 +66,6 @@ body {
 }
 #refreshBtn:hover { border-color: var(--accent); color: var(--accent); }
 
-.tradingview-widget-container {
-  background: var(--bg);
-}
-
-#tvTicker {
-  border-bottom: 1px solid var(--border);
-}
-
-.tv-embed-box {
-  height: 550px;
-}
-
 main {
   max-width: 900px;
   margin: 0 auto;
