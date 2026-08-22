@@ -1,6 +1,20 @@
 {
-  "timestamp": "2026-08-22T07:43:04.919Z",
+  "timestamp": "2026-08-22T07:48:55.607Z",
   "items": [
+    {
+      "title": "2026-08-22 - Banknotes and coins - Access to cash",
+      "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
+      "pubDate": "2026-08-22T07:46:59.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
+    },
+    {
+      "title": "Vatican plans €100 million agrivoltaic energy plant near Rome",
+      "link": "https://www.investing.com/news/economy-news/vatican-plans-100-million-agrivoltaic-energy-plant-near-rome-4872309",
+      "pubDate": "2026-08-22T07:27:32.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
     {
       "title": "Vatican to build €100 million renewable energy plant, sources say",
       "link": "https://www.investing.com/news/commodities-news/vatican-to-build-100-million-renewable-energy-plant-sources-say-4872308",
@@ -61,13 +75,6 @@
       "title": "springbig Holdings earnings missed by $0.03, revenue fell short of estimates",
       "link": "https://www.investing.com/news/earnings/springbig-holdings-earnings-missed-by-003-revenue-fell-short-of-estimates-4872297",
       "pubDate": "2026-08-22T04:22:52.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "U.S. tariffs on Canada take effect after trade talks collapse",
-      "link": "https://www.investing.com/news/economy-news/us-tariffs-on-canada-take-effect-after-trade-talks-collapse-4872296",
-      "pubDate": "2026-08-22T04:15:29.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -179,7 +186,7 @@
     {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-21T19:59:38.000Z",
+      "pubDate": "2026-08-21T19:59:36.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
     },
@@ -464,6 +471,20 @@
       "source": "Bank of Japan"
     },
     {
+      "title": "2026-08-21 - Data portal - Monthly banking statistics, August 2026",
+      "link": "https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/08/statpub_news_20260821_bsta",
+      "pubDate": "2026-08-21T07:00:00.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
+    },
+    {
+      "title": "2026-08-21 - Data portal - Economic data, August 2026",
+      "link": "https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/08/statpub_news_20260821_b",
+      "pubDate": "2026-08-21T07:00:00.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
+    },
+    {
       "title": "Treasury buyback renews dollar-debasement fears",
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMkkwenhydmpyZmx1Z0lxTjNQN0NXRDJtbjd4UEFkLVllcks3M05JM1VlQnJ5WDNmRDJTbHhValJwSmt0SnpFdllKYnRUcGNyY3lDNDBYZ1ZTWWtDaklOeDgzVUFqbzZyeWRLQ05waUV1aUd3LTRyRGlqc1FYaHNvNm1SZE83S0ZOYXNrejRwNXZ2N19BRWNka2FuTzB6ay01OUNuREtR?oc=5",
       "pubDate": "2026-08-21T05:04:00.000Z",
@@ -506,46 +527,11 @@
       "source": "Reuters"
     },
     {
-      "title": "Japan's historic yen intervention has ‘turbo-charged’ the carry trade",
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPTFVsQ3hRTFEtd2hhV2J3UTI0c1Z2Ml83WkRNbGFBaTR4ZzA2eGV3SFpsZmxpVVR4LTVBLWMweEpXZ2JKZnV5Zkxya2lvekRrb3VXaGVuM2dlS3hPWnRWX3daTVhOTDJ2eHJacDJva2owbUtPc25NcDVqaXBjazMxcmNmdVFvMklYR3loWVdLQ19Fd9IBlwFBVV95cUxQN1NKcXg4ckxXVV83Z2ljdDlLZXpYbEJhamZJV2JyeGhmdlUxSXQzUVAwOURzRjJjVHExSmJ5SzZob1RVaFMydno0d0pXbDkwMHBVRlhSWE9UbGVpWWlPR2Z1anZCRWJpTXhjNG1hQ21LY29oRlhmOXFoRk1rcUgyRjc0Ti01dVZFQ1p1US1BUVdMeDJPeWk4?oc=5",
-      "pubDate": "2026-08-21T00:00:00.000Z",
-      "description": "Japan's historic yen intervention has ‘turbo-charged’ the carry trade&nbsp;&nbsp;CNBC",
-      "source": "Google News"
-    },
-    {
-      "title": "Emerging FX Gains as ‘Bessent Put’ Burnishes Carry Trade Appeal",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPdjN4TGQxYUJIZndFb3VFWU5EbnZXVzF4cFplYmVfTzZKVjFfZEJ5R3VXbUVpdExNUy1wU3pHQVdxc0ZRaFVqUS1yY3F4Wk4wc1l4Y2NkTkdnUFcxaUxfQjF2RjVFUlhpMFFSVV9ITWhCejJLMWctR0xYdVEzVUNlblZCZVphTnlFZmVxYlNSdkh5S2dzMFRsd1c5MmZEQVJSNzVUMURnN0VfMU5wZ19PZDRn?oc=5",
-      "pubDate": "2026-08-20T20:49:03.000Z",
-      "description": "Emerging FX Gains as ‘Bessent Put’ Burnishes Carry Trade Appeal&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
-      "title": "Dollar Risks Becoming Biggest Loser From US Bond Buying",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQWkxJSFh2endhT1BiWmhrS0lXek1reVEwdmtjMWc5Y1c1YWJjb2paelNMX0hUUEpoV2s5OFFKdGNhRmFrUTZPQTVkRFNiNml6aFc2RDdSUzMyYTZQWk9lYU13Si1hTk1pQ1NuRllFaUtnZDFCbEdCVXYxdDBKRzN0MVBKN2k5eTlscldvRkh1SDZVVm1iSk84VGJrc0RiZ3lkNHNsRGhMdi1wQlF6ZDFCOWxZcw?oc=5",
-      "pubDate": "2026-08-20T20:19:17.000Z",
-      "description": "Dollar Risks Becoming Biggest Loser From US Bond Buying&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
       "title": "Federal Reserve Board announces approval of application by National Westminster Bank Plc",
       "link": "https://www.federalreserve.gov/newsevents/pressreleases/orders20260820a.htm",
       "pubDate": "2026-08-20T20:00:00.000Z",
       "description": "Federal Reserve Board announces approval of application by National Westminster Bank Plc",
       "source": "Federal Reserve"
-    },
-    {
-      "title": "Dollar rebounds from losses sparked by Treasury buyback plan",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPamFxZlBhRm1DcmRBZF9VSDd4aXllSmNTWEttZ2dLUkprSnJ5c2xBNXRKT1lQTDdrbXlUUjBnTXdWdVRrWENPYkRkal9pbm9UVDNueFd0am56Z3JCakxsZ2ZHclBRMHpyUUMzeVJHV1FPcVp1dXBYNUtMNk81Z3k1QkRmV1RnRHdPVjhDU3hNYS1xaWxYOU4wMUQwWk5nTDJPWG9kblZIQV9xOG11QTJR?oc=5",
-      "pubDate": "2026-08-20T19:55:49.000Z",
-      "description": "Dollar rebounds from losses sparked by Treasury buyback plan&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Canadian dollar hits near 3-month high as oil prices climb",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNNkNjRERQLVdRMmFsWWZMXzJ2QUNBS2xYMXhhOE9JMFZsQkdzMUlsVVVJOXJGUTRNbXNOejI1OWNIUjdvN1ViN2hzLXZPUTFnRjdkMkJaWC0wNEJLM2dTZjlocGZKaThLaGUwNWhUTUVabTlSZExGb2g1V2Y1Y0VpVEduMUhxM3VHbUZZUHZHbEVXYlUtZ1N5ZUhfdjd0X1JJMGc?oc=5",
-      "pubDate": "2026-08-20T19:09:44.000Z",
-      "description": "Canadian dollar hits near 3-month high as oil prices climb&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "Federal Reserve Board issues enforcement action with SouthPoint Bancshares, Inc. and announces termination of enforcement action with Deutsche Bank AG, DB USA Corporation, and Deutsche Bank AG New York Branch",
@@ -583,6 +569,13 @@
       "source": "European Central Bank"
     },
     {
+      "title": "2026-08-17 - Press release\t - New Director at Study Center Gerzensee",
+      "link": "https://www.snb.ch/en/publications/communication/press-releases/2026/pre_20260817",
+      "pubDate": "2026-08-17T11:00:00.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
+    },
+    {
       "title": "Philip R. Lane: The rise in defence spending and the euro area economy",
       "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260817~1f9f7149c9.en.pdf",
       "pubDate": "2026-08-17T09:30:00.000Z",
@@ -602,6 +595,13 @@
       "pubDate": "2026-08-17T08:00:00.000Z",
       "description": "",
       "source": "Bank of Japan"
+    },
+    {
+      "title": "2026-08-17 - Data portal - Important monetary policy data, 17 August 2026",
+      "link": "https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/08/statpub_news_20260817_gwd",
+      "pubDate": "2026-08-17T08:00:00.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
     },
     {
       "title": "Results of the Fifth Market Functioning Survey concerning Climate Change",
