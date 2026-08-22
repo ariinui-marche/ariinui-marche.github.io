@@ -233,12 +233,12 @@ main {
 .cal-day:hover { background: #1a2030; }
 .cal-day.today { border-color: var(--border); }
 .cal-day.selected { border-color: var(--accent); }
-.cal-day.impact-High { background: rgba(239,68,68,0.28); }
-.cal-day.impact-Medium { background: rgba(245,158,11,0.28); }
-.cal-day.impact-Low { background: rgba(107,114,128,0.28); }
-.cal-day.impact-High:hover { background: rgba(239,68,68,0.4); }
-.cal-day.impact-Medium:hover { background: rgba(245,158,11,0.4); }
-.cal-day.impact-Low:hover { background: rgba(107,114,128,0.4); }
+.cal-day.cal-impact-High { background: rgba(239,68,68,0.28); }
+.cal-day.cal-impact-Medium { background: rgba(245,158,11,0.28); }
+.cal-day.cal-impact-Low { background: rgba(107,114,128,0.28); }
+.cal-day.cal-impact-High:hover { background: rgba(239,68,68,0.4); }
+.cal-day.cal-impact-Medium:hover { background: rgba(245,158,11,0.4); }
+.cal-day.cal-impact-Low:hover { background: rgba(107,114,128,0.4); }
 .cal-footer {
   display: flex;
   justify-content: center;

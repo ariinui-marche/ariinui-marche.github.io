@@ -104,7 +104,7 @@ function parseEmoji(el) {
 }
 
 let currentEvents = [];
-let currentFilter = 'High';
+const currentImpactFilters = new Set(['High']);
 
 // ── Mini calendrier mensuel (Calendrier Économique) ─────────────────────────
 
@@ -145,7 +145,7 @@ function renderEcoCalendar() {
     const dateStr = `${calViewYear}-${String(calViewMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
     const info = dateMap.get(dateStr);
     const cls = ['cal-day'];
-    if (info) cls.push(`impact-${info.impact}`);
+    if (info) cls.push(`cal-impact-${info.impact}`);
     if (dateStr === todayStr) cls.push('today');
     if (dateStr === calSelectedDate) cls.push('selected');
     cells += `
@@ -191,9 +191,9 @@ document.getElementById('ecoCalendar').addEventListener('click', (e) => {
 
 function renderEvents() {
   const list = document.getElementById('ecoList');
-  let filtered = currentFilter === 'all'
+  let filtered = currentImpactFilters.size === 0
     ? currentEvents
-    : currentEvents.filter((e) => e.impact === currentFilter);
+    : currentEvents.filter((e) => currentImpactFilters.has(e.impact));
   if (calSelectedDate) {
     filtered = filtered.filter((e) => {
       const d = new Date(e.date);
@@ -378,9 +378,18 @@ document.getElementById('currencyToggle').addEventListener('click', (e) => {
 document.getElementById('impactFilters').addEventListener('click', (e) => {
   const btn = e.target.closest('.filter-btn');
   if (!btn) return;
-  e.currentTarget.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('active'));
-  btn.classList.add('active');
-  currentFilter = btn.dataset.impact;
+  const impact = btn.dataset.impact;
+  if (impact === 'all') {
+    currentImpactFilters.clear();
+  } else if (currentImpactFilters.has(impact)) {
+    currentImpactFilters.delete(impact);
+  } else {
+    currentImpactFilters.add(impact);
+  }
+  e.currentTarget.querySelectorAll('.filter-btn').forEach((b) => {
+    const active = b.dataset.impact === 'all' ? currentImpactFilters.size === 0 : currentImpactFilters.has(b.dataset.impact);
+    b.classList.toggle('active', active);
+  });
   renderEvents();
 });
 document.getElementById('newsFilters').addEventListener('click', (e) => {
