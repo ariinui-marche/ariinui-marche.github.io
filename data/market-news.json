@@ -1,12 +1,47 @@
 {
-  "timestamp": "2026-08-22T08:30:57.604Z",
+  "timestamp": "2026-08-22T08:58:37.666Z",
   "items": [
     {
       "title": "2026-08-22 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-22T08:26:00.000Z",
+      "pubDate": "2026-08-22T08:55:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "Iran grants permission for a number of Iraqi oil tankers to pass through Hormuz",
+      "link": "https://www.investing.com/news/commodities-news/iran-grants-permission-for-a-number-of-iraqi-oil-tankers-to-pass-through-hormuz-4872318",
+      "pubDate": "2026-08-22T08:42:42.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Goosehead Insurance director Serena Jones sells $2.05m in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/goosehead-insurance-director-serena-jones-sells-205m-in-stock-93CH-4872317",
+      "pubDate": "2026-08-22T08:31:13.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Fossil group director Pamela Edwards buys $40,220 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/fossil-group-director-pamela-edwards-buys-40220-in-stock-93CH-4872316",
+      "pubDate": "2026-08-22T08:31:07.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "CoreCivic EVP David Garfinkle sells $1.7m in CXW stock",
+      "link": "https://www.investing.com/news/insider-trading-news/corecivic-evp-david-garfinkle-sells-17m-in-cxw-stock-93CH-4872315",
+      "pubDate": "2026-08-22T08:31:00.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "The Sandbox Contains Bridge Exploit After Unbacked SAND Minted on Base and BSC",
+      "link": "https://beincrypto.com/sandbox-sand-bridge-exploit-base-bsc/",
+      "pubDate": "2026-08-22T08:20:49.000Z",
+      "description": "The Sandbox said it has contained a vulnerability in the SAND cross-chain bridge on Base and BNB Smart Chain after an attacker minted unbacked tokens on both networks. The project put the impact at under 0.01% of the total SAND supply. It s",
+      "source": "BeInCrypto"
     },
     {
       "title": "PTC Therapeutics director Schmertzler disposes of $1.8m in stock",
@@ -47,34 +82,6 @@
       "title": "Bitcoin RSI hits 87 with MFI maxed at 100: Hourly levels",
       "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-coiled-at-63591-with-volatility-at-6month-lows-live-levels-93CH-4862234",
       "pubDate": "2026-08-22T07:02:24.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "U.S. judge strikes down immigrant visa suspension covering 75 countries",
-      "link": "https://www.investing.com/news/economy-news/us-judge-strikes-down-immigrant-visa-suspension-covering-75-countries-4872307",
-      "pubDate": "2026-08-22T06:56:30.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "China’s robot games evolve from science fair to strategic showcase",
-      "link": "https://www.investing.com/news/economy-news/chinas-robot-games-evolve-from-science-fair-to-strategic-showcase-4872305",
-      "pubDate": "2026-08-22T06:15:32.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Reform UK infighting complicates Farage’s push to prepare party to govern",
-      "link": "https://www.investing.com/news/economy-news/reform-uk-infighting-complicates-farages-push-to-prepare-party-to-govern-4872304",
-      "pubDate": "2026-08-22T05:56:35.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "US hits Canadian goods with 50% tariffs after trade talks fail",
-      "link": "https://www.investing.com/news/commodities-news/us-canadian-trade-teams-to-meet-again-as-tariffs-deadline-looms-4871745",
-      "pubDate": "2026-08-22T05:30:25.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -186,7 +193,7 @@
     {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-21T19:59:42.000Z",
+      "pubDate": "2026-08-21T20:00:04.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
     },
@@ -252,6 +259,13 @@
       "pubDate": "2026-08-21T18:01:15.000Z",
       "description": "Filings show a $1.99B Bitcoin miner book inside the fund that blew up. Citadel has now cleared most of it.\nThe post Bitcoin Miners Had a $2 Billion Ghost Seller, Citadel Just Cleared It appeared first on BeInCrypto.",
       "source": "BeInCrypto"
+    },
+    {
+      "title": "Gold rallies to 3-month high on weaker dollar, bullish technicals",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNdzBQclFYMVRpaFk2cVBvUUNLd2tWYjlENUhJbG9tR3RYQ2k3VTFpSV9yd0xXVVgzNnFQNGltZV9sbHhQdENsX29BekdQM0NOb2p5bjBqQWNUbnE1WGZmaEt5d0ZFQVgzZUFKeWNOSEt2eHUzZWZRdk8xb1lMZUplLVZBY2oyYlRtMHo4YmZhdWRRZ2FndkE?oc=5",
+      "pubDate": "2026-08-21T17:57:33.000Z",
+      "description": "Gold rallies to 3-month high on weaker dollar, bullish technicals&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "Gold hits three-month peak above $4,600 as Middle East risks fuel rally",
@@ -336,13 +350,6 @@
       "pubDate": "2026-08-21T16:17:45.000Z",
       "description": "The Dow Jones Industrial Average trades roughly 430 points higher at just above 53,200, taking back the larger part of a Thursday decline that ran close to 690 points.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Gold Price Hits 3-Month High Amid Bond Market Stress: Is $5,000 Next?",
-      "link": "https://beincrypto.com/gold-hits-three-month-high-bond-market-stress/",
-      "pubDate": "2026-08-21T16:01:22.000Z",
-      "description": "Gold surged past $4,600 per ounce on Friday, touching its highest level in three months and putting the metal on track for a nearly 5% weekly gain. A weaker dollar and fresh debt concerns are driving investors toward safety. What is Driving",
-      "source": "BeInCrypto"
     },
     {
       "title": "US ‘Playing With Fire’ as Dollar Risks Yen-Style Debasement",
@@ -517,13 +524,6 @@
       "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNSFZuSmFFRlNlQUZPTlJaNnE2UUJzS29YTWZkWlhJNG1BSWEwbTNCWEVidHBISmc5VUpSMVh5YnRhNHBwMzhCRUZMX2RQalJCTjJhUWJTeFdQckZwbmxRZFgxdVBaTTg3NkZhOE9tZ2h3dHNNV1M5WEVSbTM4NTNsbXdNNnJyNTZHaTk5d25mWVB1eDB5c2RtQkpwVkVidDEtSkpCbA?oc=5",
       "pubDate": "2026-08-21T01:36:00.000Z",
       "description": "Dollar falls to three-month low on Treasury buyback worries&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Gold rallies to 3-month high on weaker dollar, bullish technicals",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNdzBQclFYMVRpaFk2cVBvUUNLd2tWYjlENUhJbG9tR3RYQ2k3VTFpSV9yd0xXVVgzNnFQNGltZV9sbHhQdENsX29BekdQM0NOb2p5bjBqQWNUbnE1WGZmaEt5d0ZFQVgzZUFKeWNOSEt2eHUzZWZRdk8xb1lMZUplLVZBY2oyYlRtMHo4YmZhdWRRZ2FndkE?oc=5",
-      "pubDate": "2026-08-21T00:58:00.000Z",
-      "description": "Gold rallies to 3-month high on weaker dollar, bullish technicals&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
