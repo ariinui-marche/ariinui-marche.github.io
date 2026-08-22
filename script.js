@@ -211,6 +211,7 @@ function renderEvents() {
   list.innerHTML = filtered.map((e) => {
     const d = new Date(e.date);
     const time = isNaN(d) ? '--:--' : d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+    const timeClass = isNaN(d) ? '' : ecoTimeColorClass(d.getHours());
     const dateKey = isNaN(d) ? '' : d.toDateString();
     const dateLabel = isNaN(d)
       ? ''
@@ -224,7 +225,7 @@ function renderEvents() {
     return `
       ${showDateHeader ? `<div class="eco-date-header">${dateLabel}</div>` : ''}
       <div class="eco-event">
-        <span class="eco-time">${time}</span>
+        <span class="eco-time ${timeClass}">${time}</span>
         <span class="eco-flag">${flag}</span>
         <span class="eco-ccy">${e.country}</span>
         <span class="eco-title" title="${e.title}">${e.title}</span>
@@ -237,6 +238,14 @@ function renderEvents() {
       </div>` : ''}`;
   }).join('');
   parseEmoji(list);
+}
+
+function ecoTimeColorClass(hour) {
+  if (hour >= 14 && hour < 17) return 'eco-time-blue';
+  if (hour >= 22 || hour < 2) return 'eco-time-red';
+  if (hour >= 2 && hour < 3) return 'eco-time-green';
+  if (hour >= 3 && hour < 7) return 'eco-time-yellow';
+  return 'eco-time-gray'; // 7-12, 12-14, 17-22
 }
 
 function valueColorClass(val) {

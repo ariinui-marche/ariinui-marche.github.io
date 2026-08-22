@@ -285,6 +285,11 @@ main {
 .eco-date-header:first-child { margin-top: 0; }
 
 .eco-time { color: var(--text); font-weight: 600; font-size: 13px; }
+.eco-time-gray { color: #9ca3af; }
+.eco-time-blue { color: #3b82f6; }
+.eco-time-red { color: var(--red); }
+.eco-time-green { color: var(--green); }
+.eco-time-yellow { color: #eab308; }
 .eco-flag { font-size: 16px; text-align: center; }
 .eco-ccy { color: var(--text-dim); font-weight: 600; font-size: 11px; }
 .eco-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
