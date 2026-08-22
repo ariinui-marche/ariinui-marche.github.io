@@ -101,25 +101,44 @@ function renderEvents() {
     return;
   }
 
+  let lastDateKey = null;
+
   list.innerHTML = filtered.map((e) => {
     const d = new Date(e.date);
     const time = isNaN(d) ? '--:--' : d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    const dateLabel = isNaN(d) ? '' : d.toLocaleDateString([], { weekday: 'short', day: '2-digit', month: '2-digit' });
+    const dateKey = isNaN(d) ? '' : d.toDateString();
+    const dateLabel = isNaN(d)
+      ? ''
+      : d.toLocaleDateString([], { weekday: 'long', day: '2-digit', month: '2-digit', year: 'numeric' });
+    const showDateHeader = dateKey && dateKey !== lastDateKey;
+    lastDateKey = dateKey || lastDateKey;
+
     const flag = COUNTRY_FLAGS[e.country] || '🏳️';
     const hasValues = e.forecast || e.previous || e.actual;
+
     return `
+      ${showDateHeader ? `<div class="eco-date-header">${dateLabel}</div>` : ''}
       <div class="eco-event">
-        <span class="eco-time" title="${dateLabel}">${time}</span>
+        <span class="eco-time">${time}</span>
         <span class="eco-flag">${flag}</span>
         <span class="eco-title" title="${e.title}">${e.title}</span>
         <span class="impact-badge impact-${e.impact}">${e.impact}</span>
       </div>
       ${hasValues ? `<div class="eco-values">
-        ${e.actual ? `<span>Actual: <b>${e.actual}</b></span>` : ''}
-        ${e.forecast ? `<span>Forecast: <b>${e.forecast}</b></span>` : ''}
-        ${e.previous ? `<span>Previous: <b>${e.previous}</b></span>` : ''}
+        ${e.actual ? `<span>Actual: <b class="${valueColorClass(e.actual)}">${e.actual}</b></span>` : ''}
+        ${e.forecast ? `<span>Forecast: <b class="${valueColorClass(e.forecast)}">${e.forecast}</b></span>` : ''}
+        ${e.previous ? `<span>Previous: <b class="${valueColorClass(e.previous)}">${e.previous}</b></span>` : ''}
       </div>` : ''}`;
   }).join('');
+}
+
+function valueColorClass(val) {
+  if (!val) return '';
+  const num = parseFloat(String(val).replace(/,/g, ''));
+  if (isNaN(num)) return '';
+  if (num > 0) return 'val-pos';
+  if (num < 0) return 'val-neg';
+  return 'val-zero';
 }
 
 function formatTimestamp(iso) {

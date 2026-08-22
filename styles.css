@@ -168,9 +168,24 @@ main {
   font-size: 13px;
 }
 
-.eco-time { color: var(--text-dim); font-size: 12px; }
+.eco-date-header {
+  margin: 10px 0 2px 0;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+}
+.eco-date-header:first-child { margin-top: 0; }
+
+.eco-time { color: var(--text); font-weight: 600; font-size: 13px; }
 .eco-flag { font-size: 16px; text-align: center; }
 .eco-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.eco-values b.val-pos { color: var(--green); }
+.eco-values b.val-neg { color: var(--red); }
+.eco-values b.val-zero { color: var(--text-dim); }
 
 .impact-badge {
   font-size: 10px;
