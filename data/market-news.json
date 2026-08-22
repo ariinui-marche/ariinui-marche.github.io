@@ -1,12 +1,19 @@
 {
-  "timestamp": "2026-08-22T20:53:58.147Z",
+  "timestamp": "2026-08-22T21:08:44.006Z",
   "items": [
     {
       "title": "2026-08-22 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-22T20:46:01.000Z",
+      "pubDate": "2026-08-22T20:59:59.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "Nvidia customers face over 15% server price hikes as memory costs soar - report",
+      "link": "https://www.investing.com/news/stock-market-news/nvidia-customers-face-over-15-server-price-hikes-as-memory-costs-soar--report-4872389",
+      "pubDate": "2026-08-22T20:47:44.000Z",
+      "description": "",
+      "source": "Investing.com"
     },
     {
       "title": "Canada’s Unifor union, GM reach tentative agreements",
@@ -105,13 +112,6 @@
       "pubDate": "2026-08-22T16:26:33.000Z",
       "description": "BounceBit will permanently shut down its Layer 1 blockchain after an attacker moved 286.5 million BB out of nine mainnet accounts. The project will reissue the token as a BEP-20 asset on BNB Chain. The team said the attacker compromised no ",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Canada to match U.S. tariffs dollar for dollar after trade talks collapse",
-      "link": "https://www.investing.com/news/economy-news/canada-to-match-us-tariffs-dollar-for-dollar-after-trade-talks-collapse-4872372",
-      "pubDate": "2026-08-22T16:10:13.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Tamberi backs up European gold with Diamond League win",
