@@ -113,11 +113,6 @@ function localDateStr(d) {
 }
 
 const IMPACT_RANK = { High: 3, Medium: 2, Low: 1 };
-function impactColor(impact) {
-  if (impact === 'High') return 'var(--red)';
-  if (impact === 'Medium') return 'var(--orange)';
-  return 'var(--gray)';
-}
 
 const today = new Date();
 let calViewYear = today.getFullYear();
@@ -150,12 +145,12 @@ function renderEcoCalendar() {
     const dateStr = `${calViewYear}-${String(calViewMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
     const info = dateMap.get(dateStr);
     const cls = ['cal-day'];
+    if (info) cls.push(`impact-${info.impact}`);
     if (dateStr === todayStr) cls.push('today');
     if (dateStr === calSelectedDate) cls.push('selected');
     cells += `
       <button class="${cls.join(' ')}" data-date="${dateStr}" ${info ? `title="${info.count} événement${info.count > 1 ? 's' : ''}"` : ''}>
         ${day}
-        ${info ? `<span class="cal-dot" style="background:${impactColor(info.impact)}"></span>` : ''}
       </button>`;
   }
 

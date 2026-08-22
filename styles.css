@@ -233,15 +233,12 @@ main {
 .cal-day:hover { background: #1a2030; color: var(--text); }
 .cal-day.today { border-color: var(--border); color: var(--text); }
 .cal-day.selected { border-color: var(--accent); color: var(--accent); }
-.cal-dot {
-  position: absolute;
-  bottom: 3px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-}
+.cal-day.impact-High { background: rgba(239,68,68,0.28); color: var(--red); }
+.cal-day.impact-Medium { background: rgba(245,158,11,0.28); color: var(--orange); }
+.cal-day.impact-Low { background: rgba(107,114,128,0.28); color: var(--gray); }
+.cal-day.impact-High:hover { background: rgba(239,68,68,0.4); }
+.cal-day.impact-Medium:hover { background: rgba(245,158,11,0.4); }
+.cal-day.impact-Low:hover { background: rgba(107,114,128,0.4); }
 .cal-footer {
   display: flex;
   justify-content: center;
@@ -357,4 +354,11 @@ footer {
 @media (max-width: 480px) {
   .eco-event { grid-template-columns: 56px 26px 1fr auto; font-size: 12px; }
   .eco-values { padding-left: 82px; }
+
+  main { padding: 12px 8px; }
+  .panel { padding: 12px 10px; }
+  .mini-calendar { padding: 10px 6px; margin-left: -4px; margin-right: -4px; }
+  .cal-grid { gap: 2px; }
+  .cal-day { font-size: 15px; }
+  .cal-month-label { font-size: 15px; }
 }
