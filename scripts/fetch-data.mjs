@@ -69,6 +69,7 @@ const NEWS_FEEDS = [
   { url: 'https://www.boj.or.jp/en/rss/whatsnew.xml', source: 'Bank of Japan' },
   { url: 'https://www.rba.gov.au/rss/rss-cb-media-releases.xml', source: 'Reserve Bank of Australia' },
   { url: 'https://www.bankofcanada.ca/content_type/press-releases/feed/', source: 'Bank of Canada' },
+  { url: 'https://www.snb.ch/public/rss/en/news', source: 'Swiss National Bank' },
 ];
 
 const REUTERS_QUERY =

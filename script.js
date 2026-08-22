@@ -6,6 +6,7 @@ const SOURCE_CURRENCY = {
   'Bank of Japan': 'JPY',
   'Reserve Bank of Australia': 'AUD',
   'Bank of Canada': 'CAD',
+  'Swiss National Bank': 'CHF',
 };
 
 const CURRENCY_FLAGS = {
