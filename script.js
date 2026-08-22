@@ -122,8 +122,12 @@ let calSelectedDate = null;
 function renderEcoCalendar() {
   const el = document.getElementById('ecoCalendar');
 
+  const visibleEvents = currentImpactFilters.size === 0
+    ? currentEvents
+    : currentEvents.filter((e) => currentImpactFilters.has(e.impact));
+
   const dateMap = new Map();
-  for (const e of currentEvents) {
+  for (const e of visibleEvents) {
     const d = new Date(e.date);
     if (isNaN(d)) continue;
     const key = localDateStr(d);
@@ -400,6 +404,7 @@ document.getElementById('impactFilters').addEventListener('click', (e) => {
     const active = b.dataset.impact === 'all' ? currentImpactFilters.size === 0 : currentImpactFilters.has(b.dataset.impact);
     b.classList.toggle('active', active);
   });
+  renderEcoCalendar();
   renderEvents();
 });
 document.getElementById('newsFilters').addEventListener('click', (e) => {
