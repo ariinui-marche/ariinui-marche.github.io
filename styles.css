@@ -226,16 +226,16 @@ main {
   background: var(--panel);
   border: 1px solid transparent;
   border-radius: 6px;
-  color: var(--text-dim);
+  color: var(--text);
   font-size: 12px;
   cursor: pointer;
 }
-.cal-day:hover { background: #1a2030; color: var(--text); }
-.cal-day.today { border-color: var(--border); color: var(--text); }
-.cal-day.selected { border-color: var(--accent); color: var(--accent); }
-.cal-day.impact-High { background: rgba(239,68,68,0.28); color: var(--red); }
-.cal-day.impact-Medium { background: rgba(245,158,11,0.28); color: var(--orange); }
-.cal-day.impact-Low { background: rgba(107,114,128,0.28); color: var(--gray); }
+.cal-day:hover { background: #1a2030; }
+.cal-day.today { border-color: var(--border); }
+.cal-day.selected { border-color: var(--accent); }
+.cal-day.impact-High { background: rgba(239,68,68,0.28); }
+.cal-day.impact-Medium { background: rgba(245,158,11,0.28); }
+.cal-day.impact-Low { background: rgba(107,114,128,0.28); }
 .cal-day.impact-High:hover { background: rgba(239,68,68,0.4); }
 .cal-day.impact-Medium:hover { background: rgba(245,158,11,0.4); }
 .cal-day.impact-Low:hover { background: rgba(107,114,128,0.4); }
