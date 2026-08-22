@@ -1,38 +1,73 @@
 {
-  "timestamp": "2026-08-22T05:56:48.434Z",
+  "timestamp": "2026-08-22T06:14:52.025Z",
   "items": [
+    {
+      "title": "Reform UK infighting complicates Farage’s push to prepare party to govern",
+      "link": "https://www.investing.com/news/economy-news/reform-uk-infighting-complicates-farages-push-to-prepare-party-to-govern-4872304",
+      "pubDate": "2026-08-22T15:56:35.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
     {
       "title": "US hits Canadian goods with 50% tariffs after trade talks fail",
       "link": "https://www.investing.com/news/commodities-news/us-canadian-trade-teams-to-meet-again-as-tariffs-deadline-looms-4871745",
-      "pubDate": "2026-08-22T05:30:25.000Z",
+      "pubDate": "2026-08-22T15:30:25.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
       "title": "Breaking down the U.S.-Japan “currency alliance”",
       "link": "https://www.investing.com/news/forex-news/breaking-down-the-usjapan-currency-alliance-4872302",
-      "pubDate": "2026-08-22T05:12:11.000Z",
+      "pubDate": "2026-08-22T15:12:11.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
       "title": "Pentagon removes Stars and Stripes newspaper leadership",
       "link": "https://www.investing.com/news/economy-news/pentagon-removes-stars-and-stripes-newspaper-leadership-4872300",
-      "pubDate": "2026-08-22T04:40:48.000Z",
+      "pubDate": "2026-08-22T14:40:48.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
       "title": "springbig Holdings earnings missed by $0.03, revenue fell short of estimates",
       "link": "https://www.investing.com/news/earnings/springbig-holdings-earnings-missed-by-003-revenue-fell-short-of-estimates-4872297",
-      "pubDate": "2026-08-22T04:22:52.000Z",
+      "pubDate": "2026-08-22T14:22:52.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
       "title": "U.S. tariffs on Canada take effect after trade talks collapse",
       "link": "https://www.investing.com/news/economy-news/us-tariffs-on-canada-take-effect-after-trade-talks-collapse-4872296",
-      "pubDate": "2026-08-22T04:15:29.000Z",
+      "pubDate": "2026-08-22T14:15:29.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Universal safety products: Director Ault buys $183,344 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/universal-safety-products-director-ault-buys-183344-in-stock-93CH-4872295",
+      "pubDate": "2026-08-22T13:31:00.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Texas Roadhouse CEO Gerald Morgan sells $3.03m in TXRH stock",
+      "link": "https://www.investing.com/news/insider-trading-news/texas-roadhouse-ceo-gerald-morgan-sells-303m-in-txrh-stock-93CH-4872294",
+      "pubDate": "2026-08-22T13:30:56.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Trump says Iran not ready to make the ’right deal’",
+      "link": "https://www.investing.com/news/commodities-news/us-iran-keep-up-hostile-rhetoric-ahead-of-new-sanctions-4872246",
+      "pubDate": "2026-08-22T13:30:27.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Moderna cancer vaccine breakthrough revives hopes for biotech turnaround",
+      "link": "https://www.investing.com/news/company-news/moderna-cancer-vaccine-breakthrough-revives-hopes-for-biotech-turnaround-4872292",
+      "pubDate": "2026-08-22T13:06:03.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -42,41 +77,6 @@
       "pubDate": "2026-08-22T04:10:36.000Z",
       "description": "Coinbase CEO Brian Armstrong says crypto spot trading is close to its next bull market, citing prior bear cycles that each ran roughly 370 to 380 days. He spoke on CNBC after President Donald Trump hosted crypto executives and regulators at",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Universal safety products: Director Ault buys $183,344 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/universal-safety-products-director-ault-buys-183344-in-stock-93CH-4872295",
-      "pubDate": "2026-08-22T03:31:00.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Texas Roadhouse CEO Gerald Morgan sells $3.03m in TXRH stock",
-      "link": "https://www.investing.com/news/insider-trading-news/texas-roadhouse-ceo-gerald-morgan-sells-303m-in-txrh-stock-93CH-4872294",
-      "pubDate": "2026-08-22T03:30:56.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Trump says Iran not ready to make the ’right deal’",
-      "link": "https://www.investing.com/news/commodities-news/us-iran-keep-up-hostile-rhetoric-ahead-of-new-sanctions-4872246",
-      "pubDate": "2026-08-22T03:30:27.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Moderna cancer vaccine breakthrough revives hopes for biotech turnaround",
-      "link": "https://www.investing.com/news/company-news/moderna-cancer-vaccine-breakthrough-revives-hopes-for-biotech-turnaround-4872292",
-      "pubDate": "2026-08-22T03:06:03.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Iran threatens military response to US sanctions",
-      "link": "https://www.investing.com/news/economy-news/iran-threatens-military-response-to-us-sanctions-4872287",
-      "pubDate": "2026-08-22T02:48:26.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "AUD/USD Price Forecast: Bulls target YTD high after breakout",
@@ -161,6 +161,13 @@
       "pubDate": "2026-08-21T20:22:46.000Z",
       "description": "The US Dollar Index (DXY) ended the week near even with Thursday, holding near 98.80. Like Thursday, DXY traded down to the 98.50s before recovering later in the session.",
       "source": "FXStreet"
+    },
+    {
+      "title": "Former Cards exec Ryan Gold faces second state betting investigation",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTV9md1hQQmlIRGJEdEN3N1RyME9Va1BRNlpTdTFwVHpSaGZmVWw0OTR5d3JTa203RDl4U21SYy16R0tPamY5Nmhfa2N4V1lrNklJSVE0NzUtVmY0ZFA2NUJXZG9OYlQ5dWlwY3JuWXVGV1kyVmxReUhob2RpWnVnOUVEUDdPRWotMDhGbl94eU9jeUQzd0pxTkJaYnZtb3V3ZTBoT2lUUy15am44X015c3RwN1haQW8?oc=5",
+      "pubDate": "2026-08-21T20:18:45.000Z",
+      "description": "Former Cards exec Ryan Gold faces second state betting investigation&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "Zcash Rally Extends to 40%: Can ZEC Hit $1,000 This Cycle?",
@@ -359,11 +366,123 @@
       "source": "FXStreet"
     },
     {
+      "title": "Euro zone consumer confidence rises to -15.5 in August",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNcDN0NmhNZlFncEtxYWZLSGhyY1c4dGcyaXFGUDVQN0dwMXBkZVljYlZ0OWdMRzNTWVo2REQ1WVA2MkJlX2tZMmMyWVdCcUdUM2ZjV09sbGNtN0k0WGVmTmduR2QyYUQtZ2RlNzlKb3BmenFyb295V21US3JNYlhwWThCZU5kLUdTU0JpTFI0UEZnRWI0TlE?oc=5",
+      "pubDate": "2026-08-21T14:11:46.000Z",
+      "description": "Euro zone consumer confidence rises to -15.5 in August&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "India's forex pile rises to six-month peak on sustained capital inflows",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOR1p3TGs1MUgzOEpmdmxrZFgxa2tBb3lRODJJOVZUZExPdnRvQ2N5V0pqMUwycGhtS1RLRTZ0Z01BUXJuaFhra3piU2RQNzdCSmZFWEFlT1lxS2pIRzFvSUhLVVJ4WnJXUVFySjEwd2xjc3pZcnBZNmwwUFZ6aHlWS0lpdFZmcHFXMmNrcDFxbFpGLTFsaFh1ZlMzQzJJTTlnSFVJQmVVVGcwUkRkQ2RWVWZ3?oc=5",
+      "pubDate": "2026-08-21T12:07:44.000Z",
+      "description": "India's forex pile rises to six-month peak on sustained capital inflows&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
       "title": "$4,600: Gold rallies to three-month high, eyes third weekly gain",
       "link": "https://www.fxstreet.com/news/4-600-gold-rallies-to-three-month-high-eyes-third-weekly-gain-202608211106",
       "pubDate": "2026-08-21T11:06:55.000Z",
       "description": "Gold (XAU/USD) is heading for a third consecutive weekly gain on Friday, extending an impressive rally that has lifted the precious metal by around 13% so far this month. At the time of writing, XAU/USD trades around $4,603, its highest lev",
       "source": "FXStreet"
+    },
+    {
+      "title": "How Tether's bitcoin mining plans in Uruguay unraveled",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOVU1FcGpCUE84VVYwNkllLTczRmVidF9FYmtwYnRlYlFGNUZjU05CSFZTSjk3bzUwQ09vbzFnU0JvaWwyYnRGVWZHOW1DVVBwcG4tcHFSZW4wY1N6X3R1eDdFZDJQRXYzTFQ3X19kbjlZTmdqdEpqTGtWTkdoMjlrWGw2azJia0xfWjVQZFRZYTJra3ctdjFOam5kNjFHQTFBWFVz?oc=5",
+      "pubDate": "2026-08-21T10:51:12.000Z",
+      "description": "How Tether's bitcoin mining plans in Uruguay unraveled&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Sterling extends rally on firm rate-hike bets, subdued dollar",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNRTBqSUE0alFRUDFVRklwV2J3ejdBcWVEYjJ0d0ZSZDFaeV8wd0EzWE5yY0RGSHZMRlJNUnZFUGhGQmc3THdnTUhOMHhYRmRuaDBoTDhpSTJMOXY5clBOYXRNNVlfaDA4RWhCUVZpbjUwY3NtY1gwUEJrZHBPdHBfZU15Q1lJdnpPM0FvdE1OR1QyZk1jTy1fVEFTVGdQcFgtRmtiLQ?oc=5",
+      "pubDate": "2026-08-21T10:38:10.000Z",
+      "description": "Sterling extends rally on firm rate-hike bets, subdued dollar&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Euro zone business activity growing at fastest pace since November, PMIs show",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPeVJRUTVFVzFGV1dITUg0YmRpcFBpN18wZGdmTVgwdU1oWU5xU3dWaWhzWUtONDdWWElvbnpmTHhGLXJDcDBSczdnTnZKVFo0T2hMWEpydGhIOG9rT3g5NW1fWk5nZXBKOFRRbG4yWldPZXc3ak9XTEhqRzVyUTF0X3VNZXo3NVMyenJndGhpTkQ2ZXFzalRYUXZCX0E4SGFQU21LWFpCTmxkMlBWUmx5bG11WlRNM2ZPNnlMSkdn?oc=5",
+      "pubDate": "2026-08-21T09:58:40.000Z",
+      "description": "Euro zone business activity growing at fastest pace since November, PMIs show&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Treasury buyback renews dollar-debasement fears",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOMkkwenhydmpyZmx1Z0lxTjNQN0NXRDJtbjd4UEFkLVllcks3M05JM1VlQnJ5WDNmRDJTbHhValJwSmt0SnpFdllKYnRUcGNyY3lDNDBYZ1ZTWWtDaklOeDgzVUFqbzZyeWRLQ05waUV1aUd3LTRyRGlqc1FYaHNvNm1SZE83S0ZOYXNrejRwNXZ2N19BRWNka2FuTzB6ay01OUNuREtR?oc=5",
+      "pubDate": "2026-08-21T05:04:00.000Z",
+      "description": "Treasury buyback renews dollar-debasement fears&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Dollar falls to three-month low on Treasury buyback worries",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNSFZuSmFFRlNlQUZPTlJaNnE2UUJzS29YTWZkWlhJNG1BSWEwbTNCWEVidHBISmc5VUpSMVh5YnRhNHBwMzhCRUZMX2RQalJCTjJhUWJTeFdQckZwbmxRZFgxdVBaTTg3NkZhOE9tZ2h3dHNNV1M5WEVSbTM4NTNsbXdNNnJyNTZHaTk5d25mWVB1eDB5c2RtQkpwVkVidDEtSkpCbA?oc=5",
+      "pubDate": "2026-08-21T01:36:00.000Z",
+      "description": "Dollar falls to three-month low on Treasury buyback worries&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Gold rallies to 3-month high on weaker dollar, bullish technicals",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNdzBQclFYMVRpaFk2cVBvUUNLd2tWYjlENUhJbG9tR3RYQ2k3VTFpSV9yd0xXVVgzNnFQNGltZV9sbHhQdENsX29BekdQM0NOb2p5bjBqQWNUbnE1WGZmaEt5d0ZFQVgzZUFKeWNOSEt2eHUzZWZRdk8xb1lMZUplLVZBY2oyYlRtMHo4YmZhdWRRZ2FndkE?oc=5",
+      "pubDate": "2026-08-21T00:58:00.000Z",
+      "description": "Gold rallies to 3-month high on weaker dollar, bullish technicals&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Dollar rebounds from losses sparked by Treasury buyback plan",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPamFxZlBhRm1DcmRBZF9VSDd4aXllSmNTWEttZ2dLUkprSnJ5c2xBNXRKT1lQTDdrbXlUUjBnTXdWdVRrWENPYkRkal9pbm9UVDNueFd0am56Z3JCakxsZ2ZHclBRMHpyUUMzeVJHV1FPcVp1dXBYNUtMNk81Z3k1QkRmV1RnRHdPVjhDU3hNYS1xaWxYOU4wMUQwWk5nTDJPWG9kblZIQV9xOG11QTJR?oc=5",
+      "pubDate": "2026-08-20T19:55:49.000Z",
+      "description": "Dollar rebounds from losses sparked by Treasury buyback plan&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Canadian dollar hits near 3-month high as oil prices climb",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNNkNjRERQLVdRMmFsWWZMXzJ2QUNBS2xYMXhhOE9JMFZsQkdzMUlsVVVJOXJGUTRNbXNOejI1OWNIUjdvN1ViN2hzLXZPUTFnRjdkMkJaWC0wNEJLM2dTZjlocGZKaThLaGUwNWhUTUVabTlSZExGb2g1V2Y1Y0VpVEduMUhxM3VHbUZZUHZHbEVXYlUtZ1N5ZUhfdjd0X1JJMGc?oc=5",
+      "pubDate": "2026-08-20T19:09:44.000Z",
+      "description": "Canadian dollar hits near 3-month high as oil prices climb&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Central African Republic closes informal gold mine after collapse kills at least 49",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPU2dvMm5OeVdKWXZjcXIwVzU0aTk0UmgzemNka04ySTZJYjV6YjJTMkVORW5hVVRrV0NmUkVPNG5kTXItMWZ1WWMyeHR5UTEzTWMycDNpTnBHNUpmajVYY2lLXzlqblI3VTByaFJPTG5BeEdCTG8tZlcxMl9NSnQ3OFdkckRET0IyaFk1S0lZOXpDdmJyZEFVNUh2YU1ySTJpdEJHQ3VpckMxTTNtY2tnU1U0SHZIMVFPUGJway1aNVF1Y0hodjlINg?oc=5",
+      "pubDate": "2026-08-20T16:07:38.000Z",
+      "description": "Central African Republic closes informal gold mine after collapse kills at least 49&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Gold steadies as inflation concerns balance hopes of lower real rates",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPRzBOVjZ6ZU0xLWotdnpUeHVrVnN5ZFlGWEExLVF6RUgtY0RMQjdTZUNDbWRvRGNCY0gwUE9ubFJiM1dNVzVfVE12SV80ZlRSYTZqamdFMGhubUJBeFFNbkZHTml3WjFvRGVOVER3dXdYNUZnSDRKS3UxU2dTMnp3MG9qYUVKU0ZNY2ZiVUw1c0NJREpibDFhbWlORQ?oc=5",
+      "pubDate": "2026-08-20T15:34:24.000Z",
+      "description": "Gold steadies as inflation concerns balance hopes of lower real rates&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Sectors Up Close: Will gold hit all-time highs again?",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9MREpFSWZIVUNfQUsySEc5bnhydFZkc0dVS2FpTl8wSFUzZlU3U05MQzV6WWliQ1BPZVRQdGRib2ZKQWYxLVVNaGZSbFhkUHBQWnpqWVM5d1hXaHNmOG1GcFNOMWo4RFU?oc=5",
+      "pubDate": "2026-08-20T15:18:36.000Z",
+      "description": "Sectors Up Close: Will gold hit all-time highs again?&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "AFRICA-FX-Ghana's currency back under pressure, Uganda's on front foot",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNUXJjZmFPV2ZFM29paTFzVlkwTTR1YkhEVFdKYVJCUzJVbGdxZ2d0VTFybk80YnZTS3pSbWRNM0duRVZoTlVHVlpmOXlmd1BQTVNDN3haMjNMeTJnWlRHaTVfLWRFdk1RUDJ4OHFoSG1sbXlQRVdwMVkzZWhTYWlES0huay02c3hGZVpDMmFXRXJRVDNsWlJpei1yRXIwS1hEN2dTeEdqLWljTVMxeUpVVUZ3Zw?oc=5",
+      "pubDate": "2026-08-20T11:44:15.000Z",
+      "description": "AFRICA-FX-Ghana's currency back under pressure, Uganda's on front foot&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "TSX futures dip as gold slips; bond market jitters persist",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSXVQR003UkQ5OHZXZ2tVcW1sdXFCZDUwS2hOZEdJZjZ6OTN5NjB4VFZxNDJCZFN2Q2R4ZEdsenhyQTVCLUhOZTNDYklMVkpSYUNxR3dQM0JjMjFSeW1aeDhtQ2hvY0EybV84YkxKMjJ0MWtGQ3hCMTdUYk0xMTIzSWRrZTM4c050V2ZSU0ljTl9qbXNmSE1EblhfLWctcXBO?oc=5",
+      "pubDate": "2026-08-20T11:05:52.000Z",
+      "description": "TSX futures dip as gold slips; bond market jitters persist&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Sterling hits six-month high against fading dollar",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQcC03dlZzODdjdW84SjlNZjVvQXNBMU1ZM1dPV0NDMjRHMlJfNUdZQnhCRVlSd0ZNOGJJVGgzMl94TDBaY1EzR0VxdjFoanZ2MFg4Tk40UVlqemZybFJFRlpsNVJseXkyenI3b0Zab1Qxb2FKZG0wdE53X2Vab1RXRkdGSWlVWFNKc3YwZTVxQXA5dG9CZTJpRGE4Yw?oc=5",
+      "pubDate": "2026-08-20T10:33:45.000Z",
+      "description": "Sterling hits six-month high against fading dollar&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     }
   ]
 }

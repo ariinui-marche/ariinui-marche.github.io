@@ -59,6 +59,9 @@ const NEWS_FEEDS = [
   { url: 'https://beincrypto.com/feed/', source: 'BeInCrypto' },
 ];
 
+const REUTERS_QUERY =
+  'site:reuters.com (intitle:forex OR intitle:currency OR intitle:currencies OR intitle:dollar OR intitle:yen OR intitle:euro OR intitle:sterling OR intitle:gold OR intitle:bitcoin) when:2d';
+
 async function fetchOneFeed({ url, source }) {
   const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
   if (!res.ok) throw new Error(`${source} RSS HTTP ${res.status}`);
@@ -66,15 +69,27 @@ async function fetchOneFeed({ url, source }) {
   return parseRSS(xml, source);
 }
 
+async function fetchReutersFeed() {
+  const url = `https://news.google.com/rss/search?q=${encodeURIComponent(REUTERS_QUERY)}&hl=en-US&gl=US&ceid=US:en`;
+  const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  if (!res.ok) throw new Error(`Reuters (Google News) RSS HTTP ${res.status}`);
+  const xml = await res.text();
+  return parseRSS(xml, 'Reuters')
+    .map((it) => ({ ...it, title: it.title.replace(/\s*-\s*Reuters\s*$/i, '') }))
+    .filter((it) => !/\|\s*Stock Price/i.test(it.title));
+}
+
 async function fetchMarketNews() {
-  const results = await Promise.allSettled(NEWS_FEEDS.map(fetchOneFeed));
+  const feedFetches = [...NEWS_FEEDS.map(fetchOneFeed), fetchReutersFeed()];
+  const feedNames = [...NEWS_FEEDS.map((f) => f.source), 'Reuters'];
+  const results = await Promise.allSettled(feedFetches);
 
   const items = [];
   for (let i = 0; i < results.length; i++) {
     if (results[i].status === 'fulfilled') {
       items.push(...results[i].value);
     } else {
-      console.error(`${NEWS_FEEDS[i].source} fetch failed:`, results[i].reason.message);
+      console.error(`${feedNames[i]} fetch failed:`, results[i].reason.message);
     }
   }
 
