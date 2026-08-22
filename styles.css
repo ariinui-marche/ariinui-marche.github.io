@@ -263,8 +263,8 @@ main {
 
 .eco-event {
   display: grid;
-  grid-template-columns: 70px 34px 40px 1fr auto;
-  align-items: center;
+  grid-template-columns: 70px 40px 34px 1fr auto;
+  align-items: start;
   gap: 10px;
   padding: 8px 10px;
   background: #0e1219;
@@ -292,7 +292,7 @@ main {
 .eco-time-yellow { color: #eab308; }
 .eco-flag { font-size: 16px; text-align: center; }
 .eco-ccy { color: var(--text-dim); font-weight: 600; font-size: 11px; }
-.eco-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.eco-title { white-space: normal; word-break: break-word; line-height: 1.35; }
 
 .eco-values b.val-pos { color: var(--green); }
 .eco-values b.val-neg { color: var(--red); }
@@ -358,7 +358,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .eco-event { grid-template-columns: 56px 26px 32px 1fr auto; font-size: 12px; }
+  .eco-event { grid-template-columns: 56px 32px 26px 1fr auto; font-size: 12px; }
   .eco-values { padding-left: 114px; }
 
   main { padding: 12px 8px; }

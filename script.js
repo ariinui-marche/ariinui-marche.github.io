@@ -226,8 +226,8 @@ function renderEvents() {
       ${showDateHeader ? `<div class="eco-date-header">${dateLabel}</div>` : ''}
       <div class="eco-event">
         <span class="eco-time ${timeClass}">${time}</span>
-        <span class="eco-flag">${flag}</span>
         <span class="eco-ccy">${e.country}</span>
+        <span class="eco-flag">${flag}</span>
         <span class="eco-title" title="${e.title}">${e.title}</span>
         <span class="impact-badge impact-${e.impact}">${e.impact}</span>
       </div>
