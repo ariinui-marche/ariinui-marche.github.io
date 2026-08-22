@@ -159,7 +159,7 @@ const CCY_ALIASES = {
   CAD: ['CAD', 'Loonie'],
   NZD: ['NZD', 'Kiwi'],
   XAU: ['XAU', 'Gold'],
-  BTC: ['BTC', 'Bitcoin'],
+  BTC: ['BTC', 'Bitcoin', 'Crypto', 'Cryptocurrency'],
 };
 
 function detectCurrencies(text) {
