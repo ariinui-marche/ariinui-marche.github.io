@@ -147,6 +147,67 @@ function valueColorClass(val) {
   return 'val-zero';
 }
 
+// ── News Marché (FXStreet + Investing.com) ──────────────────────────────────
+
+const CCY_ALIASES = {
+  EUR: ['EUR', 'Euro'],
+  USD: ['USD', 'US Dollar', 'Greenback'],
+  GBP: ['GBP', 'Pound', 'Sterling', 'Cable'],
+  JPY: ['JPY', 'Yen'],
+  CHF: ['CHF', 'Franc'],
+  AUD: ['AUD', 'Aussie'],
+  CAD: ['CAD', 'Loonie'],
+  NZD: ['NZD', 'Kiwi'],
+  XAU: ['XAU', 'Gold'],
+  BTC: ['BTC', 'Bitcoin'],
+};
+
+function detectCurrencies(text) {
+  const found = new Set();
+  // Paires collées ou avec slash (AUDUSD / AUD/USD) — priorité, très fiable dans les titres forex
+  for (const m of text.matchAll(/\b([A-Z]{3})\/?([A-Z]{3})\b/g)) {
+    if (CCY_ALIASES[m[1]]) found.add(m[1]);
+    if (CCY_ALIASES[m[2]]) found.add(m[2]);
+  }
+  // Alias mots (Gold, Bitcoin, Aussie, etc.) + codes isolés
+  for (const [ccy, aliases] of Object.entries(CCY_ALIASES)) {
+    for (const alias of aliases) {
+      const re = new RegExp(`\\b${alias}\\b`, alias === alias.toUpperCase() ? '' : 'i');
+      if (re.test(text)) { found.add(ccy); break; }
+    }
+  }
+  return [...found];
+}
+
+let currentNews = [];
+let currentNewsFilter = 'all';
+
+function renderNews() {
+  const list = document.getElementById('newsList');
+  const filtered = currentNewsFilter === 'all'
+    ? currentNews
+    : currentNews.filter((n) => n.currencies.includes(currentNewsFilter));
+
+  if (!filtered.length) {
+    list.innerHTML = '<div class="empty-state">Aucune news</div>';
+    return;
+  }
+
+  list.innerHTML = filtered.map((n) => {
+    const d = new Date(n.pubDate);
+    const time = isNaN(d) ? '' : d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+    const dateLabel = isNaN(d) ? '' : d.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' });
+    return `
+      <a class="news-item" href="${n.link}" target="_blank" rel="noopener noreferrer">
+        <div class="news-meta">
+          <span class="news-source">${n.source}</span>
+          <span class="news-time">${dateLabel} ${time}</span>
+        </div>
+        <div class="news-title">${n.title}</div>
+      </a>`;
+  }).join('');
+}
+
 function formatTimestamp(iso) {
   if (!iso) return 'Jamais';
   const d = new Date(iso);
@@ -159,9 +220,10 @@ function formatTimestamp(iso) {
 async function loadAll() {
   document.getElementById('updateStatus').textContent = 'Chargement…';
   try {
-    const [currencyData, ecoData] = await Promise.all([
+    const [currencyData, ecoData, newsData] = await Promise.all([
       fetchCurrencyStrength().catch((err) => { console.error(err); return null; }),
       loadJSON('./data/eco-calendar.json').catch(() => null),
+      loadJSON('./data/market-news.json').catch(() => null),
     ]);
 
     renderCurrencies(currencyData);
@@ -169,7 +231,12 @@ async function loadAll() {
     currentEvents = (ecoData?.events || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
     renderEvents();
 
-    const latest = [currencyData?.timestamp, ecoData?.timestamp].filter(Boolean).sort().pop();
+    currentNews = (newsData?.items || [])
+      .map((n) => ({ ...n, currencies: detectCurrencies(n.title + ' ' + n.description) }))
+      .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+    renderNews();
+
+    const latest = [currencyData?.timestamp, ecoData?.timestamp, newsData?.timestamp].filter(Boolean).sort().pop();
     document.getElementById('updateStatus').textContent = `Mis à jour : ${formatTimestamp(latest)}`;
   } catch (err) {
     document.getElementById('updateStatus').textContent = 'Erreur de chargement';
@@ -181,10 +248,18 @@ document.getElementById('refreshBtn').addEventListener('click', loadAll);
 document.getElementById('impactFilters').addEventListener('click', (e) => {
   const btn = e.target.closest('.filter-btn');
   if (!btn) return;
-  document.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('active'));
+  e.currentTarget.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('active'));
   btn.classList.add('active');
   currentFilter = btn.dataset.impact;
   renderEvents();
+});
+document.getElementById('newsFilters').addEventListener('click', (e) => {
+  const btn = e.target.closest('.filter-btn');
+  if (!btn) return;
+  e.currentTarget.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentNewsFilter = btn.dataset.ccy;
+  renderNews();
 });
 
 loadAll();

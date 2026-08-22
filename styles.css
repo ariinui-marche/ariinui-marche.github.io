@@ -222,6 +222,27 @@ main {
   text-align: center;
 }
 
+.news-item {
+  display: block;
+  padding: 10px 12px;
+  background: #0e1219;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+}
+.news-item:hover { border-color: var(--accent); }
+
+.news-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+}
+.news-source { font-weight: 600; color: var(--accent); }
+.news-title { font-size: 13px; line-height: 1.4; }
+
 footer {
   text-align: center;
   padding: 20px;

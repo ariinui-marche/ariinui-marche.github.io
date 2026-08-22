@@ -26,15 +26,67 @@ async function fetchEcoCalendar() {
     }));
 }
 
+function decodeEntities(s) {
+  return s
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'");
+}
+
+function parseRSS(xml, source) {
+  const items = [];
+  const itemBlocks = xml.match(/<item>[\s\S]*?<\/item>/g) || [];
+  for (const block of itemBlocks) {
+    const get = (tag) => {
+      const m = block.match(new RegExp(`<${tag}>(?:<!\\[CDATA\\[)?([\\s\\S]*?)(?:\\]\\]>)?<\\/${tag}>`));
+      return m ? decodeEntities(m[1].trim()) : '';
+    };
+    const title = get('title');
+    const link = get('link');
+    const pubDate = get('pubDate');
+    const description = get('description').replace(/<[^>]+>/g, '').slice(0, 240);
+    if (!title || !link) continue;
+    items.push({ title, link, pubDate: new Date(pubDate).toISOString(), description, source });
+  }
+  return items;
+}
+
+async function fetchMarketNews() {
+  const [fxRes, investingRes] = await Promise.all([
+    fetch('https://www.fxstreet.com/rss/news', { headers: { 'User-Agent': 'Mozilla/5.0' } }),
+    fetch('https://www.investing.com/rss/news.rss', { headers: { 'User-Agent': 'Mozilla/5.0' } }),
+  ]);
+  if (!fxRes.ok) throw new Error(`FXStreet RSS HTTP ${fxRes.status}`);
+  if (!investingRes.ok) throw new Error(`Investing.com RSS HTTP ${investingRes.status}`);
+
+  const [fxXml, investingXml] = await Promise.all([fxRes.text(), investingRes.text()]);
+  const items = [
+    ...parseRSS(fxXml, 'FXStreet'),
+    ...parseRSS(investingXml, 'Investing.com'),
+  ]
+    .filter((it) => !isNaN(new Date(it.pubDate)))
+    .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate))
+    .slice(0, 80);
+
+  return items;
+}
+
 async function main() {
   await mkdir('data', { recursive: true });
   const timestamp = new Date().toISOString();
-  const events = await fetchEcoCalendar();
+
+  const [events, news] = await Promise.all([fetchEcoCalendar(), fetchMarketNews()]);
+
   await writeFile('data/eco-calendar.json', JSON.stringify({ timestamp, events }, null, 2));
   console.log(`eco-calendar.json written (${events.length} events)`);
+
+  await writeFile('data/market-news.json', JSON.stringify({ timestamp, items: news }, null, 2));
+  console.log(`market-news.json written (${news.length} items)`);
 }
 
 main().catch((err) => {
-  console.error('Eco calendar fetch failed:', err);
+  console.error('Fetch failed:', err);
   process.exit(1);
 });
