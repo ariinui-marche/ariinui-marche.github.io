@@ -33,8 +33,8 @@ async function loadJSON(path) {
 }
 
 const CURRENCY_NAMES = {
-  USD: 'Dollar US', EUR: 'Euro', GBP: 'Livre Sterling', JPY: 'Yen Japonais',
-  CHF: 'Franc Suisse', AUD: 'Dollar Australien', CAD: 'Dollar Canadien', NZD: 'Dollar Néo-Zélandais',
+  USD: 'US Dollar', EUR: 'Euro', GBP: 'British Pound', JPY: 'Japanese Yen',
+  CHF: 'Swiss Franc', AUD: 'Australian Dollar', CAD: 'Canadian Dollar', NZD: 'New Zealand Dollar',
 };
 
 // Force Devise: live proxy déjà utilisé par TradeJournal Pro (BabyPips bloque les IPs
@@ -75,7 +75,7 @@ async function fetchCurrencyStrength() {
 function renderCurrencies(data) {
   const grid = document.getElementById('currencyGrid');
   if (!data?.currencies?.length) {
-    grid.innerHTML = '<div class="empty-state">Données indisponibles</div>';
+    grid.innerHTML = '<div class="empty-state">Data unavailable</div>';
     return;
   }
   grid.innerHTML = data.currencies.map((c) => {
@@ -149,7 +149,7 @@ function renderEcoCalendar() {
   const daysInMonth = new Date(calViewYear, calViewMonth + 1, 0).getDate();
   const firstDow = new Date(calViewYear, calViewMonth, 1).getDay();
   const startOffset = firstDow === 0 ? 6 : firstDow - 1;
-  const monthLabel = new Date(calViewYear, calViewMonth).toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
+  const monthLabel = new Date(calViewYear, calViewMonth).toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
   const todayStr = localDateStr(today);
 
   let cells = '';
@@ -162,7 +162,7 @@ function renderEcoCalendar() {
     if (dateStr === todayStr) cls.push('today');
     if (dateStr === calSelectedDate) cls.push('selected');
     cells += `
-      <button class="${cls.join(' ')}" data-date="${dateStr}" ${info ? `title="${info.count} événement${info.count > 1 ? 's' : ''}"` : ''}>
+      <button class="${cls.join(' ')}" data-date="${dateStr}" ${info ? `title="${info.count} event${info.count > 1 ? 's' : ''}"` : ''}>
         ${day}
       </button>`;
   }
@@ -173,12 +173,12 @@ function renderEcoCalendar() {
       <span class="cal-month-label">${monthLabel}</span>
       <button class="cal-nav" id="calNext">›</button>
     </div>
-    <div class="cal-weekdays">${['Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa', 'Di'].map((d) => `<div>${d}</div>`).join('')}</div>
+    <div class="cal-weekdays">${['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'].map((d) => `<div>${d}</div>`).join('')}</div>
     <div class="cal-grid">${cells}</div>
     <div class="cal-footer">
-      ${calShowAll ? '<button class="cal-link" id="calThisWeek">Cette semaine</button>' : ''}
-      ${(calSelectedDate || !calShowAll) ? '<button class="cal-link" id="calShowAll">Tout afficher</button>' : ''}
-      ${calSelectedDate !== todayStr ? '<button class="cal-link" id="calToday">Aujourd\'hui</button>' : ''}
+      ${calShowAll ? '<button class="cal-link" id="calThisWeek">This week</button>' : ''}
+      ${(calSelectedDate || !calShowAll) ? '<button class="cal-link" id="calShowAll">Show all</button>' : ''}
+      ${calSelectedDate !== todayStr ? '<button class="cal-link" id="calToday">Today</button>' : ''}
     </div>`;
 }
 
@@ -227,7 +227,7 @@ function renderEvents() {
   }
 
   if (!filtered.length) {
-    list.innerHTML = '<div class="empty-state">Aucun événement</div>';
+    list.innerHTML = '<div class="empty-state">No events</div>';
     return;
   }
 
@@ -235,12 +235,12 @@ function renderEvents() {
 
   list.innerHTML = filtered.map((e) => {
     const d = new Date(e.date);
-    const time = isNaN(d) ? '--:--' : d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+    const time = isNaN(d) ? '--:--' : d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
     const timeClass = isNaN(d) ? '' : ecoTimeColorClass(d.getHours());
     const dateKey = isNaN(d) ? '' : d.toDateString();
     const dateLabel = isNaN(d)
       ? ''
-      : d.toLocaleDateString('fr-FR', { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' });
+      : d.toLocaleDateString('en-GB', { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' });
     const showDateHeader = dateKey && dateKey !== lastDateKey;
     lastDateKey = dateKey || lastDateKey;
 
@@ -359,7 +359,7 @@ function saveNewsFilter(ccy) {
   try {
     localStorage.setItem('newsFilterCcy', ccy);
   } catch {
-    // localStorage indisponible (navigation privée, stockage bloqué...) — pas bloquant
+    // localStorage unavailable (private browsing, storage blocked...) — not blocking
   }
 }
 
@@ -372,14 +372,14 @@ function renderNews() {
     : currentNews.filter((n) => n.currencies.includes(currentNewsFilter));
 
   if (!filtered.length) {
-    list.innerHTML = '<div class="empty-state">Aucune news</div>';
+    list.innerHTML = '<div class="empty-state">No news</div>';
     return;
   }
 
   list.innerHTML = filtered.map((n) => {
     const d = new Date(n.pubDate);
-    const time = isNaN(d) ? '' : d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
-    const dateLabel = isNaN(d) ? '' : d.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' });
+    const time = isNaN(d) ? '' : d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+    const dateLabel = isNaN(d) ? '' : d.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit' });
     const sentiment = detectSentiment(n.title);
     return `
       <a class="news-item" href="${n.link}" target="_blank" rel="noopener noreferrer">
@@ -393,16 +393,16 @@ function renderNews() {
 }
 
 function formatTimestamp(iso) {
-  if (!iso) return 'Jamais';
+  if (!iso) return 'Never';
   const d = new Date(iso);
   const diffMin = Math.round((Date.now() - d.getTime()) / 60000);
-  if (diffMin < 1) return 'À l\'instant';
-  if (diffMin < 60) return `Il y a ${diffMin} min`;
-  return d.toLocaleString();
+  if (diffMin < 1) return 'Just now';
+  if (diffMin < 60) return `${diffMin} min ago`;
+  return d.toLocaleString('en-GB');
 }
 
 async function loadAll() {
-  document.getElementById('updateStatus').textContent = 'Chargement…';
+  document.getElementById('updateStatus').textContent = 'Loading…';
   try {
     const [currencyData, ecoData, newsData] = await Promise.all([
       fetchCurrencyStrength().catch((err) => { console.error(err); return null; }),
@@ -430,9 +430,9 @@ async function loadAll() {
     renderNews();
 
     const latest = [currencyData?.timestamp, ecoData?.timestamp, newsData?.timestamp].filter(Boolean).sort().pop();
-    document.getElementById('updateStatus').textContent = `Mis à jour : ${formatTimestamp(latest)}`;
+    document.getElementById('updateStatus').textContent = `Updated: ${formatTimestamp(latest)}`;
   } catch (err) {
-    document.getElementById('updateStatus').textContent = 'Erreur de chargement';
+    document.getElementById('updateStatus').textContent = 'Loading error';
     console.error(err);
   }
 }

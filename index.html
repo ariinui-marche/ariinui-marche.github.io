@@ -3,39 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marché — Ariinui</title>
+<title>Market — Ariinui</title>
 <link rel="manifest" href="./manifest.json">
 <meta name="theme-color" content="#0b0e14">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Marché">
+<meta name="apple-mobile-web-app-title" content="Market">
 <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
 <link rel="icon" href="./icons/icon-192.png">
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <header class="topbar">
-    <h1>Marché</h1>
+    <h1>Market</h1>
     <div class="update-info">
-      <span id="updateStatus">Chargement…</span>
-      <button id="refreshBtn" title="Rafraîchir">⟳</button>
+      <span id="updateStatus">Loading…</span>
+      <button id="refreshBtn" title="Refresh">⟳</button>
     </div>
   </header>
 
   <main>
     <section class="panel">
       <h2 class="panel-toggle" id="currencyToggle" aria-expanded="false" aria-controls="currencyGrid">
-        Force des Devises
+        Currency Strength
         <span class="chevron">▾</span>
       </h2>
       <div id="currencyGrid" class="currency-grid collapsed"></div>
     </section>
 
     <section class="panel">
-      <h2>Calendrier Économique</h2>
+      <h2>Economic Calendar</h2>
       <div id="ecoCalendar" class="mini-calendar"></div>
       <div class="filters" id="impactFilters">
-        <button class="filter-btn" data-impact="all">Tout</button>
+        <button class="filter-btn" data-impact="all">All</button>
         <button class="filter-btn active" data-impact="High">High</button>
         <button class="filter-btn" data-impact="Medium">Medium</button>
         <button class="filter-btn" data-impact="Low">Low</button>
@@ -44,9 +44,9 @@
     </section>
 
     <section class="panel">
-      <h2>News Marché</h2>
+      <h2>Market News</h2>
       <div class="filters" id="newsFilters">
-        <button class="filter-btn active" data-ccy="all">Tout</button>
+        <button class="filter-btn active" data-ccy="all">All</button>
         <button class="filter-btn" data-ccy="EUR">EUR</button>
         <button class="filter-btn" data-ccy="USD">USD</button>
         <button class="filter-btn" data-ccy="GBP">GBP</button>
@@ -63,7 +63,7 @@
   </main>
 
   <footer>
-    <span>Force Devise : BabyPips (live) · News Éco : ForexFactory · News Marché : FXStreet, Investing.com, BeInCrypto, Reuters, Google News + banques centrales officielles (BoE, Fed, ECB, BoJ, RBA, BoC, SNB) — rafraîchi toutes les 5 min</span>
+    <span>Currency Strength: BabyPips (live) · Economic Calendar: ForexFactory · Market News: FXStreet, Investing.com, BeInCrypto, Reuters, Google News + official central banks (BoE, Fed, ECB, BoJ, RBA, BoC, SNB) — refreshed every 5 min</span>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>

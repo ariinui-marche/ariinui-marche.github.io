@@ -1,7 +1,7 @@
 {
-  "name": "Ariinui Marché",
-  "short_name": "Marché",
-  "description": "Force des devises et calendrier économique en direct",
+  "name": "Ariinui Market",
+  "short_name": "Market",
+  "description": "Live currency strength and economic calendar",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
