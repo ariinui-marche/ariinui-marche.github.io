@@ -571,7 +571,7 @@
     {
       "title": "CPI m/m",
       "country": "AUD",
-      "date": "2026-06-23T21:30:00-04:00",
+      "date": "2026-06-23T20:30:00-04:00",
       "impact": "High",
       "forecast": "-0.4%",
       "previous": "0.4%",
@@ -580,7 +580,7 @@
     {
       "title": "CPI y/y",
       "country": "AUD",
-      "date": "2026-06-23T21:30:00-04:00",
+      "date": "2026-06-23T20:30:00-04:00",
       "impact": "High",
       "forecast": "4.3%",
       "previous": "4.2%",
@@ -589,7 +589,7 @@
     {
       "title": "Trimmed Mean CPI m/m",
       "country": "AUD",
-      "date": "2026-06-23T21:30:00-04:00",
+      "date": "2026-06-23T20:30:00-04:00",
       "impact": "High",
       "forecast": "0.3%",
       "previous": "0.3%",
@@ -1897,7 +1897,7 @@
       "date": "2026-08-19T21:30:00-04:00",
       "impact": "High",
       "forecast": "11.7K",
-      "previous": "76.3K",
+      "previous": "80.2K",
       "actual": "-15.8K"
     },
     {
@@ -2254,7 +2254,7 @@
     {
       "title": "Core PCE Price Index m/m",
       "country": "USD",
-      "date": "2026-08-26T08:30:00-04:00",
+      "date": "2026-08-26T07:30:00-04:00",
       "impact": "High",
       "forecast": "0.2%",
       "previous": "0.1%",
@@ -2263,7 +2263,7 @@
     {
       "title": "Prelim GDP q/q",
       "country": "USD",
-      "date": "2026-08-26T08:30:00-04:00",
+      "date": "2026-08-26T07:30:00-04:00",
       "impact": "High",
       "forecast": "1.5%",
       "previous": "1.5%",
@@ -2272,7 +2272,7 @@
     {
       "title": "ISM Manufacturing PMI",
       "country": "USD",
-      "date": "2026-09-01T10:00:00-04:00",
+      "date": "2026-09-01T09:00:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2281,7 +2281,7 @@
     {
       "title": "GDP q/q",
       "country": "AUD",
-      "date": "2026-09-01T21:30:00-04:00",
+      "date": "2026-09-01T20:30:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2290,7 +2290,7 @@
     {
       "title": "Official Cash Rate",
       "country": "NZD",
-      "date": "2026-09-01T22:00:00-04:00",
+      "date": "2026-09-01T21:00:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2299,7 +2299,7 @@
     {
       "title": "RBNZ Monetary Policy Statement",
       "country": "NZD",
-      "date": "2026-09-01T22:00:00-04:00",
+      "date": "2026-09-01T21:00:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2308,7 +2308,7 @@
     {
       "title": "RBNZ Rate Statement",
       "country": "NZD",
-      "date": "2026-09-01T22:00:00-04:00",
+      "date": "2026-09-01T21:00:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2317,7 +2317,7 @@
     {
       "title": "RBNZ Press Conference",
       "country": "NZD",
-      "date": "2026-09-01T23:00:00-04:00",
+      "date": "2026-09-01T22:00:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2353,7 +2353,7 @@
     {
       "title": "Employment Change",
       "country": "CAD",
-      "date": "2026-09-04T08:30:00-04:00",
+      "date": "2026-09-04T07:30:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2362,7 +2362,7 @@
     {
       "title": "Unemployment Rate",
       "country": "CAD",
-      "date": "2026-09-04T08:30:00-04:00",
+      "date": "2026-09-04T07:30:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2371,7 +2371,7 @@
     {
       "title": "Average Hourly Earnings m/m",
       "country": "USD",
-      "date": "2026-09-04T08:30:00-04:00",
+      "date": "2026-09-04T07:30:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2380,7 +2380,7 @@
     {
       "title": "Non-Farm Employment Change",
       "country": "USD",
-      "date": "2026-09-04T08:30:00-04:00",
+      "date": "2026-09-04T07:30:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2389,7 +2389,7 @@
     {
       "title": "Unemployment Rate",
       "country": "USD",
-      "date": "2026-09-04T08:30:00-04:00",
+      "date": "2026-09-04T07:30:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2416,7 +2416,7 @@
     {
       "title": "Main Refinancing Rate",
       "country": "EUR",
-      "date": "2026-09-10T08:15:00-04:00",
+      "date": "2026-09-10T07:15:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2425,7 +2425,7 @@
     {
       "title": "Monetary Policy Statement",
       "country": "EUR",
-      "date": "2026-09-10T08:15:00-04:00",
+      "date": "2026-09-10T07:15:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2434,7 +2434,7 @@
     {
       "title": "Core PPI m/m",
       "country": "USD",
-      "date": "2026-09-10T08:30:00-04:00",
+      "date": "2026-09-10T07:30:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2443,7 +2443,7 @@
     {
       "title": "PPI m/m",
       "country": "USD",
-      "date": "2026-09-10T08:30:00-04:00",
+      "date": "2026-09-10T07:30:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2452,7 +2452,7 @@
     {
       "title": "ECB Press Conference",
       "country": "EUR",
-      "date": "2026-09-10T08:45:00-04:00",
+      "date": "2026-09-10T07:45:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2560,7 +2560,7 @@
     {
       "title": "BOJ Policy Rate",
       "country": "JPY",
-      "date": "2026-09-17T06:00:00-04:00",
+      "date": "2026-09-17T00:00:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2569,7 +2569,7 @@
     {
       "title": "Monetary Policy Statement",
       "country": "JPY",
-      "date": "2026-09-17T06:00:00-04:00",
+      "date": "2026-09-17T00:00:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2749,7 +2749,7 @@
     {
       "title": "Average Hourly Earnings m/m",
       "country": "USD",
-      "date": "2026-10-02T08:30:00-04:00",
+      "date": "2026-10-02T05:30:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2758,7 +2758,7 @@
     {
       "title": "Non-Farm Employment Change",
       "country": "USD",
-      "date": "2026-10-02T08:30:00-04:00",
+      "date": "2026-10-02T05:30:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2767,7 +2767,7 @@
     {
       "title": "Unemployment Rate",
       "country": "USD",
-      "date": "2026-10-02T08:30:00-04:00",
+      "date": "2026-10-02T05:30:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2821,7 +2821,7 @@
     {
       "title": "FOMC Meeting Minutes",
       "country": "USD",
-      "date": "2026-10-07T14:00:00-04:00",
+      "date": "2026-10-07T13:00:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2848,7 +2848,7 @@
     {
       "title": "Core CPI m/m",
       "country": "USD",
-      "date": "2026-10-14T08:30:00-04:00",
+      "date": "2026-10-14T07:30:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2857,7 +2857,7 @@
     {
       "title": "Core CPI y/y",
       "country": "USD",
-      "date": "2026-10-14T08:30:00-04:00",
+      "date": "2026-10-14T07:30:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2866,7 +2866,7 @@
     {
       "title": "CPI m/m",
       "country": "USD",
-      "date": "2026-10-14T08:30:00-04:00",
+      "date": "2026-10-14T07:30:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2875,7 +2875,7 @@
     {
       "title": "CPI y/y",
       "country": "USD",
-      "date": "2026-10-14T08:30:00-04:00",
+      "date": "2026-10-14T07:30:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2884,7 +2884,7 @@
     {
       "title": "Employment Change",
       "country": "AUD",
-      "date": "2026-10-14T20:30:00-04:00",
+      "date": "2026-10-14T19:30:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2893,7 +2893,7 @@
     {
       "title": "Unemployment Rate",
       "country": "AUD",
-      "date": "2026-10-14T20:30:00-04:00",
+      "date": "2026-10-14T19:30:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2993,6 +2993,42 @@
       "title": "CPI y/y",
       "country": "GBP",
       "date": "2026-10-21T01:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "GDP m/m",
+      "country": "CAD",
+      "date": "2026-08-28T07:30:00-04:00",
+      "impact": "High",
+      "forecast": "0.2%",
+      "previous": "0.3%",
+      "actual": ""
+    },
+    {
+      "title": "Fed Chairman Warsh Speaks",
+      "country": "USD",
+      "date": "2026-08-28T09:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Prelim Benchmark Payrolls Revision",
+      "country": "USD",
+      "date": "2026-08-28T09:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "-911K",
+      "actual": ""
+    },
+    {
+      "title": "Jackson Hole Symposium",
+      "country": "ALL",
+      "date": "2026-08-28T00:00:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",

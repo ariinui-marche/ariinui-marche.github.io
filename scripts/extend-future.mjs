@@ -16,18 +16,21 @@ if (!APIFY_TOKEN) throw new Error('APIFY_TOKEN manquant (secret GitHub Actions)'
 
 const file = JSON.parse(await readFile('data/eco-calendar.json', 'utf-8'));
 
-const maxDate = file.events.reduce((max, e) => (e.date.slice(0, 10) > max ? e.date.slice(0, 10) : max), '0000-00-00');
-
-const startDate = new Date(`${maxDate}T00:00:00Z`);
-startDate.setUTCDate(startDate.getUTCDate() + 1);
-const endDate = new Date(startDate);
-endDate.setUTCDate(endDate.getUTCDate() + 6);
-
 const fmt = (d) => d.toISOString().slice(0, 10);
-const startStr = fmt(startDate);
-const endStr = fmt(endDate);
+let startStr = process.env.RANGE_START_DATE;
+let endStr = process.env.RANGE_END_DATE;
 
-console.log(`Fenêtre actuelle jusqu'à ${maxDate}. Extension : ${startStr} → ${endStr}`);
+if (!startStr || !endStr) {
+  const maxDate = file.events.reduce((max, e) => (e.date.slice(0, 10) > max ? e.date.slice(0, 10) : max), '0000-00-00');
+  const startDate = new Date(`${maxDate}T00:00:00Z`);
+  startDate.setUTCDate(startDate.getUTCDate() + 1);
+  const endDate = new Date(startDate);
+  endDate.setUTCDate(endDate.getUTCDate() + 6);
+  startStr = fmt(startDate);
+  endStr = fmt(endDate);
+}
+
+console.log(`Récupération : ${startStr} → ${endStr}`);
 
 const res = await fetch(
   `https://api.apify.com/v2/acts/scrapemint~forexfactory-economic-calendar/run-sync-get-dataset-items?token=${APIFY_TOKEN}`,
@@ -47,9 +50,9 @@ if (!res.ok) throw new Error(`Apify HTTP ${res.status}: ${await res.text()}`);
 const items = await res.json();
 
 function toIso(date, time) {
-  if (!time) return `${date}T00:00:00-04:00`;
-  const [h, m] = time.split(':');
-  return `${date}T${h.padStart(2, '0')}:${(m || '00').padStart(2, '0')}:00-04:00`;
+  const m = /^(\d{1,2}):(\d{2})$/.exec((time || '').trim());
+  if (!m) return `${date}T00:00:00-04:00`;
+  return `${date}T${m[1].padStart(2, '0')}:${m[2]}:00-04:00`;
 }
 
 const eventKey = (e) => `${e.title}|${e.country}|${e.date.slice(0, 10)}`;
@@ -57,6 +60,7 @@ const eventKey = (e) => `${e.title}|${e.country}|${e.date.slice(0, 10)}`;
 const existing = new Map(file.events.map((e) => [eventKey(e), e]));
 let added = 0;
 for (const it of items) {
+  if (!it.title || !it.date) continue;
   const e = {
     title: it.title,
     country: it.currency,
