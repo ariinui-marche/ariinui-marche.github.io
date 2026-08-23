@@ -1,12 +1,19 @@
 {
-  "timestamp": "2026-08-23T10:19:40.734Z",
+  "timestamp": "2026-08-23T10:44:42.950Z",
   "items": [
     {
       "title": "2026-08-23 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-23T10:19:01.000Z",
+      "pubDate": "2026-08-23T10:40:59.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "Nvidia Reportedly Warns Top Customers of 15% Price Hikes on AI Servers",
+      "link": "https://beincrypto.com/nvidia-ai-server-price-hikes/",
+      "pubDate": "2026-08-23T10:28:24.000Z",
+      "description": "Nvidia has reportedly told some of its largest customers that servers built around its AI chips are getting more expensive.&#160; Increases top 15% on systems shipping early next year, people cited by Bloomberg said. The size of each increa",
+      "source": "BeInCrypto"
     },
     {
       "title": "Bitcoin slips under $77,000 as rally boosts mining economics",
@@ -77,6 +84,13 @@
       "pubDate": "2026-08-23T07:02:36.000Z",
       "description": "",
       "source": "Investing.com"
+    },
+    {
+      "title": "Dollar Looks Best Defensive Currency During Bond and Equity Selloffs",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNWnoxVUo0aGVMU2Y5OVd1bmlHQmJYNVZPelBNODYtOTN3RTV4M01LNTNyQmZHU3Jqc3A2WmFXUW9PVTZ1QWluTDNHNDIyNF8xWUtnTDV3NG1UZmxxNFNqY0NMWUkwOTdOcUF6d2loS2xZNVlJenlhWENnb1ZVd3daSnBTTHpaYlJHbWlyTGk1QWdIWHBFRjNFdVV5VDlQdWh5dkh6LW5VeUhNa3hBZnRPU2VWYnhfd0IyLUtBemZvcUppeGd3LUNv?oc=5",
+      "pubDate": "2026-08-23T01:03:02.000Z",
+      "description": "Dollar Looks Best Defensive Currency During Bond and Equity Selloffs&nbsp;&nbsp;WSJ",
+      "source": "Google News"
     },
     {
       "title": "Arthur Hayes Shares Surprising Tip on Stocks, Gold, and Bitcoin",
@@ -181,13 +195,6 @@
       "link": "https://beincrypto.com/sandbox-sand-bridge-exploit-base-bsc/",
       "pubDate": "2026-08-22T08:20:49.000Z",
       "description": "The Sandbox said it has contained a vulnerability in the SAND cross-chain bridge on Base and BNB Smart Chain after an attacker minted unbacked tokens on both networks. The project put the impact at under 0.01% of the total SAND supply. It s",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Coinbase CEO Brian Armstrong Sees Crypto Bull Market Starting Soon",
-      "link": "https://beincrypto.com/coinbase-ceo-crypto-bull-market/",
-      "pubDate": "2026-08-22T04:10:36.000Z",
-      "description": "Coinbase CEO Brian Armstrong says crypto spot trading is close to its next bull market, citing prior bear cycles that each ran roughly 370 to 380 days. He spoke on CNBC after President Donald Trump hosted crypto executives and regulators at",
       "source": "BeInCrypto"
     },
     {
@@ -475,13 +482,6 @@
       "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOVU1FcGpCUE84VVYwNkllLTczRmVidF9FYmtwYnRlYlFGNUZjU05CSFZTSjk3bzUwQ09vbzFnU0JvaWwyYnRGVWZHOW1DVVBwcG4tcHFSZW4wY1N6X3R1eDdFZDJQRXYzTFQ3X19kbjlZTmdqdEpqTGtWTkdoMjlrWGw2azJia0xfWjVQZFRZYTJra3ctdjFOam5kNjFHQTFBWFVz?oc=5",
       "pubDate": "2026-08-21T10:51:12.000Z",
       "description": "How Tether's bitcoin mining plans in Uruguay unraveled&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Sterling extends rally on firm rate-hike bets, subdued dollar",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNRTBqSUE0alFRUDFVRklwV2J3ejdBcWVEYjJ0d0ZSZDFaeV8wd0EzWE5yY0RGSHZMRlJNUnZFUGhGQmc3THdnTUhOMHhYRmRuaDBoTDhpSTJMOXY5clBOYXRNNVlfaDA4RWhCUVZpbjUwY3NtY1gwUEJrZHBPdHBfZU15Q1lJdnpPM0FvdE1OR1QyZk1jTy1fVEFTVGdQcFgtRmtiLQ?oc=5",
-      "pubDate": "2026-08-21T10:38:10.000Z",
-      "description": "Sterling extends rally on firm rate-hike bets, subdued dollar&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
