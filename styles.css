@@ -173,6 +173,47 @@ main {
   color: var(--accent);
 }
 
+.eco-countdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+}
+.eco-countdown:empty { display: none; }
+.eco-countdown .countdown-flag { font-size: 20px; flex-shrink: 0; }
+.eco-countdown .countdown-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+.eco-countdown .countdown-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--red);
+  font-weight: 700;
+}
+.eco-countdown .countdown-title {
+  font-size: 13px;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.eco-countdown .countdown-time {
+  font-size: 18px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--red);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 .mini-calendar {
   background: #0e1219;
   border: 1px solid var(--border);
@@ -365,6 +406,8 @@ footer {
 @media (max-width: 480px) {
   .eco-event { grid-template-columns: 56px 32px 26px 1fr auto; font-size: 12px; }
   .eco-values { padding-left: 114px; }
+  .eco-countdown .countdown-title { font-size: 12px; }
+  .eco-countdown .countdown-time { font-size: 15px; }
 
   main { padding: 12px 8px; }
   .panel { padding: 12px 10px; }

@@ -209,6 +209,52 @@ document.getElementById('ecoCalendar').addEventListener('click', (e) => {
   renderEvents();
 });
 
+// ── Compte à rebours vers le prochain event High (indépendant des filtres) ──
+
+let nextHighEvent = null;
+
+function findNextHighEvent() {
+  const now = Date.now();
+  nextHighEvent = currentEvents.find((e) => e.impact === 'High' && new Date(e.date).getTime() > now) || null;
+}
+
+function renderCountdownStatic() {
+  const el = document.getElementById('ecoCountdown');
+  if (!nextHighEvent) {
+    el.innerHTML = '';
+    return;
+  }
+  const flag = COUNTRY_FLAGS[nextHighEvent.country] || '🏳️';
+  el.innerHTML = `
+    <span class="countdown-flag">${flag}</span>
+    <span class="countdown-info">
+      <span class="countdown-label">Next High · ${nextHighEvent.country}</span>
+      <span class="countdown-title" title="${nextHighEvent.title}">${nextHighEvent.title}</span>
+    </span>
+    <span class="countdown-time" id="countdownTime">--:--:--</span>`;
+  parseEmoji(el);
+  tickCountdown();
+}
+
+function tickCountdown() {
+  if (!nextHighEvent) return;
+  const diff = new Date(nextHighEvent.date).getTime() - Date.now();
+  if (diff <= 0) {
+    findNextHighEvent();
+    renderCountdownStatic();
+    return;
+  }
+  const totalSec = Math.floor(diff / 1000);
+  const h = Math.floor(totalSec / 3600);
+  const m = Math.floor((totalSec % 3600) / 60);
+  const s = totalSec % 60;
+  const pad = (n) => String(n).padStart(2, '0');
+  const timeEl = document.getElementById('countdownTime');
+  if (timeEl) timeEl.textContent = `${pad(h)}:${pad(m)}:${pad(s)}`;
+}
+
+setInterval(tickCountdown, 1000);
+
 function renderEvents() {
   const list = document.getElementById('ecoList');
   let filtered = currentImpactFilters.size === 0
@@ -413,6 +459,8 @@ async function loadAll() {
     renderCurrencies(currencyData);
 
     currentEvents = (ecoData?.events || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
+    findNextHighEvent();
+    renderCountdownStatic();
     renderEcoCalendar();
     renderEvents();
 
