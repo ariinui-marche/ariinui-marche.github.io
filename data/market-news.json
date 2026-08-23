@@ -1,17 +1,24 @@
 {
-  "timestamp": "2026-08-23T09:57:58.135Z",
+  "timestamp": "2026-08-23T10:19:40.734Z",
   "items": [
     {
       "title": "2026-08-23 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-23T09:54:59.000Z",
+      "pubDate": "2026-08-23T10:19:01.000Z",
       "description": "",
       "source": "Swiss National Bank"
     },
     {
+      "title": "Bitcoin slips under $77,000 as rally boosts mining economics",
+      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-slips-under-77000-as-rally-boosts-mining-economics-4872436",
+      "pubDate": "2026-08-23T09:58:05.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
       "title": "Iran says Pakistan’s army chief to visit Tehran on Monday",
       "link": "https://www.investing.com/news/commodities-news/iran-says-pakistans-army-chief-to-visit-tehran-on-monday-4872425",
-      "pubDate": "2026-08-23T09:18:31.000Z",
+      "pubDate": "2026-08-23T09:54:51.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -72,13 +79,6 @@
       "source": "Investing.com"
     },
     {
-      "title": "Alibaba plans $10 billion Hong Kong share placement to fund AI spending",
-      "link": "https://www.investing.com/news/stock-market-news/alibaba-proposes-hong-kong-share-placement-worth-10-billion-4872416",
-      "pubDate": "2026-08-23T06:30:36.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Arthur Hayes Shares Surprising Tip on Stocks, Gold, and Bitcoin",
       "link": "https://beincrypto.com/arthur-hayes-stocks-gold-bitcoin-treasury-buybacks/",
       "pubDate": "2026-08-23T00:26:03.000Z",
@@ -116,7 +116,7 @@
     {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-22T17:35:38.000Z",
+      "pubDate": "2026-08-22T17:36:29.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
     },
@@ -485,13 +485,6 @@
       "source": "Reuters"
     },
     {
-      "title": "Euro zone business activity growing at fastest pace since November, PMIs show",
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPeVJRUTVFVzFGV1dITUg0YmRpcFBpN18wZGdmTVgwdU1oWU5xU3dWaWhzWUtONDdWWElvbnpmTHhGLXJDcDBSczdnTnZKVFo0T2hMWEpydGhIOG9rT3g5NW1fWk5nZXBKOFRRbG4yWldPZXc3ak9XTEhqRzVyUTF0X3VNZXo3NVMyenJndGhpTkQ2ZXFzalRYUXZCX0E4SGFQU21LWFpCTmxkMlBWUmx5bG11WlRNM2ZPNnlMSkdn?oc=5",
-      "pubDate": "2026-08-21T09:58:40.000Z",
-      "description": "Euro zone business activity growing at fastest pace since November, PMIs show&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "ECB Consumer Expectations Survey results – July 2026",
       "link": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr260821~a044fdddd9.en.html",
       "pubDate": "2026-08-21T08:00:00.000Z",
@@ -524,6 +517,13 @@
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQQTFONGdxelgwWVk4TW14UHpRYmxJUURBV2ZxZEU4dWFwZ1Q1V2IwbHdxQ1ZId1NwYnd2OU1OSjdBaGhRaWVJYW5mTExUWEtab09ISkJQOFlnd0FKUjVmS19aSTdHN1JaWjc5STVvblh3NXgwSmY0bjlxUUVlenpselo4bm4wUE90YTdRR3NlSnBWYkU2enBnU2JINHk4bTJFY0HSAacBQVVfeXFMUEsxbEQtd242S2Z0akMyVUpENmQwZU96UTBSdjk3RUwxRloyNWRaa0ZUYVAwaGxBem1jR0FKNVZZN05vNnJWVXpDNENFNEVIc0l0bkVleEpjQUlsZFFiUVFIelFVaEFsUkQ0NWt3dUZpV2lieW13WjZRVnJ5SkpuMl9nSVphY0ZzbVVBY1RhRW9SazgwWWxfdHJfcmUwRGpIS0xfR3k5YkE?oc=5",
       "pubDate": "2026-08-21T01:51:00.000Z",
       "description": "Dollar near three-month low on Treasury buyback worries&nbsp;&nbsp;CNBC",
+      "source": "Google News"
+    },
+    {
+      "title": "Japan's historic yen intervention has ‘turbo-charged’ the carry trade",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPTFVsQ3hRTFEtd2hhV2J3UTI0c1Z2Ml83WkRNbGFBaTR4ZzA2eGV3SFpsZmxpVVR4LTVBLWMweEpXZ2JKZnV5Zkxya2lvekRrb3VXaGVuM2dlS3hPWnRWX3daTVhOTDJ2eHJacDJva2owbUtPc25NcDVqaXBjazMxcmNmdVFvMklYR3loWVdLQ19Fd9IBlwFBVV95cUxQN1NKcXg4ckxXVV83Z2ljdDlLZXpYbEJhamZJV2JyeGhmdlUxSXQzUVAwOURzRjJjVHExSmJ5SzZob1RVaFMydno0d0pXbDkwMHBVRlhSWE9UbGVpWWlPR2Z1anZCRWJpTXhjNG1hQ21LY29oRlhmOXFoRk1rcUgyRjc0Ti01dVZFQ1p1US1BUVdMeDJPeWk4?oc=5",
+      "pubDate": "2026-08-21T00:00:00.000Z",
+      "description": "Japan's historic yen intervention has ‘turbo-charged’ the carry trade&nbsp;&nbsp;CNBC",
       "source": "Google News"
     },
     {
