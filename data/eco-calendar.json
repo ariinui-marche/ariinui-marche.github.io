@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-23T00:44:08.794Z",
+  "timestamp": "2026-08-23T02:13:44.275Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -1897,7 +1897,7 @@
       "date": "2026-08-19T21:30:00-04:00",
       "impact": "High",
       "forecast": "11.7K",
-      "previous": "80.2K",
+      "previous": "76.3K",
       "actual": "-15.8K"
     },
     {
@@ -2270,6 +2270,42 @@
       "actual": ""
     },
     {
+      "title": "GDP m/m",
+      "country": "CAD",
+      "date": "2026-08-28T07:30:00-04:00",
+      "impact": "High",
+      "forecast": "0.2%",
+      "previous": "0.3%",
+      "actual": ""
+    },
+    {
+      "title": "Fed Chairman Warsh Speaks",
+      "country": "USD",
+      "date": "2026-08-28T09:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Prelim Benchmark Payrolls Revision",
+      "country": "USD",
+      "date": "2026-08-28T09:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "-911K",
+      "actual": ""
+    },
+    {
+      "title": "Jackson Hole Symposium",
+      "country": "ALL",
+      "date": "2026-08-28T12:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
       "title": "ISM Manufacturing PMI",
       "country": "USD",
       "date": "2026-09-01T09:00:00-04:00",
@@ -2558,24 +2594,6 @@
       "actual": ""
     },
     {
-      "title": "BOJ Policy Rate",
-      "country": "JPY",
-      "date": "2026-09-17T12:00:00-04:00",
-      "impact": "High",
-      "forecast": "",
-      "previous": "",
-      "actual": ""
-    },
-    {
-      "title": "Monetary Policy Statement",
-      "country": "JPY",
-      "date": "2026-09-17T12:00:00-04:00",
-      "impact": "High",
-      "forecast": "",
-      "previous": "",
-      "actual": ""
-    },
-    {
       "title": "BOJ Press Conference",
       "country": "JPY",
       "date": "2026-09-17T06:00:00-04:00",
@@ -2606,6 +2624,24 @@
       "title": "Official Bank Rate",
       "country": "GBP",
       "date": "2026-09-17T07:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "BOJ Policy Rate",
+      "country": "JPY",
+      "date": "2026-09-17T12:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Monetary Policy Statement",
+      "country": "JPY",
+      "date": "2026-09-17T12:00:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -2993,42 +3029,6 @@
       "title": "CPI y/y",
       "country": "GBP",
       "date": "2026-10-21T01:00:00-04:00",
-      "impact": "High",
-      "forecast": "",
-      "previous": "",
-      "actual": ""
-    },
-    {
-      "title": "GDP m/m",
-      "country": "CAD",
-      "date": "2026-08-28T07:30:00-04:00",
-      "impact": "High",
-      "forecast": "0.2%",
-      "previous": "0.3%",
-      "actual": ""
-    },
-    {
-      "title": "Fed Chairman Warsh Speaks",
-      "country": "USD",
-      "date": "2026-08-28T09:00:00-04:00",
-      "impact": "High",
-      "forecast": "",
-      "previous": "",
-      "actual": ""
-    },
-    {
-      "title": "Prelim Benchmark Payrolls Revision",
-      "country": "USD",
-      "date": "2026-08-28T09:00:00-04:00",
-      "impact": "High",
-      "forecast": "",
-      "previous": "-911K",
-      "actual": ""
-    },
-    {
-      "title": "Jackson Hole Symposium",
-      "country": "ALL",
-      "date": "2026-08-28T12:00:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
