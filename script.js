@@ -346,7 +346,24 @@ function detectSentiment(text) {
 }
 
 let currentNews = [];
-let currentNewsFilter = 'all';
+
+function loadStoredNewsFilter() {
+  try {
+    return localStorage.getItem('newsFilterCcy') || 'all';
+  } catch {
+    return 'all';
+  }
+}
+
+function saveNewsFilter(ccy) {
+  try {
+    localStorage.setItem('newsFilterCcy', ccy);
+  } catch {
+    // localStorage indisponible (navigation privée, stockage bloqué...) — pas bloquant
+  }
+}
+
+let currentNewsFilter = loadStoredNewsFilter();
 
 function renderNews() {
   const list = document.getElementById('newsList');
@@ -450,8 +467,17 @@ document.getElementById('newsFilters').addEventListener('click', (e) => {
   e.currentTarget.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('active'));
   btn.classList.add('active');
   currentNewsFilter = btn.dataset.ccy;
+  saveNewsFilter(currentNewsFilter);
   renderNews();
 });
+
+// Restaure le filtre devise persisté (localStorage) sur l'état visuel des boutons
+{
+  const newsFiltersEl = document.getElementById('newsFilters');
+  newsFiltersEl.querySelectorAll('.filter-btn').forEach((b) => {
+    b.classList.toggle('active', b.dataset.ccy === currentNewsFilter);
+  });
+}
 
 loadAll();
 
