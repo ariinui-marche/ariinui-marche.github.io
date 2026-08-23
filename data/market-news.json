@@ -1,12 +1,33 @@
 {
-  "timestamp": "2026-08-23T08:13:09.025Z",
+  "timestamp": "2026-08-23T08:47:57.474Z",
   "items": [
     {
       "title": "2026-08-23 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-23T08:04:59.000Z",
+      "pubDate": "2026-08-23T08:44:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "Sell U.S. dollar versus these currencies, BCA says",
+      "link": "https://www.investing.com/news/forex-news/sell-us-dollar-versus-these-currencies-bca-says-4872431",
+      "pubDate": "2026-08-23T08:30:07.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "ECB chief Lagarde ’ready to serve’ WEF, Swiss newspaper reports",
+      "link": "https://www.investing.com/news/stock-market-news/ecb-chief-lagarde-ready-to-serve-wef-swiss-newspaper-reports-4872430",
+      "pubDate": "2026-08-23T08:18:52.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Iran warns neighbours against joining U.S. sanctions as Hormuz stays closed",
+      "link": "https://www.investing.com/news/economy-news/iran-warns-neighbours-against-joining-us-sanctions-as-hormuz-stays-closed-4872428",
+      "pubDate": "2026-08-23T08:10:23.000Z",
+      "description": "",
+      "source": "Investing.com"
     },
     {
       "title": "5 big analyst AI moves: Apple upgraded on foldable iPhone push, new AI strategy",
@@ -58,27 +79,6 @@
       "source": "Investing.com"
     },
     {
-      "title": "Robots can outrun humans, but can they plug in a cable?",
-      "link": "https://www.investing.com/news/stock-market-news/robots-can-outrun-humans-but-can-they-plug-in-a-cable-4872417",
-      "pubDate": "2026-08-23T05:06:31.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "XRP Falls 11% In Bearish Trade",
-      "link": "https://www.investing.com/news/cryptocurrency-news/xrp-falls-11-in-bearish-trade-4872415",
-      "pubDate": "2026-08-23T04:01:01.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Cardano Falls 10% In Bearish Trade",
-      "link": "https://www.investing.com/news/cryptocurrency-news/cardano-falls-10-in-bearish-trade-4872414",
-      "pubDate": "2026-08-23T03:40:55.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Arthur Hayes Shares Surprising Tip on Stocks, Gold, and Bitcoin",
       "link": "https://beincrypto.com/arthur-hayes-stocks-gold-bitcoin-treasury-buybacks/",
       "pubDate": "2026-08-23T00:26:03.000Z",
@@ -107,6 +107,13 @@
       "source": "BeInCrypto"
     },
     {
+      "title": "Texans sign WRs Zay Jones, Sterling Shepard",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPMkNKdHBRRThlY2p5c1hGWjBMcHBjc0Jwblh0SE55b3k4RWpITDFlbm9qY19iY1JOU2J4ZzJrVU51Nm1KYUJYRXp6NUprRTdxNDdVWllRZ1ZQU0xkOFdXSDc0U2hSQ25MVWhLU3R6ZHFTYW5PdEhFd21xTm5DWGhCNmxTMXhwaFlSNm5lSDRncEVCMk1D?oc=5",
+      "pubDate": "2026-08-22T18:05:44.000Z",
+      "description": "Texans sign WRs Zay Jones, Sterling Shepard&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
       "pubDate": "2026-08-22T17:35:48.000Z",
@@ -119,6 +126,13 @@
       "pubDate": "2026-08-22T16:26:33.000Z",
       "description": "BounceBit will permanently shut down its Layer 1 blockchain after an attacker moved 286.5 million BB out of nine mainnet accounts. The project will reissue the token as a BEP-20 asset on BNB Chain. The team said the attacker compromised no ",
       "source": "BeInCrypto"
+    },
+    {
+      "title": "Tamberi backs up European gold with Diamond League win",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPWTF2aEFWSWp0X1hlaUc3V24wU1VTUndqa0I2V1lKQ3hlcFhIQ2JZcERtVTRZdGpnVTdaWmxfWS1jYWZuS012cmhoOFFHcGFSTTRqUGM0TFlkSUV2akx0ck9aOU9ibUpMVVpINGt2UFZlWFljQzZWb29NSUJKaTlGOUFoN3l3QXRLMW1yUzAzRDB6ZmJ1NGJER1ZfSHFfdw?oc=5",
+      "pubDate": "2026-08-22T16:08:30.000Z",
+      "description": "Tamberi backs up European gold with Diamond League win&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "Bitcoin Nears a Risk Zone as RSI Hits Extreme Levels: Back to $70,000?",
@@ -140,6 +154,13 @@
       "pubDate": "2026-08-22T10:59:29.000Z",
       "description": "XRP price suffered a brutal 37% flash crash on Saturday, August 22, as roughly $500 million in leveraged long positions were liquidated across the crypto market within minutes. The move came just days after XRP had rallied more than 60% ove",
       "source": "BeInCrypto"
+    },
+    {
+      "title": "India’s Central Bank Says Forex Deposit Inflows at $65.4 Billion",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPLXJuUGhZamM5YmE0aVRteEhpVWQ5WUVNd3BoVFhWMURiMmJLWkx1MnAtT2N3cV9YLVZtUzZqUmI0YW1wdXhqOS1XSTE0RFV5SU16eEF6ZFFod0p0TnNvRFZYQWNrYWJ2YkpTNExSTVp2aHJGbk1sTGNZUVgtTWhwS2pxQWpkNXNXZ1dKUTR5UWFWM3NkTGRBeFc5TmdCaktJTmw2WkVvRlNPTF9faUVBQ0wyYzY?oc=5",
+      "pubDate": "2026-08-22T09:58:03.000Z",
+      "description": "India’s Central Bank Says Forex Deposit Inflows at $65.4 Billion&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
     },
     {
       "title": "Zcash Price Hits 8-Year High as Grayscale ETF Gets Closer",
@@ -198,6 +219,27 @@
       "source": "FXStreet"
     },
     {
+      "title": "The WSJ Dollar Index Falls 0.74% This Week to 95.33",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNWQyV3dLaGl2S0ttdXJoRFhuaXJidWdzckVKb0RuRnVHdlFGZzZSNGxzRTB0OTNZSnFvRUVxRXpuUGVNWkwwNzN2ZGJReS1rUTVxQXpjN0c0eWxnZExmdHMzdGlQcGtYaE1OaDRVM204a2kxalNrYXlUR3J3RW9iUnRTQWltMUluamJVMm93aERENzJO?oc=5",
+      "pubDate": "2026-08-21T21:57:00.000Z",
+      "description": "The WSJ Dollar Index Falls 0.74% This Week to 95.33&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "Dollar falls to three-month low on Treasury buyback worries",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNSFZuSmFFRlNlQUZPTlJaNnE2UUJzS29YTWZkWlhJNG1BSWEwbTNCWEVidHBISmc5VUpSMVh5YnRhNHBwMzhCRUZMX2RQalJCTjJhUWJTeFdQckZwbmxRZFgxdVBaTTg3NkZhOE9tZ2h3dHNNV1M5WEVSbTM4NTNsbXdNNnJyNTZHaTk5d25mWVB1eDB5c2RtQkpwVkVidDEtSkpCbA?oc=5",
+      "pubDate": "2026-08-21T21:47:19.000Z",
+      "description": "Dollar falls to three-month low on Treasury buyback worries&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Gold rallies to 3-month high on weaker dollar, bullish technicals",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNdzBQclFYMVRpaFk2cVBvUUNLd2tWYjlENUhJbG9tR3RYQ2k3VTFpSV9yd0xXVVgzNnFQNGltZV9sbHhQdENsX29BekdQM0NOb2p5bjBqQWNUbnE1WGZmaEt5d0ZFQVgzZUFKeWNOSEt2eHUzZWZRdk8xb1lMZUplLVZBY2oyYlRtMHo4YmZhdWRRZ2FndkE?oc=5",
+      "pubDate": "2026-08-21T21:35:27.000Z",
+      "description": "Gold rallies to 3-month high on weaker dollar, bullish technicals&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
       "title": "South Korean Won: Cautious tightening path expected from BoK – DBS",
       "link": "https://www.fxstreet.com/news/south-korean-won-cautious-tightening-path-expected-from-bok-dbs-202608212058",
       "pubDate": "2026-08-21T20:58:00.000Z",
@@ -217,6 +259,20 @@
       "pubDate": "2026-08-21T20:22:46.000Z",
       "description": "The US Dollar Index (DXY) ended the week near even with Thursday, holding near 98.80. Like Thursday, DXY traded down to the 98.50s before recovering later in the session.",
       "source": "FXStreet"
+    },
+    {
+      "title": "Former Cards exec Ryan Gold faces second state betting investigation",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTV9md1hQQmlIRGJEdEN3N1RyME9Va1BRNlpTdTFwVHpSaGZmVWw0OTR5d3JTa203RDl4U21SYy16R0tPamY5Nmhfa2N4V1lrNklJSVE0NzUtVmY0ZFA2NUJXZG9OYlQ5dWlwY3JuWXVGV1kyVmxReUhob2RpWnVnOUVEUDdPRWotMDhGbl94eU9jeUQzd0pxTkJaYnZtb3V3ZTBoT2lUUy15am44X015c3RwN1haQW8?oc=5",
+      "pubDate": "2026-08-21T20:18:45.000Z",
+      "description": "Former Cards exec Ryan Gold faces second state betting investigation&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Bessent’s Bond Maneuvers Giving Global Debasement Trade New Life",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOT0Z0Y3FxdWRIWFFiWU5IbjBKbldJa1c1SmhsZVdXSXV4bXhFR0puZkFCYnpOOWhPMW5jRlNxVTNFZjVKdy1VeWxxZkFTNkNPMG5kUjRrVklJcEJIck14a1NlMHBkbDBRdDB1cXJhOFZKZ3gwZkp6UkxwdTl3RENnU24tNWtBNGpjMHVTQ3pyZUt1d2NTTjFmM1dDMEh3M2FqWlpIYUlwMGVmTHYzY1VZVHJXT0s1dw?oc=5",
+      "pubDate": "2026-08-21T20:14:06.000Z",
+      "description": "Bessent’s Bond Maneuvers Giving Global Debasement Trade New Life&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
     },
     {
       "title": "Thai Baht: Extended policy pause expected from Bank of Thailand – DBS",
@@ -331,6 +387,13 @@
       "source": "FXStreet"
     },
     {
+      "title": "US ‘Playing With Fire’ as Dollar Risks Yen-Style Debasement",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQ1BSNWF1YXZERWRmbjg2aUhQeWdoVk15RkxiSGFVaDZldG9Tc29FYUNUR1RxSEFpQ0RrdUd1ZXVnY3ZkUVVCR1hUUFV3blRQYVN2RkRnakkzSk95NVdkNms0TVl1Z2lOaldDaThpdVlRTHAzX1h2UHpGZGxRLUNfWGs4MkJMQXpZTEx6dVlXRlNEdHBVeDljV1NYSURMakpoOFp0cEdmWEZ1akVYc1RuQ3A4RQ?oc=5",
+      "pubDate": "2026-08-21T15:53:10.000Z",
+      "description": "US ‘Playing With Fire’ as Dollar Risks Yen-Style Debasement&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
       "title": "European Central Bank: Structural LTROs could ease funding pressure - Rabobank",
       "link": "https://www.fxstreet.com/news/european-central-bank-structural-ltros-could-ease-funding-pressure-rabobank-202608211551",
       "pubDate": "2026-08-21T15:51:00.000Z",
@@ -373,11 +436,60 @@
       "source": "FXStreet"
     },
     {
+      "title": "Euro zone consumer confidence rises to -15.5 in August",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNcDN0NmhNZlFncEtxYWZLSGhyY1c4dGcyaXFGUDVQN0dwMXBkZVljYlZ0OWdMRzNTWVo2REQ1WVA2MkJlX2tZMmMyWVdCcUdUM2ZjV09sbGNtN0k0WGVmTmduR2QyYUQtZ2RlNzlKb3BmenFyb295V21US3JNYlhwWThCZU5kLUdTU0JpTFI0UEZnRWI0TlE?oc=5",
+      "pubDate": "2026-08-21T14:11:46.000Z",
+      "description": "Euro zone consumer confidence rises to -15.5 in August&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Gold Above $4,600 on Weaker Dollar, Debt Fears",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNVHRaU0k0N2ZxMk9HQnMwSElUZEkyVy1xZGd1VURRenRLbWc5NS1FSTVBLXdSLTUwMnd5MVk5X3F3VHNERkRoWEI3S0NpUHVYemdybWVXREpOeDBIVlVRcjdUZld1Ylh3V0NDRU1LeWRrZExBYkxHZmV4bW5fTnotVUExYllodkVpX1BhNS0zUzBGTnhTdXc?oc=5",
+      "pubDate": "2026-08-21T13:15:00.000Z",
+      "description": "Gold Above $4,600 on Weaker Dollar, Debt Fears&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "South African Rand Gains Below 16 Per Dollar, Cuts War Loss",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNU2hiQmFac2RDUXZWb2JrQXZJSFFpa2FtWjExUzZ5Vkw2cTlsamxubXFMZ3NGLUJXbjBxODF6ZUtsSEh4bTR5Vk5vQWtxZEZEZHo3VGpoNGp2WEdKTnJJWmxNTHktOUxNSTJnOGZQY2xLWWk1WGJ2RklCTUNEMEY3Wl9OQThzczBscVZEM3l3azlUdXVEMUlDTkJIM0xYU252T0NjNUxGekVwaDJGMzczNjFJX3o?oc=5",
+      "pubDate": "2026-08-21T12:50:19.000Z",
+      "description": "South African Rand Gains Below 16 Per Dollar, Cuts War Loss&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "India's forex pile rises to six-month peak on sustained capital inflows",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOR1p3TGs1MUgzOEpmdmxrZFgxa2tBb3lRODJJOVZUZExPdnRvQ2N5V0pqMUwycGhtS1RLRTZ0Z01BUXJuaFhra3piU2RQNzdCSmZFWEFlT1lxS2pIRzFvSUhLVVJ4WnJXUVFySjEwd2xjc3pZcnBZNmwwUFZ6aHlWS0lpdFZmcHFXMmNrcDFxbFpGLTFsaFh1ZlMzQzJJTTlnSFVJQmVVVGcwUkRkQ2RWVWZ3?oc=5",
+      "pubDate": "2026-08-21T12:07:44.000Z",
+      "description": "India's forex pile rises to six-month peak on sustained capital inflows&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
       "title": "$4,600: Gold rallies to three-month high, eyes third weekly gain",
       "link": "https://www.fxstreet.com/news/4-600-gold-rallies-to-three-month-high-eyes-third-weekly-gain-202608211106",
       "pubDate": "2026-08-21T11:06:55.000Z",
       "description": "Gold (XAU/USD) is heading for a third consecutive weekly gain on Friday, extending an impressive rally that has lifted the precious metal by around 13% so far this month. At the time of writing, XAU/USD trades around $4,603, its highest lev",
       "source": "FXStreet"
+    },
+    {
+      "title": "How Tether's bitcoin mining plans in Uruguay unraveled",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOVU1FcGpCUE84VVYwNkllLTczRmVidF9FYmtwYnRlYlFGNUZjU05CSFZTSjk3bzUwQ09vbzFnU0JvaWwyYnRGVWZHOW1DVVBwcG4tcHFSZW4wY1N6X3R1eDdFZDJQRXYzTFQ3X19kbjlZTmdqdEpqTGtWTkdoMjlrWGw2azJia0xfWjVQZFRZYTJra3ctdjFOam5kNjFHQTFBWFVz?oc=5",
+      "pubDate": "2026-08-21T10:51:12.000Z",
+      "description": "How Tether's bitcoin mining plans in Uruguay unraveled&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Sterling extends rally on firm rate-hike bets, subdued dollar",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNRTBqSUE0alFRUDFVRklwV2J3ejdBcWVEYjJ0d0ZSZDFaeV8wd0EzWE5yY0RGSHZMRlJNUnZFUGhGQmc3THdnTUhOMHhYRmRuaDBoTDhpSTJMOXY5clBOYXRNNVlfaDA4RWhCUVZpbjUwY3NtY1gwUEJrZHBPdHBfZU15Q1lJdnpPM0FvdE1OR1QyZk1jTy1fVEFTVGdQcFgtRmtiLQ?oc=5",
+      "pubDate": "2026-08-21T10:38:10.000Z",
+      "description": "Sterling extends rally on firm rate-hike bets, subdued dollar&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Euro zone business activity growing at fastest pace since November, PMIs show",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPeVJRUTVFVzFGV1dITUg0YmRpcFBpN18wZGdmTVgwdU1oWU5xU3dWaWhzWUtONDdWWElvbnpmTHhGLXJDcDBSczdnTnZKVFo0T2hMWEpydGhIOG9rT3g5NW1fWk5nZXBKOFRRbG4yWldPZXc3ak9XTEhqRzVyUTF0X3VNZXo3NVMyenJndGhpTkQ2ZXFzalRYUXZCX0E4SGFQU21LWFpCTmxkMlBWUmx5bG11WlRNM2ZPNnlMSkdn?oc=5",
+      "pubDate": "2026-08-21T09:58:40.000Z",
+      "description": "Euro zone business activity growing at fastest pace since November, PMIs show&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "ECB Consumer Expectations Survey results – July 2026",
@@ -408,6 +520,13 @@
       "source": "Swiss National Bank"
     },
     {
+      "title": "Dollar near three-month low on Treasury buyback worries",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQQTFONGdxelgwWVk4TW14UHpRYmxJUURBV2ZxZEU4dWFwZ1Q1V2IwbHdxQ1ZId1NwYnd2OU1OSjdBaGhRaWVJYW5mTExUWEtab09ISkJQOFlnd0FKUjVmS19aSTdHN1JaWjc5STVvblh3NXgwSmY0bjlxUUVlenpselo4bm4wUE90YTdRR3NlSnBWYkU2enBnU2JINHk4bTJFY0HSAacBQVVfeXFMUEsxbEQtd242S2Z0akMyVUpENmQwZU96UTBSdjk3RUwxRloyNWRaa0ZUYVAwaGxBem1jR0FKNVZZN05vNnJWVXpDNENFNEVIc0l0bkVleEpjQUlsZFFiUVFIelFVaEFsUkQ0NWt3dUZpV2lieW13WjZRVnJ5SkpuMl9nSVphY0ZzbVVBY1RhRW9SazgwWWxfdHJfcmUwRGpIS0xfR3k5YkE?oc=5",
+      "pubDate": "2026-08-21T01:51:00.000Z",
+      "description": "Dollar near three-month low on Treasury buyback worries&nbsp;&nbsp;CNBC",
+      "source": "Google News"
+    },
+    {
       "title": "Federal Reserve Board announces approval of application by National Westminster Bank Plc",
       "link": "https://www.federalreserve.gov/newsevents/pressreleases/orders20260820a.htm",
       "pubDate": "2026-08-20T20:00:00.000Z",
@@ -419,13 +538,6 @@
       "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260820b.htm",
       "pubDate": "2026-08-20T15:00:00.000Z",
       "description": "Federal Reserve Board issues enforcement action with SouthPoint Bancshares, Inc. and announces termination of enforcement action with Deutsche Bank AG, DB USA Corporation, and Deutsche Bank AG New York Branch",
-      "source": "Federal Reserve"
-    },
-    {
-      "title": "Federal Reserve Board issues enforcement actions with former employee of Regions Bank and former employee of United Community Bank",
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260820a.htm",
-      "pubDate": "2026-08-20T15:00:00.000Z",
-      "description": "Federal Reserve Board issues enforcement actions with former employee of Regions Bank and former employee of United Community Bank",
       "source": "Federal Reserve"
     },
     {
@@ -499,88 +611,11 @@
       "source": "Bank of Japan"
     },
     {
-      "title": "2026-08-14 - Data portal - IMF SDDS Plus, 14 August 2026",
-      "link": "https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/08/statpub_news_20260814_sddsplus",
-      "pubDate": "2026-08-14T07:00:00.000Z",
-      "description": "",
-      "source": "Swiss National Bank"
-    },
-    {
-      "title": "Federal Reserve Board issues enforcement action with former employee of Regions Bank",
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260813a.htm",
-      "pubDate": "2026-08-13T15:00:00.000Z",
-      "description": "Federal Reserve Board issues enforcement action with former employee of Regions Bank",
-      "source": "Federal Reserve"
-    },
-    {
       "title": "Cash remains most widely accepted payment method in euro area",
       "link": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr260813~389729d6a9.en.html",
       "pubDate": "2026-08-13T09:00:00.000Z",
       "description": "",
       "source": "European Central Bank"
-    },
-    {
-      "title": "Japanese Government Bonds Held by the Bank of Japan",
-      "link": "http://www.boj.or.jp/en/statistics/boj/other/mei/release/2026/mei260810.xlsx",
-      "pubDate": "2026-08-13T08:00:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
-    },
-    {
-      "title": "Basic Figures on Fails (July)",
-      "link": "http://www.boj.or.jp/en/statistics/set/bffail/sjgb2607.pdf",
-      "pubDate": "2026-08-13T07:30:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
-    },
-    {
-      "title": "Bank of Japan Accounts (August 10)",
-      "link": "http://www.boj.or.jp/en/statistics/boj/other/acmai/release/2026/ac260810.htm",
-      "pubDate": "2026-08-13T01:00:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
-    },
-    {
-      "title": "Corporate Goods Price Index (July)",
-      "link": "http://www.boj.or.jp/en/statistics/pi/cgpi_release/cgpi2607.pdf",
-      "pubDate": "2026-08-12T23:50:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
-    },
-    {
-      "title": "2026-08-12 - Press release\t - Swiss National Bank welcomes measures to strengthen ‘too big to fail’ regulations",
-      "link": "https://www.snb.ch/en/publications/communication/press-releases-restricted/pre_20260812",
-      "pubDate": "2026-08-12T12:30:00.000Z",
-      "description": "",
-      "source": "Swiss National Bank"
-    },
-    {
-      "title": "(Research Paper) Market Operations in Fiscal 2025",
-      "link": "http://www.boj.or.jp/en/research/brp/mor/mor260812.htm",
-      "pubDate": "2026-08-12T07:00:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
-    },
-    {
-      "title": "(Research Paper) Linkages of Firm Spending Behavior through Supply Chains",
-      "link": "http://www.boj.or.jp/en/research/wps_rev/wps_2026/wp26e14.htm",
-      "pubDate": "2026-08-12T05:00:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
-    },
-    {
-      "title": "(Research Paper) Mapping Japan's Manufacturing Supply Chains Through Firm-to-Firm Transaction Data",
-      "link": "http://www.boj.or.jp/en/research/wps_rev/wps_2026/wp26e13.htm",
-      "pubDate": "2026-08-12T05:00:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
-    },
-    {
-      "title": "Money Stock (July)",
-      "link": "http://www.boj.or.jp/en/statistics/money/ms/ms2607.pdf",
-      "pubDate": "2026-08-11T23:50:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
     },
     {
       "title": "Results of the Semi-Annual FX Turnover Surveys in April 2026",
@@ -597,60 +632,18 @@
       "source": "European Central Bank"
     },
     {
-      "title": "2026-08-10 - Data portal - Important monetary policy data, 10 August 2026",
-      "link": "https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/08/statpub_news_20260810_gwd",
-      "pubDate": "2026-08-10T08:00:00.000Z",
-      "description": "",
-      "source": "Swiss National Bank"
-    },
-    {
-      "title": "Summary of Opinions at the Monetary Policy Meeting on July 30 and 31, 2026",
-      "link": "http://www.boj.or.jp/en/mopo/mpmsche_minu/opinion_2026/opi260731.pdf",
-      "pubDate": "2026-08-09T23:50:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
-    },
-    {
-      "title": "Principal Figures of Financial Institutions (July)",
-      "link": "http://www.boj.or.jp/en/statistics/dl/depo/kashi/kasi2607.pdf",
-      "pubDate": "2026-08-09T23:50:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
-    },
-    {
-      "title": "Release of Latest \"Loans and Bills Discounted by Sector\" and \"Loans to Households\" Data",
-      "link": "http://www.boj.or.jp/en/statistics/outline/notice_2026/not260810a.htm",
-      "pubDate": "2026-08-09T23:50:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
-    },
-    {
-      "title": "ECB publishes consolidated banking data for end-March 2026",
-      "link": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr260807~58eb5109ce.en.html",
-      "pubDate": "2026-08-07T08:00:00.000Z",
-      "description": "",
-      "source": "European Central Bank"
-    },
-    {
-      "title": "2026-08-07 - Data portal - Exchange rate indices, August 2026",
-      "link": "https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/08/statpub_news_20260807_wki",
-      "pubDate": "2026-08-07T07:00:00.000Z",
-      "description": "",
-      "source": "Swiss National Bank"
-    },
-    {
-      "title": "2026-08-07 - Data portal - IMF SDDS Plus, 7 August 2026",
-      "link": "https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/08/statpub_news_20260807_sddsplus",
-      "pubDate": "2026-08-07T07:00:00.000Z",
-      "description": "",
-      "source": "Swiss National Bank"
-    },
-    {
       "title": "Green notice 2026/02",
       "link": "https://www.bankofengland.co.uk/statistics/notice/2026/green-notice-2026-02",
       "pubDate": "2026-08-06T11:00:00.000Z",
       "description": "Green notices cover significant and/or significant proposals for Bank of England reporting. If any of these proposals are finalised and are to be implemented, they will appear in a statistical notice.",
       "source": "Bank of England"
+    },
+    {
+      "title": "Cook, Outlook for the U.S. and Alaskan Economies",
+      "link": "https://www.federalreserve.gov/newsevents/speech/cook20260805a.htm",
+      "pubDate": "2026-08-05T20:05:00.000Z",
+      "description": "Speech At the 2026 Economic Luncheon of the Anchorage Economic Development Corporation, Anchorage, Alaska",
+      "source": "Federal Reserve"
     },
     {
       "title": "Artificial Intelligence Consortium minutes – June 2026",
@@ -665,6 +658,13 @@
       "pubDate": "2026-08-03T09:00:00.000Z",
       "description": "Following an external recruitment process, the Bank of England (the Bank) has appointed Nicholas Segal as Chair of its Enforcement Decision Making Committee (EDMC), and Peter King as Deputy Chair, with effect from 1 August 2026.",
       "source": "Bank of England"
+    },
+    {
+      "title": "Federal Reserve Board requests comment on a proposal to modernize rules for mutual banking organizations",
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260731a.htm",
+      "pubDate": "2026-07-31T14:00:00.000Z",
+      "description": "Federal Reserve Board requests comment on a proposal to modernize rules for mutual banking organizations",
+      "source": "Federal Reserve"
     },
     {
       "title": "Minutes of the Meeting of the Court of Directors held on 4 June 2026",
@@ -695,10 +695,10 @@
       "source": "Bank of Canada"
     },
     {
-      "title": "Bank of Canada maintains the policy rate at 2¼%",
-      "link": "https://www.bankofcanada.ca/2026/06/fad-press-release-2026-06-10/",
-      "pubDate": "2026-06-10T09:47:13.000Z",
-      "description": "The Bank of Canada today held its target for the overnight rate at 2.25%, with the Bank Rate at 2.5% and the deposit rate at 2.20%.",
+      "title": "Bank of Canada joins BIS Project Agorá to test improvements in wholesale cross-border payments",
+      "link": "https://www.bankofcanada.ca/2026/05/bank-canada-joins-bis-project-agora-test-improvements-wholesale-cross-border-payments/",
+      "pubDate": "2026-05-27T09:00:10.000Z",
+      "description": "The Bank of Canada announced today it is joining the Bank for International Settlements’ Project Agorá, an initiative exploring how tokenization could improve wholesale cross-border payments.",
       "source": "Bank of Canada"
     }
   ]
