@@ -161,6 +161,19 @@ async function fetchMarketNews() {
     .filter((it) => !isNaN(new Date(it.pubDate)))
     .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
 
+  // Dédoublonnage inter-sources : une même dépêche reprise par plusieurs flux
+  // (ex. FXStreet + Investing.com + Google News couvrent souvent la même news)
+  // ne doit apparaître qu'une fois — hash sur les 40 premiers caractères du
+  // titre, on garde la première occurrence rencontrée (tri déjà par date desc,
+  // donc la plus récente).
+  const seenHeadlines = new Set();
+  const deduped = valid.filter((it) => {
+    const key = it.title.toLowerCase().slice(0, 40);
+    if (seenHeadlines.has(key)) return false;
+    seenHeadlines.add(key);
+    return true;
+  });
+
   // Répartition garantie par source : un flux peu fréquent (ex. Bank of England,
   // quelques posts/mois) se ferait sinon totalement éjecter par le tri global
   // face à des sources très actives (FXStreet, plusieurs/heure).
@@ -168,7 +181,7 @@ async function fetchMarketNews() {
   const TOTAL_CAP = 100;
   const guaranteed = [];
   const bySource = new Map();
-  for (const it of valid) {
+  for (const it of deduped) {
     const count = bySource.get(it.source) || 0;
     if (count < MIN_PER_SOURCE) {
       guaranteed.push(it);
@@ -177,7 +190,7 @@ async function fetchMarketNews() {
   }
   const guaranteedLinks = new Set(guaranteed.map((it) => it.link));
   const remainingSlots = Math.max(0, TOTAL_CAP - guaranteed.length);
-  const rest = valid.filter((it) => !guaranteedLinks.has(it.link)).slice(0, remainingSlots);
+  const rest = deduped.filter((it) => !guaranteedLinks.has(it.link)).slice(0, remainingSlots);
 
   return [...guaranteed, ...rest].sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
 }

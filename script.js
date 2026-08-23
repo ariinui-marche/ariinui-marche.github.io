@@ -358,6 +358,8 @@ const CCY_ALIASES = {
   NZD: ['NZD', 'Kiwi'],
   XAU: ['XAU', 'Gold'],
   BTC: ['BTC', 'Bitcoin', 'Crypto', 'Cryptocurrency'],
+  ETH: ['ETH', 'Ethereum'],
+  OIL: ['Oil', 'Crude', 'WTI', 'Brent'],
 };
 
 function detectCurrencies(text) {
