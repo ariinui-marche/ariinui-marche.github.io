@@ -118,6 +118,15 @@ const today = new Date();
 let calViewYear = today.getFullYear();
 let calViewMonth = today.getMonth();
 let calSelectedDate = null;
+let calShowAll = false;
+
+function isThisWeek(date) {
+  const day = today.getDay();
+  const diffToMonday = day === 0 ? -6 : 1 - day;
+  const monday = new Date(today.getFullYear(), today.getMonth(), today.getDate() + diffToMonday);
+  const sunday = new Date(monday.getFullYear(), monday.getMonth(), monday.getDate() + 6, 23, 59, 59, 999);
+  return date >= monday && date <= sunday;
+}
 
 function renderEcoCalendar() {
   const el = document.getElementById('ecoCalendar');
@@ -167,7 +176,8 @@ function renderEcoCalendar() {
     <div class="cal-weekdays">${['Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa', 'Di'].map((d) => `<div>${d}</div>`).join('')}</div>
     <div class="cal-grid">${cells}</div>
     <div class="cal-footer">
-      ${calSelectedDate ? '<button class="cal-link" id="calShowAll">Tout afficher</button>' : ''}
+      ${calShowAll ? '<button class="cal-link" id="calThisWeek">Cette semaine</button>' : ''}
+      ${(calSelectedDate || !calShowAll) ? '<button class="cal-link" id="calShowAll">Tout afficher</button>' : ''}
       ${calSelectedDate !== todayStr ? '<button class="cal-link" id="calToday">Aujourd\'hui</button>' : ''}
     </div>`;
 }
@@ -179,15 +189,21 @@ document.getElementById('ecoCalendar').addEventListener('click', (e) => {
     if (calViewMonth === 11) { calViewMonth = 0; calViewYear++; } else { calViewMonth++; }
   } else if (e.target.closest('#calShowAll')) {
     calSelectedDate = null;
+    calShowAll = true;
+  } else if (e.target.closest('#calThisWeek')) {
+    calSelectedDate = null;
+    calShowAll = false;
   } else if (e.target.closest('#calToday')) {
     calViewYear = today.getFullYear();
     calViewMonth = today.getMonth();
     calSelectedDate = localDateStr(today);
+    calShowAll = false;
   } else {
     const dayBtn = e.target.closest('.cal-day');
     if (!dayBtn) return;
     const date = dayBtn.dataset.date;
     calSelectedDate = calSelectedDate === date ? null : date;
+    calShowAll = false;
   }
   renderEcoCalendar();
   renderEvents();
@@ -202,6 +218,11 @@ function renderEvents() {
     filtered = filtered.filter((e) => {
       const d = new Date(e.date);
       return !isNaN(d) && localDateStr(d) === calSelectedDate;
+    });
+  } else if (!calShowAll) {
+    filtered = filtered.filter((e) => {
+      const d = new Date(e.date);
+      return !isNaN(d) && isThisWeek(d);
     });
   }
 
