@@ -311,7 +311,7 @@ main {
 .impact-Holiday { background: rgba(139,92,246,0.15); color: var(--purple); }
 
 .eco-impact-wrap { display: flex; align-items: center; justify-content: flex-end; gap: 6px; }
-.sentiment-tri { width: 0; height: 0; display: inline-block; flex-shrink: 0; }
+.sentiment-tri { width: 0; height: 0; display: inline-block; flex-shrink: 0; margin-right: 4px; }
 .sentiment-tri.tri-pos { border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 7px solid var(--green); }
 .sentiment-tri.tri-neg { border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 7px solid var(--red); }
 

@@ -246,7 +246,7 @@ function renderEvents() {
 
     const flag = COUNTRY_FLAGS[e.country] || '🏳️';
     const hasValues = e.forecast || e.previous || e.actual;
-    const sentiment = detectSentiment(e.title);
+    const beatMiss = actualVsForecast(e.actual, e.forecast);
 
     return `
       ${showDateHeader ? `<div class="eco-date-header">${dateLabel}</div>` : ''}
@@ -256,12 +256,11 @@ function renderEvents() {
         <span class="eco-flag">${flag}</span>
         <span class="eco-title" title="${e.title}">${e.title}</span>
         <span class="eco-impact-wrap">
-          ${sentiment !== 'neutral' ? `<span class="sentiment-tri tri-${sentiment}"></span>` : ''}
           <span class="impact-badge impact-${e.impact}">${e.impact}</span>
         </span>
       </div>
       ${hasValues ? `<div class="eco-values">
-        ${e.actual ? `<span>Actual: <b class="${valueColorClass(e.actual)}">${e.actual}</b></span>` : ''}
+        ${e.actual ? `<span>${beatMiss !== 'neutral' ? `<span class="sentiment-tri tri-${beatMiss}"></span>` : ''}Actual: <b class="${valueColorClass(e.actual)}">${e.actual}</b></span>` : ''}
         ${e.forecast ? `<span>Forecast: <b class="${valueColorClass(e.forecast)}">${e.forecast}</b></span>` : ''}
         ${e.previous ? `<span>Previous: <b class="${valueColorClass(e.previous)}">${e.previous}</b></span>` : ''}
       </div>` : ''}`;
@@ -284,6 +283,19 @@ function valueColorClass(val) {
   if (num > 0) return 'val-pos';
   if (num < 0) return 'val-neg';
   return 'val-zero';
+}
+
+// Triangle vert/rouge affiché à gauche d'Actual : actual bat le forecast (vert)
+// ou le manque (rouge), comparaison numérique brute (pas d'interprétation par
+// indicateur — même convention volontairement simpliste que valueColorClass).
+function actualVsForecast(actual, forecast) {
+  if (!actual || !forecast) return 'neutral';
+  const a = parseFloat(String(actual).replace(/,/g, ''));
+  const f = parseFloat(String(forecast).replace(/,/g, ''));
+  if (isNaN(a) || isNaN(f)) return 'neutral';
+  if (a > f) return 'pos';
+  if (a < f) return 'neg';
+  return 'neutral';
 }
 
 // ── News Marché (FXStreet + Investing.com) ──────────────────────────────────
