@@ -51,7 +51,10 @@ const items = await res.json();
 
 function toIso(date, time) {
   const m = /^(\d{1,2}):(\d{2})$/.exec((time || '').trim());
-  if (!m) return `${date}T00:00:00-04:00`;
+  // Défaut midi (pas minuit) pour les events multi-jours/heure non standard
+  // ("Day 2", "Tentative"...) : minuit EDT décale d'un jour en arrière une fois
+  // converti dans un fuseau très en avance (ex. UTC-10), midi ne décale jamais.
+  if (!m) return `${date}T12:00:00-04:00`;
   return `${date}T${m[1].padStart(2, '0')}:${m[2]}:00-04:00`;
 }
 
