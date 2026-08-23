@@ -1,12 +1,26 @@
 {
-  "timestamp": "2026-08-23T09:11:57.954Z",
+  "timestamp": "2026-08-23T09:41:08.428Z",
   "items": [
     {
       "title": "2026-08-23 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-23T09:04:01.000Z",
+      "pubDate": "2026-08-23T09:39:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "Iran says Pakistan’s army chief to visit Tehran on Monday",
+      "link": "https://www.investing.com/news/commodities-news/iran-says-pakistans-army-chief-to-visit-tehran-on-monday-4872425",
+      "pubDate": "2026-08-23T09:18:31.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Why does the USD outlook depend on UST and Fed policy credibility?",
+      "link": "https://www.investing.com/news/forex-news/why-does-the-usd-outlook-depend-on-ust-and-fed-policy-credibility-4872435",
+      "pubDate": "2026-08-23T09:15:22.000Z",
+      "description": "",
+      "source": "Investing.com"
     },
     {
       "title": "Could Canada fully supply the U.S. with aluminium?",
@@ -51,11 +65,11 @@
       "source": "Investing.com"
     },
     {
-      "title": "Iran says Pakistan’s army chief to visit Tehran on Monday",
-      "link": "https://www.investing.com/news/commodities-news/iran-says-pakistans-army-chief-to-visit-tehran-on-monday-4872425",
-      "pubDate": "2026-08-23T07:48:35.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
+      "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
+      "pubDate": "2026-08-23T07:25:46.000Z",
+      "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
+      "source": "Bank of Canada"
     },
     {
       "title": "Bitcoin surges past $76K with overbought RSI: Live levels",
@@ -68,13 +82,6 @@
       "title": "Alibaba plans $10 billion Hong Kong share placement to fund AI spending",
       "link": "https://www.investing.com/news/stock-market-news/alibaba-proposes-hong-kong-share-placement-worth-10-billion-4872416",
       "pubDate": "2026-08-23T06:30:36.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Korean retail traders chase 40% coupons after historic stock rout - report",
-      "link": "https://www.investing.com/news/stock-market-news/korean-retail-traders-chase-40-coupons-after-historic-stock-rout--report-4872421",
-      "pubDate": "2026-08-23T06:09:09.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -112,13 +119,6 @@
       "pubDate": "2026-08-22T18:05:44.000Z",
       "description": "Texans sign WRs Zay Jones, Sterling Shepard&nbsp;&nbsp;Reuters",
       "source": "Reuters"
-    },
-    {
-      "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
-      "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-22T17:35:56.000Z",
-      "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
-      "source": "Bank of Canada"
     },
     {
       "title": "BounceBit Retires Its Chain After Attacker Moves 286.5 Million Tokens",
