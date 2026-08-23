@@ -1,9 +1,8 @@
 name: Extend Future Window (Apify)
 
-# Cron hebdomadaire désactivé sur demande explicite (économie de crédit Apify,
-# ne garder que fetch-actuals.yml). Reste déclenchable manuellement si besoin
-# ponctuel d'étendre la fenêtre future.
 on:
+  schedule:
+    - cron: '0 6 * * 1'
   workflow_dispatch:
 
 permissions:
