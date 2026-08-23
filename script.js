@@ -226,9 +226,10 @@ function renderCountdownStatic() {
   }
   const flag = COUNTRY_FLAGS[nextHighEvent.country] || '🏳️';
   el.innerHTML = `
+    <span class="countdown-ccy">${nextHighEvent.country}</span>
     <span class="countdown-flag">${flag}</span>
     <span class="countdown-info">
-      <span class="countdown-label">Next High · ${nextHighEvent.country}</span>
+      <span class="countdown-label">Next High</span>
       <span class="countdown-title" title="${nextHighEvent.title}">${nextHighEvent.title}</span>
     </span>
     <span class="countdown-time" id="countdownTime">--:--:--</span>`;

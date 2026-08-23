@@ -184,6 +184,7 @@ main {
   margin-bottom: 14px;
 }
 .eco-countdown:empty { display: none; }
+.eco-countdown .countdown-ccy { color: var(--text); font-weight: 700; font-size: 12px; flex-shrink: 0; }
 .eco-countdown .countdown-flag { font-size: 20px; flex-shrink: 0; }
 .eco-countdown .countdown-info {
   display: flex;
