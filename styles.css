@@ -399,14 +399,24 @@ main {
 
 /* ── AUD Desk — institutional briefing panel ─────────────────────────────── */
 
-.audd-panel:empty { display: none; }
+.audd-panel.audd-hidden { display: none; }
 
-.audd-header {
+.audd-toggle-label {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 2px;
+  flex: 1;
+  min-width: 0;
+  text-transform: none;
+}
+.audd-toggle-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .audd-ticker {
   font-family: 'SF Mono', 'Cascadia Code', Consolas, monospace;
@@ -417,12 +427,26 @@ main {
   background: var(--accent);
   padding: 3px 8px;
   border-radius: 4px;
+  flex-shrink: 0;
 }
-.audd-event-title {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text);
+.audd-bias-pill {
+  font-family: 'SF Mono', 'Cascadia Code', Consolas, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid;
+  flex-shrink: 0;
+  margin-left: auto;
 }
+.audd-bias-pill.audd-bias-bearish { color: var(--red); }
+.audd-bias-pill.audd-bias-bullish { color: var(--green); }
+.audd-bias-pill.audd-bias-neutral { color: var(--gray); }
+
+.audd-body.collapsed { display: none; }
+.audd-body { margin-top: 14px; }
+
 .audd-event-time {
   font-size: 12px;
   color: var(--text-dim);

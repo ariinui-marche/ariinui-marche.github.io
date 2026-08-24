@@ -23,7 +23,13 @@
   </header>
 
   <main>
-    <section class="panel audd-panel" id="audDesk"></section>
+    <section class="panel audd-panel" id="audDeskPanel">
+      <h2 class="panel-toggle audd-toggle" id="audDeskToggle" aria-expanded="false" aria-controls="audDeskBody">
+        <span class="audd-toggle-label" id="audDeskToggleLabel"></span>
+        <span class="chevron">▾</span>
+      </h2>
+      <div id="audDeskBody" class="audd-body collapsed"></div>
+    </section>
 
     <section class="panel">
       <h2 class="panel-toggle" id="currencyToggle" aria-expanded="false" aria-controls="currencyGrid">

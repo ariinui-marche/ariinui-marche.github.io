@@ -122,8 +122,11 @@ function auddDirClass(direction) {
 }
 
 function renderAudDesk(data) {
-  const el = document.getElementById('audDesk');
-  if (!data) { el.innerHTML = ''; return; }
+  const panel = document.getElementById('audDeskPanel');
+  const labelEl = document.getElementById('audDeskToggleLabel');
+  const bodyEl = document.getElementById('audDeskBody');
+  if (!data) { panel.classList.add('audd-hidden'); return; }
+  panel.classList.remove('audd-hidden');
 
   const ev = data.event || {};
   const evDate = ev.date ? new Date(ev.date) : null;
@@ -134,11 +137,12 @@ function renderAudDesk(data) {
   const bias = data.bias || {};
   const c = ev.consensus || {};
 
-  el.innerHTML = `
-    <div class="audd-header">
-      <span class="audd-ticker">AUD DESK</span>
-      <span class="audd-event-title">${ev.title || ''}</span>
-    </div>
+  labelEl.innerHTML = `
+    <span class="audd-ticker">${ev.ccy || ''}</span>
+    <span class="audd-toggle-title">${ev.title || ''}</span>
+    <span class="audd-bias-pill audd-bias-${bias.direction || 'neutral'}">${(bias.direction || 'neutral').toUpperCase()}</span>`;
+
+  bodyEl.innerHTML = `
     ${evDateLabel ? `<div class="audd-event-time">${evDateLabel} (your local time)</div>` : ''}
 
     <div class="audd-bias audd-bias-${bias.direction || 'neutral'}">
@@ -220,6 +224,12 @@ function renderAudDesk(data) {
       ${data.disclaimer ? `<span class="audd-disclaimer">${data.disclaimer}</span>` : ''}
     </div>`;
 }
+
+document.getElementById('audDeskToggle').addEventListener('click', (e) => {
+  const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
+  e.currentTarget.setAttribute('aria-expanded', String(!expanded));
+  document.getElementById('audDeskBody').classList.toggle('collapsed', expanded);
+});
 
 let currentEvents = [];
 const currentImpactFilters = new Set(['High']);
