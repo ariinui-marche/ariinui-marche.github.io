@@ -121,10 +121,25 @@ function auddDirClass(direction) {
   return `audd-dir-${direction || 'neutral'}`;
 }
 
+// Wrapped defensively: a malformed/unexpected aud-desk.json (or a stale SW
+// cache mismatch across shell files) must never throw out of here — it would
+// otherwise abort loadAll()'s shared try/catch and blank out every other
+// panel (currency/calendar/news) along with it. Degrade to hiding just this
+// panel instead.
 function renderAudDesk(data) {
+  try {
+    renderAudDeskUnsafe(data);
+  } catch (err) {
+    console.error('renderAudDesk failed, hiding panel', err);
+    document.getElementById('audDeskPanel')?.classList.add('audd-hidden');
+  }
+}
+
+function renderAudDeskUnsafe(data) {
   const panel = document.getElementById('audDeskPanel');
   const labelEl = document.getElementById('audDeskToggleLabel');
   const bodyEl = document.getElementById('audDeskBody');
+  if (!panel || !labelEl || !bodyEl) return; // stale cached HTML without the AUD Desk markup
   if (!data) { panel.classList.add('audd-hidden'); return; }
   panel.classList.remove('audd-hidden');
 
@@ -225,7 +240,7 @@ function renderAudDesk(data) {
     </div>`;
 }
 
-document.getElementById('audDeskToggle').addEventListener('click', (e) => {
+document.getElementById('audDeskToggle')?.addEventListener('click', (e) => {
   const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
   e.currentTarget.setAttribute('aria-expanded', String(!expanded));
   document.getElementById('audDeskBody').classList.toggle('collapsed', expanded);
