@@ -1,6 +1,125 @@
 {
-  "timestamp": "2026-08-24T09:59:43.239Z",
+  "timestamp": "2026-08-24T10:38:04.556Z",
   "items": [
+    {
+      "title": "3 Trading Firms Still Short Bitcoin and Ethereum Despite Sharp Price Rally",
+      "link": "https://beincrypto.com/abraxas-fasanara-wintermute-bitcoin-ethereum-shorts/",
+      "pubDate": "2026-08-24T10:31:43.000Z",
+      "description": "Abraxas Capital, Fasanara Capital, and Wintermute still hold over $600 million in short positions in Bitcoin (BTC) and Ethereum (ETH). Blockchain tracker Lookonchain identified the positions as market maker hedging accounts. Their liquidati",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "2026-08-24 - Banknotes and coins - Access to cash",
+      "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
+      "pubDate": "2026-08-24T10:30:00.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
+    },
+    {
+      "title": "Gold Price Forecast: XAU/USD pushes higher, but overbought RSI warns bulls",
+      "link": "https://www.fxstreet.com/news/gold-price-forecast-xau-usd-pushes-higher-but-overbought-rsi-warns-bulls-202608241026",
+      "pubDate": "2026-08-24T10:26:24.000Z",
+      "description": "Gold (XAU/USD) maintains a bullish bias on Monday and trades near its highest levels since mid-May.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Orange receives EU approval for Nexera acquisition with APG",
+      "link": "https://www.investing.com/news/stock-market-news/orange-receives-eu-approval-for-nexera-acquisition-with-apg-93CH-4873025",
+      "pubDate": "2026-08-24T10:24:10.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Sterling pauses after four-week rally as investors brace for US sanctions on Iran",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQV2kyQWJvcmZMUVBVOWY0S2FkellsUGptYktWT3MwOHFSY2FIdDJuS0ZWeUlYYUwybEtEN2dCelBIXzdaeWVZVWlPdXJzcXg1ZDNXaHJwNWpOenhqSWFOSnhFSTdlXzlUZFBRYk5yVEZucXA3Q3lKY3lJTHJ3cjg3d3RDRlJBRm1EYnpPajB5RlhMUUFkS0tVM0FQVGFmd0VFT3ZpWlVyc1I3YWxnSEpFQVRCOWpmRGs?oc=5",
+      "pubDate": "2026-08-24T10:23:43.000Z",
+      "description": "Sterling pauses after four-week rally as investors brace for US sanctions on Iran&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "TD Cowen initiates Jersey Mike’s stock with buy rating on growth",
+      "link": "https://www.investing.com/news/analyst-ratings/td-cowen-initiates-jersey-mikes-stock-with-buy-rating-on-growth-93CH-4873021",
+      "pubDate": "2026-08-24T10:20:54.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Wolfe Research initiates Jersey Mike’s stock rating at Peerperform",
+      "link": "https://www.investing.com/news/analyst-ratings/wolfe-research-initiates-jersey-mikes-stock-rating-at-peerperform-93CH-4873020",
+      "pubDate": "2026-08-24T10:20:52.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Wolfe Research raises Humana stock price target to $450 on margin outlook",
+      "link": "https://www.investing.com/news/analyst-ratings/wolfe-research-raises-humana-stock-price-target-to-450-on-margin-outlook-93CH-4873019",
+      "pubDate": "2026-08-24T10:20:51.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "XPeng robotics unit raises over $900 million in funding round",
+      "link": "https://www.investing.com/news/company-news/xpeng-robotics-unit-raises-over-900-million-in-funding-round-93CH-4873008",
+      "pubDate": "2026-08-24T10:16:40.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Union Jack Oil shareholders approve board overhaul",
+      "link": "https://www.investing.com/news/company-news/union-jack-oil-shareholders-approve-board-overhaul-93CH-4873007",
+      "pubDate": "2026-08-24T10:16:35.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Why is Siegfried stock sliding today?",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-siegfried-stock-sliding-today-93CH-4873006",
+      "pubDate": "2026-08-24T10:15:14.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "BofA raises Williams-Sonoma stock price target to $261 on growth",
+      "link": "https://www.investing.com/news/analyst-ratings/bofa-raises-williamssonoma-stock-price-target-to-261-on-growth-93CH-4873005",
+      "pubDate": "2026-08-24T10:14:55.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "JPMorgan assumes coverage on MediaAlpha stock with neutral rating",
+      "link": "https://www.investing.com/news/analyst-ratings/jpmorgan-assumes-coverage-on-mediaalpha-stock-with-neutral-rating-93CH-4873004",
+      "pubDate": "2026-08-24T10:14:52.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "JPMorgan assumes Roku stock coverage at neutral on Fox deal",
+      "link": "https://www.investing.com/news/analyst-ratings/jpmorgan-assumes-roku-stock-coverage-at-neutral-on-fox-deal-93CH-4873003",
+      "pubDate": "2026-08-24T10:14:50.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Michael Saylor Explains How to Invest Like a Billionaire, and Why Bitcoin Passes the Test",
+      "link": "https://beincrypto.com/saylor-bitcoin-bernard-arnault-test/",
+      "pubDate": "2026-08-24T10:08:49.000Z",
+      "description": "Saylor says Bitcoin passes the Bernard Arnault test. See the 10-year rule he uses to judge every asset he buys.\nThe post Michael Saylor Explains How to Invest Like a Billionaire, and Why Bitcoin Passes the Test appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "ViaBTC Extends Lifetime Referral Commissions to Miners Through Its Ambassador Program",
+      "link": "https://beincrypto.com/viabtc-lifetime-referral-commissions-miners/",
+      "pubDate": "2026-08-24T10:03:53.000Z",
+      "description": "As a one of global mining pool, ViaBTC has upgraded its Ambassador Program to offer lifetime referral rewards for miners. Approved ambassadors earn a 20% lifetime commission for every new user they refer, while referred users receive a 50% ",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "New Zealand Dollar edges down from highs amid soft retail consumption data",
+      "link": "https://www.fxstreet.com/news/new-zealand-dollar-edges-down-from-highs-amid-soft-retail-consumption-data-202608241002",
+      "pubDate": "2026-08-24T10:02:18.000Z",
+      "description": "The New Zealand Dollar ticks down against the US Dollar on Monday, weighed by an unexpected decline in New Zealand’s Retail Sales in the second quarter of the year.",
+      "source": "FXStreet"
+    },
     {
       "title": "Euro steadies against Japanese Yen as markets weigh ECB, BoJ rate hikes",
       "link": "https://www.fxstreet.com/news/euro-steadies-against-japanese-yen-as-markets-weigh-ecb-boj-rate-hikes-202608240958",
@@ -16,88 +135,11 @@
       "source": "FXStreet"
     },
     {
-      "title": "Evercore ISI reiterates Dell stock Outperform on AI server demand",
-      "link": "https://www.investing.com/news/analyst-ratings/evercore-isi-reiterates-dell-stock-outperform-on-ai-server-demand-93CH-4872955",
-      "pubDate": "2026-08-24T09:56:58.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Wolfe Research upgrades Janux stock rating on autoimmune data",
-      "link": "https://www.investing.com/news/analyst-ratings/wolfe-research-upgrades-janux-stock-rating-on-autoimmune-data-93CH-4872954",
-      "pubDate": "2026-08-24T09:56:56.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "William Blair initiates Reformation stock with outperform rating",
-      "link": "https://www.investing.com/news/analyst-ratings/william-blair-initiates-reformation-stock-with-outperform-rating-93CH-4872953",
-      "pubDate": "2026-08-24T09:56:53.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Global steel output edges lower as China decline offsets growth, Morgan Stanley comments",
-      "link": "https://www.investing.com/news/stock-market-news/global-steel-output-edges-lower-as-china-decline-offsets-growth-morgan-stanley-comments-93CH-4872952",
-      "pubDate": "2026-08-24T09:52:47.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Evercore ISI initiates Jersey Mike’s stock with outperform rating",
-      "link": "https://www.investing.com/news/analyst-ratings/evercore-isi-initiates-jersey-mikes-stock-with-outperform-rating-93CH-4872951",
-      "pubDate": "2026-08-24T09:50:57.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Wolfe warns AI spending may face pressure from rising yields",
-      "link": "https://www.investing.com/news/stock-market-news/wolfe-warns-ai-spending-may-face-pressure-from-rising-yields-93CH-4872950",
-      "pubDate": "2026-08-24T09:50:34.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "2026-08-24 - Banknotes and coins - Access to cash",
-      "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-24T09:50:01.000Z",
-      "description": "",
-      "source": "Swiss National Bank"
-    },
-    {
       "title": "Australian Dollar: Momentum builds toward 0.7200 against US Dollar – UOB",
       "link": "https://www.fxstreet.com/news/australian-dollar-momentum-builds-toward-07200-against-us-dollar-uob-202608240948",
       "pubDate": "2026-08-24T09:48:52.000Z",
       "description": "United Overseas Bank’s (UOB) Quek Ser Leang and Lee Sue Ann highlight AUD/USD’s sharp rally to 0.7180 and close near 0.7170, noting the move looks stretched but still lacks signs of a pause.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Hengli takes top spot in global containership orders",
-      "link": "https://www.investing.com/news/stock-market-news/hengli-takes-top-spot-in-global-containership-orders-93CH-4872949",
-      "pubDate": "2026-08-24T09:48:48.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Treasury’s yield-lowering push faces an uphill battle: Barclays",
-      "link": "https://www.investing.com/news/economy-news/treasurys-yieldlowering-push-faces-an-uphill-battle-barclays-4872948",
-      "pubDate": "2026-08-24T09:47:41.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Why is Jersey Mike’s Subs stock climbing today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-jersey-mikes-subs-stock-climbing-today-93CH-4872947",
-      "pubDate": "2026-08-24T09:47:08.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Why is Nucor stock climbing today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-nucor-stock-climbing-today-93CH-4872946",
-      "pubDate": "2026-08-24T09:46:42.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Canadian Dollar: Trade tensions threaten recovery against US Dollar - OCBC",
@@ -268,13 +310,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Canadian Dollar Falls on U.S.-Canada Trade Tensions",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPN1FCbF8tMGp1Nm9sTWNVRlZ6UzhuRmxPTmZSZ2MtMFdFLXpMY1JyZHY5cjcweXlYVlpPWk5BUkRoTFk1em1pRllfd2tiRHZVbUk3ektpSXJWTnVfYW8zdjVhNDVKNDlDVHNzbE40aF9pdTZjOC1EdmVKMkVEVUhlRXpHY3FOa1VRSXEwSkdtS1BlQnRmb1JpNWNmX2htTTJBd3I2YmZXdDY4YjRhVjVrTnUwbTRaUQ?oc=5",
-      "pubDate": "2026-08-24T07:50:00.000Z",
-      "description": "Canadian Dollar Falls on U.S.-Canada Trade Tensions&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
       "title": "Euro: ECB patience with inflation and growth tension – BNY",
       "link": "https://www.fxstreet.com/news/euro-ecb-patience-with-inflation-and-growth-tension-bny-202608240746",
       "pubDate": "2026-08-24T07:46:41.000Z",
@@ -331,20 +366,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Canadian Dollar declines as US-Canada trade talks collapse",
-      "link": "https://www.fxstreet.com/news/canadian-dollar-declines-as-us-canada-trade-talks-collapse-202608240702",
-      "pubDate": "2026-08-24T07:02:21.000Z",
-      "description": "The USD/CAD pair recovers some lost ground to near 1.3820 during the early European session on Monday. The Canadian Dollar (CAD) weakens against the US Dollar (USD) after US-Canada talks collapse into a trade war.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Gold: Upside risks building as fiscal worries grow – ING",
-      "link": "https://www.fxstreet.com/news/gold-upside-risks-building-as-fiscal-worries-grow-ing-202608240658",
-      "pubDate": "2026-08-24T06:58:05.000Z",
-      "description": "ING Commodities Strategist Ewa Manthey highlights that Gold has rebounded from its July lows near $4,000/oz to around $4,600/oz, supported by renewed investment demand, a weaker Dollar and mounting concerns over the US fiscal outlook.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Tron Inc. Treasury Tops 711 Million TRX as Stock Jumps 7.49%",
       "link": "https://beincrypto.com/tron-stock-surges-400m-accounts/",
       "pubDate": "2026-08-24T06:34:47.000Z",
@@ -373,13 +394,6 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "ETHFI Rallies 25% in a Week, and Arthur Hayes Pays Up to Get Back In",
-      "link": "https://beincrypto.com/arthur-hayes-ethfi-buyback-loss/",
-      "pubDate": "2026-08-24T05:05:07.000Z",
-      "description": "Arthur Hayes has bought 1.9 million Ether.fi (ETHFI) tokens worth $1.17 million, returning to a position he walked away from earlier this year. The BitMEX co-founder paid $0.62 per token. Onchain trackers put that entry well above the level",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Gold sticks to gains near mid-May highs; bulls turn cautious amid notable USD strength",
       "link": "https://www.fxstreet.com/news/gold-hits-fresh-high-since-mid-may-as-lower-bond-yields-and-fading-fed-bets-undermine-usd-202608240444",
       "pubDate": "2026-08-24T04:44:26.000Z",
@@ -399,20 +413,6 @@
       "pubDate": "2026-08-24T04:36:00.000Z",
       "description": "Thailand to discuss proposed taxes with gold association this week, Finance Minister says&nbsp;&nbsp;Reuters",
       "source": "Reuters"
-    },
-    {
-      "title": "Trump Team Pulls Millions From TRUMP Memecoin Liquidity Pools During Price Rally",
-      "link": "https://beincrypto.com/trump-team-pulls-trump-liquidity-pools/",
-      "pubDate": "2026-08-24T04:31:25.000Z",
-      "description": "Trump-linked wallets pulled USDC from TRUMP liquidity pools again this week, extending a pattern LookOnChain first tracked in 2025.\nThe post Trump Team Pulls Millions From TRUMP Memecoin Liquidity Pools During Price Rally appeared first on ",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "KPMG Australia Axes 360 Employees and 27 Partners in Sweeping Restructure",
-      "link": "https://beincrypto.com/kpmg-australia-job-cuts-august/",
-      "pubDate": "2026-08-24T04:17:07.000Z",
-      "description": "KPMG Australia will cut 27 partners and about 360 employees, roughly 5% of its workforce, as revenue slips and the firm absorbs the fallout from allegations that it misused confidential client information. Chief Executive John Sams said mos",
-      "source": "BeInCrypto"
     },
     {
       "title": "Gold Holds Near Three-Month High as Debasement Trade Returns",
@@ -448,6 +448,13 @@
       "pubDate": "2026-08-24T02:00:00.000Z",
       "description": "",
       "source": "Bank of Japan"
+    },
+    {
+      "title": "Dollar trading near multi-month lows, restrained by debt nerves",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPb0h4Z2hiSmZsZUJ1S1M1R0NCZ1VBcGRLX2JKcG9PT19hVGN6WG9ZTmpjeTZKMG5yeFpLMjB0NTF0TmpvNEJFeGhqMzVqc1cxM19vTkdCUkRBdWwwVmFWOElIWXMxX1hHaDFNV1BMaGIxN2pmVzdVRjRJa2JrSl9OTklZNlNxSXVsZHlPQmZTSk5CNjQ5MmN4UVlDa3VLZ1pB0gGmAUFVX3lxTE5iLWw5ekd0cnh2dFpTSDdMYmlLZGkwa3pVQzFaTHpGcTNOalRQXzg0RGFNYkFicEh1ODh0bXE2dW5Ua1FabElFWk1vbXE2Nk1Rc1FmVWc1N3JKQWk4Mk5oNzdpNkVOakdJbmFQdVBBRy1LWDdyRmM2UUUxR3M1QWVvaDd1aDA0eC0tVnMxRlA0V1d2Tl95eVpxXzRNRkNjM2FvLW9SU2c?oc=5",
+      "pubDate": "2026-08-24T01:55:00.000Z",
+      "description": "Dollar trading near multi-month lows, restrained by debt nerves&nbsp;&nbsp;CNBC",
+      "source": "Google News"
     },
     {
       "title": "Dollar pinned at multi-month lows as debt nerves unnerve investors",
@@ -487,7 +494,7 @@
     {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-23T15:14:27.000Z",
+      "pubDate": "2026-08-23T15:11:49.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
     },
@@ -531,13 +538,6 @@
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOT0Z0Y3FxdWRIWFFiWU5IbjBKbldJa1c1SmhsZVdXSXV4bXhFR0puZkFCYnpOOWhPMW5jRlNxVTNFZjVKdy1VeWxxZkFTNkNPMG5kUjRrVklJcEJIck14a1NlMHBkbDBRdDB1cXJhOFZKZ3gwZkp6UkxwdTl3RENnU24tNWtBNGpjMHVTQ3pyZUt1d2NTTjFmM1dDMEh3M2FqWlpIYUlwMGVmTHYzY1VZVHJXT0s1dw?oc=5",
       "pubDate": "2026-08-21T20:14:06.000Z",
       "description": "Bessent’s Bond Maneuvers Giving Global Debasement Trade New Life&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
-      "title": "US ‘Playing With Fire’ as Dollar Risks Yen-Style Debasement",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQ1BSNWF1YXZERWRmbjg2aUhQeWdoVk15RkxiSGFVaDZldG9Tc29FYUNUR1RxSEFpQ0RrdUd1ZXVnY3ZkUVVCR1hUUFV3blRQYVN2RkRnakkzSk95NVdkNms0TVl1Z2lOaldDaThpdVlRTHAzX1h2UHpGZGxRLUNfWGs4MkJMQXpZTEx6dVlXRlNEdHBVeDljV1NYSURMakpoOFp0cEdmWEZ1akVYc1RuQ3A4RQ?oc=5",
-      "pubDate": "2026-08-21T15:53:10.000Z",
-      "description": "US ‘Playing With Fire’ as Dollar Risks Yen-Style Debasement&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
     },
     {
