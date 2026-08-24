@@ -1,24 +1,73 @@
 {
-  "timestamp": "2026-08-24T23:30:04.982Z",
+  "timestamp": "2026-08-24T23:48:00.439Z",
   "items": [
     {
       "title": "2026-08-25 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-24T23:25:00.000Z",
+      "pubDate": "2026-08-24T23:40:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
     },
     {
+      "title": "Astellas begins phase 3 trial of ASP2138 for gastric cancer",
+      "link": "https://www.investing.com/news/company-news/astellas-begins-phase-3-trial-of-asp2138-for-gastric-cancer-93CH-4874302",
+      "pubDate": "2026-08-24T23:36:31.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Aveanna Healthcare director-linked entities sell $192.6m in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/aveanna-healthcare-directorlinked-entities-sell-1926m-in-stock-93CH-4874301",
+      "pubDate": "2026-08-24T23:31:31.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Arista Networks president, CTO Duda sells $8.03m in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/arista-networks-president-cto-duda-sells-803m-in-stock-93CH-4874300",
+      "pubDate": "2026-08-24T23:31:29.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
       "title": "Japan eyes tax breaks for non-core business sales in governance reform push, sources say",
       "link": "https://www.investing.com/news/economy-news/exclusivejapan-eyes-tax-breaks-for-noncore-business-sales-in-governance-reform-push-sources-say-4873958",
-      "pubDate": "2026-08-24T23:19:01.000Z",
+      "pubDate": "2026-08-24T23:30:28.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "NZME H1 2026 slides: audio drives return to revenue growth",
+      "link": "https://www.investing.com/news/company-news/nzme-h1-2026-slides-audio-drives-return-to-revenue-growth-93CH-4874297",
+      "pubDate": "2026-08-24T23:29:35.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Vulcan Steel FY26 slides: revenue jumps 22% on rollforming entry",
+      "link": "https://www.investing.com/news/company-news/vulcan-steel-fy26-slides-revenue-jumps-22-on-rollforming-entry-93CH-4874296",
+      "pubDate": "2026-08-24T23:29:11.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Meta to launch Hatch AI agent platform in coming weeks- The Information",
+      "link": "https://www.investing.com/news/stock-market-news/meta-to-launch-hatch-ai-agent-platform-in-coming-weeks-the-information-93CH-4874295",
+      "pubDate": "2026-08-24T23:25:05.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
       "title": "Judge rejects First Brands’ plan to pay down debts by pursuing lawsuits",
       "link": "https://www.investing.com/news/stock-market-news/judge-rejects-first-brands-plan-to-pay-down-debts-by-pursuing-lawsuits-4874293",
-      "pubDate": "2026-08-24T23:18:42.000Z",
+      "pubDate": "2026-08-24T23:24:48.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "NZME H1 2026 slides: profit surges as audio drives growth",
+      "link": "https://www.investing.com/news/company-news/nzme-h1-2026-slides-profit-surges-as-audio-drives-growth-93CH-4874294",
+      "pubDate": "2026-08-24T23:24:17.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -26,55 +75,6 @@
       "title": "FDA approves J&J’s Imaavy for rare blood disorder treatment",
       "link": "https://www.investing.com/news/company-news/fda-approves-jjs-imaavy-for-rare-blood-disorder-treatment-93CH-4874292",
       "pubDate": "2026-08-24T23:16:39.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Earnings call transcript: Vulcan Steel posts stronger FY2026 as growth builds in H2",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-vulcan-steel-posts-stronger-fy2026-as-growth-builds-in-h2-93CH-4874291",
-      "pubDate": "2026-08-24T23:16:33.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Grocery outlet EVP Frank Kerr sells $16,181 in shares",
-      "link": "https://www.investing.com/news/insider-trading-news/grocery-outlet-evp-frank-kerr-sells-16181-in-shares-93CH-4874290",
-      "pubDate": "2026-08-24T23:16:10.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Gevo chief legal officer Kettner buys $19,368 in common stock",
-      "link": "https://www.investing.com/news/insider-trading-news/gevo-chief-legal-officer-kettner-buys-19368-in-common-stock-93CH-4874288",
-      "pubDate": "2026-08-24T23:16:09.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Gevo director James Barber acquires $77,000 in shares",
-      "link": "https://www.investing.com/news/insider-trading-news/gevo-director-james-barber-acquires-77000-in-shares-93CH-4874289",
-      "pubDate": "2026-08-24T23:16:09.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Lifetime Brands director Siegel sells $24,450 in common stock",
-      "link": "https://www.investing.com/news/insider-trading-news/lifetime-brands-director-siegel-sells-24450-in-common-stock-93CH-4874287",
-      "pubDate": "2026-08-24T23:16:08.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Fast-fashion giant Shein shrinks value to up to $27 billion in Hong Kong IPO",
-      "link": "https://www.investing.com/news/stock-market-news/shein-launches-up-to-18-billion-hong-kong-ipo-4872479",
-      "pubDate": "2026-08-24T23:13:32.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Shein’s stock market listing will not mask sustainability challenges",
-      "link": "https://www.investing.com/news/stock-market-news/sheins-stock-market-listing-will-not-mask-sustainability-challenges-4874285",
-      "pubDate": "2026-08-24T23:13:11.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -284,7 +284,7 @@
     {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-24T18:43:48.000Z",
+      "pubDate": "2026-08-24T18:43:44.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
     },
@@ -443,10 +443,10 @@
       "source": "Swiss National Bank"
     },
     {
-      "title": "Hedge Funds Ramp Up Dollar Shorts Ahead of Bessent’s Fiscal Plan - Bloomberg",
+      "title": "Hedge Funds Ramp Up Dollar Shorts Into Bessent’s Fiscal Plan - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNd2FxZEN4RV9rM3N3N3Qtd2p0OTNMaGM2VGY0cHZ1V08zUVN1dkt0bFd5c3dNWHZjak9mWFZsNkZwU2RFRUNkRWNhMmp3OWRvZ2JMU3R2cEpmeFQyUzIzbENkMnliM01McWczTnhyTWFlang2cDFyRVUwbTAzdTBwd2VBazdDYnNCbG1lTFd4UUVsQW9EN25yaFVUZXVSUUprdWdsMjhYUEtOdWo4Wnp5U0ZGN1oyQQ?oc=5",
       "pubDate": "2026-08-24T08:46:25.000Z",
-      "description": "Hedge Funds Ramp Up Dollar Shorts Ahead of Bessent’s Fiscal Plan&nbsp;&nbsp;Bloomberg",
+      "description": "Hedge Funds Ramp Up Dollar Shorts Into Bessent’s Fiscal Plan&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
     },
     {
