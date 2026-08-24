@@ -1,12 +1,75 @@
 {
-  "timestamp": "2026-08-24T19:41:09.147Z",
+  "timestamp": "2026-08-24T20:01:20.790Z",
   "items": [
     {
       "title": "2026-08-24 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-24T19:41:00.000Z",
+      "pubDate": "2026-08-24T19:54:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "FirstCash stock hits all-time high at 236.36 USD",
+      "link": "https://www.investing.com/news/company-news/firstcash-stock-hits-alltime-high-at-23636-usd-93CH-4874101",
+      "pubDate": "2026-08-24T19:52:02.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Moody’s upgrades XPO rating to Ba1 on margin gains",
+      "link": "https://www.investing.com/news/stock-market-news/moodys-upgrades-xpo-rating-to-ba1-on-margin-gains-93CH-4874099",
+      "pubDate": "2026-08-24T19:51:09.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "South Korean Won: Consolidation zone eyed against US Dollar – Commerzbank",
+      "link": "https://www.fxstreet.com/news/south-korean-won-consolidation-zone-eyed-against-us-dollar-commerzbank-202608241951",
+      "pubDate": "2026-08-24T19:51:00.000Z",
+      "description": "Commerzbank’s Charlie Lay and Dr. Henry Hao highlight South Korea’s strong export-led growth and large current-account surplus as key drivers of Korean Won strength against the Dollar.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "US Treasury to stick to debt auction schedule despite bigger buybacks, Bessent says",
+      "link": "https://www.investing.com/news/commodities-news/us-treasury-to-stick-to-debt-auction-schedule-despite-bigger-buybacks-bessent-says-4874098",
+      "pubDate": "2026-08-24T19:48:26.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Horizon Kinetics, 10% owner, buys $381 in Texas Pacific Land (TPL)",
+      "link": "https://www.investing.com/news/insider-trading-news/horizon-kinetics-10-owner-buys-381-in-texas-pacific-land-tpl-93CH-4874097",
+      "pubDate": "2026-08-24T19:46:19.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Cosmos Health projects $6M revenue from Oliv18 supplement launch",
+      "link": "https://www.investing.com/news/company-news/cosmos-health-projects-6m-revenue-from-oliv18-supplement-launch-93CH-4874096",
+      "pubDate": "2026-08-24T19:44:44.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Ampol 1H 2026 slides: record earnings on exceptional refining margins",
+      "link": "https://www.investing.com/news/company-news/ampol-1h-2026-slides-record-earnings-on-exceptional-refining-margins-93CH-4874095",
+      "pubDate": "2026-08-24T19:42:45.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Target apologizes for children’s clown Halloween costume after backlash",
+      "link": "https://www.investing.com/news/stock-market-news/target-apologizes-for-childrens-clown-halloween-costume-after-backlash-4874089",
+      "pubDate": "2026-08-24T19:37:01.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "US removes Syria from terrorism sponsor list, lifting major investment obstacle",
+      "link": "https://www.investing.com/news/stock-market-news/us-removes-syria-from-terrorism-sponsor-list-lifting-major-investment-obstacle-4874088",
+      "pubDate": "2026-08-24T19:36:46.000Z",
+      "description": "",
+      "source": "Investing.com"
     },
     {
       "title": "US Dollar Index: Cautious rebound capped near 100 – Scotiabank",
@@ -23,72 +86,16 @@
       "source": "BeInCrypto"
     },
     {
+      "title": "Nvidia earnings risks and the peers with the most to lose",
+      "link": "https://www.investing.com/news/stock-market-news/nvidia-earnings-risks-and-the-peers-with-the-most-to-lose-93CH-4874092",
+      "pubDate": "2026-08-24T19:33:22.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
       "title": "Consumers Bancorp EVP mikes buys $3,200 in stock",
       "link": "https://www.investing.com/news/insider-trading-news/consumers-bancorp-evp-mikes-buys-3200-in-stock-93CH-4874090",
       "pubDate": "2026-08-24T19:31:05.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Target apologizes for children’s clown Halloween costume after backlash",
-      "link": "https://www.investing.com/news/stock-market-news/target-apologizes-for-childrens-clown-halloween-costume-after-backlash-4874089",
-      "pubDate": "2026-08-24T19:30:47.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "US removes Syria from terrorism sponsor list, lifting major investment obstacle",
-      "link": "https://www.investing.com/news/stock-market-news/us-removes-syria-from-terrorism-sponsor-list-lifting-major-investment-obstacle-4874088",
-      "pubDate": "2026-08-24T19:30:31.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "AMD analysis: monthly uptrend intact despite near-term selloff",
-      "link": "https://www.investing.com/news/stock-market-news/amd-analysis-monthly-uptrend-intact-despite-nearterm-selloff-93CH-4874086",
-      "pubDate": "2026-08-24T19:27:33.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Earnings call transcript: Ampol posts record H1 2026 profit as shares rise",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-ampol-posts-record-h1-2026-profit-as-shares-rise-93CH-4874085",
-      "pubDate": "2026-08-24T19:26:49.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Domino’s Pizza options activity shows bullish tilt with calendar spreads at $520–$540",
-      "link": "https://www.investing.com/news/stock-market-news/dominos-pizza-options-activity-shows-bullish-tilt-with-calendar-spreads-at-520540-93CH-4874084",
-      "pubDate": "2026-08-24T19:24:48.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Medical devices sector outlook: value opportunities amid 2026 selloff",
-      "link": "https://www.investing.com/news/stock-market-news/medical-devices-sector-outlook-value-opportunities-amid-2026-selloff-93CH-4874083",
-      "pubDate": "2026-08-24T19:23:17.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Nasdaq 100 hammer at 29,146 after double top break: Live levels",
-      "link": "https://www.investing.com/news/stock-market-news/nasdaq-100-hammer-at-29146-after-double-top-break-live-levels-93CH-4874082",
-      "pubDate": "2026-08-24T19:20:58.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Tesla trapped between $345-$354 on 5h chart: Live levels",
-      "link": "https://www.investing.com/news/stock-market-news/tesla-trapped-between-345354-on-5h-chart-live-levels-93CH-4874081",
-      "pubDate": "2026-08-24T19:20:55.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Alphabet C bear flag at $345: Live hourly levels",
-      "link": "https://www.investing.com/news/stock-market-news/alphabet-c-bear-flag-at-345-live-hourly-levels-93CH-4874080",
-      "pubDate": "2026-08-24T19:20:51.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -103,7 +110,7 @@
       "title": "Silver Price Forecast: XAG pullback tests 100-day SMA",
       "link": "https://www.fxstreet.com/news/silver-price-forecast-xag-pullback-tests-100-day-sma-202608241852",
       "pubDate": "2026-08-24T18:52:11.000Z",
-      "description": "Silver price reverses course on Monday, down 0.59% as buyers failed to push the white metal past the $70.00, which exacerbated a reversal, to the first support level seen at the 100-day Simple Moving Average (SMA) at $68.42. At the time of ",
+      "description": "Silver (XAG/USD) price reverses course on Monday, down 0.59% as buyers failed to push the white metal past $70.00, which exacerbated a reversal to the first support level at the 100-day Simple Moving Average (SMA) at $68.42. At the time of ",
       "source": "FXStreet"
     },
     {
@@ -116,7 +123,7 @@
     {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-24T18:43:48.000Z",
+      "pubDate": "2026-08-24T18:43:44.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
     },
@@ -154,13 +161,6 @@
       "pubDate": "2026-08-24T18:07:30.000Z",
       "description": "The Euro (EUR) treads water against the Pound Sterling (GBP) on Monday, holding in the mid-0.8500s after struggling to sustain its push toward 0.8580 last week.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Gold rally gains momentum ahead of US inflation data, Jackson Hole event",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUkZtQVBPdjlyb21JaVBxeFRicDFEeHVNQ21pZzdGQnlSMUpFYV80MEl3RjJUbF9tYWxmdkZqY2NpaXh5S0NPd1lhbFZxUHZMVVFkTHNyNktCX2hrUU5KN3hjcWRUVTlaQ0hwcmVoMV9VZjBmUkFjMGtTUUY5MXBwRDRFWXBwQnhZTzU1dV81LThOaTNZR1BLVDRGU1JtbDczRjVweFByWkVQbWhhX3VwYTlJZ0VYblU?oc=5",
-      "pubDate": "2026-08-24T18:04:57.000Z",
-      "description": "Gold rally gains momentum ahead of US inflation data, Jackson Hole event&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "Treasury Bessent: US is launching an \"economic onslaught\" against Iran's financial connection",
@@ -352,13 +352,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Euro holds ground as US Dollar steadies, markets brace for Iran sanctions",
-      "link": "https://www.fxstreet.com/news/euro-holds-ground-as-us-dollar-steadies-and-markets-brace-for-iran-sanctions-202608241330",
-      "pubDate": "2026-08-24T13:30:14.000Z",
-      "description": "EUR/USD trades flat on Monday as the US Dollar (USD) steadies and markets settle into a calmer tone following the sharp volatility triggered by the US Treasury’s surprise buyback announcement last week. At the time of writing, the pair trad",
-      "source": "FXStreet"
-    },
-    {
       "title": "Bitcoin Braces for Warsh&#039;s Jackson Hole Debut: Will 2022 Repeat?",
       "link": "https://beincrypto.com/bitcoin-warsh-jackson-hole-debut-2022/",
       "pubDate": "2026-08-24T13:02:36.000Z",
@@ -490,6 +483,13 @@
       "pubDate": "2026-08-24T06:00:00.000Z",
       "description": "",
       "source": "European Central Bank"
+    },
+    {
+      "title": "Gold rally gains momentum ahead of US inflation data, Jackson Hole event",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUkZtQVBPdjlyb21JaVBxeFRicDFEeHVNQ21pZzdGQnlSMUpFYV80MEl3RjJUbF9tYWxmdkZqY2NpaXh5S0NPd1lhbFZxUHZMVVFkTHNyNktCX2hrUU5KN3hjcWRUVTlaQ0hwcmVoMV9VZjBmUkFjMGtTUUY5MXBwRDRFWXBwQnhZTzU1dV81LThOaTNZR1BLVDRGU1JtbDczRjVweFByWkVQbWhhX3VwYTlJZ0VYblU?oc=5",
+      "pubDate": "2026-08-24T04:39:00.000Z",
+      "description": "Gold rally gains momentum ahead of US inflation data, Jackson Hole event&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "Thailand to discuss proposed taxes with gold association this week, Finance Minister says",
