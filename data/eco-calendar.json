@@ -3555,6 +3555,132 @@
       "forecast": "",
       "previous": "",
       "actual": ""
+    },
+    {
+      "title": "CPI m/m",
+      "country": "AUD",
+      "date": "2026-10-27T17:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "CPI y/y",
+      "country": "AUD",
+      "date": "2026-10-27T17:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Trimmed Mean CPI m/m",
+      "country": "AUD",
+      "date": "2026-10-27T17:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Official Cash Rate",
+      "country": "NZD",
+      "date": "2026-10-27T18:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "RBNZ Rate Statement",
+      "country": "NZD",
+      "date": "2026-10-27T18:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "RBNZ Press Conference",
+      "country": "NZD",
+      "date": "2026-10-27T19:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "BOC Monetary Policy Report",
+      "country": "CAD",
+      "date": "2026-10-28T06:45:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "BOC Rate Statement",
+      "country": "CAD",
+      "date": "2026-10-28T06:45:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Overnight Rate",
+      "country": "CAD",
+      "date": "2026-10-28T06:45:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "BOC Press Conference",
+      "country": "CAD",
+      "date": "2026-10-28T07:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Federal Funds Rate",
+      "country": "USD",
+      "date": "2026-10-28T11:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "FOMC Statement",
+      "country": "USD",
+      "date": "2026-10-28T11:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "FOMC Press Conference",
+      "country": "USD",
+      "date": "2026-10-28T11:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Autumn Forecast Statement",
+      "country": "GBP",
+      "date": "2026-10-28T12:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
     }
   ]
 }
