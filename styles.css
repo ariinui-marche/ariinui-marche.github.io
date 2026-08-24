@@ -472,8 +472,14 @@ main {
 .audd-bias-bearish .audd-bias-label { color: var(--red); }
 .audd-bias-bullish .audd-bias-label { color: var(--green); }
 .audd-bias-neutral .audd-bias-label { color: var(--gray); }
+.audd-bias-pct {
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.8;
+}
 .audd-bias-meta { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; }
 .audd-bias-summary { font-size: 13px; color: var(--text); margin-top: 4px; line-height: 1.4; }
+.audd-bias-caveat { font-size: 11px; color: var(--text-dim); font-style: italic; margin-top: 6px; line-height: 1.4; }
 
 .audd-consensus {
   display: grid;
@@ -560,13 +566,14 @@ main {
 .audd-history { display: flex; flex-direction: column; gap: 4px; }
 .audd-history-row {
   display: grid;
-  grid-template-columns: 90px 1fr 1fr 80px 1fr;
+  grid-template-columns: 90px 1fr 1fr 120px 1fr;
   gap: 8px;
   font-size: 12px;
   padding: 6px 10px;
   background: #0e1219;
   border: 1px solid var(--border);
   border-radius: 6px;
+  line-height: 1.35;
 }
 .audd-history-head { color: var(--text-dim); font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; background: transparent; border: none; padding: 0 10px; }
 .audd-history-read { font-size: 11px; color: var(--text-dim); font-style: italic; padding: 0 10px 6px 10px; line-height: 1.4; }

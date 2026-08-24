@@ -152,18 +152,21 @@ function renderAudDeskUnsafe(data) {
   const bias = data.bias || {};
   const c = ev.consensus || {};
 
+  const confPct = Number.isFinite(bias.confidencePct) ? `${bias.confidencePct}%` : '';
+
   labelEl.innerHTML = `
     <span class="audd-ticker">${ev.ccy || ''}</span>
-    <span class="audd-bias-pill audd-bias-${bias.direction || 'neutral'}">${(bias.direction || 'neutral').toUpperCase()}</span>`;
+    <span class="audd-bias-pill audd-bias-${bias.direction || 'neutral'}">${(bias.direction || 'neutral').toUpperCase()}${confPct ? ` · ${confPct}` : ''}</span>`;
 
   bodyEl.innerHTML = `
     ${ev.title ? `<div class="audd-toggle-title">${ev.title}</div>` : ''}
     ${evDateLabel ? `<div class="audd-event-time">${evDateLabel} (your local time)</div>` : ''}
 
     <div class="audd-bias audd-bias-${bias.direction || 'neutral'}">
-      <span class="audd-bias-label">${(bias.direction || 'neutral').toUpperCase()}</span>
-      <span class="audd-bias-meta">${bias.horizon || ''} · confidence: ${bias.confidence || '—'}</span>
+      <span class="audd-bias-label">${(bias.direction || 'neutral').toUpperCase()}${confPct ? ` <span class="audd-bias-pct">${confPct}</span>` : ''}</span>
+      <span class="audd-bias-meta">${bias.horizon || ''}${bias.confidenceSample ? ` · ${bias.confidenceSample}` : ''}</span>
       ${bias.summary ? `<span class="audd-bias-summary">${bias.summary}</span>` : ''}
+      ${bias.confidenceCaveat ? `<span class="audd-bias-caveat">${bias.confidenceCaveat}</span>` : ''}
     </div>
 
     ${(c.headlineYoY || c.trimmedMeanYoY) ? `
@@ -171,6 +174,7 @@ function renderAudDeskUnsafe(data) {
       ${c.headlineYoY ? `<div class="audd-stat"><span class="audd-stat-label">Headline YoY (cons.)</span><span class="audd-stat-value">${c.headlineYoY}</span><span class="audd-stat-prior">prior ${c.priorHeadlineYoY || '—'}</span></div>` : ''}
       ${c.trimmedMeanYoY ? `<div class="audd-stat"><span class="audd-stat-label">Trimmed mean YoY (cons.)</span><span class="audd-stat-value">${c.trimmedMeanYoY}</span><span class="audd-stat-prior">prior ${c.priorTrimmedMeanYoY || '—'}</span></div>` : ''}
     </div>
+    ${c.sources ? `<div class="audd-note">${c.sources}</div>` : ''}
     ${ev.note ? `<div class="audd-note">${ev.note}</div>` : ''}` : ''}
 
     ${(data.catalysts || []).length ? `
@@ -202,6 +206,18 @@ function renderAudDeskUnsafe(data) {
           <div class="audd-indicator-what">${m.what}</div>
           <div class="audd-indicator-reading"><b>Reading:</b> ${m.reading}</div>
           <div class="audd-indicator-apply"><b>How to apply:</b> ${m.howToApply}</div>
+        </div>`).join('')}
+    </div>` : ''}
+
+    ${(data.correlations || []).length ? `
+    <div class="audd-section-label">Correlations (computed, not textbook)</div>
+    <div class="audd-indicators">
+      ${data.correlations.map((c2) => `
+        <div class="audd-indicator">
+          <div class="audd-indicator-name">${c2.pair}</div>
+          <div class="audd-indicator-what">${c2.method}</div>
+          <div class="audd-indicator-reading"><b>Result:</b> ${c2.value}</div>
+          <div class="audd-indicator-apply"><b>Read:</b> ${c2.read}</div>
         </div>`).join('')}
     </div>` : ''}
 
