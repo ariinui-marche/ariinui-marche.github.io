@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-24T15:05:32.104Z",
+  "timestamp": "2026-08-24T15:50:38.317Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -2254,7 +2254,7 @@
     {
       "title": "Treasury Sec Bessent Speaks",
       "country": "USD",
-      "date": "2026-08-24T14:00:00-04:00",
+      "date": "2026-08-24T13:00:00-04:00",
       "impact": "Medium",
       "forecast": "",
       "previous": "",
@@ -2292,7 +2292,7 @@
       "country": "EUR",
       "date": "2026-08-25T04:00:00-04:00",
       "impact": "Low",
-      "forecast": "87.3",
+      "forecast": "87.2",
       "previous": "86.6",
       "actual": ""
     },
@@ -2328,7 +2328,7 @@
       "country": "USD",
       "date": "2026-08-25T09:00:00-04:00",
       "impact": "Low",
-      "forecast": "1.9%",
+      "forecast": "1.8%",
       "previous": "1.6%",
       "actual": ""
     },
@@ -2355,8 +2355,17 @@
       "country": "USD",
       "date": "2026-08-25T10:00:00-04:00",
       "impact": "Low",
-      "forecast": "7",
+      "forecast": "6",
       "previous": "5",
+      "actual": ""
+    },
+    {
+      "title": "FOMC Member Barkin Speaks",
+      "country": "USD",
+      "date": "2026-08-25T16:00:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "",
       "actual": ""
     },
     {
@@ -2510,6 +2519,15 @@
       "impact": "Low",
       "forecast": "",
       "previous": "4.4M",
+      "actual": ""
+    },
+    {
+      "title": "FOMC Member Barkin Speaks",
+      "country": "USD",
+      "date": "2026-08-26T11:45:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "",
       "actual": ""
     },
     {
