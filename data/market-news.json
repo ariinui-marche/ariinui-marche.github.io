@@ -1,24 +1,101 @@
 {
-  "timestamp": "2026-08-24T20:01:20.790Z",
+  "timestamp": "2026-08-24T20:36:36.330Z",
   "items": [
     {
       "title": "2026-08-24 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-24T19:54:00.000Z",
+      "pubDate": "2026-08-24T20:35:01.000Z",
       "description": "",
       "source": "Swiss National Bank"
     },
     {
-      "title": "FirstCash stock hits all-time high at 236.36 USD",
-      "link": "https://www.investing.com/news/company-news/firstcash-stock-hits-alltime-high-at-23636-usd-93CH-4874101",
-      "pubDate": "2026-08-24T19:52:02.000Z",
+      "title": "Asia FX: Mixed central bank paths shape THB, KRW, PHP – BBH",
+      "link": "https://www.fxstreet.com/news/asia-fx-mixed-central-bank-paths-shape-thb-krw-php-bbh-202608242033",
+      "pubDate": "2026-08-24T20:33:00.000Z",
+      "description": "Brown Brothers Harriman’s (BBH) Elias Haddad expects the Bank of Thailand (BoT) to hold rates at 1.00%, leaving negative real yields that keep Thai Baht (THB) lagging. The Bank of Korea (BoK) is seen hiking again to 3.00%, supporting South ",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Gorilla Technology raises 2026 revenue guidance to $200 million",
+      "link": "https://www.investing.com/news/company-news/gorilla-technology-raises-2026-revenue-guidance-to-200-million-93CH-4874133",
+      "pubDate": "2026-08-24T20:16:39.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Moody’s upgrades XPO rating to Ba1 on margin gains",
-      "link": "https://www.investing.com/news/stock-market-news/moodys-upgrades-xpo-rating-to-ba1-on-margin-gains-93CH-4874099",
-      "pubDate": "2026-08-24T19:51:09.000Z",
+      "title": "Procter & Gamble SVP, chief accounting officer sells $22,431 in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/procter--gamble-svp-chief-accounting-officer-sells-22431-in-shares-93CH-4874130",
+      "pubDate": "2026-08-24T20:16:10.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "P&G CFO Andre Schulten sells $776,753 in company stock",
+      "link": "https://www.investing.com/news/insider-trading-news/pg-cfo-andre-schulten-sells-776753-in-company-stock-93CH-4874128",
+      "pubDate": "2026-08-24T20:16:04.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "TTM Technologies director Rex Geveden buys $524,500 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/ttm-technologies-director-rex-geveden-buys-524500-in-stock-93CH-4874127",
+      "pubDate": "2026-08-24T20:16:02.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Mexican Peso weakens as Iran sanctions offset Mexico’s inflation data",
+      "link": "https://www.fxstreet.com/news/mexican-peso-weakens-as-iran-sanctions-offset-mexicos-inflation-data-202608242013",
+      "pubDate": "2026-08-24T20:13:47.000Z",
+      "description": "The Mexican Peso lost ground against the Greenback on Monday, even though economic data showed that inflation accelerated in the first half of August, while economic growth was softer than expected. Consequently, the USD/MXN exotic pair tra",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Forex Today: US Dollar firms on safe-haven demand ahead of data-heavy Tuesday",
+      "link": "https://www.fxstreet.com/news/forex-today-us-dollar-firms-on-safe-haven-demand-ahead-of-data-heavy-tuesday-202608242013",
+      "pubDate": "2026-08-24T20:13:42.000Z",
+      "description": "The US Dollar Index (DXY) reclaimed the 99.00 mark for the first time since last Wednesday's plunge.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "The Trade Desk stock falls after filing shelf prospectus",
+      "link": "https://www.investing.com/news/stock-market-news/the-trade-desk-stock-falls-after-filing-shelf-prospectus-93CH-4874123",
+      "pubDate": "2026-08-24T20:13:00.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "S&P 500, Nasdaq end down on tech stocks, investors weigh Iran moves",
+      "link": "https://www.investing.com/news/economy-news/sp-nasdaq-futures-slip-as-markets-await-iran-sanctions-nvidia-results-4873000",
+      "pubDate": "2026-08-24T20:12:55.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Lula’s campaign considers curbing on independent contractors in potential new term",
+      "link": "https://www.investing.com/news/stock-market-news/lulas-campaign-considers-curbing-on-independent-contractors-in-potential-new-term-4874122",
+      "pubDate": "2026-08-24T20:12:33.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Wall Street ends mixed amid fall in tech stocks, rising U.S.-Canada trade tensions",
+      "link": "https://www.investing.com/news/stock-market-news/wall-st-futures-steady-after-weekly-losses-nvidia-results-jackson-hole-in-focus-4872516",
+      "pubDate": "2026-08-24T20:10:03.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Savara presents molgramostim data at ERS Congress in September",
+      "link": "https://www.investing.com/news/company-news/savara-presents-molgramostim-data-at-ers-congress-in-september-93CH-4874118",
+      "pubDate": "2026-08-24T20:08:44.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "LPL Financial names Jonathan Lewis as chief technology officer",
+      "link": "https://www.investing.com/news/company-news/lpl-financial-names-jonathan-lewis-as-chief-technology-officer-93CH-4874117",
+      "pubDate": "2026-08-24T20:08:36.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -28,48 +105,6 @@
       "pubDate": "2026-08-24T19:51:00.000Z",
       "description": "Commerzbank’s Charlie Lay and Dr. Henry Hao highlight South Korea’s strong export-led growth and large current-account surplus as key drivers of Korean Won strength against the Dollar.",
       "source": "FXStreet"
-    },
-    {
-      "title": "US Treasury to stick to debt auction schedule despite bigger buybacks, Bessent says",
-      "link": "https://www.investing.com/news/commodities-news/us-treasury-to-stick-to-debt-auction-schedule-despite-bigger-buybacks-bessent-says-4874098",
-      "pubDate": "2026-08-24T19:48:26.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Horizon Kinetics, 10% owner, buys $381 in Texas Pacific Land (TPL)",
-      "link": "https://www.investing.com/news/insider-trading-news/horizon-kinetics-10-owner-buys-381-in-texas-pacific-land-tpl-93CH-4874097",
-      "pubDate": "2026-08-24T19:46:19.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Cosmos Health projects $6M revenue from Oliv18 supplement launch",
-      "link": "https://www.investing.com/news/company-news/cosmos-health-projects-6m-revenue-from-oliv18-supplement-launch-93CH-4874096",
-      "pubDate": "2026-08-24T19:44:44.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Ampol 1H 2026 slides: record earnings on exceptional refining margins",
-      "link": "https://www.investing.com/news/company-news/ampol-1h-2026-slides-record-earnings-on-exceptional-refining-margins-93CH-4874095",
-      "pubDate": "2026-08-24T19:42:45.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Target apologizes for children’s clown Halloween costume after backlash",
-      "link": "https://www.investing.com/news/stock-market-news/target-apologizes-for-childrens-clown-halloween-costume-after-backlash-4874089",
-      "pubDate": "2026-08-24T19:37:01.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "US removes Syria from terrorism sponsor list, lifting major investment obstacle",
-      "link": "https://www.investing.com/news/stock-market-news/us-removes-syria-from-terrorism-sponsor-list-lifting-major-investment-obstacle-4874088",
-      "pubDate": "2026-08-24T19:36:46.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "US Dollar Index: Cautious rebound capped near 100 – Scotiabank",
@@ -84,20 +119,6 @@
       "pubDate": "2026-08-24T19:35:20.000Z",
       "description": "ZEC, AAVE, and XRP led the altcoins in Bitcoin's rally. See the levels each token must hold to extend the move.\nThe post Top 3 Altcoins Benefiting Most From Bitcoin&#039;s Latest Rally appeared first on BeInCrypto.",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Nvidia earnings risks and the peers with the most to lose",
-      "link": "https://www.investing.com/news/stock-market-news/nvidia-earnings-risks-and-the-peers-with-the-most-to-lose-93CH-4874092",
-      "pubDate": "2026-08-24T19:33:22.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Consumers Bancorp EVP mikes buys $3,200 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/consumers-bancorp-evp-mikes-buys-3200-in-stock-93CH-4874090",
-      "pubDate": "2026-08-24T19:31:05.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Chinese Yuan: Gradual appreciation bias with key levels against US Dollar – OCBC",
@@ -331,27 +352,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Canadian Dollar slides as Trump escalates trade war with Canada",
-      "link": "https://www.fxstreet.com/news/canadian-dollar-slides-as-trump-escalates-trade-war-with-canada-202608241403",
-      "pubDate": "2026-08-24T14:03:36.000Z",
-      "description": "USD/CAD extends its advance on Monday, trading around 1.3830 at the time of writing, up 0.52% on the day.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Euro: Rally vulnerable to reversal against US Dollar – Scotiabank",
-      "link": "https://www.fxstreet.com/news/euro-rally-vulnerable-to-reversal-against-us-dollar-scotiabank-202608241355",
-      "pubDate": "2026-08-24T13:55:57.000Z",
-      "description": "Scotiabank strategists Shaun Osborne and Eric Theoret highlight that the Euro (EUR) is softer against the Dollar (USD) after an almost 3% rally from late July, with price action turning defensive.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Canada: Tariffs reshape outlook – RBC",
-      "link": "https://www.fxstreet.com/news/canada-tariffs-reshape-outlook-rbc-202608241334",
-      "pubDate": "2026-08-24T13:34:51.000Z",
-      "description": "Royal Bank of Canada (RBC) analyzes new Section 338 U.S. tariffs on Canadian exports, noting a 50% rate on goods representing about 5% of Canada’s exports to the United States.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Bitcoin Braces for Warsh&#039;s Jackson Hole Debut: Will 2022 Repeat?",
       "link": "https://beincrypto.com/bitcoin-warsh-jackson-hole-debut-2022/",
       "pubDate": "2026-08-24T13:02:36.000Z",
@@ -427,20 +427,6 @@
       "pubDate": "2026-08-24T11:07:10.000Z",
       "description": "Gold (XAU/USD) remains firmly bid on Monday after last week’s rally sparked by the US Treasury’s buyback announcement. However, buyers appear hesitant to push prices much higher as traders await key risk events later this week.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Canadian Dollar Tumbles as Trade Rift Threatens Growth Outlook",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOU1hGeHlhMzRPakZlaEkxS2tvQk5UR2JiU3FYVDlEVEhSVFkzRHF6RVJHakZ2ZkJZVzNyOUN2aEd6N1dFajR4aEk4c09panowWnZqODM5eXd6dmx2Sk9xSExwNmdUSDdxS1hQVDZsMWlBa2FRWEcxVGJfb2g2Y1RmSldJSWllcVh5azZaQ2llVl9hZHBRQlZpaHl5VjFSZVNRWFJkVmNtcHBBU3ZIbHZ1YktzMA?oc=5",
-      "pubDate": "2026-08-24T10:57:33.000Z",
-      "description": "Canadian Dollar Tumbles as Trade Rift Threatens Growth Outlook&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
-      "title": "Gold Advances to Three-Month High as Debasement Trade Returns",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQc1hfWDMxY1lUVzBRZE0yUEp6M040Y0JkSWs1eFNQaV9xVG5seGJ0YU0tMWpkbnJBdXlpRmxyeG05eUFkYzBlWmZtaVowSXhzN29CM1c2ZzNrTVlqamtfUnBpMW05c05oRk5OZU9EWWlIVXZwLS1xYWFQYmJVSVdlTER3Z2ZBMEJNV0JSQkY1N3IxWFdXaWU1ZVFrc00xcVBMTXNSVEYwa0FVSng1SE00SA?oc=5",
-      "pubDate": "2026-08-24T10:49:06.000Z",
-      "description": "Gold Advances to Three-Month High as Debasement Trade Returns&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
     },
     {
       "title": "3 Trading Firms Still Short Bitcoin and Ethereum Despite Sharp Price Rally",
@@ -541,10 +527,24 @@
       "source": "Google News"
     },
     {
+      "title": "Gold Holds Near Three-Month High as Debasement Trade Returns",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQc1hfWDMxY1lUVzBRZE0yUEp6M040Y0JkSWs1eFNQaV9xVG5seGJ0YU0tMWpkbnJBdXlpRmxyeG05eUFkYzBlWmZtaVowSXhzN29CM1c2ZzNrTVlqamtfUnBpMW05c05oRk5OZU9EWWlIVXZwLS1xYWFQYmJVSVdlTER3Z2ZBMEJNV0JSQkY1N3IxWFdXaWU1ZVFrc00xcVBMTXNSVEYwa0FVSng1SE00SA?oc=5",
+      "pubDate": "2026-08-23T23:29:29.000Z",
+      "description": "Gold Holds Near Three-Month High as Debasement Trade Returns&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
       "title": "Taiwan Dollar’s August Rebound Is Looking Fragile, Analysts Say",
       "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOUUVoZHhKQVZyQjJrNmlfRWRlUlJwZVF1R2ZrUFgwOE94SkkzMW82VjRLSnF2bEE1TWI5TDZrQW1yMERvRlk0cnhBZUJwSnRwdzJfdWMwVFJESWF0WFFiVVUtRVZvSFB0T19HOU1wbUVOUG90YnlJb2tPUTBQM1Q2RnNyNU9QUVpXaWx1V1AtcUxERXA5NjhWdGtsNXAxdENMQkhqOU5LV1pfV2NGc09jc29ISQ?oc=5",
       "pubDate": "2026-08-23T23:00:00.000Z",
       "description": "Taiwan Dollar’s August Rebound Is Looking Fragile, Analysts Say&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "Who Wins the Central Bank Digital Currency Race? Not the EU",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOUi04cC1yYTd5bzhsRm1hUXlLQ3VsTFJHdDQ3QkJpd3p5ZkVYMjdwWEZtZ3h1M2NqNnc1b0xjVEp0cHJjdW1wZUtTeVRxMWlNS3YxaGJ5N1dLX1hxQURmRm5XMXpPc0d3c3ZCTmJBeUdOaTZUaDEtQ05sQ0xGREN1TTRuVmprSW95QzlLV2psSFByRWpqbVpOLTZvanJXektnbEtOVkVoQm1FYXp1WUgzcXB1SE5IMUoyLWJtVjJ3?oc=5",
+      "pubDate": "2026-08-23T18:00:02.000Z",
+      "description": "Who Wins the Central Bank Digital Currency Race? Not the EU&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
     },
     {
