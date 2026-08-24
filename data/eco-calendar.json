@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-24T16:18:27.974Z",
+  "timestamp": "2026-08-24T16:58:12.636Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -2418,7 +2418,7 @@
       "country": "AUD",
       "date": "2026-08-25T21:30:00-04:00",
       "impact": "High",
-      "forecast": "0.3%",
+      "forecast": "0.4%",
       "previous": "0.3%",
       "actual": ""
     },
