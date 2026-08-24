@@ -1,0 +1,94 @@
+{
+  "asOf": "2026-08-24T20:00:00-10:00",
+  "event": {
+    "ccy": "AUD",
+    "title": "Australia CPI — July 2026 (monthly, full)",
+    "date": "2026-08-26T11:30:00+10:00",
+    "consensus": {
+      "headlineYoY": "3.2%",
+      "priorHeadlineYoY": "3.8%",
+      "trimmedMeanYoY": "3.5%",
+      "priorTrimmedMeanYoY": "3.6%"
+    },
+    "note": "Headline YoY expected to fall sharply on a base effect (a 1.3% July-2025 print rolling out of the calc), not necessarily a genuine deceleration."
+  },
+  "bias": {
+    "direction": "bearish",
+    "confidence": "medium",
+    "horizon": "Immediate reaction (first 5–30 min)",
+    "summary": "Base-effect headline drop likely dominates the first reaction, per the last two prints — even the one where trimmed mean surprised hawkish."
+  },
+  "catalysts": [
+    { "factor": "RBA policy stance", "direction": "bullish", "weight": "high", "note": "Held 4.35% on 11 Aug (unanimous). Tone hawkish — inflation \"still too high\", trimmed mean elevated, seen above target until mid-2027." },
+    { "factor": "Fed / USD leg", "direction": "bullish", "weight": "high", "note": "Powell opened the door to a Sept cut at Jackson Hole — ~89% priced. Rate differential tightening in AUD's favour, independent of Tuesday's print." },
+    { "factor": "Headline base effect", "direction": "bearish", "weight": "high", "note": "YoY headline mechanically drops toward ~3.2% regardless of underlying momentum — risk the market trades the optics, not the substance." },
+    { "factor": "Labour market", "direction": "bearish", "weight": "medium", "note": "July jobs report already out: unemployment 4.5% (vs 4.4% exp.), employment -15.8k. Cooling faster than expected, raises CPI sensitivity." },
+    { "factor": "China / iron ore", "direction": "bearish", "weight": "low", "note": "NBS manufacturing PMI in contraction (49.2). Iron ore pinned ~US$95/t, port stockpiles near record highs. Structural drag, not a Tuesday catalyst." },
+    { "factor": "Positioning (COT)", "direction": "neutral", "weight": "medium", "note": "Net short and growing while price sits near 12-week highs — crowded short, squeeze risk if trimmed mean surprises hawkish and the market looks past headline." }
+  ],
+  "positioning": {
+    "source": "CFTC COT, weekly (non-commercial / speculative, AUD futures)",
+    "asOf": "2026-08-21",
+    "netContracts": -44200,
+    "priorNetContracts": -39200,
+    "note": "Shorts building into a price making fresh highs — the kind of divergence that can amplify a move if a surprise forces short-covering."
+  },
+  "marketIndicators": [
+    {
+      "name": "ASX RBA Rate Tracker",
+      "what": "30-Day Interbank Cash Rate Futures — the actual market-implied probability of RBA moves, the reference every trading desk uses instead of guessing.",
+      "reading": "Priced ~4% odds of a hike at the August 11 meeting (all four majors — CBA, NAB, ANZ, Westpac — called a hold). No live number for the September meeting captured this session.",
+      "howToApply": "Re-check this on asx.com.au/markets/trade-our-derivatives-market/futures-market/rba-rate-tracker right after the print — a jump in implied hike odds is the cleanest confirmation the market read the release as hawkish, independent of where spot AUD/USD is trading."
+    },
+    {
+      "name": "AU 3-Year Government Bond Yield",
+      "what": "The short end of the curve is the most direct read on RBA rate-path repricing — desks watch this alongside spot FX, not instead of it.",
+      "reading": "4.55% as of 24 Aug (-2bp on the session) — no major repricing yet heading into the print.",
+      "howToApply": "A yield spike after the release with AUD/USD lagging (or not following) is a tell that the rates market is repricing hawkish faster than FX — often a leading signal for where spot catches up."
+    },
+    {
+      "name": "AUD/USD options — risk reversals & implied vol",
+      "what": "Risk reversals show whether the options market is paying up for calls or puts (positioning skew); implied vol shows how big a move the market itself is pricing for the event.",
+      "reading": "Risk reversals have softened (more demand for puts) but not to an extreme bearish skew. Weekly implied vol was already turning higher into the print, consistent with the market expecting an above-average move.",
+      "howToApply": "Elevated implied vol going in means don't be surprised by an outsized reaction either way — it's the options market's own confirmation that this print carries more weight than an average monthly CPI."
+    }
+  ],
+  "reactionHistory": [
+    {
+      "label": "Jun 2026 CPI",
+      "headline": "3.8% vs 4.0% exp. (miss)",
+      "trimmedMean": "3.6% vs 3.7% exp. (miss)",
+      "alignment": "aligned",
+      "move": "−40 pips, one 5-min candle",
+      "read": "Headline and core surprised the same way — clean, immediate, strong reaction."
+    },
+    {
+      "label": "May 2026 CPI",
+      "headline": "softer than expected",
+      "trimmedMean": "3.6% vs 3.5% exp. (beat, hawkish)",
+      "alignment": "diverged",
+      "move": "−4 pips",
+      "read": "Core surprised hawkish but headline was soft — market still sold AUD. Even a genuine hawkish core surprise did not produce an immediate bullish move."
+    }
+  ],
+  "playbook": [
+    {
+      "scenario": "Headline ~3.2% & trimmed mean aligned soft (≤3.5%)",
+      "expected": "Clean, immediate move lower — pattern matches Jun 2026 (~30–50 pips in the first 5 min).",
+      "confidence": "high"
+    },
+    {
+      "scenario": "Headline ~3.2% & trimmed mean surprises hot (>3.5%)",
+      "expected": "First reaction likely muted or misleadingly bearish (headline optics dominate, per May 2026). Watch for a correction within the hour once the core reading is digested — crowded COT shorts raise the odds of a delayed squeeze.",
+      "confidence": "medium"
+    }
+  ],
+  "usCalendarSameDay": [
+    { "event": "S&P/Case-Shiller Home Price Index", "localTime": "03:00", "weight": "low" },
+    { "event": "Richmond Fed Manufacturing Index", "localTime": "04:00", "weight": "low" },
+    { "event": "New Home Sales", "localTime": "04:00", "weight": "low" },
+    { "event": "Consumer Confidence (Conference Board)", "localTime": "04:00", "weight": "medium" },
+    { "event": "Durable Goods Orders (Jul) — next day", "localTime": "next day 02:30", "weight": "high" }
+  ],
+  "disclaimer": "Confluence read for information only, built from public sources (ABS, RBA, CFTC, FXStreet, Reuters, TradingEconomics) and pattern-matching on the last two prints. Not financial advice, not a guaranteed outcome."
+}

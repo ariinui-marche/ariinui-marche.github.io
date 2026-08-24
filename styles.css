@@ -397,6 +397,197 @@ main {
 .news-title-pos { color: var(--green); }
 .news-title-neg { color: var(--red); }
 
+/* ── AUD Desk — institutional briefing panel ─────────────────────────────── */
+
+.audd-panel:empty { display: none; }
+
+.audd-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
+.audd-ticker {
+  font-family: 'SF Mono', 'Cascadia Code', Consolas, monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--bg);
+  background: var(--accent);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.audd-event-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+.audd-event-time {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-bottom: 14px;
+}
+
+.audd-bias {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border: 1px solid;
+}
+.audd-bias-bearish { background: rgba(239,68,68,0.08); border-color: rgba(239,68,68,0.4); }
+.audd-bias-bullish { background: rgba(34,197,94,0.08); border-color: rgba(34,197,94,0.4); }
+.audd-bias-neutral { background: rgba(107,114,128,0.08); border-color: rgba(107,114,128,0.4); }
+.audd-bias-label {
+  font-family: 'SF Mono', 'Cascadia Code', Consolas, monospace;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.audd-bias-bearish .audd-bias-label { color: var(--red); }
+.audd-bias-bullish .audd-bias-label { color: var(--green); }
+.audd-bias-neutral .audd-bias-label { color: var(--gray); }
+.audd-bias-meta { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; }
+.audd-bias-summary { font-size: 13px; color: var(--text); margin-top: 4px; line-height: 1.4; }
+
+.audd-consensus {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.audd-stat {
+  background: #0e1219;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.audd-stat-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-dim); }
+.audd-stat-value { font-family: 'SF Mono', 'Cascadia Code', Consolas, monospace; font-size: 20px; font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; }
+.audd-stat-prior { font-size: 11px; color: var(--text-dim); }
+
+.audd-note {
+  font-size: 12px;
+  color: var(--text-dim);
+  font-style: italic;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.audd-section-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+  margin: 18px 0 10px 0;
+}
+
+.audd-scorecard { display: flex; flex-direction: column; gap: 6px; }
+.audd-score-row {
+  display: grid;
+  grid-template-columns: 20px minmax(120px, auto) 60px 1fr;
+  align-items: start;
+  gap: 10px;
+  padding: 8px 10px;
+  background: #0e1219;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 12px;
+}
+.audd-score-dir { font-weight: 700; font-size: 13px; }
+.audd-score-factor { font-weight: 600; color: var(--text); }
+.audd-score-note { color: var(--text-dim); line-height: 1.4; grid-column: 1 / -1; }
+
+.audd-dir-bullish { color: var(--green); }
+.audd-dir-bearish { color: var(--red); }
+.audd-dir-neutral { color: var(--gray); }
+
+.audd-positioning {
+  background: #0e1219;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.audd-pos-value { font-family: 'SF Mono', 'Cascadia Code', Consolas, monospace; font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.audd-pos-meta { font-size: 11px; color: var(--text-dim); }
+.audd-pos-note { font-size: 12px; color: var(--text); margin-top: 4px; line-height: 1.4; }
+
+.audd-indicators { display: flex; flex-direction: column; gap: 8px; }
+.audd-indicator {
+  background: #0e1219;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+.audd-indicator-name { font-size: 13px; font-weight: 700; color: var(--accent); margin-bottom: 3px; }
+.audd-indicator-what { font-size: 12px; color: var(--text-dim); margin-bottom: 6px; line-height: 1.4; }
+.audd-indicator-reading, .audd-indicator-apply { font-size: 12px; color: var(--text); line-height: 1.4; margin-bottom: 3px; }
+.audd-indicator-reading b, .audd-indicator-apply b { color: var(--text-dim); font-weight: 600; }
+
+.audd-history { display: flex; flex-direction: column; gap: 4px; }
+.audd-history-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 1fr 80px 1fr;
+  gap: 8px;
+  font-size: 12px;
+  padding: 6px 10px;
+  background: #0e1219;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.audd-history-head { color: var(--text-dim); font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; background: transparent; border: none; padding: 0 10px; }
+.audd-history-read { font-size: 11px; color: var(--text-dim); font-style: italic; padding: 0 10px 6px 10px; line-height: 1.4; }
+
+.audd-playbook { display: flex; flex-direction: column; gap: 8px; }
+.audd-play-row {
+  background: #0e1219;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+.audd-play-scenario { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.audd-play-confidence { font-size: 11px; font-weight: 400; color: var(--text-dim); text-transform: uppercase; }
+.audd-play-expected { font-size: 12px; color: var(--text-dim); line-height: 1.4; }
+
+.audd-uscal { display: flex; flex-direction: column; gap: 6px; }
+.audd-uscal-item {
+  font-size: 12px;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.audd-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-size: 11px;
+  color: var(--text-dim);
+}
+.audd-disclaimer { font-style: italic; line-height: 1.4; }
+
+@media (max-width: 480px) {
+  .audd-score-row { grid-template-columns: 18px 1fr 56px; }
+  .audd-score-note { padding-top: 2px; }
+  .audd-history-row { grid-template-columns: 70px 1fr 1fr; font-size: 11px; }
+  .audd-history-row span:nth-child(4), .audd-history-row span:nth-child(5) { display: none; }
+}
+
 footer {
   text-align: center;
   padding: 20px;
