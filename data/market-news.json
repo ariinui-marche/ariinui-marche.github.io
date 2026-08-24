@@ -1,12 +1,19 @@
 {
-  "timestamp": "2026-08-23T23:49:06.588Z",
+  "timestamp": "2026-08-24T00:00:28.293Z",
   "items": [
     {
       "title": "2026-08-24 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-23T23:46:01.000Z",
+      "pubDate": "2026-08-24T00:00:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "Statistics on Securities Financing Transactions in Japan",
+      "link": "http://www.boj.or.jp/en/statistics/bis/repo/index.htm",
+      "pubDate": "2026-08-23T23:50:00.000Z",
+      "description": "",
+      "source": "Bank of Japan"
     },
     {
       "title": "Earnings call transcript: Lindsay Australia posts record H2 2026 results",
@@ -593,13 +600,6 @@
       "title": "Results of the Fifth Market Functioning Survey concerning Climate Change",
       "link": "http://www.boj.or.jp/en/paym/m-climate/mcli260817a.htm",
       "pubDate": "2026-08-17T07:00:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
-    },
-    {
-      "title": "(Research Paper) What Prevents Productivity Gains from Translating into Wages: Lessons from Japan's Deflationary Period",
-      "link": "http://www.boj.or.jp/en/research/wps_rev/wps_2026/wp26e12.htm",
-      "pubDate": "2026-08-14T07:00:00.000Z",
       "description": "",
       "source": "Bank of Japan"
     },
