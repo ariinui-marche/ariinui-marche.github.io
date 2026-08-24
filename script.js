@@ -139,10 +139,10 @@ function renderAudDesk(data) {
 
   labelEl.innerHTML = `
     <span class="audd-ticker">${ev.ccy || ''}</span>
-    <span class="audd-toggle-title">${ev.title || ''}</span>
     <span class="audd-bias-pill audd-bias-${bias.direction || 'neutral'}">${(bias.direction || 'neutral').toUpperCase()}</span>`;
 
   bodyEl.innerHTML = `
+    ${ev.title ? `<div class="audd-toggle-title">${ev.title}</div>` : ''}
     ${evDateLabel ? `<div class="audd-event-time">${evDateLabel} (your local time)</div>` : ''}
 
     <div class="audd-bias audd-bias-${bias.direction || 'neutral'}">
