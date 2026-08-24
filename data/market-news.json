@@ -1,12 +1,103 @@
 {
-  "timestamp": "2026-08-24T03:37:18.066Z",
+  "timestamp": "2026-08-24T04:25:45.351Z",
   "items": [
     {
       "title": "2026-08-24 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-24T03:31:00.000Z",
+      "pubDate": "2026-08-24T04:17:01.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "Indian Rupee strengthens due to strong capital inflows, RBI support",
+      "link": "https://www.fxstreet.com/news/indian-rupee-strengthens-due-to-strong-capital-inflows-rbi-support-202608240412",
+      "pubDate": "2026-08-24T04:12:40.000Z",
+      "description": "The Indian Rupee (INR) inches higher against the US Dollar (USD) for the second consecutive day on Monday, positioning itself for a quiet start to the week.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "High oil prices, subsidies and affordable models rev up European EV sales",
+      "link": "https://www.investing.com/news/stock-market-news/high-oil-prices-subsidies-and-affordable-models-rev-up-european-ev-sales-4872605",
+      "pubDate": "2026-08-24T04:12:26.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Nvidia in talks to invest in Perplexity at $30B valuation- The Information",
+      "link": "https://www.investing.com/news/stock-market-news/nvidia-in-talks-to-invest-in-perplexity-at-30b-valuation-the-information-93CH-4872606",
+      "pubDate": "2026-08-24T04:08:18.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Samsung Electronics shares skid as record shareholder returns disappoint",
+      "link": "https://www.investing.com/news/economy-news/samsung-electronics-shares-fall-after-shareholder-return-announcement-4872511",
+      "pubDate": "2026-08-24T04:06:40.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Gift Nifty 50 hits major resistance cluster: Live levels",
+      "link": "https://www.investing.com/news/stock-market-news/gift-nifty-50-hits-major-resistance-cluster-live-levels-93CH-4872604",
+      "pubDate": "2026-08-24T04:04:28.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Samsung shares slide as record $80 bln shareholder return plan underwhelms",
+      "link": "https://www.investing.com/news/stock-market-news/samsung-shares-slide-as-record-80-bln-shareholder-return-plan-underwhelms-4872603",
+      "pubDate": "2026-08-24T04:02:21.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Scandal-hit KPMG Australia to cut nearly 400 jobs, warns of difficult market",
+      "link": "https://www.investing.com/news/stock-market-news/kpmg-australia-plans-to-cut-5-of-jobs-warns-soft-conditions-to-persist-4872535",
+      "pubDate": "2026-08-24T04:01:42.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Oil falls as US prepares to unveil new Iran sanctions",
+      "link": "https://www.investing.com/news/commodities-news/oil-falls-1-ahead-of-us-announcement-to-impose-further-sanctions-on-iran-4872489",
+      "pubDate": "2026-08-24T03:54:58.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Nvidia discusses Perplexity investment at $30 billion-plus valuation, The Information reports",
+      "link": "https://www.investing.com/news/stock-market-news/nvidia-discusses-perplexity-investment-at-30-billionplus-valuation-the-information-reports-4872594",
+      "pubDate": "2026-08-24T03:54:38.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Shein to pay up to $3.5 billion to select pre-IPO investors around Hong Kong listing",
+      "link": "https://www.investing.com/news/stock-market-news/shein-to-pay-up-to-35-billion-to-select-preipo-investors-around-hong-kong-listing-4872600",
+      "pubDate": "2026-08-24T03:48:52.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Why is Data3 stock surging today?",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-data3-stock-surging-today-93CH-4872597",
+      "pubDate": "2026-08-24T03:45:48.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "$92 Billion Nvidia Earnings Could Make or Break the AI Trade",
+      "link": "https://beincrypto.com/nvidia-earnings-92-billion-ai-trade/",
+      "pubDate": "2026-08-24T03:40:00.000Z",
+      "description": "Nvidia reports earnings Wednesday with $92 billion in sales on the line, and Wall Street is split on whether the AI trade can hold.\nThe post $92 Billion Nvidia Earnings Could Make or Break the AI Trade appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "India's Federal Bank latest lender to tap dollar debt market via GIFT City, bankers say",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPV3hIZjNUSnJZYnlNYmdoRDBUWXZpYkJNNWpLRVNFOWg4QzJlZHlzWm1wTEREaUx1cE5SR2l6Wk9LLTJmMVdEaExfLXlQM3hfYm92amFzem5lQWVEQ0UxNGpSWnNPaDB3ZnBrUG1yVUpoSmltZjlsZzcwSUVJczg0U2QwMl92QUZVVEN2aGswRzdNSGpJOFJvaFJZSm11a3ZWLWxDQXkxYnJqcVlBc2JxSm9GVTF1a0x2S1IzTXdRdmtiMU83?oc=5",
+      "pubDate": "2026-08-24T03:28:00.000Z",
+      "description": "India's Federal Bank latest lender to tap dollar debt market via GIFT City, bankers say&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "Liquid Death CEO Dodges IPO Question Despite Goldman Sachs Ties",
@@ -14,41 +105,6 @@
       "pubDate": "2026-08-24T03:17:09.000Z",
       "description": "Liquid Death's Mike Cessario won't confirm an IPO timeline, even after hiring Goldman Sachs and a Pepsi-veteran CFO.\nThe post Liquid Death CEO Dodges IPO Question Despite Goldman Sachs Ties appeared first on BeInCrypto.",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Earnings call transcript: Mitchell Services posts FY2026 profit surge, shares rise",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-mitchell-services-posts-fy2026-profit-surge-shares-rise-93CH-4872588",
-      "pubDate": "2026-08-24T03:01:39.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Data3 shares surge to record high on strong AI-fueled earnings",
-      "link": "https://www.investing.com/news/stock-market-news/data3-shares-surge-to-record-high-on-strong-aifueled-earnings-93CH-4872587",
-      "pubDate": "2026-08-24T02:59:54.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "EVT FY26 slides: profit surges 52%, $800m asset sale planned",
-      "link": "https://www.investing.com/news/company-news/evt-fy26-slides-profit-surges-52-800m-asset-sale-planned-93CH-4872586",
-      "pubDate": "2026-08-24T02:59:02.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "EVT FY26 slides: profit jumps 52%, $800M divestment planned",
-      "link": "https://www.investing.com/news/company-news/evt-fy26-slides-profit-jumps-52-800m-divestment-planned-93CH-4872585",
-      "pubDate": "2026-08-24T02:57:33.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Shein’s pursuit of an IPO: From New York to London to Hong Kong",
-      "link": "https://www.investing.com/news/stock-market-news/sheins-pursuit-of-an-ipo-from-new-york-to-london-to-hong-kong-4872563",
-      "pubDate": "2026-08-24T02:54:35.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Silver Price Forecast: XAG/USD holds bullish below $70.00/two-month high set on Friday",
@@ -65,13 +121,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Shein launches up to $1.8 bln Hong Kong IPO after years of scrutiny",
-      "link": "https://www.investing.com/news/stock-market-news/shein-launches-up-to-18-bln-hong-kong-ipo-after-years-of-scrutiny-4872584",
-      "pubDate": "2026-08-24T02:43:21.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Iran&#8217;s Latest Hormuz Threat Meets a Bond Market Already Near Breaking Point",
       "link": "https://beincrypto.com/iran-hormuz-fee-bond-market-yields/",
       "pubDate": "2026-08-24T02:41:47.000Z",
@@ -86,34 +135,6 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Earnings call transcript: EVT lifts FY2026 profit, shares jump on growth outlook",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-evt-lifts-fy2026-profit-shares-jump-on-growth-outlook-93CH-4872583",
-      "pubDate": "2026-08-24T02:33:54.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Why is Ampol stock surging today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-ampol-stock-surging-today-93CH-4872582",
-      "pubDate": "2026-08-24T02:32:32.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Why is Alibaba stock sliding today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-alibaba-stock-sliding-today-93CH-4872581",
-      "pubDate": "2026-08-24T02:32:17.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "California expected to seek TV channel sales from Paramount-Warner, WSJ reports",
-      "link": "https://www.investing.com/news/stock-market-news/california-expected-to-seek-tv-channel-sales-from-paramountwarner-wsj-reports-4872493",
-      "pubDate": "2026-08-24T02:30:31.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Japanese Yen advances on BoJ rate hike bets, subdued US Dollar",
       "link": "https://www.fxstreet.com/news/japanese-yen-advances-on-boj-rate-hike-bets-subdued-us-dollar-202608240228",
       "pubDate": "2026-08-24T02:28:14.000Z",
@@ -126,6 +147,13 @@
       "pubDate": "2026-08-24T02:13:56.000Z",
       "description": "Brent crude fell 1.87% to $92.63 on Monday, giving back part of last week&#8217;s rally as traders assessed Washington&#8217;s escalating pressure campaign on Iran. West Texas Intermediate slid 1.97% to $85.35. The selling ran across the en",
       "source": "BeInCrypto"
+    },
+    {
+      "title": "Gold Holds Near Three-Month High as Debasement Trade Returns - Bloomberg",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQc1hfWDMxY1lUVzBRZE0yUEp6M040Y0JkSWs1eFNQaV9xVG5seGJ0YU0tMWpkbnJBdXlpRmxyeG05eUFkYzBlWmZtaVowSXhzN29CM1c2ZzNrTVlqamtfUnBpMW05c05oRk5OZU9EWWlIVXZwLS1xYWFQYmJVSVdlTER3Z2ZBMEJNV0JSQkY1N3IxWFdXaWU1ZVFrc00xcVBMTXNSVEYwa0FVSng1SE00SA?oc=5",
+      "pubDate": "2026-08-24T02:08:00.000Z",
+      "description": "Gold Holds Near Three-Month High as Debasement Trade Returns&nbsp;&nbsp;Bloomberg",
+      "source": "Google News"
     },
     {
       "title": "Peter Thiel&#8217;s Fund Shows the Next Big AI Bet Is Power, Not Chips",
@@ -163,10 +191,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "Hedge Funds Ramp Up Dollar Shorts Ahead of Bessent’s Fiscal Plan",
+      "title": "Hedge Funds Ramp Up Dollar Shorts Ahead of Bessent’s Fiscal Plan - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNd2FxZEN4RV9rM3N3N3Qtd2p0OTNMaGM2VGY0cHZ1V08zUVN1dkt0bFd5c3dNWHZjak9mWFZsNkZwU2RFRUNkRWNhMmp3OWRvZ2JMU3R2cEpmeFQyUzIzbENkMnliM01McWczTnhyTWFlang2cDFyRVUwbTAzdTBwd2VBazdDYnNCbG1lTFd4UUVsQW9EN25yaFVUZXVSUUprdWdsMjhYUEtOdWo4Wnp5U0ZGN1oyQQ?oc=5",
       "pubDate": "2026-08-24T01:40:00.000Z",
-      "description": "Hedge Funds Ramp Up Dollar Shorts Ahead of Bessent’s Fiscal Plan&nbsp;&nbsp;Bloomberg.com",
+      "description": "Hedge Funds Ramp Up Dollar Shorts Ahead of Bessent’s Fiscal Plan&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
     },
     {
@@ -233,10 +261,10 @@
       "source": "Bank of Japan"
     },
     {
-      "title": "BOJ Set to Offer Clues as Markets Bet Heavily on September Hike",
+      "title": "BOJ Set to Offer Clues as Markets Bet Heavily on September Hike - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQVlFSWThqbU5IQk9wZTBFS1lKamF2SUpjQ2thOGJOSXBkbzRjRVROb21kV0ptSmlLbnVQeTVuTVRDdWgtN2J3WmR6RF9YeDdWQXRRUkVmcEZiT2VKV3JfQUdTLTRUQnFXSXZjcXlzY2tkdlUxbjNaa1Etd3ZvdFZiSWIzbkRYRks1bDJKSWJ6TGY3aWpSbDZ5TlVQMFVkc1JoZ3ZFWkk0dGU3bGQtTmhuLWx2UFY?oc=5",
       "pubDate": "2026-08-23T23:50:00.000Z",
-      "description": "BOJ Set to Offer Clues as Markets Bet Heavily on September Hike&nbsp;&nbsp;Bloomberg.com",
+      "description": "BOJ Set to Offer Clues as Markets Bet Heavily on September Hike&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
     },
     {
@@ -245,13 +273,6 @@
       "pubDate": "2026-08-23T23:39:41.000Z",
       "description": "The NZD/USD pair declines to around 0.5970 during the early Asian session on Monday. The New Zealand Dollar (NZD) weakens against the US Dollar (USD) following New Zealand's downbeat economic data.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Gold Holds Near Three-Month High as Debasement Trade Returns",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQc1hfWDMxY1lUVzBRZE0yUEp6M040Y0JkSWs1eFNQaV9xVG5seGJ0YU0tMWpkbnJBdXlpRmxyeG05eUFkYzBlWmZtaVowSXhzN29CM1c2ZzNrTVlqamtfUnBpMW05c05oRk5OZU9EWWlIVXZwLS1xYWFQYmJVSVdlTER3Z2ZBMEJNV0JSQkY1N3IxWFdXaWU1ZVFrc00xcVBMTXNSVEYwa0FVSng1SE00SA?oc=5",
-      "pubDate": "2026-08-23T23:29:29.000Z",
-      "description": "Gold Holds Near Three-Month High as Debasement Trade Returns&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
     },
     {
       "title": "Iran’s Araghchi says new sanctions threatened by 'desperate' US will fail",
@@ -303,23 +324,16 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Who Wins the Central Bank Digital Currency Race? Not the EU",
+      "title": "Who Wins the Central Bank Digital Currency Race? Not the EU - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOUi04cC1yYTd5bzhsRm1hUXlLQ3VsTFJHdDQ3QkJpd3p5ZkVYMjdwWEZtZ3h1M2NqNnc1b0xjVEp0cHJjdW1wZUtTeVRxMWlNS3YxaGJ5N1dLX1hxQURmRm5XMXpPc0d3c3ZCTmJBeUdOaTZUaDEtQ05sQ0xGREN1TTRuVmprSW95QzlLV2psSFByRWpqbVpOLTZvanJXektnbEtOVkVoQm1FYXp1WUgzcXB1SE5IMUoyLWJtVjJ3?oc=5",
       "pubDate": "2026-08-23T18:00:02.000Z",
-      "description": "Who Wins the Central Bank Digital Currency Race? Not the EU&nbsp;&nbsp;Bloomberg.com",
+      "description": "Who Wins the Central Bank Digital Currency Race? Not the EU&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
-    },
-    {
-      "title": "Donald Trump Sold MicroStrategy and Bought Two Other Crypto Stocks",
-      "link": "https://beincrypto.com/trump-june-trades-crypto-disclosure-filing/",
-      "pubDate": "2026-08-23T16:02:52.000Z",
-      "description": "President Donald Trump&#8217;s June financial disclosure lists more than 1,000 securities transactions.&#160; Only 7 involved crypto companies, and most of those were sales, according to a financial disclosure published Saturday. The Office",
-      "source": "BeInCrypto"
     },
     {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-23T15:14:27.000Z",
+      "pubDate": "2026-08-23T15:13:13.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
     },
@@ -338,13 +352,6 @@
       "source": "Reuters"
     },
     {
-      "title": "The WSJ Dollar Index Falls 0.74% This Week to 95.33",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNWQyV3dLaGl2S0ttdXJoRFhuaXJidWdzckVKb0RuRnVHdlFGZzZSNGxzRTB0OTNZSnFvRUVxRXpuUGVNWkwwNzN2ZGJReS1rUTVxQXpjN0c0eWxnZExmdHMzdGlQcGtYaE1OaDRVM204a2kxalNrYXlUR3J3RW9iUnRTQWltMUluamJVMm93aERENzJO?oc=5",
-      "pubDate": "2026-08-22T17:18:09.000Z",
-      "description": "The WSJ Dollar Index Falls 0.74% This Week to 95.33&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
       "title": "Tamberi backs up European gold with Diamond League win",
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPWTF2aEFWSWp0X1hlaUc3V24wU1VTUndqa0I2V1lKQ3hlcFhIQ2JZcERtVTRZdGpnVTdaWmxfWS1jYWZuS012cmhoOFFHcGFSTTRqUGM0TFlkSUV2akx0ck9aOU9ibUpMVVpINGt2UFZlWFljQzZWb29NSUJKaTlGOUFoN3l3QXRLMW1yUzAzRDB6ZmJ1NGJER1ZfSHFfdw?oc=5",
       "pubDate": "2026-08-22T16:08:30.000Z",
@@ -352,10 +359,10 @@
       "source": "Reuters"
     },
     {
-      "title": "India’s Central Bank Says Forex Deposit Inflows at $65.4 Billion",
+      "title": "India’s Central Bank Says Forex Deposit Inflows at $65.4 Billion - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPLXJuUGhZamM5YmE0aVRteEhpVWQ5WUVNd3BoVFhWMURiMmJLWkx1MnAtT2N3cV9YLVZtUzZqUmI0YW1wdXhqOS1XSTE0RFV5SU16eEF6ZFFod0p0TnNvRFZYQWNrYWJ2YkpTNExSTVp2aHJGbk1sTGNZUVgtTWhwS2pxQWpkNXNXZ1dKUTR5UWFWM3NkTGRBeFc5TmdCaktJTmw2WkVvRlNPTF9faUVBQ0wyYzY?oc=5",
       "pubDate": "2026-08-22T09:58:03.000Z",
-      "description": "India’s Central Bank Says Forex Deposit Inflows at $65.4 Billion&nbsp;&nbsp;Bloomberg.com",
+      "description": "India’s Central Bank Says Forex Deposit Inflows at $65.4 Billion&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
     },
     {
@@ -387,6 +394,13 @@
       "source": "FXStreet"
     },
     {
+      "title": "The WSJ Dollar Index Falls 0.74% This Week to 95.33",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQNWQyV3dLaGl2S0ttdXJoRFhuaXJidWdzckVKb0RuRnVHdlFGZzZSNGxzRTB0OTNZSnFvRUVxRXpuUGVNWkwwNzN2ZGJReS1rUTVxQXpjN0c0eWxnZExmdHMzdGlQcGtYaE1OaDRVM204a2kxalNrYXlUR3J3RW9iUnRTQWltMUluamJVMm93aERENzJO?oc=5",
+      "pubDate": "2026-08-21T21:57:00.000Z",
+      "description": "The WSJ Dollar Index Falls 0.74% This Week to 95.33&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
       "title": "South Korean Won: Cautious tightening path expected from BoK – DBS",
       "link": "https://www.fxstreet.com/news/south-korean-won-cautious-tightening-path-expected-from-bok-dbs-202608212058",
       "pubDate": "2026-08-21T20:58:00.000Z",
@@ -408,10 +422,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "Bessent’s Bond Maneuvers Giving Global Debasement Trade New Life",
+      "title": "Bessent’s Bond Maneuvers Giving Global Debasement Trade New Life - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOT0Z0Y3FxdWRIWFFiWU5IbjBKbldJa1c1SmhsZVdXSXV4bXhFR0puZkFCYnpOOWhPMW5jRlNxVTNFZjVKdy1VeWxxZkFTNkNPMG5kUjRrVklJcEJIck14a1NlMHBkbDBRdDB1cXJhOFZKZ3gwZkp6UkxwdTl3RENnU24tNWtBNGpjMHVTQ3pyZUt1d2NTTjFmM1dDMEh3M2FqWlpIYUlwMGVmTHYzY1VZVHJXT0s1dw?oc=5",
       "pubDate": "2026-08-21T20:14:06.000Z",
-      "description": "Bessent’s Bond Maneuvers Giving Global Debasement Trade New Life&nbsp;&nbsp;Bloomberg.com",
+      "description": "Bessent’s Bond Maneuvers Giving Global Debasement Trade New Life&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
     },
     {
@@ -471,17 +485,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "Higher yields stop paying the Dollar Index",
-      "link": "https://www.fxstreet.com/news/higher-yields-stop-paying-the-dollar-index-202608211733",
-      "pubDate": "2026-08-21T17:33:59.000Z",
-      "description": "The Dollar Index trades just beneath 99.00 and unchanged on the session, with the entire day fitting inside 35 pips between the 98.50 area and a high that stopped a shade short of the handle.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "US ‘Playing With Fire’ as Dollar Risks Yen-Style Debasement",
+      "title": "US ‘Playing With Fire’ as Dollar Risks Yen-Style Debasement - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQQ1BSNWF1YXZERWRmbjg2aUhQeWdoVk15RkxiSGFVaDZldG9Tc29FYUNUR1RxSEFpQ0RrdUd1ZXVnY3ZkUVVCR1hUUFV3blRQYVN2RkRnakkzSk95NVdkNms0TVl1Z2lOaldDaThpdVlRTHAzX1h2UHpGZGxRLUNfWGs4MkJMQXpZTEx6dVlXRlNEdHBVeDljV1NYSURMakpoOFp0cEdmWEZ1akVYc1RuQ3A4RQ?oc=5",
       "pubDate": "2026-08-21T15:53:10.000Z",
-      "description": "US ‘Playing With Fire’ as Dollar Risks Yen-Style Debasement&nbsp;&nbsp;Bloomberg.com",
+      "description": "US ‘Playing With Fire’ as Dollar Risks Yen-Style Debasement&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
     },
     {
@@ -492,10 +499,10 @@
       "source": "Google News"
     },
     {
-      "title": "South African Rand Gains Below 16 Per Dollar, Cuts War Loss",
+      "title": "South African Rand Gains Below 16 Per Dollar, Cuts War Loss - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNU2hiQmFac2RDUXZWb2JrQXZJSFFpa2FtWjExUzZ5Vkw2cTlsamxubXFMZ3NGLUJXbjBxODF6ZUtsSEh4bTR5Vk5vQWtxZEZEZHo3VGpoNGp2WEdKTnJJWmxNTHktOUxNSTJnOGZQY2xLWWk1WGJ2RklCTUNEMEY3Wl9OQThzczBscVZEM3l3azlUdXVEMUlDTkJIM0xYU252T0NjNUxGekVwaDJGMzczNjFJX3o?oc=5",
       "pubDate": "2026-08-21T12:50:19.000Z",
-      "description": "South African Rand Gains Below 16 Per Dollar, Cuts War Loss&nbsp;&nbsp;Bloomberg.com",
+      "description": "South African Rand Gains Below 16 Per Dollar, Cuts War Loss&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
     },
     {
@@ -538,13 +545,6 @@
       "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPTFVsQ3hRTFEtd2hhV2J3UTI0c1Z2Ml83WkRNbGFBaTR4ZzA2eGV3SFpsZmxpVVR4LTVBLWMweEpXZ2JKZnV5Zkxya2lvekRrb3VXaGVuM2dlS3hPWnRWX3daTVhOTDJ2eHJacDJva2owbUtPc25NcDVqaXBjazMxcmNmdVFvMklYR3loWVdLQ19Fd9IBlwFBVV95cUxQN1NKcXg4ckxXVV83Z2ljdDlLZXpYbEJhamZJV2JyeGhmdlUxSXQzUVAwOURzRjJjVHExSmJ5SzZob1RVaFMydno0d0pXbDkwMHBVRlhSWE9UbGVpWWlPR2Z1anZCRWJpTXhjNG1hQ21LY29oRlhmOXFoRk1rcUgyRjc0Ti01dVZFQ1p1US1BUVdMeDJPeWk4?oc=5",
       "pubDate": "2026-08-21T00:00:00.000Z",
       "description": "Japan's historic yen intervention has ‘turbo-charged’ the carry trade&nbsp;&nbsp;CNBC",
-      "source": "Google News"
-    },
-    {
-      "title": "Emerging FX Gains as ‘Bessent Put’ Burnishes Carry Trade Appeal",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPdjN4TGQxYUJIZndFb3VFWU5EbnZXVzF4cFplYmVfTzZKVjFfZEJ5R3VXbUVpdExNUy1wU3pHQVdxc0ZRaFVqUS1yY3F4Wk4wc1l4Y2NkTkdnUFcxaUxfQjF2RjVFUlhpMFFSVV9ITWhCejJLMWctR0xYdVEzVUNlblZCZVphTnlFZmVxYlNSdkh5S2dzMFRsd1c5MmZEQVJSNzVUMURnN0VfMU5wZ19PZDRn?oc=5",
-      "pubDate": "2026-08-20T20:49:03.000Z",
-      "description": "Emerging FX Gains as ‘Bessent Put’ Burnishes Carry Trade Appeal&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
     },
     {
