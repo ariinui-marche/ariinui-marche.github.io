@@ -1,12 +1,82 @@
 {
-  "timestamp": "2026-08-25T20:49:59.667Z",
+  "timestamp": "2026-08-25T21:12:20.896Z",
   "items": [
     {
       "title": "2026-08-25 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-25T20:47:01.000Z",
+      "pubDate": "2026-08-25T21:06:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "Strattec earnings beat by $0.94, revenue topped estimates",
+      "link": "https://www.investing.com/news/earnings/strattec-earnings-beat-by-094-revenue-topped-estimates-4875956",
+      "pubDate": "2026-08-25T20:55:20.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "New Zealand Dollar climbs to fresh highs amid timid US Dollar",
+      "link": "https://www.fxstreet.com/news/new-zealand-dollar-climbs-to-fresh-highs-amid-timid-us-dollar-202608252054",
+      "pubDate": "2026-08-25T20:54:20.000Z",
+      "description": "NZD/USD climbed to around 0.5980 Tuesday, near its highest level since June 1 as a softer US Dollar (USD) and firm Reserve Bank of New Zealand (RBNZ) rate-hike expectations powered the Kiwi higher.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "After-Hours Movers: INTU, SMTC, SYRE, ZM, NCNO",
+      "link": "https://www.investing.com/news/stock-market-news/afterhours-movers-intu-smtc-syre-zm-ncno-432SI-4875946",
+      "pubDate": "2026-08-25T20:53:02.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Biohaven, Yale win $4M judgment in trade secret case",
+      "link": "https://www.investing.com/news/company-news/biohaven-yale-win-4m-judgment-in-trade-secret-case-93CH-4875952",
+      "pubDate": "2026-08-25T20:48:29.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Renasant names Catherine Mealor as new CFO, effective Jan. 1",
+      "link": "https://www.investing.com/news/company-news/renasant-names-catherine-mealor-as-new-cfo-effective-jan-1-93CH-4875953",
+      "pubDate": "2026-08-25T20:48:29.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Ncino earnings missed by $0.22, revenue topped estimates",
+      "link": "https://www.investing.com/news/earnings/ncino-earnings-missed-by-022-revenue-topped-estimates-4875950",
+      "pubDate": "2026-08-25T20:46:43.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Public policy holding director Keenan Nealean sells $22,232 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/public-policy-holding-director-keenan-nealean-sells-22232-in-stock-93CH-4875948",
+      "pubDate": "2026-08-25T20:45:54.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Zoom delivers quarterly results beat, raises full year profit and revenue guidance",
+      "link": "https://www.investing.com/news/earnings/zoom-delivers-quarterly-results-beat-raises-full-year-profit-and-revenue-guidance-4875877",
+      "pubDate": "2026-08-25T20:44:37.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "CBRE Global Real Estate Income Fund approves 1-for-3 reverse split",
+      "link": "https://www.investing.com/news/company-news/cbre-global-real-estate-income-fund-approves-1for3-reverse-split-93CH-4875943",
+      "pubDate": "2026-08-25T20:40:42.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Exelon announces executive changes, CFO Jones to new role",
+      "link": "https://www.investing.com/news/company-news/exelon-announces-executive-changes-cfo-jones-to-new-role-93CH-4875942",
+      "pubDate": "2026-08-25T20:40:35.000Z",
+      "description": "",
+      "source": "Investing.com"
     },
     {
       "title": "Singapore Dollar: Range-bound consolidation outlook against US Dollar – Commerzbank",
@@ -16,72 +86,9 @@
       "source": "FXStreet"
     },
     {
-      "title": "UK inflation expectations rise in August after recent falls, Citi/YouGov survey shows",
-      "link": "https://www.investing.com/news/economic-indicators/uk-inflation-expectations-rise-in-august-after-recent-falls-citiyougov-survey-shows-4875938",
-      "pubDate": "2026-08-25T20:36:34.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Par Pacific to receive $146 million from Laramie Energy asset sale",
-      "link": "https://www.investing.com/news/company-news/par-pacific-to-receive-146-million-from-laramie-energy-asset-sale-93CH-4875937",
-      "pubDate": "2026-08-25T20:36:27.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "nCino plugnes 8% as revenue outlook disappoints despite Q2 beat",
-      "link": "https://www.investing.com/news/earnings/ncino-plugnes-8-as-revenue-outlook-disappoints-despite-q2-beat-93CH-4875935",
-      "pubDate": "2026-08-25T20:34:18.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Electromed earnings beat by $0.08, revenue fell short of estimates",
-      "link": "https://www.investing.com/news/earnings/electromed-earnings-beat-by-008-revenue-fell-short-of-estimates-4875931",
-      "pubDate": "2026-08-25T20:32:03.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Why is Zoom Video Communications stock sliding today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-zoom-video-communications-stock-sliding-today-93CH-4875932",
-      "pubDate": "2026-08-25T20:32:03.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "IMF’s Georgieva says global economy weathering energy shock, sees fiscal concerns",
-      "link": "https://www.investing.com/news/commodities-news/imfs-georgieva-says-global-economy-weathering-energy-shock-sees-fiscal-concerns-4875821",
-      "pubDate": "2026-08-25T20:31:09.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "U.S. stocks higher at close of trade; Dow Jones Industrial Average up 0.30%",
-      "link": "https://www.investing.com/news/stock-market-news/us-stocks-higher-at-close-of-trade-dow-jones-industrial-average-up-030-4875930",
-      "pubDate": "2026-08-25T20:31:01.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Oklo chief product officer Alexandra Renner sells $22,151 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/oklo-chief-product-officer-alexandra-renner-sells-22151-in-stock-93CH-4875929",
-      "pubDate": "2026-08-25T20:31:00.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Wall Street ends higher as tech rebounds before Nvidia results",
-      "link": "https://www.investing.com/news/economy-news/us-stock-futures-rise-on-tech-rebound-before-nvidia-inflation-tests-4874797",
-      "pubDate": "2026-08-25T20:30:54.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Semtech earnings beat by $0.10, revenue topped estimates",
-      "link": "https://www.investing.com/news/earnings/semtech-earnings-beat-by-010-revenue-topped-estimates-4875928",
-      "pubDate": "2026-08-25T20:30:41.000Z",
+      "title": "Strattec stock up 2% on Q4 earnings, revenue beat",
+      "link": "https://www.investing.com/news/earnings/strattec-stock-up-2-on-q4-earnings-revenue-beat-93CH-4875941",
+      "pubDate": "2026-08-25T20:38:37.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -130,7 +137,7 @@
     {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-25T18:56:10.000Z",
+      "pubDate": "2026-08-25T18:56:14.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
     },
@@ -378,13 +385,6 @@
       "pubDate": "2026-08-25T14:20:47.000Z",
       "description": "Bitcoin cleared $80,000 and the meme coin rally followed. DOGE broke a 20-month downtrend, but PEPE and PUMP stalled.\nThe post Top 3 Meme Coins Rally as Bitcoin Touches $80,000, But Only One Has Room to Run appeared first on BeInCrypto.",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "US Dollar: Credibility risks for USD – TD Securities",
-      "link": "https://www.fxstreet.com/news/us-dollar-credibility-risks-for-usd-td-securities-202608251418",
-      "pubDate": "2026-08-25T14:18:13.000Z",
-      "description": "TD Securities argues that Jackson Hole is more about Federal Reserve (Fed) credibility than new guidance for the US Dollar (USD). They see rate expectations staying anchored, but warn that any failure by Chair Warsh to reaffirm the inflatio",
-      "source": "FXStreet"
     },
     {
       "title": "Union Bank of India taps dollar debt market after 12-year hiatus",
