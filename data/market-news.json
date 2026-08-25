@@ -1,47 +1,145 @@
 {
-  "timestamp": "2026-08-25T13:56:22.798Z",
+  "timestamp": "2026-08-25T14:36:14.833Z",
   "items": [
     {
       "title": "2026-08-25 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-25T13:50:00.000Z",
+      "pubDate": "2026-08-25T14:30:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
     },
     {
-      "title": "Earnings call transcript: SCHMID Group posts strong H1 2026 growth, shares fall",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-schmid-group-posts-strong-h1-2026-growth-shares-fall-93CH-4875557",
-      "pubDate": "2026-08-25T13:47:43.000Z",
+      "title": "Japanese Yen: BoJ September risk looms in flat range against US Dollar – Scotiabank",
+      "link": "https://www.fxstreet.com/news/japanese-yen-boj-september-risk-looms-in-flat-range-against-us-dollar-scotiabank-202608251428",
+      "pubDate": "2026-08-25T14:28:22.000Z",
+      "description": "Scotiabank strategists Shaun Osborne and Eric Theoret note USD/JPY trading in a relatively flat range between 158.00 and the mid-159s as the Japanese Yen (JPY) underperforms most G10 currencies.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "US Dollar: Credibility risks for USD – TD Securities",
+      "link": "https://www.fxstreet.com/news/us-dollar-credibility-risks-for-usd-td-securities-202608251418",
+      "pubDate": "2026-08-25T14:18:13.000Z",
+      "description": "TD Securities argues that Jackson Hole is more about Federal Reserve (Fed) credibility than new guidance for the US Dollar (USD). They see rate expectations staying anchored, but warn that any failure by Chair Warsh to reaffirm the inflatio",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Silver retreats ahead of US PCE data, but underlying support persists",
+      "link": "https://www.fxstreet.com/news/silver-retreats-ahead-of-us-pce-data-but-underlying-support-persists-202608251418",
+      "pubDate": "2026-08-25T14:18:01.000Z",
+      "description": "Silver (XAG/USD) extends its decline on Tuesday and trades around $67.50 at the time of writing, down 1.43% on the day.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "TSX falls as Trump tariff threat weighs on Canadian stocks",
+      "link": "https://www.investing.com/news/stock-market-news/tsx-futures-edge-higher-amid-us-tariffs-bank-earnings-4875098",
+      "pubDate": "2026-08-25T14:11:30.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Dick’s Sporting Goods plunges on guidance cut, Q2 miss",
-      "link": "https://www.investing.com/news/earnings/dicks-sporting-goods-tumbles-on-guidance-cut-q2-miss-4875067",
-      "pubDate": "2026-08-25T13:47:01.000Z",
+      "title": "Lululemon stock price target lowered by UBS on weak sales outlook",
+      "link": "https://www.investing.com/news/analyst-ratings/lululemon-stock-price-target-lowered-by-ubs-on-weak-sales-outlook-93CH-4875595",
+      "pubDate": "2026-08-25T14:11:21.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Earnings call transcript: Senstar returns to profit in Q2 2026 as LiDAR surges",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-senstar-returns-to-profit-in-q2-2026-as-lidar-surges-93CH-4875554",
-      "pubDate": "2026-08-25T13:46:51.000Z",
+      "title": "UBS reiterates Abercrombie & Fitch stock rating on growth outlook",
+      "link": "https://www.investing.com/news/analyst-ratings/ubs-reiterates-abercrombie--fitch-stock-rating-on-growth-outlook-93CH-4875596",
+      "pubDate": "2026-08-25T14:11:21.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Earnings call transcript: WuXi XDC H1 2026 profit tops RMB 1 billion as stock jumps 15%",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-wuxi-xdc-h1-2026-profit-tops-rmb-1-billion-as-stock-jumps-15-93CH-4875552",
-      "pubDate": "2026-08-25T13:46:48.000Z",
+      "title": "Why is Marvell Technology stock surging today?",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-marvell-technology-stock-surging-today-93CH-4875594",
+      "pubDate": "2026-08-25T14:11:15.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Earnings call transcript: Citi Trends beats Q2 2026 estimates but shares fall",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-citi-trends-beats-q2-2026-estimates-but-shares-fall-93CH-4875548",
-      "pubDate": "2026-08-25T13:45:44.000Z",
+      "title": "Why is Super Micro Computer stock rallying today?",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-super-micro-computer-stock-rallying-today-93CH-4875593",
+      "pubDate": "2026-08-25T14:08:36.000Z",
       "description": "",
       "source": "Investing.com"
+    },
+    {
+      "title": "Euro: Upside limited above fair value against US Dollar – Scotiabank",
+      "link": "https://www.fxstreet.com/news/euro-upside-limited-above-fair-value-against-us-dollar-scotiabank-202608251408",
+      "pubDate": "2026-08-25T14:08:30.000Z",
+      "description": "Scotiabank strategists Shaun Osborne and Eric Theoret report EUR/USD consolidating in the mid to upper 1.16s after stronger German IFO and Gross Domestic Product (GDP) data, which should bolster European Central Bank (ECB) confidence ahead ",
+      "source": "FXStreet"
+    },
+    {
+      "title": "US CB Consumer Confidence Index eases to 89.4 in August",
+      "link": "https://www.fxstreet.com/news/us-cb-consumer-confidence-index-eases-to-894-in-august-202608251406",
+      "pubDate": "2026-08-25T14:06:46.000Z",
+      "description": "US consumer sentiment loses some momentum in August, as the Conference Board’s Consumer Confidence Index recedes to 89.4 from July’s 90.2 (revised from 90.8).",
+      "source": "FXStreet"
+    },
+    {
+      "title": "FDA approves Jazz’s Ziihera for HER2+ gastric cancer treatment",
+      "link": "https://www.investing.com/news/company-news/fda-approves-jazzs-ziihera-for-her2-gastric-cancer-treatment-93CH-4875591",
+      "pubDate": "2026-08-25T14:04:35.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Leidos wins $56M Navy contract for military health research",
+      "link": "https://www.investing.com/news/company-news/leidos-wins-56m-navy-contract-for-military-health-research-93CH-4875590",
+      "pubDate": "2026-08-25T14:04:29.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Zymeworks stock hits 52-week high at 29.81 USD",
+      "link": "https://www.investing.com/news/company-news/zymeworks-stock-hits-52week-high-at-2981-usd-93CH-4875589",
+      "pubDate": "2026-08-25T14:04:09.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Top Semiconductor Stocks for AI Server CPU Growth, Says Raymond James",
+      "link": "https://www.investing.com/news/stock-market-news/top-semiconductor-stocks-for-ai-server-cpu-growth-says-raymond-james-93CH-4875588",
+      "pubDate": "2026-08-25T14:03:52.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Benchmark sees buying opportunity in trucking stocks amid seasonal weakness",
+      "link": "https://www.investing.com/news/analyst-ratings/benchmark-sees-buying-opportunity-in-trucking-stocks-amid-seasonal-weakness-93CH-4875586",
+      "pubDate": "2026-08-25T14:02:53.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Lady Gaga AI Biotech Startup Keeps Human Skin Alive for 4 Weeks",
+      "link": "https://beincrypto.com/lady-gaga-ai-biotech-outer-bio/",
+      "pubDate": "2026-08-25T14:02:30.000Z",
+      "description": "Lady Gaga AI biotech startup Outer Bio trains models on donated human skin kept alive four weeks, with $23 million backing.\nThe post Lady Gaga AI Biotech Startup Keeps Human Skin Alive for 4 Weeks appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Gold: Overbought rally eyes key resistance – UOB",
+      "link": "https://www.fxstreet.com/news/gold-overbought-rally-eyes-key-resistance-uob-202608251359",
+      "pubDate": "2026-08-25T13:59:37.000Z",
+      "description": "UOB’s Quek Ser Leang notes that Spot Gold remains in a broader uptrend after breaking above a key declining trendline and reaching an intraday high near $4,700.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Prediction Markets Are Colliding With Sports Law and Exchange Power",
+      "link": "https://beincrypto.com/prediction-markets-sports-law-exchange-power/",
+      "pubDate": "2026-08-25T13:52:09.000Z",
+      "description": "Prediction markets have become one of the fastest-growing fronts in US trading, and sports contracts are now at the center of a legal fight over regulatory control.&#160; Indeed, exchange competition, sports law and federal preemption are i",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Gold retreats as upward momentum hits pause ahead of US inflation data",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQa19NSUEzV2xqY0JpOW5BRUlWc1VQNHNxdFk1cjk2ZldBQnotS0VtRmo4MWRSdjdDMEhya0JXeURjRFVoRkpyeDVLSGxTcExWM0YxaDh4dFl5OGF6MmN3eU4zd0poVXRBMnlQRFFkUy1qQmNwck9nV01hd2RNSXlaR3lJMzFYRWt3TDFGVnJENVZEVXZDR1puXzV0dGtSdW8zZGFmYXFn?oc=5",
+      "pubDate": "2026-08-25T13:50:31.000Z",
+      "description": "Gold retreats as upward momentum hits pause ahead of US inflation data&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "Copper: Supply setbacks push market into deficit – Commerzbank",
@@ -51,46 +149,11 @@
       "source": "FXStreet"
     },
     {
-      "title": "WestJet cabin crew approve proposed deal after strike",
-      "link": "https://www.investing.com/news/stock-market-news/westjet-cabin-crew-approve-proposed-deal-after-strike-4874176",
-      "pubDate": "2026-08-25T13:37:22.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Wall St opens higher as tech stocks rebound before Nvidia results, data",
-      "link": "https://www.investing.com/news/stock-market-news/wall-st-opens-higher-as-tech-stocks-rebound-before-nvidia-results-data-4875525",
-      "pubDate": "2026-08-25T13:37:04.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Alternative Income REIT receives minimal acceptances for Glenstone offer",
-      "link": "https://www.investing.com/news/company-news/alternative-income-reit-receives-minimal-acceptances-for-glenstone-offer-93CH-4875524",
-      "pubDate": "2026-08-25T13:36:37.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Wall Street opens higher amid falling oil prices and Treasury yields",
-      "link": "https://www.investing.com/news/stock-market-news/wall-st-futures-steady-as-investors-brace-for-nvidia-results-fed-signals-4874359",
-      "pubDate": "2026-08-25T13:35:52.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Euro stays near three-month high as US Dollar remains subdued",
       "link": "https://www.fxstreet.com/news/euro-stays-near-three-month-high-as-us-dollar-remains-subdued-202608251335",
       "pubDate": "2026-08-25T13:35:23.000Z",
       "description": "EUR/USD holds modest gains on Tuesday as the latest Middle East developments fail to trigger a strong market reaction, while the US Dollar (USD) struggles to recover from last week’s sell-off sparked by the US Treasury’s decision to increas",
       "source": "FXStreet"
-    },
-    {
-      "title": "DICK’S Q2 2026 slides show growth ambitions amid Foot Locker drag",
-      "link": "https://www.investing.com/news/company-news/dicks-q2-2026-slides-show-growth-ambitions-amid-foot-locker-drag-93CH-4875518",
-      "pubDate": "2026-08-25T13:35:21.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Canadian Dollar: Trading near fair value against US Dollar - Scotiabank",
@@ -226,13 +289,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Gold slips on profit-taking after rally to over three-month high",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQa19NSUEzV2xqY0JpOW5BRUlWc1VQNHNxdFk1cjk2ZldBQnotS0VtRmo4MWRSdjdDMEhya0JXeURjRFVoRkpyeDVLSGxTcExWM0YxaDh4dFl5OGF6MmN3eU4zd0poVXRBMnlQRFFkUy1qQmNwck9nV01hd2RNSXlaR3lJMzFYRWt3TDFGVnJENVZEVXZDR1puXzV0dGtSdW8zZGFmYXFn?oc=5",
-      "pubDate": "2026-08-25T11:34:17.000Z",
-      "description": "Gold slips on profit-taking after rally to over three-month high&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "Sterling hovers near six-month high underpinned by BoE rate hike expectations",
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPUzNUanVzZ2pZNHNCdjAwZC1lRXhwYTRfUW83bDBtdUR2czdIT2hxMFhUNTdrY2ZaMW9tMDlGT3YyNnJ4elY3N0xnODJLd0hQM1pOMHIzak1JM1kwWjI4QTZYUEZwOWMzTHA3eHJtbmFZamhibGlkVjgzV2s2cjJSVms3bFJqZWIySFhzbllSSkpNUEl1UDN4bEY3d1J4UzNpWUJfclZXZHVuUzVVNjFHV1hHOTJRQTRlcW41QnVHQQ?oc=5",
       "pubDate": "2026-08-25T11:27:45.000Z",
@@ -254,10 +310,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "Gold takes a breather after climbing to a three-month high",
+      "title": "Gold takes a breather after climbing to a fresh three-month high, US PCE in focus",
       "link": "https://www.fxstreet.com/news/gold-pauses-near-three-month-high-after-sharp-rally-202608251109",
       "pubDate": "2026-08-25T11:09:01.000Z",
-      "description": "Gold (XAU/USD) remains under pressure on Tuesday heading into American trading hours after setting a fresh three-month high of $4,697 earlier in the day.",
+      "description": "Gold (XAU/USD) extends its intraday decline during American trading hours on Tuesday after setting a fresh three-month high of $4,697 earlier in the day.",
       "source": "FXStreet"
     },
     {
@@ -303,32 +359,11 @@
       "source": "FXStreet"
     },
     {
-      "title": "U.S. Treasury Yields Fall, Dollar Steady",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPS3owMEx2Sm1oQi11MjM4ZFR2cG0xbmhzT3Byb1FqT1ZtRHpTWGNIdnZLbWwzbVNLeURDMzV2Rm9vcUV5TlIxR2NuVXFySWk1THZ3YlgwTjZXaHdzQldTZDRHUmZvb29MemZqN29sOGNaYm9GRVcxbVBoQkdPMmk2MlhaLW54cW02RkJGTDM4ZE91by1iNlppak93?oc=5",
-      "pubDate": "2026-08-25T09:56:00.000Z",
-      "description": "U.S. Treasury Yields Fall, Dollar Steady&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
-      "title": "Euro advances against Japanese Yen as German business sentiment improves",
-      "link": "https://www.fxstreet.com/news/euro-advances-against-japanese-yen-as-german-business-sentiment-improves-202608250954",
-      "pubDate": "2026-08-25T09:54:53.000Z",
-      "description": "EUR/JPY advances to around 185.85 on Tuesday at the time of writing, gaining 0.15% on the day.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Former Banker Says the Real AI Trade Isn&#039;t Chips, It&#039;s Electricity: 4 Stocks to Watch",
       "link": "https://beincrypto.com/4-ai-power-stocks-1000-percent-potential-analyst/",
       "pubDate": "2026-08-25T09:50:20.000Z",
       "description": "Analyst and former banker Felix Prehn published a thread on August 24 arguing that most retail investors missed the 500% to 1,000% gains already seen in Palantir, Intel, and Seagate. He now points to four companies sitting at what he calls ",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Hungarian Forint: Holding firm against Euro below key resistance - Societe Generale",
-      "link": "https://www.fxstreet.com/news/hungarian-forint-holding-firm-against-euro-below-key-resistance-societe-generale-202608250948",
-      "pubDate": "2026-08-25T09:48:07.000Z",
-      "description": "Societe Generale strategists expect Hungary's central bank, Magyar Nemzeti Bank (MNB), to cut rates by 25 bp to 5.50% today, with dovish July minutes and softer-than-expected inflation leaving room for further easing.",
-      "source": "FXStreet"
     },
     {
       "title": "Zoomex Rolls Out Five August Rewards Campaigns",
@@ -345,13 +380,6 @@
       "source": "Google News"
     },
     {
-      "title": "Gold Gets Boost From Weaker Dollar",
-      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNWFFOaEphZ2hTRjNHZjl2OWhiXzJHVi1WNmJSdG43OUtJUExQZGp3cFBtdHVIMnBHal9tRDhZOF9HR081ZnhXdU1RU2djSDJJVF9mZ3l2ZEZoQUdJb1ZpdEY1UWxLUm45bWEyTlNiemRiU3FRekJodkdJQm8zS3lFWi1yWkpoUkdtQ1BuRUNSb2g5VzVI?oc=5",
-      "pubDate": "2026-08-25T09:34:56.000Z",
-      "description": "Gold Gets Boost From Weaker Dollar&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
       "title": "India's Yes Bank, two other peers withdraw dollar debt plan, bankers say",
       "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSzNJY3I2Rl9qTnE1dzdnQ3JYNW1lT3plRVlvbmxZeFMtcjIyR3FvZVpVMng2Q1RwbHcxeU0tMDVQSEs5bEJ1SWNIMkdBblJjbm1uUkNsa1dieWt1UURWVUtRSlU3c0RUN3Vaa1p4S2dvVE1XTjUxc05UeTFOVnZZazdGbFRXNGxzYUxJQUJjQTlvRjE5SU5SMzZwMlZNbWM4bS1NTWk1VHU4Vkh1bHFJMUFGOWNSZEgz?oc=5",
       "pubDate": "2026-08-25T09:34:51.000Z",
@@ -359,39 +387,11 @@
       "source": "Reuters"
     },
     {
-      "title": "Silver price today: Silver falls, according to FXStreet data",
-      "link": "https://www.fxstreet.com/news/silver-price-today-silver-falls-according-to-fxstreet-data-202608250931",
-      "pubDate": "2026-08-25T09:31:18.000Z",
-      "description": "Silver prices (XAG/USD) fell on Tuesday, according to FXStreet data. Silver trades at $67.82 per troy ounce, down 0.97% from the $68.48 it cost on Monday.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Canadian Dollar: Tariff risks cloud outlook – Commerzbank",
-      "link": "https://www.fxstreet.com/news/canadian-dollar-tariff-risks-cloud-outlook-commerzbank-202608250931",
-      "pubDate": "2026-08-25T09:31:05.000Z",
-      "description": "Michael Pfister at Commerzbank assesses the potential impact of higher US auto tariffs on Canada and the Canadian Dollar.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Japanese Yen: Range trade within 157.90 and 159.80 against US Dollar – UOB",
-      "link": "https://www.fxstreet.com/news/japanese-yen-range-trade-within-15790-and-15980-against-us-dollar-uob-202608250917",
-      "pubDate": "2026-08-25T09:17:05.000Z",
-      "description": "United Overseas Bank’s (UOB) Quek Ser Leang and Lee Sue Ann describe USD/JPY as locked in a range-trading phase, with a slightly firmer tone keeping the pair in a higher intraday band of 158.80–159.45.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Iran war makes multibillion-dollar Tanzania LNG more attractive, Equinor says",
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOQVRRRXpGLTQzSUFSbHE2c1c0RGxGTGRhOWpneHlwRTI5WlBDQWY1UWJBOWFITHFyZkxGQ2xGYzkxT1ZZLWtCM0ZRbVhncEUyeTM3aG05Y0gtekpwNE1vdjdkNjNUc1BiOUw1cDljM1gtX0p3Yi16elh6UTNYeGJlNXRiVlZRU0diWnlnVkVOVnVuY2JITnNKVHgzRnJGVzRsTW5jRXNB?oc=5",
       "pubDate": "2026-08-25T09:08:55.000Z",
       "description": "Iran war makes multibillion-dollar Tanzania LNG more attractive, Equinor says&nbsp;&nbsp;Reuters",
       "source": "Reuters"
-    },
-    {
-      "title": "Silver Price Forecast: XAG/USD faces rejection near $70.00 as upside momentum fades",
-      "link": "https://www.fxstreet.com/news/silver-price-forecast-xag-usd-faces-rejection-near-7000-as-upside-momentum-fades-202608250904",
-      "pubDate": "2026-08-25T09:04:21.000Z",
-      "description": "Silver (XAG/USD) continues its struggle to make it through the $70.00 psychological mark and turns lower for the second straight day on Tuesday.",
-      "source": "FXStreet"
     },
     {
       "title": "Samsung and SK Hynix Leveraged ETFs Post First Outflow Since May Launch",
@@ -405,6 +405,13 @@
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBBV2JBUzNlc0h0TTRiZk96NjIyMEVOa2IwYzNuN0FKaXVFOTY3ZjIwVUlxRkp5bDVhQ0NZN0gyeW51OHNWZVBWbFJ2djZPMlBxMWtabUN5bzlDTGVPQmNjLVd3?oc=5",
       "pubDate": "2026-08-25T08:12:05.000Z",
       "description": "Gold Fields Limited&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Gold Fields flags Ghana licence risk as half-year profit surges",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQUk1FMVppZkctTTdRV2FVTVhtMXlscWN6dG9GQmM0Mklqcy13YVNGTThWZ3FZckQyTVZvZkJoNzdBbjZwZ3ZlTDI1akRqYzdEdTB3OWx5XzNvMlk1MDZ0ck1NdDFpMkx1UWRVRGE0VzNadkpGcC1pU09PNllUR2VsVmlzZmpjUHJHOEww?oc=5",
+      "pubDate": "2026-08-25T08:12:05.000Z",
+      "description": "Gold Fields flags Ghana licence risk as half-year profit surges&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -443,20 +450,6 @@
       "source": "Reuters"
     },
     {
-      "title": "X Trade Buttons Coming Soon as Bier Counters Crypto Shadowban Rumors",
-      "link": "https://beincrypto.com/x-trade-buttons-crypto-shadowban-bier/",
-      "pubDate": "2026-08-25T06:52:06.000Z",
-      "description": "Nikita Bier says X trade buttons arrive soon and blames Treasury buybacks, not X, for the crypto bull market.\nThe post X Trade Buttons Coming Soon as Bier Counters Crypto Shadowban Rumors appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "TRM Labs Traces $16.8 Million Across 30 Sanctioned Iran-Linked Crypto Wallets",
-      "link": "https://beincrypto.com/trm-labs-iran-crypto-addresses-sanctions/",
-      "pubDate": "2026-08-25T06:02:21.000Z",
-      "description": "Roughly $16.8 million flowed into 30 cryptocurrency addresses tied to members of Iran&#8217;s Mabna Institute, according to blockchain intelligence firm TRM Labs. The US Treasury listed those addresses as part of a wider action against Iran",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Indian Rupee jumps to weekly high amid lower Oil prices, declining US Yields",
       "link": "https://www.fxstreet.com/news/indian-rupee-ticks-up-against-us-dollar-on-rbis-likely-intervention-202608250537",
       "pubDate": "2026-08-25T05:37:39.000Z",
@@ -468,13 +461,6 @@
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOU1A3ZDBwNm85VE41dmUyZGMzWUdmTHJMb3JMYkl4V21XdG9PTHNOZnFnLXhPR2VpSWtsbDNla1pna3I2WHNSRzU2TkhERE9oMnRNZGluNDNHMlFOWnlmSUEtT1dwNGxqVnRrQ1pJemRCTzlDa3A3b3hJV0pNSGJPSFpYbktMemhOblpRZW1QekkwT3F0VEY5TkNQaFZhdlZjejFTU1JjTjVKZ01SNjZMQ195YWlZOVA2NG1fTVFMaw?oc=5",
       "pubDate": "2026-08-25T05:19:00.000Z",
       "description": "Bitcoin rises above $80,000 as soft dollar, debasement fears boost momentum&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Gold Fields flags Ghana licence risk as half-year profit surges",
-      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQUk1FMVppZkctTTdRV2FVTVhtMXlscWN6dG9GQmM0Mklqcy13YVNGTThWZ3FZckQyTVZvZkJoNzdBbjZwZ3ZlTDI1akRqYzdEdTB3OWx5XzNvMlk1MDZ0ck1NdDFpMkx1UWRVRGE0VzNadkpGcC1pU09PNllUR2VsVmlzZmpjUHJHOEww?oc=5",
-      "pubDate": "2026-08-25T05:19:00.000Z",
-      "description": "Gold Fields flags Ghana licence risk as half-year profit surges&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -499,6 +485,13 @@
       "source": "Google News"
     },
     {
+      "title": "Gold Up 2% Amid Weaker Dollar, Falling Bond Yields",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRkNPeXZZcHU1eW00NDVqRldZQzFkMGVsUXRXcHFKbkdpdzBjM0FFUWtISHdtSi16OEw4ZGlGQmViWUppdmtTTFk3WjdCQjlwNjAtSG5Ka1JtZTdoOE9PbUlreDhMZkpfSjdpXzNoWDVUa0xzdGJyTWpENHdOUXBFTlQ4X0g5bkhDX1hETk0xUWc2SDVFQnlLaWd0X1JPT1ZaNF82X2RMZW91ZlFka3pNMVRHOA?oc=5",
+      "pubDate": "2026-08-25T01:55:45.000Z",
+      "description": "Gold Up 2% Amid Weaker Dollar, Falling Bond Yields&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
       "title": "WP - 2026-08-25 - Romain Baeriswyl: Yesterday’s controversies for tomorrow's money",
       "link": "https://www.snb.ch/en/publications/research/working-papers/2026/working_paper_2026_10",
       "pubDate": "2026-08-24T22:00:00.000Z",
@@ -506,9 +499,16 @@
       "source": "Swiss National Bank"
     },
     {
+      "title": "The WSJ Dollar Index Rises 0.13% to 95.45",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPN1FCbF8tMGp1Nm9sTWNVRlZ6UzhuRmxPTmZSZ2MtMFdFLXpMY1JyZHY5cjcweXlYVlpPWk5BUkRoTFk1em1pRllfd2tiRHZVbUk3ektpSXJWTnVfYW8zdjVhNDVKNDlDVHNzbE40aF9pdTZjOC1EdmVKMkVEVUhlRXpHY3FOa1VRSXEwSkdtS1BlQnRmb1JpNWNmX2htTTJBd3I2YmZXdDY4YjRhVjVrTnUwbTRaUQ?oc=5",
+      "pubDate": "2026-08-24T21:38:00.000Z",
+      "description": "The WSJ Dollar Index Rises 0.13% to 95.45&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-24T18:43:35.000Z",
+      "pubDate": "2026-08-24T18:43:31.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
     },
