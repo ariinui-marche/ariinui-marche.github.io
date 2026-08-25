@@ -21,6 +21,28 @@
     "horizon": "Immediate reaction (first 5–30 min)",
     "summary": "Base-effect headline drop likely dominates the first reaction. The last 4 prints all sold off on release regardless of surprise direction — even a hot headline (March) got sold when the beat was driven by an oil shock rather than domestic demand, and a hawkish core surprise (May) still didn't stop the sell-off."
   },
+  "shortTermRead": {
+    "headline": "Expected reaction: AUD/USD lower on the immediate print, in both scenarios below — only the size differs.",
+    "hitRatePct": 100,
+    "hitRateSample": "4/4 last prints (Mar–Jun 2026)",
+    "scenarios": [
+      {
+        "case": "Headline & trimmed mean aligned soft",
+        "historicalRate": "2/2 (Apr, Jun)",
+        "expectedMove": "Clean, immediate — roughly 30–50 pips in the first 5 min"
+      },
+      {
+        "case": "Trimmed mean surprises hot vs a soft-looking headline (diverged)",
+        "historicalRate": "2/2 (Mar, May)",
+        "expectedMove": "Still lower but muted — roughly 5–15 pips, no reversal seen historically"
+      }
+    ],
+    "riskFlags": [
+      "COT net short and building (−44.2k) — a squeeze remains possible but has never flipped the immediate-reaction direction in this sample.",
+      "Options implied vol already elevated into the print — expect an above-average move in whichever direction confirms.",
+      "No US data collision at 15:30 local time — a clean reaction window, not muddied by a competing release."
+    ]
+  },
   "catalysts": [
     { "factor": "RBA policy stance", "direction": "bullish", "weight": "high", "note": "Held 4.35% on 11 Aug (unanimous). Tone hawkish — inflation \"still too high\", trimmed mean elevated, seen above target until mid-2027." },
     { "factor": "Fed / USD leg", "direction": "bullish", "weight": "high", "note": "Powell opened the door to a Sept cut at Jackson Hole — ~89% priced. Rate differential tightening in AUD's favour, independent of Tuesday's print." },

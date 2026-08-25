@@ -169,6 +169,22 @@ function renderAudDeskUnsafe(data) {
       ${bias.confidenceCaveat ? `<span class="audd-bias-caveat">${bias.confidenceCaveat}</span>` : ''}
     </div>
 
+    ${data.shortTermRead ? `
+    <div class="audd-section-label">Short-term read</div>
+    <div class="audd-shortread">
+      <div class="audd-shortread-headline">${data.shortTermRead.headline}</div>
+      ${Number.isFinite(data.shortTermRead.hitRatePct) ? `<div class="audd-shortread-stat"><span class="audd-shortread-pct ${auddDirClass(bias.direction)}">${data.shortTermRead.hitRatePct}%</span><span class="audd-shortread-sample">${data.shortTermRead.hitRateSample || ''}</span></div>` : ''}
+      ${(data.shortTermRead.scenarios || []).map((s) => `
+        <div class="audd-play-row">
+          <div class="audd-play-scenario">${s.case} <span class="audd-play-confidence">(${s.historicalRate})</span></div>
+          <div class="audd-play-expected">${s.expectedMove}</div>
+        </div>`).join('')}
+      ${(data.shortTermRead.riskFlags || []).length ? `
+      <ul class="audd-shortread-risks">
+        ${data.shortTermRead.riskFlags.map((f) => `<li>${f}</li>`).join('')}
+      </ul>` : ''}
+    </div>` : ''}
+
     ${(c.headlineYoY || c.trimmedMeanYoY) ? `
     <div class="audd-consensus">
       ${c.headlineYoY ? `<div class="audd-stat"><span class="audd-stat-label">Headline YoY (cons.)</span><span class="audd-stat-value">${c.headlineYoY}</span><span class="audd-stat-prior">prior ${c.priorHeadlineYoY || '—'}</span></div>` : ''}

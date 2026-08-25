@@ -481,6 +481,47 @@ main {
 .audd-bias-summary { font-size: 13px; color: var(--text); margin-top: 4px; line-height: 1.4; }
 .audd-bias-caveat { font-size: 11px; color: var(--text-dim); font-style: italic; margin-top: 6px; line-height: 1.4; }
 
+.audd-shortread {
+  background: #0e1219;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 8px;
+}
+.audd-shortread-headline {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.audd-shortread-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.audd-shortread-pct {
+  font-family: 'SF Mono', 'Cascadia Code', Consolas, monospace;
+  font-size: 26px;
+  font-weight: 700;
+}
+.audd-shortread-sample { font-size: 11px; color: var(--text-dim); }
+.audd-shortread .audd-play-row { margin-bottom: 8px; background: var(--panel); }
+.audd-shortread .audd-play-row:last-of-type { margin-bottom: 12px; }
+.audd-shortread-risks {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.audd-shortread-risks li {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+
 .audd-consensus {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
