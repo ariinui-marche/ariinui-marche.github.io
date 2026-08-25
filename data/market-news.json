@@ -1,12 +1,26 @@
 {
-  "timestamp": "2026-08-25T05:51:17.404Z",
+  "timestamp": "2026-08-25T06:19:51.665Z",
   "items": [
     {
       "title": "2026-08-25 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-25T05:50:00.000Z",
+      "pubDate": "2026-08-25T06:10:03.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "Euro: Further gains eyed toward 1.1800 against US Dollar – UOB",
+      "link": "https://www.fxstreet.com/news/euro-further-gains-eyed-toward-11800-against-us-dollar-uob-202608250608",
+      "pubDate": "2026-08-25T06:08:53.000Z",
+      "description": "United Overseas Bank’s (UOB) Quek Ser Leang and Lee Sue Ann keep a constructive stance on EUR/USD despite recent consolidation around 1.1660. They still see room for upside toward 1.1725 in the coming weeks as long as support at 1.1630 hold",
+      "source": "FXStreet"
+    },
+    {
+      "title": "EUR/USD Price Forecast: Corrects further as US Dollar extends recovery",
+      "link": "https://www.fxstreet.com/news/eur-usd-price-forecast-corrects-further-as-us-dollar-extends-recovery-202608250558",
+      "pubDate": "2026-08-25T05:58:30.000Z",
+      "description": "The Euro (EUR) trades marginally lower against the US Dollar (USD) on Tuesday, extending its corrective move from the four-day high of 1.1711 to near 1.1655 during the European trading session.",
+      "source": "FXStreet"
     },
     {
       "title": "Indian Rupee ticks up against US Dollar on RBI’s likely intervention",
@@ -14,6 +28,13 @@
       "pubDate": "2026-08-25T05:37:39.000Z",
       "description": "The Indian Rupee (INR) trades marginally higher against the US Dollar (USD) in the opening session on Tuesday.",
       "source": "FXStreet"
+    },
+    {
+      "title": "Strive Buys More Bitcoin While Sitting on a $292 Million Paper Loss",
+      "link": "https://beincrypto.com/strive-bitcoin-purchase-paper-loss/",
+      "pubDate": "2026-08-25T05:36:46.000Z",
+      "description": "Bitcoin (BTC) treasury firm Strive purchased 1,110 BTC for roughly $81.5 million last week, lifting its treasury to 21,356 coins.&#160; The purchase cut Strive&#8217;s average cost to $93,257 per coin from $94,345. However, its Bitcoin rese",
+      "source": "BeInCrypto"
     },
     {
       "title": "Indonesian Rupiah struggles amid record deficit, external pressures",
@@ -233,10 +254,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "Gold moves away from multi‑month top as Fed rate fears and Middle East jitters support USD",
+      "title": "Gold sticks to modest losses below $4,650 as Fed risks and Middle East tensions lift USD",
       "link": "https://www.fxstreet.com/news/gold-retreats-from-mid-may-highs-fails-ahead-of-4-700-as-fed-risks-support-usd-202608250254",
       "pubDate": "2026-08-25T02:54:12.000Z",
-      "description": "Gold (XAU/USD) faces rejection ahead of the $4,700 mark on Tuesday and witnessed an intraday turnaround from its highest level since May 14, touched during the Asian session.",
+      "description": "Gold (XAU/USD) stabilizes below $4,650 heading into the European session, stalling its intraday retracement slide from the $4,700 neighborhood, or the highest since May 14, touched earlier this Tuesday.",
       "source": "FXStreet"
     },
     {
@@ -359,13 +380,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Jim Cramer Cites Overblown Meta Stock Trial Risk: Is This A Sell Signal?",
-      "link": "https://beincrypto.com/jim-cramer-meta-stock-trial-risk/",
-      "pubDate": "2026-08-24T22:42:01.000Z",
-      "description": "Jim Cramer says the Meta stock trial risk is overblown, and the $1.4 trillion figure is a ceiling, not a demand.\nThe post Jim Cramer Cites Overblown Meta Stock Trial Risk: Is This A Sell Signal? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Chinese Yuan: Targeting 6.7200 against US Dollar – UOB",
       "link": "https://www.fxstreet.com/news/chinese-yuan-targeting-67200-against-us-dollar-uob-202608242233",
       "pubDate": "2026-08-24T22:33:00.000Z",
@@ -436,20 +450,6 @@
       "source": "Reuters"
     },
     {
-      "title": "Japanese Yen lower as US Dollar firms on heavier Iran sanctions",
-      "link": "https://www.fxstreet.com/news/japanese-yen-lower-as-us-dollar-firms-on-heavier-iran-sanctions-202608242115",
-      "pubDate": "2026-08-24T21:15:33.000Z",
-      "description": "The US Dollar (USD) is grinding higher against the Japanese Yen (JPY) at the time of writing, with USD/JPY holding north of the 159.00 mark.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Singapore: National Day Rally focus – DBS",
-      "link": "https://www.fxstreet.com/news/singapore-national-day-rally-focus-dbs-202608242114",
-      "pubDate": "2026-08-24T21:14:00.000Z",
-      "description": "DBS Group Research economist Chua Han Teng reviews Prime Minister Lawrence Wong’s National Day Rally 2026, highlighting policy themes rather than markets.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Dollar Gains as US Plan to Cut Off Iran Spurs Haven Demand - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQaDBMRTRoU0NudG5Sa0VvSnk2STdKd2dSNEUxa0Y4MENQZFFZenhuRHNwRVZseFpWTUFFdjJsQmplQWJhc2ZCbW8yeWdYbUY3ZnZ3elRvOVBzVmFETWl0MXNFV1oxa3pPaFljT21ndXpOUGJFdThqdzRJM3dyQXN0M1RoYTdLeGRUbTQ0QlJjaWVUaTdpVkpaQ2FsdFZidnNuMzFhWGYzRkphR0lFZkE?oc=5",
       "pubDate": "2026-08-24T20:04:12.000Z",
@@ -457,16 +457,9 @@
       "source": "Google News"
     },
     {
-      "title": "Dollar higher after Iran sanctions, loonie drops after US announces tariff increases",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNeWdQcUNEMGg5ZXdrRnBJRl9PLXZtbk9NYzdiZnEydGZBT21TOWRFaV9EQVBpYU9mcktFSV84c0JwcVBDdHVDSkkwUUpIWVM3ZVhYTWFrNFNWRlc3MUhMWVZ5V29JTXh5U01Ja0l3MzdGTTUweFo0Y0VVZjlfYXp5YjVfSU11NW5zdUtqM1l4cEtCV1JmU24xVmlBc1NtVkRHcnpxUFlxNkRZSUU?oc=5",
-      "pubDate": "2026-08-24T19:16:36.000Z",
-      "description": "Dollar higher after Iran sanctions, loonie drops after US announces tariff increases&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-24T18:43:48.000Z",
+      "pubDate": "2026-08-24T18:43:35.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
     },
@@ -504,6 +497,13 @@
       "pubDate": "2026-08-24T12:04:00.000Z",
       "description": "Ghana gold buyers went weeks without funds, sources say&nbsp;&nbsp;Reuters",
       "source": "Reuters"
+    },
+    {
+      "title": "Nvidia’s Trillion-Dollar Chip Market Has Friends and Foes Closing In - Bloomberg",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPUV9iR0ZlOXNzYm5zYmxqdHZQYU9KZmdoWWtnclZ0QXdyd1E3dnFNMDhyVEVLQ19kUlNCME5nWmtCMnVWaGJoSXM0azQwdWgyS0ZOTjIzQWR1RVhLZlFEUV9VMXFLaFdLNTRBVFBCbE93VDJYQlVpbWdJWFF5S2xPUEk3Y2pIS3luMkkyc05hMkdzaFgtT1l5ZG1xVDUzb091TGF6a3ZSZWNmcVNvUXNKZVNiZ2RtdHBhQTlV?oc=5",
+      "pubDate": "2026-08-24T12:00:03.000Z",
+      "description": "Nvidia’s Trillion-Dollar Chip Market Has Friends and Foes Closing In&nbsp;&nbsp;Bloomberg",
+      "source": "Google News"
     },
     {
       "title": "2026-08-24 - Interview - Interview with Petra Tschudin in the FuW",
