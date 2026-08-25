@@ -1,19 +1,26 @@
 {
-  "timestamp": "2026-08-25T04:50:35.435Z",
+  "timestamp": "2026-08-25T05:19:12.922Z",
   "items": [
+    {
+      "title": "2026-08-25 - Banknotes and coins - Access to cash",
+      "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
+      "pubDate": "2026-08-25T05:15:00.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
+    },
+    {
+      "title": "Indicators for Core CPI",
+      "link": "http://www.boj.or.jp/en/research/research_data/cpi/index.htm",
+      "pubDate": "2026-08-25T05:00:00.000Z",
+      "description": "",
+      "source": "Bank of Japan"
+    },
     {
       "title": "Morning Bid: Waiting on Nvidia for next leg of AI rally",
       "link": "https://www.investing.com/news/economy-news/morning-bid-waiting-on-nvidia-for-next-leg-of-ai-rally-4874462",
       "pubDate": "2026-08-25T04:42:30.000Z",
       "description": "",
       "source": "Investing.com"
-    },
-    {
-      "title": "2026-08-25 - Banknotes and coins - Access to cash",
-      "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-25T04:42:00.000Z",
-      "description": "",
-      "source": "Swiss National Bank"
     },
     {
       "title": "Why is SK Hynix stock falling today?",
@@ -35,6 +42,20 @@
       "pubDate": "2026-08-25T04:35:04.000Z",
       "description": "Gold prices fell in India on Tuesday, according to data compiled by FXStreet.",
       "source": "FXStreet"
+    },
+    {
+      "title": "Cosmos Labs Confirms Cosmos EVM Incident as 3 Chains Disclose Impact",
+      "link": "https://beincrypto.com/cosmos-evm-security-incident-kiichain-tac-mantra/",
+      "pubDate": "2026-08-25T04:34:43.000Z",
+      "description": "Cosmos Labs confirmed an ongoing security incident affecting users of the Cosmos EVM module. It advised chains in contact with it to ask validators to halt block production. Three networks have now disclosed impact. KiiChain and TAC froze t",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Bessent&#039;s Former Mentor Druckenmiller Slams Treasury Bond Buyback Plan",
+      "link": "https://beincrypto.com/druckenmiller-bessent-treasury-bond-buybacks/",
+      "pubDate": "2026-08-25T04:25:00.000Z",
+      "description": "Stanley Druckenmiller criticizes Scott Bessent's Treasury bond buyback plan, warning it defies market fundamentals.\nThe post Bessent&#039;s Former Mentor Druckenmiller Slams Treasury Bond Buyback Plan appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
     },
     {
       "title": "Oil steadies as investors weigh impact of latest US sanctions on Iran",
@@ -198,10 +219,10 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Gold rises to highest since mid-May as buying momentum builds",
+      "title": "Gold retreats from three-month high as investors await US inflation data",
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQa19NSUEzV2xqY0JpOW5BRUlWc1VQNHNxdFk1cjk2ZldBQnotS0VtRmo4MWRSdjdDMEhya0JXeURjRFVoRkpyeDVLSGxTcExWM0YxaDh4dFl5OGF6MmN3eU4zd0poVXRBMnlQRFFkUy1qQmNwck9nV01hd2RNSXlaR3lJMzFYRWt3TDFGVnJENVZEVXZDR1puXzV0dGtSdW8zZGFmYXFn?oc=5",
       "pubDate": "2026-08-25T02:10:00.000Z",
-      "description": "Gold rises to highest since mid-May as buying momentum builds&nbsp;&nbsp;Reuters",
+      "description": "Gold retreats from three-month high as investors await US inflation data&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -338,13 +359,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "A $30 Billion AI Fund Implodes, Now the SEC Is Investigating Wall Street’s Role",
-      "link": "https://beincrypto.com/sec-investigation-banks-ai-fund-collapse/",
-      "pubDate": "2026-08-24T22:00:00.000Z",
-      "description": "The SEC subpoenaed Bank of America, Citi, Goldman and JPMorgan over the AI fund that lost 67% and sold to Citadel.\nThe post A $30 Billion AI Fund Implodes, Now the SEC Is Investigating Wall Street’s Role appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "South Korean Won: Rally faces consolidation risk on policy week – OCBC",
       "link": "https://www.fxstreet.com/news/south-korean-won-rally-faces-consolidation-risk-on-policy-week-ocbc-202608242151",
       "pubDate": "2026-08-24T21:51:00.000Z",
@@ -371,13 +385,6 @@
       "pubDate": "2026-08-24T21:41:04.000Z",
       "description": "The New Zealand Dollar (NZD) is holding firm against the US Dollar (USD) at the time of writing, with NZD/USD consolidating near its recent multi-month highs, just south of the 0.6000 handle.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Elon Musk Praises New SpaceX and NVIDIA Partnership, Yet Both Stocks Fall",
-      "link": "https://beincrypto.com/elon-musk-spacex-nvidia-partnership-stocks-fall/",
-      "pubDate": "2026-08-24T21:39:52.000Z",
-      "description": "Elon Musk celebrated a new partnership between SpaceX and NVIDIA on Monday, confirming plans to launch an optimized Vera Rubin system into orbit as early as 2027. Despite his enthusiasm, both companies&#8217; stocks fell on the day of the a",
-      "source": "BeInCrypto"
     },
     {
       "title": "The WSJ Dollar Index Rises 0.13% to 95.45",
@@ -429,10 +436,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "Dollar Gains as US Plan to Cut Off Iran Spurs Haven Demand",
+      "title": "Dollar Gains as US Plan to Cut Off Iran Spurs Haven Demand - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQaDBMRTRoU0NudG5Sa0VvSnk2STdKd2dSNEUxa0Y4MENQZFFZenhuRHNwRVZseFpWTUFFdjJsQmplQWJhc2ZCbW8yeWdYbUY3ZnZ3elRvOVBzVmFETWl0MXNFV1oxa3pPaFljT21ndXpOUGJFdThqdzRJM3dyQXN0M1RoYTdLeGRUbTQ0QlJjaWVUaTdpVkpaQ2FsdFZidnNuMzFhWGYzRkphR0lFZkE?oc=5",
       "pubDate": "2026-08-24T20:04:12.000Z",
-      "description": "Dollar Gains as US Plan to Cut Off Iran Spurs Haven Demand&nbsp;&nbsp;Bloomberg.com",
+      "description": "Dollar Gains as US Plan to Cut Off Iran Spurs Haven Demand&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
     },
     {
@@ -450,31 +457,24 @@
       "source": "Bank of Canada"
     },
     {
-      "title": "Gold rally gains momentum ahead of US inflation data, Jackson Hole event",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNUkZtQVBPdjlyb21JaVBxeFRicDFEeHVNQ21pZzdGQnlSMUpFYV80MEl3RjJUbF9tYWxmdkZqY2NpaXh5S0NPd1lhbFZxUHZMVVFkTHNyNktCX2hrUU5KN3hjcWRUVTlaQ0hwcmVoMV9VZjBmUkFjMGtTUUY5MXBwRDRFWXBwQnhZTzU1dV81LThOaTNZR1BLVDRGU1JtbDczRjVweFByWkVQbWhhX3VwYTlJZ0VYblU?oc=5",
-      "pubDate": "2026-08-24T18:38:20.000Z",
-      "description": "Gold rally gains momentum ahead of US inflation data, Jackson Hole event&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Gold Holds Near Three-Month High as Debasement Trade Returns",
+      "title": "Gold Holds Near Three-Month High as Debasement Trade Returns - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQc1hfWDMxY1lUVzBRZE0yUEp6M040Y0JkSWs1eFNQaV9xVG5seGJ0YU0tMWpkbnJBdXlpRmxyeG05eUFkYzBlWmZtaVowSXhzN29CM1c2ZzNrTVlqamtfUnBpMW05c05oRk5OZU9EWWlIVXZwLS1xYWFQYmJVSVdlTER3Z2ZBMEJNV0JSQkY1N3IxWFdXaWU1ZVFrc00xcVBMTXNSVEYwa0FVSng1SE00SA?oc=5",
       "pubDate": "2026-08-24T17:30:59.000Z",
-      "description": "Gold Holds Near Three-Month High as Debasement Trade Returns&nbsp;&nbsp;Bloomberg.com",
+      "description": "Gold Holds Near Three-Month High as Debasement Trade Returns&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
     },
     {
-      "title": "Citadel Securities Calls Treasury Buyback ‘Financial Repression’",
+      "title": "Citadel Securities Calls Treasury Buyback ‘Financial Repression’ - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQSUJGYU5SWUEyeFkyajRCcFd6RTZlZHZlYjgtZ1NYUUlvUXNNb3Zqc19DTTJfVnVUcmllWENrbDlNMzdiVWQ3a09xcTE1OGIwTG9fTEpOczZuTm90WkZxS291dDhxOU8xSUZjMi05ZUpGaEdaX3l3UkZOZ1NmQkVLQllyeGpiUF92MDl6YjBsQVpfcFJacWdTaGJpVTQzZ0QzX3ZYYm0weTNHaHpNS3dvSkxmZw?oc=5",
       "pubDate": "2026-08-24T14:58:14.000Z",
-      "description": "Citadel Securities Calls Treasury Buyback ‘Financial Repression’&nbsp;&nbsp;Bloomberg.com",
+      "description": "Citadel Securities Calls Treasury Buyback ‘Financial Repression’&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
     },
     {
-      "title": "Why Wall Street Is Refocusing on the ‘Debasement Trade’",
+      "title": "Why Wall Street Is Refocusing on the ‘Debasement Trade’ - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPaVpQVGsyTXZnWUcxNDN1NEhsdVdMRGRwNXNMdDhyWmdmblltanRpVHdKX1oyLThXaXlPV3QtWlQweVJoZ0ZWdG1IaXpLNEIwcHhWeEdTZHczb1VhRmZXOW10Z0NZb081MFlOQmlnOEljVU42QmQxT1RhR0F3TnZVbzZ2VG5sSDlIeHZhYThvcDk2eFFQOUtIalB4SWRCT3NqVFlmY2ZIV1MxRGZFQUFVdFd6UUhOQUtvTW14OVFn?oc=5",
       "pubDate": "2026-08-24T14:28:50.000Z",
-      "description": "Why Wall Street Is Refocusing on the ‘Debasement Trade’&nbsp;&nbsp;Bloomberg.com",
+      "description": "Why Wall Street Is Refocusing on the ‘Debasement Trade’&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
     },
     {
@@ -492,11 +492,18 @@
       "source": "Reuters"
     },
     {
-      "title": "Nvidia’s Trillion-Dollar Chip Market Has Friends and Foes Closing In",
+      "title": "Nvidia’s Trillion-Dollar Chip Market Has Friends and Foes Closing In - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPUV9iR0ZlOXNzYm5zYmxqdHZQYU9KZmdoWWtnclZ0QXdyd1E3dnFNMDhyVEVLQ19kUlNCME5nWmtCMnVWaGJoSXM0azQwdWgyS0ZOTjIzQWR1RVhLZlFEUV9VMXFLaFdLNTRBVFBCbE93VDJYQlVpbWdJWFF5S2xPUEk3Y2pIS3luMkkyc05hMkdzaFgtT1l5ZG1xVDUzb091TGF6a3ZSZWNmcVNvUXNKZVNiZ2RtdHBhQTlV?oc=5",
       "pubDate": "2026-08-24T12:00:03.000Z",
-      "description": "Nvidia’s Trillion-Dollar Chip Market Has Friends and Foes Closing In&nbsp;&nbsp;Bloomberg.com",
+      "description": "Nvidia’s Trillion-Dollar Chip Market Has Friends and Foes Closing In&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
+    },
+    {
+      "title": "Sterling pauses after four-week rally as investors brace for US sanctions on Iran",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQV2kyQWJvcmZMUVBVOWY0S2FkellsUGptYktWT3MwOHFSY2FIdDJuS0ZWeUlYYUwybEtEN2dCelBIXzdaeWVZVWlPdXJzcXg1ZDNXaHJwNWpOenhqSWFOSnhFSTdlXzlUZFBRYk5yVEZucXA3Q3lKY3lJTHJ3cjg3d3RDRlJBRm1EYnpPajB5RlhMUUFkS0tVM0FQVGFmd0VFT3ZpWlVyc1I3YWxnSEpFQVRCOWpmRGs?oc=5",
+      "pubDate": "2026-08-24T11:55:21.000Z",
+      "description": "Sterling pauses after four-week rally as investors brace for US sanctions on Iran&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "2026-08-24 - Interview - Interview with Petra Tschudin in the FuW",
@@ -553,13 +560,6 @@
       "pubDate": "2026-08-21T08:00:00.000Z",
       "description": "",
       "source": "European Central Bank"
-    },
-    {
-      "title": "Developments in Real Exports and Real Imports",
-      "link": "http://www.boj.or.jp/en/research/research_data/reri/index.htm",
-      "pubDate": "2026-08-21T07:00:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
     },
     {
       "title": "2026-08-21 - Data portal - Monthly banking statistics, August 2026",
