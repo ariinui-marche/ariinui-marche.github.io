@@ -1,12 +1,117 @@
 {
-  "timestamp": "2026-08-25T13:03:10.794Z",
+  "timestamp": "2026-08-25T13:56:22.798Z",
   "items": [
     {
       "title": "2026-08-25 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-25T13:00:00.000Z",
+      "pubDate": "2026-08-25T13:50:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "Earnings call transcript: SCHMID Group posts strong H1 2026 growth, shares fall",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-schmid-group-posts-strong-h1-2026-growth-shares-fall-93CH-4875557",
+      "pubDate": "2026-08-25T13:47:43.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Dick’s Sporting Goods plunges on guidance cut, Q2 miss",
+      "link": "https://www.investing.com/news/earnings/dicks-sporting-goods-tumbles-on-guidance-cut-q2-miss-4875067",
+      "pubDate": "2026-08-25T13:47:01.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Earnings call transcript: Senstar returns to profit in Q2 2026 as LiDAR surges",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-senstar-returns-to-profit-in-q2-2026-as-lidar-surges-93CH-4875554",
+      "pubDate": "2026-08-25T13:46:51.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Earnings call transcript: WuXi XDC H1 2026 profit tops RMB 1 billion as stock jumps 15%",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-wuxi-xdc-h1-2026-profit-tops-rmb-1-billion-as-stock-jumps-15-93CH-4875552",
+      "pubDate": "2026-08-25T13:46:48.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Earnings call transcript: Citi Trends beats Q2 2026 estimates but shares fall",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-citi-trends-beats-q2-2026-estimates-but-shares-fall-93CH-4875548",
+      "pubDate": "2026-08-25T13:45:44.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Copper: Supply setbacks push market into deficit – Commerzbank",
+      "link": "https://www.fxstreet.com/news/copper-supply-setbacks-push-market-into-deficit-commerzbank-202608251345",
+      "pubDate": "2026-08-25T13:45:06.000Z",
+      "description": "Commerzbank’s Barbara Lambrecht notes Copper prices are rising again as ICSG data show a significant June deficit and a sharply reduced year‑to‑date surplus.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "WestJet cabin crew approve proposed deal after strike",
+      "link": "https://www.investing.com/news/stock-market-news/westjet-cabin-crew-approve-proposed-deal-after-strike-4874176",
+      "pubDate": "2026-08-25T13:37:22.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Wall St opens higher as tech stocks rebound before Nvidia results, data",
+      "link": "https://www.investing.com/news/stock-market-news/wall-st-opens-higher-as-tech-stocks-rebound-before-nvidia-results-data-4875525",
+      "pubDate": "2026-08-25T13:37:04.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Alternative Income REIT receives minimal acceptances for Glenstone offer",
+      "link": "https://www.investing.com/news/company-news/alternative-income-reit-receives-minimal-acceptances-for-glenstone-offer-93CH-4875524",
+      "pubDate": "2026-08-25T13:36:37.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Wall Street opens higher amid falling oil prices and Treasury yields",
+      "link": "https://www.investing.com/news/stock-market-news/wall-st-futures-steady-as-investors-brace-for-nvidia-results-fed-signals-4874359",
+      "pubDate": "2026-08-25T13:35:52.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Euro stays near three-month high as US Dollar remains subdued",
+      "link": "https://www.fxstreet.com/news/euro-stays-near-three-month-high-as-us-dollar-remains-subdued-202608251335",
+      "pubDate": "2026-08-25T13:35:23.000Z",
+      "description": "EUR/USD holds modest gains on Tuesday as the latest Middle East developments fail to trigger a strong market reaction, while the US Dollar (USD) struggles to recover from last week’s sell-off sparked by the US Treasury’s decision to increas",
+      "source": "FXStreet"
+    },
+    {
+      "title": "DICK’S Q2 2026 slides show growth ambitions amid Foot Locker drag",
+      "link": "https://www.investing.com/news/company-news/dicks-q2-2026-slides-show-growth-ambitions-amid-foot-locker-drag-93CH-4875518",
+      "pubDate": "2026-08-25T13:35:21.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Canadian Dollar: Trading near fair value against US Dollar - Scotiabank",
+      "link": "https://www.fxstreet.com/news/canadian-dollar-trading-near-fair-value-against-us-dollar-scotiabank-202608251334",
+      "pubDate": "2026-08-25T13:34:15.000Z",
+      "description": "Scotiabank strategists Shaun Osborne and Eric Theoret describe USD/CAD trading close to their fair value estimate around 1.3842 as the Canadian Dollar (CAD) reacts to trade headlines and weaker Oil prices.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "US Dollar: Bond market supports cautious consolidation – ING",
+      "link": "https://www.fxstreet.com/news/us-dollar-bond-market-supports-cautious-consolidation-ing-202608251314",
+      "pubDate": "2026-08-25T13:14:32.000Z",
+      "description": "ING’s Francesco Pesole notes the Dollar is drawing support from the US bond market as long-dated yields stabilise, while US-Canada trade tensions and Iran-related sanctions risks complicate the outlook.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Germany&#039;s Spy Agency Is Recruiting Cyber Talent at Gamescom 2026",
+      "link": "https://beincrypto.com/gamescom-2026-bnd-cyber-challenge/",
+      "pubDate": "2026-08-25T12:59:03.000Z",
+      "description": "Germany's BND runs a five-step cyber challenge at Gamescom 2026 to recruit gamers with real hacking skills.\nThe post Germany&#039;s Spy Agency Is Recruiting Cyber Talent at Gamescom 2026 appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
     },
     {
       "title": "Gold: Tariff conflict fuels safe haven bid – Commerzbank",
@@ -16,20 +121,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Earnings call transcript: Jacktel posts strong Q2 2026 revenue beat as shares rise",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-jacktel-posts-strong-q2-2026-revenue-beat-as-shares-rise-93CH-4875370",
-      "pubDate": "2026-08-25T12:45:46.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Earnings call transcript: Gabler Group tops H1 2026 sales guidance, shares rise",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-gabler-group-tops-h1-2026-sales-guidance-shares-rise-93CH-4875366",
-      "pubDate": "2026-08-25T12:44:18.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "New Zealand Dollar defies stronger US Dollar as RBNZ rate hike bets offer support",
       "link": "https://www.fxstreet.com/news/new-zealand-dollar-defies-stronger-us-dollar-as-rbnz-rate-hike-bets-offer-support-202608251241",
       "pubDate": "2026-08-25T12:41:12.000Z",
@@ -37,67 +128,11 @@
       "source": "FXStreet"
     },
     {
-      "title": "Wall Street set for a higher open amid falling oil prices and Treasury yields",
-      "link": "https://www.investing.com/news/stock-market-news/wall-st-futures-steady-as-investors-brace-for-nvidia-results-fed-signals-4874359",
-      "pubDate": "2026-08-25T12:39:47.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Earnings call transcript: Tuniu posts small profit in Q2 2026 as travel mix shifts",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-tuniu-posts-small-profit-in-q2-2026-as-travel-mix-shifts-93CH-4875342",
-      "pubDate": "2026-08-25T12:39:44.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Average weekly U.S. private payrolls rise 11,750 in four weeks ending Aug 8 - ADP",
-      "link": "https://www.investing.com/news/economic-indicators/average-weekly-us-private-payrolls-rise-11750-in-four-weeks-ending-aug-8--adp-4875339",
-      "pubDate": "2026-08-25T12:37:37.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Australian Dollar: RBA risks and carry support – BBH",
       "link": "https://www.fxstreet.com/news/australian-dollar-rba-risks-and-carry-support-bbh-202608251234",
       "pubDate": "2026-08-25T12:34:53.000Z",
       "description": "Brown Brothers Harriman’s (BBH) Elias Haddad notes the Australian Dollar (AUD) largely ignored the Reserve Bank of Australia's (RBA) August Minutes, which reiterated Governor Michele Bullock’s warning that another rate hike is quite possibl",
       "source": "FXStreet"
-    },
-    {
-      "title": "Building permits rise 4.3%, missing forecast but showing improvement",
-      "link": "https://www.investing.com/news/economic-indicators/building-permits-rise-43-missing-forecast-but-showing-improvement-93CH-4875335",
-      "pubDate": "2026-08-25T12:34:38.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Morgan Stanley Ranks These EU Diagnostics Stocks by China Reform Risk",
-      "link": "https://www.investing.com/news/stock-market-news/morgan-stanley-ranks-these-eu-diagnostics-stocks-by-china-reform-risk-93CH-4875334",
-      "pubDate": "2026-08-25T12:34:11.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Earnings call transcript: BMO tops Q3 2026 estimates as profit rises 22%",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-bmo-tops-q3-2026-estimates-as-profit-rises-22-93CH-4875332",
-      "pubDate": "2026-08-25T12:33:43.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Earnings call transcript: FluoGuide advances U.S. cancer trial setup in H1 2026",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-fluoguide-advances-us-cancer-trial-setup-in-h1-2026-93CH-4875331",
-      "pubDate": "2026-08-25T12:33:35.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Earnings call transcript: Vipshop Q2 2026 profit miss weighs on shares",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-vipshop-q2-2026-profit-miss-weighs-on-shares-93CH-4875316",
-      "pubDate": "2026-08-25T12:32:30.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Union Bank of India taps dollar debt market after 12-year hiatus",
@@ -359,39 +394,11 @@
       "source": "FXStreet"
     },
     {
-      "title": "Indian Rupee: Range holds against US Dollar as inflows offset trade drag – DBS",
-      "link": "https://www.fxstreet.com/news/indian-rupee-range-holds-against-us-dollar-as-inflows-offset-trade-drag-dbs-202608250902",
-      "pubDate": "2026-08-25T09:02:47.000Z",
-      "description": "DBS economist Radhika Rao observes that strong FCNR (B) swap inflows and higher FX reserves have not translated into significant Rupee gains, with USD/INR staying in a tight 95.50–96.00 range.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Dow Jones futures advance as tech stocks rebound ahead of looming Nvidia earnings",
-      "link": "https://www.fxstreet.com/news/dow-jones-futures-advance-as-tech-stocks-rebound-ahead-of-looming-nvidia-earnings-202608250856",
-      "pubDate": "2026-08-25T08:56:46.000Z",
-      "description": "Dow Jones futures gain by 0.18%, trading around 53,590 during European hours on Tuesday. Meanwhile, S&P 500 futures advance by 0.28%, to trade near 7,690, and Nasdaq 100 futures rise by 0.58% to trade around 29,270.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Samsung and SK Hynix Leveraged ETFs Post First Outflow Since May Launch",
       "link": "https://beincrypto.com/korea-leveraged-etf-outflow-august/",
       "pubDate": "2026-08-25T08:52:56.000Z",
       "description": "Leveraged exchange-traded funds (ETFs) tied to South Korea&#8217;s two biggest chipmakers shed close to $1 billion in August.&#160; The withdrawals mark the first monthly outflow since the products launched in late May. The reversal comes a",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Australian Dollar: CPI keeps RBA on hold bias – ING",
-      "link": "https://www.fxstreet.com/news/australian-dollar-cpi-keeps-rba-on-hold-bias-ing-202608250848",
-      "pubDate": "2026-08-25T08:48:22.000Z",
-      "description": "ING’s Francesco Pesole expects Australia’s July inflation data to show further moderation, consistent with no additional Reserve Bank of Australia hikes this year. He argues Governor Bullock is likely to stay hawkish, and even a small infla",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Hungarian Forint: MNB tone shift watched – Commerzbank",
-      "link": "https://www.fxstreet.com/news/hungarian-forint-mnb-tone-shift-watched-commerzbank-202608250838",
-      "pubDate": "2026-08-25T08:38:03.000Z",
-      "description": "Commerzbank’s Tatha Ghose expects Hungary's central bank, Magyar Nemzeti Bank (MNB), to cut its base rate by 25bp to 5.50%, but stresses that guidance will matter more for the Forint. While headline inflation has surprised on the downside, ",
-      "source": "FXStreet"
     },
     {
       "title": "Gold Fields Limited",
@@ -457,13 +464,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Strive Buys More Bitcoin While Sitting on a $292 Million Paper Loss",
-      "link": "https://beincrypto.com/strive-bitcoin-purchase-paper-loss/",
-      "pubDate": "2026-08-25T05:36:46.000Z",
-      "description": "Bitcoin (BTC) treasury firm Strive purchased 1,110 BTC for roughly $81.5 million last week, lifting its treasury to 21,356 coins.&#160; The purchase cut Strive&#8217;s average cost to $93,257 per coin from $94,345. However, its Bitcoin rese",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Bitcoin rises above $80,000 as soft dollar, debasement fears boost momentum",
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOU1A3ZDBwNm85VE41dmUyZGMzWUdmTHJMb3JMYkl4V21XdG9PTHNOZnFnLXhPR2VpSWtsbDNla1pna3I2WHNSRzU2TkhERE9oMnRNZGluNDNHMlFOWnlmSUEtT1dwNGxqVnRrQ1pJemRCTzlDa3A3b3hJV0pNSGJPSFpYbktMemhOblpRZW1QekkwT3F0VEY5TkNQaFZhdlZjejFTU1JjTjVKZ01SNjZMQ195YWlZOVA2NG1fTVFMaw?oc=5",
       "pubDate": "2026-08-25T05:19:00.000Z",
@@ -508,7 +508,7 @@
     {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-24T18:43:48.000Z",
+      "pubDate": "2026-08-24T18:43:35.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
     },
