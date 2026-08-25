@@ -4,7 +4,7 @@
   "description": "Live currency strength and economic calendar",
   "start_url": "./",
   "scope": "./",
-  "display": "standalone",
+  "display": "minimal-ui",
   "background_color": "#0b0e14",
   "theme_color": "#0b0e14",
   "icons": [
