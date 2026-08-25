@@ -616,17 +616,7 @@ function renderNews() {
   }).join('');
 }
 
-function formatTimestamp(iso) {
-  if (!iso) return 'Never';
-  const d = new Date(iso);
-  const diffMin = Math.round((Date.now() - d.getTime()) / 60000);
-  if (diffMin < 1) return 'Just now';
-  if (diffMin < 60) return `${diffMin} min ago`;
-  return d.toLocaleString('en-GB');
-}
-
 async function loadAll() {
-  document.getElementById('updateStatus').textContent = 'Loading…';
   try {
     const [currencyData, ecoData, newsData, audDeskData] = await Promise.all([
       fetchCurrencyStrength().catch((err) => { console.error(err); return null; }),
@@ -656,14 +646,7 @@ async function loadAll() {
       })
       .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
     renderNews();
-
-    const latest = [currencyData?.timestamp, ecoData?.timestamp, newsData?.timestamp].filter(Boolean).sort().pop();
-    // audDeskData.asOf is a manual/hand-set timestamp, not a live fetch — deliberately
-    // excluded from the "Updated" status so a stale hand-written briefing never masks
-    // as freshly refreshed data.
-    document.getElementById('updateStatus').textContent = `Updated: ${formatTimestamp(latest)}`;
   } catch (err) {
-    document.getElementById('updateStatus').textContent = 'Loading error';
     console.error(err);
   }
 }
