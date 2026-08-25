@@ -1,82 +1,103 @@
 {
-  "timestamp": "2026-08-25T19:29:57.011Z",
+  "timestamp": "2026-08-25T19:56:13.763Z",
   "items": [
+    {
+      "title": "US Treasury yields fall as Hormuz progress eases inflation fears",
+      "link": "https://www.fxstreet.com/news/us-treasury-yields-fall-as-hormuz-progress-eases-inflation-fears-202608251954",
+      "pubDate": "2026-08-25T19:54:06.000Z",
+      "description": "US yields edge lower across the whole curve on Tuesday, following suit.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "South Korean Won: Strength backed by tech flows against US Dollar – Societe Generale",
+      "link": "https://www.fxstreet.com/news/south-korean-won-strength-backed-by-tech-flows-against-us-dollar-societe-generale-202608251954",
+      "pubDate": "2026-08-25T19:54:00.000Z",
+      "description": "Societe Generale analysts highlight that the Korean Won (KRW) has gained 12% versus the Dollar year-to-date, with USD/KRW falling from around 1560 in June to below 1380.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Google expands Gemini Enterprise AI platform for law firms, lawyers",
+      "link": "https://www.investing.com/news/stock-market-news/google-expands-gemini-ai-platform-for-law-firms-lawyers-4875249",
+      "pubDate": "2026-08-25T19:48:53.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "2026-08-25 - Banknotes and coins - Access to cash",
+      "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
+      "pubDate": "2026-08-25T19:48:00.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
+    },
+    {
+      "title": "Target shares drop after Halloween costume backlash",
+      "link": "https://www.investing.com/news/stock-market-news/target-shares-drop-5-after-halloween-costume-backlash-4875625",
+      "pubDate": "2026-08-25T19:45:05.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Oil settles down more than 3%; investors shrug off US sanctions on Iran",
+      "link": "https://www.investing.com/news/commodities-news/oil-prices-steady-as-investors-weigh-impact-of-expanded-us-sanctions-against-iran-4874373",
+      "pubDate": "2026-08-25T19:43:13.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "OpenAI data center chief exits as 4 executives leave ahead of 2027 IPO",
+      "link": "https://www.investing.com/news/stock-market-news/openai-data-center-chief-exits-as-4-executives-leave-ahead-of-2027-ipo-4875869",
+      "pubDate": "2026-08-25T19:40:48.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Japan to develop blockchain payment system for stocks and bonds",
+      "link": "https://www.investing.com/news/stock-market-news/japan-to-develop-blockchain-payment-system-for-stocks-and-bonds-93CH-4875868",
+      "pubDate": "2026-08-25T19:37:37.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Treasury yields fall as oil drops, buyback debate continues",
+      "link": "https://www.investing.com/news/economy-news/treasury-yields-fall-as-oil-drops-buyback-debate-continues-93CH-4875867",
+      "pubDate": "2026-08-25T19:35:42.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Seagate at The Six Five Summit: AI puts data retention in focus",
+      "link": "https://www.investing.com/news/transcripts/seagate-at-the-six-five-summit-ai-puts-data-retention-in-focus-93CH-4875866",
+      "pubDate": "2026-08-25T19:32:35.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "ECB set to raise rates in September amid Iran war concerns",
+      "link": "https://www.investing.com/news/economy-news/ecb-set-to-raise-rates-in-september-amid-iran-war-concerns-93CH-4875865",
+      "pubDate": "2026-08-25T19:31:49.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Alpha Metallurgical director Gorzynski acquires $2.09m in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/alpha-metallurgical-director-gorzynski-acquires-209m-in-shares-93CH-4875864",
+      "pubDate": "2026-08-25T19:31:04.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "S&P Global vs Moody’s: valuation comparison favors SPGI",
+      "link": "https://www.investing.com/news/stock-market-news/sp-global-vs-moodys-valuation-comparison-favors-spgi-93CH-4875862",
+      "pubDate": "2026-08-25T19:27:15.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
     {
       "title": "Chinese Yuan: Trade risks limit gains against US Dollar – OCBC",
       "link": "https://www.fxstreet.com/news/chinese-yuan-trade-risks-limit-gains-against-us-dollar-ocbc-202608251923",
       "pubDate": "2026-08-25T19:23:00.000Z",
       "description": "OCBC’s Sim Moh Siong and Christopher Wong note that reports of potential US tariffs on Chinese goods and the PBoC’s resistance to rapid Renminbi (RMB) gains are likely to limit further downside in USD/CNH.",
       "source": "FXStreet"
-    },
-    {
-      "title": "2026-08-25 - Banknotes and coins - Access to cash",
-      "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-25T19:21:00.000Z",
-      "description": "",
-      "source": "Swiss National Bank"
-    },
-    {
-      "title": "McKesson stock jumps on $2.25B Precision Medicine deal",
-      "link": "https://www.investing.com/news/stock-market-news/mckesson-stock-jumps-on-225b-precision-medicine-deal-93CH-4875850",
-      "pubDate": "2026-08-25T19:15:52.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Oracle at Six Five Summit: ai shifts to distributed cloud",
-      "link": "https://www.investing.com/news/transcripts/oracle-at-six-five-summit-ai-shifts-to-distributed-cloud-93CH-4875849",
-      "pubDate": "2026-08-25T19:13:25.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Dollar edges lower as Iran sanctions, Treasury buybacks weighed",
-      "link": "https://www.investing.com/news/economy-news/dollar-struggles-for-traction-as-markets-weigh-iran-sanctions-treasury-buybacks-4874390",
-      "pubDate": "2026-08-25T19:12:26.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Guggenheim says affiliates may buy discounted loan after debt falls - Bloomberg",
-      "link": "https://www.investing.com/news/stock-market-news/guggenheim-says-affiliates-may-buy-discounted-loan-after-debt-falls--bloomberg-93CH-4875848",
-      "pubDate": "2026-08-25T19:09:16.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "PepsiCo drops coverage of weight-loss drugs due to costs - Bloomberg",
-      "link": "https://www.investing.com/news/stock-market-news/pepsico-drops-coverage-of-weightloss-drugs-due-to-costs--bloomberg-93CH-4875846",
-      "pubDate": "2026-08-25T19:08:49.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Trump administration defends Kennedy Center renaming plan, warns of demolition risk",
-      "link": "https://www.investing.com/news/economy-news/trump-administration-says-new-kennedy-center-renaming-does-not-violate-court-order-4875719",
-      "pubDate": "2026-08-25T19:07:03.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Abbott receives FDA authorization for dual glucose-ketone sensor",
-      "link": "https://www.investing.com/news/company-news/abbott-receives-fda-authorization-for-dual-glucoseketone-sensor-93CH-4875844",
-      "pubDate": "2026-08-25T19:00:47.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Why is Thomson Reuters stock sliding today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-thomson-reuters-stock-sliding-today-93CH-4875842",
-      "pubDate": "2026-08-25T18:59:24.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Why is Synopsys stock rallying today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-synopsys-stock-rallying-today-93CH-4875841",
-      "pubDate": "2026-08-25T18:58:54.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
@@ -91,13 +112,6 @@
       "pubDate": "2026-08-25T18:53:53.000Z",
       "description": "A non-voting regional Federal Reserve president published a conditional hold on Tuesday, tying the current target range to continued evidence that inflation is actually coming down, and the Dollar Index has not moved for it.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Helium Evolution closes $25 million private placement",
-      "link": "https://www.investing.com/news/company-news/helium-evolution-closes-25-million-private-placement-93CH-4875840",
-      "pubDate": "2026-08-25T18:52:37.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Forex Today: US Dollar stays on the back foot ahead of PCE",
@@ -233,10 +247,10 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Is Altseason Starting? 2 Charts Give Opposite Answers",
-      "link": "https://beincrypto.com/eth-btc-high-bitcoin-dominance-altseason/",
+      "title": "Is the Altcoin Season Starting in September? Two Charts Hold the Answer",
+      "link": "https://beincrypto.com/altcoin-season-analysis-bitcoin-dominance/",
       "pubDate": "2026-08-25T15:47:22.000Z",
-      "description": "ETH/BTC hits a 7-month high while Bitcoin dominance clears 60%. See which signal decides altcoin season 2026.\nThe post Is Altseason Starting? 2 Charts Give Opposite Answers appeared first on BeInCrypto.",
+      "description": "ETH/BTC hits a 7-month high while Bitcoin dominance clears 60%. See which signal decides altcoin season 2026.\nThe post Is the Altcoin Season Starting in September? Two Charts Hold the Answer appeared first on BeInCrypto.",
       "source": "BeInCrypto"
     },
     {
@@ -352,25 +366,11 @@
       "source": "FXStreet"
     },
     {
-      "title": "US CB Consumer Confidence Index eases to 89.4 in August",
-      "link": "https://www.fxstreet.com/news/us-cb-consumer-confidence-index-eases-to-894-in-august-202608251406",
-      "pubDate": "2026-08-25T14:06:46.000Z",
-      "description": "US consumer sentiment loses some momentum in August, as the Conference Board’s Consumer Confidence Index recedes to 89.4 from July’s 90.2 (revised from 90.8).",
-      "source": "FXStreet"
-    },
-    {
       "title": "Lady Gaga AI Biotech Startup Keeps Human Skin Alive for 4 Weeks",
       "link": "https://beincrypto.com/lady-gaga-ai-biotech-outer-bio/",
       "pubDate": "2026-08-25T14:02:30.000Z",
       "description": "Lady Gaga AI biotech startup Outer Bio trains models on donated human skin kept alive four weeks, with $23 million backing.\nThe post Lady Gaga AI Biotech Startup Keeps Human Skin Alive for 4 Weeks appeared first on BeInCrypto.",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Gold: Overbought rally eyes key resistance – UOB",
-      "link": "https://www.fxstreet.com/news/gold-overbought-rally-eyes-key-resistance-uob-202608251359",
-      "pubDate": "2026-08-25T13:59:37.000Z",
-      "description": "UOB’s Quek Ser Leang notes that Spot Gold remains in a broader uptrend after breaking above a key declining trendline and reaching an intraday high near $4,700.",
-      "source": "FXStreet"
     },
     {
       "title": "Prediction Markets Are Colliding With Sports Law and Exchange Power",
