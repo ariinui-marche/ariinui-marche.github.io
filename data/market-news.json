@@ -1,47 +1,96 @@
 {
-  "timestamp": "2026-08-25T23:36:50.595Z",
+  "timestamp": "2026-08-25T23:54:57.449Z",
   "items": [
     {
       "title": "2026-08-26 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-25T23:32:02.000Z",
+      "pubDate": "2026-08-25T23:53:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
     },
     {
-      "title": "Avalo Therapeutics CFO sells over $1.45 million in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/avalo-therapeutics-cfo-sells-over-145-million-in-stock-93CH-4876061",
-      "pubDate": "2026-08-25T23:31:01.000Z",
+      "title": "Ceribell president and CEO Chao Xingjuan sells $145,753 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/ceribell-president-and-ceo-chao-xingjuan-sells-145753-in-stock-93CH-4876070",
+      "pubDate": "2026-08-25T23:50:15.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Dorchester Minerals CFO Moriyama buys $147k in common units",
-      "link": "https://www.investing.com/news/insider-trading-news/dorchester-minerals-cfo-moriyama-buys-147k-in-common-units-93CH-4876060",
-      "pubDate": "2026-08-25T23:30:59.000Z",
+      "title": "Ardelux CFO Susan Hohenleitner sells $6,009 in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/ardelux-cfo-susan-hohenleitner-sells-6009-in-shares-93CH-4876069",
+      "pubDate": "2026-08-25T23:50:05.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Grindr CLO Zachary Katz sells $161,022 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/grindr-clo-zachary-katz-sells-161022-in-stock-93CH-4876059",
-      "pubDate": "2026-08-25T23:30:58.000Z",
+      "title": "Ardelyx SVP Joseph Reilly sells $15,358 of company stock",
+      "link": "https://www.investing.com/news/insider-trading-news/ardelyx-svp-joseph-reilly-sells-15358-of-company-stock-93CH-4876068",
+      "pubDate": "2026-08-25T23:50:04.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Hasbro WOTC president John Hight sells $1.1m in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/hasbro-wotc-president-john-hight-sells-11m-in-stock-93CH-4876058",
-      "pubDate": "2026-08-25T23:30:55.000Z",
+      "title": "Services Producer Price Index (July)",
+      "link": "http://www.boj.or.jp/en/statistics/pi/cspi_release/sppi2607.pdf",
+      "pubDate": "2026-08-25T23:50:00.000Z",
+      "description": "",
+      "source": "Bank of Japan"
+    },
+    {
+      "title": "IMF’s Georgieva says global economy weathering energy shock, sees fiscal concerns",
+      "link": "https://www.investing.com/news/commodities-news/imfs-georgieva-says-global-economy-weathering-energy-shock-sees-fiscal-concerns-4875821",
+      "pubDate": "2026-08-25T23:48:23.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Trump sends Saudi nuclear deal to Congress but says Riyadh must recognize Israel",
-      "link": "https://www.investing.com/news/commodities-news/trump-sends-saudi-nuclear-deal-to-congress-but-says-riyadh-must-recognize-israel-4876057",
-      "pubDate": "2026-08-25T23:30:30.000Z",
+      "title": "Ardelyx chief technical officer John Bishop sells $76,173 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/ardelyx-chief-technical-officer-john-bishop-sells-76173-in-stock-93CH-4876067",
+      "pubDate": "2026-08-25T23:46:21.000Z",
       "description": "",
       "source": "Investing.com"
+    },
+    {
+      "title": "Amtech Systems president & CEO Guy Shechter buys $49,455 in ASYS stock",
+      "link": "https://www.investing.com/news/insider-trading-news/amtech-systems-president--ceo-guy-shechter-buys-49455-in-asys-stock-93CH-4876065",
+      "pubDate": "2026-08-25T23:45:54.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Ardelyx chief human resources officer sells $58,378 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/ardelyx-chief-human-resources-officer-sells-58378-in-stock-93CH-4876066",
+      "pubDate": "2026-08-25T23:45:54.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Monolithic Power Systems director Herbert Chang sells $64,078 in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/monolithic-power-systems-director-herbert-chang-sells-64078-in-shares-93CH-4876064",
+      "pubDate": "2026-08-25T23:45:53.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Domino’s Pizza swings to FY loss on writedowns, underlying profit up 4%",
+      "link": "https://www.investing.com/news/stock-market-news/dominos-pizza-swings-to-fy-loss-on-writedowns-underlying-profit-up-4-93CH-4876063",
+      "pubDate": "2026-08-25T23:44:26.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Earnings call transcript: Perseus Mining posts strong H2 2026 cash flow",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-perseus-mining-posts-strong-h2-2026-cash-flow-93CH-4876062",
+      "pubDate": "2026-08-25T23:44:12.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Iran and Oman push talks for ‘interim’ reopening of Hormuz — Bloomberg",
+      "link": "https://www.fxstreet.com/news/iran-and-oman-push-talks-for-interim-reopening-of-hormuz-202608252343",
+      "pubDate": "2026-08-25T23:43:09.000Z",
+      "description": "Iranian Foreign Minister Abbas Araghchi and his Omani counterpart Badr Albusaidi discussed an “interim framework” aimed at resuming shipping through the Strait of Hormuz, Bloomberg reported on Tuesday.",
+      "source": "FXStreet"
     },
     {
       "title": "Gold advances above $4,650 on US Dollar weakness, Treasury bond buyback plans",
@@ -49,41 +98,6 @@
       "pubDate": "2026-08-25T23:27:51.000Z",
       "description": "Gold price (XAU/USD) rises to around 4,670, the highest since May 14, during the early Asian session on Wednesday. The precious metal extends the rally amid a weaker US Dollar (USD) and as the US Treasury’s bond buyback plans.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Bridgewater Bancshares director David Juran sells $867,316 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/bridgewater-bancshares-director-david-juran-sells-867316-in-stock-93CH-4876054",
-      "pubDate": "2026-08-25T23:20:19.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Seacor Marine EVP & CFO Llorca sells $4,010 in shares",
-      "link": "https://www.investing.com/news/insider-trading-news/seacor-marine-evp--cfo-llorca-sells-4010-in-shares-93CH-4876053",
-      "pubDate": "2026-08-25T23:19:48.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Wall Street ends higher as tech rebounds before Nvidia results",
-      "link": "https://www.investing.com/news/economy-news/us-stock-futures-rise-on-tech-rebound-before-nvidia-inflation-tests-4874797",
-      "pubDate": "2026-08-25T23:18:47.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Deloitte to pay $21.5 million to settle US government probe over DEI",
-      "link": "https://www.investing.com/news/stock-market-news/deloitte-to-pay-215-million-to-settle-us-government-probe-over-dei-4876052",
-      "pubDate": "2026-08-25T23:18:31.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Bolivia’s Paz taps deputy to lead economy after minister’s ousting",
-      "link": "https://www.investing.com/news/economy-news/bolivias-paz-taps-deputy-to-lead-economy-after-ministers-ousting-4876051",
-      "pubDate": "2026-08-25T23:18:14.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Yen bears, it’s time to recalibrate",
@@ -345,13 +359,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Germany: Business climate brightens – Commerzbank",
-      "link": "https://www.fxstreet.com/news/germany-business-climate-brightens-commerzbank-202608251618",
-      "pubDate": "2026-08-25T16:18:22.000Z",
-      "description": "Commerzbank’s Dr. Ralph Solveen notes that the German Ifo Business Climate Index rose from 86.7 to 88.8 in August, with both current conditions and expectations improving. He highlights stronger foreign demand, rising government spending an",
-      "source": "FXStreet"
-    },
-    {
       "title": "TRON Surpasses 400 Million Accounts as Total Transfer Volume Nears $30 Trillion",
       "link": "https://beincrypto.com/tron-surpasses-400-million-accounts/",
       "pubDate": "2026-08-25T16:00:00.000Z",
@@ -558,13 +565,6 @@
       "title": "Bank of Japan Accounts (August 20)",
       "link": "http://www.boj.or.jp/en/statistics/boj/other/acmai/release/2026/ac260820.htm",
       "pubDate": "2026-08-24T01:00:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
-    },
-    {
-      "title": "Statistics on Securities Financing Transactions in Japan",
-      "link": "http://www.boj.or.jp/en/statistics/bis/repo/index.htm",
-      "pubDate": "2026-08-23T23:50:00.000Z",
       "description": "",
       "source": "Bank of Japan"
     },
