@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-25T01:37:01.421Z",
+  "timestamp": "2026-08-25T02:43:31.188Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -2517,7 +2517,7 @@
       "country": "USD",
       "date": "2026-08-26T10:30:00-04:00",
       "impact": "Low",
-      "forecast": "",
+      "forecast": "1.9M",
       "previous": "4.4M",
       "actual": ""
     },
@@ -2607,7 +2607,7 @@
       "country": "CAD",
       "date": "2026-08-27T08:30:00-04:00",
       "impact": "Low",
-      "forecast": "5.6B",
+      "forecast": "3.5B",
       "previous": "-7.2B",
       "actual": ""
     },
@@ -2625,7 +2625,7 @@
       "country": "USD",
       "date": "2026-08-27T08:30:00-04:00",
       "impact": "Low",
-      "forecast": "-99.9B",
+      "forecast": "-100.8B",
       "previous": "-101.5B",
       "actual": ""
     },
@@ -2697,7 +2697,7 @@
       "country": "EUR",
       "date": "2026-08-28T02:45:00-04:00",
       "impact": "Low",
-      "forecast": "0.0%",
+      "forecast": "0.1%",
       "previous": "0.4%",
       "actual": ""
     },
@@ -2778,7 +2778,7 @@
       "country": "USD",
       "date": "2026-08-28T09:45:00-04:00",
       "impact": "Low",
-      "forecast": "57.8",
+      "forecast": "57.9",
       "previous": "57.6",
       "actual": ""
     },
