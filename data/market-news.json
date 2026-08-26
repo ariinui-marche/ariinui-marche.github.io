@@ -1,6 +1,69 @@
 {
-  "timestamp": "2026-08-26T11:40:36.771Z",
+  "timestamp": "2026-08-26T12:01:12.506Z",
   "items": [
+    {
+      "title": "Japanese Yen: Intervention impact assessed – Rabobank",
+      "link": "https://www.fxstreet.com/news/japanese-yen-intervention-impact-assessed-rabobank-202608261158",
+      "pubDate": "2026-08-26T11:58:59.000Z",
+      "description": "Rabobank's Senior FX Strategist Jane Foley reviews Japan’s FX intervention and its impact on USD/JPY.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "2026-08-26 - Banknotes and coins - Access to cash",
+      "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
+      "pubDate": "2026-08-26T11:56:00.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
+    },
+    {
+      "title": "US Dollar: Softer energy supports carry trades – ING",
+      "link": "https://www.fxstreet.com/news/us-dollar-softer-energy-supports-carry-trades-ing-202608261148",
+      "pubDate": "2026-08-26T11:48:30.000Z",
+      "description": "ING’s Chris Turner notes that lower Oil prices and the recent intervention by US Treasury Secretary Scott Bessent have pushed long-end US yields 10–15bp lower, reducing FX and equities volatility.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Indian Rupee poised for positive opening on Thursday amid lower oil prices",
+      "link": "https://www.fxstreet.com/news/indian-rupee-poised-for-positive-opening-on-thursday-amid-lower-oil-prices-202608261144",
+      "pubDate": "2026-08-26T11:44:11.000Z",
+      "description": "The Indian Rupee (INR) is expected to open on a positive note against the US Dollar (USD) on Thursday after a holiday on Wednesday on account of Id-e-Milad. On Tuesday, the USD/INR pair declined 0.35% to near 95.40 due to weaker oil prices,",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Abercrombie & Fitch soars on earnings beat, raised outlook",
+      "link": "https://www.investing.com/news/earnings/abercrombie--fitch-soars-on-earnings-beat-raised-outlook-4876990",
+      "pubDate": "2026-08-26T11:43:56.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Factbox-US companies face rise in cyber attacks",
+      "link": "https://www.investing.com/news/stock-market-news/factboxus-companies-face-rise-in-cyber-attacks-4876988",
+      "pubDate": "2026-08-26T11:42:31.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Why is Summit Therapeutics stock surging today?",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-summit-therapeutics-stock-surging-today-93CH-4876986",
+      "pubDate": "2026-08-26T11:40:49.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Syntec Optics secures order for satellite waveguides",
+      "link": "https://www.investing.com/news/company-news/syntec-optics-secures-order-for-satellite-waveguides-93CH-4876985",
+      "pubDate": "2026-08-26T11:40:36.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Euro: ECB tightening outlook offers support against US Dollar - BNY",
+      "link": "https://www.fxstreet.com/news/euro-ecb-tightening-outlook-offers-support-against-us-dollar-bny-202608261140",
+      "pubDate": "2026-08-26T11:40:17.000Z",
+      "description": "BNY's Geoff Yu highlights that European Central Bank (ECB) Executive Board member Isabel Schnabel sees further rate hikes as necessary, with Euro area inflation risks still tilted to the upside and growth more resilient than expected.",
+      "source": "FXStreet"
+    },
     {
       "title": "Japanese Yen treads water around 159.00 with US PCE Inflation on tap",
       "link": "https://www.fxstreet.com/news/japanese-yen-treads-water-around-15900-with-us-pce-inflation-on-tap-202608261139",
@@ -9,11 +72,46 @@
       "source": "FXStreet"
     },
     {
-      "title": "2026-08-26 - Banknotes and coins - Access to cash",
-      "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-26T11:36:02.000Z",
+      "title": "Bath & Body Works forecasts wider-than-expected third quarter sales decline on weak store traffic",
+      "link": "https://www.investing.com/news/stock-market-news/bath--body-works-lifts-annual-profit-forecast-as-digital-demand-offsets-weak-store-traffic-4876887",
+      "pubDate": "2026-08-26T11:37:12.000Z",
       "description": "",
-      "source": "Swiss National Bank"
+      "source": "Investing.com"
+    },
+    {
+      "title": "H.C. Wainwright raises Zymeworks stock price target to $55 on FDA approval",
+      "link": "https://www.investing.com/news/analyst-ratings/hc-wainwright-raises-zymeworks-stock-price-target-to-55-on-fda-approval-93CH-4876983",
+      "pubDate": "2026-08-26T11:37:09.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Wall St futures subdued as Nvidia results, inflation take center stage",
+      "link": "https://www.investing.com/news/economy-news/us-stock-futures-subdued-in-runup-to-nvidia-results-inflation-print-4876659",
+      "pubDate": "2026-08-26T11:36:52.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "BridgeBio doses first patient in acoramidis heart study",
+      "link": "https://www.investing.com/news/company-news/bridgebio-doses-first-patient-in-acoramidis-heart-study-93CH-4876979",
+      "pubDate": "2026-08-26T11:36:39.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "StorageVault completes C$81.6M storage asset acquisitions",
+      "link": "https://www.investing.com/news/company-news/storagevault-completes-c816m-storage-asset-acquisitions-93CH-4876980",
+      "pubDate": "2026-08-26T11:36:39.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "QumulusAI extends Oklahoma data center lease through 2044",
+      "link": "https://www.investing.com/news/company-news/qumulusai-extends-oklahoma-data-center-lease-through-2044-93CH-4876981",
+      "pubDate": "2026-08-26T11:36:39.000Z",
+      "description": "",
+      "source": "Investing.com"
     },
     {
       "title": "Australian Dollar: RBA tightening risks rise – TD Securities",
@@ -23,41 +121,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "J.M. Smucker Q1 FY2027 slides: tariff refunds boost earnings 71%",
-      "link": "https://www.investing.com/news/company-news/jm-smucker-q1-fy2027-slides-tariff-refunds-boost-earnings-71-93CH-4876922",
-      "pubDate": "2026-08-26T11:23:07.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Why is Uber Technologies stock climbing today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-uber-technologies-stock-climbing-today-93CH-4876921",
-      "pubDate": "2026-08-26T11:22:48.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "TSX futures inch lower amid Canada-U.S. trade spat; Nvidia earnings ahead",
-      "link": "https://www.investing.com/news/stock-market-news/tsx-futures-inch-lower-amid-canadaus-trade-spat-nvidia-earnings-ahead-4876920",
-      "pubDate": "2026-08-26T11:22:08.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Dycom Industries beats estimates on strong infrastructure demand",
-      "link": "https://www.investing.com/news/earnings/dycom-industries-beats-estimates-on-strong-infrastructure-demand-93CH-4876919",
-      "pubDate": "2026-08-26T11:21:52.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Connect Biopharma stock rating reiterated at Buy by Canaccord",
-      "link": "https://www.investing.com/news/analyst-ratings/connect-biopharma-stock-rating-reiterated-at-buy-by-canaccord-93CH-4876917",
-      "pubDate": "2026-08-26T11:20:52.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Shiba Inu (SHIB) Breaks 11-Month Downtrend After Japan Approval",
       "link": "https://beincrypto.com/shiba-inu-price-japan-trend-break/",
       "pubDate": "2026-08-26T11:20:35.000Z",
@@ -65,46 +128,11 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Airbus workers in Spain resume strike after rejecting pay offer",
-      "link": "https://www.investing.com/news/stock-market-news/airbus-workers-in-spain-resume-strike-after-rejecting-pay-offer-93CH-4876916",
-      "pubDate": "2026-08-26T11:17:26.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "US Dollar Index: Range-bound consolidation as PCE looms – BBH",
       "link": "https://www.fxstreet.com/news/us-dollar-index-range-bound-consolidation-as-pce-looms-bbh-202608261117",
       "pubDate": "2026-08-26T11:17:21.000Z",
       "description": "Brown Brothers Harriman’s (BBH) Elias Haddad notes the US Dollar (USD) is firm, consolidating just above recent lows following the US Treasury buyback announcement.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Dycom Industries earnings beat by $0.59, revenue topped estimates",
-      "link": "https://www.investing.com/news/earnings/dycom-industries-earnings-beat-by-059-revenue-topped-estimates-4876915",
-      "pubDate": "2026-08-26T11:16:25.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "AtriCure chief legal officer sells $458,099 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/atricure-chief-legal-officer-sells-458099-in-stock-93CH-4876914",
-      "pubDate": "2026-08-26T11:15:55.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Kohl’s Corp earnings beat by $0.71, revenue fell short of estimates",
-      "link": "https://www.investing.com/news/earnings/kohls-corp-earnings-beat-by-071-revenue-fell-short-of-estimates-4876913",
-      "pubDate": "2026-08-26T11:15:25.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Why is Deutsche Bank stock rallying today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-deutsche-bank-stock-rallying-today-93CH-4876910",
-      "pubDate": "2026-08-26T11:14:37.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Gold slips ahead of US PCE as US Dollar firms modestly",
@@ -178,8 +206,8 @@
     },
     {
       "title": "Crypto Weekly: Bitcoin's rise, crypto-backed midterms",
-      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1XVXlkUmRxNllTaVE5V0UxRTVDOUtXMF84Ql9QWXdhM244cmtReGdNUFpjT1IyNU1IbVZ1V0swU3BjMml3NHdtRWZkd0VIdllvT0t6VVBGSlZOOTM5eDFKM3JDdjBxNXRNOHJFTWtsaENtQ3BYY3M2S1M1UlZ1UQ?oc=5",
-      "pubDate": "2026-08-26T10:04:25.000Z",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9pSDJPOGU4MXFXczlZNWdWQk9oTTU1dmJ5RllUTlNTWGRtMFM2SlpuUjd1N0JhTkZiYkJ2TVFKbWhWbUdIOHprTTdKYkNlMzZXY21Pd1lrRmxJbkVGb3dmS0VHMkVEQQ?oc=5",
+      "pubDate": "2026-08-26T10:04:29.000Z",
       "description": "Crypto Weekly: Bitcoin's rise, crypto-backed midterms&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
@@ -317,38 +345,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "Dow Jones futures hold flat as traders await US PCE inflation data, Nvidia earnings",
-      "link": "https://www.fxstreet.com/news/dow-jones-futures-hold-flat-as-traders-await-us-pce-inflation-data-nvidia-earnings-202608260806",
-      "pubDate": "2026-08-26T08:06:27.000Z",
-      "description": "Dow Jones futures gain steadies around 53,650 during European hours on Wednesday. Meanwhile, S&P 500 futures decline by 0.11%, to trade near 7,680, and Nasdaq 100 futures fall by 0.23% to trade around 29,210.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Japanese Yen: Range-bound trading outlook against US Dollar – UOB",
-      "link": "https://www.fxstreet.com/news/japanese-yen-range-bound-trading-outlook-against-us-dollar-uob-202608260804",
-      "pubDate": "2026-08-26T08:04:35.000Z",
-      "description": "United Overseas Bank (UOB) analysts Quek Ser Leang and Lee Sue Ann describe USD/JPY as remaining in a range-trading phase. For the 24-hour view they see the Dollar fluctuating between 158.95 and 159.50 after recent narrow ranges and little-",
-      "source": "FXStreet"
-    },
-    {
       "title": "US core PCE inflation expected to remain stubbornly high, urging the Fed to hike rates",
       "link": "https://www.fxstreet.com/news/us-core-pce-inflation-set-to-keep-pressure-on-the-federal-reserve-to-hike-interest-rates-202608260800",
       "pubDate": "2026-08-26T08:00:00.000Z",
       "description": "The United States (US) Bureau of Economic Analysis (BEA) is expected to publish the Personal Consumption Expenditures (PCE) Price Index data for July on Wednesday, at 12:30 GMT.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "US Dollar Index Price Forecast: Bears prevail with the 200-day SMA capping rallies",
-      "link": "https://www.fxstreet.com/news/us-dollar-index-price-forecast-bears-prevail-with-the-200-day-sma-capping-rallies-202608260758",
-      "pubDate": "2026-08-26T07:58:26.000Z",
-      "description": "The US Dollar (USD) nurses marginal gains on Wednesday and holds a mild recovery attempt from the three-month highs hit last week, but seems unable to extend gains past the 200-day Simple Moving Average (SMA), just above 99.00, which keeps ",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Euro holds above mid-1.1600s vs USD; looks to US PCE data for fresh impetus",
-      "link": "https://www.fxstreet.com/news/euro-holds-above-mid-11600s-vs-usd-looks-to-us-pce-data-for-fresh-impetus-202608260754",
-      "pubDate": "2026-08-26T07:54:28.000Z",
-      "description": "The EUR/USD pair struggles to capitalize on the previous day's modest bounce from the weekly low, and trades with a negative bias through the early European session on Wednesday.",
       "source": "FXStreet"
     },
     {
