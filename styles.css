@@ -108,15 +108,6 @@ main {
 
 .corr-body.collapsed { display: none; }
 .corr-intro { font-size: 12px; color: var(--text-dim); line-height: 1.4; margin-bottom: 12px; }
-.corr-warn { font-size: 12px; color: var(--orange); font-style: italic; margin-bottom: 10px; line-height: 1.4; }
-.corr-section-label {
-  font-size: 10px;
-  color: var(--text-dim);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin: 12px 0 6px;
-}
-.corr-section-label:first-child { margin-top: 0; }
 .corr-r-row {
   display: flex;
   align-items: center;
@@ -195,52 +186,24 @@ main {
   text-decoration: underline;
   cursor: pointer;
 }
-.corr-analyze-btn {
-  background: var(--accent);
-  color: #0b0e14;
-  border: none;
-  font-weight: 700;
-  font-size: 12px;
-  padding: 8px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  flex-shrink: 0;
-}
-.corr-analyze-btn:disabled { background: #1a1f2b; color: var(--text-dim); cursor: not-allowed; }
-
 /* Result */
-.corr-result-card {
+.corr-verdict {
   margin-top: 14px;
+  padding: 10px 12px;
+  border: 1px solid;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.corr-combo-card {
+  margin-top: 10px;
   background: #0e1219;
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 12px;
+  padding: 10px 12px;
 }
-.corr-result-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
-.corr-result-title { font-size: 13px; font-weight: 700; color: var(--text); }
-.corr-result-meta { font-size: 10px; color: var(--text-dim); }
-.corr-sig-ok { color: var(--green); }
-.corr-sig-off { color: var(--text-dim); }
-.corr-sig-session { color: var(--accent); }
-
-.corr-pair-card {
-  border-top: 1px solid var(--border);
-  padding: 8px 0;
-}
-.corr-pair-card:first-of-type { border-top: none; }
-.corr-pair-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  font-size: 12px;
-}
-.corr-pair-id { font-weight: 700; color: var(--text); }
-.corr-pair-strength { color: var(--text-dim); font-variant-numeric: tabular-nums; }
-.corr-pair-bias { font-weight: 700; font-size: 11px; }
-.corr-cot-row { font-size: 10px; margin-top: 4px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
-.corr-cot-ccy { font-weight: 700; }
-.corr-pair-news { font-size: 10px; color: var(--orange); margin-top: 4px; line-height: 1.5; }
+.corr-combo-card .corr-r-row { border-top: none; padding: 0 0 6px; }
+.corr-advice { font-size: 11px; color: var(--text-dim); line-height: 1.4; }
 
 @media (max-width: 480px) {
   .corr-picker-grid { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); }
