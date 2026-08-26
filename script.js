@@ -278,6 +278,145 @@ document.getElementById('audDeskToggle')?.addEventListener('click', (e) => {
   document.getElementById('audDeskBody').classList.toggle('collapsed', expanded);
 });
 
+// ── Live Correlation — best diversified trio ────────────────────────────
+// Same method as TradeJournal Pro's Analytics "Corrélation" tab
+// (LiveCorrelationChecker.tsx / api/live-correlation.ts): Pearson correlation
+// on 3-month daily returns (Yahoo Finance, fetched daily via GitHub Actions —
+// see scripts/fetch-correlations.mjs), combined with the live Currency
+// Strength scores already fetched above to pick the 3 mutually least-
+// correlated pairs with the strongest combined strength divergence.
+// No COT / personal trade history here (public static site, no accounts).
+
+function corrLevel(r) {
+  if (r >= 0.7) return 'DANGER';
+  if (r >= 0.4) return 'ATTENTION';
+  if (r >= -0.4) return 'OK';
+  if (r >= -0.7) return 'DIVERSIFIED';
+  return 'HEDGE';
+}
+
+const CORR_LEVEL_COLOR = {
+  DANGER: 'var(--red)', ATTENTION: 'var(--orange)', OK: '#a3e635',
+  DIVERSIFIED: 'var(--green)', HEDGE: 'var(--green)',
+};
+
+function corrPairStrength(pair, sm) {
+  const base = pair.slice(0, 3), quote = pair.slice(3, 6);
+  const bs = sm[base], qs = sm[quote];
+  if (bs === undefined || qs === undefined) return null;
+  const diff = bs - qs;
+  return { base, quote, baseScore: Math.round(bs), quoteScore: Math.round(qs), divergence: Math.abs(diff), bias: diff > 2 ? 'BUY' : diff < -2 ? 'SELL' : 'NEUTRAL' };
+}
+
+function combinations(arr, k) {
+  if (k === 0) return [[]];
+  if (arr.length < k) return [];
+  const [first, ...rest] = arr;
+  const withFirst = combinations(rest, k - 1).map((c) => [first, ...c]);
+  const withoutFirst = combinations(rest, k);
+  return [...withFirst, ...withoutFirst];
+}
+
+// Picks the trio of pairs with every mutual |r| < 0.7 and the highest combined
+// currency-strength divergence. Falls back to the trio with the lowest max
+// pairwise |r| if every trio in the basket is correlated.
+function findBestTrio(pairs, combos, sm) {
+  if (pairs.length < 3) return null;
+  const rMap = new Map();
+  for (const c of combos) {
+    rMap.set(`${c.pairA}|${c.pairB}`, c.r);
+    rMap.set(`${c.pairB}|${c.pairA}`, c.r);
+  }
+  const trios = combinations(pairs, 3).map(([a, b, c]) => {
+    const rAB = rMap.get(`${a}|${b}`) ?? 0;
+    const rAC = rMap.get(`${a}|${c}`) ?? 0;
+    const rBC = rMap.get(`${b}|${c}`) ?? 0;
+    const maxR = Math.max(Math.abs(rAB), Math.abs(rAC), Math.abs(rBC));
+    const strengths = [a, b, c].map((p) => corrPairStrength(p, sm));
+    const divScore = strengths.reduce((s, st) => s + (st?.divergence ?? 0), 0);
+    return { pairs: [a, b, c], strengths, r: { ab: rAB, ac: rAC, bc: rBC }, maxR, divScore };
+  });
+  const free = trios.filter((t) => t.maxR < 0.7);
+  if (free.length > 0) {
+    free.sort((x, y) => y.divScore - x.divScore || x.maxR - y.maxR);
+    return { ...free[0], warning: null };
+  }
+  trios.sort((x, y) => x.maxR - y.maxR);
+  return { ...trios[0], warning: 'Every pair in the basket is correlated right now — showing the least-exposed trio.' };
+}
+
+function corrPairRow(pair, strength) {
+  if (!strength) return `<div class="corr-pair-row"><span class="corr-pair-id">${pair}</span><span class="corr-pair-strength">strength unavailable</span></div>`;
+  const biasColor = strength.bias === 'BUY' ? 'var(--green)' : strength.bias === 'SELL' ? 'var(--red)' : 'var(--gray)';
+  return `
+    <div class="corr-pair-row">
+      <span class="corr-pair-id">${pair}</span>
+      <span class="corr-pair-strength">${strength.base} ${strength.baseScore} / ${strength.quote} ${strength.quoteScore}</span>
+      <span class="corr-pair-bias" style="color:${biasColor}">${strength.bias}</span>
+    </div>`;
+}
+
+function renderCorrelation(correlData, currencyData) {
+  try {
+    renderCorrelationUnsafe(correlData, currencyData);
+  } catch (err) {
+    console.error('renderCorrelation failed, hiding panel', err);
+    document.getElementById('corrBody').innerHTML = '<div class="empty-state">Data unavailable</div>';
+  }
+}
+
+function renderCorrelationUnsafe(correlData, currencyData) {
+  const body = document.getElementById('corrBody');
+  if (!correlData?.pairs?.length || !correlData?.combos?.length) {
+    body.innerHTML = '<div class="empty-state">Data unavailable</div>';
+    return;
+  }
+
+  const sm = {};
+  for (const c of currencyData?.currencies || []) sm[c.id] = c.score;
+
+  const trio = findBestTrio(correlData.pairs, correlData.combos, sm);
+  if (!trio) {
+    body.innerHTML = '<div class="empty-state">Data unavailable</div>';
+    return;
+  }
+
+  const pairRows = trio.pairs.map((p, i) => corrPairRow(p, trio.strengths[i])).join('');
+  const rEntries = [
+    [trio.pairs[0], trio.pairs[1], trio.r.ab],
+    [trio.pairs[0], trio.pairs[2], trio.r.ac],
+    [trio.pairs[1], trio.pairs[2], trio.r.bc],
+  ];
+  const rRows = rEntries.map(([a, b, r]) => {
+    const level = corrLevel(r);
+    return `
+      <div class="corr-r-row">
+        <span class="corr-r-pairs">${a} × ${b}</span>
+        <span class="corr-r-value" style="color:${CORR_LEVEL_COLOR[level]}">${r >= 0 ? '+' : ''}${r.toFixed(2)}</span>
+        <span class="corr-r-badge" style="color:${CORR_LEVEL_COLOR[level]}">${level}</span>
+      </div>`;
+  }).join('');
+
+  const asOf = correlData.timestamp ? new Date(correlData.timestamp).toLocaleString('en-GB') : '';
+
+  body.innerHTML = `
+    <div class="corr-intro">Best trio of pairs from the current basket to trade together: mutually low-correlated, with the strongest combined currency-strength divergence.</div>
+    ${trio.warning ? `<div class="corr-warn">${trio.warning}</div>` : ''}
+    <div class="corr-trio-card">
+      <div class="corr-section-label">Selected pairs</div>
+      ${pairRows}
+      <div class="corr-section-label">Pairwise correlation</div>
+      ${rRows}
+    </div>
+    <div class="corr-footer">Basket: ${correlData.pairs.join(', ')} · Pearson, 3-month daily returns, updated ${asOf || 'daily'}</div>`;
+}
+
+document.getElementById('corrToggle')?.addEventListener('click', (e) => {
+  const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
+  e.currentTarget.setAttribute('aria-expanded', String(!expanded));
+  document.getElementById('corrBody').classList.toggle('collapsed', expanded);
+});
+
 let currentEvents = [];
 const currentImpactFilters = new Set(['High']);
 
@@ -618,15 +757,17 @@ function renderNews() {
 
 async function loadAll() {
   try {
-    const [currencyData, ecoData, newsData, audDeskData] = await Promise.all([
+    const [currencyData, ecoData, newsData, audDeskData, correlData] = await Promise.all([
       fetchCurrencyStrength().catch((err) => { console.error(err); return null; }),
       loadJSON('./data/eco-calendar.json').catch(() => null),
       loadJSON('./data/market-news.json').catch(() => null),
       loadJSON('./data/aud-desk.json').catch(() => null),
+      loadJSON('./data/correlations.json').catch(() => null),
     ]);
 
     renderAudDesk(audDeskData);
     renderCurrencies(currencyData);
+    renderCorrelation(correlData, currencyData);
 
     currentEvents = (ecoData?.events || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
     findNextHighEvent();

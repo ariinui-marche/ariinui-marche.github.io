@@ -106,6 +106,40 @@ main {
 
 .currency-grid.collapsed { display: none; }
 
+.corr-body.collapsed { display: none; }
+.corr-intro { font-size: 12px; color: var(--text-dim); line-height: 1.4; margin-bottom: 10px; }
+.corr-warn { font-size: 12px; color: var(--orange); font-style: italic; margin-bottom: 10px; line-height: 1.4; }
+.corr-trio-card {
+  background: #0e1219;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+}
+.corr-section-label {
+  font-size: 10px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 10px 0 6px;
+}
+.corr-section-label:first-child { margin-top: 0; }
+.corr-pair-row, .corr-r-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  padding: 6px 0;
+  border-top: 1px solid var(--border);
+}
+.corr-pair-row:first-of-type, .corr-r-row:first-of-type { border-top: none; }
+.corr-pair-id, .corr-r-pairs { font-weight: 700; color: var(--text); }
+.corr-pair-strength { color: var(--text-dim); font-variant-numeric: tabular-nums; }
+.corr-pair-bias { font-weight: 700; font-size: 11px; }
+.corr-r-value { font-variant-numeric: tabular-nums; font-weight: 700; }
+.corr-r-badge { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+.corr-footer { margin-top: 10px; font-size: 11px; color: var(--text-dim); line-height: 1.4; }
+
 .currency-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
