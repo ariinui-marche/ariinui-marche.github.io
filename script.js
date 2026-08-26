@@ -280,12 +280,30 @@ document.getElementById('audDeskToggle')?.addEventListener('click', (e) => {
 
 // ── Live Correlation — pick 2-3 pairs, see if they move together ────────
 // Direct correlation checker: pick exactly the pairs you're considering
-// trading (2 or 3), see the correlation strength between them instantly —
-// avoids accidentally trading pairs that move in the same direction (double
-// exposure) or missing an easy hedge. Data: Yahoo Finance daily closes,
-// Pearson on 3-month daily returns — same free source TradingView/OANDA use,
-// precomputed daily via GitHub Actions (scripts/fetch-correlations.mjs) so
-// picking pairs here recomputes instantly, no server round-trip.
+// trading (2 or 3) and a timeframe, see the correlation strength between
+// them — avoids accidentally trading pairs that move in the same direction
+// (double exposure) or missing an easy hedge.
+// Data: Yahoo Finance (Pearson), fetched on demand — only when a pair or
+// timeframe button is pressed, never polled — via TradeJournal Pro's
+// api/live-correlation.ts (same Vercel proxy already used for Currency
+// Strength above; Yahoo Finance blocks direct browser calls via CORS,
+// confirmed by testing — a server proxy is required). Timeframe options
+// mirror myfxbook's correlation tool (5min…1 month) — same method (Pearson
+// on Yahoo Finance price data) but a different underlying feed than
+// myfxbook's own broker ticks, so expect similar but not identical numbers.
+
+const LIVE_CORR_URL = 'https://ariinuiirgina.vercel.app/api/live-correlation';
+
+const CORR_TIMEFRAMES = [
+  { id: '5m', label: '5 min' },
+  { id: '15m', label: '15 min' },
+  { id: '30m', label: '30 min' },
+  { id: '1h', label: '1 hour' },
+  { id: '4h', label: '4 hours' },
+  { id: '1d', label: '1 day' },
+  { id: '1w', label: '1 week' },
+  { id: '1mo', label: '1 month' },
+];
 
 const CORR_ALL_PAIRS = [
   { id: 'EURUSD', label: 'EUR/USD', category: 'Major' },
@@ -324,9 +342,13 @@ const CORR_DEFAULT_COUNT = 10;
 const CORR_MIN_SELECT = 2;
 const CORR_MAX_SELECT = 3;
 
-let corrData = null; // data/correlations.json
 let corrSelected = new Set(); // empty by default — pick the exact pairs you're weighing
 let corrShowAllPairs = false;
+let corrTimeframe = '1d';
+let corrLoading = false;
+let corrError = null;
+let corrCombos = null; // [{pairA,pairB,r}] from the last successful live fetch
+let corrFetchSeq = 0; // guards against a stale response overwriting a newer one
 
 function corrLevel(r) {
   if (r >= 0.7) return 'DANGER';
@@ -392,11 +414,16 @@ function corrPickerHtml() {
 
   const selectedChips = [...corrSelected].map((id) => `<button type="button" class="corr-selected-chip" data-remove="${id}">${id} ×</button>`).join('');
 
+  const timeframeChips = CORR_TIMEFRAMES.map((t) => `
+    <button type="button" class="corr-tf-chip ${t.id === corrTimeframe ? 'corr-tf-selected' : ''}" data-tf="${t.id}">${t.label}</button>`).join('');
+
   return `
     <div class="corr-picker-grid">${chips}</div>
     <button type="button" id="corrShowMoreBtn" class="corr-showmore">
       ${corrShowAllPairs ? '▲ Hide extra pairs' : `▼ Show ${CORR_ALL_PAIRS.length - CORR_DEFAULT_COUNT} more pairs (crosses & minors)`}
     </button>
+    <div class="corr-section-label">Timeframe</div>
+    <div class="corr-tf-grid">${timeframeChips}</div>
     <div class="corr-selbar">
       <div class="corr-selbar-left">
         ${corrSelected.size === 0
@@ -408,25 +435,11 @@ function corrPickerHtml() {
 
 function corrResultHtml() {
   if (corrSelected.size < CORR_MIN_SELECT) return '';
-  if (!corrData?.combos?.length) return '';
+  if (corrLoading) return '<div class="corr-loading">Checking correlation…</div>';
+  if (corrError) return `<div class="empty-state">${corrError}</div>`;
+  if (!corrCombos?.length) return '';
 
-  const rMap = new Map();
-  for (const c of corrData.combos) {
-    rMap.set(`${c.pairA}|${c.pairB}`, c.r);
-    rMap.set(`${c.pairB}|${c.pairA}`, c.r);
-  }
-
-  const pairs = [...corrSelected];
-  const combos = [];
-  for (let i = 0; i < pairs.length; i++) {
-    for (let j = i + 1; j < pairs.length; j++) {
-      const a = pairs[i], b = pairs[j];
-      const r = rMap.get(`${a}|${b}`);
-      if (r === undefined) continue;
-      combos.push({ a, b, r, level: corrLevel(r) });
-    }
-  }
-  if (!combos.length) return '<div class="empty-state">Correlation data unavailable for this selection</div>';
+  const combos = corrCombos.map((c) => ({ a: c.pairA, b: c.pairB, r: c.r, level: corrLevel(c.r) }));
 
   const rows = combos.map((c) => `
     <div class="corr-combo-card">
@@ -445,9 +458,8 @@ function corrResultHtml() {
     ${rows}`;
 }
 
-function renderCorrelation(cData) {
+function renderCorrelation() {
   try {
-    corrData = cData;
     corrRenderBody();
   } catch (err) {
     console.error('renderCorrelation failed, hiding panel', err);
@@ -457,20 +469,43 @@ function renderCorrelation(cData) {
 
 function corrRenderBody() {
   const body = document.getElementById('corrBody');
-  if (!corrData?.pairs?.length || !corrData?.combos?.length) {
-    body.innerHTML = '<div class="empty-state">Data unavailable</div>';
-    return;
-  }
-
-  const asOf = corrData.timestamp ? new Date(corrData.timestamp).toLocaleString('en-GB') : '';
-
   body.innerHTML = `
-    <div class="corr-intro">Pick 2 or 3 pairs to see how correlated they are, so you don't accidentally trade two or three pairs moving in the same direction at once.</div>
+    <div class="corr-intro">Pick 2 or 3 pairs and a timeframe to see how correlated they are, so you don't accidentally trade two or three pairs moving in the same direction at once.</div>
     ${corrPickerHtml()}
     ${corrResultHtml()}
-    <div class="corr-footer">Pearson, 3-month daily returns, updated ${asOf || 'daily'} · 31-pair catalog</div>`;
+    <div class="corr-footer">Pearson correlation, Yahoo Finance, fetched live on selection · 31-pair catalog</div>`;
 
   corrBindPickerEvents();
+}
+
+async function corrFetchIfReady() {
+  if (corrSelected.size < CORR_MIN_SELECT) {
+    corrCombos = null;
+    corrError = null;
+    corrLoading = false;
+    corrRenderBody();
+    return;
+  }
+  const seq = ++corrFetchSeq;
+  corrLoading = true;
+  corrError = null;
+  corrRenderBody();
+  try {
+    const url = `${LIVE_CORR_URL}?pairs=${[...corrSelected].join(',')}&timeframe=${corrTimeframe}`;
+    const res = await fetch(url);
+    const body = await res.json().catch(() => ({}));
+    if (seq !== corrFetchSeq) return; // a newer selection/timeframe change superseded this request
+    if (!res.ok) throw new Error(body.error || `HTTP ${res.status}`);
+    corrCombos = (body.combos || []).filter((c) => typeof c.r === 'number');
+  } catch (err) {
+    if (seq !== corrFetchSeq) return;
+    console.error('Live correlation fetch failed', err);
+    corrError = 'Live correlation unavailable right now — try again in a moment.';
+    corrCombos = null;
+  } finally {
+    if (seq === corrFetchSeq) corrLoading = false;
+    corrRenderBody();
+  }
 }
 
 function corrBindPickerEvents() {
@@ -480,13 +515,19 @@ function corrBindPickerEvents() {
       const id = btn.dataset.pair;
       if (corrSelected.has(id)) corrSelected.delete(id);
       else if (corrSelected.size < CORR_MAX_SELECT) corrSelected.add(id);
-      corrRenderBody();
+      corrFetchIfReady();
     });
   });
   body.querySelectorAll('[data-remove]').forEach((btn) => {
     btn.addEventListener('click', () => {
       corrSelected.delete(btn.dataset.remove);
-      corrRenderBody();
+      corrFetchIfReady();
+    });
+  });
+  body.querySelectorAll('.corr-tf-chip').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      corrTimeframe = btn.dataset.tf;
+      corrFetchIfReady();
     });
   });
   document.getElementById('corrShowMoreBtn')?.addEventListener('click', () => {
@@ -495,7 +536,7 @@ function corrBindPickerEvents() {
   });
   document.getElementById('corrClearBtn')?.addEventListener('click', () => {
     corrSelected.clear();
-    corrRenderBody();
+    corrFetchIfReady();
   });
 }
 
@@ -845,17 +886,16 @@ function renderNews() {
 
 async function loadAll() {
   try {
-    const [currencyData, ecoData, newsData, audDeskData, correlData] = await Promise.all([
+    const [currencyData, ecoData, newsData, audDeskData] = await Promise.all([
       fetchCurrencyStrength().catch((err) => { console.error(err); return null; }),
       loadJSON('./data/eco-calendar.json').catch(() => null),
       loadJSON('./data/market-news.json').catch(() => null),
       loadJSON('./data/aud-desk.json').catch(() => null),
-      loadJSON('./data/correlations.json').catch(() => null),
     ]);
 
     renderAudDesk(audDeskData);
     renderCurrencies(currencyData);
-    renderCorrelation(correlData);
+    renderCorrelation();
 
     currentEvents = (ecoData?.events || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
     findNextHighEvent();

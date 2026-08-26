@@ -186,6 +186,35 @@ main {
   text-decoration: underline;
   cursor: pointer;
 }
+
+.corr-section-label {
+  font-size: 10px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 4px 0 6px;
+}
+
+/* Timeframe selector */
+.corr-tf-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.corr-tf-chip {
+  background: #0e1219;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  cursor: pointer;
+}
+.corr-tf-selected { border-color: var(--accent); color: var(--accent); background: rgba(245, 182, 66, 0.1); }
+
+.corr-loading { font-size: 12px; color: var(--text-dim); margin-top: 12px; }
+
 /* Result */
 .corr-verdict {
   margin-top: 14px;
