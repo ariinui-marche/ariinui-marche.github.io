@@ -1,82 +1,131 @@
 {
-  "timestamp": "2026-08-26T10:44:00.001Z",
+  "timestamp": "2026-08-26T11:08:58.458Z",
   "items": [
+    {
+      "title": "Gold slips ahead of US PCE as US Dollar firms modestly",
+      "link": "https://www.fxstreet.com/news/gold-slips-ahead-of-us-pce-as-us-dollar-firms-modestly-202608261107",
+      "pubDate": "2026-08-26T11:07:10.000Z",
+      "description": "Gold (XAU/USD) edges lower on Wednesday as buyers trim their exposure ahead of the US Personal Consumption Expenditures (PCE) Price Index data, due at 12:30 GMT. At the time of writing, XAU/USD trades around $4,615 after reaching $4,697 on ",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Innio’s 44% drop validates InvestingPro’s overvalued call",
+      "link": "https://www.investing.com/news/investment-ideas/innios-44-drop-validates-investingpros-overvalued-call-93CH-4876858",
+      "pubDate": "2026-08-26T11:02:26.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Webull president Denier sells $475,607 in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/webull-president-denier-sells-475607-in-shares-93CH-4876848",
+      "pubDate": "2026-08-26T11:01:12.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "GCT Semiconductor partners on UAV control technology development",
+      "link": "https://www.investing.com/news/company-news/gct-semiconductor-partners-on-uav-control-technology-development-93CH-4876844",
+      "pubDate": "2026-08-26T11:00:46.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Why is Movado stock rallying today?",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-movado-stock-rallying-today-93CH-4876843",
+      "pubDate": "2026-08-26T11:00:42.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Alibaba completes HK$80 billion share placement for AI expansion",
+      "link": "https://www.investing.com/news/company-news/alibaba-completes-hk80-billion-share-placement-for-ai-expansion-93CH-4876842",
+      "pubDate": "2026-08-26T11:00:33.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "FAA approves Surf Air Mobility’s flight operations software",
+      "link": "https://www.investing.com/news/company-news/faa-approves-surf-air-mobilitys-flight-operations-software-93CH-4876841",
+      "pubDate": "2026-08-26T11:00:32.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "GBP/USD Price Forecast: Hits fresh intra-week lows after failure at 1.3660 resistance",
+      "link": "https://www.fxstreet.com/news/gbp-usd-price-forecast-hits-fresh-intra-week-lows-after-failure-at-13660-resistance-202608261059",
+      "pubDate": "2026-08-26T10:59:22.000Z",
+      "description": "The British Pound (GBP) pares gains against the US Dollar (USD) on Wednesday, with bears testing the bottom of the intra-week trading range at the 1.3620 area, after failure to breach resistance at 1.3660.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "nCino stock rating held at Neutral by BTIG on core growth",
+      "link": "https://www.investing.com/news/analyst-ratings/ncino-stock-rating-held-at-neutral-by-btig-on-core-growth-93CH-4876830",
+      "pubDate": "2026-08-26T10:59:03.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
     {
       "title": "2026-08-26 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-26T10:39:01.000Z",
+      "pubDate": "2026-08-26T10:59:01.000Z",
       "description": "",
       "source": "Swiss National Bank"
     },
     {
-      "title": "Jefferies raises trucking sector outlook on capacity cuts despite summer slowdown",
-      "link": "https://www.investing.com/news/stock-market-news/jefferies-raises-trucking-sector-outlook-on-capacity-cuts-despite-summer-slowdown-93CH-4876664",
-      "pubDate": "2026-08-26T10:23:08.000Z",
+      "title": "Sterling dips, currency markets look to the U.S. for cues",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQRmNfNnVraUF0blNIV2hlNkhGZFgtd1ltbmRHaW1nVTQ5YUJBOE5rRTZrNEZaVzkwdTJIQy1teHlrM0ViUlVkR2RQQXoxazUzTGhaVlF4Rk1tTE5Ya1ROc25nTV93M185YV9BLWFFQzZINTJMSy1XVHh1Yjc1M1hMejB6WlA4aFlvdGxtMUxQYm5zUQ?oc=5",
+      "pubDate": "2026-08-26T10:58:09.000Z",
+      "description": "Sterling dips, currency markets look to the U.S. for cues&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Target Hospitality stock surges 10% on $250M contract win",
+      "link": "https://www.investing.com/news/stock-market-news/target-hospitality-stock-surges-10-on-250m-contract-win-93CH-4876823",
+      "pubDate": "2026-08-26T10:55:40.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Prudential to sell 2% stake in ICICI Prudential Asset Management",
-      "link": "https://www.investing.com/news/company-news/prudential-to-sell-2-stake-in-icici-prudential-asset-management-93CH-4876662",
-      "pubDate": "2026-08-26T10:21:34.000Z",
+      "title": "Boston Scientific hit by cyberattack, global operations affected",
+      "link": "https://www.investing.com/news/stock-market-news/boston-scientific-hit-by-cyberattack-global-operations-affected-4876822",
+      "pubDate": "2026-08-26T10:55:17.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Trump administration moves to impose more than $100,000 fee for H-1B worker visas",
-      "link": "https://www.investing.com/news/stock-market-news/trump-administration-moves-to-impose-more-than-100000-fee-for-h1b-worker-visas-4873633",
-      "pubDate": "2026-08-26T10:20:05.000Z",
+      "title": "Movado earnings beat by $0.19, revenue topped estimates",
+      "link": "https://www.investing.com/news/earnings/movado-earnings-beat-by-019-revenue-topped-estimates-4876821",
+      "pubDate": "2026-08-26T10:55:09.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "US stock futures subdued in run-up to Nvidia results, inflation print",
-      "link": "https://www.investing.com/news/economy-news/us-stock-futures-subdued-in-runup-to-nvidia-results-inflation-print-4876659",
-      "pubDate": "2026-08-26T10:19:47.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "Jim Cramer Flags a &#8216;Monumental Day&#039;: Will NVIDIA Earnings Move Markets?",
+      "link": "https://beincrypto.com/jim-cramer-monumental-day-nvidia-earnings/",
+      "pubDate": "2026-08-26T10:54:07.000Z",
+      "description": "Jim Cramer senses a monumental day as NVIDIA reports Q2 earnings, with Wall Street eyeing $92 billion in revenue.\nThe post Jim Cramer Flags a &#8216;Monumental Day&#039;: Will NVIDIA Earnings Move Markets? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
     },
     {
-      "title": "Boston Scientific reports cybersecurity incident affecting operations, shares fall",
-      "link": "https://www.investing.com/news/stock-market-news/boston-scientific-reports-cybersecurity-incident-affecting-operations-shares-fall-93CH-4876658",
-      "pubDate": "2026-08-26T10:19:37.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "USD/CAD Price Forecast: Approaches 20-day EMA on the back of US-Canada trade dispute",
+      "link": "https://www.fxstreet.com/news/usd-cad-price-forecast-approaches-20-day-ema-on-the-back-of-us-canada-trade-dispute-202608261053",
+      "pubDate": "2026-08-26T10:53:59.000Z",
+      "description": "The US Dollar (USD) trades 0.2% higher at around 1.3870 against the Canadian Dollar (USD) during the European trading session on Wednesday. The Loonie pair strengthens as the Canadian Dollar underperforms due to trade tensions between the U",
+      "source": "FXStreet"
     },
     {
-      "title": "Exclusive-Hack of water sector supplier draws FBI scrutiny as Iran-linked cyber concerns grow",
-      "link": "https://www.investing.com/news/economy-news/exclusivehack-of-water-sector-supplier-draws-fbi-scrutiny-as-iranlinked-cyber-concerns-grow-4876626",
-      "pubDate": "2026-08-26T10:19:24.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "Dollar, Treasury Yields Edge Higher Ahead of PCE Data",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOdzJBcGd1Y3JLcE5JVDR1YVNDbUNrNWdQMDJqbmVLRzV4d3hWWkxNREtqTm5FNTBvWTBKa0twQ3E5eTJYZTVWUl9wdGRKNHNua0RaYW9ZMUpsRl8tY0wxZmZ6OUszeGFtTzlLYS1DN1NPSlJmaV9Gd05hM0ttNkNoNE03bXl2WVZtTHRlUg?oc=5",
+      "pubDate": "2026-08-26T10:45:00.000Z",
+      "description": "Dollar, Treasury Yields Edge Higher Ahead of PCE Data&nbsp;&nbsp;WSJ",
+      "source": "Google News"
     },
     {
-      "title": "Exclusive-US produce supplier Taylor Farms frequently fails to disclose workplace injury tallies, records show",
-      "link": "https://www.investing.com/news/economy-news/exclusiveus-produce-supplier-taylor-farms-frequently-fails-to-disclose-workplace-injury-tallies-records-show-4876623",
-      "pubDate": "2026-08-26T10:19:07.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Wells Fargo cuts Intuit stock price target to $300 on tax growth concerns",
-      "link": "https://www.investing.com/news/analyst-ratings/wells-fargo-cuts-intuit-stock-price-target-to-300-on-tax-growth-concerns-93CH-4876657",
-      "pubDate": "2026-08-26T10:19:07.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Jefferies cuts Qifu Technology stock price target on weak results",
-      "link": "https://www.investing.com/news/analyst-ratings/jefferies-cuts-qifu-technology-stock-price-target-on-weak-results-93CH-4876656",
-      "pubDate": "2026-08-26T10:19:06.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Wells Fargo cuts Dick’s Sporting Goods stock price target on footwear weakness",
-      "link": "https://www.investing.com/news/analyst-ratings/wells-fargo-cuts-dicks-sporting-goods-stock-price-target-on-footwear-weakness-93CH-4876654",
-      "pubDate": "2026-08-26T10:19:02.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "Bill Gates Wants Up to 40% of Jobs Reserved for Humans, Not AI",
+      "link": "https://beincrypto.com/bill-gates-human-reserved-jobs-ai/",
+      "pubDate": "2026-08-26T10:36:51.000Z",
+      "description": "Bill Gates has proposed setting aside certain jobs for human workers only, a concept he calls Human Reserved, in a new essay on the impact of artificial intelligence (AI). The Microsoft co-founder paired the proposal with a call to tax AI u",
+      "source": "BeInCrypto"
     },
     {
       "title": "Piero Cipollone: From vision to delivery: building Europe’s tokenised financial market",
@@ -101,8 +150,8 @@
     },
     {
       "title": "Crypto Weekly: Bitcoin's rise, crypto-backed midterms",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBNbDNIeUNnS2M2cTE1NDZOLWh5QmgyQ2tlVmYyLVhkSW0wZTNNbEtuRmM2elBlZFBVTklDTXdvYURrbVBaeG9VbjZMZUJRY19nRkYwSm8zOHloTWpjbGdPY0FsWWJXMm8?oc=5",
-      "pubDate": "2026-08-26T10:03:39.000Z",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1XVXlkUmRxNllTaVE5V0UxRTVDOUtXMF84Ql9QWXdhM244cmtReGdNUFpjT1IyNU1IbVZ1V0swU3BjMml3NHdtRWZkd0VIdllvT0t6VVBGSlZOOTM5eDFKM3JDdjBxNXRNOHJFTWtsaENtQ3BYY3M2S1M1UlZ1UQ?oc=5",
+      "pubDate": "2026-08-26T10:04:25.000Z",
       "description": "Crypto Weekly: Bitcoin's rise, crypto-backed midterms&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
@@ -310,27 +359,6 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "US Dollar: Buyback impact stays marginal – BNY",
-      "link": "https://www.fxstreet.com/news/us-dollar-buyback-impact-stays-marginal-bny-202608260729",
-      "pubDate": "2026-08-26T07:29:50.000Z",
-      "description": "BNY’s Geoff Yu notes that U.S. cross‑border exposures have stabilized, with Dollar FX hedges broadly unchanged and U.S. equity holdings recovering as risk sentiment improves.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Euro wavers within range against British Pound with  markets calm and little data",
-      "link": "https://www.fxstreet.com/news/euro-wavers-within-range-against-british-pound-with-markets-calm-and-little-data-202608260719",
-      "pubDate": "2026-08-26T07:19:49.000Z",
-      "description": "The Euro (EUR) edges up for the second consecutive day against the British Pound (GBP) on Wednesday, trading halfway within the monthly range.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Hungarian Forint: MNB caution offers modest HUF support - Commerzbank",
-      "link": "https://www.fxstreet.com/news/hungarian-forint-mnb-caution-offers-modest-huf-support-commerzbank-202608260718",
-      "pubDate": "2026-08-26T07:18:20.000Z",
-      "description": "Commerzbank’s Tatha Ghose reports that Hungary’s central bank, Magyar Nemzeti Bank (MNB), cut its base rate to 5.50% but avoided pre-committing to further easing, stressing that September’s Inflation Report will guide policy. The bank will ",
-      "source": "FXStreet"
-    },
-    {
       "title": "Australia’s Second-Largest Pension Makes Big Bet on Yen Strength",
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPako1ekRTR205bG1uVlIxQnF3MkhndW9qbWlaZjhvdURQY19HSTVtb3JEX2RtQ3FleDUzaFNZMEhWV1ZYbUN2YTFCSENDaUxZZWRPRDNFN0ZPZlFsWW1ZQXFLWkhOZHhnOUdjRVpfYUVCOFBuT0VHWXVfdXNrSTRDdGJZUjg4a1Z3MWFHM28xbE92STVacU5lUTR0Y3U5b3hnbkloM1dzRzNlZ2xyUEpMSA?oc=5",
       "pubDate": "2026-08-26T07:00:41.000Z",
@@ -373,20 +401,6 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Nvidia Earnings Today: What Its Earnings Will Reveal About AI Bubble Risk",
-      "link": "https://beincrypto.com/nvidia-earnings-ai-bubble-risk/",
-      "pubDate": "2026-08-26T06:00:00.000Z",
-      "description": "Nvidia's Q2 earnings today reveal whether AI spending is broadening or concentrated among a few giant buyers.\nThe post Nvidia Earnings Today: What Its Earnings Will Reveal About AI Bubble Risk appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Why Is The Crypto Market Up Today?",
-      "link": "https://beincrypto.com/why-is-the-crypto-market-up-today/",
-      "pubDate": "2026-08-26T05:30:21.000Z",
-      "description": "The crypto market is up 0.58% on Wednesday, August 26, near $2.63 trillion, but the day hides a warning. Since yesterday&#8217;s high, the total market cap has slipped almost 2.9%, a sign sellers finally stepped in. The rally has been rejec",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Gold refreshes daily low, around $4,625 as USD sticks to modest gains ahead of US PCE",
       "link": "https://www.fxstreet.com/news/gold-holds-steady-around-4-650-as-traders-look-to-us-pce-for-fed-rate-cues-202608260332",
       "pubDate": "2026-08-26T03:32:20.000Z",
@@ -424,7 +438,7 @@
     {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-25T18:56:10.000Z",
+      "pubDate": "2026-08-25T18:56:03.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
     },
@@ -441,6 +455,13 @@
       "pubDate": "2026-08-25T18:00:00.000Z",
       "description": "Minutes of the Board's discount rate meetings on July 20 and July 29, 2026",
       "source": "Federal Reserve"
+    },
+    {
+      "title": "India's Axis Bank bets on data centres to gold loans to outpace industry credit growth",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQLUR3aklpWDFRWUprRlc4cXRERTlTZzFjajN5VkY5ZlBOWUt3d2hvM3ZfMG9USFFRTFJKRDhUblc5Zlg0YURSSm9fbk51VW8yMjkzOTFNSzZpMDJ3Y2t0OGppa21pQW9zVGN3SzIxOU9xS0NSQVdaMjFzUHp3ZGhNZGgxRmEySmdUVzhBaFQ4bm9NbHg5X3J3Vi0yMEYzQTRzdDNMU2tkcVM5M1l6d1pNcmlybEhzdHdJMHlfQmdTWXlQQQ?oc=5",
+      "pubDate": "2026-08-25T15:50:28.000Z",
+      "description": "India's Axis Bank bets on data centres to gold loans to outpace industry credit growth&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "Union Bank of India taps dollar debt market after 12-year hiatus",
@@ -485,20 +506,6 @@
       "source": "Reuters"
     },
     {
-      "title": "Gold Fields Limited",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBBV2JBUzNlc0h0TTRiZk96NjIyMEVOa2IwYzNuN0FKaXVFOTY3ZjIwVUlxRkp5bDVhQ0NZN0gyeW51OHNWZVBWbFJ2djZPMlBxMWtabUN5bzlDTGVPQmNjLVd3?oc=5",
-      "pubDate": "2026-08-25T08:12:05.000Z",
-      "description": "Gold Fields Limited&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Iran war makes multibillion-dollar Tanzania LNG more attractive, Equinor says",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOQVRRRXpGLTQzSUFSbHE2c1c0RGxGTGRhOWpneHlwRTI5WlBDQWY1UWJBOWFITHFyZkxGQ2xGYzkxT1ZZLWtCM0ZRbVhncEUyeTM3aG05Y0gtekpwNE1vdjdkNjNUc1BiOUw1cDljM1gtX0p3Yi16elh6UTNYeGJlNXRiVlZRU0diWnlnVkVOVnVuY2JITnNKVHgzRnJGVzRsTW5jRXNB?oc=5",
-      "pubDate": "2026-08-25T07:40:00.000Z",
-      "description": "Iran war makes multibillion-dollar Tanzania LNG more attractive, Equinor says&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "Indicators for Core CPI",
       "link": "http://www.boj.or.jp/en/research/research_data/cpi/index.htm",
       "pubDate": "2026-08-25T05:00:00.000Z",
@@ -517,13 +524,6 @@
       "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNTUpiTUJUSEFOX2MzZ2JHenZWMURROUE3bldXVkY2a2ZQek5zM1VUdk1HQjNMdV92ZTlnMU9lSk9YczQ4M2lzZkV4MUFILVJUaFZIazJtUnNFNm1ZbFNrRHJEZk9LNTE4THhuVW94ZjMzbENaN0FwVjJrMHlNc2hoai1QaXFLc2k0eFZYZ3lfblRfZjFueDRSMV9weUhXX3dOZmJj?oc=5",
       "pubDate": "2026-08-25T02:06:00.000Z",
       "description": "Dollar little changed as Iran sanctions, Treasury buybacks gauged&nbsp;&nbsp;CNBC",
-      "source": "Google News"
-    },
-    {
-      "title": "Gold Up 2% Amid Weaker Dollar, Falling Bond Yields",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRkNPeXZZcHU1eW00NDVqRldZQzFkMGVsUXRXcHFKbkdpdzBjM0FFUWtISHdtSi16OEw4ZGlGQmViWUppdmtTTFk3WjdCQjlwNjAtSG5Ka1JtZTdoOE9PbUlreDhMZkpfSjdpXzNoWDVUa0xzdGJyTWpENHdOUXBFTlQ4X0g5bkhDX1hETk0xUWc2SDVFQnlLaWd0X1JPT1ZaNF82X2RMZW91ZlFka3pNMVRHOA?oc=5",
-      "pubDate": "2026-08-25T01:55:45.000Z",
-      "description": "Gold Up 2% Amid Weaker Dollar, Falling Bond Yields&nbsp;&nbsp;WSJ",
       "source": "Google News"
     },
     {
