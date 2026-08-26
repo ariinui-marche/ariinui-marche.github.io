@@ -1,19 +1,110 @@
 {
-  "timestamp": "2026-08-26T05:53:22.931Z",
+  "timestamp": "2026-08-26T06:22:41.143Z",
   "items": [
+    {
+      "title": "Oil: Prices retreat on Gulf diplomacy – ING",
+      "link": "https://www.fxstreet.com/news/oil-prices-retreat-on-gulf-diplomacy-ing-202608260620",
+      "pubDate": "2026-08-26T06:20:48.000Z",
+      "description": "ING analysts Warren Patterson and Ewa Manthey note that Oil prices are under renewed downward pressure, with ICE Brent breaking below $90/bbl as talks involving Iran, Oman and Pakistan on the Strait of Hormuz and the Middle East war progres",
+      "source": "FXStreet"
+    },
+    {
+      "title": "2026-08-26 - Banknotes and coins - Access to cash",
+      "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
+      "pubDate": "2026-08-26T06:18:00.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
+    },
+    {
+      "title": "Euro weakens against Japanese Yen amid firm BoJ interest rate hike prospects",
+      "link": "https://www.fxstreet.com/news/euro-weakens-against-japanese-yen-amid-firm-boj-interest-rate-hike-prospects-202608260613",
+      "pubDate": "2026-08-26T06:13:24.000Z",
+      "description": "The Euro (EUR) trades 0.22% lower at around 185.45 against the Japanese Yen (JPY) during the early European trading session on Wednesday.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Euro: Upside bias toward 1.1725 against US Dollar – UOB",
+      "link": "https://www.fxstreet.com/news/euro-upside-bias-toward-11725-against-us-dollar-uob-202608260612",
+      "pubDate": "2026-08-26T06:12:29.000Z",
+      "description": "United Overseas Bank’s (UOB) Quek Ser Leang and Lee Sue Ann report EUR/USD broke out of its recent tight range, closing slightly higher near 1.1675 as tentative upside momentum emerges.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "H-Power’s LC30 fuel cell generator receives CE certification",
+      "link": "https://www.investing.com/news/company-news/hpowers-lc30-fuel-cell-generator-receives-ce-certification-93CH-4876339",
+      "pubDate": "2026-08-26T06:07:10.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Taiwan stocks higher at close of trade; Taiwan Weighted up 1.48%",
+      "link": "https://www.investing.com/news/stock-market-news/taiwan-stocks-higher-at-close-of-trade-taiwan-weighted-up-148-4876336",
+      "pubDate": "2026-08-26T06:05:03.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Suncrest Gold raises $1.02m ahead of planned ASX listing",
+      "link": "https://www.investing.com/news/company-news/suncrest-gold-raises-102m-ahead-of-planned-asx-listing-93CH-4876335",
+      "pubDate": "2026-08-26T06:03:06.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Sweden’s producer prices rise 0.1% in July from June",
+      "link": "https://www.investing.com/news/economic-indicators/swedens-producer-prices-rise-01-in-july-from-june-93CH-4876331",
+      "pubDate": "2026-08-26T06:02:09.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Mercury Systems EVP sells $95,230 in common stock",
+      "link": "https://www.investing.com/news/insider-trading-news/mercury-systems-evp-sells-95230-in-common-stock-93CH-4876330",
+      "pubDate": "2026-08-26T06:01:10.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Australia’s FleetPartners gets $582 million bid as Sumitomo-led group joins race",
+      "link": "https://www.investing.com/news/stock-market-news/australias-fleetpartners-gets-582-million-bid-as-sumitomoled-group-joins-race-4876329",
+      "pubDate": "2026-08-26T06:01:05.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Precigen director Nancy H. Agee buys $24,661 of PGEN stock",
+      "link": "https://www.investing.com/news/insider-trading-news/precigen-director-nancy-h-agee-buys-24661-of-pgen-stock-93CH-4876328",
+      "pubDate": "2026-08-26T06:01:01.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "U.S. stock futures dip ahead of PCE inflation, Nvidia results",
+      "link": "https://www.investing.com/news/stock-market-news/us-stock-futures-fall-as-investors-await-pce-inflation-nvidia-results-4876105",
+      "pubDate": "2026-08-26T05:59:28.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "AL Sydbank reports first-half profit of DKK 1.8bn",
+      "link": "https://www.investing.com/news/company-news/al-sydbank-reports-firsthalf-profit-of-dkk-18bn-93CH-4876326",
+      "pubDate": "2026-08-26T05:56:39.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Vienna Insurance first-half pretax profit climbs 21%",
+      "link": "https://www.investing.com/news/stock-market-news/vienna-insurance-firsthalf-pretax-profit-climbs-21-93CH-4876322",
+      "pubDate": "2026-08-26T05:52:09.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
     {
       "title": "AUD/USD Price Forecast: Hot Australian CPI data boosts hawkish RBA bets",
       "link": "https://www.fxstreet.com/news/aud-usd-price-forecast-hot-australian-cpi-data-boosts-hawkish-rba-bets-202608260548",
       "pubDate": "2026-08-26T05:48:37.000Z",
       "description": "The Australian Dollar (AUD) outperforms its major currency peers on Wednesday, trading 0.2% higher to near 0.7180 against the US Dollar (USD) during the early European trading session.",
       "source": "FXStreet"
-    },
-    {
-      "title": "2026-08-26 - Banknotes and coins - Access to cash",
-      "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-26T05:47:59.000Z",
-      "description": "",
-      "source": "Swiss National Bank"
     },
     {
       "title": "ECB's Schnabel: Inflation likely to top 2% for extended period",
@@ -30,11 +121,11 @@
       "source": "FXStreet"
     },
     {
-      "title": "OppFi CEO Todd Schwartz buys $24,830 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/oppfi-ceo-todd-schwartz-buys-24830-in-stock-93CH-4876303",
-      "pubDate": "2026-08-26T05:31:10.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "Why Is The Crypto Market Up Today?",
+      "link": "https://beincrypto.com/why-is-the-crypto-market-up-today/",
+      "pubDate": "2026-08-26T05:30:21.000Z",
+      "description": "The crypto market is up 0.58% on Wednesday, August 26, near $2.63 trillion, but the day hides a warning. Since yesterday&#8217;s high, the total market cap has slipped almost 2.9%, a sign sellers finally stepped in. The rally has been rejec",
+      "source": "BeInCrypto"
     },
     {
       "title": "Swiss Franc weakens as US Dollar gains ahead of PCE inflation data",
@@ -42,69 +133,6 @@
       "pubDate": "2026-08-26T05:28:59.000Z",
       "description": "USD/CHF gains ground after posting minor losses, trading around 0.8040 during the Asian hours on Wednesday. The pair appreciates as the US Dollar (USD) gains support ahead of the upcoming US Personal Consumption Expenditures (PCE) release, ",
       "source": "FXStreet"
-    },
-    {
-      "title": "SoftBank weighs up to $20 bln bond sale to refinance OpenAI loan - Bloomberg",
-      "link": "https://www.investing.com/news/stock-market-news/softbank-weighs-up-to-20-bln-bond-sale-to-refinance-openai-loan--bloomberg-4876268",
-      "pubDate": "2026-08-26T05:20:04.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Exclusive-BNP Paribas, KB Kookmin in talks for $2 billion Vietnam Techcombank stake, sources say",
-      "link": "https://www.investing.com/news/stock-market-news/exclusivebnp-paribas-kb-kookmin-in-talks-for-2-billion-vietnam-techcombank-stake-sources-say-4876267",
-      "pubDate": "2026-08-26T05:18:35.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Arista Networks (ANET) director sells $79,057 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/arista-networks-anet-director-sells-79057-in-stock-93CH-4876266",
-      "pubDate": "2026-08-26T05:16:29.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Why is SJM Holdings stock falling today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-sjm-holdings-stock-falling-today-93CH-4876265",
-      "pubDate": "2026-08-26T05:15:41.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "55% off: Lock in InvestingPro for less than $2 a week BEFORE OUR SUMMER SALE ENDS",
-      "link": "https://www.investing.com/news/stock-market-news/55-off-lock-in-investingpro-for-less-than-2-a-week-before-our-summer-sale-ends-4876261",
-      "pubDate": "2026-08-26T05:15:28.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Gold slips but stays near 3-month high as oil, yields ease inflation pressure",
-      "link": "https://www.investing.com/news/commodities-news/gold-edges-lower-but-stays-near-3month-high-as-oil-yields-retreat-4876127",
-      "pubDate": "2026-08-26T05:14:11.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "As war strands Qatari gas for 6 months, US sales rise and European stocks plummet",
-      "link": "https://www.investing.com/news/stock-market-news/as-war-strands-qatari-gas-for-6-months-us-sales-rise-and-european-stocks-plummet-4876264",
-      "pubDate": "2026-08-26T05:12:43.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Cettire FY26 slides: profitability surges as emerging markets grow",
-      "link": "https://www.investing.com/news/company-news/cettire-fy26-slides-profitability-surges-as-emerging-markets-grow-93CH-4876263",
-      "pubDate": "2026-08-26T05:06:51.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Buying Nvidia ahead of today’s earnings? You must see what our AI models say first",
-      "link": "https://www.investing.com/news/stock-market-news/buying-nvidia-ahead-of-todays-earnings-you-must-see-what-our-ai-models-say-first-4876102",
-      "pubDate": "2026-08-26T05:06:40.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Starbase Louisiana Set to Become SpaceX&#039;s Largest Launch Site in $100 Billion Bet",
@@ -359,27 +387,6 @@
       "source": "Reuters"
     },
     {
-      "title": "Australian Dollar rises after RBA hawkish minutes, inflation data eyed",
-      "link": "https://www.fxstreet.com/news/australian-dollar-rises-after-rba-hawkish-minutes-inflation-data-eyed-202608252304",
-      "pubDate": "2026-08-25T23:04:10.000Z",
-      "description": "The Aussie Dollar advanced on Tuesday, gaining over 0.20% as the Greenback edged lower, amid minutes from the Reserve Bank of Australia (RBA)'s last meeting suggesting the board was close to raising rates. At the time of writing, the AUD/US",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Tokyo bought the Japanese Yen a range, not a trend",
-      "link": "https://www.fxstreet.com/news/tokyo-bought-the-japanese-yen-a-range-not-a-trend-202608252302",
-      "pubDate": "2026-08-25T23:02:06.000Z",
-      "description": "USD/JPY trades just above 159.00 late on Tuesday, August 25, holding a gain of under a tenth of a percent across a session that has covered 44 pips between a floor near 159.00 and a ceiling short of 159.50.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Pound Sterling's six-month high has no British test this week",
-      "link": "https://www.fxstreet.com/news/pound-sterlings-six-month-high-has-no-british-test-this-week-202608252301",
-      "pubDate": "2026-08-25T23:01:27.000Z",
-      "description": "GBP/USD trades near 1.3650 late on Tuesday, August 25, up around a tenth of a percent on a session that has covered barely 33 pips between a floor just above 1.3600 and a ceiling a shade over 1.3650.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Australia’s CPI inflation declines to 3.5% YoY in July vs. 3.2% forecast",
       "link": "https://www.fxstreet.com/news/australia-cpi-expected-to-show-inflation-easing-in-july-202608252230",
       "pubDate": "2026-08-25T22:30:00.000Z",
@@ -403,16 +410,9 @@
     {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-25T18:56:03.000Z",
+      "pubDate": "2026-08-25T19:00:05.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
-    },
-    {
-      "title": "Fastest Bitcoin Bull Flip in a Year Has One $83,000 Problem, Analyst Says",
-      "link": "https://beincrypto.com/bitcoin-fastest-bull-flip-83k/",
-      "pubDate": "2026-08-25T18:41:33.000Z",
-      "description": "Bitcoin's Bull Score jumped 30 to 80 in a week, the fastest flip in a year. Now the $83,000 average decides the bull market.\nThe post Fastest Bitcoin Bull Flip in a Year Has One $83,000 Problem, Analyst Says appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
     },
     {
       "title": "Canadian dollar edges higher as Canada announces retaliatory tariffs",
