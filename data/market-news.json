@@ -1,12 +1,110 @@
 {
-  "timestamp": "2026-08-26T10:03:41.897Z",
+  "timestamp": "2026-08-26T10:44:00.001Z",
   "items": [
     {
       "title": "2026-08-26 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-26T09:59:00.000Z",
+      "pubDate": "2026-08-26T10:39:01.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "Jefferies raises trucking sector outlook on capacity cuts despite summer slowdown",
+      "link": "https://www.investing.com/news/stock-market-news/jefferies-raises-trucking-sector-outlook-on-capacity-cuts-despite-summer-slowdown-93CH-4876664",
+      "pubDate": "2026-08-26T10:23:08.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Prudential to sell 2% stake in ICICI Prudential Asset Management",
+      "link": "https://www.investing.com/news/company-news/prudential-to-sell-2-stake-in-icici-prudential-asset-management-93CH-4876662",
+      "pubDate": "2026-08-26T10:21:34.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Trump administration moves to impose more than $100,000 fee for H-1B worker visas",
+      "link": "https://www.investing.com/news/stock-market-news/trump-administration-moves-to-impose-more-than-100000-fee-for-h1b-worker-visas-4873633",
+      "pubDate": "2026-08-26T10:20:05.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "US stock futures subdued in run-up to Nvidia results, inflation print",
+      "link": "https://www.investing.com/news/economy-news/us-stock-futures-subdued-in-runup-to-nvidia-results-inflation-print-4876659",
+      "pubDate": "2026-08-26T10:19:47.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Boston Scientific reports cybersecurity incident affecting operations, shares fall",
+      "link": "https://www.investing.com/news/stock-market-news/boston-scientific-reports-cybersecurity-incident-affecting-operations-shares-fall-93CH-4876658",
+      "pubDate": "2026-08-26T10:19:37.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Exclusive-Hack of water sector supplier draws FBI scrutiny as Iran-linked cyber concerns grow",
+      "link": "https://www.investing.com/news/economy-news/exclusivehack-of-water-sector-supplier-draws-fbi-scrutiny-as-iranlinked-cyber-concerns-grow-4876626",
+      "pubDate": "2026-08-26T10:19:24.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Exclusive-US produce supplier Taylor Farms frequently fails to disclose workplace injury tallies, records show",
+      "link": "https://www.investing.com/news/economy-news/exclusiveus-produce-supplier-taylor-farms-frequently-fails-to-disclose-workplace-injury-tallies-records-show-4876623",
+      "pubDate": "2026-08-26T10:19:07.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Wells Fargo cuts Intuit stock price target to $300 on tax growth concerns",
+      "link": "https://www.investing.com/news/analyst-ratings/wells-fargo-cuts-intuit-stock-price-target-to-300-on-tax-growth-concerns-93CH-4876657",
+      "pubDate": "2026-08-26T10:19:07.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Jefferies cuts Qifu Technology stock price target on weak results",
+      "link": "https://www.investing.com/news/analyst-ratings/jefferies-cuts-qifu-technology-stock-price-target-on-weak-results-93CH-4876656",
+      "pubDate": "2026-08-26T10:19:06.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Wells Fargo cuts Dick’s Sporting Goods stock price target on footwear weakness",
+      "link": "https://www.investing.com/news/analyst-ratings/wells-fargo-cuts-dicks-sporting-goods-stock-price-target-on-footwear-weakness-93CH-4876654",
+      "pubDate": "2026-08-26T10:19:02.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Piero Cipollone: From vision to delivery: building Europe’s tokenised financial market",
+      "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260826~3641116314.en.html",
+      "pubDate": "2026-08-26T10:15:00.000Z",
+      "description": "",
+      "source": "European Central Bank"
+    },
+    {
+      "title": "Gold Price Forecast: XAU/USD corrects to near $4,620 in countdown to US PCE Inflation data",
+      "link": "https://www.fxstreet.com/news/gold-price-forecast-xau-usd-corrects-to-near-4-620-in-countdown-to-us-pce-inflation-data-202608261012",
+      "pubDate": "2026-08-26T10:12:36.000Z",
+      "description": "Gold price (XAU/USD) is down 0.75% to near $4,620 during the European trading session on Wednesday.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Japanese Yen: BoJ hike expectations support JPY against US Dollar – MUFG",
+      "link": "https://www.fxstreet.com/news/japanese-yen-boj-hike-expectations-support-jpy-against-us-dollar-mufg-202608261004",
+      "pubDate": "2026-08-26T10:04:56.000Z",
+      "description": "MUFG’s Derek Halpenny notes the Japanese Yen is firmer versus most G10 currencies as markets increasingly price a Bank of Japan rate hike in September.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Crypto Weekly: Bitcoin's rise, crypto-backed midterms",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBNbDNIeUNnS2M2cTE1NDZOLWh5QmgyQ2tlVmYyLVhkSW0wZTNNbEtuRmM2elBlZFBVTklDTXdvYURrbVBaeG9VbjZMZUJRY19nRkYwSm8zOHloTWpjbGdPY0FsWWJXMm8?oc=5",
+      "pubDate": "2026-08-26T10:03:39.000Z",
+      "description": "Crypto Weekly: Bitcoin's rise, crypto-backed midterms&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "WTI Oil drops below $80 amid hopes of Hormuz reopening, US-Iran de-escalation",
@@ -23,18 +121,11 @@
       "source": "FXStreet"
     },
     {
-      "title": "Bidcorp FY2026 slides: margins expand as cash flow surges",
-      "link": "https://www.investing.com/news/company-news/bidcorp-fy2026-slides-margins-expand-as-cash-flow-surges-93CH-4876587",
-      "pubDate": "2026-08-26T09:42:42.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Stadler Rail H1 2026 slides: record revenue growth, shares fall 22%",
-      "link": "https://www.investing.com/news/company-news/stadler-rail-h1-2026-slides-record-revenue-growth-shares-fall-22-93CH-4876586",
-      "pubDate": "2026-08-26T09:42:00.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "Why Did the XRP Price Rally Beat Every Top-10 Coin Without an Altcoin Season?",
+      "link": "https://beincrypto.com/xrp-price-rally-etf-korea-binance-analysis/",
+      "pubDate": "2026-08-26T09:42:38.000Z",
+      "description": "XRP gained 43.7% in the seven days to August 26, the strongest run in the top 10 by market cap. Three separate demand channels fed the XRP price rally, and none of them was a simple futures squeeze. ETF desks, Korean spot traders, and Binan",
+      "source": "BeInCrypto"
     },
     {
       "title": "Hungarian Forint: Recovery tied to euro entry story – ING",
@@ -44,67 +135,11 @@
       "source": "FXStreet"
     },
     {
-      "title": "Earnings call transcript: Central Asia Metals lifts H1 2026 profit, shares jump",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-central-asia-metals-lifts-h1-2026-profit-shares-jump-93CH-4876582",
-      "pubDate": "2026-08-26T09:37:30.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Taiwan president pushes $6.6 billion military drone bill ahead of crucial vote",
-      "link": "https://www.investing.com/news/economy-news/taiwan-president-pushes-66-billion-military-drone-bill-ahead-of-crucial-vote-4876581",
-      "pubDate": "2026-08-26T09:37:14.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Dollar inches higher ahead of US inflation data; Aussie gains on rate bets",
-      "link": "https://www.investing.com/news/economy-news/dollar-moves-in-a-narrow-range-ahead-of-inflation-data-jackson-hole-4876177",
-      "pubDate": "2026-08-26T09:36:34.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Aroundtown H1 2026 slides: rental growth steady as debt costs climb",
-      "link": "https://www.investing.com/news/company-news/aroundtown-h1-2026-slides-rental-growth-steady-as-debt-costs-climb-93CH-4876577",
-      "pubDate": "2026-08-26T09:34:47.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Silver price today: Silver falls, according to FXStreet data",
       "link": "https://www.fxstreet.com/news/silver-price-today-silver-falls-according-to-fxstreet-data-202608260933",
       "pubDate": "2026-08-26T09:33:36.000Z",
       "description": "Silver prices (XAG/USD) fell on Wednesday, according to FXStreet data. Silver trades at $68.54 per troy ounce, down 0.16% from the $68.65 it cost on Tuesday.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Harry and Meghan’s media storm shows the power and peril of their brand",
-      "link": "https://www.investing.com/news/stock-market-news/harry-and-meghans-media-storm-shows-the-power-and-peril-of-their-brand-4876572",
-      "pubDate": "2026-08-26T09:30:30.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Why is Zoom Video stock sliding today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-zoom-video-stock-sliding-today-93CH-4876571",
-      "pubDate": "2026-08-26T09:30:14.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Earnings call transcript: Stadler Rail H1 2026 results show record revenue but shares sink",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-stadler-rail-h1-2026-results-show-record-revenue-but-shares-sink-93CH-4876570",
-      "pubDate": "2026-08-26T09:29:05.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Earnings call transcript: Bidcorp posts solid H2 2026 growth as cash flow rises",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-bidcorp-posts-solid-h2-2026-growth-as-cash-flow-rises-93CH-4876569",
-      "pubDate": "2026-08-26T09:28:53.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "US Dollar Index: Range trade persists as data soft – DBS",
@@ -296,20 +331,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "NZD/USD Price Forecast: Dips below 0.5950, fresh weekly low as USD firms ahead of US PCE",
-      "link": "https://www.fxstreet.com/news/nzd-usd-price-forecast-dips-below-05950-fresh-weekly-low-as-usd-firms-ahead-of-us-pce-202608260709",
-      "pubDate": "2026-08-26T07:09:31.000Z",
-      "description": "The NZD/USD pair comes under some renewed selling pressure on Wednesday and drops to a fresh weekly low, around the 0.5945 region during the early European session.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Euro: Holds near 1.1670 against US Dollar as rate moves offset - Danske Bank",
-      "link": "https://www.fxstreet.com/news/euro-holds-near-11670-against-us-dollar-as-rate-moves-offset-danske-bank-202608260709",
-      "pubDate": "2026-08-26T07:09:18.000Z",
-      "description": "Danske Research Team reports that EUR/USD remained little changed around 1.1670, with the chart showing only a modest pullback from overnight highs before a partial recovery.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Australia’s Second-Largest Pension Makes Big Bet on Yen Strength",
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPako1ekRTR205bG1uVlIxQnF3MkhndW9qbWlaZjhvdURQY19HSTVtb3JEX2RtQ3FleDUzaFNZMEhWV1ZYbUN2YTFCSENDaUxZZWRPRDNFN0ZPZlFsWW1ZQXFLWkhOZHhnOUdjRVpfYUVCOFBuT0VHWXVfdXNrSTRDdGJZUjg4a1Z3MWFHM28xbE92STVacU5lUTR0Y3U5b3hnbkloM1dzRzNlZ2xyUEpMSA?oc=5",
       "pubDate": "2026-08-26T07:00:41.000Z",
@@ -366,18 +387,18 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Starbase Louisiana Set to Become SpaceX&#039;s Largest Launch Site in $100 Billion Bet",
-      "link": "https://beincrypto.com/spacex-louisiana-spaceport-100-billion-starship/",
-      "pubDate": "2026-08-26T05:04:18.000Z",
-      "description": "SpaceX will invest $100 billion to build its largest launch facility on the Louisiana coast, the company and state officials confirmed Tuesday.&#160; Louisiana Economic Development said the Vermilion Parish campus is designed to support tho",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Gold refreshes daily low, around $4,625 as USD sticks to modest gains ahead of US PCE",
       "link": "https://www.fxstreet.com/news/gold-holds-steady-around-4-650-as-traders-look-to-us-pce-for-fed-rate-cues-202608260332",
       "pubDate": "2026-08-26T03:32:20.000Z",
       "description": "Gold (XAU/USD) touches a fresh daily low, around the $4,630-$4,625 region, during the first half of the European session on Wednesday, though the downside seems limited.",
       "source": "FXStreet"
+    },
+    {
+      "title": "Dollar inches higher ahead of US inflation data; Aussie gains on rate bets",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQalFaeTZ2Tl9BS09vVjROdl84Z24tcVpyWWRLMVltR3hyQ1g5OThDMllnMGxscnZMWktXT2FxNVVMd1ZGTTVycFJMV0JVT202NFFncFh0MVRYUlBiLS1XWEVvUnI1dHNaMEt0TXgzanprZGp5MDRsRXl5cTVVRDZ0SjYwNXc0UUtGNWlMVDlQUE9MRk5EbDgzTFllcWlOZ3ZFWkM0MWFwOGYtYk9CRUl3bWNJVXk?oc=5",
+      "pubDate": "2026-08-26T01:51:00.000Z",
+      "description": "Dollar inches higher ahead of US inflation data; Aussie gains on rate bets&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "Gold rally takes a breather ahead of US inflation data",
@@ -475,20 +496,6 @@
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOQVRRRXpGLTQzSUFSbHE2c1c0RGxGTGRhOWpneHlwRTI5WlBDQWY1UWJBOWFITHFyZkxGQ2xGYzkxT1ZZLWtCM0ZRbVhncEUyeTM3aG05Y0gtekpwNE1vdjdkNjNUc1BiOUw1cDljM1gtX0p3Yi16elh6UTNYeGJlNXRiVlZRU0diWnlnVkVOVnVuY2JITnNKVHgzRnJGVzRsTW5jRXNB?oc=5",
       "pubDate": "2026-08-25T07:40:00.000Z",
       "description": "Iran war makes multibillion-dollar Tanzania LNG more attractive, Equinor says&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Japan Inc seeks new hedges for a long era of yen weakness",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQVXllRkNNdnF0Z1ZELVNLa1ZkNEVuZWpmUktSSmpTWmZWakVieEozck83S3hWampQLWNscklDdW9rTlM4bjg0Rll4eEFCTnBMbk1qMlZTSWJHZW96S0dlRnBOaGhBWTUxcjNOZDB0WlNyMTFvLTNEMHZocjBrSUVMa0dfWDJnekdQQWF0NjQtM19qTVJySGJQdjdjXy1jVW1WUEdHQ3p3?oc=5",
-      "pubDate": "2026-08-25T07:38:37.000Z",
-      "description": "Japan Inc seeks new hedges for a long era of yen weakness&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "India's Axis Bank bets on data centres to gold loans to outpace industry credit growth",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQLUR3aklpWDFRWUprRlc4cXRERTlTZzFjajN5VkY5ZlBOWUt3d2hvM3ZfMG9USFFRTFJKRDhUblc5Zlg0YURSSm9fbk51VW8yMjkzOTFNSzZpMDJ3Y2t0OGppa21pQW9zVGN3SzIxOU9xS0NSQVdaMjFzUHp3ZGhNZGgxRmEySmdUVzhBaFQ4bm9NbHg5X3J3Vi0yMEYzQTRzdDNMU2tkcVM5M1l6d1pNcmlybEhzdHdJMHlfQmdTWXlQQQ?oc=5",
-      "pubDate": "2026-08-25T06:53:00.000Z",
-      "description": "India's Axis Bank bets on data centres to gold loans to outpace industry credit growth&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -621,13 +628,6 @@
       "title": "Philip R. Lane: The rise in defence spending and the euro area economy",
       "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260817~1f9f7149c9.en.pdf",
       "pubDate": "2026-08-17T09:30:00.000Z",
-      "description": "",
-      "source": "European Central Bank"
-    },
-    {
-      "title": "Cash remains most widely accepted payment method in euro area",
-      "link": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr260813~389729d6a9.en.html",
-      "pubDate": "2026-08-13T09:00:00.000Z",
       "description": "",
       "source": "European Central Bank"
     },
