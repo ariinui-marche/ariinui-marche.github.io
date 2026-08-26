@@ -1,6 +1,118 @@
 {
-  "timestamp": "2026-08-26T04:04:34.719Z",
+  "timestamp": "2026-08-26T04:50:19.139Z",
   "items": [
+    {
+      "title": "WTI Price Forecast: Seems vulnerable below $80.00 as break below 50% Fibo. comes into play",
+      "link": "https://www.fxstreet.com/news/wti-price-forecast-seems-vulnerable-below-8000-as-break-below-50-fibo-comes-into-play-202608260448",
+      "pubDate": "2026-08-26T04:48:39.000Z",
+      "description": "West Texas Intermediate (WTI) – the benchmark US Crude Oil price – remains under some selling pressure for the third straight day and drops to a nearly two-week low during the Asian session on Wednesday.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Indonesian Rupiah remains subdued amid market caution, external headwinds",
+      "link": "https://www.fxstreet.com/news/indonesian-rupiah-remains-subdued-amid-market-caution-external-headwinds-202608260447",
+      "pubDate": "2026-08-26T04:47:09.000Z",
+      "description": "USD/IDR remains stronger for the second successive day, trading around 17,760 during the Asian hours on Tuesday. The pair continues to hold its ground while the Indonesian Rupiah (IDR) faces ongoing pressure from a cautious market sentiment",
+      "source": "FXStreet"
+    },
+    {
+      "title": "United States Dollar Index recovers to near 99.00 ahead of US PCE inflation data",
+      "link": "https://www.fxstreet.com/news/united-states-dollar-index-recovers-to-near-9900-ahead-of-us-pce-inflation-data-202608260442",
+      "pubDate": "2026-08-26T04:42:51.000Z",
+      "description": "The US Dollar Index (DXY), an index of the value of the US Dollar (USD) measured against a basket of six world currencies, currently trades near 99.00 in the early European trading hours on Wednesday.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "2026-08-26 - Banknotes and coins - Access to cash",
+      "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
+      "pubDate": "2026-08-26T04:41:01.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
+    },
+    {
+      "title": "India Gold price today: Gold falls, according to FXStreet data",
+      "link": "https://www.fxstreet.com/news/india-gold-price-today-gold-falls-according-to-fxstreet-data-202608260435",
+      "pubDate": "2026-08-26T04:35:21.000Z",
+      "description": "Gold prices fell in India on Wednesday, according to data compiled by FXStreet.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Coinbase Stock Surges as Bitcoin Rallied to $80,000: How Tight Is the Link?",
+      "link": "https://beincrypto.com/coinbase-stock-bitcoin-price-correlation/",
+      "pubDate": "2026-08-26T04:35:00.000Z",
+      "description": "Coinbase stock's correlation with Bitcoin's price is back in focus as Bitcoin nears $80,000 and COIN rallies further.\nThe post Coinbase Stock Surges as Bitcoin Rallied to $80,000: How Tight Is the Link? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Why is SK Biopharmaceuticals stock surging today?",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-sk-biopharmaceuticals-stock-surging-today-93CH-4876250",
+      "pubDate": "2026-08-26T04:27:23.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Why is Jiangxi Copper stock surging today?",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-jiangxi-copper-stock-surging-today-93CH-4876249",
+      "pubDate": "2026-08-26T04:27:12.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Australian Indigenous group appeals compensation ruling over Fortescue’s mining impact",
+      "link": "https://www.investing.com/news/stock-market-news/australian-indigenous-group-appeals-compensation-ruling-over-fortescues-mining-impact-4876243",
+      "pubDate": "2026-08-26T04:24:45.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "JOYY Inc earnings missed by $0.20, revenue topped estimates",
+      "link": "https://www.investing.com/news/earnings/joyy-inc-earnings-missed-by-020-revenue-topped-estimates-4876248",
+      "pubDate": "2026-08-26T04:23:59.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Japan’s Kiuchi: CPI expected to gradually rise due to Middle East conditions",
+      "link": "https://www.fxstreet.com/news/japans-kiuchi-cpi-expected-to-gradually-rise-due-to-middle-east-conditions-202608260423",
+      "pubDate": "2026-08-26T04:23:43.000Z",
+      "description": "Japan's Economy Minister Minoru Kiuchi said on Wednesday that he expects consumer prices to gradually rise amid the Middle East situation.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Tela Bio CEO Heather Getz buys $8,311 in company stock",
+      "link": "https://www.investing.com/news/insider-trading-news/tela-bio-ceo-heather-getz-buys-8311-in-company-stock-93CH-4876247",
+      "pubDate": "2026-08-26T04:17:06.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Interface VP, chief supply chain officer, Blackorby sells $110,807 in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/interface-vp-chief-supply-chain-officer-blackorby-sells-110807-in-shares-93CH-4876246",
+      "pubDate": "2026-08-26T04:16:14.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Miax EVP & CFO Lance Emmons sells shares worth $1.5 million",
+      "link": "https://www.investing.com/news/insider-trading-news/miax-evp--cfo-lance-emmons-sells-shares-worth-15-million-93CH-4876245",
+      "pubDate": "2026-08-26T04:16:13.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "British Pound edges lower but remains close to multi-month top as USD awaits US PCE",
+      "link": "https://www.fxstreet.com/news/british-pound-edges-lower-but-remains-close-to-multi-month-top-as-usd-awaits-us-pce-202608260407",
+      "pubDate": "2026-08-26T04:07:11.000Z",
+      "description": "The GBP/USD pair trades with a negative bias below mid-1.3600s during the Asian session on Wednesday, eroding a part of the previous day's strong gains.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "SK Biopharmaceuticals signs epilepsy drug licensing deal with Biohaven",
+      "link": "https://www.investing.com/news/stock-market-news/sk-biopharmaceuticals-signs-epilepsy-drug-licensing-deal-with-biohaven-93CH-4876242",
+      "pubDate": "2026-08-26T04:05:08.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
     {
       "title": "EUR/USD Price Forecast: Remains sideways ahead of key US events",
       "link": "https://www.fxstreet.com/news/eur-usd-price-forecast-remains-sideways-ahead-of-key-us-events-202608260404",
@@ -9,51 +121,16 @@
       "source": "FXStreet"
     },
     {
-      "title": "2026-08-26 - Banknotes and coins - Access to cash",
-      "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-26T04:01:01.000Z",
-      "description": "",
-      "source": "Swiss National Bank"
-    },
-    {
-      "title": "Prime Financial FY26 slides: revenue jumps 22%, recurring income hits 85%",
-      "link": "https://www.investing.com/news/company-news/prime-financial-fy26-slides-revenue-jumps-22-recurring-income-hits-85-93CH-4876236",
-      "pubDate": "2026-08-26T03:47:58.000Z",
+      "title": "Gift Nifty 50 tests 24,550 resistance amid MACD divergence: Live",
+      "link": "https://www.investing.com/news/stock-market-news/gift-nifty-50-hits-major-resistance-cluster-live-levels-93CH-4872604",
+      "pubDate": "2026-08-26T04:02:27.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Alibaba shares rise as Jack Ma buys $76 million stake amid AI push",
-      "link": "https://www.investing.com/news/stock-market-news/alibaba-shares-rise-as-jack-ma-buys-76-million-stake-amid-ai-push-4876235",
-      "pubDate": "2026-08-26T03:47:34.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Worley wins three U.S. contracts for data center energy projects",
-      "link": "https://www.investing.com/news/stock-market-news/worley-wins-three-us-contracts-for-data-center-energy-projects-93CH-4876234",
-      "pubDate": "2026-08-26T03:46:18.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "China’s Huawei, US PC maker HP sign multi-year Wi-Fi patent deal",
-      "link": "https://www.investing.com/news/stock-market-news/chinas-huawei-us-pc-maker-hp-sign-multiyear-wifi-patent-deal-4876233",
-      "pubDate": "2026-08-26T03:42:29.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Why is Woolworths stock surging today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-woolworths-stock-surging-today-93CH-4876232",
-      "pubDate": "2026-08-26T03:38:48.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Earnings call transcript: Prime Financial Group lifts FY26 revenue 22% in H2 2026",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-prime-financial-group-lifts-fy26-revenue-22-in-h2-2026-93CH-4876231",
-      "pubDate": "2026-08-26T03:37:08.000Z",
+      "title": "Why is Worley stock tumbling today?",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-worley-stock-tumbling-today-93CH-4876239",
+      "pubDate": "2026-08-26T03:59:34.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -63,27 +140,6 @@
       "pubDate": "2026-08-26T03:32:20.000Z",
       "description": "Gold (XAU/USD) extends its two-way price moves for the second straight day and trades above $4,650 during the Asian session on Wednesday.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Sandfire FY26 slides: profit triples, returns to dividend after debt repayment",
-      "link": "https://www.investing.com/news/company-news/sandfire-fy26-slides-profit-triples-returns-to-dividend-after-debt-repayment-93CH-4876229",
-      "pubDate": "2026-08-26T03:22:55.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Why is Alibaba stock climbing today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-alibaba-stock-climbing-today-93CH-4876228",
-      "pubDate": "2026-08-26T03:21:08.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "H&H H1 2026 slides: 23.7% revenue growth, margins soar",
-      "link": "https://www.investing.com/news/company-news/hh-h1-2026-slides-237-revenue-growth-margins-soar-93CH-4876227",
-      "pubDate": "2026-08-26T03:20:38.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Silver Price Forecast: XAG/USD holds firmly above $69 ahead of US PCE Inflation data",
@@ -98,13 +154,6 @@
       "pubDate": "2026-08-26T03:13:03.000Z",
       "description": "NZD/USD depreciates after registering modest gains in the previous day, trading around 0.5960 during the Asian hours on Wednesday.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Earnings call transcript: Sandfire Resources lifts dividend as FY 2026 profit jumps",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-sandfire-resources-lifts-dividend-as-fy-2026-profit-jumps-93CH-4876226",
-      "pubDate": "2026-08-26T03:11:19.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Japanese Yen strengthens on US bond buyback, traders brace for US PCE inflation report",
@@ -168,6 +217,13 @@
       "pubDate": "2026-08-26T01:18:21.000Z",
       "description": "Nvidia and Micron drive a third of S&#038;P earnings growth as Bitcoin breaks $80,000 on bond market stress.\nThe post Schwab Strategist Flags Wall Street&#039;s Growth Is Concentrated in Two Firms appeared first on BeInCrypto.",
       "source": "BeInCrypto"
+    },
+    {
+      "title": "Australia’s Second-Largest Pension Makes Big Bet on Yen Strength",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPako1ekRTR205bG1uVlIxQnF3MkhndW9qbWlaZjhvdURQY19HSTVtb3JEX2RtQ3FleDUzaFNZMEhWV1ZYbUN2YTFCSENDaUxZZWRPRDNFN0ZPZlFsWW1ZQXFLWkhOZHhnOUdjRVpfYUVCOFBuT0VHWXVfdXNrSTRDdGJZUjg4a1Z3MWFHM28xbE92STVacU5lUTR0Y3U5b3hnbkloM1dzRzNlZ2xyUEpMSA?oc=5",
+      "pubDate": "2026-08-26T01:16:00.000Z",
+      "description": "Australia’s Second-Largest Pension Makes Big Bet on Yen Strength&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
     },
     {
       "title": "PBOC sets USD/CNY reference rate at 6.7829 vs. 6.7852 previous",
@@ -317,27 +373,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "New Zealand Dollar climbs to fresh highs amid timid US Dollar",
-      "link": "https://www.fxstreet.com/news/new-zealand-dollar-climbs-to-fresh-highs-amid-timid-us-dollar-202608252054",
-      "pubDate": "2026-08-25T20:54:20.000Z",
-      "description": "NZD/USD climbed to around 0.5980 Tuesday, near its highest level since June 1 as a softer US Dollar (USD) and firm Reserve Bank of New Zealand (RBNZ) rate-hike expectations powered the Kiwi higher.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Singapore Dollar: Range-bound consolidation outlook against US Dollar – Commerzbank",
-      "link": "https://www.fxstreet.com/news/singapore-dollar-range-bound-consolidation-outlook-against-us-dollar-commerzbank-202608252040",
-      "pubDate": "2026-08-25T20:40:00.000Z",
-      "description": "Commerzbank’s Charlie Lay and Dr. Henry Hao note that USD/SGD has eased from 1.2800 to around 1.2700 as the softer US Dollar (USD) and global risk sentiment dominate.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "US-Iran agree ceasefire deal, sinks Oil – RIA Novosti",
-      "link": "https://www.fxstreet.com/news/reports-of-us-iran-ceasefire-deal-sinks-oil-ria-novosti-202608252015",
-      "pubDate": "2026-08-25T20:15:37.000Z",
-      "description": "The Russian agency RIA Novosti reported on Tuesday that Washington and Tehran agreed to a ceasefire, citing sources in Iran and Pakistan.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Top 3 Undervalued Altcoins to Watch in September 2026",
       "link": "https://beincrypto.com/top-undervalued-altcoins-to-watch-september-2026/",
       "pubDate": "2026-08-25T20:05:32.000Z",
@@ -352,30 +387,9 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "US Treasury yields fall as Hormuz progress eases inflation fears",
-      "link": "https://www.fxstreet.com/news/us-treasury-yields-fall-as-hormuz-progress-eases-inflation-fears-202608251954",
-      "pubDate": "2026-08-25T19:54:06.000Z",
-      "description": "US yields edge lower across the whole curve on Tuesday, following suit.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "South Korean Won: Strength backed by tech flows against US Dollar – Societe Generale",
-      "link": "https://www.fxstreet.com/news/south-korean-won-strength-backed-by-tech-flows-against-us-dollar-societe-generale-202608251954",
-      "pubDate": "2026-08-25T19:54:00.000Z",
-      "description": "Societe Generale analysts highlight that the Korean Won (KRW) has gained 12% versus the Dollar year-to-date, with USD/KRW falling from around 1560 in June to below 1380.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Chinese Yuan: Trade risks limit gains against US Dollar – OCBC",
-      "link": "https://www.fxstreet.com/news/chinese-yuan-trade-risks-limit-gains-against-us-dollar-ocbc-202608251923",
-      "pubDate": "2026-08-25T19:23:00.000Z",
-      "description": "OCBC’s Sim Moh Siong and Christopher Wong note that reports of potential US tariffs on Chinese goods and the PBoC’s resistance to rapid Renminbi (RMB) gains are likely to limit further downside in USD/CNH.",
-      "source": "FXStreet"
-    },
-    {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-25T18:56:14.000Z",
+      "pubDate": "2026-08-25T18:56:26.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
     },
@@ -412,13 +426,6 @@
       "link": "https://beincrypto.com/anthropic-ipo-30-trillion-tam/",
       "pubDate": "2026-08-25T17:27:06.000Z",
       "description": "Anthropic IPO pitch touts a $30 trillion AI market and a $2 trillion valuation, yet the Claude maker remains unprofitable.\nThe post $30 Trillion Dream: Can Anthropic Sell the Biggest IPO Ever? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "TRON Surpasses 400 Million Accounts as Total Transfer Volume Nears $30 Trillion",
-      "link": "https://beincrypto.com/tron-surpasses-400-million-accounts/",
-      "pubDate": "2026-08-25T16:00:00.000Z",
-      "description": "TRON DAO, the community-governed DAO dedicated to accelerating the decentralization of the internet through blockchain technology and decentralized applications (dApps), announced today that the number of total accounts on the TRON blockcha",
       "source": "BeInCrypto"
     },
     {
@@ -518,13 +525,6 @@
       "pubDate": "2026-08-24T22:00:00.000Z",
       "description": "While money has evolved from natural commodities to digital tokens, the debate about the ideal money has remained the same throughout the ages. Historical controversies about the origin, nature, and double-spending of money offer valuable i",
       "source": "Swiss National Bank"
-    },
-    {
-      "title": "The WSJ Dollar Index Rises 0.13% to 95.45",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPN1FCbF8tMGp1Nm9sTWNVRlZ6UzhuRmxPTmZSZ2MtMFdFLXpMY1JyZHY5cjcweXlYVlpPWk5BUkRoTFk1em1pRllfd2tiRHZVbUk3ektpSXJWTnVfYW8zdjVhNDVKNDlDVHNzbE40aF9pdTZjOC1EdmVKMkVEVUhlRXpHY3FOa1VRSXEwSkdtS1BlQnRmb1JpNWNmX2htTTJBd3I2YmZXdDY4YjRhVjVrTnUwbTRaUQ?oc=5",
-      "pubDate": "2026-08-24T21:38:00.000Z",
-      "description": "The WSJ Dollar Index Rises 0.13% to 95.45&nbsp;&nbsp;WSJ",
-      "source": "Google News"
     },
     {
       "title": "2026-08-24 - Interview - Interview with Petra Tschudin in the FuW",
