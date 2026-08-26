@@ -1,82 +1,110 @@
 {
-  "timestamp": "2026-08-26T02:11:06.962Z",
+  "timestamp": "2026-08-26T03:16:35.157Z",
   "items": [
+    {
+      "title": "New Zealand Dollar declines as US Dollar advances ahead of PCE index data",
+      "link": "https://www.fxstreet.com/news/new-zealand-dollar-declines-as-us-dollar-advances-ahead-of-pce-index-data-202608260313",
+      "pubDate": "2026-08-26T03:13:03.000Z",
+      "description": "NZD/USD depreciates after registering modest gains in the previous day, trading around 0.5960 during the Asian hours on Wednesday.",
+      "source": "FXStreet"
+    },
     {
       "title": "2026-08-26 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-26T02:10:00.000Z",
+      "pubDate": "2026-08-26T03:10:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
     },
     {
-      "title": "Hang Seng stuck in chop zone at 25,750: Hourly levels",
-      "link": "https://www.investing.com/news/stock-market-news/hang-seng-tests-25150-support-on-bearish-close-live-levels-93CH-4872574",
-      "pubDate": "2026-08-26T02:02:06.000Z",
+      "title": "Australia inflation runs hot in July, adding to rate hike risk",
+      "link": "https://www.investing.com/news/economy-news/australia-inflation-tops-forecasts-in-july-adds-to-rate-risk-4876166",
+      "pubDate": "2026-08-26T02:43:12.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Ardelyx chief patient officer sells $41,419 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/ardelyx-chief-patient-officer-sells-41419-in-stock-93CH-4876179",
-      "pubDate": "2026-08-26T02:00:54.000Z",
+      "title": "Earnings call transcript: FWD Group posts record H1 2026 profit as shares rise 6.6%",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-fwd-group-posts-record-h1-2026-profit-as-shares-rise-66-93CH-4876217",
+      "pubDate": "2026-08-26T02:43:01.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Meta, US states have discussed settling teen social media harm case, Bloomberg News reports",
-      "link": "https://www.investing.com/news/stock-market-news/meta-us-states-have-discussed-settling-teen-social-media-harm-case-bloomberg-news-reports-4876159",
-      "pubDate": "2026-08-26T02:00:49.000Z",
+      "title": "BOJ chief Ueda to skip Jackson Hole, shifts market focus to G20",
+      "link": "https://www.investing.com/news/economy-news/boj-chief-ueda-to-skip-jackson-hole-shifts-market-focus-to-g20-4876207",
+      "pubDate": "2026-08-26T02:42:55.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "COG FY 2026 slides: salary packaging drives 28% EBITDA growth",
-      "link": "https://www.investing.com/news/company-news/cog-fy-2026-slides-salary-packaging-drives-28-ebitda-growth-93CH-4876178",
-      "pubDate": "2026-08-26T02:00:44.000Z",
+      "title": "Earnings call transcript: Ingenia posts strong H2 2026 but shares fall",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-ingenia-posts-strong-h2-2026-but-shares-fall-93CH-4876216",
+      "pubDate": "2026-08-26T02:42:30.000Z",
       "description": "",
       "source": "Investing.com"
+    },
+    {
+      "title": "Earnings call transcript: Duratec posts higher profit in H2 2026 on record backlog",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-duratec-posts-higher-profit-in-h2-2026-on-record-backlog-93CH-4876215",
+      "pubDate": "2026-08-26T02:41:36.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Japanese Yen strengthens on US bond buyback, traders brace for US PCE inflation report",
+      "link": "https://www.fxstreet.com/news/japanese-yen-strengthens-on-us-bond-buyback-traders-brace-for-us-pce-inflation-report-202608260241",
+      "pubDate": "2026-08-26T02:41:32.000Z",
+      "description": "The USD/JPY pair loses ground to near 158.90 during the Asian trading hours on Wednesday. The US Treasury’s bond buyback programs weigh on the US Dollar (USD) against the Japanese Yen (JPY).",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Woolworths FY2026 slides: profit surges 12.7%, AI drives growth",
+      "link": "https://www.investing.com/news/company-news/woolworths-fy2026-slides-profit-surges-127-ai-drives-growth-93CH-4876214",
+      "pubDate": "2026-08-26T02:35:15.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Symbotic CTO James Kuffner sells $160,421 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/symbotic-cto-james-kuffner-sells-160421-in-stock-93CH-4876213",
+      "pubDate": "2026-08-26T02:32:32.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Helloworld FY26 slides: EBITDA rises 8% despite Middle East disruption",
+      "link": "https://www.investing.com/news/company-news/helloworld-fy26-slides-ebitda-rises-8-despite-middle-east-disruption-93CH-4876212",
+      "pubDate": "2026-08-26T02:32:10.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Asian stocks hesitant before Nvidia, oil slips on Hormuz hopes",
+      "link": "https://www.investing.com/news/stock-market-news/asian-stocks-hesitant-before-nvidia-oil-slips-on-hormuz-hopes-4876210",
+      "pubDate": "2026-08-26T02:25:18.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Australian Dollar strengthens against Japanese Yen following CPI data",
+      "link": "https://www.fxstreet.com/news/australian-dollar-strengthens-against-japanese-yen-following-cpi-data-202608260214",
+      "pubDate": "2026-08-26T02:14:52.000Z",
+      "description": "AUD/JPY gains ground for the second consecutive day, trading around 114.20 during the Asian hours on Wednesday.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "BoJ to raise rate to 1.25% in September — Reuters poll",
+      "link": "https://www.fxstreet.com/news/boj-to-raise-rate-to-125-in-september-reuters-poll-202608260213",
+      "pubDate": "2026-08-26T02:13:02.000Z",
+      "description": "According to August 17-24 survey in a Reuters poll, 57% of economists expected the Bank of Japan (BoJ) to raise its interest rate in September, a sharp turnaround from a July poll.",
+      "source": "FXStreet"
     },
     {
       "title": "Dollar moves in a narrow range ahead of inflation data, Jackson Hole",
-      "link": "https://www.investing.com/news/economy-news/dollar-moves-in-a-narrow-range-ahead-of-inflation-data-jackson-hole-4876177",
-      "pubDate": "2026-08-26T02:00:33.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Earnings call transcript: Airtasker lifts FY 2026 growth, shares jump on outlook",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-airtasker-lifts-fy-2026-growth-shares-jump-on-outlook-93CH-4876175",
-      "pubDate": "2026-08-26T01:58:39.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Earnings call transcript: Neuren Technologies lifts outlook in H1 2026",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-neuren-technologies-lifts-outlook-in-h1-2026-93CH-4876174",
-      "pubDate": "2026-08-26T01:56:39.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "IVE Group FY26 slides: margins expand despite revenue softness",
-      "link": "https://www.investing.com/news/company-news/ive-group-fy26-slides-margins-expand-despite-revenue-softness-93CH-4876173",
-      "pubDate": "2026-08-26T01:56:30.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Calix FY26 slides: record revenue, 40% Magnesia growth amid market caution",
-      "link": "https://www.investing.com/news/company-news/calix-fy26-slides-record-revenue-40-magnesia-growth-amid-market-caution-93CH-4876172",
-      "pubDate": "2026-08-26T01:55:54.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "6K Additive H1 2026 slides: 73% revenue growth, expansion advancing",
-      "link": "https://www.investing.com/news/company-news/6k-additive-h1-2026-slides-73-revenue-growth-expansion-advancing-93CH-4876171",
-      "pubDate": "2026-08-26T01:55:02.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQalFaeTZ2Tl9BS09vVjROdl84Z24tcVpyWWRLMVltR3hyQ1g5OThDMllnMGxscnZMWktXT2FxNVVMd1ZGTTVycFJMV0JVT202NFFncFh0MVRYUlBiLS1XWEVvUnI1dHNaMEt0TXgzanprZGp5MDRsRXl5cTVVRDZ0SjYwNXc0UUtGNWlMVDlQUE9MRk5EbDgzTFllcWlOZ3ZFWkM0MWFwOGYtYk9CRUl3bWNJVXk?oc=5",
+      "pubDate": "2026-08-26T01:51:00.000Z",
+      "description": "Dollar moves in a narrow range ahead of inflation data, Jackson Hole&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "Australian Dollar strengthens after hot CPI report; eyes multi-month high ahead of US PCE",
@@ -149,10 +177,10 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Gold little changed with US inflation data in spotlight",
+      "title": "Gold holds steady as investors focus on US inflation data",
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPcjZTTDRpNkRqVkd3eW9wY0dzSmhYM2ZDamhQYUQwT0l5S2M2NGVjMElYbUhIZ29YZ0g1R2ZadWhyS3NnWVZraHRRdmd2RGhaTUNTbWxjU0xOZDF1NGJGeE1vSndKVTZ3TDRaOXFJdjBXSlRfbEVNbW9zVU9Ba01zNU9zUkpyemh2MGlkcG5ZcHVhUnE2S2xsUjhhLWdZMk9ybUE?oc=5",
       "pubDate": "2026-08-26T00:30:00.000Z",
-      "description": "Gold little changed with US inflation data in spotlight&nbsp;&nbsp;Reuters",
+      "description": "Gold holds steady as investors focus on US inflation data&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -319,7 +347,7 @@
     {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-25T18:56:10.000Z",
+      "pubDate": "2026-08-25T18:56:03.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
     },
@@ -352,20 +380,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Silver Price Forecast: XAG/USD reclaims 100-day SMA, eyes $70",
-      "link": "https://www.fxstreet.com/news/silver-price-forecast-xag-usd-reclaims-100-day-sma-eyes-70-202608251831",
-      "pubDate": "2026-08-25T18:31:57.000Z",
-      "description": "Silver (XAG/USD) price registers modest gains on Tuesday, after briefly breaching the 100-day Simple Moving Average (SMA) at $68.38, pushing the white metal to a three-day low of $67.43 before making a U-turn and turning bullish. The XAG/US",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Gold pulls back from $4,700 as Hormuz hopes cool haven demand",
-      "link": "https://www.fxstreet.com/news/gold-pulls-back-from-4-700-as-hormuz-hopes-cool-haven-demand-202608251814",
-      "pubDate": "2026-08-25T18:14:14.000Z",
-      "description": "Gold price holds firm during the North American session as buyers fail to surpass the $4,700 level, exacerbating a retracement below a key psychological level, amid mixed US data and rising hopes for an end to the US-Iran conflict. XAU/USD ",
-      "source": "FXStreet"
-    },
-    {
       "title": "Canadian dollar edges higher as Canada announces retaliatory tariffs",
       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPTFJHV1E3SmotZWgzY3lYaVFJVUZ4RS1PZy1HaEtIRkMxekZ1MEVGODdRVjBTSXRhdlctVGVaYUJwaWZ2b1VWenJ2MjVNbG9WT2tFdHhGVHFjX3dCdlZrSlpHZmpIbFNyLXpKdmZibHY3TzNDa0t2amsyd2Q5TXozZDVOOWV4bnVqVDYyQ0F2YVg4cGJ2anFwWWktdk5oVGRWcy01YWVGZXhqc2dGZ3Iw?oc=5",
       "pubDate": "2026-08-25T18:01:43.000Z",
@@ -380,25 +394,11 @@
       "source": "Federal Reserve"
     },
     {
-      "title": "USD/CAD Price Forecast: Bearish indicators keep the path tilted lower",
-      "link": "https://www.fxstreet.com/news/usd-cad-price-forecast-bearish-indicators-keep-the-path-tilted-lower-202608251756",
-      "pubDate": "2026-08-25T17:56:36.000Z",
-      "description": "USD/CAD edges lower on Tuesday, with the Canadian Dollar (CAD) drawing support from a weaker US Dollar (USD) as traders also assess the latest tit-for-tat tariff measures between the United States (US) and Canada.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Did Trump Just Move SpaceX Stock With One Truth Social Post?",
       "link": "https://beincrypto.com/spacex-stock-trump-space-force-post/",
       "pubDate": "2026-08-25T17:43:09.000Z",
       "description": "SpaceX stock climbed 1.7% as Trump touted Space Force surveillance. Timing data points to rival catalysts, not the post.\nThe post Did Trump Just Move SpaceX Stock With One Truth Social Post? appeared first on BeInCrypto.",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Euro remains flat with Sterling despite upbeat German data",
-      "link": "https://www.fxstreet.com/news/euro-remains-flat-with-sterling-despite-upbeat-german-data-202608251739",
-      "pubDate": "2026-08-25T17:39:11.000Z",
-      "description": "EUR/GBP traded around 0.8560 on Tuesday, little changed, as a run of stronger German data failed to give the Euro (EUR) a clear lift against a resilient Pound. The pair remains pinned near its 20 and 100-period Simple Moving Averages (SMA),",
-      "source": "FXStreet"
     },
     {
       "title": "$30 Trillion Dream: Can Anthropic Sell the Biggest IPO Ever?",
@@ -443,10 +443,10 @@
       "source": "Reuters"
     },
     {
-      "title": "(USD) Dollar Debasement Frees EM Currencies From Treasuries’ Weight",
+      "title": "(USD) Dollar Debasement Frees EM Currencies From Treasuries’ Weight - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOb0VYTnBvbVYzOUxRbUFHTmlNLUMtMWtKUXk3NEpsLWs2T3owTkdkTjdNdmliMVBkX1FXR3l3RmUxTTZFalE5OWpLSG9oa2NDTU11TDZuNFVYV3BUMGlXWS1tcWFJTlhYQTZYUHRyZjdzQmtJU1VZVWlJQUEwZnZfbkQ2djcxSzI1TEVVdEw3WXVvRXNRWU4tSkpreVpPQTRpWGlqMkI4b29aSklBTkJVUQ?oc=5",
       "pubDate": "2026-08-25T09:38:22.000Z",
-      "description": "(USD) Dollar Debasement Frees EM Currencies From Treasuries’ Weight&nbsp;&nbsp;Bloomberg.com",
+      "description": "(USD) Dollar Debasement Frees EM Currencies From Treasuries’ Weight&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
     },
     {
@@ -457,17 +457,17 @@
       "source": "Reuters"
     },
     {
-      "title": "Iran war makes multibillion-dollar Tanzania LNG more attractive, Equinor says",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOQVRRRXpGLTQzSUFSbHE2c1c0RGxGTGRhOWpneHlwRTI5WlBDQWY1UWJBOWFITHFyZkxGQ2xGYzkxT1ZZLWtCM0ZRbVhncEUyeTM3aG05Y0gtekpwNE1vdjdkNjNUc1BiOUw1cDljM1gtX0p3Yi16elh6UTNYeGJlNXRiVlZRU0diWnlnVkVOVnVuY2JITnNKVHgzRnJGVzRsTW5jRXNB?oc=5",
-      "pubDate": "2026-08-25T09:08:55.000Z",
-      "description": "Iran war makes multibillion-dollar Tanzania LNG more attractive, Equinor says&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "Gold Fields Limited",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBBV2JBUzNlc0h0TTRiZk96NjIyMEVOa2IwYzNuN0FKaXVFOTY3ZjIwVUlxRkp5bDVhQ0NZN0gyeW51OHNWZVBWbFJ2djZPMlBxMWtabUN5bzlDTGVPQmNjLVd3?oc=5",
       "pubDate": "2026-08-25T08:12:05.000Z",
       "description": "Gold Fields Limited&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Iran war makes multibillion-dollar Tanzania LNG more attractive, Equinor says",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOQVRRRXpGLTQzSUFSbHE2c1c0RGxGTGRhOWpneHlwRTI5WlBDQWY1UWJBOWFITHFyZkxGQ2xGYzkxT1ZZLWtCM0ZRbVhncEUyeTM3aG05Y0gtekpwNE1vdjdkNjNUc1BiOUw1cDljM1gtX0p3Yi16elh6UTNYeGJlNXRiVlZRU0diWnlnVkVOVnVuY2JITnNKVHgzRnJGVzRsTW5jRXNB?oc=5",
+      "pubDate": "2026-08-25T07:40:00.000Z",
+      "description": "Iran war makes multibillion-dollar Tanzania LNG more attractive, Equinor says&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
