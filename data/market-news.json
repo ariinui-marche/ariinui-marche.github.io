@@ -1,54 +1,117 @@
 {
-  "timestamp": "2026-08-26T11:08:58.458Z",
+  "timestamp": "2026-08-26T11:40:36.771Z",
   "items": [
+    {
+      "title": "Japanese Yen treads water around 159.00 with US PCE Inflation on tap",
+      "link": "https://www.fxstreet.com/news/japanese-yen-treads-water-around-15900-with-us-pce-inflation-on-tap-202608261139",
+      "pubDate": "2026-08-26T11:39:41.000Z",
+      "description": "The Japanese Yen (JPY) ticks higher against the US Dollar (USD) on Wednesday but keeps looking for direction, as investors bide their time, awaiting an array of key US macroeconomic releases due later on the day.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "2026-08-26 - Banknotes and coins - Access to cash",
+      "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
+      "pubDate": "2026-08-26T11:36:02.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
+    },
+    {
+      "title": "Australian Dollar: RBA tightening risks rise – TD Securities",
+      "link": "https://www.fxstreet.com/news/australian-dollar-rba-tightening-risks-rise-td-securities-202608261128",
+      "pubDate": "2026-08-26T11:28:22.000Z",
+      "description": "TD Securities’ Prashant Newnaha highlights that Australia’s July Consumer Price Index (CPI  delivered a strong inflation impulse, with headline and trimmed mean measures beating consensus and remaining uncomfortably high.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "J.M. Smucker Q1 FY2027 slides: tariff refunds boost earnings 71%",
+      "link": "https://www.investing.com/news/company-news/jm-smucker-q1-fy2027-slides-tariff-refunds-boost-earnings-71-93CH-4876922",
+      "pubDate": "2026-08-26T11:23:07.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Why is Uber Technologies stock climbing today?",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-uber-technologies-stock-climbing-today-93CH-4876921",
+      "pubDate": "2026-08-26T11:22:48.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "TSX futures inch lower amid Canada-U.S. trade spat; Nvidia earnings ahead",
+      "link": "https://www.investing.com/news/stock-market-news/tsx-futures-inch-lower-amid-canadaus-trade-spat-nvidia-earnings-ahead-4876920",
+      "pubDate": "2026-08-26T11:22:08.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Dycom Industries beats estimates on strong infrastructure demand",
+      "link": "https://www.investing.com/news/earnings/dycom-industries-beats-estimates-on-strong-infrastructure-demand-93CH-4876919",
+      "pubDate": "2026-08-26T11:21:52.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Connect Biopharma stock rating reiterated at Buy by Canaccord",
+      "link": "https://www.investing.com/news/analyst-ratings/connect-biopharma-stock-rating-reiterated-at-buy-by-canaccord-93CH-4876917",
+      "pubDate": "2026-08-26T11:20:52.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Shiba Inu (SHIB) Breaks 11-Month Downtrend After Japan Approval",
+      "link": "https://beincrypto.com/shiba-inu-price-japan-trend-break/",
+      "pubDate": "2026-08-26T11:20:35.000Z",
+      "description": "Shiba Inu price breaks its 20-week moving average as Japan clears SHIB for institutional trading. One level decides it.\nThe post Shiba Inu (SHIB) Breaks 11-Month Downtrend After Japan Approval appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Airbus workers in Spain resume strike after rejecting pay offer",
+      "link": "https://www.investing.com/news/stock-market-news/airbus-workers-in-spain-resume-strike-after-rejecting-pay-offer-93CH-4876916",
+      "pubDate": "2026-08-26T11:17:26.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "US Dollar Index: Range-bound consolidation as PCE looms – BBH",
+      "link": "https://www.fxstreet.com/news/us-dollar-index-range-bound-consolidation-as-pce-looms-bbh-202608261117",
+      "pubDate": "2026-08-26T11:17:21.000Z",
+      "description": "Brown Brothers Harriman’s (BBH) Elias Haddad notes the US Dollar (USD) is firm, consolidating just above recent lows following the US Treasury buyback announcement.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Dycom Industries earnings beat by $0.59, revenue topped estimates",
+      "link": "https://www.investing.com/news/earnings/dycom-industries-earnings-beat-by-059-revenue-topped-estimates-4876915",
+      "pubDate": "2026-08-26T11:16:25.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "AtriCure chief legal officer sells $458,099 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/atricure-chief-legal-officer-sells-458099-in-stock-93CH-4876914",
+      "pubDate": "2026-08-26T11:15:55.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Kohl’s Corp earnings beat by $0.71, revenue fell short of estimates",
+      "link": "https://www.investing.com/news/earnings/kohls-corp-earnings-beat-by-071-revenue-fell-short-of-estimates-4876913",
+      "pubDate": "2026-08-26T11:15:25.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Why is Deutsche Bank stock rallying today?",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-deutsche-bank-stock-rallying-today-93CH-4876910",
+      "pubDate": "2026-08-26T11:14:37.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
     {
       "title": "Gold slips ahead of US PCE as US Dollar firms modestly",
       "link": "https://www.fxstreet.com/news/gold-slips-ahead-of-us-pce-as-us-dollar-firms-modestly-202608261107",
       "pubDate": "2026-08-26T11:07:10.000Z",
       "description": "Gold (XAU/USD) edges lower on Wednesday as buyers trim their exposure ahead of the US Personal Consumption Expenditures (PCE) Price Index data, due at 12:30 GMT. At the time of writing, XAU/USD trades around $4,615 after reaching $4,697 on ",
       "source": "FXStreet"
-    },
-    {
-      "title": "Innio’s 44% drop validates InvestingPro’s overvalued call",
-      "link": "https://www.investing.com/news/investment-ideas/innios-44-drop-validates-investingpros-overvalued-call-93CH-4876858",
-      "pubDate": "2026-08-26T11:02:26.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Webull president Denier sells $475,607 in shares",
-      "link": "https://www.investing.com/news/insider-trading-news/webull-president-denier-sells-475607-in-shares-93CH-4876848",
-      "pubDate": "2026-08-26T11:01:12.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "GCT Semiconductor partners on UAV control technology development",
-      "link": "https://www.investing.com/news/company-news/gct-semiconductor-partners-on-uav-control-technology-development-93CH-4876844",
-      "pubDate": "2026-08-26T11:00:46.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Why is Movado stock rallying today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-movado-stock-rallying-today-93CH-4876843",
-      "pubDate": "2026-08-26T11:00:42.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Alibaba completes HK$80 billion share placement for AI expansion",
-      "link": "https://www.investing.com/news/company-news/alibaba-completes-hk80-billion-share-placement-for-ai-expansion-93CH-4876842",
-      "pubDate": "2026-08-26T11:00:33.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "FAA approves Surf Air Mobility’s flight operations software",
-      "link": "https://www.investing.com/news/company-news/faa-approves-surf-air-mobilitys-flight-operations-software-93CH-4876841",
-      "pubDate": "2026-08-26T11:00:32.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "GBP/USD Price Forecast: Hits fresh intra-week lows after failure at 1.3660 resistance",
@@ -58,46 +121,11 @@
       "source": "FXStreet"
     },
     {
-      "title": "nCino stock rating held at Neutral by BTIG on core growth",
-      "link": "https://www.investing.com/news/analyst-ratings/ncino-stock-rating-held-at-neutral-by-btig-on-core-growth-93CH-4876830",
-      "pubDate": "2026-08-26T10:59:03.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "2026-08-26 - Banknotes and coins - Access to cash",
-      "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-26T10:59:01.000Z",
-      "description": "",
-      "source": "Swiss National Bank"
-    },
-    {
       "title": "Sterling dips, currency markets look to the U.S. for cues",
       "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQRmNfNnVraUF0blNIV2hlNkhGZFgtd1ltbmRHaW1nVTQ5YUJBOE5rRTZrNEZaVzkwdTJIQy1teHlrM0ViUlVkR2RQQXoxazUzTGhaVlF4Rk1tTE5Ya1ROc25nTV93M185YV9BLWFFQzZINTJMSy1XVHh1Yjc1M1hMejB6WlA4aFlvdGxtMUxQYm5zUQ?oc=5",
       "pubDate": "2026-08-26T10:58:09.000Z",
       "description": "Sterling dips, currency markets look to the U.S. for cues&nbsp;&nbsp;Reuters",
       "source": "Reuters"
-    },
-    {
-      "title": "Target Hospitality stock surges 10% on $250M contract win",
-      "link": "https://www.investing.com/news/stock-market-news/target-hospitality-stock-surges-10-on-250m-contract-win-93CH-4876823",
-      "pubDate": "2026-08-26T10:55:40.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Boston Scientific hit by cyberattack, global operations affected",
-      "link": "https://www.investing.com/news/stock-market-news/boston-scientific-hit-by-cyberattack-global-operations-affected-4876822",
-      "pubDate": "2026-08-26T10:55:17.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Movado earnings beat by $0.19, revenue topped estimates",
-      "link": "https://www.investing.com/news/earnings/movado-earnings-beat-by-019-revenue-topped-estimates-4876821",
-      "pubDate": "2026-08-26T10:55:09.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Jim Cramer Flags a &#8216;Monumental Day&#039;: Will NVIDIA Earnings Move Markets?",
@@ -303,7 +331,7 @@
       "source": "FXStreet"
     },
     {
-      "title": "US core PCE inflation set to keep pressure on the Federal Reserve to hike interest rates",
+      "title": "US core PCE inflation expected to remain stubbornly high, urging the Fed to hike rates",
       "link": "https://www.fxstreet.com/news/us-core-pce-inflation-set-to-keep-pressure-on-the-federal-reserve-to-hike-interest-rates-202608260800",
       "pubDate": "2026-08-26T08:00:00.000Z",
       "description": "The United States (US) Bureau of Economic Analysis (BEA) is expected to publish the Personal Consumption Expenditures (PCE) Price Index data for July on Wednesday, at 12:30 GMT.",
@@ -331,27 +359,6 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "British Pound weakens against Japanese Yen amid hawkish BoJ prospects",
-      "link": "https://www.fxstreet.com/news/british-pound-weakens-against-japanese-yen-amid-hawkish-boj-prospects-202608260748",
-      "pubDate": "2026-08-26T07:48:28.000Z",
-      "description": "The British Pound (GBP) is under pressure against the Japanese Yen (JPY) on Wednesday, trading 0.22% lower at around 216.85 during the European trading session.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Brent: Prices extend sharp decline – Deutsche Bank",
-      "link": "https://www.fxstreet.com/news/brent-prices-extend-sharp-decline-deutsche-bank-202608260744",
-      "pubDate": "2026-08-26T07:44:35.000Z",
-      "description": "Deutsche Bank’s Early Morning Reid team, including Peter Sidorov and Jim Reid, note that Brent Oil has reversed more than half of its recent 13% rally as Middle East de-escalation headlines weigh on energy markets.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Silver Price Forecast: XAG/USD rises to near $69.00 ahead of US PCE inflation data",
-      "link": "https://www.fxstreet.com/news/silver-price-forecast-xag-usd-rises-to-near-6900-ahead-of-us-pce-inflation-data-202608260742",
-      "pubDate": "2026-08-26T07:42:22.000Z",
-      "description": "Silver price (XAG/USD) extends its gains for the second successive day, trading around $68.80 per troy ounce during the European hours on Wednesday.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Crypto Fear and Greed Index Hits 74, Highest Since October 2025",
       "link": "https://beincrypto.com/crypto-fear-greed-index-74-october/",
       "pubDate": "2026-08-26T07:35:26.000Z",
@@ -359,10 +366,17 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Australia’s Second-Largest Pension Makes Big Bet on Yen Strength",
+      "title": "U.S. Dollar Edges Higher Ahead of PCE Data, Jackson Hole",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOZWZSMlhJal9LTWkyV2R0NVVfODl2N0ptUEhwVVZZdUtqRVlRSkQxTUstQVJ3V0pib0NXbDdGT2pLQzg2OVB0YWt4ODNVZXhxblo2SGZLMDV2ZWNZN1RWbkpKZ3g3djhpb2xSYTk2RDJiTm5SNXpfNnFPLWRVc1ZVRFFhUDJRQk5GcldIWkpuNDY3Q2M1a3BwV1ZHWmlFS3dvTVpHNHNyeF9fMDY5Y2NoQVdJdWg5bnM?oc=5",
+      "pubDate": "2026-08-26T07:11:00.000Z",
+      "description": "U.S. Dollar Edges Higher Ahead of PCE Data, Jackson Hole&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "Australia’s Second-Largest Pension Makes Big Bullish Bet on Yen",
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPako1ekRTR205bG1uVlIxQnF3MkhndW9qbWlaZjhvdURQY19HSTVtb3JEX2RtQ3FleDUzaFNZMEhWV1ZYbUN2YTFCSENDaUxZZWRPRDNFN0ZPZlFsWW1ZQXFLWkhOZHhnOUdjRVpfYUVCOFBuT0VHWXVfdXNrSTRDdGJZUjg4a1Z3MWFHM28xbE92STVacU5lUTR0Y3U5b3hnbkloM1dzRzNlZ2xyUEpMSA?oc=5",
       "pubDate": "2026-08-26T07:00:41.000Z",
-      "description": "Australia’s Second-Largest Pension Makes Big Bet on Yen Strength&nbsp;&nbsp;Bloomberg.com",
+      "description": "Australia’s Second-Largest Pension Makes Big Bullish Bet on Yen&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
     },
     {
@@ -391,13 +405,6 @@
       "link": "https://beincrypto.com/city-protocol-raises-11m-onchain-structured-products/",
       "pubDate": "2026-08-26T06:30:00.000Z",
       "description": "City Protocol, an onchain structured products infrastructure provider, has announced the completion of its seed and Pre-A funding rounds, raising $11 million in total from Dragonfly, Jump Crypto, CMT Digital, Stratified Capital, Adaverse, M",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Owning a Whole Bitcoin Is 70-Times Rarer Than Being a Millionaire",
-      "link": "https://beincrypto.com/whole-bitcoin-rarer-than-millionaire/",
-      "pubDate": "2026-08-26T06:22:54.000Z",
-      "description": "River data shows a whole bitcoin is rarer to own than being a millionaire worldwide.\nThe post Owning a Whole Bitcoin Is 70-Times Rarer Than Being a Millionaire appeared first on BeInCrypto.",
       "source": "BeInCrypto"
     },
     {
@@ -517,13 +524,6 @@
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNel90c3Z4X2JNVEo1TXNWQVNlYVRRaEpqQkJjRFVQRG15TWhkbnNZY2IxeW5DMjZMRm55ZUtqLWREMkw5UnlfMVpvTHlxWFpFUXNKTWFkTUh3Smx1S09iVDZmRm9FdnowbDh1LVlxcmtzTUZpWGNhckVxbGg1Z2h3T29JaF9OYS1zd0x5N2Y3dkkxb1M3UTJaY043cWtHZGYtYTVudTdRUDNXcnR4eEdXN0EyNUVnd9IBuwFBVV95cUxQYmM2VzA2XzQ2Ml83SmFjeHJnUkRZSDRROUw2bDRLRFZ0cktRN2wweXRZZUp5VWVVZG9yX0FYMjFINkxiclpZZlRJOVhyUDQ5eEN1a1hnanRCNzgzeEM2ZGZxUDA2YVVYTkNOXzMtX0FBNnJXUWNkYVpBR2VsaVRWNkN3eVM1Vm56QUxmQkktSmp2eU14X29NOE1ZMmVLNGdwWHpyV1ZsNUVfaU9QVUlSTjBGVnQ0dXJkLThR?oc=5",
       "pubDate": "2026-08-25T02:25:00.000Z",
       "description": "Gold hovers near three-month high on dollar weakness, Treasury bond buyback plans&nbsp;&nbsp;CNBC",
-      "source": "Google News"
-    },
-    {
-      "title": "Dollar little changed as Iran sanctions, Treasury buybacks gauged",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNTUpiTUJUSEFOX2MzZ2JHenZWMURROUE3bldXVkY2a2ZQek5zM1VUdk1HQjNMdV92ZTlnMU9lSk9YczQ4M2lzZkV4MUFILVJUaFZIazJtUnNFNm1ZbFNrRHJEZk9LNTE4THhuVW94ZjMzbENaN0FwVjJrMHlNc2hoai1QaXFLc2k0eFZYZ3lfblRfZjFueDRSMV9weUhXX3dOZmJj?oc=5",
-      "pubDate": "2026-08-25T02:06:00.000Z",
-      "description": "Dollar little changed as Iran sanctions, Treasury buybacks gauged&nbsp;&nbsp;CNBC",
       "source": "Google News"
     },
     {
