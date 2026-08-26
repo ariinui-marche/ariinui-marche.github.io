@@ -233,6 +233,16 @@ main {
 }
 .corr-combo-card .corr-r-row { border-top: none; padding: 0 0 6px; }
 .corr-advice { font-size: 11px; color: var(--text-dim); line-height: 1.4; }
+.corr-trend {
+  font-size: 10px;
+  color: var(--text-dim);
+  line-height: 1.4;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--border);
+  font-style: italic;
+}
+.corr-trend b { font-style: normal; color: var(--text); }
 
 @media (max-width: 480px) {
   .corr-picker-grid { grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); }

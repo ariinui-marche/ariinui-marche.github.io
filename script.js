@@ -439,7 +439,7 @@ function corrResultHtml() {
   if (corrError) return `<div class="empty-state">${corrError}</div>`;
   if (!corrCombos?.length) return '';
 
-  const combos = corrCombos.map((c) => ({ a: c.pairA, b: c.pairB, r: c.r, level: corrLevel(c.r) }));
+  const combos = corrCombos.map((c) => ({ a: c.pairA, b: c.pairB, r: c.r, rTrend: c.rTrend, level: corrLevel(c.r) }));
 
   const rows = combos.map((c) => `
     <div class="corr-combo-card">
@@ -449,6 +449,7 @@ function corrResultHtml() {
         <span class="corr-r-badge" style="color:${CORR_LEVEL_COLOR[c.level]}">${c.level}</span>
       </div>
       <div class="corr-advice">${corrAdvice(c.a, c.b, c.r, c.level)}</div>
+      ${typeof c.rTrend === 'number' ? `<div class="corr-trend">Trend correlation (price levels, myfxbook-style): <b>${c.rTrend >= 0 ? '+' : ''}${c.rTrend.toFixed(2)}</b> — often higher, inflated by a shared macro trend rather than real day-to-day co-movement.</div>` : ''}
     </div>`).join('');
 
   const verdict = combos.length > 1 ? corrGlobalVerdict(combos) : null;
@@ -470,7 +471,7 @@ function renderCorrelation() {
 function corrRenderBody() {
   const body = document.getElementById('corrBody');
   body.innerHTML = `
-    <div class="corr-intro">Pick 2 or 3 pairs and a timeframe to see how correlated they are, so you don't accidentally trade two or three pairs moving in the same direction at once.</div>
+    <div class="corr-intro">Pick 2 or 3 pairs and a timeframe to see how correlated they are, so you don't accidentally trade two or three pairs moving in the same direction at once. Two numbers are shown: the main one (returns-based, same method as TradingView/OANDA) is what matters for double-exposure risk; the trend one (price-level based, myfxbook-style) is shown alongside for reference — it reads higher during trending months, even between pairs that don't really move together day to day.</div>
     ${corrPickerHtml()}
     ${corrResultHtml()}
     <div class="corr-footer">Pearson correlation, Yahoo Finance, fetched live on selection · 31-pair catalog</div>`;
