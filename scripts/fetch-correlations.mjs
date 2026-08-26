@@ -1,9 +1,10 @@
-// Live correlation checker — same method as TradeJournal Pro's Analytics
-// "Corrélation" tab (api/live-correlation.ts): Yahoo Finance daily closes,
-// Pearson correlation on daily returns. Run once/day via GitHub Actions
-// (correlations move slowly, unlike Force Devise which needs live client
-// fetch) — writes data/correlations.json, consumed client-side alongside
-// the already-live Currency Strength scores to recommend a "Best Duo".
+// Live correlation checker — same method and pair catalog as TradeJournal Pro's
+// Analytics "Corrélation" tab (LiveCorrelationChecker.tsx / api/live-correlation.ts):
+// Yahoo Finance daily closes, Pearson correlation on daily returns. Run once/day
+// via GitHub Actions (correlations move slowly) — writes data/correlations.json,
+// consumed client-side alongside Currency Strength + COT + Economic Calendar to
+// recommend a best trio, instantly and entirely client-side (no live API round-trip
+// needed since the full 31-pair matrix is precomputed daily).
 
 import { writeFile, mkdir } from 'node:fs/promises';
 
@@ -11,7 +12,13 @@ const YF_SYMBOL = {
   EURUSD: 'EURUSD=X', GBPUSD: 'GBPUSD=X', USDJPY: 'USDJPY=X',
   AUDUSD: 'AUDUSD=X', USDCAD: 'USDCAD=X', USDCHF: 'USDCHF=X',
   NZDUSD: 'NZDUSD=X',
-  XAUUSD: 'GC=F', BTCUSD: 'BTC-USD',
+  XAUUSD: 'GC=F', BTCUSD: 'BTC-USD', ETHUSD: 'ETH-USD',
+  EURJPY: 'EURJPY=X', GBPJPY: 'GBPJPY=X', EURGBP: 'EURGBP=X',
+  EURAUD: 'EURAUD=X', EURCAD: 'EURCAD=X', EURCHF: 'EURCHF=X', EURNZD: 'EURNZD=X',
+  GBPAUD: 'GBPAUD=X', GBPCAD: 'GBPCAD=X', GBPCHF: 'GBPCHF=X', GBPNZD: 'GBPNZD=X',
+  AUDJPY: 'AUDJPY=X', CADJPY: 'CADJPY=X', CHFJPY: 'CHFJPY=X', NZDJPY: 'NZDJPY=X',
+  AUDCAD: 'AUDCAD=X', AUDCHF: 'AUDCHF=X', AUDNZD: 'AUDNZD=X',
+  CADCHF: 'CADCHF=X', NZDCAD: 'NZDCAD=X', NZDCHF: 'NZDCHF=X',
 };
 
 const PAIRS = Object.keys(YF_SYMBOL);
@@ -62,10 +69,21 @@ function pearson(x, y) {
   return den === 0 ? null : parseFloat((num / den).toFixed(2));
 }
 
+// Batches Yahoo requests (some hosts throttle bursts of 30+ concurrent requests)
+async function fetchAllInBatches(pairs, batchSize = 8) {
+  const results = new Array(pairs.length);
+  for (let i = 0; i < pairs.length; i += batchSize) {
+    const batch = pairs.slice(i, i + batchSize);
+    const settled = await Promise.allSettled(batch.map(fetchDailyCloses));
+    settled.forEach((r, j) => { results[i + j] = r; });
+  }
+  return results;
+}
+
 async function main() {
   await mkdir('data', { recursive: true });
 
-  const results = await Promise.allSettled(PAIRS.map(fetchDailyCloses));
+  const results = await fetchAllInBatches(PAIRS);
   const returnsByPair = {};
   for (let i = 0; i < PAIRS.length; i++) {
     if (results[i].status === 'fulfilled') {
@@ -89,7 +107,7 @@ async function main() {
 
   const timestamp = new Date().toISOString();
   await writeFile('data/correlations.json', JSON.stringify({ timestamp, pairs: available, combos }, null, 2));
-  console.log(`correlations.json written (${available.length} pairs, ${combos.length} combos)`);
+  console.log(`correlations.json written (${available.length}/${PAIRS.length} pairs, ${combos.length} combos)`);
 }
 
 main().catch((err) => {

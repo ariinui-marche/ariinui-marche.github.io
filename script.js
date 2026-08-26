@@ -278,14 +278,64 @@ document.getElementById('audDeskToggle')?.addEventListener('click', (e) => {
   document.getElementById('audDeskBody').classList.toggle('collapsed', expanded);
 });
 
-// ── Live Correlation — best diversified trio ────────────────────────────
-// Same method as TradeJournal Pro's Analytics "Corrélation" tab
-// (LiveCorrelationChecker.tsx / api/live-correlation.ts): Pearson correlation
-// on 3-month daily returns (Yahoo Finance, fetched daily via GitHub Actions —
-// see scripts/fetch-correlations.mjs), combined with the live Currency
-// Strength scores already fetched above to pick the 3 mutually least-
-// correlated pairs with the strongest combined strength divergence.
-// No COT / personal trade history here (public static site, no accounts).
+// ── Live Correlation — pair picker + best diversified trio ──────────────
+// Ports TradeJournal Pro's Analytics "Corrélation" tab (LiveCorrelationChecker.tsx
+// / api/live-correlation.ts) as closely as a static public site allows: same
+// 31-pair catalog, same clickable picker (toggle up to 8, "show more" reveals
+// crosses/minors), same Pearson/Currency-Strength/COT/session-calendar signals.
+// Two differences, both structural:
+//  1. Best TRIO instead of duo (explicit request).
+//  2. No personal trade history (win rate / avg P&L per pair/session) — this
+//     site has no user accounts/Supabase, so there is no personal trade data
+//     to show. Everything else below is the same public data TJP itself uses.
+// Also: no live server round-trip on "Analyze" — the full 31×31 correlation
+// matrix + COT report are already precomputed daily/weekly (see
+// scripts/fetch-correlations.mjs, scripts/fetch-cot.mjs), so selecting a
+// basket and clicking Analyze just recomputes locally, instantly.
+
+const CORR_ALL_PAIRS = [
+  { id: 'EURUSD', label: 'EUR/USD', category: 'Major' },
+  { id: 'GBPUSD', label: 'GBP/USD', category: 'Major' },
+  { id: 'USDJPY', label: 'USD/JPY', category: 'Major' },
+  { id: 'AUDUSD', label: 'AUD/USD', category: 'Major' },
+  { id: 'USDCAD', label: 'USD/CAD', category: 'Major' },
+  { id: 'USDCHF', label: 'USD/CHF', category: 'Major' },
+  { id: 'NZDUSD', label: 'NZD/USD', category: 'Major' },
+  { id: 'XAUUSD', label: 'XAU/USD', category: 'Metal' },
+  { id: 'BTCUSD', label: 'BTC/USD', category: 'Crypto' },
+  { id: 'ETHUSD', label: 'ETH/USD', category: 'Crypto' },
+  { id: 'EURJPY', label: 'EUR/JPY', category: 'Cross' },
+  { id: 'GBPJPY', label: 'GBP/JPY', category: 'Cross' },
+  { id: 'EURGBP', label: 'EUR/GBP', category: 'Cross' },
+  { id: 'EURAUD', label: 'EUR/AUD', category: 'Cross' },
+  { id: 'EURCAD', label: 'EUR/CAD', category: 'Cross' },
+  { id: 'EURCHF', label: 'EUR/CHF', category: 'Cross' },
+  { id: 'EURNZD', label: 'EUR/NZD', category: 'Cross' },
+  { id: 'GBPAUD', label: 'GBP/AUD', category: 'Cross' },
+  { id: 'GBPCAD', label: 'GBP/CAD', category: 'Cross' },
+  { id: 'GBPCHF', label: 'GBP/CHF', category: 'Cross' },
+  { id: 'GBPNZD', label: 'GBP/NZD', category: 'Cross' },
+  { id: 'AUDJPY', label: 'AUD/JPY', category: 'Cross' },
+  { id: 'CADJPY', label: 'CAD/JPY', category: 'Cross' },
+  { id: 'CHFJPY', label: 'CHF/JPY', category: 'Cross' },
+  { id: 'NZDJPY', label: 'NZD/JPY', category: 'Cross' },
+  { id: 'AUDCAD', label: 'AUD/CAD', category: 'Minor' },
+  { id: 'AUDCHF', label: 'AUD/CHF', category: 'Minor' },
+  { id: 'AUDNZD', label: 'AUD/NZD', category: 'Minor' },
+  { id: 'CADCHF', label: 'CAD/CHF', category: 'Minor' },
+  { id: 'NZDCAD', label: 'NZD/CAD', category: 'Minor' },
+  { id: 'NZDCHF', label: 'NZD/CHF', category: 'Minor' },
+];
+const CORR_DEFAULT_COUNT = 10;
+const CORR_MAX_SELECT = 8;
+
+let corrData = null;      // data/correlations.json
+let corrCotMap = {};      // built from data/cot-data.json
+let corrEcoEvents = [];   // data/eco-calendar.json events
+let corrStrengthMap = {}; // live Currency Strength scores
+let corrSelected = new Set(); // empty by default — user picks pairs, same as TJP's picker
+let corrShowAllPairs = false;
+let corrResultTrio = null;
 
 function corrLevel(r) {
   if (r >= 0.7) return 'DANGER';
@@ -345,70 +395,253 @@ function findBestTrio(pairs, combos, sm) {
   return { ...trios[0], warning: 'Every pair in the basket is correlated right now — showing the least-exposed trio.' };
 }
 
-function corrPairRow(pair, strength) {
-  if (!strength) return `<div class="corr-pair-row"><span class="corr-pair-id">${pair}</span><span class="corr-pair-strength">strength unavailable</span></div>`;
-  const biasColor = strength.bias === 'BUY' ? 'var(--green)' : strength.bias === 'SELL' ? 'var(--red)' : 'var(--gray)';
+// ── COT (CFTC Commitment of Traders) ─────────────────────────────────────
+
+const CORR_CURRENCY_TO_COT = {
+  EUR: 'EURO FX', JPY: 'JAPANESE YEN', GBP: 'BRITISH POUND', CHF: 'SWISS FRANC',
+  CAD: 'CANADIAN DOLLAR', AUD: 'AUSTRALIAN DOLLAR', NZD: 'NEW ZEALAND DOLLAR',
+  XAU: 'GOLD', BTC: 'BITCOIN',
+};
+
+function buildCotMap(entries) {
+  const map = {};
+  const seen = new Set();
+  for (const entry of entries || []) {
+    const name = (entry.market_and_exchange_names || '').toUpperCase();
+    for (const [currency, contract] of Object.entries(CORR_CURRENCY_TO_COT)) {
+      if (seen.has(currency) || !name.includes(contract)) continue;
+      const lng = parseFloat(entry.noncomm_positions_long_all) || 0;
+      const sht = parseFloat(entry.noncomm_positions_short_all) || 0;
+      const net = lng - sht;
+      map[currency] = { net, bias: net > 5000 ? 'BULL' : net < -5000 ? 'BEAR' : 'NEUTRAL', date: entry.report_date_as_yyyy_mm_dd };
+      seen.add(currency);
+    }
+  }
+  return map;
+}
+
+function corrFmtNet(n) {
+  const abs = Math.abs(n), sign = n >= 0 ? '+' : '-';
+  if (abs >= 1_000_000) return `${sign}${(abs / 1_000_000).toFixed(1)}M`;
+  if (abs >= 1_000) return `${sign}${Math.round(abs / 1_000)}K`;
+  return `${sign}${abs}`;
+}
+
+function getCotConfirmation(bias, baseCOT, quoteCOT) {
+  if (!baseCOT && !quoteCOT) return { text: 'COT data unavailable for this pair', color: 'var(--gray)' };
+  const baseOK = baseCOT && ((bias === 'BUY' && baseCOT.bias === 'BULL') || (bias === 'SELL' && baseCOT.bias === 'BEAR'));
+  const quoteOK = quoteCOT && ((bias === 'BUY' && quoteCOT.bias === 'BEAR') || (bias === 'SELL' && quoteCOT.bias === 'BULL'));
+  const baseKO = baseCOT && ((bias === 'BUY' && baseCOT.bias === 'BEAR') || (bias === 'SELL' && baseCOT.bias === 'BULL'));
+  const quoteKO = quoteCOT && ((bias === 'BUY' && quoteCOT.bias === 'BULL') || (bias === 'SELL' && quoteCOT.bias === 'BEAR'));
+  if (baseOK && quoteOK) return { text: 'Institutionals confirm both currencies ✓', color: 'var(--green)' };
+  if (baseOK || quoteOK) return { text: 'Partial confirmation — 1 of 2 currencies', color: 'var(--orange)' };
+  if (baseKO || quoteKO) return { text: 'COT diverges from the bias ⚠️ — risky setup', color: 'var(--red)' };
+  return { text: 'Institutional positioning neutral', color: 'var(--gray)' };
+}
+
+// ── Session window (same UTC-10 local-time boundaries as the eco calendar) ─
+
+function corrAddH(d, h) { return new Date(d.getTime() + h * 3_600_000); }
+
+function getSessionWindow() {
+  const now = new Date();
+  const h = now.getHours() + now.getMinutes() / 60;
+  const day = new Date(now); day.setHours(0, 0, 0, 0);
+  if (h >= 14 && h < 17) return { name: 'Asia', start: corrAddH(day, 14), end: corrAddH(day, 17) };
+  if (h >= 22) return { name: 'London', start: corrAddH(day, 22), end: corrAddH(day, 26) };
+  if (h < 2) return { name: 'London', start: corrAddH(day, -2), end: corrAddH(day, 2) };
+  if (h >= 3 && h < 7) return { name: 'New York', start: corrAddH(day, 3), end: corrAddH(day, 7) };
+  if (h >= 2 && h < 3) return { name: 'New York (next)', start: corrAddH(day, 3), end: corrAddH(day, 7) };
+  if (h >= 7 && h < 14) return { name: 'Asia (next)', start: corrAddH(day, 14), end: corrAddH(day, 17) };
+  return { name: 'London (next)', start: corrAddH(day, 22), end: corrAddH(day, 26) };
+}
+
+function getHighImpactEventsForPair(pairId, events, win) {
+  const base = pairId.slice(0, 3), quote = pairId.slice(3, 6);
+  const now = new Date();
+  return events.filter((e) => {
+    if (e.impact !== 'High') return false;
+    if (e.country !== base && e.country !== quote) return false;
+    const dt = new Date(e.date);
+    return !isNaN(dt) && dt >= now && dt >= win.start && dt <= win.end;
+  });
+}
+
+// ── Rendering ─────────────────────────────────────────────────────────
+
+function corrPickerHtml() {
+  const visible = corrShowAllPairs ? CORR_ALL_PAIRS : CORR_ALL_PAIRS.slice(0, CORR_DEFAULT_COUNT);
+  const chips = visible.map((p) => {
+    const isSel = corrSelected.has(p.id);
+    const isDisabled = !isSel && corrSelected.size >= CORR_MAX_SELECT;
+    const cls = ['corr-chip', isSel ? 'corr-chip-selected' : '', isDisabled ? 'corr-chip-disabled' : ''].filter(Boolean).join(' ');
+    return `<button type="button" class="${cls}" data-pair="${p.id}" ${isDisabled ? 'disabled' : ''}>
+      <span class="corr-chip-label">${p.label}</span>
+      <span class="corr-chip-cat">${p.category}</span>
+    </button>`;
+  }).join('');
+
+  const selectedChips = [...corrSelected].map((id) => `<button type="button" class="corr-selected-chip" data-remove="${id}">${id} ×</button>`).join('');
+
   return `
-    <div class="corr-pair-row">
-      <span class="corr-pair-id">${pair}</span>
-      <span class="corr-pair-strength">${strength.base} ${strength.baseScore} / ${strength.quote} ${strength.quoteScore}</span>
-      <span class="corr-pair-bias" style="color:${biasColor}">${strength.bias}</span>
+    <div class="corr-picker-grid">${chips}</div>
+    <button type="button" id="corrShowMoreBtn" class="corr-showmore">
+      ${corrShowAllPairs ? '▲ Hide extra pairs' : `▼ Show ${CORR_ALL_PAIRS.length - CORR_DEFAULT_COUNT} more pairs (crosses & minors)`}
+    </button>
+    <div class="corr-selbar">
+      <div class="corr-selbar-left">
+        ${corrSelected.size === 0
+          ? '<span class="corr-selbar-empty">No pair selected</span>'
+          : `<span class="corr-selbar-count"><b>${corrSelected.size}</b> pair${corrSelected.size > 1 ? 's' : ''}</span><div class="corr-selected-chips">${selectedChips}</div><button type="button" id="corrClearBtn" class="corr-clear">Clear all</button>`}
+      </div>
+      <button type="button" id="corrAnalyzeBtn" class="corr-analyze-btn" ${corrSelected.size < 3 ? 'disabled' : ''}>Analyze basket</button>
     </div>`;
 }
 
-function renderCorrelation(correlData, currencyData) {
+function corrPairCardHtml(pair, strength, sessionWindow) {
+  const strengthHtml = strength
+    ? `<span class="corr-pair-strength">${strength.base} ${strength.baseScore} / ${strength.quote} ${strength.quoteScore}</span>`
+    : `<span class="corr-pair-strength">strength unavailable</span>`;
+  const biasColor = !strength ? 'var(--gray)' : strength.bias === 'BUY' ? 'var(--green)' : strength.bias === 'SELL' ? 'var(--red)' : 'var(--gray)';
+
+  const base = pair.slice(0, 3), quote = pair.slice(3, 6);
+  const baseCOT = corrCotMap[base] || null;
+  const quoteCOT = corrCotMap[quote] || null;
+  const cotConf = strength ? getCotConfirmation(strength.bias, baseCOT, quoteCOT) : null;
+  const cotRows = [base, quote].map((ccy) => {
+    const sig = ccy === base ? baseCOT : quoteCOT;
+    if (!sig) return '';
+    const arrow = sig.bias === 'BULL' ? '↑' : sig.bias === 'BEAR' ? '↓' : '→';
+    const color = sig.bias === 'BULL' ? 'var(--green)' : sig.bias === 'BEAR' ? 'var(--red)' : 'var(--gray)';
+    return `<span class="corr-cot-ccy" style="color:${color}">${arrow} ${ccy} ${corrFmtNet(sig.net)}</span>`;
+  }).filter(Boolean).join(' ');
+
+  const events = getHighImpactEventsForPair(pair, corrEcoEvents, sessionWindow);
+  const eventsHtml = events.length
+    ? `<div class="corr-pair-news">${events.map((e) => `⚠️ ${new Date(e.date).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })} ${e.country} ${e.title}`).join('<br>')}</div>`
+    : '';
+
+  return `
+    <div class="corr-pair-card">
+      <div class="corr-pair-row">
+        <span class="corr-pair-id">${pair}</span>
+        ${strengthHtml}
+        <span class="corr-pair-bias" style="color:${biasColor}">${strength ? strength.bias : ''}</span>
+      </div>
+      ${cotRows ? `<div class="corr-cot-row">${cotRows}${cotConf ? ` <span style="color:${cotConf.color}">· ${cotConf.text}</span>` : ''}</div>` : ''}
+      ${eventsHtml}
+    </div>`;
+}
+
+function renderCorrelation(cData, currencyData, cotEntries, ecoEvents) {
   try {
-    renderCorrelationUnsafe(correlData, currencyData);
+    renderCorrelationUnsafe(cData, currencyData, cotEntries, ecoEvents);
   } catch (err) {
     console.error('renderCorrelation failed, hiding panel', err);
     document.getElementById('corrBody').innerHTML = '<div class="empty-state">Data unavailable</div>';
   }
 }
 
-function renderCorrelationUnsafe(correlData, currencyData) {
+function renderCorrelationUnsafe(cData, currencyData, cotEntries, ecoEvents) {
+  corrData = cData;
+  corrCotMap = buildCotMap(cotEntries);
+  corrEcoEvents = ecoEvents || [];
+  corrStrengthMap = {};
+  for (const c of currencyData?.currencies || []) corrStrengthMap[c.id] = c.score;
+
+  corrRenderBody();
+}
+
+function corrRenderBody() {
   const body = document.getElementById('corrBody');
-  if (!correlData?.pairs?.length || !correlData?.combos?.length) {
+  if (!corrData?.pairs?.length || !corrData?.combos?.length) {
     body.innerHTML = '<div class="empty-state">Data unavailable</div>';
     return;
   }
 
-  const sm = {};
-  for (const c of currencyData?.currencies || []) sm[c.id] = c.score;
+  const sessionWindow = getSessionWindow();
+  const hasCot = Object.keys(corrCotMap).length > 0;
+  const hasStrength = Object.keys(corrStrengthMap).length > 0;
 
-  const trio = findBestTrio(correlData.pairs, correlData.combos, sm);
-  if (!trio) {
-    body.innerHTML = '<div class="empty-state">Data unavailable</div>';
-    return;
-  }
+  let resultHtml = '';
+  if (corrResultTrio) {
+    const trio = corrResultTrio;
+    const pairCards = trio.pairs.map((p, i) => corrPairCardHtml(p, trio.strengths[i], sessionWindow)).join('');
+    const rEntries = [
+      [trio.pairs[0], trio.pairs[1], trio.r.ab],
+      [trio.pairs[0], trio.pairs[2], trio.r.ac],
+      [trio.pairs[1], trio.pairs[2], trio.r.bc],
+    ];
+    const rRows = rEntries.map(([a, b, r]) => {
+      const level = corrLevel(r);
+      return `
+        <div class="corr-r-row">
+          <span class="corr-r-pairs">${a} × ${b}</span>
+          <span class="corr-r-value" style="color:${CORR_LEVEL_COLOR[level]}">${r >= 0 ? '+' : ''}${r.toFixed(2)}</span>
+          <span class="corr-r-badge" style="color:${CORR_LEVEL_COLOR[level]}">${level}</span>
+        </div>`;
+    }).join('');
 
-  const pairRows = trio.pairs.map((p, i) => corrPairRow(p, trio.strengths[i])).join('');
-  const rEntries = [
-    [trio.pairs[0], trio.pairs[1], trio.r.ab],
-    [trio.pairs[0], trio.pairs[2], trio.r.ac],
-    [trio.pairs[1], trio.pairs[2], trio.r.bc],
-  ];
-  const rRows = rEntries.map(([a, b, r]) => {
-    const level = corrLevel(r);
-    return `
-      <div class="corr-r-row">
-        <span class="corr-r-pairs">${a} × ${b}</span>
-        <span class="corr-r-value" style="color:${CORR_LEVEL_COLOR[level]}">${r >= 0 ? '+' : ''}${r.toFixed(2)}</span>
-        <span class="corr-r-badge" style="color:${CORR_LEVEL_COLOR[level]}">${level}</span>
+    resultHtml = `
+      <div class="corr-result-card">
+        <div class="corr-result-head">
+          <span class="corr-result-title">Best 3 opportunities</span>
+          <span class="corr-result-meta">
+            ${hasStrength ? '<span class="corr-sig-ok">Currency Strength ✓</span>' : '<span class="corr-sig-off">Currency Strength ✗</span>'} ·
+            ${hasCot ? '<span class="corr-sig-ok">COT ✓</span>' : '<span class="corr-sig-off">COT ✗</span>'} ·
+            <span class="corr-sig-session">Session ${sessionWindow.name}</span>
+          </span>
+        </div>
+        ${trio.warning ? `<div class="corr-warn">${trio.warning}</div>` : ''}
+        ${pairCards}
+        <div class="corr-section-label">Pairwise correlation</div>
+        ${rRows}
       </div>`;
-  }).join('');
+  }
 
-  const asOf = correlData.timestamp ? new Date(correlData.timestamp).toLocaleString('en-GB') : '';
+  const asOf = corrData.timestamp ? new Date(corrData.timestamp).toLocaleString('en-GB') : '';
 
   body.innerHTML = `
-    <div class="corr-intro">Best trio of pairs from the current basket to trade together: mutually low-correlated, with the strongest combined currency-strength divergence.</div>
-    ${trio.warning ? `<div class="corr-warn">${trio.warning}</div>` : ''}
-    <div class="corr-trio-card">
-      <div class="corr-section-label">Selected pairs</div>
-      ${pairRows}
-      <div class="corr-section-label">Pairwise correlation</div>
-      ${rRows}
-    </div>
-    <div class="corr-footer">Basket: ${correlData.pairs.join(', ')} · Pearson, 3-month daily returns, updated ${asOf || 'daily'}</div>`;
+    <div class="corr-intro">Select 3 to 8 pairs, then Analyze: picks the trio that is mutually least-correlated with the strongest combined currency-strength divergence — same method as TradeJournal Pro's Analytics "Corrélation" tab (Pearson, Yahoo Finance, COT CFTC, session calendar). No personal trade history here (no accounts on this public site).</div>
+    ${corrPickerHtml()}
+    ${resultHtml}
+    <div class="corr-footer">Correlation: Pearson, 3-month daily returns, updated ${asOf || 'daily'} · COT: CFTC, weekly · 31-pair catalog</div>`;
+
+  corrBindPickerEvents();
+}
+
+function corrBindPickerEvents() {
+  const body = document.getElementById('corrBody');
+  body.querySelectorAll('.corr-chip').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const id = btn.dataset.pair;
+      if (corrSelected.has(id)) corrSelected.delete(id);
+      else if (corrSelected.size < CORR_MAX_SELECT) corrSelected.add(id);
+      corrResultTrio = null;
+      corrRenderBody();
+    });
+  });
+  body.querySelectorAll('[data-remove]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      corrSelected.delete(btn.dataset.remove);
+      corrResultTrio = null;
+      corrRenderBody();
+    });
+  });
+  document.getElementById('corrShowMoreBtn')?.addEventListener('click', () => {
+    corrShowAllPairs = !corrShowAllPairs;
+    corrRenderBody();
+  });
+  document.getElementById('corrClearBtn')?.addEventListener('click', () => {
+    corrSelected.clear();
+    corrResultTrio = null;
+    corrRenderBody();
+  });
+  document.getElementById('corrAnalyzeBtn')?.addEventListener('click', () => {
+    if (corrSelected.size < 3) return;
+    corrResultTrio = findBestTrio([...corrSelected], corrData.combos, corrStrengthMap);
+    corrRenderBody();
+  });
 }
 
 document.getElementById('corrToggle')?.addEventListener('click', (e) => {
@@ -757,23 +990,25 @@ function renderNews() {
 
 async function loadAll() {
   try {
-    const [currencyData, ecoData, newsData, audDeskData, correlData] = await Promise.all([
+    const [currencyData, ecoData, newsData, audDeskData, correlData, cotData] = await Promise.all([
       fetchCurrencyStrength().catch((err) => { console.error(err); return null; }),
       loadJSON('./data/eco-calendar.json').catch(() => null),
       loadJSON('./data/market-news.json').catch(() => null),
       loadJSON('./data/aud-desk.json').catch(() => null),
       loadJSON('./data/correlations.json').catch(() => null),
+      loadJSON('./data/cot-data.json').catch(() => null),
     ]);
 
     renderAudDesk(audDeskData);
     renderCurrencies(currencyData);
-    renderCorrelation(correlData, currencyData);
 
     currentEvents = (ecoData?.events || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
     findNextHighEvent();
     renderCountdownStatic();
     renderEcoCalendar();
     renderEvents();
+
+    renderCorrelation(correlData, currencyData, cotData?.entries, currentEvents);
 
     currentNews = (newsData?.items || [])
       .map((n) => {

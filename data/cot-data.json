@@ -1,0 +1,3991 @@
+{
+  "timestamp": "2026-08-26T06:37:57.541Z",
+  "entries": [
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-18T00:00:00.000",
+      "noncomm_positions_long_all": "88204",
+      "noncomm_positions_short_all": "132363",
+      "change_in_noncomm_long_all": "7666",
+      "change_in_noncomm_short_all": "12602"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-18T00:00:00.000",
+      "noncomm_positions_long_all": "25181",
+      "noncomm_positions_short_all": "25039",
+      "change_in_noncomm_long_all": "2485",
+      "change_in_noncomm_short_all": "829"
+    },
+    {
+      "market_and_exchange_names": "GOLD -1 TROY OUNCE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-08-18T00:00:00.000",
+      "noncomm_positions_long_all": "3488",
+      "noncomm_positions_short_all": "6346"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-08-18T00:00:00.000",
+      "noncomm_positions_long_all": "256902",
+      "noncomm_positions_short_all": "34713",
+      "change_in_noncomm_long_all": "5966",
+      "change_in_noncomm_short_all": "1717"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-08-18T00:00:00.000",
+      "noncomm_positions_long_all": "16602",
+      "noncomm_positions_short_all": "35893",
+      "change_in_noncomm_long_all": "2424",
+      "change_in_noncomm_short_all": "6778"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-18T00:00:00.000",
+      "noncomm_positions_long_all": "22985",
+      "noncomm_positions_short_all": "181151",
+      "change_in_noncomm_long_all": "10131",
+      "change_in_noncomm_short_all": "-5065"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-18T00:00:00.000",
+      "noncomm_positions_long_all": "14041",
+      "noncomm_positions_short_all": "41319",
+      "change_in_noncomm_long_all": "4268",
+      "change_in_noncomm_short_all": "-916"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-18T00:00:00.000",
+      "noncomm_positions_long_all": "77343",
+      "noncomm_positions_short_all": "131916",
+      "change_in_noncomm_long_all": "12075",
+      "change_in_noncomm_short_all": "10427"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-18T00:00:00.000",
+      "noncomm_positions_long_all": "128932",
+      "noncomm_positions_short_all": "181825",
+      "change_in_noncomm_long_all": "-5256",
+      "change_in_noncomm_short_all": "5552"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-18T00:00:00.000",
+      "noncomm_positions_long_all": "196241",
+      "noncomm_positions_short_all": "255329",
+      "change_in_noncomm_long_all": "-945",
+      "change_in_noncomm_short_all": "-1867"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-18T00:00:00.000",
+      "noncomm_positions_long_all": "8483",
+      "noncomm_positions_short_all": "8695",
+      "change_in_noncomm_long_all": "406",
+      "change_in_noncomm_short_all": "510"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-18T00:00:00.000",
+      "noncomm_positions_long_all": "6450",
+      "noncomm_positions_short_all": "3794",
+      "change_in_noncomm_long_all": "5",
+      "change_in_noncomm_short_all": "89"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-08-18T00:00:00.000",
+      "noncomm_positions_long_all": "205602",
+      "noncomm_positions_short_all": "213401",
+      "change_in_noncomm_long_all": "61166",
+      "change_in_noncomm_short_all": "68532"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-18T00:00:00.000",
+      "noncomm_positions_long_all": "17370",
+      "noncomm_positions_short_all": "14634",
+      "change_in_noncomm_long_all": "-814",
+      "change_in_noncomm_short_all": "315"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN CASH PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-08-18T00:00:00.000",
+      "noncomm_positions_long_all": "2429",
+      "noncomm_positions_short_all": "2047",
+      "change_in_noncomm_long_all": "-77",
+      "change_in_noncomm_short_all": "169"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-11T00:00:00.000",
+      "noncomm_positions_long_all": "80538",
+      "noncomm_positions_short_all": "119761",
+      "change_in_noncomm_long_all": "6153",
+      "change_in_noncomm_short_all": "12186"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-08-11T00:00:00.000",
+      "noncomm_positions_long_all": "14178",
+      "noncomm_positions_short_all": "29115",
+      "change_in_noncomm_long_all": "2667",
+      "change_in_noncomm_short_all": "3010"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-08-11T00:00:00.000",
+      "noncomm_positions_long_all": "250936",
+      "noncomm_positions_short_all": "32996",
+      "change_in_noncomm_long_all": "23923",
+      "change_in_noncomm_short_all": "3617"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-11T00:00:00.000",
+      "noncomm_positions_long_all": "12854",
+      "noncomm_positions_short_all": "186216",
+      "change_in_noncomm_long_all": "-660",
+      "change_in_noncomm_short_all": "-6393"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-11T00:00:00.000",
+      "noncomm_positions_long_all": "9773",
+      "noncomm_positions_short_all": "42235",
+      "change_in_noncomm_long_all": "-1497",
+      "change_in_noncomm_short_all": "-1857"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-11T00:00:00.000",
+      "noncomm_positions_long_all": "65268",
+      "noncomm_positions_short_all": "121489",
+      "change_in_noncomm_long_all": "10256",
+      "change_in_noncomm_short_all": "8663"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-11T00:00:00.000",
+      "noncomm_positions_long_all": "134188",
+      "noncomm_positions_short_all": "176273",
+      "change_in_noncomm_long_all": "-13040",
+      "change_in_noncomm_short_all": "-16428"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-11T00:00:00.000",
+      "noncomm_positions_long_all": "8077",
+      "noncomm_positions_short_all": "8185",
+      "change_in_noncomm_long_all": "-171",
+      "change_in_noncomm_short_all": "-164"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-11T00:00:00.000",
+      "noncomm_positions_long_all": "197186",
+      "noncomm_positions_short_all": "257196",
+      "change_in_noncomm_long_all": "-4661",
+      "change_in_noncomm_short_all": "-2742"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-11T00:00:00.000",
+      "noncomm_positions_long_all": "6445",
+      "noncomm_positions_short_all": "3705",
+      "change_in_noncomm_long_all": "262",
+      "change_in_noncomm_short_all": "-178"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-11T00:00:00.000",
+      "noncomm_positions_long_all": "18184",
+      "noncomm_positions_short_all": "14319",
+      "change_in_noncomm_long_all": "625",
+      "change_in_noncomm_short_all": "512"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-08-11T00:00:00.000",
+      "noncomm_positions_long_all": "144436",
+      "noncomm_positions_short_all": "144869",
+      "change_in_noncomm_long_all": "-19377",
+      "change_in_noncomm_short_all": "-20601"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-11T00:00:00.000",
+      "noncomm_positions_long_all": "22696",
+      "noncomm_positions_short_all": "24210",
+      "change_in_noncomm_long_all": "7035",
+      "change_in_noncomm_short_all": "9056"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN CASH PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-08-11T00:00:00.000",
+      "noncomm_positions_long_all": "2506",
+      "noncomm_positions_short_all": "1878",
+      "change_in_noncomm_long_all": "792",
+      "change_in_noncomm_short_all": "449"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-04T00:00:00.000",
+      "noncomm_positions_long_all": "74385",
+      "noncomm_positions_short_all": "107575",
+      "change_in_noncomm_long_all": "6566",
+      "change_in_noncomm_short_all": "-208"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-08-04T00:00:00.000",
+      "noncomm_positions_long_all": "11511",
+      "noncomm_positions_short_all": "26105",
+      "change_in_noncomm_long_all": "-24268",
+      "change_in_noncomm_short_all": "-20230"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-08-04T00:00:00.000",
+      "noncomm_positions_long_all": "227013",
+      "noncomm_positions_short_all": "29379",
+      "change_in_noncomm_long_all": "7391",
+      "change_in_noncomm_short_all": "-8173"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-04T00:00:00.000",
+      "noncomm_positions_long_all": "13514",
+      "noncomm_positions_short_all": "192609",
+      "change_in_noncomm_long_all": "-8986",
+      "change_in_noncomm_short_all": "-6201"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-04T00:00:00.000",
+      "noncomm_positions_long_all": "11270",
+      "noncomm_positions_short_all": "44092",
+      "change_in_noncomm_long_all": "1153",
+      "change_in_noncomm_short_all": "513"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-04T00:00:00.000",
+      "noncomm_positions_long_all": "55012",
+      "noncomm_positions_short_all": "112826",
+      "change_in_noncomm_long_all": "-6446",
+      "change_in_noncomm_short_all": "-13446"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-04T00:00:00.000",
+      "noncomm_positions_long_all": "147228",
+      "noncomm_positions_short_all": "192701",
+      "change_in_noncomm_long_all": "45957",
+      "change_in_noncomm_short_all": "-71982"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-04T00:00:00.000",
+      "noncomm_positions_long_all": "201847",
+      "noncomm_positions_short_all": "259938",
+      "change_in_noncomm_long_all": "-3128",
+      "change_in_noncomm_short_all": "-17484"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-04T00:00:00.000",
+      "noncomm_positions_long_all": "8248",
+      "noncomm_positions_short_all": "8349",
+      "change_in_noncomm_long_all": "267",
+      "change_in_noncomm_short_all": "146"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-04T00:00:00.000",
+      "noncomm_positions_long_all": "6183",
+      "noncomm_positions_short_all": "3883",
+      "change_in_noncomm_long_all": "-194",
+      "change_in_noncomm_short_all": "92"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-08-04T00:00:00.000",
+      "noncomm_positions_long_all": "163813",
+      "noncomm_positions_short_all": "165470",
+      "change_in_noncomm_long_all": "15586",
+      "change_in_noncomm_short_all": "11195"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-04T00:00:00.000",
+      "noncomm_positions_long_all": "15661",
+      "noncomm_positions_short_all": "15154",
+      "change_in_noncomm_long_all": "-5987",
+      "change_in_noncomm_short_all": "-7691"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-08-04T00:00:00.000",
+      "noncomm_positions_long_all": "17559",
+      "noncomm_positions_short_all": "13807",
+      "change_in_noncomm_long_all": "1987",
+      "change_in_noncomm_short_all": "2139"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN CASH PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-08-04T00:00:00.000",
+      "noncomm_positions_long_all": "1714",
+      "noncomm_positions_short_all": "1429",
+      "change_in_noncomm_long_all": "-18",
+      "change_in_noncomm_short_all": "-154"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-28T00:00:00.000",
+      "noncomm_positions_long_all": "67819",
+      "noncomm_positions_short_all": "107783",
+      "change_in_noncomm_long_all": "1635",
+      "change_in_noncomm_short_all": "3914"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-07-28T00:00:00.000",
+      "noncomm_positions_long_all": "219622",
+      "noncomm_positions_short_all": "37552",
+      "change_in_noncomm_long_all": "-5163",
+      "change_in_noncomm_short_all": "-3323"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-07-28T00:00:00.000",
+      "noncomm_positions_long_all": "35779",
+      "noncomm_positions_short_all": "46335",
+      "change_in_noncomm_long_all": "3290",
+      "change_in_noncomm_short_all": "32"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-28T00:00:00.000",
+      "noncomm_positions_long_all": "22500",
+      "noncomm_positions_short_all": "198810",
+      "change_in_noncomm_long_all": "-4507",
+      "change_in_noncomm_short_all": "-2645"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-28T00:00:00.000",
+      "noncomm_positions_long_all": "10117",
+      "noncomm_positions_short_all": "43579",
+      "change_in_noncomm_long_all": "300",
+      "change_in_noncomm_short_all": "-480"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-28T00:00:00.000",
+      "noncomm_positions_long_all": "61458",
+      "noncomm_positions_short_all": "126272",
+      "change_in_noncomm_long_all": "-2824",
+      "change_in_noncomm_short_all": "6429"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-28T00:00:00.000",
+      "noncomm_positions_long_all": "101271",
+      "noncomm_positions_short_all": "264683",
+      "change_in_noncomm_long_all": "-6319",
+      "change_in_noncomm_short_all": "4968"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-28T00:00:00.000",
+      "noncomm_positions_long_all": "7981",
+      "noncomm_positions_short_all": "8203",
+      "change_in_noncomm_long_all": "671",
+      "change_in_noncomm_short_all": "1204"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-28T00:00:00.000",
+      "noncomm_positions_long_all": "204975",
+      "noncomm_positions_short_all": "277422",
+      "change_in_noncomm_long_all": "-15490",
+      "change_in_noncomm_short_all": "15619"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-28T00:00:00.000",
+      "noncomm_positions_long_all": "6377",
+      "noncomm_positions_short_all": "3791",
+      "change_in_noncomm_long_all": "97",
+      "change_in_noncomm_short_all": "131"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-07-28T00:00:00.000",
+      "noncomm_positions_long_all": "148227",
+      "noncomm_positions_short_all": "154275",
+      "change_in_noncomm_long_all": "-57527",
+      "change_in_noncomm_short_all": "-57459"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN CASH PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-07-28T00:00:00.000",
+      "noncomm_positions_long_all": "1732",
+      "noncomm_positions_short_all": "1583",
+      "change_in_noncomm_long_all": "-241",
+      "change_in_noncomm_short_all": "-245"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-28T00:00:00.000",
+      "noncomm_positions_long_all": "21648",
+      "noncomm_positions_short_all": "22845",
+      "change_in_noncomm_long_all": "-62",
+      "change_in_noncomm_short_all": "-650"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-28T00:00:00.000",
+      "noncomm_positions_long_all": "15572",
+      "noncomm_positions_short_all": "11668",
+      "change_in_noncomm_long_all": "-830",
+      "change_in_noncomm_short_all": "-1680"
+    },
+    {
+      "market_and_exchange_names": "PAX GOLD PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-07-28T00:00:00.000",
+      "noncomm_positions_long_all": "739",
+      "noncomm_positions_short_all": "1138",
+      "change_in_noncomm_long_all": "-216",
+      "change_in_noncomm_short_all": "-326"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-21T00:00:00.000",
+      "noncomm_positions_long_all": "66184",
+      "noncomm_positions_short_all": "103869",
+      "change_in_noncomm_long_all": "-2193",
+      "change_in_noncomm_short_all": "4782"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-07-21T00:00:00.000",
+      "noncomm_positions_long_all": "224785",
+      "noncomm_positions_short_all": "40875",
+      "change_in_noncomm_long_all": "-2525",
+      "change_in_noncomm_short_all": "247"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-07-21T00:00:00.000",
+      "noncomm_positions_long_all": "32489",
+      "noncomm_positions_short_all": "46303",
+      "change_in_noncomm_long_all": "2762",
+      "change_in_noncomm_short_all": "1020"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-21T00:00:00.000",
+      "noncomm_positions_long_all": "27007",
+      "noncomm_positions_short_all": "201455",
+      "change_in_noncomm_long_all": "-2705",
+      "change_in_noncomm_short_all": "-4536"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-21T00:00:00.000",
+      "noncomm_positions_long_all": "9817",
+      "noncomm_positions_short_all": "44059",
+      "change_in_noncomm_long_all": "-92",
+      "change_in_noncomm_short_all": "-2806"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-21T00:00:00.000",
+      "noncomm_positions_long_all": "64282",
+      "noncomm_positions_short_all": "119843",
+      "change_in_noncomm_long_all": "13197",
+      "change_in_noncomm_short_all": "-2495"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-21T00:00:00.000",
+      "noncomm_positions_long_all": "107590",
+      "noncomm_positions_short_all": "259715",
+      "change_in_noncomm_long_all": "-8375",
+      "change_in_noncomm_short_all": "21087"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-21T00:00:00.000",
+      "noncomm_positions_long_all": "7310",
+      "noncomm_positions_short_all": "6999",
+      "change_in_noncomm_long_all": "430",
+      "change_in_noncomm_short_all": "576"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-21T00:00:00.000",
+      "noncomm_positions_long_all": "220465",
+      "noncomm_positions_short_all": "261803",
+      "change_in_noncomm_long_all": "-9842",
+      "change_in_noncomm_short_all": "18891"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-21T00:00:00.000",
+      "noncomm_positions_long_all": "6280",
+      "noncomm_positions_short_all": "3660",
+      "change_in_noncomm_long_all": "-144",
+      "change_in_noncomm_short_all": "520"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-21T00:00:00.000",
+      "noncomm_positions_long_all": "21710",
+      "noncomm_positions_short_all": "23495",
+      "change_in_noncomm_long_all": "1733",
+      "change_in_noncomm_short_all": "1620"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-07-21T00:00:00.000",
+      "noncomm_positions_long_all": "205754",
+      "noncomm_positions_short_all": "211734",
+      "change_in_noncomm_long_all": "40976",
+      "change_in_noncomm_short_all": "40691"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN CASH PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-07-21T00:00:00.000",
+      "noncomm_positions_long_all": "1973",
+      "noncomm_positions_short_all": "1828",
+      "change_in_noncomm_long_all": "440",
+      "change_in_noncomm_short_all": "496"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-21T00:00:00.000",
+      "noncomm_positions_long_all": "16402",
+      "noncomm_positions_short_all": "13348",
+      "change_in_noncomm_long_all": "503",
+      "change_in_noncomm_short_all": "540"
+    },
+    {
+      "market_and_exchange_names": "PAX GOLD PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-07-21T00:00:00.000",
+      "noncomm_positions_long_all": "955",
+      "noncomm_positions_short_all": "1464"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-14T00:00:00.000",
+      "noncomm_positions_long_all": "68377",
+      "noncomm_positions_short_all": "99087",
+      "change_in_noncomm_long_all": "-3585",
+      "change_in_noncomm_short_all": "2474"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-07-14T00:00:00.000",
+      "noncomm_positions_long_all": "227310",
+      "noncomm_positions_short_all": "40628",
+      "change_in_noncomm_long_all": "-6403",
+      "change_in_noncomm_short_all": "1161"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-07-14T00:00:00.000",
+      "noncomm_positions_long_all": "29727",
+      "noncomm_positions_short_all": "45283",
+      "change_in_noncomm_long_all": "2548",
+      "change_in_noncomm_short_all": "2641"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-14T00:00:00.000",
+      "noncomm_positions_long_all": "29712",
+      "noncomm_positions_short_all": "205991",
+      "change_in_noncomm_long_all": "-1854",
+      "change_in_noncomm_short_all": "1299"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-14T00:00:00.000",
+      "noncomm_positions_long_all": "9909",
+      "noncomm_positions_short_all": "46865",
+      "change_in_noncomm_long_all": "-652",
+      "change_in_noncomm_short_all": "-1110"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-14T00:00:00.000",
+      "noncomm_positions_long_all": "51085",
+      "noncomm_positions_short_all": "122338",
+      "change_in_noncomm_long_all": "6521",
+      "change_in_noncomm_short_all": "-10129"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-14T00:00:00.000",
+      "noncomm_positions_long_all": "115965",
+      "noncomm_positions_short_all": "238628",
+      "change_in_noncomm_long_all": "3718",
+      "change_in_noncomm_short_all": "2603"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-14T00:00:00.000",
+      "noncomm_positions_long_all": "6424",
+      "noncomm_positions_short_all": "3140",
+      "change_in_noncomm_long_all": "-46",
+      "change_in_noncomm_short_all": "-42"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-14T00:00:00.000",
+      "noncomm_positions_long_all": "230307",
+      "noncomm_positions_short_all": "242912",
+      "change_in_noncomm_long_all": "6877",
+      "change_in_noncomm_short_all": "3255"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-14T00:00:00.000",
+      "noncomm_positions_long_all": "6880",
+      "noncomm_positions_short_all": "6423",
+      "change_in_noncomm_long_all": "16",
+      "change_in_noncomm_short_all": "316"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN CASH PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-07-14T00:00:00.000",
+      "noncomm_positions_long_all": "1533",
+      "noncomm_positions_short_all": "1332",
+      "change_in_noncomm_long_all": "-123",
+      "change_in_noncomm_short_all": "-243"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-14T00:00:00.000",
+      "noncomm_positions_long_all": "15899",
+      "noncomm_positions_short_all": "12808",
+      "change_in_noncomm_long_all": "-174",
+      "change_in_noncomm_short_all": "235"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-14T00:00:00.000",
+      "noncomm_positions_long_all": "19977",
+      "noncomm_positions_short_all": "21875",
+      "change_in_noncomm_long_all": "1145",
+      "change_in_noncomm_short_all": "1152"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-07-14T00:00:00.000",
+      "noncomm_positions_long_all": "164778",
+      "noncomm_positions_short_all": "171043",
+      "change_in_noncomm_long_all": "10082",
+      "change_in_noncomm_short_all": "7698"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-07T00:00:00.000",
+      "noncomm_positions_long_all": "71962",
+      "noncomm_positions_short_all": "96613",
+      "change_in_noncomm_long_all": "-5826",
+      "change_in_noncomm_short_all": "1125"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-07-07T00:00:00.000",
+      "noncomm_positions_long_all": "27179",
+      "noncomm_positions_short_all": "42642",
+      "change_in_noncomm_long_all": "4460",
+      "change_in_noncomm_short_all": "4978"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-07-07T00:00:00.000",
+      "noncomm_positions_long_all": "233713",
+      "noncomm_positions_short_all": "39467",
+      "change_in_noncomm_long_all": "4094",
+      "change_in_noncomm_short_all": "3867"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-07T00:00:00.000",
+      "noncomm_positions_long_all": "31566",
+      "noncomm_positions_short_all": "204692",
+      "change_in_noncomm_long_all": "-6423",
+      "change_in_noncomm_short_all": "15897"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-07T00:00:00.000",
+      "noncomm_positions_long_all": "10561",
+      "noncomm_positions_short_all": "47975",
+      "change_in_noncomm_long_all": "2586",
+      "change_in_noncomm_short_all": "1042"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-07T00:00:00.000",
+      "noncomm_positions_long_all": "44564",
+      "noncomm_positions_short_all": "132467",
+      "change_in_noncomm_long_all": "7415",
+      "change_in_noncomm_short_all": "-6829"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-07T00:00:00.000",
+      "noncomm_positions_long_all": "112247",
+      "noncomm_positions_short_all": "236025",
+      "change_in_noncomm_long_all": "375",
+      "change_in_noncomm_short_all": "-30939"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-07T00:00:00.000",
+      "noncomm_positions_long_all": "6470",
+      "noncomm_positions_short_all": "3182",
+      "change_in_noncomm_long_all": "207",
+      "change_in_noncomm_short_all": "0"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-07T00:00:00.000",
+      "noncomm_positions_long_all": "6864",
+      "noncomm_positions_short_all": "6107",
+      "change_in_noncomm_long_all": "-108",
+      "change_in_noncomm_short_all": "1397"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-07T00:00:00.000",
+      "noncomm_positions_long_all": "223430",
+      "noncomm_positions_short_all": "239657",
+      "change_in_noncomm_long_all": "-12228",
+      "change_in_noncomm_short_all": "5098"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-07T00:00:00.000",
+      "noncomm_positions_long_all": "16073",
+      "noncomm_positions_short_all": "12573",
+      "change_in_noncomm_long_all": "-422",
+      "change_in_noncomm_short_all": "-152"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN CASH PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-07-07T00:00:00.000",
+      "noncomm_positions_long_all": "1656",
+      "noncomm_positions_short_all": "1575",
+      "change_in_noncomm_long_all": "-270",
+      "change_in_noncomm_short_all": "89"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-07-07T00:00:00.000",
+      "noncomm_positions_long_all": "154696",
+      "noncomm_positions_short_all": "163345",
+      "change_in_noncomm_long_all": "-14240",
+      "change_in_noncomm_short_all": "-14709"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-07-07T00:00:00.000",
+      "noncomm_positions_long_all": "18832",
+      "noncomm_positions_short_all": "20723",
+      "change_in_noncomm_long_all": "-1177",
+      "change_in_noncomm_short_all": "-698"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-30T00:00:00.000",
+      "noncomm_positions_long_all": "77788",
+      "noncomm_positions_short_all": "95488",
+      "change_in_noncomm_long_all": "-4412",
+      "change_in_noncomm_short_all": "276"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-06-30T00:00:00.000",
+      "noncomm_positions_long_all": "22719",
+      "noncomm_positions_short_all": "37664",
+      "change_in_noncomm_long_all": "1508",
+      "change_in_noncomm_short_all": "-5825"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-06-30T00:00:00.000",
+      "noncomm_positions_long_all": "229619",
+      "noncomm_positions_short_all": "35600",
+      "change_in_noncomm_long_all": "12591",
+      "change_in_noncomm_short_all": "-89"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-30T00:00:00.000",
+      "noncomm_positions_long_all": "37989",
+      "noncomm_positions_short_all": "188795",
+      "change_in_noncomm_long_all": "-1440",
+      "change_in_noncomm_short_all": "2574"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-30T00:00:00.000",
+      "noncomm_positions_long_all": "7975",
+      "noncomm_positions_short_all": "46933",
+      "change_in_noncomm_long_all": "0",
+      "change_in_noncomm_short_all": "-2136"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-30T00:00:00.000",
+      "noncomm_positions_long_all": "37149",
+      "noncomm_positions_short_all": "139296",
+      "change_in_noncomm_long_all": "-3623",
+      "change_in_noncomm_short_all": "-7195"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-30T00:00:00.000",
+      "noncomm_positions_long_all": "111872",
+      "noncomm_positions_short_all": "266964",
+      "change_in_noncomm_long_all": "-1826",
+      "change_in_noncomm_short_all": "7162"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-30T00:00:00.000",
+      "noncomm_positions_long_all": "235658",
+      "noncomm_positions_short_all": "234559",
+      "change_in_noncomm_long_all": "-11674",
+      "change_in_noncomm_short_all": "17385"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-30T00:00:00.000",
+      "noncomm_positions_long_all": "6972",
+      "noncomm_positions_short_all": "4710",
+      "change_in_noncomm_long_all": "107",
+      "change_in_noncomm_short_all": "-114"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-30T00:00:00.000",
+      "noncomm_positions_long_all": "6263",
+      "noncomm_positions_short_all": "3182",
+      "change_in_noncomm_long_all": "-264",
+      "change_in_noncomm_short_all": "0"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-30T00:00:00.000",
+      "noncomm_positions_long_all": "16495",
+      "noncomm_positions_short_all": "12725",
+      "change_in_noncomm_long_all": "147",
+      "change_in_noncomm_short_all": "-99"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-06-30T00:00:00.000",
+      "noncomm_positions_long_all": "168936",
+      "noncomm_positions_short_all": "178054",
+      "change_in_noncomm_long_all": "-20863",
+      "change_in_noncomm_short_all": "-21773"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-30T00:00:00.000",
+      "noncomm_positions_long_all": "20009",
+      "noncomm_positions_short_all": "21421",
+      "change_in_noncomm_long_all": "4917",
+      "change_in_noncomm_short_all": "3540"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN CASH PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-06-30T00:00:00.000",
+      "noncomm_positions_long_all": "1926",
+      "noncomm_positions_short_all": "1486",
+      "change_in_noncomm_long_all": "283",
+      "change_in_noncomm_short_all": "30"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-23T00:00:00.000",
+      "noncomm_positions_long_all": "82200",
+      "noncomm_positions_short_all": "95212",
+      "change_in_noncomm_long_all": "-2142",
+      "change_in_noncomm_short_all": "6745"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-06-23T00:00:00.000",
+      "noncomm_positions_long_all": "21211",
+      "noncomm_positions_short_all": "43489",
+      "change_in_noncomm_long_all": "4808",
+      "change_in_noncomm_short_all": "4146"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-06-23T00:00:00.000",
+      "noncomm_positions_long_all": "217028",
+      "noncomm_positions_short_all": "35689",
+      "change_in_noncomm_long_all": "5901",
+      "change_in_noncomm_short_all": "4782"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-23T00:00:00.000",
+      "noncomm_positions_long_all": "39429",
+      "noncomm_positions_short_all": "186221",
+      "change_in_noncomm_long_all": "-257",
+      "change_in_noncomm_short_all": "13634"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-23T00:00:00.000",
+      "noncomm_positions_long_all": "7975",
+      "noncomm_positions_short_all": "49069",
+      "change_in_noncomm_long_all": "381",
+      "change_in_noncomm_short_all": "1417"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-23T00:00:00.000",
+      "noncomm_positions_long_all": "40772",
+      "noncomm_positions_short_all": "146491",
+      "change_in_noncomm_long_all": "-1271",
+      "change_in_noncomm_short_all": "32863"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-23T00:00:00.000",
+      "noncomm_positions_long_all": "113698",
+      "noncomm_positions_short_all": "259802",
+      "change_in_noncomm_long_all": "-3677",
+      "change_in_noncomm_short_all": "-7705"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-23T00:00:00.000",
+      "noncomm_positions_long_all": "6527",
+      "noncomm_positions_short_all": "3182",
+      "change_in_noncomm_long_all": "76",
+      "change_in_noncomm_short_all": "-2277"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-23T00:00:00.000",
+      "noncomm_positions_long_all": "247332",
+      "noncomm_positions_short_all": "217174",
+      "change_in_noncomm_long_all": "19327",
+      "change_in_noncomm_short_all": "23522"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-23T00:00:00.000",
+      "noncomm_positions_long_all": "6865",
+      "noncomm_positions_short_all": "4824",
+      "change_in_noncomm_long_all": "447",
+      "change_in_noncomm_short_all": "204"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-06-23T00:00:00.000",
+      "noncomm_positions_long_all": "189799",
+      "noncomm_positions_short_all": "199827",
+      "change_in_noncomm_long_all": "33878",
+      "change_in_noncomm_short_all": "32308"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-23T00:00:00.000",
+      "noncomm_positions_long_all": "15092",
+      "noncomm_positions_short_all": "17881",
+      "change_in_noncomm_long_all": "-3510",
+      "change_in_noncomm_short_all": "-4654"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN CASH PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-06-23T00:00:00.000",
+      "noncomm_positions_long_all": "1643",
+      "noncomm_positions_short_all": "1456",
+      "change_in_noncomm_long_all": "-140",
+      "change_in_noncomm_short_all": "-169"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-23T00:00:00.000",
+      "noncomm_positions_long_all": "16348",
+      "noncomm_positions_short_all": "12824",
+      "change_in_noncomm_long_all": "-1379",
+      "change_in_noncomm_short_all": "-1428"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-16T00:00:00.000",
+      "noncomm_positions_long_all": "84342",
+      "noncomm_positions_short_all": "88467",
+      "change_in_noncomm_long_all": "-8653",
+      "change_in_noncomm_short_all": "13632"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-06-16T00:00:00.000",
+      "noncomm_positions_long_all": "211127",
+      "noncomm_positions_short_all": "30907",
+      "change_in_noncomm_long_all": "3143",
+      "change_in_noncomm_short_all": "-3240"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-06-16T00:00:00.000",
+      "noncomm_positions_long_all": "16403",
+      "noncomm_positions_short_all": "39343",
+      "change_in_noncomm_long_all": "325",
+      "change_in_noncomm_short_all": "1795"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-16T00:00:00.000",
+      "noncomm_positions_long_all": "39686",
+      "noncomm_positions_short_all": "172587",
+      "change_in_noncomm_long_all": "1742",
+      "change_in_noncomm_short_all": "14644"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-16T00:00:00.000",
+      "noncomm_positions_long_all": "7594",
+      "noncomm_positions_short_all": "47652",
+      "change_in_noncomm_long_all": "259",
+      "change_in_noncomm_short_all": "3652"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-16T00:00:00.000",
+      "noncomm_positions_long_all": "42043",
+      "noncomm_positions_short_all": "113628",
+      "change_in_noncomm_long_all": "-3700",
+      "change_in_noncomm_short_all": "3672"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-16T00:00:00.000",
+      "noncomm_positions_long_all": "117375",
+      "noncomm_positions_short_all": "267507",
+      "change_in_noncomm_long_all": "-4145",
+      "change_in_noncomm_short_all": "169"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-16T00:00:00.000",
+      "noncomm_positions_long_all": "228005",
+      "noncomm_positions_short_all": "193652",
+      "change_in_noncomm_long_all": "8441",
+      "change_in_noncomm_short_all": "-11980"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-16T00:00:00.000",
+      "noncomm_positions_long_all": "6418",
+      "noncomm_positions_short_all": "4620",
+      "change_in_noncomm_long_all": "-784",
+      "change_in_noncomm_short_all": "1192"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-16T00:00:00.000",
+      "noncomm_positions_long_all": "6451",
+      "noncomm_positions_short_all": "5459",
+      "change_in_noncomm_long_all": "375",
+      "change_in_noncomm_short_all": "808"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-06-16T00:00:00.000",
+      "noncomm_positions_long_all": "155921",
+      "noncomm_positions_short_all": "167519",
+      "change_in_noncomm_long_all": "4469",
+      "change_in_noncomm_short_all": "6333"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-16T00:00:00.000",
+      "noncomm_positions_long_all": "17727",
+      "noncomm_positions_short_all": "14252",
+      "change_in_noncomm_long_all": "549",
+      "change_in_noncomm_short_all": "92"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-16T00:00:00.000",
+      "noncomm_positions_long_all": "18602",
+      "noncomm_positions_short_all": "22535",
+      "change_in_noncomm_long_all": "2095",
+      "change_in_noncomm_short_all": "2732"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN CASH PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-06-16T00:00:00.000",
+      "noncomm_positions_long_all": "1783",
+      "noncomm_positions_short_all": "1625",
+      "change_in_noncomm_long_all": "62",
+      "change_in_noncomm_short_all": "-8"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-06-09T00:00:00.000",
+      "noncomm_positions_long_all": "207984",
+      "noncomm_positions_short_all": "34147",
+      "change_in_noncomm_long_all": "1888",
+      "change_in_noncomm_short_all": "4071"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-06-09T00:00:00.000",
+      "noncomm_positions_long_all": "16078",
+      "noncomm_positions_short_all": "37548",
+      "change_in_noncomm_long_all": "2380",
+      "change_in_noncomm_short_all": "-543"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-09T00:00:00.000",
+      "noncomm_positions_long_all": "37944",
+      "noncomm_positions_short_all": "157943",
+      "change_in_noncomm_long_all": "221",
+      "change_in_noncomm_short_all": "26109"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-09T00:00:00.000",
+      "noncomm_positions_long_all": "7335",
+      "noncomm_positions_short_all": "44000",
+      "change_in_noncomm_long_all": "1090",
+      "change_in_noncomm_short_all": "4846"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-09T00:00:00.000",
+      "noncomm_positions_long_all": "45743",
+      "noncomm_positions_short_all": "109956",
+      "change_in_noncomm_long_all": "-7944",
+      "change_in_noncomm_short_all": "4051"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-09T00:00:00.000",
+      "noncomm_positions_long_all": "121520",
+      "noncomm_positions_short_all": "267338",
+      "change_in_noncomm_long_all": "6671",
+      "change_in_noncomm_short_all": "22922"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-09T00:00:00.000",
+      "noncomm_positions_long_all": "219564",
+      "noncomm_positions_short_all": "205632",
+      "change_in_noncomm_long_all": "-15878",
+      "change_in_noncomm_short_all": "19056"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-09T00:00:00.000",
+      "noncomm_positions_long_all": "7202",
+      "noncomm_positions_short_all": "3428",
+      "change_in_noncomm_long_all": "606",
+      "change_in_noncomm_short_all": "-402"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-09T00:00:00.000",
+      "noncomm_positions_long_all": "6076",
+      "noncomm_positions_short_all": "4651",
+      "change_in_noncomm_long_all": "203",
+      "change_in_noncomm_short_all": "114"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-06-09T00:00:00.000",
+      "noncomm_positions_long_all": "151452",
+      "noncomm_positions_short_all": "161186",
+      "change_in_noncomm_long_all": "-2560",
+      "change_in_noncomm_short_all": "569"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-09T00:00:00.000",
+      "noncomm_positions_long_all": "16507",
+      "noncomm_positions_short_all": "19803",
+      "change_in_noncomm_long_all": "2344",
+      "change_in_noncomm_short_all": "2876"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN CASH PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-06-09T00:00:00.000",
+      "noncomm_positions_long_all": "1721",
+      "noncomm_positions_short_all": "1633",
+      "change_in_noncomm_long_all": "121",
+      "change_in_noncomm_short_all": "294"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-09T00:00:00.000",
+      "noncomm_positions_long_all": "17178",
+      "noncomm_positions_short_all": "14160",
+      "change_in_noncomm_long_all": "-32",
+      "change_in_noncomm_short_all": "-592"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-09T00:00:00.000",
+      "noncomm_positions_long_all": "92995",
+      "noncomm_positions_short_all": "74835",
+      "change_in_noncomm_long_all": "-12181",
+      "change_in_noncomm_short_all": "11471"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-02T00:00:00.000",
+      "noncomm_positions_long_all": "105176",
+      "noncomm_positions_short_all": "63364",
+      "change_in_noncomm_long_all": "-23953",
+      "change_in_noncomm_short_all": "-5610"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-06-02T00:00:00.000",
+      "noncomm_positions_long_all": "206096",
+      "noncomm_positions_short_all": "30076",
+      "change_in_noncomm_long_all": "5392",
+      "change_in_noncomm_short_all": "-16368"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-06-02T00:00:00.000",
+      "noncomm_positions_long_all": "13698",
+      "noncomm_positions_short_all": "38091",
+      "change_in_noncomm_long_all": "-5322",
+      "change_in_noncomm_short_all": "1839"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-02T00:00:00.000",
+      "noncomm_positions_long_all": "37723",
+      "noncomm_positions_short_all": "131834",
+      "change_in_noncomm_long_all": "-15953",
+      "change_in_noncomm_short_all": "9276"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-02T00:00:00.000",
+      "noncomm_positions_long_all": "6245",
+      "noncomm_positions_short_all": "39154",
+      "change_in_noncomm_long_all": "-873",
+      "change_in_noncomm_short_all": "-3104"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-02T00:00:00.000",
+      "noncomm_positions_long_all": "53687",
+      "noncomm_positions_short_all": "105905",
+      "change_in_noncomm_long_all": "-4291",
+      "change_in_noncomm_short_all": "-13471"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-02T00:00:00.000",
+      "noncomm_positions_long_all": "114849",
+      "noncomm_positions_short_all": "244416",
+      "change_in_noncomm_long_all": "1856",
+      "change_in_noncomm_short_all": "16756"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-02T00:00:00.000",
+      "noncomm_positions_long_all": "6596",
+      "noncomm_positions_short_all": "3830",
+      "change_in_noncomm_long_all": "1309",
+      "change_in_noncomm_short_all": "228"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-02T00:00:00.000",
+      "noncomm_positions_long_all": "5873",
+      "noncomm_positions_short_all": "4537",
+      "change_in_noncomm_long_all": "112",
+      "change_in_noncomm_short_all": "-1"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-02T00:00:00.000",
+      "noncomm_positions_long_all": "235442",
+      "noncomm_positions_short_all": "186576",
+      "change_in_noncomm_long_all": "12387",
+      "change_in_noncomm_short_all": "-7053"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-02T00:00:00.000",
+      "noncomm_positions_long_all": "17210",
+      "noncomm_positions_short_all": "14752",
+      "change_in_noncomm_long_all": "64",
+      "change_in_noncomm_short_all": "-112"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-06-02T00:00:00.000",
+      "noncomm_positions_long_all": "154012",
+      "noncomm_positions_short_all": "160617",
+      "change_in_noncomm_long_all": "-8433",
+      "change_in_noncomm_short_all": "-7832"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN CASH PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-06-02T00:00:00.000",
+      "noncomm_positions_long_all": "1600",
+      "noncomm_positions_short_all": "1339",
+      "change_in_noncomm_long_all": "-60",
+      "change_in_noncomm_short_all": "405"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-06-02T00:00:00.000",
+      "noncomm_positions_long_all": "14163",
+      "noncomm_positions_short_all": "16927",
+      "change_in_noncomm_long_all": "157",
+      "change_in_noncomm_short_all": "-1056"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-26T00:00:00.000",
+      "noncomm_positions_long_all": "129129",
+      "noncomm_positions_short_all": "68974",
+      "change_in_noncomm_long_all": "-22454",
+      "change_in_noncomm_short_all": "3035"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-05-26T00:00:00.000",
+      "noncomm_positions_long_all": "200704",
+      "noncomm_positions_short_all": "46444",
+      "change_in_noncomm_long_all": "-10314",
+      "change_in_noncomm_short_all": "-4741"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-05-26T00:00:00.000",
+      "noncomm_positions_long_all": "19020",
+      "noncomm_positions_short_all": "36252",
+      "change_in_noncomm_long_all": "-2787",
+      "change_in_noncomm_short_all": "-9599"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-26T00:00:00.000",
+      "noncomm_positions_long_all": "53676",
+      "noncomm_positions_short_all": "122558",
+      "change_in_noncomm_long_all": "-18998",
+      "change_in_noncomm_short_all": "18653"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-26T00:00:00.000",
+      "noncomm_positions_long_all": "7118",
+      "noncomm_positions_short_all": "42258",
+      "change_in_noncomm_long_all": "834",
+      "change_in_noncomm_short_all": "-963"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-26T00:00:00.000",
+      "noncomm_positions_long_all": "57978",
+      "noncomm_positions_short_all": "119376",
+      "change_in_noncomm_long_all": "-10097",
+      "change_in_noncomm_short_all": "-13006"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-26T00:00:00.000",
+      "noncomm_positions_long_all": "112993",
+      "noncomm_positions_short_all": "227660",
+      "change_in_noncomm_long_all": "6390",
+      "change_in_noncomm_short_all": "27152"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-26T00:00:00.000",
+      "noncomm_positions_long_all": "5287",
+      "noncomm_positions_short_all": "3602",
+      "change_in_noncomm_long_all": "633",
+      "change_in_noncomm_short_all": "423"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-26T00:00:00.000",
+      "noncomm_positions_long_all": "223055",
+      "noncomm_positions_short_all": "193629",
+      "change_in_noncomm_long_all": "-10196",
+      "change_in_noncomm_short_all": "-6109"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-26T00:00:00.000",
+      "noncomm_positions_long_all": "5761",
+      "noncomm_positions_short_all": "4538",
+      "change_in_noncomm_long_all": "410",
+      "change_in_noncomm_short_all": "-795"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-26T00:00:00.000",
+      "noncomm_positions_long_all": "14006",
+      "noncomm_positions_short_all": "17983",
+      "change_in_noncomm_long_all": "4034",
+      "change_in_noncomm_short_all": "4148"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN CASH PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-05-26T00:00:00.000",
+      "noncomm_positions_long_all": "1660",
+      "noncomm_positions_short_all": "934",
+      "change_in_noncomm_long_all": "192",
+      "change_in_noncomm_short_all": "172"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-05-26T00:00:00.000",
+      "noncomm_positions_long_all": "162445",
+      "noncomm_positions_short_all": "168449",
+      "change_in_noncomm_long_all": "7906",
+      "change_in_noncomm_short_all": "6280"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-26T00:00:00.000",
+      "noncomm_positions_long_all": "17146",
+      "noncomm_positions_short_all": "14864",
+      "change_in_noncomm_long_all": "-645",
+      "change_in_noncomm_short_all": "-815"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-19T00:00:00.000",
+      "noncomm_positions_long_all": "151583",
+      "noncomm_positions_short_all": "65939",
+      "change_in_noncomm_long_all": "783",
+      "change_in_noncomm_short_all": "129"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-05-19T00:00:00.000",
+      "noncomm_positions_long_all": "211018",
+      "noncomm_positions_short_all": "51185",
+      "change_in_noncomm_long_all": "-8775",
+      "change_in_noncomm_short_all": "3014"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-19T00:00:00.000",
+      "noncomm_positions_long_all": "72674",
+      "noncomm_positions_short_all": "103905",
+      "change_in_noncomm_long_all": "-4368",
+      "change_in_noncomm_short_all": "10621"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-19T00:00:00.000",
+      "noncomm_positions_long_all": "6284",
+      "noncomm_positions_short_all": "43221",
+      "change_in_noncomm_long_all": "682",
+      "change_in_noncomm_short_all": "1422"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-19T00:00:00.000",
+      "noncomm_positions_long_all": "68075",
+      "noncomm_positions_short_all": "132382",
+      "change_in_noncomm_long_all": "-11530",
+      "change_in_noncomm_short_all": "9718"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-19T00:00:00.000",
+      "noncomm_positions_long_all": "106603",
+      "noncomm_positions_short_all": "200508",
+      "change_in_noncomm_long_all": "6448",
+      "change_in_noncomm_short_all": "25251"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-19T00:00:00.000",
+      "noncomm_positions_long_all": "5351",
+      "noncomm_positions_short_all": "5333",
+      "change_in_noncomm_long_all": "-368",
+      "change_in_noncomm_short_all": "-127"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-19T00:00:00.000",
+      "noncomm_positions_long_all": "4654",
+      "noncomm_positions_short_all": "3179",
+      "change_in_noncomm_long_all": "-718",
+      "change_in_noncomm_short_all": "-560"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-19T00:00:00.000",
+      "noncomm_positions_long_all": "233251",
+      "noncomm_positions_short_all": "199738",
+      "change_in_noncomm_long_all": "9249",
+      "change_in_noncomm_short_all": "15936"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-19T00:00:00.000",
+      "noncomm_positions_long_all": "9972",
+      "noncomm_positions_short_all": "13835",
+      "change_in_noncomm_long_all": "-5543",
+      "change_in_noncomm_short_all": "-6147"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-05-19T00:00:00.000",
+      "noncomm_positions_long_all": "154539",
+      "noncomm_positions_short_all": "162169",
+      "change_in_noncomm_long_all": "-26252",
+      "change_in_noncomm_short_all": "-21821"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-19T00:00:00.000",
+      "noncomm_positions_long_all": "17791",
+      "noncomm_positions_short_all": "15679",
+      "change_in_noncomm_long_all": "-363",
+      "change_in_noncomm_short_all": "-1216"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN CASH PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-05-19T00:00:00.000",
+      "noncomm_positions_long_all": "1468",
+      "noncomm_positions_short_all": "762"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-05-19T00:00:00.000",
+      "noncomm_positions_long_all": "21807",
+      "noncomm_positions_short_all": "45851",
+      "change_in_noncomm_long_all": "164",
+      "change_in_noncomm_short_all": "331"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-05-12T00:00:00.000",
+      "noncomm_positions_long_all": "219793",
+      "noncomm_positions_short_all": "48171",
+      "change_in_noncomm_long_all": "7979",
+      "change_in_noncomm_short_all": "-340"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-12T00:00:00.000",
+      "noncomm_positions_long_all": "77042",
+      "noncomm_positions_short_all": "93284",
+      "change_in_noncomm_long_all": "3392",
+      "change_in_noncomm_short_all": "4975"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-12T00:00:00.000",
+      "noncomm_positions_long_all": "5602",
+      "noncomm_positions_short_all": "41799",
+      "change_in_noncomm_long_all": "-1543",
+      "change_in_noncomm_short_all": "133"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-12T00:00:00.000",
+      "noncomm_positions_long_all": "79605",
+      "noncomm_positions_short_all": "122664",
+      "change_in_noncomm_long_all": "17032",
+      "change_in_noncomm_short_all": "-3817"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-12T00:00:00.000",
+      "noncomm_positions_long_all": "100155",
+      "noncomm_positions_short_all": "175257",
+      "change_in_noncomm_long_all": "-8880",
+      "change_in_noncomm_short_all": "4484"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-12T00:00:00.000",
+      "noncomm_positions_long_all": "224002",
+      "noncomm_positions_short_all": "183802",
+      "change_in_noncomm_long_all": "6528",
+      "change_in_noncomm_short_all": "-1470"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-12T00:00:00.000",
+      "noncomm_positions_long_all": "5372",
+      "noncomm_positions_short_all": "3739",
+      "change_in_noncomm_long_all": "-415",
+      "change_in_noncomm_short_all": "-854"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-12T00:00:00.000",
+      "noncomm_positions_long_all": "5719",
+      "noncomm_positions_short_all": "5460",
+      "change_in_noncomm_long_all": "-15",
+      "change_in_noncomm_short_all": "109"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-12T00:00:00.000",
+      "noncomm_positions_long_all": "18154",
+      "noncomm_positions_short_all": "16895",
+      "change_in_noncomm_long_all": "-1147",
+      "change_in_noncomm_short_all": "-965"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-12T00:00:00.000",
+      "noncomm_positions_long_all": "15515",
+      "noncomm_positions_short_all": "19982",
+      "change_in_noncomm_long_all": "-1213",
+      "change_in_noncomm_short_all": "-934"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-05-12T00:00:00.000",
+      "noncomm_positions_long_all": "180791",
+      "noncomm_positions_short_all": "183990",
+      "change_in_noncomm_long_all": "-56766",
+      "change_in_noncomm_short_all": "-55473"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-12T00:00:00.000",
+      "noncomm_positions_long_all": "150800",
+      "noncomm_positions_short_all": "65810",
+      "change_in_noncomm_long_all": "7586",
+      "change_in_noncomm_short_all": "1270"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-05-12T00:00:00.000",
+      "noncomm_positions_long_all": "21643",
+      "noncomm_positions_short_all": "45520",
+      "change_in_noncomm_long_all": "1478",
+      "change_in_noncomm_short_all": "813"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-05-05T00:00:00.000",
+      "noncomm_positions_long_all": "20165",
+      "noncomm_positions_short_all": "44707",
+      "change_in_noncomm_long_all": "2507",
+      "change_in_noncomm_short_all": "4002"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-05-05T00:00:00.000",
+      "noncomm_positions_long_all": "211814",
+      "noncomm_positions_short_all": "48511",
+      "change_in_noncomm_long_all": "-4",
+      "change_in_noncomm_short_all": "-3736"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-05T00:00:00.000",
+      "noncomm_positions_long_all": "73650",
+      "noncomm_positions_short_all": "88309",
+      "change_in_noncomm_long_all": "7133",
+      "change_in_noncomm_short_all": "-16684"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-05T00:00:00.000",
+      "noncomm_positions_long_all": "7145",
+      "noncomm_positions_short_all": "41666",
+      "change_in_noncomm_long_all": "786",
+      "change_in_noncomm_short_all": "86"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-05T00:00:00.000",
+      "noncomm_positions_long_all": "62573",
+      "noncomm_positions_short_all": "126481",
+      "change_in_noncomm_long_all": "2996",
+      "change_in_noncomm_short_all": "6265"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-05T00:00:00.000",
+      "noncomm_positions_long_all": "109035",
+      "noncomm_positions_short_all": "170773",
+      "change_in_noncomm_long_all": "2505",
+      "change_in_noncomm_short_all": "-37816"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-05T00:00:00.000",
+      "noncomm_positions_long_all": "5787",
+      "noncomm_positions_short_all": "4593",
+      "change_in_noncomm_long_all": "360",
+      "change_in_noncomm_short_all": "-1136"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-05T00:00:00.000",
+      "noncomm_positions_long_all": "217474",
+      "noncomm_positions_short_all": "185272",
+      "change_in_noncomm_long_all": "383",
+      "change_in_noncomm_short_all": "3893"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-05T00:00:00.000",
+      "noncomm_positions_long_all": "5734",
+      "noncomm_positions_short_all": "5351",
+      "change_in_noncomm_long_all": "129",
+      "change_in_noncomm_short_all": "-317"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-05T00:00:00.000",
+      "noncomm_positions_long_all": "143214",
+      "noncomm_positions_short_all": "64540",
+      "change_in_noncomm_long_all": "6305",
+      "change_in_noncomm_short_all": "-500"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-05T00:00:00.000",
+      "noncomm_positions_long_all": "19301",
+      "noncomm_positions_short_all": "17860",
+      "change_in_noncomm_long_all": "1870",
+      "change_in_noncomm_short_all": "2821"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-05-05T00:00:00.000",
+      "noncomm_positions_long_all": "237557",
+      "noncomm_positions_short_all": "239463",
+      "change_in_noncomm_long_all": "77255",
+      "change_in_noncomm_short_all": "76290"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-05-05T00:00:00.000",
+      "noncomm_positions_long_all": "16728",
+      "noncomm_positions_short_all": "20916",
+      "change_in_noncomm_long_all": "5461",
+      "change_in_noncomm_short_all": "5639"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-28T00:00:00.000",
+      "noncomm_positions_long_all": "136909",
+      "noncomm_positions_short_all": "65040",
+      "change_in_noncomm_long_all": "8098",
+      "change_in_noncomm_short_all": "1046"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-04-28T00:00:00.000",
+      "noncomm_positions_long_all": "211818",
+      "noncomm_positions_short_all": "52247",
+      "change_in_noncomm_long_all": "-1075",
+      "change_in_noncomm_short_all": "3360"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-04-28T00:00:00.000",
+      "noncomm_positions_long_all": "17658",
+      "noncomm_positions_short_all": "40705",
+      "change_in_noncomm_long_all": "2179",
+      "change_in_noncomm_short_all": "-694"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-28T00:00:00.000",
+      "noncomm_positions_long_all": "66517",
+      "noncomm_positions_short_all": "104993",
+      "change_in_noncomm_long_all": "5628",
+      "change_in_noncomm_short_all": "-14730"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-28T00:00:00.000",
+      "noncomm_positions_long_all": "6359",
+      "noncomm_positions_short_all": "41580",
+      "change_in_noncomm_long_all": "-2013",
+      "change_in_noncomm_short_all": "-65"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-28T00:00:00.000",
+      "noncomm_positions_long_all": "59577",
+      "noncomm_positions_short_all": "120216",
+      "change_in_noncomm_long_all": "-3509",
+      "change_in_noncomm_short_all": "5091"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-28T00:00:00.000",
+      "noncomm_positions_long_all": "106530",
+      "noncomm_positions_short_all": "208589",
+      "change_in_noncomm_long_all": "5144",
+      "change_in_noncomm_short_all": "12743"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-28T00:00:00.000",
+      "noncomm_positions_long_all": "5605",
+      "noncomm_positions_short_all": "5668",
+      "change_in_noncomm_long_all": "23",
+      "change_in_noncomm_short_all": "12"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-28T00:00:00.000",
+      "noncomm_positions_long_all": "217091",
+      "noncomm_positions_short_all": "181379",
+      "change_in_noncomm_long_all": "-316",
+      "change_in_noncomm_short_all": "5296"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-28T00:00:00.000",
+      "noncomm_positions_long_all": "5427",
+      "noncomm_positions_short_all": "5729",
+      "change_in_noncomm_long_all": "-361",
+      "change_in_noncomm_short_all": "91"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-04-28T00:00:00.000",
+      "noncomm_positions_long_all": "160302",
+      "noncomm_positions_short_all": "163173",
+      "change_in_noncomm_long_all": "-8705",
+      "change_in_noncomm_short_all": "-9129"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-28T00:00:00.000",
+      "noncomm_positions_long_all": "17431",
+      "noncomm_positions_short_all": "15039",
+      "change_in_noncomm_long_all": "334",
+      "change_in_noncomm_short_all": "13"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-28T00:00:00.000",
+      "noncomm_positions_long_all": "11267",
+      "noncomm_positions_short_all": "15277",
+      "change_in_noncomm_long_all": "-5416",
+      "change_in_noncomm_short_all": "-5809"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-21T00:00:00.000",
+      "noncomm_positions_long_all": "128811",
+      "noncomm_positions_short_all": "63994",
+      "change_in_noncomm_long_all": "-706",
+      "change_in_noncomm_short_all": "-448"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-04-21T00:00:00.000",
+      "noncomm_positions_long_all": "212893",
+      "noncomm_positions_short_all": "48887",
+      "change_in_noncomm_long_all": "2884",
+      "change_in_noncomm_short_all": "1404"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-04-21T00:00:00.000",
+      "noncomm_positions_long_all": "15479",
+      "noncomm_positions_short_all": "41399",
+      "change_in_noncomm_long_all": "-2980",
+      "change_in_noncomm_short_all": "9501"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-21T00:00:00.000",
+      "noncomm_positions_long_all": "60889",
+      "noncomm_positions_short_all": "119723",
+      "change_in_noncomm_long_all": "6640",
+      "change_in_noncomm_short_all": "-12798"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-21T00:00:00.000",
+      "noncomm_positions_long_all": "8372",
+      "noncomm_positions_short_all": "41645",
+      "change_in_noncomm_long_all": "-1265",
+      "change_in_noncomm_short_all": "-2089"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-21T00:00:00.000",
+      "noncomm_positions_long_all": "63086",
+      "noncomm_positions_short_all": "115125",
+      "change_in_noncomm_long_all": "8139",
+      "change_in_noncomm_short_all": "5454"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-21T00:00:00.000",
+      "noncomm_positions_long_all": "101386",
+      "noncomm_positions_short_all": "195846",
+      "change_in_noncomm_long_all": "-728",
+      "change_in_noncomm_short_all": "10524"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-21T00:00:00.000",
+      "noncomm_positions_long_all": "217407",
+      "noncomm_positions_short_all": "176083",
+      "change_in_noncomm_long_all": "2768",
+      "change_in_noncomm_short_all": "-12538"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-21T00:00:00.000",
+      "noncomm_positions_long_all": "5788",
+      "noncomm_positions_short_all": "5638",
+      "change_in_noncomm_long_all": "411",
+      "change_in_noncomm_short_all": "814"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-21T00:00:00.000",
+      "noncomm_positions_long_all": "5582",
+      "noncomm_positions_short_all": "5656",
+      "change_in_noncomm_long_all": "164",
+      "change_in_noncomm_short_all": "883"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-21T00:00:00.000",
+      "noncomm_positions_long_all": "17097",
+      "noncomm_positions_short_all": "15026",
+      "change_in_noncomm_long_all": "-402",
+      "change_in_noncomm_short_all": "-280"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-21T00:00:00.000",
+      "noncomm_positions_long_all": "16683",
+      "noncomm_positions_short_all": "21086",
+      "change_in_noncomm_long_all": "1521",
+      "change_in_noncomm_short_all": "2034"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-04-21T00:00:00.000",
+      "noncomm_positions_long_all": "169007",
+      "noncomm_positions_short_all": "172302",
+      "change_in_noncomm_long_all": "-25985",
+      "change_in_noncomm_short_all": "-23058"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-14T00:00:00.000",
+      "noncomm_positions_long_all": "129517",
+      "noncomm_positions_short_all": "64442",
+      "change_in_noncomm_long_all": "-8442",
+      "change_in_noncomm_short_all": "-2704"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-04-14T00:00:00.000",
+      "noncomm_positions_long_all": "18459",
+      "noncomm_positions_short_all": "31898",
+      "change_in_noncomm_long_all": "2345",
+      "change_in_noncomm_short_all": "2607"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-04-14T00:00:00.000",
+      "noncomm_positions_long_all": "210009",
+      "noncomm_positions_short_all": "47483",
+      "change_in_noncomm_long_all": "4641",
+      "change_in_noncomm_short_all": "-1580"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-14T00:00:00.000",
+      "noncomm_positions_long_all": "54249",
+      "noncomm_positions_short_all": "132521",
+      "change_in_noncomm_long_all": "-6465",
+      "change_in_noncomm_short_all": "16159"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-14T00:00:00.000",
+      "noncomm_positions_long_all": "9637",
+      "noncomm_positions_short_all": "43734",
+      "change_in_noncomm_long_all": "-949",
+      "change_in_noncomm_short_all": "2454"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-14T00:00:00.000",
+      "noncomm_positions_long_all": "54947",
+      "noncomm_positions_short_all": "109671",
+      "change_in_noncomm_long_all": "7603",
+      "change_in_noncomm_short_all": "5973"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-14T00:00:00.000",
+      "noncomm_positions_long_all": "102114",
+      "noncomm_positions_short_all": "185322",
+      "change_in_noncomm_long_all": "10554",
+      "change_in_noncomm_short_all": "20"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-14T00:00:00.000",
+      "noncomm_positions_long_all": "214639",
+      "noncomm_positions_short_all": "188621",
+      "change_in_noncomm_long_all": "13693",
+      "change_in_noncomm_short_all": "-19866"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-14T00:00:00.000",
+      "noncomm_positions_long_all": "5377",
+      "noncomm_positions_short_all": "4824",
+      "change_in_noncomm_long_all": "-164",
+      "change_in_noncomm_short_all": "669"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-14T00:00:00.000",
+      "noncomm_positions_long_all": "5418",
+      "noncomm_positions_short_all": "4773",
+      "change_in_noncomm_long_all": "185",
+      "change_in_noncomm_short_all": "-714"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-04-14T00:00:00.000",
+      "noncomm_positions_long_all": "194992",
+      "noncomm_positions_short_all": "195360",
+      "change_in_noncomm_long_all": "49946",
+      "change_in_noncomm_short_all": "47175"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-14T00:00:00.000",
+      "noncomm_positions_long_all": "17499",
+      "noncomm_positions_short_all": "15306",
+      "change_in_noncomm_long_all": "1357",
+      "change_in_noncomm_short_all": "1704"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-14T00:00:00.000",
+      "noncomm_positions_long_all": "15162",
+      "noncomm_positions_short_all": "19052",
+      "change_in_noncomm_long_all": "273",
+      "change_in_noncomm_short_all": "1492"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-04-07T00:00:00.000",
+      "noncomm_positions_long_all": "205368",
+      "noncomm_positions_short_all": "49063",
+      "change_in_noncomm_long_all": "-2234",
+      "change_in_noncomm_short_all": "4663"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-04-07T00:00:00.000",
+      "noncomm_positions_long_all": "16114",
+      "noncomm_positions_short_all": "29291",
+      "change_in_noncomm_long_all": "622",
+      "change_in_noncomm_short_all": "708"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-07T00:00:00.000",
+      "noncomm_positions_long_all": "60714",
+      "noncomm_positions_short_all": "116362",
+      "change_in_noncomm_long_all": "4293",
+      "change_in_noncomm_short_all": "27257"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-07T00:00:00.000",
+      "noncomm_positions_long_all": "10586",
+      "noncomm_positions_short_all": "41280",
+      "change_in_noncomm_long_all": "1271",
+      "change_in_noncomm_short_all": "2094"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-07T00:00:00.000",
+      "noncomm_positions_long_all": "47344",
+      "noncomm_positions_short_all": "103698",
+      "change_in_noncomm_long_all": "-3960",
+      "change_in_noncomm_short_all": "-271"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-07T00:00:00.000",
+      "noncomm_positions_long_all": "91560",
+      "noncomm_positions_short_all": "185302",
+      "change_in_noncomm_long_all": "-3796",
+      "change_in_noncomm_short_all": "17074"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-07T00:00:00.000",
+      "noncomm_positions_long_all": "5541",
+      "noncomm_positions_short_all": "4155",
+      "change_in_noncomm_long_all": "539",
+      "change_in_noncomm_short_all": "-447"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-07T00:00:00.000",
+      "noncomm_positions_long_all": "5233",
+      "noncomm_positions_short_all": "5487",
+      "change_in_noncomm_long_all": "-491",
+      "change_in_noncomm_short_all": "427"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-07T00:00:00.000",
+      "noncomm_positions_long_all": "200946",
+      "noncomm_positions_short_all": "208487",
+      "change_in_noncomm_long_all": "778",
+      "change_in_noncomm_short_all": "8826"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-07T00:00:00.000",
+      "noncomm_positions_long_all": "14889",
+      "noncomm_positions_short_all": "17560",
+      "change_in_noncomm_long_all": "4626",
+      "change_in_noncomm_short_all": "4788"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-07T00:00:00.000",
+      "noncomm_positions_long_all": "16142",
+      "noncomm_positions_short_all": "13602",
+      "change_in_noncomm_long_all": "1228",
+      "change_in_noncomm_short_all": "941"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-04-07T00:00:00.000",
+      "noncomm_positions_long_all": "145046",
+      "noncomm_positions_short_all": "148185",
+      "change_in_noncomm_long_all": "19759",
+      "change_in_noncomm_short_all": "17391"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-04-07T00:00:00.000",
+      "noncomm_positions_long_all": "137959",
+      "noncomm_positions_short_all": "67146",
+      "change_in_noncomm_long_all": "-3816",
+      "change_in_noncomm_short_all": "6877"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-31T00:00:00.000",
+      "noncomm_positions_long_all": "141775",
+      "noncomm_positions_short_all": "60269",
+      "change_in_noncomm_long_all": "9146",
+      "change_in_noncomm_short_all": "-1488"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-03-31T00:00:00.000",
+      "noncomm_positions_long_all": "207602",
+      "noncomm_positions_short_all": "44400",
+      "change_in_noncomm_long_all": "-13259",
+      "change_in_noncomm_short_all": "-8134"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-03-31T00:00:00.000",
+      "noncomm_positions_long_all": "15492",
+      "noncomm_positions_short_all": "28583",
+      "change_in_noncomm_long_all": "-5020",
+      "change_in_noncomm_short_all": "-8532"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-31T00:00:00.000",
+      "noncomm_positions_long_all": "56421",
+      "noncomm_positions_short_all": "89105",
+      "change_in_noncomm_long_all": "-5961",
+      "change_in_noncomm_short_all": "25121"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-31T00:00:00.000",
+      "noncomm_positions_long_all": "9315",
+      "noncomm_positions_short_all": "39186",
+      "change_in_noncomm_long_all": "1484",
+      "change_in_noncomm_short_all": "4258"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-31T00:00:00.000",
+      "noncomm_positions_long_all": "51304",
+      "noncomm_positions_short_all": "103969",
+      "change_in_noncomm_long_all": "4845",
+      "change_in_noncomm_short_all": "-912"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-31T00:00:00.000",
+      "noncomm_positions_long_all": "95356",
+      "noncomm_positions_short_all": "168228",
+      "change_in_noncomm_long_all": "-2915",
+      "change_in_noncomm_short_all": "7151"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-31T00:00:00.000",
+      "noncomm_positions_long_all": "5002",
+      "noncomm_positions_short_all": "4602",
+      "change_in_noncomm_long_all": "-32",
+      "change_in_noncomm_short_all": "-2454"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-31T00:00:00.000",
+      "noncomm_positions_long_all": "5724",
+      "noncomm_positions_short_all": "5060",
+      "change_in_noncomm_long_all": "-425",
+      "change_in_noncomm_short_all": "-122"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-31T00:00:00.000",
+      "noncomm_positions_long_all": "200168",
+      "noncomm_positions_short_all": "199661",
+      "change_in_noncomm_long_all": "143",
+      "change_in_noncomm_short_all": "8915"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-31T00:00:00.000",
+      "noncomm_positions_long_all": "10263",
+      "noncomm_positions_short_all": "12772",
+      "change_in_noncomm_long_all": "-4555",
+      "change_in_noncomm_short_all": "-6429"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-31T00:00:00.000",
+      "noncomm_positions_long_all": "14914",
+      "noncomm_positions_short_all": "12661",
+      "change_in_noncomm_long_all": "-947",
+      "change_in_noncomm_short_all": "-1094"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-03-31T00:00:00.000",
+      "noncomm_positions_long_all": "125287",
+      "noncomm_positions_short_all": "130794",
+      "change_in_noncomm_long_all": "-7595",
+      "change_in_noncomm_short_all": "-7809"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN CASH PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-03-31T00:00:00.000",
+      "noncomm_positions_long_all": "2415",
+      "noncomm_positions_short_all": "1966"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-24T00:00:00.000",
+      "noncomm_positions_long_all": "132629",
+      "noncomm_positions_short_all": "61757",
+      "change_in_noncomm_long_all": "-3445",
+      "change_in_noncomm_short_all": "-5256"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-03-24T00:00:00.000",
+      "noncomm_positions_long_all": "220861",
+      "noncomm_positions_short_all": "52534",
+      "change_in_noncomm_long_all": "4900",
+      "change_in_noncomm_short_all": "-3558"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-03-24T00:00:00.000",
+      "noncomm_positions_long_all": "20512",
+      "noncomm_positions_short_all": "37115",
+      "change_in_noncomm_long_all": "9758",
+      "change_in_noncomm_short_all": "1532"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-24T00:00:00.000",
+      "noncomm_positions_long_all": "62382",
+      "noncomm_positions_short_all": "63984",
+      "change_in_noncomm_long_all": "-4125",
+      "change_in_noncomm_short_all": "-1637"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-24T00:00:00.000",
+      "noncomm_positions_long_all": "7831",
+      "noncomm_positions_short_all": "34928",
+      "change_in_noncomm_long_all": "-344",
+      "change_in_noncomm_short_all": "1540"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-24T00:00:00.000",
+      "noncomm_positions_long_all": "46459",
+      "noncomm_positions_short_all": "104881",
+      "change_in_noncomm_long_all": "2166",
+      "change_in_noncomm_short_all": "-4927"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-24T00:00:00.000",
+      "noncomm_positions_long_all": "98271",
+      "noncomm_positions_short_all": "161077",
+      "change_in_noncomm_long_all": "-8548",
+      "change_in_noncomm_short_all": "-13522"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-24T00:00:00.000",
+      "noncomm_positions_long_all": "6149",
+      "noncomm_positions_short_all": "5182",
+      "change_in_noncomm_long_all": "-224",
+      "change_in_noncomm_short_all": "0"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-24T00:00:00.000",
+      "noncomm_positions_long_all": "200025",
+      "noncomm_positions_short_all": "190746",
+      "change_in_noncomm_long_all": "-12861",
+      "change_in_noncomm_short_all": "-1008"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-24T00:00:00.000",
+      "noncomm_positions_long_all": "5034",
+      "noncomm_positions_short_all": "7056",
+      "change_in_noncomm_long_all": "-412",
+      "change_in_noncomm_short_all": "-1532"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-03-24T00:00:00.000",
+      "noncomm_positions_long_all": "132882",
+      "noncomm_positions_short_all": "138603",
+      "change_in_noncomm_long_all": "-75222",
+      "change_in_noncomm_short_all": "-71676"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-24T00:00:00.000",
+      "noncomm_positions_long_all": "15861",
+      "noncomm_positions_short_all": "13755",
+      "change_in_noncomm_long_all": "-880",
+      "change_in_noncomm_short_all": "-1213"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-24T00:00:00.000",
+      "noncomm_positions_long_all": "14818",
+      "noncomm_positions_short_all": "19201",
+      "change_in_noncomm_long_all": "1273",
+      "change_in_noncomm_short_all": "616"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-17T00:00:00.000",
+      "noncomm_positions_long_all": "136074",
+      "noncomm_positions_short_all": "67013",
+      "change_in_noncomm_long_all": "14680",
+      "change_in_noncomm_short_all": "-184"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-03-17T00:00:00.000",
+      "noncomm_positions_long_all": "215961",
+      "noncomm_positions_short_all": "56092",
+      "change_in_noncomm_long_all": "516",
+      "change_in_noncomm_short_all": "3779"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-03-17T00:00:00.000",
+      "noncomm_positions_long_all": "10754",
+      "noncomm_positions_short_all": "35583",
+      "change_in_noncomm_long_all": "304",
+      "change_in_noncomm_short_all": "3826"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-17T00:00:00.000",
+      "noncomm_positions_long_all": "66507",
+      "noncomm_positions_short_all": "65621",
+      "change_in_noncomm_long_all": "-27392",
+      "change_in_noncomm_short_all": "7881"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-17T00:00:00.000",
+      "noncomm_positions_long_all": "8175",
+      "noncomm_positions_short_all": "33388",
+      "change_in_noncomm_long_all": "-3977",
+      "change_in_noncomm_short_all": "-19856"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-17T00:00:00.000",
+      "noncomm_positions_long_all": "44293",
+      "noncomm_positions_short_all": "109808",
+      "change_in_noncomm_long_all": "-4977",
+      "change_in_noncomm_short_all": "-23659"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-17T00:00:00.000",
+      "noncomm_positions_long_all": "106819",
+      "noncomm_positions_short_all": "174599",
+      "change_in_noncomm_long_all": "-12592",
+      "change_in_noncomm_short_all": "13801"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-17T00:00:00.000",
+      "noncomm_positions_long_all": "212886",
+      "noncomm_positions_short_all": "191754",
+      "change_in_noncomm_long_all": "-52800",
+      "change_in_noncomm_short_all": "31212"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-17T00:00:00.000",
+      "noncomm_positions_long_all": "5446",
+      "noncomm_positions_short_all": "8588",
+      "change_in_noncomm_long_all": "-229",
+      "change_in_noncomm_short_all": "5370"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-17T00:00:00.000",
+      "noncomm_positions_long_all": "6373",
+      "noncomm_positions_short_all": "5182",
+      "change_in_noncomm_long_all": "204",
+      "change_in_noncomm_short_all": "124"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-17T00:00:00.000",
+      "noncomm_positions_long_all": "16741",
+      "noncomm_positions_short_all": "14968",
+      "change_in_noncomm_long_all": "880",
+      "change_in_noncomm_short_all": "409"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-03-17T00:00:00.000",
+      "noncomm_positions_long_all": "208104",
+      "noncomm_positions_short_all": "210279",
+      "change_in_noncomm_long_all": "24459",
+      "change_in_noncomm_short_all": "23373"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-17T00:00:00.000",
+      "noncomm_positions_long_all": "13545",
+      "noncomm_positions_short_all": "18585",
+      "change_in_noncomm_long_all": "-1292",
+      "change_in_noncomm_short_all": "-956"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-03-10T00:00:00.000",
+      "noncomm_positions_long_all": "10450",
+      "noncomm_positions_short_all": "31757",
+      "change_in_noncomm_long_all": "-911",
+      "change_in_noncomm_short_all": "-356"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-03-10T00:00:00.000",
+      "noncomm_positions_long_all": "215445",
+      "noncomm_positions_short_all": "52313",
+      "change_in_noncomm_long_all": "1693",
+      "change_in_noncomm_short_all": "-1294"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-10T00:00:00.000",
+      "noncomm_positions_long_all": "93899",
+      "noncomm_positions_short_all": "57740",
+      "change_in_noncomm_long_all": "-109",
+      "change_in_noncomm_short_all": "-15218"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-10T00:00:00.000",
+      "noncomm_positions_long_all": "12152",
+      "noncomm_positions_short_all": "53244",
+      "change_in_noncomm_long_all": "-238",
+      "change_in_noncomm_short_all": "-429"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-10T00:00:00.000",
+      "noncomm_positions_long_all": "49270",
+      "noncomm_positions_short_all": "133467",
+      "change_in_noncomm_long_all": "-10229",
+      "change_in_noncomm_short_all": "1282"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-10T00:00:00.000",
+      "noncomm_positions_long_all": "119411",
+      "noncomm_positions_short_all": "160798",
+      "change_in_noncomm_long_all": "-15534",
+      "change_in_noncomm_short_all": "9278"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-10T00:00:00.000",
+      "noncomm_positions_long_all": "265686",
+      "noncomm_positions_short_all": "160542",
+      "change_in_noncomm_long_all": "-28900",
+      "change_in_noncomm_short_all": "2454"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-10T00:00:00.000",
+      "noncomm_positions_long_all": "6169",
+      "noncomm_positions_short_all": "5058",
+      "change_in_noncomm_long_all": "-668",
+      "change_in_noncomm_short_all": "29"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-10T00:00:00.000",
+      "noncomm_positions_long_all": "5675",
+      "noncomm_positions_short_all": "3218",
+      "change_in_noncomm_long_all": "-1708",
+      "change_in_noncomm_short_all": "-1863"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-10T00:00:00.000",
+      "noncomm_positions_long_all": "15861",
+      "noncomm_positions_short_all": "14559",
+      "change_in_noncomm_long_all": "276",
+      "change_in_noncomm_short_all": "-15"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-10T00:00:00.000",
+      "noncomm_positions_long_all": "14837",
+      "noncomm_positions_short_all": "19541",
+      "change_in_noncomm_long_all": "321",
+      "change_in_noncomm_short_all": "1859"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-03-10T00:00:00.000",
+      "noncomm_positions_long_all": "183645",
+      "noncomm_positions_short_all": "186906",
+      "change_in_noncomm_long_all": "1769",
+      "change_in_noncomm_short_all": "-521"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-10T00:00:00.000",
+      "noncomm_positions_long_all": "121394",
+      "noncomm_positions_short_all": "67197",
+      "change_in_noncomm_long_all": "-15121",
+      "change_in_noncomm_short_all": "-1556"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-03T00:00:00.000",
+      "noncomm_positions_long_all": "136515",
+      "noncomm_positions_short_all": "68753",
+      "change_in_noncomm_long_all": "14854",
+      "change_in_noncomm_short_all": "-264"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-03-03T00:00:00.000",
+      "noncomm_positions_long_all": "11361",
+      "noncomm_positions_short_all": "32113",
+      "change_in_noncomm_long_all": "-420",
+      "change_in_noncomm_short_all": "-746"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-03-03T00:00:00.000",
+      "noncomm_positions_long_all": "213752",
+      "noncomm_positions_short_all": "53607",
+      "change_in_noncomm_long_all": "2103",
+      "change_in_noncomm_short_all": "1135"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-03T00:00:00.000",
+      "noncomm_positions_long_all": "94008",
+      "noncomm_positions_short_all": "72958",
+      "change_in_noncomm_long_all": "1196",
+      "change_in_noncomm_short_all": "7724"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-03T00:00:00.000",
+      "noncomm_positions_long_all": "12390",
+      "noncomm_positions_short_all": "53673",
+      "change_in_noncomm_long_all": "865",
+      "change_in_noncomm_short_all": "962"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-03T00:00:00.000",
+      "noncomm_positions_long_all": "59499",
+      "noncomm_positions_short_all": "132185",
+      "change_in_noncomm_long_all": "-7714",
+      "change_in_noncomm_short_all": "7900"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-03T00:00:00.000",
+      "noncomm_positions_long_all": "134945",
+      "noncomm_positions_short_all": "151520",
+      "change_in_noncomm_long_all": "-14419",
+      "change_in_noncomm_short_all": "13695"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-03T00:00:00.000",
+      "noncomm_positions_long_all": "294586",
+      "noncomm_positions_short_all": "158088",
+      "change_in_noncomm_long_all": "-287",
+      "change_in_noncomm_short_all": "20071"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-03T00:00:00.000",
+      "noncomm_positions_long_all": "7383",
+      "noncomm_positions_short_all": "5081",
+      "change_in_noncomm_long_all": "-121",
+      "change_in_noncomm_short_all": "1040"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-03T00:00:00.000",
+      "noncomm_positions_long_all": "6837",
+      "noncomm_positions_short_all": "5029",
+      "change_in_noncomm_long_all": "160",
+      "change_in_noncomm_short_all": "0"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-03-03T00:00:00.000",
+      "noncomm_positions_long_all": "181876",
+      "noncomm_positions_short_all": "187427",
+      "change_in_noncomm_long_all": "41975",
+      "change_in_noncomm_short_all": "42202"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-03T00:00:00.000",
+      "noncomm_positions_long_all": "15585",
+      "noncomm_positions_short_all": "14574",
+      "change_in_noncomm_long_all": "-825",
+      "change_in_noncomm_short_all": "-664"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-03-03T00:00:00.000",
+      "noncomm_positions_long_all": "14516",
+      "noncomm_positions_short_all": "17682",
+      "change_in_noncomm_long_all": "-13208",
+      "change_in_noncomm_short_all": "-15398"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-24T00:00:00.000",
+      "noncomm_positions_long_all": "121661",
+      "noncomm_positions_short_all": "69017",
+      "change_in_noncomm_long_all": "3841",
+      "change_in_noncomm_short_all": "-2872"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-02-24T00:00:00.000",
+      "noncomm_positions_long_all": "211649",
+      "noncomm_positions_short_all": "52472",
+      "change_in_noncomm_long_all": "-1783",
+      "change_in_noncomm_short_all": "-1045"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-02-24T00:00:00.000",
+      "noncomm_positions_long_all": "11781",
+      "noncomm_positions_short_all": "32859",
+      "change_in_noncomm_long_all": "-1427",
+      "change_in_noncomm_short_all": "2162"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-24T00:00:00.000",
+      "noncomm_positions_long_all": "92812",
+      "noncomm_positions_short_all": "65234",
+      "change_in_noncomm_long_all": "3211",
+      "change_in_noncomm_short_all": "1459"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-24T00:00:00.000",
+      "noncomm_positions_long_all": "11525",
+      "noncomm_positions_short_all": "52711",
+      "change_in_noncomm_long_all": "1453",
+      "change_in_noncomm_short_all": "1758"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-24T00:00:00.000",
+      "noncomm_positions_long_all": "67213",
+      "noncomm_positions_short_all": "124285",
+      "change_in_noncomm_long_all": "-14802",
+      "change_in_noncomm_short_all": "-134"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-24T00:00:00.000",
+      "noncomm_positions_long_all": "149364",
+      "noncomm_positions_short_all": "137825",
+      "change_in_noncomm_long_all": "6192",
+      "change_in_noncomm_short_all": "7608"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-24T00:00:00.000",
+      "noncomm_positions_long_all": "294873",
+      "noncomm_positions_short_all": "138017",
+      "change_in_noncomm_long_all": "-16676",
+      "change_in_noncomm_short_all": "948"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-24T00:00:00.000",
+      "noncomm_positions_long_all": "7504",
+      "noncomm_positions_short_all": "4041",
+      "change_in_noncomm_long_all": "671",
+      "change_in_noncomm_short_all": "554"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-24T00:00:00.000",
+      "noncomm_positions_long_all": "6677",
+      "noncomm_positions_short_all": "5029",
+      "change_in_noncomm_long_all": "-127",
+      "change_in_noncomm_short_all": "-20"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-02-24T00:00:00.000",
+      "noncomm_positions_long_all": "139901",
+      "noncomm_positions_short_all": "145225",
+      "change_in_noncomm_long_all": "25892",
+      "change_in_noncomm_short_all": "22361"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-24T00:00:00.000",
+      "noncomm_positions_long_all": "27724",
+      "noncomm_positions_short_all": "33080",
+      "change_in_noncomm_long_all": "4259",
+      "change_in_noncomm_short_all": "4385"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-24T00:00:00.000",
+      "noncomm_positions_long_all": "16410",
+      "noncomm_positions_short_all": "15238",
+      "change_in_noncomm_long_all": "-183",
+      "change_in_noncomm_short_all": "283"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-17T00:00:00.000",
+      "noncomm_positions_long_all": "117820",
+      "noncomm_positions_short_all": "71889",
+      "change_in_noncomm_long_all": "5054",
+      "change_in_noncomm_short_all": "-7668"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-02-17T00:00:00.000",
+      "noncomm_positions_long_all": "213432",
+      "noncomm_positions_short_all": "53517",
+      "change_in_noncomm_long_all": "624",
+      "change_in_noncomm_short_all": "721"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-02-17T00:00:00.000",
+      "noncomm_positions_long_all": "13208",
+      "noncomm_positions_short_all": "30697",
+      "change_in_noncomm_long_all": "-2977",
+      "change_in_noncomm_short_all": "-214"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-17T00:00:00.000",
+      "noncomm_positions_long_all": "89601",
+      "noncomm_positions_short_all": "63775",
+      "change_in_noncomm_long_all": "5047",
+      "change_in_noncomm_short_all": "-7503"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-17T00:00:00.000",
+      "noncomm_positions_long_all": "10072",
+      "noncomm_positions_short_all": "50953",
+      "change_in_noncomm_long_all": "472",
+      "change_in_noncomm_short_all": "-906"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-17T00:00:00.000",
+      "noncomm_positions_long_all": "82015",
+      "noncomm_positions_short_all": "124419",
+      "change_in_noncomm_long_all": "-6358",
+      "change_in_noncomm_short_all": "10236"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-17T00:00:00.000",
+      "noncomm_positions_long_all": "143172",
+      "noncomm_positions_short_all": "130217",
+      "change_in_noncomm_long_all": "15082",
+      "change_in_noncomm_short_all": "-16979"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-17T00:00:00.000",
+      "noncomm_positions_long_all": "311549",
+      "noncomm_positions_short_all": "137069",
+      "change_in_noncomm_long_all": "-7155",
+      "change_in_noncomm_short_all": "-1330"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-17T00:00:00.000",
+      "noncomm_positions_long_all": "6804",
+      "noncomm_positions_short_all": "5049",
+      "change_in_noncomm_long_all": "0",
+      "change_in_noncomm_short_all": "-90"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-17T00:00:00.000",
+      "noncomm_positions_long_all": "6833",
+      "noncomm_positions_short_all": "3487",
+      "change_in_noncomm_long_all": "84",
+      "change_in_noncomm_short_all": "-336"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-17T00:00:00.000",
+      "noncomm_positions_long_all": "16593",
+      "noncomm_positions_short_all": "14955",
+      "change_in_noncomm_long_all": "-423",
+      "change_in_noncomm_short_all": "-1044"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-02-17T00:00:00.000",
+      "noncomm_positions_long_all": "114009",
+      "noncomm_positions_short_all": "122864",
+      "change_in_noncomm_long_all": "-8313",
+      "change_in_noncomm_short_all": "9439"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-17T00:00:00.000",
+      "noncomm_positions_long_all": "23465",
+      "noncomm_positions_short_all": "28695",
+      "change_in_noncomm_long_all": "-1581",
+      "change_in_noncomm_short_all": "-1288"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-10T00:00:00.000",
+      "noncomm_positions_long_all": "112766",
+      "noncomm_positions_short_all": "79557",
+      "change_in_noncomm_long_all": "-5985",
+      "change_in_noncomm_short_all": "-13076"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-02-10T00:00:00.000",
+      "noncomm_positions_long_all": "212808",
+      "noncomm_positions_short_all": "52796",
+      "change_in_noncomm_long_all": "-1700",
+      "change_in_noncomm_short_all": "3892"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-02-10T00:00:00.000",
+      "noncomm_positions_long_all": "16185",
+      "noncomm_positions_short_all": "30911",
+      "change_in_noncomm_long_all": "4647",
+      "change_in_noncomm_short_all": "5481"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-10T00:00:00.000",
+      "noncomm_positions_long_all": "84554",
+      "noncomm_positions_short_all": "71278",
+      "change_in_noncomm_long_all": "7157",
+      "change_in_noncomm_short_all": "-3989"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-10T00:00:00.000",
+      "noncomm_positions_long_all": "9600",
+      "noncomm_positions_short_all": "51859",
+      "change_in_noncomm_long_all": "-87",
+      "change_in_noncomm_short_all": "1455"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-10T00:00:00.000",
+      "noncomm_positions_long_all": "88373",
+      "noncomm_positions_short_all": "114183",
+      "change_in_noncomm_long_all": "-6520",
+      "change_in_noncomm_short_all": "5379"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-10T00:00:00.000",
+      "noncomm_positions_long_all": "128090",
+      "noncomm_positions_short_all": "147196",
+      "change_in_noncomm_long_all": "13662",
+      "change_in_noncomm_short_all": "13546"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-10T00:00:00.000",
+      "noncomm_positions_long_all": "6804",
+      "noncomm_positions_short_all": "5139",
+      "change_in_noncomm_long_all": "578",
+      "change_in_noncomm_short_all": "54"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-10T00:00:00.000",
+      "noncomm_positions_long_all": "318704",
+      "noncomm_positions_short_all": "138399",
+      "change_in_noncomm_long_all": "16403",
+      "change_in_noncomm_short_all": "-541"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-10T00:00:00.000",
+      "noncomm_positions_long_all": "6749",
+      "noncomm_positions_short_all": "3823",
+      "change_in_noncomm_long_all": "-833",
+      "change_in_noncomm_short_all": "-93"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-10T00:00:00.000",
+      "noncomm_positions_long_all": "25046",
+      "noncomm_positions_short_all": "29983",
+      "change_in_noncomm_long_all": "7164",
+      "change_in_noncomm_short_all": "5902"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-10T00:00:00.000",
+      "noncomm_positions_long_all": "17016",
+      "noncomm_positions_short_all": "15999",
+      "change_in_noncomm_long_all": "-1923",
+      "change_in_noncomm_short_all": "-1932"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-02-10T00:00:00.000",
+      "noncomm_positions_long_all": "122322",
+      "noncomm_positions_short_all": "113425",
+      "change_in_noncomm_long_all": "18400",
+      "change_in_noncomm_short_all": "8690"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-03T00:00:00.000",
+      "noncomm_positions_long_all": "118751",
+      "noncomm_positions_short_all": "92633",
+      "change_in_noncomm_long_all": "8945",
+      "change_in_noncomm_short_all": "-10027"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-02-03T00:00:00.000",
+      "noncomm_positions_long_all": "11538",
+      "noncomm_positions_short_all": "25430",
+      "change_in_noncomm_long_all": "-13088",
+      "change_in_noncomm_short_all": "-13907"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-02-03T00:00:00.000",
+      "noncomm_positions_long_all": "214508",
+      "noncomm_positions_short_all": "48904",
+      "change_in_noncomm_long_all": "-37592",
+      "change_in_noncomm_short_all": "2200"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-03T00:00:00.000",
+      "noncomm_positions_long_all": "77397",
+      "noncomm_positions_short_all": "75267",
+      "change_in_noncomm_long_all": "228",
+      "change_in_noncomm_short_all": "-17948"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-03T00:00:00.000",
+      "noncomm_positions_long_all": "9687",
+      "noncomm_positions_short_all": "50404",
+      "change_in_noncomm_long_all": "-37",
+      "change_in_noncomm_short_all": "-2213"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-03T00:00:00.000",
+      "noncomm_positions_long_all": "94893",
+      "noncomm_positions_short_all": "108804",
+      "change_in_noncomm_long_all": "7107",
+      "change_in_noncomm_short_all": "4856"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-03T00:00:00.000",
+      "noncomm_positions_long_all": "114428",
+      "noncomm_positions_short_all": "133650",
+      "change_in_noncomm_long_all": "9968",
+      "change_in_noncomm_short_all": "-4743"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-03T00:00:00.000",
+      "noncomm_positions_long_all": "7582",
+      "noncomm_positions_short_all": "3916",
+      "change_in_noncomm_long_all": "343",
+      "change_in_noncomm_short_all": "-281"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-03T00:00:00.000",
+      "noncomm_positions_long_all": "302301",
+      "noncomm_positions_short_all": "138940",
+      "change_in_noncomm_long_all": "11965",
+      "change_in_noncomm_short_all": "-19262"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-03T00:00:00.000",
+      "noncomm_positions_long_all": "6226",
+      "noncomm_positions_short_all": "5085",
+      "change_in_noncomm_long_all": "-553",
+      "change_in_noncomm_short_all": "0"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-02-03T00:00:00.000",
+      "noncomm_positions_long_all": "103922",
+      "noncomm_positions_short_all": "104735",
+      "change_in_noncomm_long_all": "2826",
+      "change_in_noncomm_short_all": "-2728"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-03T00:00:00.000",
+      "noncomm_positions_long_all": "18939",
+      "noncomm_positions_short_all": "17931",
+      "change_in_noncomm_long_all": "885",
+      "change_in_noncomm_short_all": "567"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-02-03T00:00:00.000",
+      "noncomm_positions_long_all": "17882",
+      "noncomm_positions_short_all": "24081",
+      "change_in_noncomm_long_all": "-996",
+      "change_in_noncomm_short_all": "-2073"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-27T00:00:00.000",
+      "noncomm_positions_long_all": "109806",
+      "noncomm_positions_short_all": "102660",
+      "change_in_noncomm_long_all": "24047",
+      "change_in_noncomm_short_all": "2890"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-01-27T00:00:00.000",
+      "noncomm_positions_long_all": "24626",
+      "noncomm_positions_short_all": "39337",
+      "change_in_noncomm_long_all": "-6755",
+      "change_in_noncomm_short_all": "13"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-01-27T00:00:00.000",
+      "noncomm_positions_long_all": "252100",
+      "noncomm_positions_short_all": "46704",
+      "change_in_noncomm_long_all": "-43672",
+      "change_in_noncomm_short_all": "-4298"
+    },
+    {
+      "market_and_exchange_names": "GOLD -1 TROY OUNCE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-01-27T00:00:00.000",
+      "noncomm_positions_long_all": "4243",
+      "noncomm_positions_short_all": "7984",
+      "change_in_noncomm_long_all": "116",
+      "change_in_noncomm_short_all": "-696"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-27T00:00:00.000",
+      "noncomm_positions_long_all": "77169",
+      "noncomm_positions_short_all": "93215",
+      "change_in_noncomm_long_all": "17713",
+      "change_in_noncomm_short_all": "-8026"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-27T00:00:00.000",
+      "noncomm_positions_long_all": "9724",
+      "noncomm_positions_short_all": "52617",
+      "change_in_noncomm_long_all": "-2533",
+      "change_in_noncomm_short_all": "-2847"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-27T00:00:00.000",
+      "noncomm_positions_long_all": "87786",
+      "noncomm_positions_short_all": "103948",
+      "change_in_noncomm_long_all": "6454",
+      "change_in_noncomm_short_all": "636"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-27T00:00:00.000",
+      "noncomm_positions_long_all": "104460",
+      "noncomm_positions_short_all": "138393",
+      "change_in_noncomm_long_all": "-2679",
+      "change_in_noncomm_short_all": "-13575"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-27T00:00:00.000",
+      "noncomm_positions_long_all": "7239",
+      "noncomm_positions_short_all": "4197",
+      "change_in_noncomm_long_all": "610",
+      "change_in_noncomm_short_all": "539"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-27T00:00:00.000",
+      "noncomm_positions_long_all": "6779",
+      "noncomm_positions_short_all": "5085",
+      "change_in_noncomm_long_all": "2182",
+      "change_in_noncomm_short_all": "421"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-27T00:00:00.000",
+      "noncomm_positions_long_all": "290336",
+      "noncomm_positions_short_all": "158202",
+      "change_in_noncomm_long_all": "15101",
+      "change_in_noncomm_short_all": "-5338"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-27T00:00:00.000",
+      "noncomm_positions_long_all": "18878",
+      "noncomm_positions_short_all": "26154",
+      "change_in_noncomm_long_all": "-4919",
+      "change_in_noncomm_short_all": "-3100"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-27T00:00:00.000",
+      "noncomm_positions_long_all": "18054",
+      "noncomm_positions_short_all": "17364",
+      "change_in_noncomm_long_all": "-1787",
+      "change_in_noncomm_short_all": "-2179"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-01-27T00:00:00.000",
+      "noncomm_positions_long_all": "101096",
+      "noncomm_positions_short_all": "107463",
+      "change_in_noncomm_long_all": "5906",
+      "change_in_noncomm_short_all": "3332"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-20T00:00:00.000",
+      "noncomm_positions_long_all": "85759",
+      "noncomm_positions_short_all": "99770",
+      "change_in_noncomm_long_all": "1804",
+      "change_in_noncomm_short_all": "-3031"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-01-20T00:00:00.000",
+      "noncomm_positions_long_all": "31381",
+      "noncomm_positions_short_all": "39324",
+      "change_in_noncomm_long_all": "5223",
+      "change_in_noncomm_short_all": "-1206"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-01-20T00:00:00.000",
+      "noncomm_positions_long_all": "295772",
+      "noncomm_positions_short_all": "51002",
+      "change_in_noncomm_long_all": "-411",
+      "change_in_noncomm_short_all": "6057"
+    },
+    {
+      "market_and_exchange_names": "GOLD -1 TROY OUNCE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-01-20T00:00:00.000",
+      "noncomm_positions_long_all": "4127",
+      "noncomm_positions_short_all": "8680",
+      "change_in_noncomm_long_all": "287",
+      "change_in_noncomm_short_all": "663"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-20T00:00:00.000",
+      "noncomm_positions_long_all": "59456",
+      "noncomm_positions_short_all": "101241",
+      "change_in_noncomm_long_all": "-3249",
+      "change_in_noncomm_short_all": "-3714"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-20T00:00:00.000",
+      "noncomm_positions_long_all": "12257",
+      "noncomm_positions_short_all": "55464",
+      "change_in_noncomm_long_all": "-1138",
+      "change_in_noncomm_short_all": "-1323"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-20T00:00:00.000",
+      "noncomm_positions_long_all": "81332",
+      "noncomm_positions_short_all": "103312",
+      "change_in_noncomm_long_all": "2329",
+      "change_in_noncomm_short_all": "-961"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-20T00:00:00.000",
+      "noncomm_positions_long_all": "107139",
+      "noncomm_positions_short_all": "151968",
+      "change_in_noncomm_long_all": "-4604",
+      "change_in_noncomm_short_all": "-4939"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-20T00:00:00.000",
+      "noncomm_positions_long_all": "275235",
+      "noncomm_positions_short_all": "163540",
+      "change_in_noncomm_long_all": "-8357",
+      "change_in_noncomm_short_all": "12604"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-20T00:00:00.000",
+      "noncomm_positions_long_all": "6629",
+      "noncomm_positions_short_all": "3658",
+      "change_in_noncomm_long_all": "-536",
+      "change_in_noncomm_short_all": "-132"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-20T00:00:00.000",
+      "noncomm_positions_long_all": "4597",
+      "noncomm_positions_short_all": "4664",
+      "change_in_noncomm_long_all": "68",
+      "change_in_noncomm_short_all": "620"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-20T00:00:00.000",
+      "noncomm_positions_long_all": "19841",
+      "noncomm_positions_short_all": "19543",
+      "change_in_noncomm_long_all": "723",
+      "change_in_noncomm_short_all": "494"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-20T00:00:00.000",
+      "noncomm_positions_long_all": "23797",
+      "noncomm_positions_short_all": "29254",
+      "change_in_noncomm_long_all": "1934",
+      "change_in_noncomm_short_all": "2403"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-01-20T00:00:00.000",
+      "noncomm_positions_long_all": "95190",
+      "noncomm_positions_short_all": "104131",
+      "change_in_noncomm_long_all": "-29684",
+      "change_in_noncomm_short_all": "-27078"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-13T00:00:00.000",
+      "noncomm_positions_long_all": "83955",
+      "noncomm_positions_short_all": "102801",
+      "change_in_noncomm_long_all": "3464",
+      "change_in_noncomm_short_all": "3350"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-01-13T00:00:00.000",
+      "noncomm_positions_long_all": "26158",
+      "noncomm_positions_short_all": "40530",
+      "change_in_noncomm_long_all": "3055",
+      "change_in_noncomm_short_all": "2918"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-01-13T00:00:00.000",
+      "noncomm_positions_long_all": "296183",
+      "noncomm_positions_short_all": "44945",
+      "change_in_noncomm_long_all": "21748",
+      "change_in_noncomm_short_all": "-1858"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-13T00:00:00.000",
+      "noncomm_positions_long_all": "79003",
+      "noncomm_positions_short_all": "104273",
+      "change_in_noncomm_long_all": "2517",
+      "change_in_noncomm_short_all": "-2751"
+    },
+    {
+      "market_and_exchange_names": "GOLD -1 TROY OUNCE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-01-13T00:00:00.000",
+      "noncomm_positions_long_all": "3840",
+      "noncomm_positions_short_all": "8017"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-13T00:00:00.000",
+      "noncomm_positions_long_all": "62705",
+      "noncomm_positions_short_all": "104955",
+      "change_in_noncomm_long_all": "5774",
+      "change_in_noncomm_short_all": "7439"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-13T00:00:00.000",
+      "noncomm_positions_long_all": "13395",
+      "noncomm_positions_short_all": "56787",
+      "change_in_noncomm_long_all": "2318",
+      "change_in_noncomm_short_all": "5444"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-13T00:00:00.000",
+      "noncomm_positions_long_all": "111743",
+      "noncomm_positions_short_all": "156907",
+      "change_in_noncomm_long_all": "-28698",
+      "change_in_noncomm_short_all": "25281"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-13T00:00:00.000",
+      "noncomm_positions_long_all": "4529",
+      "noncomm_positions_short_all": "4044",
+      "change_in_noncomm_long_all": "-274",
+      "change_in_noncomm_short_all": "-401"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-13T00:00:00.000",
+      "noncomm_positions_long_all": "7165",
+      "noncomm_positions_short_all": "3790",
+      "change_in_noncomm_long_all": "-1073",
+      "change_in_noncomm_short_all": "-1099"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-13T00:00:00.000",
+      "noncomm_positions_long_all": "283592",
+      "noncomm_positions_short_all": "150936",
+      "change_in_noncomm_long_all": "-14661",
+      "change_in_noncomm_short_all": "15495"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-13T00:00:00.000",
+      "noncomm_positions_long_all": "19118",
+      "noncomm_positions_short_all": "19049",
+      "change_in_noncomm_long_all": "1114",
+      "change_in_noncomm_short_all": "311"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-13T00:00:00.000",
+      "noncomm_positions_long_all": "21863",
+      "noncomm_positions_short_all": "26851",
+      "change_in_noncomm_long_all": "2496",
+      "change_in_noncomm_short_all": "2548"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-01-13T00:00:00.000",
+      "noncomm_positions_long_all": "124874",
+      "noncomm_positions_short_all": "131209",
+      "change_in_noncomm_long_all": "18180",
+      "change_in_noncomm_short_all": "15913"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN CASH PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-01-13T00:00:00.000",
+      "noncomm_positions_long_all": "2827",
+      "noncomm_positions_short_all": "3148"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-01-06T00:00:00.000",
+      "noncomm_positions_long_all": "274435",
+      "noncomm_positions_short_all": "46803",
+      "change_in_noncomm_long_all": "-1157",
+      "change_in_noncomm_short_all": "2384"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2026-01-06T00:00:00.000",
+      "noncomm_positions_long_all": "23103",
+      "noncomm_positions_short_all": "37612",
+      "change_in_noncomm_long_all": "6632",
+      "change_in_noncomm_short_all": "-4262"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-06T00:00:00.000",
+      "noncomm_positions_long_all": "56931",
+      "noncomm_positions_short_all": "97516",
+      "change_in_noncomm_long_all": "4144",
+      "change_in_noncomm_short_all": "4218"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-06T00:00:00.000",
+      "noncomm_positions_long_all": "11077",
+      "noncomm_positions_short_all": "51343",
+      "change_in_noncomm_long_all": "2167",
+      "change_in_noncomm_short_all": "-1765"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-06T00:00:00.000",
+      "noncomm_positions_long_all": "76486",
+      "noncomm_positions_short_all": "107024",
+      "change_in_noncomm_long_all": "6994",
+      "change_in_noncomm_short_all": "4325"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-06T00:00:00.000",
+      "noncomm_positions_long_all": "140441",
+      "noncomm_positions_short_all": "131626",
+      "change_in_noncomm_long_all": "-4155",
+      "change_in_noncomm_short_all": "1098"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-06T00:00:00.000",
+      "noncomm_positions_long_all": "8238",
+      "noncomm_positions_short_all": "4889",
+      "change_in_noncomm_long_all": "-690",
+      "change_in_noncomm_short_all": "-1203"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-06T00:00:00.000",
+      "noncomm_positions_long_all": "298253",
+      "noncomm_positions_short_all": "135441",
+      "change_in_noncomm_long_all": "3515",
+      "change_in_noncomm_short_all": "-1832"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-06T00:00:00.000",
+      "noncomm_positions_long_all": "4803",
+      "noncomm_positions_short_all": "4445",
+      "change_in_noncomm_long_all": "545",
+      "change_in_noncomm_short_all": "401"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-06T00:00:00.000",
+      "noncomm_positions_long_all": "18004",
+      "noncomm_positions_short_all": "18738",
+      "change_in_noncomm_long_all": "1593",
+      "change_in_noncomm_short_all": "1814"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2026-01-06T00:00:00.000",
+      "noncomm_positions_long_all": "106694",
+      "noncomm_positions_short_all": "115296",
+      "change_in_noncomm_long_all": "-178",
+      "change_in_noncomm_short_all": "-4409"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-06T00:00:00.000",
+      "noncomm_positions_long_all": "19367",
+      "noncomm_positions_short_all": "24303",
+      "change_in_noncomm_long_all": "4982",
+      "change_in_noncomm_short_all": "5960"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2026-01-06T00:00:00.000",
+      "noncomm_positions_long_all": "80491",
+      "noncomm_positions_short_all": "99451",
+      "change_in_noncomm_long_all": "2994",
+      "change_in_noncomm_short_all": "738"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-30T00:00:00.000",
+      "noncomm_positions_long_all": "77497",
+      "noncomm_positions_short_all": "98713",
+      "change_in_noncomm_long_all": "6840",
+      "change_in_noncomm_short_all": "6458"
+    },
+    {
+      "market_and_exchange_names": "GOLD -1 TROY OUNCE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2025-12-30T00:00:00.000",
+      "noncomm_positions_long_all": "4000",
+      "noncomm_positions_short_all": "10241"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2025-12-30T00:00:00.000",
+      "noncomm_positions_long_all": "16471",
+      "noncomm_positions_short_all": "41874",
+      "change_in_noncomm_long_all": "-2044",
+      "change_in_noncomm_short_all": "7265"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2025-12-30T00:00:00.000",
+      "noncomm_positions_long_all": "275592",
+      "noncomm_positions_short_all": "44419",
+      "change_in_noncomm_long_all": "-14569",
+      "change_in_noncomm_short_all": "-5042"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-30T00:00:00.000",
+      "noncomm_positions_long_all": "52787",
+      "noncomm_positions_short_all": "93298",
+      "change_in_noncomm_long_all": "11048",
+      "change_in_noncomm_short_all": "-4234"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-30T00:00:00.000",
+      "noncomm_positions_long_all": "8910",
+      "noncomm_positions_short_all": "53108",
+      "change_in_noncomm_long_all": "130",
+      "change_in_noncomm_short_all": "339"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-30T00:00:00.000",
+      "noncomm_positions_long_all": "69492",
+      "noncomm_positions_short_all": "102699",
+      "change_in_noncomm_long_all": "5952",
+      "change_in_noncomm_short_all": "-2040"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-30T00:00:00.000",
+      "noncomm_positions_long_all": "144596",
+      "noncomm_positions_short_all": "130528",
+      "change_in_noncomm_long_all": "3463",
+      "change_in_noncomm_short_all": "-9382"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-30T00:00:00.000",
+      "noncomm_positions_long_all": "8928",
+      "noncomm_positions_short_all": "6092",
+      "change_in_noncomm_long_all": "-103",
+      "change_in_noncomm_short_all": "-632"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-30T00:00:00.000",
+      "noncomm_positions_long_all": "294738",
+      "noncomm_positions_short_all": "137273",
+      "change_in_noncomm_long_all": "1559",
+      "change_in_noncomm_short_all": "3985"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-30T00:00:00.000",
+      "noncomm_positions_long_all": "4258",
+      "noncomm_positions_short_all": "4044",
+      "change_in_noncomm_long_all": "-322",
+      "change_in_noncomm_short_all": "-448"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-30T00:00:00.000",
+      "noncomm_positions_long_all": "16411",
+      "noncomm_positions_short_all": "16924",
+      "change_in_noncomm_long_all": "-952",
+      "change_in_noncomm_short_all": "-918"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-30T00:00:00.000",
+      "noncomm_positions_long_all": "14385",
+      "noncomm_positions_short_all": "18343",
+      "change_in_noncomm_long_all": "-6836",
+      "change_in_noncomm_short_all": "-8126"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2025-12-30T00:00:00.000",
+      "noncomm_positions_long_all": "106872",
+      "noncomm_positions_short_all": "119705",
+      "change_in_noncomm_long_all": "5137",
+      "change_in_noncomm_short_all": "9444"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-23T00:00:00.000",
+      "noncomm_positions_long_all": "70657",
+      "noncomm_positions_short_all": "92255",
+      "change_in_noncomm_long_all": "3017",
+      "change_in_noncomm_short_all": "2720"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2025-12-23T00:00:00.000",
+      "noncomm_positions_long_all": "18515",
+      "noncomm_positions_short_all": "34609",
+      "change_in_noncomm_long_all": "6779",
+      "change_in_noncomm_short_all": "5987"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2025-12-23T00:00:00.000",
+      "noncomm_positions_long_all": "290161",
+      "noncomm_positions_short_all": "49461",
+      "change_in_noncomm_long_all": "9241",
+      "change_in_noncomm_short_all": "2519"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-23T00:00:00.000",
+      "noncomm_positions_long_all": "41739",
+      "noncomm_positions_short_all": "97532",
+      "change_in_noncomm_long_all": "16086",
+      "change_in_noncomm_short_all": "-14761"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-23T00:00:00.000",
+      "noncomm_positions_long_all": "8780",
+      "noncomm_positions_short_all": "52769",
+      "change_in_noncomm_long_all": "-668",
+      "change_in_noncomm_short_all": "4414"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-23T00:00:00.000",
+      "noncomm_positions_long_all": "63540",
+      "noncomm_positions_short_all": "104739",
+      "change_in_noncomm_long_all": "1572",
+      "change_in_noncomm_short_all": "-5727"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-23T00:00:00.000",
+      "noncomm_positions_long_all": "141133",
+      "noncomm_positions_short_all": "139910",
+      "change_in_noncomm_long_all": "-5142",
+      "change_in_noncomm_short_all": "-9307"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-23T00:00:00.000",
+      "noncomm_positions_long_all": "9031",
+      "noncomm_positions_short_all": "6724",
+      "change_in_noncomm_long_all": "-1004",
+      "change_in_noncomm_short_all": "-1248"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-23T00:00:00.000",
+      "noncomm_positions_long_all": "293179",
+      "noncomm_positions_short_all": "133288",
+      "change_in_noncomm_long_all": "16177",
+      "change_in_noncomm_short_all": "1189"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-23T00:00:00.000",
+      "noncomm_positions_long_all": "4580",
+      "noncomm_positions_short_all": "4492",
+      "change_in_noncomm_long_all": "-1572",
+      "change_in_noncomm_short_all": "-595"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-23T00:00:00.000",
+      "noncomm_positions_long_all": "17363",
+      "noncomm_positions_short_all": "17842",
+      "change_in_noncomm_long_all": "-2003",
+      "change_in_noncomm_short_all": "-1418"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-23T00:00:00.000",
+      "noncomm_positions_long_all": "21221",
+      "noncomm_positions_short_all": "26469",
+      "change_in_noncomm_long_all": "-2996",
+      "change_in_noncomm_short_all": "-3044"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2025-12-23T00:00:00.000",
+      "noncomm_positions_long_all": "101735",
+      "noncomm_positions_short_all": "110261",
+      "change_in_noncomm_long_all": "-14234",
+      "change_in_noncomm_short_all": "-14144"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-16T00:00:00.000",
+      "noncomm_positions_long_all": "67640",
+      "noncomm_positions_short_all": "89535",
+      "change_in_noncomm_long_all": "10071",
+      "change_in_noncomm_short_all": "-30981"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2025-12-16T00:00:00.000",
+      "noncomm_positions_long_all": "280920",
+      "noncomm_positions_short_all": "46942",
+      "change_in_noncomm_long_all": "12435",
+      "change_in_noncomm_short_all": "2343"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2025-12-16T00:00:00.000",
+      "noncomm_positions_long_all": "11736",
+      "noncomm_positions_short_all": "28622",
+      "change_in_noncomm_long_all": "1017",
+      "change_in_noncomm_short_all": "1510"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-16T00:00:00.000",
+      "noncomm_positions_long_all": "25653",
+      "noncomm_positions_short_all": "112293",
+      "change_in_noncomm_long_all": "9859",
+      "change_in_noncomm_short_all": "-34101"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-16T00:00:00.000",
+      "noncomm_positions_long_all": "9448",
+      "noncomm_positions_short_all": "48355",
+      "change_in_noncomm_long_all": "992",
+      "change_in_noncomm_short_all": "1296"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-16T00:00:00.000",
+      "noncomm_positions_long_all": "61968",
+      "noncomm_positions_short_all": "110466",
+      "change_in_noncomm_long_all": "1649",
+      "change_in_noncomm_short_all": "-25368"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-16T00:00:00.000",
+      "noncomm_positions_long_all": "146275",
+      "noncomm_positions_short_all": "149217",
+      "change_in_noncomm_long_all": "-38213",
+      "change_in_noncomm_short_all": "-17823"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-16T00:00:00.000",
+      "noncomm_positions_long_all": "277002",
+      "noncomm_positions_short_all": "132099",
+      "change_in_noncomm_long_all": "8884",
+      "change_in_noncomm_short_all": "2769"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/BRITISH POUND XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-16T00:00:00.000",
+      "noncomm_positions_long_all": "10035",
+      "noncomm_positions_short_all": "7972",
+      "change_in_noncomm_long_all": "768",
+      "change_in_noncomm_short_all": "-498"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-16T00:00:00.000",
+      "noncomm_positions_long_all": "6152",
+      "noncomm_positions_short_all": "5087",
+      "change_in_noncomm_long_all": "157",
+      "change_in_noncomm_short_all": "254"
+    },
+    {
+      "market_and_exchange_names": "BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-16T00:00:00.000",
+      "noncomm_positions_long_all": "19366",
+      "noncomm_positions_short_all": "19260",
+      "change_in_noncomm_long_all": "-1044",
+      "change_in_noncomm_short_all": "-885"
+    },
+    {
+      "market_and_exchange_names": "MICRO BITCOIN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-16T00:00:00.000",
+      "noncomm_positions_long_all": "24217",
+      "noncomm_positions_short_all": "29513",
+      "change_in_noncomm_long_all": "1093",
+      "change_in_noncomm_short_all": "1519"
+    },
+    {
+      "market_and_exchange_names": "NANO BITCOIN PERP STYLE - COINBASE DERIVATIVES, LLC",
+      "report_date_as_yyyy_mm_dd": "2025-12-16T00:00:00.000",
+      "noncomm_positions_long_all": "115969",
+      "noncomm_positions_short_all": "124405",
+      "change_in_noncomm_long_all": "-19978",
+      "change_in_noncomm_short_all": "-17437"
+    },
+    {
+      "market_and_exchange_names": "AUSTRALIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-09T00:00:00.000",
+      "noncomm_positions_long_all": "57569",
+      "noncomm_positions_short_all": "120516",
+      "change_in_noncomm_long_all": "11701",
+      "change_in_noncomm_short_all": "-8745"
+    },
+    {
+      "market_and_exchange_names": "MICRO GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2025-12-09T00:00:00.000",
+      "noncomm_positions_long_all": "10719",
+      "noncomm_positions_short_all": "27112",
+      "change_in_noncomm_long_all": "3082",
+      "change_in_noncomm_short_all": "3210"
+    },
+    {
+      "market_and_exchange_names": "GOLD - COMMODITY EXCHANGE INC.",
+      "report_date_as_yyyy_mm_dd": "2025-12-09T00:00:00.000",
+      "noncomm_positions_long_all": "268485",
+      "noncomm_positions_short_all": "44599",
+      "change_in_noncomm_long_all": "7154",
+      "change_in_noncomm_short_all": "828"
+    },
+    {
+      "market_and_exchange_names": "CANADIAN DOLLAR - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-09T00:00:00.000",
+      "noncomm_positions_long_all": "15794",
+      "noncomm_positions_short_all": "146394",
+      "change_in_noncomm_long_all": "-3253",
+      "change_in_noncomm_short_all": "-22700"
+    },
+    {
+      "market_and_exchange_names": "SWISS FRANC - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-09T00:00:00.000",
+      "noncomm_positions_long_all": "8456",
+      "noncomm_positions_short_all": "47059",
+      "change_in_noncomm_long_all": "1562",
+      "change_in_noncomm_short_all": "4380"
+    },
+    {
+      "market_and_exchange_names": "BRITISH POUND - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-09T00:00:00.000",
+      "noncomm_positions_long_all": "60319",
+      "noncomm_positions_short_all": "135834",
+      "change_in_noncomm_long_all": "8067",
+      "change_in_noncomm_short_all": "3402"
+    },
+    {
+      "market_and_exchange_names": "JAPANESE YEN - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-09T00:00:00.000",
+      "noncomm_positions_long_all": "184488",
+      "noncomm_positions_short_all": "167040",
+      "change_in_noncomm_long_all": "-470",
+      "change_in_noncomm_short_all": "18500"
+    },
+    {
+      "market_and_exchange_names": "EURO FX/JAPANESE YEN XRATE - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-09T00:00:00.000",
+      "noncomm_positions_long_all": "5995",
+      "noncomm_positions_short_all": "4833",
+      "change_in_noncomm_long_all": "54",
+      "change_in_noncomm_short_all": "245"
+    },
+    {
+      "market_and_exchange_names": "EURO FX - CHICAGO MERCANTILE EXCHANGE",
+      "report_date_as_yyyy_mm_dd": "2025-12-09T00:00:00.000",
+      "noncomm_positions_long_all": "268118",
+      "noncomm_positions_short_all": "129330",
+      "change_in_noncomm_long_all": "18446",
+      "change_in_noncomm_short_all": "-11889"
+    }
+  ]
+}
