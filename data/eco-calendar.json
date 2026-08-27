@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-27T10:36:21.820Z",
+  "timestamp": "2026-08-27T20:43:22.502Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -2774,6 +2774,15 @@
       "actual": ""
     },
     {
+      "title": "FOMC Member Hammack Speaks",
+      "country": "USD",
+      "date": "2026-08-28T09:00:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
       "title": "Chicago PMI",
       "country": "USD",
       "date": "2026-08-28T09:45:00-04:00",
@@ -2832,6 +2841,15 @@
       "country": "All",
       "date": "2026-08-28T12:15:00-04:00",
       "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "G20 Meetings",
+      "country": "All",
+      "date": "2026-08-29T11:15:00-04:00",
+      "impact": "Low",
       "forecast": "",
       "previous": "",
       "actual": ""
