@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-27T20:43:22.502Z",
+  "timestamp": "2026-08-28T04:28:44.883Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -2825,6 +2825,15 @@
       "impact": "Medium",
       "forecast": "",
       "previous": "4.3%",
+      "actual": ""
+    },
+    {
+      "title": "MPC Member Mann Speaks",
+      "country": "GBP",
+      "date": "2026-08-28T10:30:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "",
       "actual": ""
     },
     {
