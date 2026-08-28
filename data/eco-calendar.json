@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-28T04:28:44.883Z",
+  "timestamp": "2026-08-28T16:48:53.894Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -2758,7 +2758,7 @@
     {
       "title": "Italian 10-y Bond Auction",
       "country": "EUR",
-      "date": "2026-08-28T05:33:00-04:00",
+      "date": "2026-08-28T05:09:00-04:00",
       "impact": "Low",
       "forecast": "",
       "previous": "4.00|1.7",
