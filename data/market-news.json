@@ -1,80 +1,108 @@
 {
-  "timestamp": "2026-08-30T07:26:01.667Z",
+  "timestamp": "2026-08-30T13:03:27.324Z",
   "items": [
     {
       "title": "2026-08-30 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-30T07:23:03.000Z",
+      "pubDate": "2026-08-30T13:01:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
     },
     {
-      "title": "Bitcoin consolidates at $78K between key MAs: Live levels",
-      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-stalls-below-78500-resistance-live-hourly-levels-93CH-4872743",
-      "pubDate": "2026-08-30T07:02:39.000Z",
+      "title": "Saudi Arabia stocks lower at close of trade; Tadawul All Share down 0.71%",
+      "link": "https://www.investing.com/news/stock-market-news/saudi-arabia-stocks-lower-at-close-of-trade-tadawul-all-share-down-071-4882044",
+      "pubDate": "2026-08-30T12:45:03.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Burnham faces hurdles bringing UK asylum system under public control - Bloomberg",
-      "link": "https://www.investing.com/news/economy-news/burnham-faces-hurdles-bringing-uk-asylum-system-under-public-control--bloomberg-4882022",
-      "pubDate": "2026-08-30T06:54:06.000Z",
+      "title": "American Insurers Secretly Put $16 Billion of Retirement Money Into Private Loans",
+      "link": "https://beincrypto.com/private-credit-retirement-risk-life-insurers/",
+      "pubDate": "2026-08-30T12:15:06.000Z",
+      "description": "Americans call crypto risky for retirement. Their insurance money already sits in private credit under federal scrutiny.\nThe post American Insurers Secretly Put $16 Billion of Retirement Money Into Private Loans appeared first on BeInCrypto",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "SpaceX launches NASA’s $4.3 billion Roman space telescope",
+      "link": "https://www.investing.com/news/economy-news/spacex-set-to-launch-nasas-43-billion-roman-space-telescope-4882035",
+      "pubDate": "2026-08-30T12:00:17.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "European central bankers fear more U.S. policy turbulence, Reuters reports",
-      "link": "https://www.investing.com/news/economy-news/european-central-bankers-fear-more-us-policy-turbulence-reuters-reports-4882021",
-      "pubDate": "2026-08-30T06:01:26.000Z",
+      "title": "NASA launches powerful new Roman Space Telescope from Florida",
+      "link": "https://www.investing.com/news/stock-market-news/nasa-launches-powerful-new-roman-space-telescope-from-florida-4882040",
+      "pubDate": "2026-08-30T11:54:29.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "5 big analyst AI moves: Downgrades for SAP and Intuit; AMD lifted to Strong Buy",
-      "link": "https://www.investing.com/news/stock-market-news/5-big-analyst-ai-moves-downgrades-for-sap-and-intuit-amd-lifted-to-strong-buy-4881980",
-      "pubDate": "2026-08-30T05:26:18.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "Tim Cook Owns Crypto But Apple Never Bought Bitcoin: Will This Change?",
+      "link": "https://beincrypto.com/tim-cook-bitcoin-apple-ceo/",
+      "pubDate": "2026-08-30T11:46:29.000Z",
+      "description": "Tim Cook kept Bitcoin off Apple's balance sheet for 15 years. New CEO John Ternus has not said if that holds.\nThe post Tim Cook Owns Crypto But Apple Never Bought Bitcoin: Will This Change? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
     },
     {
-      "title": "European midcaps: Where Jefferies sees upside into H2",
-      "link": "https://www.investing.com/news/stock-market-news/european-midcaps-where-jefferies-sees-upside-into-h2-4882020",
-      "pubDate": "2026-08-30T05:19:49.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Europe’s central bankers fear more turbulence in testy U.S. relations",
-      "link": "https://www.investing.com/news/economy-news/europes-central-bankers-fear-more-turbulence-in-testy-us-relations-4882019",
-      "pubDate": "2026-08-30T05:12:26.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Iran insists Strait of Hormuz remains closed as war enters seventh month",
-      "link": "https://www.investing.com/news/economy-news/iran-insists-strait-of-hormuz-remains-closed-as-war-enters-seventh-month-4882018",
-      "pubDate": "2026-08-30T04:54:26.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "LESS THAN 24 HOURS REMAINING: Unlock InvestingPro for 55% off BEFORE IT’S TOO LATE",
-      "link": "https://www.investing.com/news/stock-market-news/only-24-hours-left-lock-in-investingpro-for-55-off-before-its-too-late-4882017",
-      "pubDate": "2026-08-30T04:43:40.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Nordic American Tankers earnings beat by $0.08, revenue fell short of estimates",
-      "link": "https://www.investing.com/news/earnings/nordic-american-tankers-earnings-beat-by-008-revenue-fell-short-of-estimates-4882016",
-      "pubDate": "2026-08-30T04:12:57.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Iceland starts counting EU talks referendum; ’no’ votes move ahead in close contest",
+      "title": "Iceland rejects EU-accession talks in close-fought referendum",
       "link": "https://www.investing.com/news/economy-news/iceland-votes-in-tight-referendum-on-whether-to-start-eu-membership-talks-4881985",
-      "pubDate": "2026-08-30T04:12:23.000Z",
+      "pubDate": "2026-08-30T11:36:27.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "TaskUs surges 61% after InvestingPro Fair Value identified opportunity",
+      "link": "https://www.investing.com/news/investment-ideas/taskus-surges-61-after-investingpro-fair-value-identified-opportunity-93CH-4882039",
+      "pubDate": "2026-08-30T11:08:48.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "InvestingPro Fair Value flagged CEVA stock ahead of 45% plunge",
+      "link": "https://www.investing.com/news/investment-ideas/investingpro-fair-value-flagged-ceva-stock-ahead-of-45-plunge-93CH-4882038",
+      "pubDate": "2026-08-30T11:01:49.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Telegram Gift NFT Sells for $20,000 as Pavel Durov Backs Young Coders",
+      "link": "https://beincrypto.com/young-coder-sells-telegram-nft-gram-token/",
+      "pubDate": "2026-08-30T10:59:46.000Z",
+      "description": "A teenage coder sold his Telegram Gift NFT for 15,000 Grams, roughly 40 times what Telegram guaranteed.\nThe post Telegram Gift NFT Sells for $20,000 as Pavel Durov Backs Young Coders appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Crypto’s Next Meme Coin War? Traders Want Tokens That Can Move Real Stocks",
+      "link": "https://beincrypto.com/meme-coin-tokenized-gamestop-bnb-chain/",
+      "pubDate": "2026-08-30T10:12:28.000Z",
+      "description": "A meme coin now trades against tokenized GameStop on BNB Chain. Traders ask whether it can move the real stock.\nThe post Crypto’s Next Meme Coin War? Traders Want Tokens That Can Move Real Stocks appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "US Treasury’s Bessent faces G20 diplomacy test amid tariffs, Iran war, bond turmoil",
+      "link": "https://www.investing.com/news/forex-news/us-treasurys-bessent-faces-g20-diplomacy-test-amid-tariffs-iran-war-bond-turmoil-4882036",
+      "pubDate": "2026-08-30T10:06:32.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Street Calls of the Week",
+      "link": "https://www.investing.com/news/stock-market-news/street-calls-of-the-week-4881973",
+      "pubDate": "2026-08-30T10:00:02.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "China’s Longi Green Energy first-half net loss widens as solar downturn persists",
+      "link": "https://www.investing.com/news/company-news/chinas-longi-green-energy-firsthalf-net-loss-widens-as-solar-downturn-persists-4882034",
+      "pubDate": "2026-08-30T09:31:23.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Malaysia PM unveils measures to tackle living costs, support local businesses",
+      "link": "https://www.investing.com/news/stock-market-news/malaysia-pm-unveils-measures-to-tackle-living-costs-support-local-businesses-4882031",
+      "pubDate": "2026-08-30T09:06:28.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -88,7 +116,7 @@
     {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-29T19:54:25.000Z",
+      "pubDate": "2026-08-29T19:54:00.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
     },
@@ -156,11 +184,11 @@
       "source": "Reuters"
     },
     {
-      "title": "Trump Digital Gold Crashes 98% in Hours After Suspected $330,000 Rug Pull",
-      "link": "https://beincrypto.com/trump-digital-gold-token-crash/",
-      "pubDate": "2026-08-29T06:11:10.000Z",
-      "description": "Trump Digital Gold crashed 98% hours after launch. On-chain data shows 15 team-linked wallets sold $330,000 in GOLD.\nThe post Trump Digital Gold Crashes 98% in Hours After Suspected $330,000 Rug Pull appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
+      "title": "Dollar jumps after Warsh comments, set for weekly gain",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZTRZaFZxX1ZxcFJfZUs5OTl0c3lTVDJDWm55NWlHVG9CUmloOU9DWF91QXV1MGxVbTlGSTM2Zmp5MHlyUkJ4YjBiRHVMZGZLemlRcTV4N1ZiZ2Y1V0ZYelpGd3lROUNQSXYxNGFMYWoyWVFVMDQtWmt0RDgyemVtNm5lTDlXUVI4WGxzRWVxbmEtMXptWC02dWllNF9wRFR0anFYbG55TFhXVjRGSlRuQ0xJNFNvMXVDaVdMd09hdGg3VFpsMFE?oc=5",
+      "pubDate": "2026-08-29T00:34:17.000Z",
+      "description": "Dollar jumps after Warsh comments, set for weekly gain&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "South Korean Won: BoK tightening supports KRW against US Dollar – Commerzbank",
@@ -175,13 +203,6 @@
       "pubDate": "2026-08-28T23:07:00.000Z",
       "description": "DBS Group strategists Taimur Baig and Nathan Chow forecast Vietnam’s goods exports to maintain strong double-digit growth at 27% year-on-year in August 2026, led by electronics and supported by external demand.",
       "source": "FXStreet"
-    },
-    {
-      "title": "How the US Helped Japan Pull Off a $97 Billion Yen Rescue",
-      "link": "https://beincrypto.com/japan-yen-rescue-us-secret-role/",
-      "pubDate": "2026-08-28T23:05:29.000Z",
-      "description": "Bessent says the yen intervention was an asset swap, not a loan. Treasury filings back him, and complicate Warren's case.\nThe post How the US Helped Japan Pull Off a $97 Billion Yen Rescue appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
     },
     {
       "title": "South Korean Won: BoK front-loading hikes as KRW consolidates – Commerzbank",
@@ -210,20 +231,6 @@
       "pubDate": "2026-08-28T21:12:30.000Z",
       "description": "Yen Weakens Past 160 Per Dollar, Eroding Intervention Gain&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
-    },
-    {
-      "title": "Solana Neobank Avici Hacked for $650,000. Token Crashes 40%",
-      "link": "https://beincrypto.com/avici-exploit-solana-card-vaults-drained/",
-      "pubDate": "2026-08-28T21:07:40.000Z",
-      "description": "An Avici exploit drained $652,000 from Solana card vaults the company said only users could touch. AVICI fell 44%.\nThe post Solana Neobank Avici Hacked for $650,000. Token Crashes 40% appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Justin Sun Says His Girlfriend Asked for $50 Million. AI Told Him No",
-      "link": "https://beincrypto.com/justin-sun-jing-tian-50-million-ai-breakup/",
-      "pubDate": "2026-08-28T20:43:09.000Z",
-      "description": "Justin Sun says an AI told him not to pay $50 million. CZ says the fight belonged in court, not online.\nThe post Justin Sun Says His Girlfriend Asked for $50 Million. AI Told Him No appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
     },
     {
       "title": "Malaysian Ringgit: BNM seen on steady policy path – DBS",
@@ -261,18 +268,18 @@
       "source": "Google News"
     },
     {
-      "title": "Dollar jumps after Warsh comments, set for weekly gain",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZTRZaFZxX1ZxcFJfZUs5OTl0c3lTVDJDWm55NWlHVG9CUmloOU9DWF91QXV1MGxVbTlGSTM2Zmp5MHlyUkJ4YjBiRHVMZGZLemlRcTV4N1ZiZ2Y1V0ZYelpGd3lROUNQSXYxNGFMYWoyWVFVMDQtWmt0RDgyemVtNm5lTDlXUVI4WGxzRWVxbmEtMXptWC02dWllNF9wRFR0anFYbG55TFhXVjRGSlRuQ0xJNFNvMXVDaVdMd09hdGg3VFpsMFE?oc=5",
-      "pubDate": "2026-08-28T19:01:36.000Z",
-      "description": "Dollar jumps after Warsh comments, set for weekly gain&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "BoE’s Bailey sees muted inflation effects ahead of policy meeting",
       "link": "https://www.fxstreet.com/news/boes-bailey-sees-muted-inflation-effects-ahead-of-boes-meeting-202608281848",
       "pubDate": "2026-08-28T18:48:19.000Z",
       "description": "Bank of England (BoE) Governor Andrew Bailey said on Friday that he doesn’t see significant second-round inflation effects in the UK, in an interview with Bloomberg TV at the Jackson Hole Symposium.",
       "source": "FXStreet"
+    },
+    {
+      "title": "Rupee gains this week as dollar supply surges ahead of deposit window's close",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPbG10Q1R6aGRGcXZBWFRFdTJCcUVJWXIyOXVsYmJxQ0Mza1lzdTg5R2Y1azJveGNUTk9nelFXLXFGYXpZOVppM2tFSEc1dmQ2SlpWUkJMbEREYjV5aDdSUWNLaVBJckdIOE53b2k4X1VrMkdPMTZweUQtbWNxQXF1bkpRVE1tRjVqQVVpTk1jMlhjV2xjY3A1czdPU0tmbGU0czJob3VmZ3FXUThRZ3RDQmstaVNOWVVSeUlSYg?oc=5",
+      "pubDate": "2026-08-28T18:45:30.000Z",
+      "description": "Rupee gains this week as dollar supply surges ahead of deposit window's close&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "ECB Kocher says Europe economy shows momentum, threats price stability",
@@ -450,13 +457,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "India's forex reserves hit record $729 billion on sustained capital inflows",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQLTZ6Z0pNejBNMndLdnQwalh6NkF6WjIyVGZwOFZfZFl2em53RjU1V1hMSTlCclBHUzE2aEJsZ2pJSjVNTnZvaWU5ZkpBaXVDZTBmS3czUEZSbkl2cl8tRW9tekRuMkx6dHh3anpOd0NnZTBHTHUtYzdUZlpxX3NYV29BTlZnNHIzTXlDZlFSR2lVZ193Y0lKVE9DZ2pQdS1HZnV4VWx4cjJVeXNjc1l6MzJwSXVvRFJSYVE?oc=5",
-      "pubDate": "2026-08-28T12:27:48.000Z",
-      "description": "India's forex reserves hit record $729 billion on sustained capital inflows&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "Can international stocks continue to beat S&P 500? A weak U.S. dollar will help",
       "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBEbXVNZEhReWpHOXpXakE0X2ZUU3B4NDRrMEFSNDR5cGg5ZEhpVnVZTVBfUVlERGk4LUV1S3pZOW5TdkJiYi1lS2w4Rl9NcGFUcDR2OWtnOUI5R2NxdjZsYm52eE9FUXpQVlFYZmFB0gFzQVVfeXFMTkNjZUhYY28zMVBacFdCbGo5Q0JKaFNGbkJodTg3LXNMdk13VVVOQ01wVjMzQk1qeE53amFxVGtFMnRTenFkUUItV0ZVLWx2X0k0dEpNbllwQmxDRTFJSjNYdjRWSThvNEdUYXNUYUJTLVJoYw?oc=5",
       "pubDate": "2026-08-28T11:51:45.000Z",
@@ -471,32 +471,11 @@
       "source": "Google News"
     },
     {
-      "title": "Japan spent record $96.5 billion to support yen over past month, ministry data shows",
-      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNb2g5MFFMM3ByaEYxQkEyZ1JCUTBkdTdkLXlxT2FrOVgyYUMzZlZYcmc0dXlJc0VJUWYzejZ2Ql93REdibHdmNGxDZUREUUxUbW5uUktJN1JBUXg0d1pRUGRCdldpUmNOVGpLUGlQTDZpbkNKNnF2enhYSC1mN2xBbEh0YWRrckFaSlptQmVsNDkzcmZtQjEwUEhsNmJrN2xySVNxbnpDeVZoRDdsX3U5NFUtSVUwTU9FTHZSSkM2b3hHRDJ6X0FkZVRTbHNHZw?oc=5",
-      "pubDate": "2026-08-28T10:49:43.000Z",
-      "description": "Japan spent record $96.5 billion to support yen over past month, ministry data shows&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Sterling heads for weekly loss, focus on Jackson Hole symposium",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOS1lROHdUNE9wa3IzRFEwdTl6a3VKcG9OdERNMkhYbXM2TjZ3a2NYT0M1Z0lzN2ZrWWVOdnNiMGFYTHZvaDhycndTeFZZbjNPT204MzZlUkxmcVA1ajBUR0hCX0lxdnVxbDhBY0VfZUV5VVExTkdiUW9hd2JaSWVIRGtaMkRNYlNqcXhPNkFTVS1BREJyMUxfNFJob1VjSHh2V0E?oc=5",
-      "pubDate": "2026-08-28T10:48:36.000Z",
-      "description": "Sterling heads for weekly loss, focus on Jackson Hole symposium&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "Japan Yen Intervention Hits Record $96 Billion in Past Month",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTjZ4N29pMXVFdEc4cjAxV3ZWQXQ1V0FxTmxUMHlYRUFfTjExWFl1QjRtRmhFa0dRc29iZ1llT0o4NUNibHlQUHlIZ1dZckxFWGF3WVZ6RVNRNnp3blZBVkszSERyQi04MFhqUFJPRUczTF9BenNLQnNzWkRmMEpSYU1wLWl4ZEpqZUI5R2gxRVpCVXY5WUJHOEQtLVNaVXNNWmo2OGYyc2ZnZ2VOTHpRNEZn?oc=5",
       "pubDate": "2026-08-28T10:47:53.000Z",
       "description": "Japan Yen Intervention Hits Record $96 Billion in Past Month&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
-    },
-    {
-      "title": "Rupee gains this week as dollar supply surges ahead of deposit window's close",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPbG10Q1R6aGRGcXZBWFRFdTJCcUVJWXIyOXVsYmJxQ0Mza1lzdTg5R2Y1azJveGNUTk9nelFXLXFGYXpZOVppM2tFSEc1dmQ2SlpWUkJMbEREYjV5aDdSUWNLaVBJckdIOE53b2k4X1VrMkdPMTZweUQtbWNxQXF1bkpRVE1tRjVqQVVpTk1jMlhjV2xjY3A1czdPU0tmbGU0czJob3VmZ3FXUThRZ3RDQmstaVNOWVVSeUlSYg?oc=5",
-      "pubDate": "2026-08-28T10:12:23.000Z",
-      "description": "Rupee gains this week as dollar supply surges ahead of deposit window's close&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "Breaking: Nonfarm Payrolls benchmark revision to lower US employment by 79,000 through March 2026",
@@ -506,11 +485,11 @@
       "source": "FXStreet"
     },
     {
-      "title": "Japan aims to cap FY27 new bond issuance at 40 trillion yen, PM says in Yomiuri interview",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQQ3RSWGxEeXBydzJjQklrUGxIdVRZdkdGVGdwbVlzb3pvZk1sZzU5cVZHWWp1YjJsSE5ic2RlMEFqVmlwQ3MwdmVOLWQ5YTFhS2RiTjFBMWN4Z2IwWlZHT01MN1d4b1RrSkVhRUpxblhCWkd4V0Z4Rm45UkNGVkJPYnNtY2tncVpBMHFiejc5MklYZlUwZVNQMzh2LTNqUkRXM21TbUVzcF94UnNMR045b3dER0R4SnZZSmgzRHVTZmN4UTdQVXNCRnlpc0VWOUE?oc=5",
-      "pubDate": "2026-08-28T09:10:34.000Z",
-      "description": "Japan aims to cap FY27 new bond issuance at 40 trillion yen, PM says in Yomiuri interview&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
+      "title": "Philippine Peso Slides Past Key Level as Intervention Risk Grows",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOVDdUS3ZuZl9pYS1wZzF3akJkbTFhMTFVZXA5eVV1UTB2cnhtdVZtcTVvYmRLcGtjSURXMng5RVBlRUIzSWlaMjB4RVFCelZ4NjNZLVdCMkdXVjU0TzV5ZVFOT2pNX3hLaWJSV2phLU9DQW0xOTFUTnYxd1d3d0RLRklnNVgweGlxV0J2OUJnZzJObWJDVjNkYzJlVnRkbkJlb19PZThZVTIydFJ2ejY4a25NekJ0YkU4ZnZzRHZhNA?oc=5",
+      "pubDate": "2026-08-28T08:59:36.000Z",
+      "description": "Philippine Peso Slides Past Key Level as Intervention Risk Grows&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
     },
     {
       "title": "(BOJ Review) Expanding and Revising the Application of Hedonic Quality Adjustment in the Corporate Goods Price Index",
@@ -518,6 +497,27 @@
       "pubDate": "2026-08-28T05:00:00.000Z",
       "description": "",
       "source": "Bank of Japan"
+    },
+    {
+      "title": "Dollar rises to session high after Warsh comments, set for weekly gain",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOanlNNVpTVDdjS3h1VUtWVXNxZHF4Y2xPREllbVBhX3ZNQ1MwUlJaTGlWeVY3UTM4QmVMbW54a1BNand2eDViNV9JRnR4aVhOdDBpR2Z0Z01qY0EtRmFUWXZabEdONXZURGpUNGo2dWpHNnBLejhfMG5fRGZnRUp0aTBpVExJOGxlbE1KbThpNTJGU2tvZXgway1namdvVGVWcUHSAacBQVVfeXFMT1pORFNoRHVORVI4YTdOcVlXbS1GZ3I5MHNNZXNjbXRDaW5rQXBPbWRSbWNKcDlhSFg4UlpYSFA2Ul9RbVIwRGV5bjlpT1RXaTVMSFNYdElGZ24zUUhkQXhwVjV2NUxPNFZaT0hBWmxUMlNMakcwSlRpYXFqNGdvZ25EZ2JjcHFGaDRQYXIySUtwTkNsUWJnelVZNjBsN1ZSS1VPT1pZQkE?oc=5",
+      "pubDate": "2026-08-28T02:53:00.000Z",
+      "description": "Dollar rises to session high after Warsh comments, set for weekly gain&nbsp;&nbsp;CNBC",
+      "source": "Google News"
+    },
+    {
+      "title": "Watch Dollar and Yields Await Cues From Warsh: 3-Minutes MLIV",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQUl9Pc2V4US1SRFZEY0pZWDNQdlFwNFhUUUxYSlBXSXZJbENOVV82TndWZWQ3SDAtZGJRRzg0aWNlbS1BaHlpTWxYR2ZrVWtfTjJFVnYxMlMyckJOb0pyU1JhdEY3cG1Td1M1bWZkd3dMZ0lUYTFNdVg3dHZsTXhFRDVvVEVicHQyeDVHSVQ1SUhxZFUtS005aVNva2otckFKVTlqR1RBY05Wc0pJalE?oc=5",
+      "pubDate": "2026-08-28T00:00:00.000Z",
+      "description": "Watch Dollar and Yields Await Cues From Warsh: 3-Minutes MLIV&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "The WSJ Dollar Index Falls 0.03% to 95.54",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNdUF0WVFURmZ1WENzd2ZGU3MzamR0NS1OVG0wRG4ySFM0WUx2ejA3aW1GSlA2NDZwTVNROV8yTFNwSml4VXF0Ujk3Y1dIX09mMDVTUXQ1V2c5cjFDcGZoV3BEWWFZdGp6VzRKZGcxNmNiU0h5NUI4VFdMRlo1U1VST2gtbldJQVptSmRrNEdfdmZDdldJcHRwdEVTZ3BsNE5scVhxLWl3Zzh6UnM?oc=5",
+      "pubDate": "2026-08-27T21:52:00.000Z",
+      "description": "The WSJ Dollar Index Falls 0.03% to 95.54&nbsp;&nbsp;WSJ",
+      "source": "Google News"
     },
     {
       "title": "Federal Reserve Board issues enforcement action with former employee of Banco Popular de Puerto Rico",
