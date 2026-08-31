@@ -4608,6 +4608,78 @@
       "forecast": "",
       "previous": "",
       "actual": ""
+    },
+    {
+      "title": "Main Refinancing Rate",
+      "country": "EUR",
+      "date": "2026-10-29T07:15:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Monetary Policy Statement",
+      "country": "EUR",
+      "date": "2026-10-29T07:15:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Advance GDP q/q",
+      "country": "USD",
+      "date": "2026-10-29T07:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Core PCE Price Index m/m",
+      "country": "USD",
+      "date": "2026-10-29T07:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "ECB Press Conference",
+      "country": "EUR",
+      "date": "2026-10-29T07:45:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "BOJ Policy Rate",
+      "country": "JPY",
+      "date": "2026-10-29T12:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Monetary Policy Statement",
+      "country": "JPY",
+      "date": "2026-10-29T12:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "BOJ Outlook Report",
+      "country": "JPY",
+      "date": "2026-10-29T12:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
     }
   ]
 }
