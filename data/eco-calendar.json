@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-31T12:21:00.868Z",
+  "timestamp": "2026-08-31T19:09:30.881Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -3039,7 +3039,7 @@
       "country": "CNY",
       "date": "2026-08-31T21:45:00-04:00",
       "impact": "Low",
-      "forecast": "51.5",
+      "forecast": "51.1",
       "previous": "50.9",
       "actual": ""
     },
@@ -3858,7 +3858,7 @@
       "country": "USD",
       "date": "2026-09-04T08:30:00-04:00",
       "impact": "High",
-      "forecast": "58K",
+      "forecast": "55K",
       "previous": "-23K",
       "actual": ""
     },
