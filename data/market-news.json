@@ -1,257 +1,467 @@
 {
-  "timestamp": "2026-08-31T05:56:42.614Z",
+  "timestamp": "2026-08-31T12:21:00.868Z",
   "items": [
-    {
-      "title": "EUR/USD Price Forecast: Gains ground to near 1.1600, bullish vibe prevails above 100-day SMA",
-      "link": "https://www.fxstreet.com/news/eur-usd-price-forecast-gains-ground-to-near-11600-bullish-vibe-prevails-above-100-day-sma-202608310556",
-      "pubDate": "2026-08-31T05:56:22.000Z",
-      "description": "The EUR/USD pair trades in positive territory around 1.1590 during the early European trading hours on Monday. However, the potential upside for the major pair might be limited as traders ramped up bets on a rate hike after hawkish remarks ",
-      "source": "FXStreet"
-    },
     {
       "title": "2026-08-31 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-08-31T05:47:03.000Z",
+      "pubDate": "2026-08-31T12:19:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
     },
     {
-      "title": "Jyske Bank buys back 53,588 shares in week 35",
-      "link": "https://www.investing.com/news/company-news/jyske-bank-buys-back-53588-shares-in-week-35-93CH-4882151",
-      "pubDate": "2026-08-31T05:44:29.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Trump posts AI video of Iran’s Kharg in ’smithereens’, no evidence of attack",
-      "link": "https://www.investing.com/news/stock-market-news/trump-posts-ai-video-of-irans-kharg-in-smithereens-no-evidence-of-attack-4882150",
-      "pubDate": "2026-08-31T05:42:59.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Jyske Bank buys back 54,588 shares in week 35",
-      "link": "https://www.investing.com/news/company-news/jyske-bank-buys-back-54588-shares-in-week-35-93CH-4882149",
-      "pubDate": "2026-08-31T05:40:40.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "USD/JPY Price Forecast: Retreats from one-month top as bullish bias remains below 160.00",
-      "link": "https://www.fxstreet.com/news/usd-jpy-price-forecast-retreats-from-one-month-top-as-bullish-bias-remains-below-16000-202608310540",
-      "pubDate": "2026-08-31T05:40:17.000Z",
-      "description": "The USD/JPY pair retreats from the 160.20 area, or a one-month high retested earlier this Monday, and, for now, seems to have snapped a five-day winning streak. Spot prices slide to the 159.80-159.75 region during the Asian session, though ",
+      "title": "Federal Reserve: Warsh’s hawkish shift reshapes rate outlook – Rabobank",
+      "link": "https://www.fxstreet.com/news/federal-reserve-warshs-hawkish-shift-reshapes-rate-outlook-rabobank-202608311210",
+      "pubDate": "2026-08-31T12:10:04.000Z",
+      "description": "Rabobank’s Elwin de Groot discusses Fed Chair Kevin Warsh’s Jackson Hole speech and its impact on US rates. He notes that Warsh signalled dissatisfaction with recent inflation and openness to further hikes, lifting near-term rate expectatio",
       "source": "FXStreet"
     },
     {
-      "title": "China property stocks slide as new mortgage rules raise funding concerns",
-      "link": "https://www.investing.com/news/stock-market-news/china-property-stocks-slide-as-new-mortgage-rules-raise-funding-concerns-4882148",
-      "pubDate": "2026-08-31T05:28:05.000Z",
+      "title": "MicroStrategy Ends 10-Week Pause With $370 Million Bitcoin Buy",
+      "link": "https://beincrypto.com/microstrategy-ends-10-week-pause-buys-bitcoin/",
+      "pubDate": "2026-08-31T12:05:00.000Z",
+      "description": "MicroStrategy has resumed Bitcoin accumulation after a 10-week hiatus, purchasing 4,603 BTC for approximately $369.7 million at an average price of $80,318 per coin. The move marks the company&#8217;s first major Bitcoin acquisition since l",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Abbott launches ready-to-feed whole milk infant formula",
+      "link": "https://www.investing.com/news/company-news/abbott-launches-readytofeed-whole-milk-infant-formula-93CH-4882683",
+      "pubDate": "2026-08-31T12:04:38.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Iran’s IRGC claims it shot down US drone, attacked UAE air base",
-      "link": "https://www.fxstreet.com/news/irans-irgc-says-will-respond-decisively-to-any-further-hostile-military-aggression-202608310526",
-      "pubDate": "2026-08-31T05:26:41.000Z",
-      "description": "Iran’s Islamic Revolutionary Guard Corps (IRGC) shot down a US MQ-9 drone over the Strait of Hormuz using air defense missiles, causing it to crash into Gulf waters, Mehr news agency reported on Monday.",
+      "title": "BetterLife Pharma appoints Charles Duncan to board",
+      "link": "https://www.investing.com/news/company-news/betterlife-pharma-appoints-charles-duncan-to-board-93CH-4882681",
+      "pubDate": "2026-08-31T12:04:36.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "expion energy appoints marc jarvis to board of directors",
+      "link": "https://www.investing.com/news/company-news/expion-energy-appoints-marc-jarvis-to-board-of-directors-93CH-4882682",
+      "pubDate": "2026-08-31T12:04:36.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Israeli court rejects Papaya debt plan, seeks more funding",
+      "link": "https://www.investing.com/news/company-news/israeli-court-rejects-papaya-debt-plan-seeks-more-funding-93CH-4882678",
+      "pubDate": "2026-08-31T12:04:35.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Viasat’s ViaSat-3 F3 satellite enters service in Asia-Pacific",
+      "link": "https://www.investing.com/news/company-news/viasats-viasat3-f3-satellite-enters-service-in-asiapacific-93CH-4882679",
+      "pubDate": "2026-08-31T12:04:35.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Innventure appoints Bruce Brown as board chairman",
+      "link": "https://www.investing.com/news/company-news/innventure-appoints-bruce-brown-as-board-chairman-93CH-4882680",
+      "pubDate": "2026-08-31T12:04:35.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Teladoc Health names Michael Grasher as chief financial officer",
+      "link": "https://www.investing.com/news/company-news/teladoc-health-names-michael-grasher-as-chief-financial-officer-93CH-4882677",
+      "pubDate": "2026-08-31T12:04:34.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "PennantPark unit completes $316.7m debt securitization reset",
+      "link": "https://www.investing.com/news/company-news/pennantpark-unit-completes-3167m-debt-securitization-reset-93CH-4882676",
+      "pubDate": "2026-08-31T12:04:33.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "KACST partners with Pasqal on quantum cryptography research",
+      "link": "https://www.investing.com/news/company-news/kacst-partners-with-pasqal-on-quantum-cryptography-research-93CH-4882675",
+      "pubDate": "2026-08-31T12:04:32.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Centene appoints Bradley Bolivar as chief information officer",
+      "link": "https://www.investing.com/news/company-news/centene-appoints-bradley-bolivar-as-chief-information-officer-93CH-4882674",
+      "pubDate": "2026-08-31T12:04:31.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Germany flash HICP growth remains slower than expected at 2.9% in August",
+      "link": "https://www.fxstreet.com/news/germany-flash-hicp-growth-remains-slower-than-expected-at-29-in-august-202608311202",
+      "pubDate": "2026-08-31T12:02:40.000Z",
+      "description": "Preliminary Germany Harmonized Index of Consumer Prices (HICP) data for August arrives at 2.9% Year-on-Year (YoY), lower than estimates of 3.1%, but higher than the previous reading of 2.8%. On a monthly basis, inflation data grew by 0.2%, ",
       "source": "FXStreet"
     },
     {
-      "title": "Indian Rupee opens lower as renewed US-Iran tensions lift oil prices",
+      "title": "Your Crypto Wallet Could Replace Your Credit Score — Coinbase&#039;s CEO Thinks So",
+      "link": "https://beincrypto.com/onchain-reputation-credit-score-coinbase/",
+      "pubDate": "2026-08-31T11:54:13.000Z",
+      "description": "Brian Armstrong says onchain reputation will replace credit scores as crypto lenders test loans without collateral.\nThe post Your Crypto Wallet Could Replace Your Credit Score — Coinbase&#039;s CEO Thinks So appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Euro: ECB tightening expectations support pair – BBH",
+      "link": "https://www.fxstreet.com/news/euro-ecb-tightening-expectations-support-pair-bbh-202608311147",
+      "pubDate": "2026-08-31T11:47:38.000Z",
+      "description": "Brown Brothers Harriman’s (BBH) Elias Haddad expects Eurozone August headline Consumer Price Index (CPI) to accelerate to 3.3% year-on-year on higher energy, with core inflation steady at 2.5%.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "USD/JPY Price Forecast: Faces selling pressure above 160.00",
+      "link": "https://www.fxstreet.com/news/usd-jpy-price-forecast-faces-selling-pressure-above-16000-202608311143",
+      "pubDate": "2026-08-31T11:43:55.000Z",
+      "description": "The US Dollar (USD) is down 0.3% to near 159.65 against the Japanese Yen (JPY) during the European trading session on Monday. The USD/JPY pair declines as the Japanese currency outperforms its peers on hopes of support from the United State",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Euro languishes around 1.1600 amid Fed hiking hopes, fresh tensions in Iran",
+      "link": "https://www.fxstreet.com/news/euro-languages-around-11600-amid-fed-hiking-hopes-fresh-tensions-in-iran-202608311134",
+      "pubDate": "2026-08-31T11:34:50.000Z",
+      "description": "The Euro (EUR) posts marginal gains against the US Dollar (USD) on Monday, but it remains close to Friday’s lows at 1.1578, as bulls fail to find significant acceptance above 1.1600.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Gold holds near $4,450 as Fed rate-hike expectations keep buyers cautious",
+      "link": "https://www.fxstreet.com/news/gold-holds-near-4-450-as-fed-rate-hike-expectations-keep-buyers-cautious-202608311131",
+      "pubDate": "2026-08-31T11:31:56.000Z",
+      "description": "Gold (XAU/USD) steadies on Monday after opening the week lower and briefly falling below $4,400, its lowest level since August 19, during Asian trading hours. However, the metal lacks strong upside momentum as hawkish Federal Reserve (Fed) ",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Canadian Dollar: BoC dovish tone and tariff risks – TD Securities",
+      "link": "https://www.fxstreet.com/news/canadian-dollar-boc-dovish-tone-and-tariff-risks-td-securities-202608311130",
+      "pubDate": "2026-08-31T11:30:32.000Z",
+      "description": "TD Securities’ macro team, including Andrew Kelvin and Jayati Bharadwaj, expects the Bank of Canada (BoC) to adopt a dovish tone and provide limited guidance as trade tensions with the US rise.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "New Zealand Dollar holds above 0.5900 as traders await RBNZ decision",
+      "link": "https://www.fxstreet.com/news/new-zealand-dollar-holds-above-05900-as-traders-await-rbnz-decision-202608311117",
+      "pubDate": "2026-08-31T11:17:14.000Z",
+      "description": "NZD/USD trades around 0.5910 on Monday, virtually unchanged on the day at the time of writing. The New Zealand Dollar (NZD) retains some support from improving Chinese activity data, but the move remains limited as investors prepare for the",
+      "source": "FXStreet"
+    },
+    {
+      "title": "US Dollar: Jobs data to test hawkish Fed repricing - BNY",
+      "link": "https://www.fxstreet.com/news/us-dollar-jobs-data-to-test-hawkish-fed-repricing-bny-202608311115",
+      "pubDate": "2026-08-31T11:15:34.000Z",
+      "description": "BNY’s Geoff Yu highlights that recent U.S. inflation data left the macro narrative intact, but Fed Chair Kevin Warsh’s Jackson Hole speech pushed markets to reprice September hike odds and lifted the Dollar. The focus now shifts to U.S.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Gold Price Forecast: XAU/USD steadies near $4,400 lows amid rising Fed tightening bets",
+      "link": "https://www.fxstreet.com/news/gold-price-forecast-xau-usd-steadies-near-4400-lows-amid-rising-fed-tightening-bets-202608311059",
+      "pubDate": "2026-08-31T10:59:02.000Z",
+      "description": "Gold (XAU/USD) shows marginal gains on Monday, with price action hovering around $4.450 at the time of writing yet unable to take off from last week’s lows in the $4,400 area after depreciating more than 4% late last week.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Blockaid Traces $9.3 Million Exploit at Flow Lender More Markets",
+      "link": "https://beincrypto.com/more-markets-exploit-flow-evm-wflow/",
+      "pubDate": "2026-08-31T10:47:29.000Z",
+      "description": "More Markets lost 15.5 million Wrapped Flow (WFLOW) to an exploit on Flow EVM on Monday. Security firm Blockaid put the initial impact at $9.3 million. The lending protocol has not confirmed any loss. Its team said it is looking into the cl",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Gold dips as Fed rate-hike bets rise, still heads for best month since January",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZ0RWUzI1UllwOTY2MWljS0syQ3hHRHQtZlVTV2g0WlNzalQ1eVdqSlVZb285NEZhck1VS1czbU1KUlF2azBfMkZ4X1JUdlNaZkNZdkF4bnczbS1jR0hVX01iaW1RZzRINkhjZDNuelJIa1JUY2pVWkFnMzlGRzh5Y1p1MUhEdlJ5N2lseVZ3X2RzV1Y3eUQ4YUtJN2NFQnNJVS1R?oc=5",
+      "pubDate": "2026-08-31T10:46:32.000Z",
+      "description": "Gold dips as Fed rate-hike bets rise, still heads for best month since January&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "GBP/USD Price Forecast: Finds ground slightly below 20-day EMA",
+      "link": "https://www.fxstreet.com/news/gbp-usd-price-forecast-finds-ground-slightly-below-20-day-ema-202608311041",
+      "pubDate": "2026-08-31T10:41:12.000Z",
+      "description": "The British Pound (GBP) is marginally higher at around 1.3545 against the US Dollar (USD) during the European trading session on Monday. The GBP/USD pair rebounds as the US Dollar corrects after a strong upside move on Friday.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "U.S. Dollar Retreats",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNT2VKYndQQ3BxZFNrUVJ0NVN2ZG53TlJjMmdkRnR1TEdqUWRaaXB1WTBvbjFFSmtmU09OOV9aWldGZTVQNjJXX2dBTXhzMjdGS2hoWVp6aE5kMnlEb21naXpVM2Z1T1lKaVMtM01MOWdVSWxELWxtMjdOcGgwY3V1MW9WbWVrZlFTMWxUa0NoZDVsWl9IcFhUMjBHLU01UHdXZnR3YUttOGJVV25aRGZhNWxKT3k4WWhSYUxNTVFEUQ?oc=5",
+      "pubDate": "2026-08-31T10:35:00.000Z",
+      "description": "U.S. Dollar Retreats&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "2026-08-31 - Petra Tschudin: Current challenges of monetary policy",
+      "link": "https://www.snb.ch/en/publications/communication/speeches/2026/ref_20260831_gpe",
+      "pubDate": "2026-08-31T10:10:00.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
+    },
+    {
+      "title": "WTI Oil appreciates beyond $85.50 as tensions rise in Iran",
+      "link": "https://www.fxstreet.com/news/wti-oil-appreciates-beyond-8550-as-tensions-rise-in-iran-202608311008",
+      "pubDate": "2026-08-31T10:08:51.000Z",
+      "description": "Crude prices rally on Monday, with the US benchmark West Texas Intermediate (WTI) trading at $85.50 per barrel at the time of writing, more than 3% up on the day so far, drawing close to one-month highs, at $87.38.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Robinhood Chain Hits Record $874.8 Million Volume — Are Meme Coins Back?",
+      "link": "https://beincrypto.com/robinhood-chain-record-dex-volume-pons/",
+      "pubDate": "2026-08-31T10:07:25.000Z",
+      "description": "Robinhood Chain recorded $874.8 million in decentralized exchange (DEX) volume on August 30, its largest single day since the network launched on July 1. Uniswap routed almost 95% of that total across three versions. A closer look at the ac",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "US Dollar: Warsh speech keeps rate hike debate open – Commerzbank",
+      "link": "https://www.fxstreet.com/news/us-dollar-warsh-speech-keeps-rate-hike-debate-open-commerzbank-202608311005",
+      "pubDate": "2026-08-31T10:05:52.000Z",
+      "description": "Commerzbank’s Thu Lan Nguyen notes that Kevin Warsh’s Jackson Hole speech boosted the US Dollar by signalling openness to tighter monetary policy and a possible September rate hike.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Australian Dollar edges lower as mixed Chinese PMIs fail to impress",
+      "link": "https://www.fxstreet.com/news/australian-dollar-edges-lower-as-mixed-chinese-pmis-fail-to-impress-202608310948",
+      "pubDate": "2026-08-31T09:48:19.000Z",
+      "description": "AUD/USD trades around 0.7160 on Monday at the time of writing, down a modest 0.08% on the day. The Australian Dollar (AUD) struggles to find a clear direction following the release of mixed Chinese economic data, while investors also assess",
+      "source": "FXStreet"
+    },
+    {
+      "title": "New Zealand Dollar: RBNZ seen hiking in September – UOB",
+      "link": "https://www.fxstreet.com/news/new-zealand-dollar-rbnz-seen-hiking-in-september-uob-202608310940",
+      "pubDate": "2026-08-31T09:40:59.000Z",
+      "description": "UOB Global Economics & Markets Research, led by economist Lee Sue Ann, now expects the Reserve Bank of New Zealand to raise the Official Cash Rate to 2.75% at the September meeting.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Asia FX: Fed repricing pressures regional currencies – MUFG",
+      "link": "https://www.fxstreet.com/news/asia-fx-fed-repricing-pressures-regional-currencies-mufg-202608310932",
+      "pubDate": "2026-08-31T09:32:31.000Z",
+      "description": "MUFG’s Lloyd Chan notes that markets are reassessing Federal Reserve policy after Chair Warsh’s Jackson Hole speech, with higher US rate expectations lifting the Dollar and shifting focus to whether inflation remains sticky enough to warran",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Bitrue AI Review 2026: How Its Free AI Trading Copilot Works",
+      "link": "https://beincrypto.com/bitrue-ai-review-2026/",
+      "pubDate": "2026-08-31T09:31:04.000Z",
+      "description": "Crypto exchange Bitrue is approaching its 8th anniversary in 2026, and it&#8217;s launching a new interface designed to help traders make informed decisions using AI. But is it any good? Bitrue AI is pitched as a beginner-friendly trading c",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Silver price today: Silver rises, according to FXStreet data",
+      "link": "https://www.fxstreet.com/news/silver-price-today-silver-rises-according-to-fxstreet-data-202608310930",
+      "pubDate": "2026-08-31T09:30:44.000Z",
+      "description": "Silver prices (XAG/USD) rose on Monday, according to FXStreet data. Silver trades at $67.10 per troy ounce, up 1.04% from the $66.40 it cost on Friday.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Yen’s Breach of 160 to Dollar Puts Traders on Intervention Watch: JPY/USD",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNczhMbWdNU010SE52RjBORFVQekZQeHUyeTNHVG5HSkd6dFB6TVJGbHNtVm9MbllDcVZ5M3NYZXNxSTFsdDRVN0NLVjdTMlRnNWZhNU4tQTlaejR1dDFObG8ySi1XMXRUQVI2OXZuSVljbUM3bXhCc0VWMDlHRVU5bkNId1RYUFJibERha0dPeXFvR0REaVE0R3RuWlFrX2VmYy04N2dLdkdxYlVKMlA2LTZta1VWdw?oc=5",
+      "pubDate": "2026-08-31T09:24:29.000Z",
+      "description": "Yen’s Breach of 160 to Dollar Puts Traders on Intervention Watch: JPY/USD&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "XRP Price Prediction for September 2026: A Repeat Pattern Could Undo August&#039;s 28% Rally",
+      "link": "https://beincrypto.com/xrp-price-prediction-september-2026/",
+      "pubDate": "2026-08-31T09:23:00.000Z",
+      "description": "XRP price climbed 28.5% in August, its best August since 2021 and a break from a month it has lost six times in nine years. Almost all the fuel arrived in the final two weeks. History suggests September may hand some of it back. Why Did the",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "EUR/JPY Price Forecast: Remains below nine-day EMA near 185.50",
+      "link": "https://www.fxstreet.com/news/eur-jpy-price-forecast-remains-below-nine-day-ema-near-18550-202608310921",
+      "pubDate": "2026-08-31T09:21:44.000Z",
+      "description": "EUR/JPY extends its losses for the second successive day, trading around 185.20 during European hours on Monday. The technical analysis of a daily chart indicates that the currency cross is remaining within the ascending channel pattern, si",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Canadian Dollar : Modest downside on trade risks and yields – HSBC",
+      "link": "https://www.fxstreet.com/news/canadian-dollar-modest-downside-on-trade-risks-and-yields-hsbc-202608310919",
+      "pubDate": "2026-08-31T09:19:28.000Z",
+      "description": "HSBC strategists highlight a bearish stance on the Canadian Dollar (CAD), noting that the breakdown in US–Canada trade talks has driven USD/CAD higher but is unlikely to be a persistent drag.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "US Dollar: Hawkish Fed pricing supports Dollar into payrolls – BBH",
+      "link": "https://www.fxstreet.com/news/us-dollar-hawkish-fed-pricing-supports-dollar-into-payrolls-bbh-202608310904",
+      "pubDate": "2026-08-31T09:04:57.000Z",
+      "description": "Brown Brothers Harriman’s (BBH) Elias Haddad notes that Kevin Warsh’s hawkish Jackson Hole speech has sharply increased market-implied odds of a September Federal Reserve rate hike, supporting the Dollar and short-term Treasury yields.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "US Dollar Index Price Forecast: DXY fails near 100-SMA/38.2% Fibo. confluence around 99.75",
+      "link": "https://www.fxstreet.com/news/us-dollar-index-price-forecast-dxy-fails-near-100-sma-382-fibo-confluence-around-9975-202608310900",
+      "pubDate": "2026-08-31T09:00:24.000Z",
+      "description": "The US Dollar Index (DXY), which tracks the Greenback against a basket of currencies, attracts some sellers at the start of a new week and erodes a part of Friday's strong gains to a two-week high.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "USD/JPY Price Forecast: US Dollar keeps crawling towards the key 160.00 area",
+      "link": "https://www.fxstreet.com/news/usd-jpy-price-forecast-us-dollar-keeps-crawling-towards-the-key-16000-area-202608310857",
+      "pubDate": "2026-08-31T08:57:37.000Z",
+      "description": "The Japanese Yen (JPY) pares some losses on Monday’s European session, as the US Dollar (USD) pulls back against its main peers, with the dust from the Jackson Hole meeting settling.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "South African rand muted as stronger dollar, softer metals and Fed rate concerns weigh",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPR29xSFZ6cjh5NkFvdW1tMFIwYTFBSC1MeGVPX291dWQ0bU5aZ0dyenBVNVhDdnR0Z0E0UU5lZUh0bHVBaWg4YUNkaDcyZjcyeEFFU3drRmVhakZPMExzODMySlhzd1F1dTkxNjBwMjFjMjNpdjk4cGpvQ01iUl9yMGhjRldUcThMejM4YWE5T3hJdGhsRW1Qa1BBNzBXdEJPdkd3aFlFOC0td0dOMmt4cVpCUVBCSWFhWXhtaWFrVXdVOHlQSVE?oc=5",
+      "pubDate": "2026-08-31T08:56:25.000Z",
+      "description": "South African rand muted as stronger dollar, softer metals and Fed rate concerns weigh&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Euro: Downside risk remains in focus against US Dollar – UOB",
+      "link": "https://www.fxstreet.com/news/euro-downside-risk-remains-in-focus-against-us-dollar-uob-202608310855",
+      "pubDate": "2026-08-31T08:55:37.000Z",
+      "description": "United Overseas Bank’s (UOB) Quek Ser Leang and Lee Sue Ann highlight an unexpectedly sharp EUR/USD drop to 1.1577, with the pair closing weaker at 1.1584. They see scope for further downside but doubts a quick test of 1.1550 due to oversol",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Dow Jones futures slip as traders adopt caution amid higher oil prices",
+      "link": "https://www.fxstreet.com/news/dow-jones-futures-slip-as-traders-adopt-caution-amid-higher-oil-prices-202608310852",
+      "pubDate": "2026-08-31T08:52:03.000Z",
+      "description": "Dow Jones futures fall by 0.15% to near 53,500 during European hours on Monday. Meanwhile, S&P 500 futures decline by 0.12%, to trade near 7,710, while Nasdaq 100 futures gain by 0.05% to trade around 29,500.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Euro recovers against US Dollar, German CPI accelerates",
+      "link": "https://www.fxstreet.com/news/euro-recovers-against-us-dollar-german-cpi-accelerates-202608310850",
+      "pubDate": "2026-08-31T08:50:08.000Z",
+      "description": "The Euro (EUR) is up 0.15% to near 1.1600 against the US Dollar (USD) during the European trading session on Monday. The major currency pair gains as the US Dollar corrects after a strong Friday.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Australian Dollar: RBA hike risks linger – OCBC",
+      "link": "https://www.fxstreet.com/news/australian-dollar-rba-hike-risks-linger-ocbc-202608310846",
+      "pubDate": "2026-08-31T08:46:20.000Z",
+      "description": "OCBC FX Strategist Sim Moh Siong and Christopher Wong note that stronger Australian Consumer Price Index (CPI) and resilient household spending have revived expectations of another Reserve Bank of Australia (RBA) hike, helping AUD/USD retes",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Dollar slips as markets weigh Fed rate outlook; yen hovers near 160",
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNTzZFV05UVTZLQjh4TGh6S2xxU0xMU0w3c2lXNUd0am8tak9EV3p6NV84cVV0NDM2aXFrUkFpQUpVZ3dmdGNkYS1OaXRQbGhybm9lcHBfU2lLaVRwVGxiaXJKNnFRZW9ndFppTmp1TlhxeDJ2emxQLU5YWnVraXJFYzFHbldSU0pmVEtjeHFLdHJlUERTWjlkMmp0d25FSE1Wa3Q3SHpKbG1uNXBGa3FDRTg1cGxFX2VQZUkydHoxaWdHZUxER2c?oc=5",
+      "pubDate": "2026-08-31T08:42:21.000Z",
+      "description": "Dollar slips as markets weigh Fed rate outlook; yen hovers near 160&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "New Zealand Dollar: RBNZ set for second hike – BNY",
+      "link": "https://www.fxstreet.com/news/new-zealand-dollar-rbnz-set-for-second-hike-bny-202608310836",
+      "pubDate": "2026-08-31T08:36:51.000Z",
+      "description": "BNY’s Geoff Yu expects the Reserve Bank of New Zealand to deliver another 25bp hike to 2.75%, supported by elevated inflation and strong confidence data.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Polish Zloty: Fiscal slippage and cautious NBP weigh – Commerzbank",
+      "link": "https://www.fxstreet.com/news/polish-zloty-fiscal-slippage-and-cautious-nbp-weigh-commerzbank-202608310827",
+      "pubDate": "2026-08-31T08:27:55.000Z",
+      "description": "Commerzbank’s Tatha Ghose highlights that recent Polish fiscal and monetary developments are negative for the Polish Zloty.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Indonesia, Singapore central banks implement use of local currencies in bilateral transactions",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPQmwxbE84bHlpVWtiQl9jbVZ0Z0pvVU44aHNIa2xsMkxnTTBoRU5yS1VWc3FyX3BEMDY3UmxiZFdRTkQzRExVNkc2QkdvUzdSV3hEeTZmdUJPa2ZfazlNU3VDOEpFcVh1N1hSYS1ON3lBby1xYXl6cmo4azFfRjA1Vm1xS3VMVWp0UGdNa2w2Nm95TmxUQmExNDR1aDc4a1VSZnFpcGwyYzdIU0RPN2I1RlpWU21aZTR4RXA1allvWGlGWmRaN3FLWQ?oc=5",
+      "pubDate": "2026-08-31T08:26:21.000Z",
+      "description": "Indonesia, Singapore central banks implement use of local currencies in bilateral transactions&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Navigating the Noise: HTX Turns 13 with Resilience in Action",
+      "link": "https://beincrypto.com/htx-turns-13-with-resilience-in-action/",
+      "pubDate": "2026-08-31T08:15:00.000Z",
+      "description": "Amid recent discussions in the crypto space, HTX has drawn significant attention. Like many other exchanges, regulatory scrutiny has become subjects of discussion on this exchange. However, activity on the HTX platform presents a contrastin",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Quarterly Schedule of Outright Purchases of Japanese Government Bonds (Competitive Auction Method) (July-September 2026) (Schedule Updates)",
+      "link": "http://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/mpr260831a.pdf",
+      "pubDate": "2026-08-31T08:00:00.000Z",
+      "description": "",
+      "source": "Bank of Japan"
+    },
+    {
+      "title": "2026-08-31 - Data portal - Important monetary policy data, 31 August 2026",
+      "link": "https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/08/statpub_news_20260831_gwd",
+      "pubDate": "2026-08-31T08:00:00.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
+    },
+    {
+      "title": "GCSA Agent Achieves 91.3% on CyberGym, Ranking Among the World’s Leading AI Cybersecurity Agents",
+      "link": "https://beincrypto.com/gcsa-agent-achieves-91-cybergym/",
+      "pubDate": "2026-08-31T08:00:00.000Z",
+      "description": "GCSA Agent demonstrates autonomous vulnerability analysis and PoC generation capabilities on a highly challenging real-world vulnerability benchmark The Global Cybersecurity Alliance (GCSA) today announced that GCSA Agent achieved a 91.3% s",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Elon Musk Warns AI Hacking Will Go Superhuman by End of 2027",
+      "link": "https://beincrypto.com/elon-musk-ai-hacking-2027-prediction/",
+      "pubDate": "2026-08-31T07:56:08.000Z",
+      "description": "Elon Musk says AI hacking will surpass humans by end of 2027 as a critical Artifactory flaw fuels the debate.\nThe post Elon Musk Warns AI Hacking Will Go Superhuman by End of 2027 appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Zoomex Concludes &#8216;Trade The Tide&#039; Event At Coinfest Asia 2026, Deepening SEA Market Presence",
+      "link": "https://beincrypto.com/zoomex-trade-the-tide-coinfest-asia-2026/",
+      "pubDate": "2026-08-31T07:45:00.000Z",
+      "description": "Zoomex, a global cryptocurrency exchange focused on derivative trading experiences, announced that its official side event during Coinfest Asia 2026, &#8220;Zoomex Summer Bay Party: Trade the Tide,&#8221; was successfully held on August 20 ",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Zoomex Puts Precision Trading Within Reach with Specialized 1000x Leverage Futures Contracts",
+      "link": "https://beincrypto.com/zoomex-1000x-leverage-futures-contracts/",
+      "pubDate": "2026-08-31T07:36:03.000Z",
+      "description": "Zoomex, the global crypto derivatives exchange built for traders who value speed and control, is spotlighting one of its most distinctive offerings: specialized futures contracts with leverage of up to 1000x. Available on select major tradi",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Bitcoin Holders Face a Hard Fork on September 1 — Here&#039;s What Actually Changes",
+      "link": "https://beincrypto.com/bitcoin-hard-fork-september-dashjr-ocean/",
+      "pubDate": "2026-08-31T07:19:21.000Z",
+      "description": "Luke Dashjr quit OCEAN and calls Bitcoin Spamcoin. His BLAKE2b chain breaks away September 1. What it means for BTC.\nThe post Bitcoin Holders Face a Hard Fork on September 1 — Here&#039;s What Actually Changes appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "2026-08-31 - Data portal - SNB balance sheet items end of July 2026",
+      "link": "https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/08/statpub_news_20260831_c",
+      "pubDate": "2026-08-31T07:00:00.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
+    },
+    {
+      "title": "2026-08-31 - Data portal - IMF SDDS Plus, 31 August 2026",
+      "link": "https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/08/statpub_news_20260831_sddsplus",
+      "pubDate": "2026-08-31T07:00:00.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
+    },
+    {
+      "title": "Dollar Debasement Backs Bull Case for Emerging Bonds, Funds Say",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOdTJXMVhFRktOS1Z3MFBrSGNzNVZFS1lnbGRaS25qblZTeUxiX2Z5X0dlMGNZbVh2T0ZCSlYzbE9GVzZJVDhRMUJVNXUzcXB5NnhaOEw0b3dPRjUxa1FpRmlVaTZmODZfSVN2VkhHcHpYd1dtU1hjTGlKQ2dPMXVubnNid0gtc2tmNU56dlJ4aVo2T3B4eWtTR0swUnhGM0NkenFqQm1ENUo1R1ljaWdWR1NPRQ?oc=5",
+      "pubDate": "2026-08-31T06:47:00.000Z",
+      "description": "Dollar Debasement Backs Bull Case for Emerging Bonds, Funds Say&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "Indian Rupee faces headwinds from Middle East risks, hawkish Fed bets",
       "link": "https://www.fxstreet.com/news/indian-rupee-opens-lower-as-renewed-us-iran-tensions-lift-oil-prices-202608310525",
       "pubDate": "2026-08-31T05:25:47.000Z",
       "description": "The Indian Rupee (INR) opens slightly lower against the US Dollar (USD) at the start of the week. The USD/INR pair ticks up to near 95.43, as higher oil prices due to renewed tensions between the United States (US) and Iran have weighed on ",
       "source": "FXStreet"
     },
     {
-      "title": "Why Is The Crypto Market Down Today?",
-      "link": "https://beincrypto.com/why-is-the-crypto-market-down-today/",
-      "pubDate": "2026-08-31T05:25:29.000Z",
-      "description": "The crypto market is down 3.10% from Sunday&#8217;s high, trading near $2.59 trillion on Monday, August 31. A double top risk is playing out. A second rejection near $2.72 trillion has built the shape traders least want to see. 1. Double To",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Europe’s central bankers fear more turbulence in testy U.S. relations",
-      "link": "https://www.investing.com/news/economy-news/europes-central-bankers-fear-more-turbulence-in-testy-us-relations-4882146",
-      "pubDate": "2026-08-31T05:13:14.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Oil jumps more than 2% after US attack on Iran’s Larak Island",
-      "link": "https://www.investing.com/news/commodities-news/oil-jumps-more-than-2-after-us-attack-on-irans-larak-island-4882075",
-      "pubDate": "2026-08-31T05:12:34.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Nikkei 225 tests bear flag support at 65,083: Live levels",
-      "link": "https://www.investing.com/news/stock-market-news/nikkei-225-threatens-breakdown-at-65035-support-live-levels-93CH-4882095",
-      "pubDate": "2026-08-31T05:08:14.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "SK Hynix consolidates above Ichimoku cloud: Live levels",
-      "link": "https://www.investing.com/news/stock-market-news/sk-hynix-trapped-in-krw-range-live-breakout-levels-93CH-4882096",
-      "pubDate": "2026-08-31T05:08:10.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Ather Energy shares rise after new Konarc electric scooter launch",
-      "link": "https://www.investing.com/news/stock-market-news/ather-energy-shares-rise-after-new-konarc-electric-scooter-launch-93CH-4882144",
-      "pubDate": "2026-08-31T05:06:23.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "WTI rises to near $84.50 as IRGC claims supertanker struck by mines in Hormuz",
-      "link": "https://www.fxstreet.com/news/wti-rises-to-near-8450-as-irgc-claims-supertanker-struck-by-mines-in-hormuz-202608310502",
-      "pubDate": "2026-08-31T05:02:47.000Z",
-      "description": "West Texas Intermediate (WTI) rebounds and continues its intraday gains, trading around $84.40 per barrel during the Asian hours on Monday.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "AUD/USD Price Forecast: Holds above 0.7150 on soft USD; Fed/Iran risks curb upside",
-      "link": "https://www.fxstreet.com/news/aud-usd-price-forecast-holds-above-07150-on-soft-usd-fed-iran-risks-curb-upside-202608310502",
-      "pubDate": "2026-08-31T05:02:32.000Z",
-      "description": "The AUD/USD pair attracts some buyers in the vicinity of mid-0.7100s at the start of a new week, stalling Friday's retracement slide from its highest level since mid-May. Spot prices, however, lack bullish conviction and remain below the 0.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Star Entertainment warns tough conditions to persist after annual loss",
-      "link": "https://www.investing.com/news/stock-market-news/star-entertainment-warns-tough-conditions-to-persist-after-annual-loss-4882101",
-      "pubDate": "2026-08-31T05:01:26.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "3 Token Unlocks to Watch in the First Week of September 2026",
-      "link": "https://beincrypto.com/token-unlocks-first-week-of-september-2026/",
-      "pubDate": "2026-08-31T04:54:25.000Z",
-      "description": "The crypto market will welcome tokens worth around $1.5 billion in the first week of September 2026. Major projects, including Hyperliquid (HYPE), Ethena (ENA), and Sui (SUI), will release significant new token supplies.&#160; These unlocks",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Gold pares intraday losses to sub-$4,400 levels on softer USD; not out of the woods yet",
-      "link": "https://www.fxstreet.com/news/gold-drops-to-nearly-two-week-low-as-hawkish-fed-bets-rise-amid-oil-driven-inflation-fears-202608310440",
-      "pubDate": "2026-08-31T04:40:55.000Z",
-      "description": "Gold (XAU/USD) recovers slightly from sub-$4,400 levels – a one-and-a-half-week low – touched during the Asian session on Monday, though the upside potential seems limited. A softer US Dollar (USD) offers some support to the precious metal ",
-      "source": "FXStreet"
-    },
-    {
-      "title": "India Gold price today: Gold falls, according to FXStreet data",
-      "link": "https://www.fxstreet.com/news/india-gold-price-today-gold-falls-according-to-fxstreet-data-202608310435",
-      "pubDate": "2026-08-31T04:35:31.000Z",
-      "description": "Gold prices fell in India on Monday, according to data compiled by FXStreet.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Bitcoin Enters September With 3 Warning Signs After 24% August Rally",
-      "link": "https://beincrypto.com/bitcoin-warning-signs-september-2026/",
-      "pubDate": "2026-08-31T04:30:57.000Z",
-      "description": "Bitcoin (BTC) is up roughly 24% in August, its largest monthly advance of 2026. This month&#8217;s rally lifted the asset from the $60,000s to briefly over $80,000. However, three warning signs now emerge: exchange balances, exchange-traded",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "AUD/JPY Price Forecast: Declines to near 114.50, but maintains bullish tone above 100-day SMA",
-      "link": "https://www.fxstreet.com/news/aud-jpy-price-forecast-declines-to-near-11450-but-maintains-bullish-tone-above-100-day-sma-202608310429",
-      "pubDate": "2026-08-31T04:29:50.000Z",
-      "description": "The AUD/JPY cross trades in negative territory around 114.50 during the early European session on Monday.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Swiss Franc gains as US Dollar weakens despite Fed Chair Warsh’s hawkish remarks",
-      "link": "https://www.fxstreet.com/news/swiss-franc-gains-as-us-dollar-weakens-despite-fed-chair-warshs-hawkish-remarks-202608310411",
-      "pubDate": "2026-08-31T04:11:40.000Z",
-      "description": "USD/CHF holds losses after registering modest gains in the previous day, trading around 0.8090 during the Asian hours on Monday. The currency pair edges lower as the US Dollar (USD) weakens following comments from Goldman Sachs chief econom",
-      "source": "FXStreet"
-    },
-    {
-      "title": "United States Dollar Index trades slightly lower at the start of the US NFP week",
-      "link": "https://www.fxstreet.com/news/united-states-dollar-index-trades-slightly-lower-at-the-start-of-the-us-nfp-week-202608310351",
-      "pubDate": "2026-08-31T03:51:30.000Z",
-      "description": "The US Dollar (USD) is slightly down in the Asian trading session at the start of the week. The US Dollar Index (DXY), which gauges the Greenback’s value against its peers, corrects 0.1% to near 99.58 after a strong Friday.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "United States: Labour market watch – NBC Economics and Strategy",
-      "link": "https://www.fxstreet.com/news/united-states-labour-market-and-pce-inflation-watch-nbc-economics-and-strategy-202608310338",
-      "pubDate": "2026-08-31T03:38:27.000Z",
-      "description": "NBC Economics and Strategy report that U.S. nominal personal income rose 0.4% in July, double expectations, while spending increased 0.2% and real disposable income climbed 0.4% with flat real spending.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "United States Dollar: Rebound needs stronger payrolls data – TD Cowen",
-      "link": "https://www.fxstreet.com/news/dollar-rebound-needs-stronger-data-td-cowen-202608310332",
-      "pubDate": "2026-08-31T03:32:23.000Z",
-      "description": "TD Cowen’s Washington Strategy team, led by Chris Krueger, notes that a durable rebound in the Dollar hinges on stronger US policy follow-through and renewed upside surprises in US data.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Hair Loss Biotechs Emerge As Wall Street&#039;s Newest Growth Trade",
-      "link": "https://beincrypto.com/hair-loss-biotechs-wall-street-trade/",
-      "pubDate": "2026-08-31T03:21:02.000Z",
-      "description": "Hair loss biotechs Veradermics, Absci, and Cosmo are drawing investor bets on a market untouched since the 1990s.\nThe post Hair Loss Biotechs Emerge As Wall Street&#039;s Newest Growth Trade appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Silver Price Forecast: XAG/USD falls to near $66.00 amid Fed Chair Warsh’s hawkish tone",
-      "link": "https://www.fxstreet.com/news/silver-price-forecast-xag-usd-falls-to-near-6600-amid-fed-chair-warshs-hawkish-tone-202608310309",
-      "pubDate": "2026-08-31T03:09:31.000Z",
-      "description": "Silver price (XAG/USD) extends its losses for the second successive day, trading around $66.10 per troy ounce during the Asian hours on Monday. The non-yielding Silver declined following hawkish remarks from Federal Reserve (Fed) Chair Kevi",
-      "source": "FXStreet"
-    },
-    {
-      "title": "BlackRock&#039;s BUIDL Reclaims Top Spot for Tokenized Treasuries, Bolstering RWA Market",
-      "link": "https://beincrypto.com/blackrock-buidl-reclaims-top-tokenized-treasury/",
-      "pubDate": "2026-08-31T03:04:29.000Z",
-      "description": "BlackRock's BUIDL fund has retaken the lead in tokenized US Treasuries with a $2.8 billion market cap, edging out Circle's USYC.\nThe post BlackRock&#039;s BUIDL Reclaims Top Spot for Tokenized Treasuries, Bolstering RWA Market appeared firs",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Yen’s Breach of 160 to Dollar Puts Traders on Intervention Watch: JPY/USD",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNczhMbWdNU010SE52RjBORFVQekZQeHUyeTNHVG5HSkd6dFB6TVJGbHNtVm9MbllDcVZ5M3NYZXNxSTFsdDRVN0NLVjdTMlRnNWZhNU4tQTlaejR1dDFObG8ySi1XMXRUQVI2OXZuSVljbUM3bXhCc0VWMDlHRVU5bkNId1RYUFJibERha0dPeXFvR0REaVE0R3RuWlFrX2VmYy04N2dLdkdxYlVKMlA2LTZta1VWdw?oc=5",
-      "pubDate": "2026-08-31T03:00:00.000Z",
-      "description": "Yen’s Breach of 160 to Dollar Puts Traders on Intervention Watch: JPY/USD&nbsp;&nbsp;Bloomberg.com",
+      "title": "Goldman expects one yen trade to continue thriving even as another fades",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE45WFhsTk1tUjl3SW9Ma0RQcUJmaFA4bEtNZXp0bDM0OFRQVEMyYTV6VVVTQ1d4QmtBYkxERkVtLVNMZlJIRjk4TGZ1Ql9zNTFPenhZWFhOMTVCRlJJVWI4aEgxYTVKWWJWY1Nfb2ZwbDJNejQ?oc=5",
+      "pubDate": "2026-08-31T04:48:59.000Z",
+      "description": "Goldman expects one yen trade to continue thriving even as another fades&nbsp;&nbsp;CNBC",
       "source": "Google News"
     },
     {
-      "title": "Eric Trump Says American Bitcoin Mines Up to 13 BTC Daily at 49% Margins",
-      "link": "https://beincrypto.com/american-bitcoin-mines-13-btc-daily/",
-      "pubDate": "2026-08-31T02:58:00.000Z",
-      "description": "American Bitcoin mines 11 to 13 BTC daily at 49% margins, Eric Trump says, matching the miner's own quarterly filings.\nThe post Eric Trump Says American Bitcoin Mines Up to 13 BTC Daily at 49% Margins appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Australian Dollar eases from July 9 high vs New Zealand Dollar; awaits Aussie GDP and RBNZ",
-      "link": "https://www.fxstreet.com/news/australian-dollar-eases-from-july-9-high-vs-new-zealand-dollar-awaits-aussie-gdp-and-rbnz-202608310247",
-      "pubDate": "2026-08-31T02:47:09.000Z",
-      "description": "The AUD/NZD cross turns positive for the fourth straight day following an intraday fall to the 1.2065 area and climbs to a fresh high since July 9 during the Asian session on Monday.",
+      "title": "Gold steadies below $4,450; seems vulnerable amid rising Fed hike bets",
+      "link": "https://www.fxstreet.com/news/gold-drops-to-nearly-two-week-low-as-hawkish-fed-bets-rise-amid-oil-driven-inflation-fears-202608310440",
+      "pubDate": "2026-08-31T04:40:55.000Z",
+      "description": "Gold (XAU/USD) steadies below the $4,450 level during the first half of the European session, though it remains close to a one-and-a-half-week low, touched earlier this Monday.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Canadian Dollar strengthens despite hawkish Fed rhetoric",
-      "link": "https://www.fxstreet.com/news/canadian-dollar-strengthens-despite-hawkish-fed-rhetoric-202608310235",
-      "pubDate": "2026-08-31T02:35:37.000Z",
-      "description": "The USD/CAD pair edges lower to around 1.3890 during the Asian trading hours on Monday. Renewed tensions between the US and Iran boost crude oil prices, supporting the commodity-linked Canadian Dollar (CAD) against the US Dollar (USD).",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Trump Announced the Biggest Oil Deal Ever: Why Did Prices Jump?",
-      "link": "https://beincrypto.com/venezuela-oil-deal-brent-crude-prices/",
-      "pubDate": "2026-08-31T02:21:33.000Z",
-      "description": "Trump's Venezuela oil deal promised lower prices, but Brent crude climbed toward $90 as Middle East risk outweighed the new supply.\nThe post Trump Announced the Biggest Oil Deal Ever: Why Did Prices Jump? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Top 10 S&#038;P 500 Stocks of the Past Decade Share One Clear Theme",
-      "link": "https://beincrypto.com/top-10-sp-500-ai-stocks-decade/",
-      "pubDate": "2026-08-31T02:13:36.000Z",
-      "description": "Nine of the decade's best-performing S&#038;P 500 stocks trace their gains to AI chips, networking, and data center demand.\nThe post Top 10 S&P 500 Stocks of the Past Decade Share One Clear Theme appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
     },
     {
       "title": "Yen Caught Between Top U.S. Officials’ Remarks",
@@ -259,13 +469,6 @@
       "pubDate": "2026-08-31T02:10:00.000Z",
       "description": "Yen Caught Between Top U.S. Officials’ Remarks&nbsp;&nbsp;WSJ",
       "source": "Google News"
-    },
-    {
-      "title": "British Pound bounces off over one-week low vs soft USD; upside potential seems limited",
-      "link": "https://www.fxstreet.com/news/british-pound-bounces-off-over-one-week-low-vs-soft-usd-upside-potential-seems-limited-202608310203",
-      "pubDate": "2026-08-31T02:03:57.000Z",
-      "description": "The GBP/USD pair edges higher at the start of a new week, reversing a part of Friday's heavy losses to over a one-week trough.",
-      "source": "FXStreet"
     },
     {
       "title": "Payment and Settlement Statistics (July)",
@@ -282,74 +485,11 @@
       "source": "Google News"
     },
     {
-      "title": "New Zealand Dollar inches higher as China’s Manufacturing PMI ticks up in August",
-      "link": "https://www.fxstreet.com/news/new-zealand-dollar-inches-higher-as-chinas-manufacturing-pmi-ticks-up-in-august-202608310159",
-      "pubDate": "2026-08-31T01:59:29.000Z",
-      "description": "NZD/USD remains subdued for the second successive day, trading around 0.5910 during the Asian hours on Monday. However, the NZD/USD pair pares some of its daily losses as the New Zealand Dollar receives minor support following the release o",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Gold drifts lower below $4,450 as hawkish Warsh remarks lift Fed hike bets",
-      "link": "https://www.fxstreet.com/news/gold-drifts-lower-below-4-450-as-hawkish-warsh-remarks-lift-fed-hike-bets-202608310145",
-      "pubDate": "2026-08-31T01:45:46.000Z",
-      "description": "Gold price (XAU/USD) attracts some sellers to near $4,445 during the early Asian trading hours on Monday. The precious metal edges lower on a surprisingly hawkish speech by Federal Reserve (Fed) Chairman Kevin Warsh at the Jackson Hole econ",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Australian Dollar moves little following China’s NBS PMI data",
-      "link": "https://www.fxstreet.com/news/australian-dollar-moves-little-following-chinas-nbs-pmi-data-202608310143",
-      "pubDate": "2026-08-31T01:43:27.000Z",
-      "description": "AUD/USD edges higher after opening at a bearish gap, remaining in the negative territory and trading around 0.7160 during the Asian hours on Monday.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "China's NBS Manufacturing PMI climbs to 49.8 in August, Non-Manufacturing PMI steadies at 49.0",
-      "link": "https://www.fxstreet.com/news/chinas-nbs-manufacturing-pmi-climbs-to-498-in-august-non-manufacturing-pmi-steadies-at-490-202608310132",
-      "pubDate": "2026-08-31T01:32:05.000Z",
-      "description": "China’s Manufacturing Purchasing Managers' Index (PMI) rose to 49.8 in August, compared to 49.2 in the previous reading, China’s National Bureau of Statistics (NBS) reported on Monday. The reading came in above the market consensus of 49.7 ",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Dollar near two-week high as Warsh boosts rate-hike bets; yen slips past 160",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNTzZFV05UVTZLQjh4TGh6S2xxU0xMU0w3c2lXNUd0am8tak9EV3p6NV84cVV0NDM2aXFrUkFpQUpVZ3dmdGNkYS1OaXRQbGhybm9lcHBfU2lLaVRwVGxiaXJKNnFRZW9ndFppTmp1TlhxeDJ2emxQLU5YWnVraXJFYzFHbldSU0pmVEtjeHFLdHJlUERTWjlkMmp0d25FSE1Wa3Q3SHpKbG1uNXBGa3FDRTg1cGxFX2VQZUkydHoxaWdHZUxER2c?oc=5",
-      "pubDate": "2026-08-31T01:32:00.000Z",
-      "description": "Dollar near two-week high as Warsh boosts rate-hike bets; yen slips past 160&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Japanese Yen seems vulnerable near one-month low vs USD amid US-Japan rate gap, Iran risks",
-      "link": "https://www.fxstreet.com/news/japanese-yen-seems-vulnerable-near-one-month-low-vs-usd-amid-us-japan-rate-gap-iran-risks-202608310118",
-      "pubDate": "2026-08-31T01:18:10.000Z",
-      "description": "The USD/JPY pair kicks off the new week on a subdued note and trades around the 160.00 psychological mark during the Asian session, just below a one-month high, touched on Friday.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "PBOC sets USD/CNY reference rate at 6.7828 vs. 6.7811 previous",
-      "link": "https://www.fxstreet.com/news/pboc-sets-usd-cny-reference-rate-at-67828-vs-67811-previous-202608310115",
-      "pubDate": "2026-08-31T01:15:39.000Z",
-      "description": "On Monday, the People’s Bank of China (PBOC) sets the USD/CNY central rate for the trading session ahead at 6.7828 compared to Friday's fix of 6.7811 and 6.7344 Reuters estimate.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Flow of Funds (Overview of Japan, US, and the Euro area)(1st Quarter 2026)",
       "link": "http://www.boj.or.jp/en/statistics/sj/sjhiq.pdf",
       "pubDate": "2026-08-31T01:00:00.000Z",
       "description": "",
       "source": "Bank of Japan"
-    },
-    {
-      "title": "WTI remains above $83.50 as Iran fires missiles following US strikes",
-      "link": "https://www.fxstreet.com/news/wti-remains-above-8350-as-iran-fires-missiles-following-us-strikes-202608310053",
-      "pubDate": "2026-08-31T00:53:35.000Z",
-      "description": "West Texas Intermediate (WTI) declines after opening at a bullish gap, remaining in positive territory and trading around $83.60 per barrel during the Asian hours on Monday.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Euro edges higher to near 1.1600 ahead of German CPI inflation release",
-      "link": "https://www.fxstreet.com/news/euro-edges-higher-to-near-11600-ahead-of-german-cpi-inflation-release-202608310051",
-      "pubDate": "2026-08-31T00:51:37.000Z",
-      "description": "The EUR/USD pair gathers strength to around 1.1590 during the early Asian trading hours on Monday. The US Dollar (USD) edges lower against the Euro (EUR) despite hawkish remarks from Federal Reserve (Fed) Chair Kevin Warsh.",
-      "source": "FXStreet"
     },
     {
       "title": "The WSJ Dollar Index Rises 0.13% to 95.45",
@@ -366,20 +506,6 @@
       "source": "Bank of Japan"
     },
     {
-      "title": "US Treasury Secretary Bessent: Japanese Yen moves 'pretty contained' and not disorderly",
-      "link": "https://www.fxstreet.com/news/us-treasury-secretary-bessent-japanese-yen-moves-pretty-contained-and-not-disorderly-202608302347",
-      "pubDate": "2026-08-30T23:47:20.000Z",
-      "description": "US Treasury Secretary Scott Bessent ‌said on Sunday recent Japanese Yen (JPY) moves ‌were \"pretty well contained,\" suggesting the Japanese currency's renewed weakness were not seen as the kind of disorderly moves that led to a rare joint Ja",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Australian Dollar weakens to near 0.7150 as Fed's Warsh signals rate hikes, China's PMI data loom",
-      "link": "https://www.fxstreet.com/news/australian-dollar-weakens-to-near-07150-as-feds-warsh-signals-rate-hikes-chinas-pmi-data-loom-202608302332",
-      "pubDate": "2026-08-30T23:32:48.000Z",
-      "description": "The AUD/USD pair loses traction to near 0.7160 during the early Asian session on Monday.",
-      "source": "FXStreet"
-    },
-    {
       "title": "The Man Shaking Up Taiwan’s $1.2 Trillion Insurance Industry",
       "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPX2tJSGVSTWQ0U083STRFM210MWVSakM2R0RfOGlwcVctbkFPR2RpQ2JIMG9Za3pSZXpFT1hBMXJSN2dzckM5M3B5aGtNYUNtMVotNDVQZTByTEJhN3BSVXRUNThiUDNrNVY1a25FNnZUc043cXJ2OUpNWVlacUx6dUZ3eXc4X0NFSTdKaWxWenJGeGtYWnQ4M0I0UVlVb3VfelQ2N3ZHOTVmbHNIOVJzNGNmbXVoQklkZ2djeGRuaEMwRlJWZm9QN2J3?oc=5",
       "pubDate": "2026-08-30T23:00:00.000Z",
@@ -387,46 +513,11 @@
       "source": "Google News"
     },
     {
-      "title": "Your Brain Runs on 20 Watts. AI Wants a Power Plant",
-      "link": "https://beincrypto.com/human-brain-ai-power-usage-analysis/",
-      "pubDate": "2026-08-30T23:00:00.000Z",
-      "description": "The human brain runs on 20 watts. Set that against AI energy use, and the real contest turns out to be electricity.\nThe post Your Brain Runs on 20 Watts. AI Wants a Power Plant appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Bessent says yen moves 'pretty contained' and not disorderly",
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOemhvR29KUUI0VU1FYmFvbE9CWHhadUtxNWsxQU5uSWxkdVNVNVFDQjhFOHgyaXRnbUFvTjBGd1lwSEtaTGFua0lzQ3B6c1J5enpTQmNaVUlRZEx1VHRfR25qdnRMRlU4bGZzb1h4LTdpdnFqSVJPd1dhZHBvcnZYNTRVM2w0eWdteU52ejJQdzlNaDBsQ2lzQTdkeUZCNjAzSnJIZWRaMUxIWkR0WkE?oc=5",
       "pubDate": "2026-08-30T22:28:00.000Z",
       "description": "Bessent says yen moves 'pretty contained' and not disorderly&nbsp;&nbsp;Reuters",
       "source": "Reuters"
-    },
-    {
-      "title": "US military strikes Iranian rocket launchers in first attack in weeks",
-      "link": "https://www.fxstreet.com/news/us-military-strikes-iranian-rocket-launchers-in-first-attack-in-week-202608302226",
-      "pubDate": "2026-08-30T22:26:31.000Z",
-      "description": "US Central Command (CENTCOM) struck Iranian rocket launchers that were preparing to send mines into the Strait of Hormuz, following weeks of relative calm, Bloomberg reported on Sunday.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "ECB Wants the Euro Directly on Blockchain. Will It Kill Stablecoins in Europe?",
-      "link": "https://beincrypto.com/ecb-euro-reserves-on-chain-stablecoin-impact/",
-      "pubDate": "2026-08-30T22:00:00.000Z",
-      "description": "Schnabel says the ECB should issue euro reserves on-chain, casting stablecoins as complements, not settlement anchors.\nThe post ECB Wants the Euro Directly on Blockchain. Will It Kill Stablecoins in Europe? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Japan’s Yen Falls Again Despite $97 Billion Aid. Risk For Bitcoin?",
-      "link": "https://beincrypto.com/japan-yen-slide-bitcoin-impact/",
-      "pubDate": "2026-08-30T21:28:57.000Z",
-      "description": "Japan&#8217;s yen weakened again this week despite roughly $97 billion spent supporting it over the past month. Its slide puts renewed pressure on officials to act, with potential consequences for Bitcoin. Why Japan&#8217;s Yen Rescue is Fa",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "S&#038;P 500 Is Up 12% in 2026 But a 1907 Crash Signal Is Back",
-      "link": "https://beincrypto.com/sp500-2026-rally-1907-crash-warning/",
-      "pubDate": "2026-08-30T21:04:01.000Z",
-      "description": "The S&#038;P 500 is up 12.65% in 2026, yet record options and margin debt echo the leverage that broke 1907.\nThe post S&#038;P 500 Is Up 12% in 2026 But a 1907 Crash Signal Is Back appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
     },
     {
       "title": "Australian Dollar’s Top Forecasters Say Winning Run Likely Over",
@@ -445,16 +536,9 @@
     {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
-      "pubDate": "2026-08-30T17:30:40.000Z",
+      "pubDate": "2026-08-30T17:30:01.000Z",
       "description": "The G7 Cyber Expert Group (CEG) successfully concluded its 2026 Cross-border coordination exercise (CBCE) on May 18, 2026. This exercise demonstrates the Group’s ongoing commitment to strengthening cyber resilience across the G7 financial s",
       "source": "Bank of Canada"
-    },
-    {
-      "title": "Dollar Debasement Backs Bull Case for Emerging Bonds, Funds Say",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOdTJXMVhFRktOS1Z3MFBrSGNzNVZFS1lnbGRaS25qblZTeUxiX2Z5X0dlMGNZbVh2T0ZCSlYzbE9GVzZJVDhRMUJVNXUzcXB5NnhaOEw0b3dPRjUxa1FpRmlVaTZmODZfSVN2VkhHcHpYd1dtU1hjTGlKQ2dPMXVubnNid0gtc2tmNU56dlJ4aVo2T3B4eWtTR0swUnhGM0NkenFqQm1ENUo1R1ljaWdWR1NPRQ?oc=5",
-      "pubDate": "2026-08-30T12:30:00.000Z",
-      "description": "Dollar Debasement Backs Bull Case for Emerging Bonds, Funds Say&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
     },
     {
       "title": "Bessent says disorderly yen moves can destabilize global markets",
@@ -464,45 +548,10 @@
       "source": "Reuters"
     },
     {
-      "title": "Gold drops 3% as Fed's Warsh comments lift rate hike bets",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPWlR0QXlieWo3eENkM0t6U1djSVl3MzVYWXhqNm0zZzQwdlM3YWo1UW5lNk12RGFfYmVxY2xIVzRsa2NGRnJTVVZ5bGNGSFdoYjl1clctVDQ2Sy1mbUIydVFudDl3VjRGbE1ST3d3VlpFUm9oZkk2X3dYTkV0NVRvNEZOWWtQOGhRUEJsWVc5dFRtalZDRW05Sk9NbHIyTGttOTIw?oc=5",
-      "pubDate": "2026-08-29T07:39:19.000Z",
-      "description": "Gold drops 3% as Fed's Warsh comments lift rate hike bets&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "South Korean Won: BoK tightening supports KRW against US Dollar – Commerzbank",
-      "link": "https://www.fxstreet.com/news/south-korean-won-bok-tightening-supports-krw-against-us-dollar-commerzbank-202608282341",
-      "pubDate": "2026-08-28T23:41:00.000Z",
-      "description": "Commerzbank’s Charlie Lay reports that the Bank of Korea (BoK) delivered a second consecutive 25 bp hike to 3.0% and kept a tightening bias, supporting KRW after its sharp appreciation since June.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Vietnam: Exports and consumption stay robust – DBS",
-      "link": "https://www.fxstreet.com/news/vietnam-exports-and-consumption-stay-robust-dbs-202608282307",
-      "pubDate": "2026-08-28T23:07:00.000Z",
-      "description": "DBS Group strategists Taimur Baig and Nathan Chow forecast Vietnam’s goods exports to maintain strong double-digit growth at 27% year-on-year in August 2026, led by electronics and supported by external demand.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Yen Weakens Past 160 Per Dollar, Eroding Intervention Gain",
       "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQeHBRQnhhcGVVVW9IbFVCRHNYQUpRQ3F5WWtUNm1iVlhBeDFWMmN0cGI3aXZFUmFobXlscEFVOTBicXRQT3JyUldTZXl6SmJZdHJfUUJLNmhHV1NaZFN0T0ZlS1ozdUlhMDIxX3c5SmVtUmU3MEFYTWNSSFd5bXkxdUVJRjRHNGRSSGlMTXRnTDBYdzYzems1T1VoWDRyLTJFeVJ5M1RlQUxZdHJv?oc=5",
       "pubDate": "2026-08-28T21:12:30.000Z",
       "description": "Yen Weakens Past 160 Per Dollar, Eroding Intervention Gain&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
-      "title": "Bessent attacks Warren over yen intervention query, offers ‘Foreign Exchange for Dummies’ lesson",
-      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQaFhsdkc2bmZuZ2xMM3pINmY2ZS01VkJabzB2dFhHRWZCOC1CODJDSVpfUU9jd0pYSHJEZ29iY1N1MzhaTDVVNUpteWZmWkd3emVnMzZUNTVkT2U3V1hMblhVX2dRM1lILURnX2t0el9PcVNpNnRZTTE1Y0otZVhvbmJXdDlhNDdjd2lv0gGQAUFVX3lxTE1yUFZaRDVxOHY4QmpFMkxKUjVRekh5WTlxdm05bTh5SDUzSklFc0lkbzBEZUQ4M1R3Yl9BcFVmQkpmS2FqSU00N09pdG1HcWJhNEhaUmlNczV2cW42UFc4ejV5Nk1oZ1BUUWtVVVRWSDBjZ09ZeFJYWlJtRFVvbE1ZbUtKV1lUczVpM210Y1Q4cg?oc=5",
-      "pubDate": "2026-08-28T19:23:18.000Z",
-      "description": "Bessent attacks Warren over yen intervention query, offers ‘Foreign Exchange for Dummies’ lesson&nbsp;&nbsp;CNBC",
-      "source": "Google News"
-    },
-    {
-      "title": "Bessent Says a ‘Disorderly Yen’ Would Risk Higher US Rates",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQVk8ySmQtU0NuOGhhT0xadkNfdkdSOXFqSzZKZURzUGVsbWk5dkUzYkltcDFRZFZueEQ3ZGZYSUF4VklLNXk3ZEdZUlBYNFFXLXEzeUhWUTJkUkNpeExKbERLck4yRVJ1a1h6U2RhbTV1bHBNWV9lVDdFWHFSZlNKV3FxWVVhWU1DWUpRbWJBbU05Nl9WRW5UZ0tIcjBVQjZ4a1k5Nk9vUkR4ckNQLTJ4LWlR?oc=5",
-      "pubDate": "2026-08-28T18:18:00.000Z",
-      "description": "Bessent Says a ‘Disorderly Yen’ Would Risk Higher US Rates&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
     },
     {
@@ -511,13 +560,6 @@
       "pubDate": "2026-08-28T16:00:00.000Z",
       "description": "",
       "source": "European Central Bank"
-    },
-    {
-      "title": "Dollar Rises as Warsh Acknowledges Inflation Risk",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOODU0LVhfaUotNWxqYjZ5SzQ0S1BsSzFzbllicjk2ZGg4cnRNRkwyN2tJVDl4c3kzeC1JM1hoVzI2NWdGelczQk9fb285Ny0tNXJrYUZmZm5lbEhEbGlfRXk2dmpUS2RVS05ONmJ2SmxaMl82UW9tRkNjUGhiQWlBNkVWSnd4ZDNFdVVHWW9LSVNCMGpPTTJjQ1VUN1lWaVNRYkhPWFlR?oc=5",
-      "pubDate": "2026-08-28T14:33:00.000Z",
-      "description": "Dollar Rises as Warsh Acknowledges Inflation Risk&nbsp;&nbsp;WSJ",
-      "source": "Google News"
     },
     {
       "title": "Warsh, In Our Time",
@@ -562,20 +604,6 @@
       "source": "Reserve Bank of Australia"
     },
     {
-      "title": "Speech by Deputy Governor HIMINO in Saitama (Japan's Economy and Monetary Policy)",
-      "link": "http://www.boj.or.jp/en/about/press/koen_2026/ko260827a.htm",
-      "pubDate": "2026-08-27T01:35:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
-    },
-    {
-      "title": "2026-08-26 - Antoine Martin: Monetary policy and financial stability at the SNB: the role of macroprudential tools",
-      "link": "https://www.snb.ch/en/publications/communication/speeches/2026/ref_20260826_anmar",
-      "pubDate": "2026-08-26T16:15:00.000Z",
-      "description": "The SNB’s core mandate is to ensure price stability. Alongside this, it is also tasked with contributing to the stability of the financial system. With this hierarchy, the legislator gives precedence to price stability over the SNB’s role i",
-      "source": "Swiss National Bank"
-    },
-    {
       "title": "Piero Cipollone: From vision to delivery: building Europe’s tokenised financial market",
       "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260826~3641116314.en.html",
       "pubDate": "2026-08-26T10:15:00.000Z",
@@ -588,27 +616,6 @@
       "pubDate": "2026-08-25T18:00:00.000Z",
       "description": "Minutes of the Board's discount rate meetings on July 20 and July 29, 2026",
       "source": "Federal Reserve"
-    },
-    {
-      "title": "WP - 2026-08-25 - Romain Baeriswyl: Yesterday’s controversies for tomorrow's money",
-      "link": "https://www.snb.ch/en/publications/research/working-papers/2026/working_paper_2026_10",
-      "pubDate": "2026-08-24T22:00:00.000Z",
-      "description": "While money has evolved from natural commodities to digital tokens, the debate about the ideal money has remained the same throughout the ages. Historical controversies about the origin, nature, and double-spending of money offer valuable i",
-      "source": "Swiss National Bank"
-    },
-    {
-      "title": "2026-08-24 - Interview - Interview with Petra Tschudin in the FuW",
-      "link": "https://www.snb.ch/en/publications/communication/interviews/int_20260824_gpe",
-      "pubDate": "2026-08-24T10:00:00.000Z",
-      "description": "",
-      "source": "Swiss National Bank"
-    },
-    {
-      "title": "2026-08-24 - Data portal - Important monetary policy data, 24 August 2026",
-      "link": "https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/08/statpub_news_20260824_gwd",
-      "pubDate": "2026-08-24T08:00:00.000Z",
-      "description": "",
-      "source": "Swiss National Bank"
     },
     {
       "title": "Piero Cipollone: Interview with ilsussidiario.net",
@@ -693,13 +700,6 @@
       "pubDate": "2026-05-27T09:00:10.000Z",
       "description": "The Bank of Canada announced today it is joining the Bank for International Settlements’ Project Agorá, an initiative exploring how tokenization could improve wholesale cross-border payments.",
       "source": "Bank of Canada"
-    },
-    {
-      "title": "Currency Market Headlines | Breaking Stock Market News",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5IUVphOGg2YkE0bklZUVlhZnpoZmo0TVd5aEZPOHhMeW11WFBzaFo2WEExeEVnNTVESU1wamcwcDhRaUR6d01WbGd0TnhFWV9KNm45WWlxb01KZUE?oc=5",
-      "pubDate": "2021-11-19T03:01:36.000Z",
-      "description": "Currency Market Headlines | Breaking Stock Market News&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     }
   ]
 }
