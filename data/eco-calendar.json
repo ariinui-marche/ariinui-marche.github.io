@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-03T13:51:45.510Z",
+  "timestamp": "2026-09-03T17:18:38.902Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -3761,6 +3761,15 @@
       "impact": "Low",
       "forecast": "30B",
       "previous": "15B",
+      "actual": ""
+    },
+    {
+      "title": "MPC Member Pill Speaks",
+      "country": "GBP",
+      "date": "2026-09-03T11:00:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "",
       "actual": ""
     },
     {
