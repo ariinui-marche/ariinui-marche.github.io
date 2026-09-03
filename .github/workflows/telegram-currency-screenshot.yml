@@ -1,0 +1,25 @@
+name: Send Currency Strength Screenshot to Telegram
+
+on:
+  schedule:
+    # 15:00 UTC-10 (Hawaii, no DST) = 01:00 UTC
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+
+      - run: node scripts/screenshot-currency.mjs
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
