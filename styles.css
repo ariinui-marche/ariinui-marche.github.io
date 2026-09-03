@@ -294,6 +294,39 @@ main {
 .pct-pos { color: var(--green); }
 .pct-neg { color: var(--red); }
 
+.trend-grid.collapsed { display: none; }
+.trend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.trend-card {
+  background: #0e1219;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.trend-card .row1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.trend-card .flag { font-size: 18px; }
+.trend-card .id { font-weight: 600; font-size: 14px; }
+
+.trend-tf {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  padding: 3px 0;
+}
+.trend-tf .tf-label { color: var(--text-dim); }
+.trend-tf .trend-badge { font-weight: 600; }
+
 .filters {
   display: flex;
   flex-wrap: wrap;

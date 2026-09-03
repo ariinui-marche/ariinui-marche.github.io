@@ -41,14 +41,18 @@ const CURRENCY_NAMES = {
 // cloud génériques type GitHub Actions, ce proxy Vercel est whitelisté — voir décision session)
 const MARKET_DATA_URL = 'https://ariinuiirgina.vercel.app/api/market-data';
 
-async function fetchCurrencyStrength() {
+async function fetchMarketRaw() {
   const res = await fetch(MARKET_DATA_URL);
   if (!res.ok) throw new Error(`market-data: HTTP ${res.status}`);
   const json = await res.json();
   if (json.error) throw new Error(json.error);
-  const raw = json?.data?.currencies || [];
+  return json?.data || {};
+}
 
-  const changes = raw.map((c) => {
+function computeCurrencyStrength(raw) {
+  const rawCurrencies = raw?.currencies || [];
+
+  const changes = rawCurrencies.map((c) => {
     const id = (c.id?.includes(':') ? c.id.split(':').pop() : c.id || '').toUpperCase();
     return { id, name: CURRENCY_NAMES[id] || c.name, changePct: (c.change?.indicator?.pct || 0) * 100 };
   }).filter((c) => CURRENCY_NAMES[c.id]); // garde les 8 devises forex, écarte XAU/BTC de cette section
@@ -70,6 +74,85 @@ async function fetchCurrencyStrength() {
     .map((c, i) => ({ ...c, rank: i + 1 }));
 
   return { timestamp: new Date().toISOString(), currencies };
+}
+
+// ── Trend Dynamics — BabyPips heat map (heatmap4h/heatmapD1, -2..+2) aggregated
+// per currency from the same /api/market-data payload as Currency Strength
+// (same pairs array already fetched — no extra proxy call, avoids the
+// Cloudflare hardening risk from spamming the endpoint, cf. session notes).
+const TREND_STATES = {
+  2: { label: 'Strong Bull', color: 'var(--green)' },
+  1: { label: 'Bull', color: '#a3e635' },
+  0: { label: 'Neutral', color: 'var(--text-dim)' },
+  '-1': { label: 'Bear', color: 'var(--orange)' },
+  '-2': { label: 'Strong Bear', color: 'var(--red)' },
+};
+
+function trendState(avgVal) {
+  const rounded = Math.max(-2, Math.min(2, Math.round(avgVal)));
+  return TREND_STATES[rounded];
+}
+
+function computeTrendDynamics(raw) {
+  const pairs = raw?.pairs || [];
+  const acc = {};
+  Object.keys(CURRENCY_NAMES).forEach((code) => { acc[code] = { h4: [], d1: [] }; });
+
+  pairs.forEach((p) => {
+    const rawId = p.id || '';
+    const id = (rawId.includes(':') ? rawId.split(':').pop() : rawId).toUpperCase();
+    if (id.length !== 6) return; // écarte tout id qui n'est pas une paire base/quote à 3+3
+    const base = id.slice(0, 3);
+    const quote = id.slice(3, 6);
+    const h4 = p.heatmap4h?.indicator?.state;
+    const d1 = p.heatmapD1?.indicator?.state;
+    // Base et quote héritent du même état, mais en signe opposé pour la quote
+    // (une paire haussière = base fort / quote faible).
+    if (acc[base]) {
+      if (typeof h4 === 'number') acc[base].h4.push(h4);
+      if (typeof d1 === 'number') acc[base].d1.push(d1);
+    }
+    if (acc[quote]) {
+      if (typeof h4 === 'number') acc[quote].h4.push(-h4);
+      if (typeof d1 === 'number') acc[quote].d1.push(-d1);
+    }
+  });
+
+  const avg = (arr) => (arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : 0);
+
+  const currencies = Object.entries(acc)
+    .map(([id, v]) => ({ id, name: CURRENCY_NAMES[id], h4: avg(v.h4), d1: avg(v.d1) }))
+    .sort((a, b) => (b.h4 + b.d1) - (a.h4 + a.d1));
+
+  return { timestamp: new Date().toISOString(), currencies };
+}
+
+function renderTrendDynamics(data) {
+  const grid = document.getElementById('trendGrid');
+  if (!grid) return;
+  if (!data?.currencies?.length) {
+    grid.innerHTML = '<div class="empty-state">Data unavailable</div>';
+    return;
+  }
+  grid.innerHTML = data.currencies.map((c) => {
+    const s4 = trendState(c.h4);
+    const s1 = trendState(c.d1);
+    return `
+      <div class="trend-card">
+        <div class="row1">
+          <span><span class="flag">${CURRENCY_FLAGS[c.id] || ''}</span> <span class="id">${c.id}</span></span>
+        </div>
+        <div class="trend-tf">
+          <span class="tf-label">4H</span>
+          <span class="trend-badge" style="color:${s4.color}">${s4.label}</span>
+        </div>
+        <div class="trend-tf">
+          <span class="tf-label">D1</span>
+          <span class="trend-badge" style="color:${s1.color}">${s1.label}</span>
+        </div>
+      </div>`;
+  }).join('');
+  parseEmoji(grid);
 }
 
 function renderCurrencies(data) {
@@ -887,15 +970,16 @@ function renderNews() {
 
 async function loadAll() {
   try {
-    const [currencyData, ecoData, newsData, audDeskData] = await Promise.all([
-      fetchCurrencyStrength().catch((err) => { console.error(err); return null; }),
+    const [marketRaw, ecoData, newsData, audDeskData] = await Promise.all([
+      fetchMarketRaw().catch((err) => { console.error(err); return null; }),
       loadJSON('./data/eco-calendar.json').catch(() => null),
       loadJSON('./data/market-news.json').catch(() => null),
       loadJSON('./data/aud-desk.json').catch(() => null),
     ]);
 
     renderAudDesk(audDeskData);
-    renderCurrencies(currencyData);
+    renderCurrencies(marketRaw ? computeCurrencyStrength(marketRaw) : null);
+    renderTrendDynamics(marketRaw ? computeTrendDynamics(marketRaw) : null);
     renderCorrelation();
 
     currentEvents = (ecoData?.events || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
@@ -926,6 +1010,11 @@ document.getElementById('currencyToggle').addEventListener('click', (e) => {
   const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
   e.currentTarget.setAttribute('aria-expanded', String(!expanded));
   document.getElementById('currencyGrid').classList.toggle('collapsed', expanded);
+});
+document.getElementById('trendToggle')?.addEventListener('click', (e) => {
+  const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
+  e.currentTarget.setAttribute('aria-expanded', String(!expanded));
+  document.getElementById('trendGrid').classList.toggle('collapsed', expanded);
 });
 document.getElementById('impactFilters').addEventListener('click', (e) => {
   const btn = e.target.closest('.filter-btn');
