@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-03T09:40:56.260Z",
+  "timestamp": "2026-09-03T13:51:45.510Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -3638,18 +3638,9 @@
       "actual": ""
     },
     {
-      "title": "PPI m/m",
-      "country": "EUR",
-      "date": "2026-09-03T05:00:00-04:00",
-      "impact": "Low",
-      "forecast": "1.2%",
-      "previous": "-0.3%",
-      "actual": ""
-    },
-    {
       "title": "Spanish 10-y Bond Auction",
       "country": "EUR",
-      "date": "2026-09-03T05:03:00-04:00",
+      "date": "2026-09-03T04:43:00-04:00",
       "impact": "Low",
       "forecast": "",
       "previous": "3.54|2.4",
@@ -3658,10 +3649,19 @@
     {
       "title": "French 10-y Bond Auction",
       "country": "EUR",
-      "date": "2026-09-03T05:18:00-04:00",
+      "date": "2026-09-03T04:57:00-04:00",
       "impact": "Low",
       "forecast": "",
       "previous": "3.86|3.7",
+      "actual": ""
+    },
+    {
+      "title": "PPI m/m",
+      "country": "EUR",
+      "date": "2026-09-03T05:00:00-04:00",
+      "impact": "Low",
+      "forecast": "1.2%",
+      "previous": "-0.3%",
       "actual": ""
     },
     {
