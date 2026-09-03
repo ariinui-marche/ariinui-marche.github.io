@@ -2,12 +2,14 @@ name: Send Currency Strength Screenshot to Telegram
 
 on:
   schedule:
-    # 03:00 UTC-10 (Hawaii, no DST) = 13:00 UTC
-    - cron: '0 13 * * *'
+    # 03:00 UTC-10 (Hawaii, no DST) = 13:00 UTC — :07 to dodge top-of-hour
+    # GitHub Actions congestion (GitHub explicitly recommends off-the-hour
+    # minutes for scheduled workflows to reduce delay risk).
+    - cron: '7 13 * * *'
     # 15:00 UTC-10 (Hawaii, no DST) = 01:00 UTC
-    - cron: '0 1 * * *'
+    - cron: '7 1 * * *'
     # 22:00 UTC-10 (Hawaii, no DST) = 08:00 UTC (next day)
-    - cron: '0 8 * * *'
+    - cron: '7 8 * * *'
   workflow_dispatch:
 
 jobs:
