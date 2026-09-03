@@ -261,35 +261,44 @@ main {
   padding: 10px 12px;
 }
 
-.currency-card .row1 {
+.currency-card .row1,
+.trend-card .row1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 6px;
 }
 
-.currency-card .flag { font-size: 18px; }
-.currency-card .id { font-weight: 600; font-size: 14px; }
-.currency-card .rank { color: var(--text-dim); font-size: 11px; }
+.currency-card .flag,
+.trend-card .flag { font-size: 18px; }
+.currency-card .id,
+.trend-card .id { font-weight: 600; font-size: 14px; }
+.currency-card .rank,
+.trend-card .rank { color: var(--text-dim); font-size: 11px; }
 
-.currency-card .bar-track {
+.currency-card .bar-track,
+.trend-card .bar-track {
   height: 5px;
   background: #1a1f2b;
   border-radius: 3px;
   overflow: hidden;
   margin-bottom: 6px;
 }
-.currency-card .bar-fill {
+.currency-card .bar-fill,
+.trend-card .bar-fill {
   height: 100%;
   border-radius: 3px;
 }
 
-.currency-card .stats {
+.currency-card .stats,
+.trend-card .stats {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 11px;
   color: var(--text-dim);
 }
+.trend-card .stats .trend-badge { font-weight: 600; }
 
 .pct-pos { color: var(--green); }
 .pct-neg { color: var(--red); }
@@ -307,25 +316,6 @@ main {
   border-radius: 8px;
   padding: 10px 12px;
 }
-
-.trend-card .row1 {
-  display: flex;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.trend-card .flag { font-size: 18px; }
-.trend-card .id { font-weight: 600; font-size: 14px; }
-
-.trend-tf {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 12px;
-  padding: 3px 0;
-}
-.trend-tf .tf-label { color: var(--text-dim); }
-.trend-tf .trend-badge { font-weight: 600; }
 
 .filters {
   display: flex;

@@ -76,16 +76,17 @@ function computeCurrencyStrength(raw) {
   return { timestamp: new Date().toISOString(), currencies };
 }
 
-// ── Trend Momentum — replicates BabyPips MarketMilk's "Trend Strength" quadrant
-// (per-symbol Trend Analysis tab: price distance from a fast SMA vs a slow SMA,
-// classified Bullish / Bullish Weakening / Bearish Weakening / Bearish) using
-// sma50/sma200 pct already present in the same /api/market-data payload as
-// Currency Strength (same pairs array — no extra proxy call).
-function momentumState(fast, slow) {
-  if (slow >= 0 && fast >= 0) return { label: 'Bullish', color: 'var(--green)' };
-  if (slow >= 0 && fast < 0) return { label: 'Bullish Weakening', color: '#a3e635' };
-  if (slow < 0 && fast >= 0) return { label: 'Bearish Weakening', color: 'var(--orange)' };
-  return { label: 'Bearish', color: 'var(--red)' };
+// ── Trend Momentum — per-currency score (0-100) + 4-tier label (Very
+// Bearish/Bearish/Bullish/Very Bullish), same live/dynamic min-max scoring
+// pattern as Currency Strength, but driven by price distance vs a fast SMA
+// (50) and a slow SMA (200) instead of the 1D %change — using sma50/sma200
+// pct already present in the same /api/market-data payload (same pairs
+// array already fetched for Currency Strength — no extra proxy call).
+function momentumLabel(score) {
+  if (score >= 70) return 'Very Bullish';
+  if (score >= 45) return 'Bullish';
+  if (score >= 30) return 'Bearish';
+  return 'Very Bearish';
 }
 
 function computeTrendMomentum(raw) {
@@ -115,9 +116,19 @@ function computeTrendMomentum(raw) {
 
   const avg = (arr) => (arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : 0);
 
-  const currencies = Object.entries(acc)
+  const combined = Object.entries(acc)
     .map(([id, v]) => ({ id, name: CURRENCY_NAMES[id], fast: avg(v.fast), slow: avg(v.slow) }))
-    .sort((a, b) => (b.fast + b.slow) - (a.fast + a.slow));
+    .map((c) => ({ ...c, raw: c.fast + c.slow }));
+
+  const rawValues = combined.map((c) => c.raw);
+  const min = Math.min(...rawValues);
+  const max = Math.max(...rawValues);
+  const range = max - min || 1;
+
+  const currencies = combined
+    .map((c) => ({ ...c, score: Math.round(((c.raw - min) / range) * 100), rank: 0 }))
+    .sort((a, b) => b.score - a.score)
+    .map((c, i) => ({ ...c, rank: i + 1 }));
 
   return { timestamp: new Date().toISOString(), currencies };
 }
@@ -130,14 +141,19 @@ function renderTrendMomentum(data) {
     return;
   }
   grid.innerHTML = data.currencies.map((c) => {
-    const st = momentumState(c.fast, c.slow);
+    const label = momentumLabel(c.score);
     return `
       <div class="trend-card">
         <div class="row1">
           <span><span class="flag">${CURRENCY_FLAGS[c.id] || ''}</span> <span class="id">${c.id}</span></span>
+          <span class="rank">#${c.rank}</span>
         </div>
-        <div class="trend-tf">
-          <span class="trend-badge" style="color:${st.color}">${st.label}</span>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:${c.score}%; background:${scoreColor(c.score)}"></div>
+        </div>
+        <div class="stats">
+          <span>${c.score}/100</span>
+          <span class="trend-badge" style="color:${scoreColor(c.score)}">${label}</span>
         </div>
       </div>`;
   }).join('');
