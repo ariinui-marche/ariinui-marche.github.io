@@ -2,8 +2,12 @@ name: Send Currency Strength Screenshot to Telegram
 
 on:
   schedule:
+    # 03:00 UTC-10 (Hawaii, no DST) = 13:00 UTC
+    - cron: '0 13 * * *'
     # 15:00 UTC-10 (Hawaii, no DST) = 01:00 UTC
     - cron: '0 1 * * *'
+    # 22:00 UTC-10 (Hawaii, no DST) = 08:00 UTC (next day)
+    - cron: '0 8 * * *'
   workflow_dispatch:
 
 jobs:
