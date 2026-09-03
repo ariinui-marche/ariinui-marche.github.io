@@ -76,27 +76,22 @@ function computeCurrencyStrength(raw) {
   return { timestamp: new Date().toISOString(), currencies };
 }
 
-// ── Trend Dynamics — BabyPips heat map (heatmap4h/heatmapD1, -2..+2) aggregated
-// per currency from the same /api/market-data payload as Currency Strength
-// (same pairs array already fetched — no extra proxy call, avoids the
-// Cloudflare hardening risk from spamming the endpoint, cf. session notes).
-const TREND_STATES = {
-  2: { label: 'Strong Bull', color: 'var(--green)' },
-  1: { label: 'Bull', color: '#a3e635' },
-  0: { label: 'Neutral', color: 'var(--text-dim)' },
-  '-1': { label: 'Bear', color: 'var(--orange)' },
-  '-2': { label: 'Strong Bear', color: 'var(--red)' },
-};
-
-function trendState(avgVal) {
-  const rounded = Math.max(-2, Math.min(2, Math.round(avgVal)));
-  return TREND_STATES[rounded];
+// ── Trend Momentum — replicates BabyPips MarketMilk's "Trend Strength" quadrant
+// (per-symbol Trend Analysis tab: price distance from a fast SMA vs a slow SMA,
+// classified Bullish / Bullish Weakening / Bearish Weakening / Bearish) using
+// sma50/sma200 pct already present in the same /api/market-data payload as
+// Currency Strength (same pairs array — no extra proxy call).
+function momentumState(fast, slow) {
+  if (slow >= 0 && fast >= 0) return { label: 'Bullish', color: 'var(--green)' };
+  if (slow >= 0 && fast < 0) return { label: 'Bullish Weakening', color: '#a3e635' };
+  if (slow < 0 && fast >= 0) return { label: 'Bearish Weakening', color: 'var(--orange)' };
+  return { label: 'Bearish', color: 'var(--red)' };
 }
 
-function computeTrendDynamics(raw) {
+function computeTrendMomentum(raw) {
   const pairs = raw?.pairs || [];
   const acc = {};
-  Object.keys(CURRENCY_NAMES).forEach((code) => { acc[code] = { h4: [], d1: [] }; });
+  Object.keys(CURRENCY_NAMES).forEach((code) => { acc[code] = { fast: [], slow: [] }; });
 
   pairs.forEach((p) => {
     const rawId = p.id || '';
@@ -104,30 +99,30 @@ function computeTrendDynamics(raw) {
     if (id.length !== 6) return; // écarte tout id qui n'est pas une paire base/quote à 3+3
     const base = id.slice(0, 3);
     const quote = id.slice(3, 6);
-    const h4 = p.heatmap4h?.indicator?.state;
-    const d1 = p.heatmapD1?.indicator?.state;
-    // Base et quote héritent du même état, mais en signe opposé pour la quote
+    const fast = p.sma50?.indicator?.pct;  // écart prix vs SMA rapide
+    const slow = p.sma200?.indicator?.pct; // écart prix vs SMA lente
+    // Base et quote héritent du même écart, mais en signe opposé pour la quote
     // (une paire haussière = base fort / quote faible).
     if (acc[base]) {
-      if (typeof h4 === 'number') acc[base].h4.push(h4);
-      if (typeof d1 === 'number') acc[base].d1.push(d1);
+      if (typeof fast === 'number') acc[base].fast.push(fast);
+      if (typeof slow === 'number') acc[base].slow.push(slow);
     }
     if (acc[quote]) {
-      if (typeof h4 === 'number') acc[quote].h4.push(-h4);
-      if (typeof d1 === 'number') acc[quote].d1.push(-d1);
+      if (typeof fast === 'number') acc[quote].fast.push(-fast);
+      if (typeof slow === 'number') acc[quote].slow.push(-slow);
     }
   });
 
   const avg = (arr) => (arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : 0);
 
   const currencies = Object.entries(acc)
-    .map(([id, v]) => ({ id, name: CURRENCY_NAMES[id], h4: avg(v.h4), d1: avg(v.d1) }))
-    .sort((a, b) => (b.h4 + b.d1) - (a.h4 + a.d1));
+    .map(([id, v]) => ({ id, name: CURRENCY_NAMES[id], fast: avg(v.fast), slow: avg(v.slow) }))
+    .sort((a, b) => (b.fast + b.slow) - (a.fast + a.slow));
 
   return { timestamp: new Date().toISOString(), currencies };
 }
 
-function renderTrendDynamics(data) {
+function renderTrendMomentum(data) {
   const grid = document.getElementById('trendGrid');
   if (!grid) return;
   if (!data?.currencies?.length) {
@@ -135,20 +130,14 @@ function renderTrendDynamics(data) {
     return;
   }
   grid.innerHTML = data.currencies.map((c) => {
-    const s4 = trendState(c.h4);
-    const s1 = trendState(c.d1);
+    const st = momentumState(c.fast, c.slow);
     return `
       <div class="trend-card">
         <div class="row1">
           <span><span class="flag">${CURRENCY_FLAGS[c.id] || ''}</span> <span class="id">${c.id}</span></span>
         </div>
         <div class="trend-tf">
-          <span class="tf-label">4H</span>
-          <span class="trend-badge" style="color:${s4.color}">${s4.label}</span>
-        </div>
-        <div class="trend-tf">
-          <span class="tf-label">D1</span>
-          <span class="trend-badge" style="color:${s1.color}">${s1.label}</span>
+          <span class="trend-badge" style="color:${st.color}">${st.label}</span>
         </div>
       </div>`;
   }).join('');
@@ -979,7 +968,7 @@ async function loadAll() {
 
     renderAudDesk(audDeskData);
     renderCurrencies(marketRaw ? computeCurrencyStrength(marketRaw) : null);
-    renderTrendDynamics(marketRaw ? computeTrendDynamics(marketRaw) : null);
+    renderTrendMomentum(marketRaw ? computeTrendMomentum(marketRaw) : null);
     renderCorrelation();
 
     currentEvents = (ecoData?.events || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
