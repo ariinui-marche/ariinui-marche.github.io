@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-04T11:03:27.517Z",
+  "timestamp": "2026-09-04T14:53:57.425Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -3896,6 +3896,15 @@
       "impact": "Medium",
       "forecast": "56.2",
       "previous": "55.1",
+      "actual": ""
+    },
+    {
+      "title": "FOMC Member Goolsbee Speaks",
+      "country": "USD",
+      "date": "2026-09-04T18:00:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "",
       "actual": ""
     },
     {
