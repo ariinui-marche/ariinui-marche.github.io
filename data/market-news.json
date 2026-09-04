@@ -1,12 +1,124 @@
 {
-  "timestamp": "2026-09-03T23:45:10.162Z",
+  "timestamp": "2026-09-04T01:22:51.723Z",
   "items": [
     {
       "title": "2026-09-04 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-09-03T23:37:01.000Z",
+      "pubDate": "2026-09-04T01:22:01.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "PBOC sets USD/CNY reference rate at 6.7787 vs. 6.7807 previous",
+      "link": "https://www.fxstreet.com/news/pboc-sets-usd-cny-reference-rate-at-67787-vs-67807-previous-202609040115",
+      "pubDate": "2026-09-04T01:15:35.000Z",
+      "description": "On Friday, the People’s Bank of China (PBOC) sets the USD/CNY central rate for the trading session ahead at 6.7787 compared to the previous day's fix of 6.7807 and 6.7098 Reuters estimate.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Japanese Yen sits near August highs as USD remains on the back foot ahead of US NFP",
+      "link": "https://www.fxstreet.com/news/japanese-yen-sits-near-august-highs-as-usd-remains-on-the-back-foot-ahead-of-us-nfp-202609040104",
+      "pubDate": "2026-09-04T01:04:36.000Z",
+      "description": "The USD/JPY pair enters a bearish consolidation phase during the Asian session on Friday and currently trades near the 155.75 region, nearly unchanged for the day.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "HashKey Joins Stacks as Bitcoin Staking Launch Partner and sBTC Signer",
+      "link": "https://www.investing.com/news/press-releases/hashkey-joins-stacks-as-bitcoin-staking-launch-partner-and-sbtc-signer-4888739",
+      "pubDate": "2026-09-04T01:01:10.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Roku president Gilbert Fuchsberg sells $750,807 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/roku-president-gilbert-fuchsberg-sells-750807-in-stock-93CH-4888738",
+      "pubDate": "2026-09-04T01:01:09.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Playboy director Tracey Edmonds sells $10,066 in company stock.",
+      "link": "https://www.investing.com/news/insider-trading-news/playboy-director-tracey-edmonds-sells-10066-in-company-stock-93CH-4888737",
+      "pubDate": "2026-09-04T01:01:06.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "US airlines weigh safety system to prevent midair collisions ahead of legal mandate, provider says",
+      "link": "https://www.investing.com/news/stock-market-news/us-airlines-weigh-safety-system-to-prevent-midair-collisions-ahead-of-legal-mandate-provider-says-4888736",
+      "pubDate": "2026-09-04T01:00:25.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Japan July household spending falls at fastest pace in 2-1/2 years",
+      "link": "https://www.investing.com/news/economy-news/japan-july-household-spending-fall-36-yearyear-4888711",
+      "pubDate": "2026-09-04T00:54:27.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Euro steadies above 1.1600 as traders await US NFP data",
+      "link": "https://www.fxstreet.com/news/euro-steadies-above-11600-as-traders-await-us-nfp-data-202609040048",
+      "pubDate": "2026-09-04T00:48:53.000Z",
+      "description": "The EUR/USD pair trades on a flat note around 1.1625 during the early Asian session on Friday. Traders prefer to wait on the sidelines ahead of the US key employment report for August, which will be published later on Friday.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Roku SVP & general counsel Handman sells $466,764 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/roku-svp--general-counsel-handman-sells-466764-in-stock-93CH-4888734",
+      "pubDate": "2026-09-04T00:45:56.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Fulgent Genetics CSO Hanlin Gao sells $32,885 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/fulgent-genetics-cso-hanlin-gao-sells-32885-in-stock-93CH-4888733",
+      "pubDate": "2026-09-04T00:45:55.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Fulgent Genetics president and COO Xie Jian sells $41,809 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/fulgent-genetics-president-and-coo-xie-jian-sells-41809-in-stock-93CH-4888732",
+      "pubDate": "2026-09-04T00:45:51.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Putin cites chance of peace deal, Zelenskiy says US negotiators to visit both countries",
+      "link": "https://www.investing.com/news/economy-news/putin-cites-chance-of-peace-deal-ukraine-sees-new-dynamic-4887788",
+      "pubDate": "2026-09-04T00:30:51.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Bond yields fall, stocks rally as Fed’s Waller comments curb rate hike bets",
+      "link": "https://www.investing.com/news/economy-news/shares-bonds-rally-as-markets-await-signals-for-fed-rates-4886931",
+      "pubDate": "2026-09-04T00:30:34.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Japan's top currency diplomat: on alert to currency moves",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNM0N5ZkdBcjdZRUtSUXl1bUY3RExfV1B6RG5xS1ZMWFRZby15MDBscnlVMXBBbE9PVnV5SjFRR2JvTmRBSV9vNVF5Z2ZVbXVtQTdqOG9kNEhTbTBCakdHYUhuVFQ0SGdCYUxaNXZ6clREemxjWFZMTk1zUTBoeFFOa2Q5LWdkMVVnblE3Q1pqRUJPYURiT2xVVFU2QlVRMFFCYWJRMktZYw?oc=5",
+      "pubDate": "2026-09-04T00:27:00.000Z",
+      "description": "Japan's top currency diplomat: on alert to currency moves&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Yen’s $103 Billion Short Risks Unwind Below 155, JPMorgan Says",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPcXdOVXR3Q2lremlCYkdpSDRPbTBybXRpd2RWQ1ZjLTZkSHlRWFJKMDV3TmYxRmthOC1xTXBTVnhmT0ZsVGc2VFdTeFlZWGJndEpMWG5SMmZ3bFd1dk5DekdGZmtOZHdOV3doNUkyT3I0amFaYkJQb1kxdzZocXFMdVcwc2E5R0phUGU5Y3d2Q0V4YUJ1WFFRcmZYMDA4UU9CRS16MkpIQXo5MGNNMDBj?oc=5",
+      "pubDate": "2026-09-03T23:48:24.000Z",
+      "description": "Yen’s $103 Billion Short Risks Unwind Below 155, JPMorgan Says&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "RBNZ's Hansen: Future policy moves hinge on trends across broad economic data sets",
+      "link": "https://www.fxstreet.com/news/rbnzs-hansen-future-policy-moves-hinge-on-trends-across-broad-economic-data-sets-202609032344",
+      "pubDate": "2026-09-03T23:44:45.000Z",
+      "description": "Reserve Bank of New Zealand (RBNZ) Monetary Policy Committee member Carl Hansen said on Thursday that future monetary policy moves hinge on trends across broad economic data sets.",
+      "source": "FXStreet"
     },
     {
       "title": "Gold rebounds above $4,450 as Waller tempers Fed rate hike bets ahead US jobs data",
@@ -14,76 +126,6 @@
       "pubDate": "2026-09-03T23:36:51.000Z",
       "description": "Gold price (XAU/USD) gains momentum to around $4,470 during the early Asian session on Friday. The precious metal extended its recovery as Federal Reserve (Fed) rate hike bets ease. All eyes will be on the US August Nonfarm Payrolls (NFP) r",
       "source": "FXStreet"
-    },
-    {
-      "title": "Etsy chief product & tech officer Colburn sells $239,000 in shares",
-      "link": "https://www.investing.com/news/insider-trading-news/etsy-chief-product--tech-officer-colburn-sells-239000-in-shares-93CH-4888704",
-      "pubDate": "2026-09-03T23:31:09.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Etsy executive chair Josh Silverman sells $1.1m in Etsy shares",
-      "link": "https://www.investing.com/news/insider-trading-news/etsy-executive-chair-josh-silverman-sells-11m-in-etsy-shares-93CH-4888703",
-      "pubDate": "2026-09-03T23:31:08.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "OppFi CEO Todd Schwartz buys $25,377 in company stock",
-      "link": "https://www.investing.com/news/insider-trading-news/oppfi-ceo-todd-schwartz-buys-25377-in-company-stock-93CH-4888702",
-      "pubDate": "2026-09-03T23:31:02.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Etsy director Frederick R. Wilson sells $1.64m of Etsy stock",
-      "link": "https://www.investing.com/news/insider-trading-news/etsy-director-frederick-r-wilson-sells-164m-of-etsy-stock-93CH-4888701",
-      "pubDate": "2026-09-03T23:30:59.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Flex to acquire EPC Power for $4.4 billion",
-      "link": "https://www.investing.com/news/company-news/flex-to-acquire-epc-power-for-44-billion-93CH-4888700",
-      "pubDate": "2026-09-03T23:28:33.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Lululemon cuts outlook again, highlighting to-do list for new CEO",
-      "link": "https://www.investing.com/news/stock-market-news/lululemon-cuts-annual-revenue-profit-forecast-4888492",
-      "pubDate": "2026-09-03T23:24:24.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Pulmonx chief science officer sells $32,192 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/pulmonx-chief-science-officer-sells-32192-in-stock-93CH-4888698",
-      "pubDate": "2026-09-03T23:20:02.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Pagaya Technologies director Tami Rosen sells $29,183 in shares",
-      "link": "https://www.investing.com/news/insider-trading-news/pagaya-technologies-director-tami-rosen-sells-29183-in-shares-93CH-4888697",
-      "pubDate": "2026-09-03T23:19:59.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Omada Health CEO Sean Duffy sells $509,465 in company stock",
-      "link": "https://www.investing.com/news/insider-trading-news/omada-health-ceo-sean-duffy-sells-509465-in-company-stock-93CH-4888696",
-      "pubDate": "2026-09-03T23:16:25.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Cricut CEO Ashish Arora sells $698,580 in company stock",
-      "link": "https://www.investing.com/news/insider-trading-news/cricut-ceo-ashish-arora-sells-698580-in-company-stock-93CH-4888695",
-      "pubDate": "2026-09-03T23:15:57.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "GBP/JPY Price Forecast: Intervention shock exposes 210.00",
@@ -170,10 +212,10 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Yen Rallies as Intervention Risk Weighs on Minds of Wary Traders",
+      "title": "Yen Rises as Intervention, BOJ Rate Hike Risks Jolt Traders",
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQV1Y4TGticks1Y2ZYX2pyYlhqYWwwa2ZwVFpjRkFsZHVxZkxOTkw4RS04YkoxblNkN2JpS0NnOGN5V3gwa3VPcmZ2dHRVVVE4UHd0Z3dqalBmZHNfU01PNlZPT25GM0l4YUpEZ19zZHA4WXp6THQ2dm9NVXVyRHVTdjJEMUdzUTkwb3hVSDVSTUh6MkVwYmIzSjU1YkZzdS1jSm5HeUMwYlhsSDlLRmc?oc=5",
       "pubDate": "2026-09-03T21:22:38.000Z",
-      "description": "Yen Rallies as Intervention Risk Weighs on Minds of Wary Traders&nbsp;&nbsp;Bloomberg.com",
+      "description": "Yen Rises as Intervention, BOJ Rate Hike Risks Jolt Traders&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
     },
     {
@@ -200,7 +242,7 @@
     {
       "title": "Bank of Canada unveils new vertical $20 bank note",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-unveils-new-vertical-20-bank-note/",
-      "pubDate": "2026-09-03T20:34:15.000Z",
+      "pubDate": "2026-09-03T20:32:29.000Z",
       "description": "Her Excellency the Right Honourable Louise Arbour, Governor General of Canada, and the Honourable Wayne Long, Secretary of State (Canada Revenue Agency and Financial Institutions), joined Bank of Canada Governor Tiff Macklem today at an eve",
       "source": "Bank of Canada"
     },
@@ -261,13 +303,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Gold jumps 2% as Fed Governor Waller's comments temper rate hike bets",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNTUhNZ1JkRGozUnRmOFd3alQyWTVjNjd4WXp4SmV4anJuRndaaEVRdzlXajB2b1pWUjh5LTJscnFjY0l6QkhINE9MaXAtRVVWVkdrVXZTSlRudFlSU2cxVVlMT1pkN21TTG55MUxyZEkxalhRUGNwRkVNYXZOeWZuX3VsSWx4alNGeENzSzdfSFRvRzlwdHNZRUppTGdIcHMtTUdrU05KV2VoQmNiWTNfOS1kVjNFMzFDQzFR?oc=5",
-      "pubDate": "2026-09-03T18:25:02.000Z",
-      "description": "Gold jumps 2% as Fed Governor Waller's comments temper rate hike bets&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "US Dollar extends decline as NFP takes centre stage",
       "link": "https://www.fxstreet.com/news/us-dollar-extends-decline-as-nfp-takes-centre-stage-202609031822",
       "pubDate": "2026-09-03T18:22:23.000Z",
@@ -326,7 +361,7 @@
     {
       "title": "Canada Picks Alstom to Build Passenger Railcars in Multibilllion-Dollar Deal",
       "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNQ3FZUThSdWpjTjlEZTNPVHBXN21mQi1Pb1JSWWxvMWtab1JmSllPeS1TUGFoUnBsdUxzSWdmUnJlQlV6R0Roc1JhR1ZKYkZYSXdXRkVpejBTdk4zX1VaLWI5TEVYMTJYUmFrdFVlZkFwTlpCWXMweDRxaDhFVUNYV2FYS3d4MmI3WmJESHF0aC1jRVhKdno1Q3lpVE4xMkpLa1RpSnJmd3BucUgwQzRCZ2RiU0c0cG9mT3hfeg?oc=5",
-      "pubDate": "2026-09-03T16:26:57.000Z",
+      "pubDate": "2026-09-03T16:24:00.000Z",
       "description": "Canada Picks Alstom to Build Passenger Railcars in Multibilllion-Dollar Deal&nbsp;&nbsp;WSJ",
       "source": "Google News"
     },
@@ -373,20 +408,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Canadian Dollar extends gains on hawkish BoC message, softer US Dollar",
-      "link": "https://www.fxstreet.com/news/canadian-dollar-extends-gains-on-hawkish-boc-message-softer-us-dollar-202609031515",
-      "pubDate": "2026-09-03T15:15:04.000Z",
-      "description": "USD/CAD extends its decline for the second consecutive day on Thursday as broad US Dollar (USD) weakness and the Bank of Canada’s (BoC) hawkish message at its September policy meeting support the Canadian Dollar (CAD).",
-      "source": "FXStreet"
-    },
-    {
-      "title": "British Pound: Range-bound against US Dollar with muted BoE pricing – Scotiabank",
-      "link": "https://www.fxstreet.com/news/british-pound-range-bound-against-us-dollar-with-muted-boe-pricing-scotiabank-202609031501",
-      "pubDate": "2026-09-03T15:01:23.000Z",
-      "description": "Scotiabank’s Global FX Strategy team reports the British Pound (GBP) is flat versus the US Dollar (USD) but softer on crosses, with UK PMI data offering little new insight. Markets price minimal tightening for the September Bank of England ",
-      "source": "FXStreet"
-    },
-    {
       "title": "Homophones – Remarks by Huw Pill",
       "link": "https://www.bankofengland.co.uk/speech/2026/september/remarks-at-the-edinburgh-chamber-of-commerce",
       "pubDate": "2026-09-03T15:00:00.000Z",
@@ -399,13 +420,6 @@
       "pubDate": "2026-09-03T14:48:00.000Z",
       "description": "Japanese Yen Extends Gains Versus Weaker U.S. Dollar&nbsp;&nbsp;WSJ",
       "source": "Google News"
-    },
-    {
-      "title": "Eurozone: New growth paths after export peak – ING",
-      "link": "https://www.fxstreet.com/news/eurozone-new-growth-paths-after-export-peak-ing-202609031438",
-      "pubDate": "2026-09-03T14:38:00.000Z",
-      "description": "ING economists Bert Colijn and Carsten Brzeski argue that the Eurozone’s long-standing export-led growth model is being structurally eroded by higher energy costs, rising Chinese competition and a changing global trade environment.",
-      "source": "FXStreet"
     },
     {
       "title": "US Complains to Germany About Yen Critique and G20 Russia Stance",
@@ -478,13 +492,6 @@
       "source": "Reuters"
     },
     {
-      "title": "Gold tests $4,500 as US Dollar and yields retreat, Fed hike bets ease after Waller remarks",
-      "link": "https://www.fxstreet.com/news/gold-climbs-as-yen-led-us-dollar-decline-outweighs-hawkish-fed-expectations-202609031112",
-      "pubDate": "2026-09-03T11:12:31.000Z",
-      "description": "Gold (XAU/USD) extends its rebound on Thursday after slipping below $4,300 to a nearly four-week low on the previous day. A sharp rally in the Japanese Yen (JPY) weighs on the US Dollar (USD), while a pullback in US Treasury yields provides",
-      "source": "FXStreet"
-    },
-    {
       "title": "Mapping the Market: Bitcoin has challenges to face after dramatic surge",
       "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOd1lqVEtVQnBfUFdmendZWENSMzRQNE4yb0VTMTBpbS04ekotSk1ITy1ScHJFeXJzZkpMMUZoV0RPMGtUa0hXSmpUc2JLdFRLVVFqU2t4Z1A0ZmtkclVPdU5CMjR4TUFGcU55cnl2Tk1DdHlwb0tkdnBEemVUSGRTdFN6MA?oc=5",
       "pubDate": "2026-09-03T10:19:13.000Z",
@@ -504,13 +511,6 @@
       "pubDate": "2026-09-03T09:41:39.000Z",
       "description": "Yen jumps to one-month high as traders weigh chance of further intervention&nbsp;&nbsp;CNBC",
       "source": "Google News"
-    },
-    {
-      "title": "Euro zone overall business growth held steady in August, PMI shows",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPUHlsdVBUeXZtSkN0c2pTRDU0RHBsNV8tNTM0RXRzR0daUEtudlo1SFlfYm5PNEJ1blJVbXdyN0JMVkQxYWUtVHN1ZkRsZkIzZ2tKdElIVTZxTXZZSjdRQUZyS3E2WXU3UHFFUjJGM1l5RVJNOWRjRHFpdVR4SmtORHRlMm5HLWhCUlI2MEpyNDZrSFZnTTlZMUZ5Sk5UcjBQYTB5Tm9VX0IxVDhRdHlNMQ?oc=5",
-      "pubDate": "2026-09-03T09:19:18.000Z",
-      "description": "Euro zone overall business growth held steady in August, PMI shows&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "Designation of Linfox Armaguard Pty Ltd under the Cash Distribution Framework Act 2026",
