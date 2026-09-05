@@ -602,7 +602,7 @@ footer {
   main { padding: 12px 8px; }
   .panel { padding: 12px 10px; }
   .tv-news-widget { height: 80vh; margin: 0 -10px -12px; }
-  .tv-chart-widget { height: 80vh; margin: 0 -10px; }
+  .tv-chart-widget { height: 100vh; margin: 0 -18px; }
   .chart-block:last-child .tv-chart-widget { margin-bottom: -12px; }
   .mini-calendar { padding: 10px 6px; margin-left: -4px; margin-right: -4px; }
   .cal-grid { gap: 2px; }
