@@ -5,7 +5,8 @@
       "title": "Malaysian SNR Strategy",
       "author": "Pitchou.FX",
       "cover": "ebooks/malaysian-snr-strategy/cover.webp",
-      "file": "ebooks/malaysian-snr-strategy/index.html",
+      "chapters": "ebooks/malaysian-snr-strategy/chapters.json",
+      "style": "ebooks/malaysian-snr-strategy/style.css",
       "landscape": true
     }
   ]

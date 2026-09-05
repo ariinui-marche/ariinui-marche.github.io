@@ -129,10 +129,16 @@
 
   <div id="ebookReader" class="ebook-reader">
     <div class="ebook-reader-bar">
+      <button id="ebookReaderToc" class="ebook-reader-toc" aria-label="Chapters" hidden>☰</button>
       <span id="ebookReaderTitle" class="ebook-reader-title"></span>
       <button id="ebookReaderClose" class="ebook-reader-close" aria-label="Close">✕</button>
     </div>
-    <iframe id="ebookReaderFrame" class="ebook-reader-frame" title="Ebook reader"></iframe>
+    <div id="ebookReaderBody" class="ebook-reader-body"></div>
+  </div>
+
+  <div id="ebookImageViewer" class="ebook-image-viewer">
+    <button id="ebookImageViewerClose" class="ebook-image-viewer-close" aria-label="Close">✕</button>
+    <img id="ebookImageViewerImg" alt="">
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>

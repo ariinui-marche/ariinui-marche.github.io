@@ -659,12 +659,15 @@ footer {
   flex-shrink: 0;
 }
 .ebook-reader-title {
+  flex: 1;
+  min-width: 0;
   font-size: 14px;
   font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.ebook-reader-toc,
 .ebook-reader-close {
   background: var(--panel);
   border: 1px solid var(--border);
@@ -676,22 +679,107 @@ footer {
   cursor: pointer;
   font-size: 16px;
 }
+.ebook-reader-toc:hover,
 .ebook-reader-close:hover { border-color: var(--accent); color: var(--accent); }
-.ebook-reader-frame {
+.ebook-reader-body {
   flex: 1;
-  width: 100%;
-  border: none;
+  overflow-y: auto;
   background: #fff;
+  color: #000;
+  padding: 16px;
+}
+.ebook-reader-loading {
+  color: #666;
+  text-align: center;
+  padding: 40px 20px;
 }
 
+.ebook-chapter-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ebook-chapter-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: #f2f2f2;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #111;
+  cursor: pointer;
+}
+.ebook-chapter-item:hover { border-color: var(--accent); }
+
+.ebook-chapter-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #ddd;
+}
+.ebook-chapter-nav button {
+  background: #f2f2f2;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: #111;
+  cursor: pointer;
+}
+.ebook-chapter-nav button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.ebook-chapter-nav button:not(:disabled):hover { border-color: var(--accent); }
+
+.ebook-reader-body img { cursor: zoom-in; }
+
+.ebook-image-viewer {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+}
+.ebook-image-viewer.open { display: flex; }
+.ebook-image-viewer img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.ebook-image-viewer-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1;
+}
+.ebook-image-viewer-close:hover { border-color: var(--accent); color: var(--accent); }
+
 /* Fallback for phones where the Screen Orientation Lock API is unsupported
-   or denied (iOS Safari) — rotates the whole reader box 90° so landscape-
-   formatted pages still fill the screen properly instead of appearing tiny
+   or denied (iOS Safari) — rotates the whole image viewer 90° so a landscape
+   chart screenshot still fills the screen properly instead of appearing tiny
    in a portrait viewport. Only applies while the device is actually still
    in portrait; a real orientation lock (Android Chrome) makes this query
    stop matching on its own once the device rotates. */
 @media (max-width: 900px) and (orientation: portrait) {
-  .ebook-reader.open.force-landscape {
+  .ebook-image-viewer.open.force-landscape {
     inset: auto;
     top: 50%;
     left: 50%;

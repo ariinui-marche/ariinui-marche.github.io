@@ -1056,9 +1056,17 @@ document.getElementById('newsFilters').addEventListener('click', (e) => {
 
 loadAll();
 
-// Ebook Library — each entry points to a self-hosted HTML file (ebooks/*.html),
-// opened in a full-screen iframe reader so the visitor never leaves the site.
+// Ebook Library — books are pre-split into per-chapter HTML fragments
+// (ebooks/<id>/chapters/*.html + a chapters.json manifest) and injected
+// straight into this page's own DOM (not an iframe), so reading flows
+// vertically like a normal page — and so the browser's native page
+// translate can actually reach the text, the way it does on ariinui.github.io.
 let ebooksCache = [];
+let currentBook = null;
+let currentChapters = [];
+let currentChapterIndex = null;
+let ebookStyleLoadedFor = null;
+let ebookScrollSaveTimer = null;
 const EBOOK_COVER_COLORS = ['#f5b642', '#22c55e', '#3b82f6', '#8b5cf6', '#ef4444', '#06b6d4'];
 
 function ebookCoverColor(str) {
@@ -1094,35 +1102,165 @@ async function loadEbooks() {
   renderEbookShelf();
 }
 
+function loadEbookProgress(bookId) {
+  try {
+    const all = JSON.parse(localStorage.getItem('ebookProgress') || '{}');
+    return all[bookId] || null;
+  } catch (err) {
+    return null;
+  }
+}
+
+function saveEbookProgress(bookId, chapterIdx, fraction) {
+  try {
+    const all = JSON.parse(localStorage.getItem('ebookProgress') || '{}');
+    all[bookId] = { chapterIdx, fraction };
+    localStorage.setItem('ebookProgress', JSON.stringify(all));
+  } catch (err) {
+    // localStorage unavailable (private browsing, storage blocked...) — not blocking
+  }
+}
+
+function ebookBaseDir(book) {
+  return book.chapters.replace(/\/chapters\.json$/, '');
+}
+
+function waitForEbookImages(container) {
+  const imgs = [...container.querySelectorAll('img')];
+  return Promise.all(imgs.map((img) => (img.complete ? Promise.resolve() : new Promise((resolve) => {
+    img.addEventListener('load', resolve, { once: true });
+    img.addEventListener('error', resolve, { once: true });
+  }))));
+}
+
+async function ensureEbookStyle(book) {
+  if (!book.style || ebookStyleLoadedFor === book.id) return;
+  const css = await fetch(book.style).then((r) => r.text()).catch(() => '');
+  let styleEl = document.getElementById('ebookReaderStyle');
+  if (!styleEl) {
+    styleEl = document.createElement('style');
+    styleEl.id = 'ebookReaderStyle';
+    document.head.appendChild(styleEl);
+  }
+  styleEl.textContent = css;
+  ebookStyleLoadedFor = book.id;
+}
+
+function showChapterList() {
+  currentChapterIndex = null;
+  document.getElementById('ebookReaderToc').hidden = true;
+  document.getElementById('ebookReaderTitle').textContent = currentBook.title;
+  const body = document.getElementById('ebookReaderBody');
+  body.innerHTML = `<ol class="ebook-chapter-list">${currentChapters.map((c, i) => `
+    <li><button class="ebook-chapter-item" data-idx="${i}">${c.title}</button></li>`).join('')}</ol>`;
+  body.scrollTop = 0;
+}
+
+async function openChapter(idx, fraction) {
+  if (!currentBook || idx < 0 || idx >= currentChapters.length) return;
+  currentChapterIndex = idx;
+  const chapter = currentChapters[idx];
+  const book = currentBook;
+  const body = document.getElementById('ebookReaderBody');
+  document.getElementById('ebookReaderToc').hidden = false;
+  document.getElementById('ebookReaderTitle').textContent = `${book.title} — ${chapter.title}`;
+  body.innerHTML = '<div class="ebook-reader-loading">Loading…</div>';
+
+  const chapterUrl = new URL(`${ebookBaseDir(book)}/chapters/${chapter.id}.html`, location.href);
+
+  try {
+    const [html] = await Promise.all([
+      fetch(chapterUrl).then((r) => r.text()),
+      ensureEbookStyle(book),
+    ]);
+    // Chapter fragments use paths relative to their own chapters/ folder
+    // (e.g. "../images/x.webp") — resolve them against the chapter's own
+    // URL before injecting into this page.
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    doc.querySelectorAll('img[src]').forEach((img) => {
+      img.src = new URL(img.getAttribute('src'), chapterUrl).href;
+    });
+    const nav = `
+      <div class="ebook-chapter-nav">
+        <button class="ebook-nav-prev"${idx === 0 ? ' disabled' : ''}>‹ Previous</button>
+        <button class="ebook-nav-next"${idx === currentChapters.length - 1 ? ' disabled' : ''}>Next ›</button>
+      </div>`;
+    body.innerHTML = doc.body.innerHTML + nav;
+  } catch (err) {
+    console.error(err);
+    body.innerHTML = '<div class="empty-state">Could not load this chapter.</div>';
+    return;
+  }
+
+  await waitForEbookImages(body);
+  body.scrollTop = fraction ? fraction * Math.max(1, body.scrollHeight - body.clientHeight) : 0;
+}
+
 async function openEbookReader(book) {
+  currentBook = book;
+  currentChapters = [];
+  currentChapterIndex = null;
   const reader = document.getElementById('ebookReader');
+  const body = document.getElementById('ebookReaderBody');
   document.getElementById('ebookReaderTitle').textContent = book.title;
-  document.getElementById('ebookReaderFrame').src = book.file;
+  document.getElementById('ebookReaderToc').hidden = true;
+  body.innerHTML = '<div class="ebook-reader-loading">Loading…</div>';
   reader.classList.add('open');
-  reader.classList.toggle('force-landscape', !!book.landscape);
   document.body.style.overflow = 'hidden';
 
-  // Books whose pages are landscape screenshots (e.g. chart-heavy strategy
-  // guides) ask to open rotated on phones. The Fullscreen + Screen Orientation
-  // Lock APIs actually rotate the device on Android Chrome; browsers that
-  // refuse them (notably iOS Safari) silently fail here and fall back to the
-  // CSS `.force-landscape` rotate-the-box trick defined in styles.css, which
-  // only kicks in while the real orientation is still portrait.
-  if (book.landscape && window.matchMedia('(max-width: 900px)').matches) {
-    try {
-      await reader.requestFullscreen();
-      await screen.orientation.lock('landscape');
-    } catch (err) {
-      // Unsupported/denied — CSS fallback already applied above.
-    }
+  if (!book.chapters) {
+    body.innerHTML = '<div class="empty-state">This ebook has no readable content yet.</div>';
+    return;
+  }
+
+  try {
+    const manifest = await loadJSON(book.chapters);
+    currentChapters = manifest?.chapters || [];
+  } catch (err) {
+    console.error(err);
+    body.innerHTML = '<div class="empty-state">Could not load this ebook.</div>';
+    return;
+  }
+
+  const progress = loadEbookProgress(book.id);
+  if (progress && currentChapters[progress.chapterIdx]) {
+    openChapter(progress.chapterIdx, progress.fraction);
+  } else {
+    showChapterList();
   }
 }
 
 function closeEbookReader() {
   const reader = document.getElementById('ebookReader');
-  reader.classList.remove('open', 'force-landscape');
-  document.getElementById('ebookReaderFrame').src = 'about:blank';
+  reader.classList.remove('open');
+  document.getElementById('ebookReaderBody').innerHTML = '';
+  document.getElementById('ebookReaderToc').hidden = true;
   document.body.style.overflow = '';
+  currentBook = null;
+  currentChapters = [];
+  currentChapterIndex = null;
+}
+
+// Individual chart screenshots are landscape-formatted — tapping one opens
+// it in its own fullscreen viewer (separate from the reading view, which
+// stays mounted underneath at its scroll position). Fullscreen + Screen
+// Orientation Lock actually rotate the device on Android Chrome; browsers
+// that refuse them (notably iOS Safari) silently fail here and fall back to
+// the CSS `.force-landscape` rotate-the-box trick defined in styles.css.
+function openEbookImage(src) {
+  const viewer = document.getElementById('ebookImageViewer');
+  document.getElementById('ebookImageViewerImg').src = src;
+  viewer.classList.add('open');
+  if (currentBook?.landscape && window.matchMedia('(max-width: 900px)').matches) {
+    viewer.classList.add('force-landscape');
+    viewer.requestFullscreen().then(() => screen.orientation.lock('landscape')).catch(() => {});
+  }
+}
+
+function closeEbookImage() {
+  const viewer = document.getElementById('ebookImageViewer');
+  viewer.classList.remove('open', 'force-landscape');
+  document.getElementById('ebookImageViewerImg').src = '';
   if (screen.orientation?.unlock) screen.orientation.unlock();
   if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
 }
@@ -1134,8 +1272,45 @@ document.getElementById('ebooksShelf').addEventListener('click', (e) => {
   if (book) openEbookReader(book);
 });
 document.getElementById('ebookReaderClose').addEventListener('click', closeEbookReader);
+document.getElementById('ebookReaderToc').addEventListener('click', showChapterList);
+document.getElementById('ebookReaderBody').addEventListener('click', (e) => {
+  const chapterBtn = e.target.closest('.ebook-chapter-item');
+  if (chapterBtn) {
+    openChapter(Number(chapterBtn.dataset.idx));
+    return;
+  }
+  const prevBtn = e.target.closest('.ebook-nav-prev');
+  if (prevBtn && !prevBtn.disabled) {
+    openChapter(currentChapterIndex - 1);
+    return;
+  }
+  const nextBtn = e.target.closest('.ebook-nav-next');
+  if (nextBtn && !nextBtn.disabled) {
+    openChapter(currentChapterIndex + 1);
+    return;
+  }
+  const img = e.target.closest('img');
+  if (img) openEbookImage(img.currentSrc || img.src);
+});
+document.getElementById('ebookReaderBody').addEventListener('scroll', (e) => {
+  if (!currentBook || currentChapterIndex == null) return;
+  const body = e.currentTarget;
+  const bookId = currentBook.id;
+  const idx = currentChapterIndex;
+  clearTimeout(ebookScrollSaveTimer);
+  ebookScrollSaveTimer = setTimeout(() => {
+    const max = Math.max(1, body.scrollHeight - body.clientHeight);
+    saveEbookProgress(bookId, idx, body.scrollTop / max);
+  }, 300);
+});
+document.getElementById('ebookImageViewerClose').addEventListener('click', closeEbookImage);
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeEbookReader();
+  if (e.key !== 'Escape') return;
+  if (document.getElementById('ebookImageViewer').classList.contains('open')) {
+    closeEbookImage();
+  } else {
+    closeEbookReader();
+  }
 });
 document.getElementById('ebooksToggle')?.addEventListener('click', (e) => {
   const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
