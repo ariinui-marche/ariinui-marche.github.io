@@ -1066,6 +1066,7 @@ let currentBook = null;
 let currentChapters = [];
 let currentChapterIndex = null;
 let ebookScrollSaveTimer = null;
+let ebookLastScrollTop = 0;
 const EBOOK_COVER_COLORS = ['#f5b642', '#22c55e', '#3b82f6', '#8b5cf6', '#ef4444', '#06b6d4'];
 
 function ebookCoverColor(str) {
@@ -1151,6 +1152,8 @@ async function openChapter(idx, fraction) {
   document.getElementById('ebookReaderToc').hidden = false;
   document.getElementById('ebookReaderTitle').textContent = `${book.title} — ${chapter.title}`;
   body.innerHTML = '<div class="ebook-reader-loading">Loading…</div>';
+  document.querySelector('.ebook-reader-bar').classList.remove('ebook-reader-bar-hidden');
+  ebookLastScrollTop = 0;
 
   const chapterUrl = new URL(`${ebookBaseDir(book)}/chapters/${chapter.id}.html`, location.href);
 
@@ -1163,12 +1166,15 @@ async function openChapter(idx, fraction) {
     doc.querySelectorAll('img[src]').forEach((img) => {
       img.src = new URL(img.getAttribute('src'), chapterUrl).href;
     });
-    // Source books (Calibre exports) mark their chapter title as a plain
-    // bold paragraph, not a heading tag — flag it so it can be styled like
-    // one instead of looking like an ordinary line of body text.
-    const firstP = doc.body.querySelector('p');
-    if (firstP && /^chapter\s+\d+:/i.test(firstP.textContent.trim())) {
-      firstP.classList.add('ebook-chapter-heading');
+    // Source books (Calibre exports) mark their chapter title inconsistently
+    // — sometimes a plain bold <p>, sometimes an <h2> — but it's always the
+    // very first element inside the chapter's wrapping <div> (the exact split
+    // point). Check that element directly instead of assuming a specific tag,
+    // so every chapter's title gets centered/styled the same way instead of
+    // only some of them.
+    const firstEl = doc.body.firstElementChild?.firstElementChild;
+    if (firstEl && /^chapter\s+\d+:/i.test(firstEl.textContent.trim())) {
+      firstEl.classList.add('ebook-chapter-heading');
     }
     const nav = `
       <div class="ebook-chapter-nav">
@@ -1283,8 +1289,25 @@ document.getElementById('ebookReaderBody').addEventListener('click', (e) => {
   if (img) openEbookImage(img.currentSrc || img.src);
 });
 document.getElementById('ebookReaderBody').addEventListener('scroll', (e) => {
-  if (!currentBook || currentChapterIndex == null) return;
   const body = e.currentTarget;
+
+  // Hide the title bar while advancing through the text (content scrolling
+  // up), bring it back when scrolling back up toward earlier content —
+  // standard reader behavior (Kindle/Medium-style), frees screen space
+  // while reading. Always shown near the very top so it's never hidden
+  // right when a chapter opens.
+  const bar = document.querySelector('.ebook-reader-bar');
+  const delta = body.scrollTop - ebookLastScrollTop;
+  if (body.scrollTop < 40) {
+    bar.classList.remove('ebook-reader-bar-hidden');
+  } else if (delta > 5) {
+    bar.classList.add('ebook-reader-bar-hidden');
+  } else if (delta < -5) {
+    bar.classList.remove('ebook-reader-bar-hidden');
+  }
+  ebookLastScrollTop = body.scrollTop;
+
+  if (!currentBook || currentChapterIndex == null) return;
   const bookId = currentBook.id;
   const idx = currentChapterIndex;
   clearTimeout(ebookScrollSaveTimer);
