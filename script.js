@@ -1111,10 +1111,10 @@ function loadEbookProgress(bookId) {
   }
 }
 
-function saveEbookProgress(bookId, chapterIdx, fraction) {
+function saveEbookProgress(bookId, chapterIdx, paragraphIndex) {
   try {
     const all = JSON.parse(localStorage.getItem('ebookProgress') || '{}');
-    all[bookId] = { chapterIdx, fraction };
+    all[bookId] = { chapterIdx, paragraphIndex };
     localStorage.setItem('ebookProgress', JSON.stringify(all));
   } catch (err) {
     // localStorage unavailable (private browsing, storage blocked...) — not blocking
@@ -1133,6 +1133,30 @@ function waitForEbookImages(container) {
   }))));
 }
 
+// Resuming by raw scroll fraction drifts (image loading order/layout shifts
+// change scrollHeight between save and restore) — anchor to the actual
+// paragraph/image element at the top of the viewport instead, so "come back
+// exactly where I stopped" means the same content, not just a similar %.
+function ebookTopVisibleIndex(container) {
+  const wrapper = container.firstElementChild;
+  if (!wrapper) return 0;
+  const children = wrapper.children;
+  const containerTop = container.getBoundingClientRect().top;
+  for (let i = 0; i < children.length; i++) {
+    if (children[i].getBoundingClientRect().bottom > containerTop + 1) return i;
+  }
+  return Math.max(0, children.length - 1);
+}
+
+function ebookScrollToIndex(container, index) {
+  const wrapper = container.firstElementChild;
+  if (!wrapper || !wrapper.children.length) return;
+  const target = wrapper.children[Math.min(Math.max(index, 0), wrapper.children.length - 1)];
+  const containerRect = container.getBoundingClientRect();
+  const targetRect = target.getBoundingClientRect();
+  container.scrollTop += targetRect.top - containerRect.top;
+}
+
 function showChapterList() {
   currentChapterIndex = null;
   document.getElementById('ebookReaderToc').hidden = true;
@@ -1143,7 +1167,7 @@ function showChapterList() {
   body.scrollTop = 0;
 }
 
-async function openChapter(idx, fraction) {
+async function openChapter(idx, paragraphIndex) {
   if (!currentBook || idx < 0 || idx >= currentChapters.length) return;
   currentChapterIndex = idx;
   const chapter = currentChapters[idx];
@@ -1188,8 +1212,9 @@ async function openChapter(idx, fraction) {
     return;
   }
 
+  body.scrollTop = 0;
   await waitForEbookImages(body);
-  body.scrollTop = fraction ? fraction * Math.max(1, body.scrollHeight - body.clientHeight) : 0;
+  if (paragraphIndex) ebookScrollToIndex(body, paragraphIndex);
 }
 
 async function openEbookReader(book) {
@@ -1220,13 +1245,14 @@ async function openEbookReader(book) {
 
   const progress = loadEbookProgress(book.id);
   if (progress && currentChapters[progress.chapterIdx]) {
-    openChapter(progress.chapterIdx, progress.fraction);
+    openChapter(progress.chapterIdx, progress.paragraphIndex);
   } else {
     showChapterList();
   }
 }
 
 function closeEbookReader() {
+  saveEbookProgressNow();
   const reader = document.getElementById('ebookReader');
   reader.classList.remove('open');
   document.getElementById('ebookReaderBody').innerHTML = '';
@@ -1312,10 +1338,23 @@ document.getElementById('ebookReaderBody').addEventListener('scroll', (e) => {
   const idx = currentChapterIndex;
   clearTimeout(ebookScrollSaveTimer);
   ebookScrollSaveTimer = setTimeout(() => {
-    const max = Math.max(1, body.scrollHeight - body.clientHeight);
-    saveEbookProgress(bookId, idx, body.scrollTop / max);
+    saveEbookProgress(bookId, idx, ebookTopVisibleIndex(body));
   }, 300);
 });
+
+// Leaving the page/app (switching apps, closing the tab) can happen before
+// the debounced scroll save above fires — save immediately in that case so
+// resuming later always lands on the exact paragraph, not a slightly stale one.
+function saveEbookProgressNow() {
+  if (!currentBook || currentChapterIndex == null) return;
+  clearTimeout(ebookScrollSaveTimer);
+  saveEbookProgress(currentBook.id, currentChapterIndex, ebookTopVisibleIndex(document.getElementById('ebookReaderBody')));
+}
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden') saveEbookProgressNow();
+});
+window.addEventListener('pagehide', saveEbookProgressNow);
+
 document.getElementById('ebookImageViewerClose').addEventListener('click', closeEbookImage);
 document.addEventListener('keydown', (e) => {
   if (e.key !== 'Escape') return;
