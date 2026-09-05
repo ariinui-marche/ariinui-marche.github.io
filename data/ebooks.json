@@ -1,10 +1,12 @@
 {
   "books": [
     {
-      "id": "demo-placeholder",
-      "title": "Add your ebooks here",
-      "author": "Ariinui",
-      "file": "ebooks/demo-placeholder.html"
+      "id": "malaysian-snr-strategy",
+      "title": "Malaysian SNR Strategy",
+      "author": "Pitchou.FX",
+      "cover": "ebooks/malaysian-snr-strategy/cover.webp",
+      "file": "ebooks/malaysian-snr-strategy/index.html",
+      "landscape": true
     }
   ]
 }

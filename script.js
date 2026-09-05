@@ -1075,7 +1075,9 @@ function renderEbookShelf() {
   }
   container.innerHTML = ebooksCache.map((b) => `
     <button class="ebook-card" data-id="${b.id}">
-      <span class="ebook-cover" style="background:${ebookCoverColor(b.title)}">${b.title}</span>
+      ${b.cover
+        ? `<img class="ebook-cover" src="${b.cover}" alt="">`
+        : `<span class="ebook-cover" style="background:${ebookCoverColor(b.title)}">${b.title}</span>`}
       <span class="ebook-title">${b.title}</span>
       <span class="ebook-author">${b.author || ''}</span>
     </button>`).join('');
@@ -1092,17 +1094,37 @@ async function loadEbooks() {
   renderEbookShelf();
 }
 
-function openEbookReader(book) {
+async function openEbookReader(book) {
+  const reader = document.getElementById('ebookReader');
   document.getElementById('ebookReaderTitle').textContent = book.title;
   document.getElementById('ebookReaderFrame').src = book.file;
-  document.getElementById('ebookReader').classList.add('open');
+  reader.classList.add('open');
+  reader.classList.toggle('force-landscape', !!book.landscape);
   document.body.style.overflow = 'hidden';
+
+  // Books whose pages are landscape screenshots (e.g. chart-heavy strategy
+  // guides) ask to open rotated on phones. The Fullscreen + Screen Orientation
+  // Lock APIs actually rotate the device on Android Chrome; browsers that
+  // refuse them (notably iOS Safari) silently fail here and fall back to the
+  // CSS `.force-landscape` rotate-the-box trick defined in styles.css, which
+  // only kicks in while the real orientation is still portrait.
+  if (book.landscape && window.matchMedia('(max-width: 900px)').matches) {
+    try {
+      await reader.requestFullscreen();
+      await screen.orientation.lock('landscape');
+    } catch (err) {
+      // Unsupported/denied — CSS fallback already applied above.
+    }
+  }
 }
 
 function closeEbookReader() {
-  document.getElementById('ebookReader').classList.remove('open');
+  const reader = document.getElementById('ebookReader');
+  reader.classList.remove('open', 'force-landscape');
   document.getElementById('ebookReaderFrame').src = 'about:blank';
   document.body.style.overflow = '';
+  if (screen.orientation?.unlock) screen.orientation.unlock();
+  if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
 }
 
 document.getElementById('ebooksShelf').addEventListener('click', (e) => {

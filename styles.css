@@ -629,6 +629,7 @@ footer {
   line-height: 1.3;
   color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  object-fit: cover;
 }
 
 .ebook-title {
@@ -681,6 +682,23 @@ footer {
   width: 100%;
   border: none;
   background: #fff;
+}
+
+/* Fallback for phones where the Screen Orientation Lock API is unsupported
+   or denied (iOS Safari) — rotates the whole reader box 90° so landscape-
+   formatted pages still fill the screen properly instead of appearing tiny
+   in a portrait viewport. Only applies while the device is actually still
+   in portrait; a real orientation lock (Android Chrome) makes this query
+   stop matching on its own once the device rotates. */
+@media (max-width: 900px) and (orientation: portrait) {
+  .ebook-reader.open.force-landscape {
+    inset: auto;
+    top: 50%;
+    left: 50%;
+    width: 100vh;
+    height: 100vw;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
 }
 
 @media (max-width: 480px) {
