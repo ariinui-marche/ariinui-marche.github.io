@@ -544,7 +544,7 @@ function renderCharts() {
       hide_side_toolbar: true,
       hide_top_toolbar: false,
       hide_legend: false,
-      hide_volume: false,
+      hide_volume: true,
       hotlist: false,
       interval: CHART_TIMEFRAMES[i].interval,
       locale: 'en',
@@ -573,8 +573,9 @@ document.getElementById('chartsPicker').addEventListener('click', (e) => {
     return;
   }
   const btn = e.target.closest('[data-pair]');
-  if (!btn || chartsSelectedPair === btn.dataset.pair) return;
-  chartsSelectedPair = btn.dataset.pair;
+  if (!btn) return;
+  // Clicking the already-selected pair again closes its charts instead of no-op.
+  chartsSelectedPair = chartsSelectedPair === btn.dataset.pair ? null : btn.dataset.pair;
   chartsRenderPicker();
   renderCharts();
 });
