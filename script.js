@@ -191,181 +191,6 @@ function parseEmoji(el) {
   if (window.twemoji) twemoji.parse(el, { folder: 'svg', ext: '.svg' });
 }
 
-// ── AUD Desk — manual institutional-style confluence briefing ──────────────
-// Hand-maintained (via a Claude Code session) ahead of major AUD events, not
-// auto-fetched — see data/aud-desk.json. No live narrative generation (would
-// require a paid LLM call per update, against this project's zero-server-cost
-// rule) — this only renders whatever a human has last written to the JSON.
-
-const AUDD_DIR_ARROW = { bullish: '▲', bearish: '▼', neutral: '–' };
-const AUDD_WEIGHT_TO_IMPACT = { high: 'High', medium: 'Medium', low: 'Low' };
-
-function auddWeightBadge(weight) {
-  const impact = AUDD_WEIGHT_TO_IMPACT[weight] || 'Low';
-  return `<span class="impact-badge impact-${impact}">${weight}</span>`;
-}
-
-function auddDirClass(direction) {
-  return `audd-dir-${direction || 'neutral'}`;
-}
-
-// Wrapped defensively: a malformed/unexpected aud-desk.json (or a stale SW
-// cache mismatch across shell files) must never throw out of here — it would
-// otherwise abort loadAll()'s shared try/catch and blank out every other
-// panel (currency/calendar/news) along with it. Degrade to hiding just this
-// panel instead.
-function renderAudDesk(data) {
-  try {
-    renderAudDeskUnsafe(data);
-  } catch (err) {
-    console.error('renderAudDesk failed, hiding panel', err);
-    document.getElementById('audDeskPanel')?.classList.add('audd-hidden');
-  }
-}
-
-function renderAudDeskUnsafe(data) {
-  const panel = document.getElementById('audDeskPanel');
-  const labelEl = document.getElementById('audDeskToggleLabel');
-  const bodyEl = document.getElementById('audDeskBody');
-  if (!panel || !labelEl || !bodyEl) return; // stale cached HTML without the AUD Desk markup
-  if (!data) { panel.classList.add('audd-hidden'); return; }
-  panel.classList.remove('audd-hidden');
-
-  const ev = data.event || {};
-  const evDate = ev.date ? new Date(ev.date) : null;
-  const evDateLabel = evDate && !isNaN(evDate)
-    ? evDate.toLocaleString('en-GB', { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })
-    : '';
-
-  const bias = data.bias || {};
-  const c = ev.consensus || {};
-
-  const confPct = Number.isFinite(bias.confidencePct) ? `${bias.confidencePct}%` : '';
-
-  labelEl.innerHTML = `
-    <span class="audd-ticker">${ev.ccy || ''}</span>
-    <span class="audd-bias-pill audd-bias-${bias.direction || 'neutral'}">${(bias.direction || 'neutral').toUpperCase()}${confPct ? ` · ${confPct}` : ''}</span>`;
-
-  bodyEl.innerHTML = `
-    ${ev.title ? `<div class="audd-toggle-title">${ev.title}</div>` : ''}
-    ${evDateLabel ? `<div class="audd-event-time">${evDateLabel} (your local time)</div>` : ''}
-
-    <div class="audd-bias audd-bias-${bias.direction || 'neutral'}">
-      <span class="audd-bias-label">${(bias.direction || 'neutral').toUpperCase()}${confPct ? ` <span class="audd-bias-pct">${confPct}</span>` : ''}</span>
-      <span class="audd-bias-meta">${bias.horizon || ''}${bias.confidenceSample ? ` · ${bias.confidenceSample}` : ''}</span>
-      ${bias.summary ? `<span class="audd-bias-summary">${bias.summary}</span>` : ''}
-      ${bias.confidenceCaveat ? `<span class="audd-bias-caveat">${bias.confidenceCaveat}</span>` : ''}
-    </div>
-
-    ${data.shortTermRead ? `
-    <div class="audd-section-label">Short-term read</div>
-    <div class="audd-shortread">
-      <div class="audd-shortread-headline">${data.shortTermRead.headline}</div>
-      ${Number.isFinite(data.shortTermRead.hitRatePct) ? `<div class="audd-shortread-stat"><span class="audd-shortread-pct ${auddDirClass(bias.direction)}">${data.shortTermRead.hitRatePct}%</span><span class="audd-shortread-sample">${data.shortTermRead.hitRateSample || ''}</span></div>` : ''}
-      ${(data.shortTermRead.scenarios || []).map((s) => `
-        <div class="audd-play-row">
-          <div class="audd-play-scenario">${s.case} <span class="audd-play-confidence">(${s.historicalRate})</span></div>
-          <div class="audd-play-expected">${s.expectedMove}</div>
-        </div>`).join('')}
-      ${(data.shortTermRead.riskFlags || []).length ? `
-      <ul class="audd-shortread-risks">
-        ${data.shortTermRead.riskFlags.map((f) => `<li>${f}</li>`).join('')}
-      </ul>` : ''}
-    </div>` : ''}
-
-    ${(c.headlineYoY || c.trimmedMeanYoY) ? `
-    <div class="audd-consensus">
-      ${c.headlineYoY ? `<div class="audd-stat"><span class="audd-stat-label">Headline YoY (cons.)</span><span class="audd-stat-value">${c.headlineYoY}</span><span class="audd-stat-prior">prior ${c.priorHeadlineYoY || '—'}</span></div>` : ''}
-      ${c.trimmedMeanYoY ? `<div class="audd-stat"><span class="audd-stat-label">Trimmed mean YoY (cons.)</span><span class="audd-stat-value">${c.trimmedMeanYoY}</span><span class="audd-stat-prior">prior ${c.priorTrimmedMeanYoY || '—'}</span></div>` : ''}
-    </div>
-    ${c.sources ? `<div class="audd-note">${c.sources}</div>` : ''}
-    ${ev.note ? `<div class="audd-note">${ev.note}</div>` : ''}` : ''}
-
-    ${(data.catalysts || []).length ? `
-    <div class="audd-section-label">Catalyst scorecard</div>
-    <div class="audd-scorecard">
-      ${data.catalysts.map((k) => `
-        <div class="audd-score-row">
-          <span class="audd-score-dir ${auddDirClass(k.direction)}">${AUDD_DIR_ARROW[k.direction] || '–'}</span>
-          <span class="audd-score-factor">${k.factor}</span>
-          ${auddWeightBadge(k.weight)}
-          <span class="audd-score-note">${k.note}</span>
-        </div>`).join('')}
-    </div>` : ''}
-
-    ${data.positioning ? `
-    <div class="audd-section-label">Positioning — ${data.positioning.source}</div>
-    <div class="audd-positioning">
-      <span class="audd-pos-value ${data.positioning.netContracts < 0 ? 'audd-dir-bearish' : 'audd-dir-bullish'}">${data.positioning.netContracts > 0 ? '+' : ''}${data.positioning.netContracts.toLocaleString('en-GB')}</span>
-      <span class="audd-pos-meta">net contracts (prior ${data.positioning.priorNetContracts > 0 ? '+' : ''}${data.positioning.priorNetContracts.toLocaleString('en-GB')}) · as of ${data.positioning.asOf}</span>
-      <span class="audd-pos-note">${data.positioning.note}</span>
-    </div>` : ''}
-
-    ${(data.marketIndicators || []).length ? `
-    <div class="audd-section-label">Institutional tools</div>
-    <div class="audd-indicators">
-      ${data.marketIndicators.map((m) => `
-        <div class="audd-indicator">
-          <div class="audd-indicator-name">${m.name}</div>
-          <div class="audd-indicator-what">${m.what}</div>
-          <div class="audd-indicator-reading"><b>Reading:</b> ${m.reading}</div>
-          <div class="audd-indicator-apply"><b>How to apply:</b> ${m.howToApply}</div>
-        </div>`).join('')}
-    </div>` : ''}
-
-    ${(data.correlations || []).length ? `
-    <div class="audd-section-label">Correlations (computed, not textbook)</div>
-    <div class="audd-indicators">
-      ${data.correlations.map((c2) => `
-        <div class="audd-indicator">
-          <div class="audd-indicator-name">${c2.pair}</div>
-          <div class="audd-indicator-what">${c2.method}</div>
-          <div class="audd-indicator-reading"><b>Result:</b> ${c2.value}</div>
-          <div class="audd-indicator-apply"><b>Read:</b> ${c2.read}</div>
-        </div>`).join('')}
-    </div>` : ''}
-
-    ${(data.reactionHistory || []).length ? `
-    <div class="audd-section-label">Reaction history</div>
-    <div class="audd-history">
-      <div class="audd-history-row audd-history-head">
-        <span>Print</span><span>Headline</span><span>Trimmed mean</span><span>Alignment</span><span>Move</span>
-      </div>
-      ${data.reactionHistory.map((h) => `
-        <div class="audd-history-row">
-          <span>${h.label}</span><span>${h.headline}</span><span>${h.trimmedMean}</span><span>${h.alignment}</span><span>${h.move}</span>
-        </div>
-        <div class="audd-history-read">${h.read}</div>`).join('')}
-    </div>` : ''}
-
-    ${(data.playbook || []).length ? `
-    <div class="audd-section-label">Playbook</div>
-    <div class="audd-playbook">
-      ${data.playbook.map((p) => `
-        <div class="audd-play-row">
-          <div class="audd-play-scenario">${p.scenario} <span class="audd-play-confidence">(${p.confidence} confidence)</span></div>
-          <div class="audd-play-expected">${p.expected}</div>
-        </div>`).join('')}
-    </div>` : ''}
-
-    ${(data.usCalendarSameDay || []).length ? `
-    <div class="audd-section-label">Same-day US calendar</div>
-    <div class="audd-uscal">
-      ${data.usCalendarSameDay.map((u) => `<span class="audd-uscal-item">${u.localTime} — ${u.event} ${auddWeightBadge(u.weight)}</span>`).join('')}
-    </div>` : ''}
-
-    <div class="audd-footer">
-      ${data.asOf ? `<span>Briefing as of ${new Date(data.asOf).toLocaleString('en-GB')}</span>` : ''}
-      ${data.disclaimer ? `<span class="audd-disclaimer">${data.disclaimer}</span>` : ''}
-    </div>`;
-}
-
-document.getElementById('audDeskToggle')?.addEventListener('click', (e) => {
-  const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
-  e.currentTarget.setAttribute('aria-expanded', String(!expanded));
-  document.getElementById('audDeskBody').classList.toggle('collapsed', expanded);
-});
-
 // ── Live Correlation — pick 2-3 pairs, see if they move together ────────
 // Direct correlation checker: pick exactly the pairs you're considering
 // trading (2 or 3) and a timeframe, see the correlation strength between
@@ -975,14 +800,12 @@ function renderNews() {
 
 async function loadAll() {
   try {
-    const [marketRaw, ecoData, newsData, audDeskData] = await Promise.all([
+    const [marketRaw, ecoData, newsData] = await Promise.all([
       fetchMarketRaw().catch((err) => { console.error(err); return null; }),
       loadJSON('./data/eco-calendar.json').catch(() => null),
       loadJSON('./data/market-news.json').catch(() => null),
-      loadJSON('./data/aud-desk.json').catch(() => null),
     ]);
 
-    renderAudDesk(audDeskData);
     renderCurrencies(marketRaw ? computeCurrencyStrength(marketRaw) : null);
     renderTrendMomentum(marketRaw ? computeTrendMomentum(marketRaw) : null);
     renderCorrelation();
@@ -1020,6 +843,52 @@ document.getElementById('trendToggle')?.addEventListener('click', (e) => {
   const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
   e.currentTarget.setAttribute('aria-expanded', String(!expanded));
   document.getElementById('trendGrid').classList.toggle('collapsed', expanded);
+});
+document.getElementById('ecoNewsToggle')?.addEventListener('click', (e) => {
+  const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
+  e.currentTarget.setAttribute('aria-expanded', String(!expanded));
+  document.getElementById('ecoNewsBody').classList.toggle('collapsed', expanded);
+});
+document.getElementById('marketNewsToggle')?.addEventListener('click', (e) => {
+  const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
+  e.currentTarget.setAttribute('aria-expanded', String(!expanded));
+  document.getElementById('marketNewsBody').classList.toggle('collapsed', expanded);
+});
+
+// TradingView's embed script measures the container's rendered size once on
+// load — injecting it while the panel sits under display:none (collapsed by
+// default) would freeze the widget at 0×0 forever. Load it lazily, the first
+// time the panel is actually opened.
+let tvNewsLoaded = false;
+function loadTvNewsWidget() {
+  if (tvNewsLoaded) return;
+  tvNewsLoaded = true;
+  const container = document.getElementById('tvNewsWidget');
+  container.innerHTML = `
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/news/top-providers/tradingview/" rel="noopener nofollow" target="_blank"><span class="blue-text">Top stories</span></a><span class="trademark"> by TradingView</span></div>
+    </div>`;
+  const script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.async = true;
+  script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-timeline.js';
+  script.text = JSON.stringify({
+    displayMode: 'regular',
+    feedMode: 'all_symbols',
+    colorTheme: 'dark',
+    isTransparent: false,
+    locale: 'en',
+    width: '100%',
+    height: '100%',
+  });
+  container.querySelector('.tradingview-widget-container').appendChild(script);
+}
+document.getElementById('tvNewsToggle')?.addEventListener('click', (e) => {
+  const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
+  e.currentTarget.setAttribute('aria-expanded', String(!expanded));
+  document.getElementById('tvNewsBody').classList.toggle('collapsed', expanded);
+  if (expanded === false) loadTvNewsWidget();
 });
 document.getElementById('impactFilters').addEventListener('click', (e) => {
   const btn = e.target.closest('.filter-btn');

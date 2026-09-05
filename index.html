@@ -22,14 +22,6 @@
   </header>
 
   <main>
-    <section class="panel audd-panel" id="audDeskPanel">
-      <h2 class="panel-toggle audd-toggle" id="audDeskToggle" aria-expanded="false" aria-controls="audDeskBody">
-        <span class="audd-toggle-label" id="audDeskToggleLabel"></span>
-        <span class="chevron">▾</span>
-      </h2>
-      <div id="audDeskBody" class="audd-body collapsed"></div>
-    </section>
-
     <section class="panel">
       <h2 class="panel-toggle" id="currencyToggle" aria-expanded="false" aria-controls="currencyGrid">
         Currency Strength
@@ -56,63 +48,61 @@
 
     <section class="panel">
       <h2>Economic Calendar</h2>
-      <div id="ecoCalendar" class="mini-calendar"></div>
       <div id="ecoCountdown" class="eco-countdown"></div>
-      <div class="filters" id="impactFilters">
-        <button class="filter-btn" data-impact="all">All</button>
-        <button class="filter-btn active" data-impact="High">High</button>
-        <button class="filter-btn" data-impact="Medium">Medium</button>
-        <button class="filter-btn" data-impact="Low">Low</button>
-      </div>
-      <div id="ecoList" class="eco-list"></div>
-    </section>
-
-    <section class="panel">
-      <h2>Market News</h2>
-      <div class="filters" id="newsFilters">
-        <button class="filter-btn active" data-ccy="all">All</button>
-        <button class="filter-btn" data-ccy="EUR">EUR</button>
-        <button class="filter-btn" data-ccy="USD">USD</button>
-        <button class="filter-btn" data-ccy="GBP">GBP</button>
-        <button class="filter-btn" data-ccy="JPY">JPY</button>
-        <button class="filter-btn" data-ccy="CHF">CHF</button>
-        <button class="filter-btn" data-ccy="AUD">AUD</button>
-        <button class="filter-btn" data-ccy="CAD">CAD</button>
-        <button class="filter-btn" data-ccy="NZD">NZD</button>
-        <button class="filter-btn" data-ccy="XAU">Gold</button>
-        <button class="filter-btn" data-ccy="BTC">BTC</button>
-        <button class="filter-btn" data-ccy="ETH">ETH</button>
-        <button class="filter-btn" data-ccy="OIL">Oil</button>
-      </div>
-      <div id="newsList" class="eco-list"></div>
-    </section>
-
-    <section class="panel">
-      <h2>TradingView News</h2>
-      <div class="tv-news-widget">
-        <!-- TradingView Widget BEGIN -->
-        <div class="tradingview-widget-container">
-          <div class="tradingview-widget-container__widget"></div>
-          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/news/top-providers/tradingview/" rel="noopener nofollow" target="_blank"><span class="blue-text">Top stories</span></a><span class="trademark"> by TradingView</span></div>
-          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
-          {
-          "displayMode": "regular",
-          "feedMode": "all_symbols",
-          "colorTheme": "dark",
-          "isTransparent": false,
-          "locale": "en",
-          "width": "100%",
-          "height": "100%"
-        }
-          </script>
+      <div id="ecoCalendar" class="mini-calendar"></div>
+      <h2 class="panel-toggle" id="ecoNewsToggle" aria-expanded="false" aria-controls="ecoNewsBody">
+        This Week's News
+        <span class="chevron">▾</span>
+      </h2>
+      <div id="ecoNewsBody" class="eco-news-body collapsed">
+        <div class="filters" id="impactFilters">
+          <button class="filter-btn" data-impact="all">All</button>
+          <button class="filter-btn active" data-impact="High">High</button>
+          <button class="filter-btn" data-impact="Medium">Medium</button>
+          <button class="filter-btn" data-impact="Low">Low</button>
         </div>
-        <!-- TradingView Widget END -->
+        <div id="ecoList" class="eco-list"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-toggle" id="marketNewsToggle" aria-expanded="false" aria-controls="marketNewsBody">
+        Market News
+        <span class="chevron">▾</span>
+      </h2>
+      <div id="marketNewsBody" class="market-news-body collapsed">
+        <div class="filters" id="newsFilters">
+          <button class="filter-btn active" data-ccy="all">All</button>
+          <button class="filter-btn" data-ccy="EUR">EUR</button>
+          <button class="filter-btn" data-ccy="USD">USD</button>
+          <button class="filter-btn" data-ccy="GBP">GBP</button>
+          <button class="filter-btn" data-ccy="JPY">JPY</button>
+          <button class="filter-btn" data-ccy="CHF">CHF</button>
+          <button class="filter-btn" data-ccy="AUD">AUD</button>
+          <button class="filter-btn" data-ccy="CAD">CAD</button>
+          <button class="filter-btn" data-ccy="NZD">NZD</button>
+          <button class="filter-btn" data-ccy="XAU">Gold</button>
+          <button class="filter-btn" data-ccy="BTC">BTC</button>
+          <button class="filter-btn" data-ccy="ETH">ETH</button>
+          <button class="filter-btn" data-ccy="OIL">Oil</button>
+        </div>
+        <div id="newsList" class="eco-list"></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2 class="panel-toggle" id="tvNewsToggle" aria-expanded="false" aria-controls="tvNewsBody">
+        TradingView News
+        <span class="chevron">▾</span>
+      </h2>
+      <div id="tvNewsBody" class="tv-news-body collapsed">
+        <div class="tv-news-widget" id="tvNewsWidget"></div>
       </div>
     </section>
   </main>
 
   <footer>
-    <span>Currency Strength & Trend Momentum: BabyPips (live) · Economic Calendar: ForexFactory · Market News: FXStreet, Investing.com, BeInCrypto, Reuters, Google News + official central banks (BoE, Fed, ECB, BoJ, RBA, BoC, SNB) — refreshed every 5 min · Live Correlation: Yahoo Finance (Pearson), fetched live on selection, 5min-1month timeframes · AUD Desk: manual confluence briefing (ABS, RBA, CFTC COT, ASX Rate Tracker, bond yields, FX options) updated ahead of major AUD events</span>
+    <span>Currency Strength & Trend Momentum: BabyPips (live) · Economic Calendar: ForexFactory · Market News: FXStreet, Investing.com, BeInCrypto, Reuters, Google News + official central banks (BoE, Fed, ECB, BoJ, RBA, BoC, SNB) — refreshed every 5 min · Live Correlation: Yahoo Finance (Pearson), fetched live on selection, 5min-1month timeframes · TradingView News: Top Stories widget</span>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
