@@ -1246,6 +1246,10 @@ async function openEbookReader(book) {
   const progress = loadEbookProgress(book.id);
   if (progress && currentChapters[progress.chapterIdx]) {
     openChapter(progress.chapterIdx, progress.paragraphIndex);
+  } else if (currentChapters.length === 1) {
+    // A single-chapter book has no real table of contents to show — open
+    // straight into it instead of a list with one button.
+    openChapter(0);
   } else {
     showChapterList();
   }
