@@ -106,6 +106,10 @@ main {
 
 .currency-grid.collapsed { display: none; }
 
+.tv-news-widget { height: 650px; margin: 0 -16px -16px; }
+.tv-news-widget .tradingview-widget-container,
+.tv-news-widget .tradingview-widget-container__widget { height: 100%; }
+
 .corr-body.collapsed { display: none; }
 .corr-intro { font-size: 12px; color: var(--text-dim); line-height: 1.4; margin-bottom: 12px; }
 .corr-r-row {
@@ -838,6 +842,7 @@ footer {
 
   main { padding: 12px 8px; }
   .panel { padding: 12px 10px; }
+  .tv-news-widget { height: 80vh; margin: 0 -10px -12px; }
   .mini-calendar { padding: 10px 6px; margin-left: -4px; margin-right: -4px; }
   .cal-grid { gap: 2px; }
   .cal-day { font-size: 15px; }
