@@ -19,21 +19,37 @@ try {
 } catch {
   console.warn('Currency data did not load in time — sending current state anyway');
 }
+
+await page.click('#trendToggle');
+try {
+  await page.waitForSelector('#trendGrid .trend-card', { timeout: 15000 });
+} catch {
+  console.warn('Trend data did not load in time — sending current state anyway');
+}
+
 // let bar-fill widths/colors settle after render
 await page.waitForTimeout(500);
 
-const section = page.locator('xpath=//h2[@id="currencyToggle"]/parent::section');
-const buffer = await section.screenshot();
+const currencySection = page.locator('xpath=//h2[@id="currencyToggle"]/parent::section');
+const trendSection = page.locator('xpath=//h2[@id="trendToggle"]/parent::section');
+const currencyBuffer = await currencySection.screenshot();
+const trendBuffer = await trendSection.screenshot();
 await browser.close();
 
 const hstDateStr = new Date(Date.now() - 10 * 3600 * 1000).toISOString().slice(0, 10);
 
+const media = [
+  { type: 'photo', media: 'attach://currency-strength.png', caption: `Currency Strength & Trend Momentum — ${hstDateStr}` },
+  { type: 'photo', media: 'attach://trend-momentum.png' },
+];
+
 const form = new FormData();
 form.append('chat_id', CHAT_ID);
-form.append('caption', `Currency Strength — ${hstDateStr}`);
-form.append('photo', new Blob([buffer], { type: 'image/png' }), 'currency-strength.png');
+form.append('media', JSON.stringify(media));
+form.append('currency-strength.png', new Blob([currencyBuffer], { type: 'image/png' }), 'currency-strength.png');
+form.append('trend-momentum.png', new Blob([trendBuffer], { type: 'image/png' }), 'trend-momentum.png');
 
-const res = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`, {
+const res = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMediaGroup`, {
   method: 'POST',
   body: form,
 });
@@ -42,4 +58,4 @@ if (!json.ok) {
   console.error('Telegram send failed:', json);
   process.exit(1);
 }
-console.log('Sent to Telegram, message_id:', json.result.message_id);
+console.log('Sent to Telegram, message_ids:', json.result.map((m) => m.message_id));
