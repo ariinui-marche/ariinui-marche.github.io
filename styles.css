@@ -694,6 +694,37 @@ footer {
   padding: 40px 20px;
 }
 
+/* Clean, generic reading typography for injected chapter content — targets
+   plain tags (p/b/i/img), not a book's own converter-generated class names
+   (Calibre exports classes like "calibre1", "calibre3"...), so this looks
+   like a real HTML book page instead of a raw PDF/EPUB conversion dump,
+   and works the same way for any future book regardless of its source. */
+.ebook-reader-body {
+  color-scheme: light;
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
+.ebook-reader-body p { margin: 0 0 1.1em; }
+.ebook-reader-body b { font-weight: 700; }
+.ebook-reader-body i { font-style: italic; }
+.ebook-reader-body img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.6em auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.18);
+}
+.ebook-chapter-heading {
+  font-size: 1.4em;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 1.3em;
+}
+
 .ebook-chapter-list {
   list-style: none;
   margin: 0;

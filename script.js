@@ -1065,7 +1065,6 @@ let ebooksCache = [];
 let currentBook = null;
 let currentChapters = [];
 let currentChapterIndex = null;
-let ebookStyleLoadedFor = null;
 let ebookScrollSaveTimer = null;
 const EBOOK_COVER_COLORS = ['#f5b642', '#22c55e', '#3b82f6', '#8b5cf6', '#ef4444', '#06b6d4'];
 
@@ -1133,19 +1132,6 @@ function waitForEbookImages(container) {
   }))));
 }
 
-async function ensureEbookStyle(book) {
-  if (!book.style || ebookStyleLoadedFor === book.id) return;
-  const css = await fetch(book.style).then((r) => r.text()).catch(() => '');
-  let styleEl = document.getElementById('ebookReaderStyle');
-  if (!styleEl) {
-    styleEl = document.createElement('style');
-    styleEl.id = 'ebookReaderStyle';
-    document.head.appendChild(styleEl);
-  }
-  styleEl.textContent = css;
-  ebookStyleLoadedFor = book.id;
-}
-
 function showChapterList() {
   currentChapterIndex = null;
   document.getElementById('ebookReaderToc').hidden = true;
@@ -1169,10 +1155,7 @@ async function openChapter(idx, fraction) {
   const chapterUrl = new URL(`${ebookBaseDir(book)}/chapters/${chapter.id}.html`, location.href);
 
   try {
-    const [html] = await Promise.all([
-      fetch(chapterUrl).then((r) => r.text()),
-      ensureEbookStyle(book),
-    ]);
+    const html = await fetch(chapterUrl).then((r) => r.text());
     // Chapter fragments use paths relative to their own chapters/ folder
     // (e.g. "../images/x.webp") — resolve them against the chapter's own
     // URL before injecting into this page.
@@ -1180,6 +1163,13 @@ async function openChapter(idx, fraction) {
     doc.querySelectorAll('img[src]').forEach((img) => {
       img.src = new URL(img.getAttribute('src'), chapterUrl).href;
     });
+    // Source books (Calibre exports) mark their chapter title as a plain
+    // bold paragraph, not a heading tag — flag it so it can be styled like
+    // one instead of looking like an ordinary line of body text.
+    const firstP = doc.body.querySelector('p');
+    if (firstP && /^chapter\s+\d+:/i.test(firstP.textContent.trim())) {
+      firstP.classList.add('ebook-chapter-heading');
+    }
     const nav = `
       <div class="ebook-chapter-nav">
         <button class="ebook-nav-prev"${idx === 0 ? ' disabled' : ''}>‹ Previous</button>
