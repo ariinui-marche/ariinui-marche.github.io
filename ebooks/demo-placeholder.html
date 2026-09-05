@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add your ebooks here</title>
+<style>
+  body {
+    margin: 0;
+    padding: 32px 20px 60px;
+    max-width: 720px;
+    margin-inline: auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0b0e14;
+    color: #e6e9ef;
+    line-height: 1.6;
+  }
+  h1 { color: #f5b642; font-size: 22px; }
+  h2 { font-size: 17px; margin-top: 32px; }
+  code {
+    background: #12161f;
+    border: 1px solid #1f2531;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 13px;
+  }
+  pre {
+    background: #12161f;
+    border: 1px solid #1f2531;
+    border-radius: 8px;
+    padding: 14px;
+    overflow-x: auto;
+    font-size: 12px;
+  }
+</style>
+</head>
+<body>
+  <h1>This is a placeholder ebook</h1>
+  <p>Replace this file with your real trading ebooks — each book is just a self-hosted HTML file in this <code>ebooks/</code> folder, opened full-screen inside the site when a reader taps its cover on the Ebook Library panel.</p>
+
+  <h2>How to add a real ebook</h2>
+  <p>1. Drop your book's HTML file in <code>ebooks/</code> (e.g. <code>ebooks/price-action-101.html</code>).</p>
+  <p>2. Add an entry for it in <code>data/ebooks.json</code>:</p>
+  <pre>{
+  "id": "price-action-101",
+  "title": "Price Action 101",
+  "author": "Your Name",
+  "file": "ebooks/price-action-101.html"
+}</pre>
+  <p>3. Remove this demo entry once you have real books.</p>
+
+  <h2>Cover</h2>
+  <p>Covers on the shelf are auto-generated from the title (no image needed) — a future version can add a <code>"cover"</code> image field if you want real cover art.</p>
+</body>
+</html>

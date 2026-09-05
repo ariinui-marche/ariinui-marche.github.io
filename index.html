@@ -111,11 +111,29 @@
         <div class="tv-news-widget" id="tvNewsWidget"></div>
       </div>
     </section>
+
+    <section class="panel">
+      <h2 class="panel-toggle" id="ebooksToggle" aria-expanded="false" aria-controls="ebooksBody">
+        Ebook Library
+        <span class="chevron">▾</span>
+      </h2>
+      <div id="ebooksBody" class="ebooks-body collapsed">
+        <div id="ebooksShelf" class="ebooks-shelf"></div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <span>Currency Strength & Trend Momentum: BabyPips (live) · Economic Calendar: ForexFactory · Market News: FXStreet, Investing.com, BeInCrypto, Reuters, Google News + official central banks (BoE, Fed, ECB, BoJ, RBA, BoC, SNB) — refreshed every 5 min · Live Correlation: Yahoo Finance (Pearson), fetched live on selection, 5min-1month timeframes · TradingView News: Top Stories widget</span>
   </footer>
+
+  <div id="ebookReader" class="ebook-reader">
+    <div class="ebook-reader-bar">
+      <span id="ebookReaderTitle" class="ebook-reader-title"></span>
+      <button id="ebookReaderClose" class="ebook-reader-close" aria-label="Close">✕</button>
+    </div>
+    <iframe id="ebookReaderFrame" class="ebook-reader-frame" title="Ebook reader"></iframe>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
   <script src="./script.js"></script>

@@ -1056,6 +1056,73 @@ document.getElementById('newsFilters').addEventListener('click', (e) => {
 
 loadAll();
 
+// Ebook Library — each entry points to a self-hosted HTML file (ebooks/*.html),
+// opened in a full-screen iframe reader so the visitor never leaves the site.
+let ebooksCache = [];
+const EBOOK_COVER_COLORS = ['#f5b642', '#22c55e', '#3b82f6', '#8b5cf6', '#ef4444', '#06b6d4'];
+
+function ebookCoverColor(str) {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) hash = (hash * 31 + str.charCodeAt(i)) >>> 0;
+  return EBOOK_COVER_COLORS[hash % EBOOK_COVER_COLORS.length];
+}
+
+function renderEbookShelf() {
+  const container = document.getElementById('ebooksShelf');
+  if (!ebooksCache.length) {
+    container.innerHTML = '<div class="empty-state">No ebooks yet.</div>';
+    return;
+  }
+  container.innerHTML = ebooksCache.map((b) => `
+    <button class="ebook-card" data-id="${b.id}">
+      <span class="ebook-cover" style="background:${ebookCoverColor(b.title)}">${b.title}</span>
+      <span class="ebook-title">${b.title}</span>
+      <span class="ebook-author">${b.author || ''}</span>
+    </button>`).join('');
+}
+
+async function loadEbooks() {
+  try {
+    const data = await loadJSON('./data/ebooks.json');
+    ebooksCache = data?.books || [];
+  } catch (err) {
+    console.error(err);
+    ebooksCache = [];
+  }
+  renderEbookShelf();
+}
+
+function openEbookReader(book) {
+  document.getElementById('ebookReaderTitle').textContent = book.title;
+  document.getElementById('ebookReaderFrame').src = book.file;
+  document.getElementById('ebookReader').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeEbookReader() {
+  document.getElementById('ebookReader').classList.remove('open');
+  document.getElementById('ebookReaderFrame').src = 'about:blank';
+  document.body.style.overflow = '';
+}
+
+document.getElementById('ebooksShelf').addEventListener('click', (e) => {
+  const card = e.target.closest('.ebook-card');
+  if (!card) return;
+  const book = ebooksCache.find((b) => b.id === card.dataset.id);
+  if (book) openEbookReader(book);
+});
+document.getElementById('ebookReaderClose').addEventListener('click', closeEbookReader);
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeEbookReader();
+});
+document.getElementById('ebooksToggle')?.addEventListener('click', (e) => {
+  const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
+  e.currentTarget.setAttribute('aria-expanded', String(!expanded));
+  document.getElementById('ebooksBody').classList.toggle('collapsed', expanded);
+});
+
+loadEbooks();
+
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('./sw.js').catch((err) => console.error('SW registration failed', err));
