@@ -108,7 +108,23 @@ main {
 
 .eco-news-body.collapsed,
 .market-news-body.collapsed,
-.tv-news-body.collapsed { display: none; }
+.tv-news-body.collapsed,
+.charts-body.collapsed { display: none; }
+
+.charts-intro { font-size: 12px; color: var(--text-dim); line-height: 1.4; margin-bottom: 12px; }
+
+.charts-grid { display: flex; flex-direction: column; gap: 20px; margin-top: 18px; }
+.chart-block-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+}
+.tv-chart-widget { height: 420px; margin: 0 -16px; }
+.chart-block:last-child .tv-chart-widget { margin-bottom: -16px; }
+.tv-chart-widget .tradingview-widget-container,
+.tv-chart-widget .tradingview-widget-container__widget { height: 100%; }
 
 .tv-news-widget { height: 650px; margin: 0 -16px -16px; }
 .tv-news-widget .tradingview-widget-container,
@@ -586,6 +602,8 @@ footer {
   main { padding: 12px 8px; }
   .panel { padding: 12px 10px; }
   .tv-news-widget { height: 80vh; margin: 0 -10px -12px; }
+  .tv-chart-widget { height: 80vh; margin: 0 -10px; }
+  .chart-block:last-child .tv-chart-widget { margin-bottom: -12px; }
   .mini-calendar { padding: 10px 6px; margin-left: -4px; margin-right: -4px; }
   .cal-grid { gap: 2px; }
   .cal-day { font-size: 15px; }

@@ -460,6 +460,133 @@ document.getElementById('corrToggle')?.addEventListener('click', (e) => {
   document.getElementById('corrBody').classList.toggle('collapsed', expanded);
 });
 
+// ── Charts — pick one pair, get its Daily/4H/1H TradingView charts stacked ──
+// Same pair catalog as Live Correlation (CORR_ALL_PAIRS/CORR_DEFAULT_COUNT
+// above). Each chart is TradingView's script-embed "Advanced Chart" widget
+// (an iframe under the hood, not the TV.js container_id API that never
+// worked in this project — see feedback_tradingview_charts). Charts are
+// only ever created in response to a pair click, which can only happen
+// once this panel is already open and visible, so there's no risk of the
+// 0×0-on-hidden-container issue the lazy-loaded TradingView News widget has.
+
+function tvSymbolFor(id) {
+  if (id === 'XAUUSD') return 'OANDA:XAUUSD';
+  if (id === 'BTCUSD') return 'COINBASE:BTCUSD';
+  if (id === 'ETHUSD') return 'COINBASE:ETHUSD';
+  return `FX:${id}`;
+}
+
+const CHART_TIMEFRAMES = [
+  { interval: 'D', label: 'Daily' },
+  { interval: '240', label: '4H' },
+  { interval: '60', label: '1H' },
+];
+
+let chartsSelectedPair = null;
+let chartsShowAllPairs = false;
+
+function chartsPickerHtml() {
+  const visible = chartsShowAllPairs ? CORR_ALL_PAIRS : CORR_ALL_PAIRS.slice(0, CORR_DEFAULT_COUNT);
+  const chips = visible.map((p) => {
+    const isSel = chartsSelectedPair === p.id;
+    const cls = ['corr-chip', isSel ? 'corr-chip-selected' : ''].filter(Boolean).join(' ');
+    return `<button type="button" class="${cls}" data-pair="${p.id}">
+      <span class="corr-chip-label">${p.label}</span>
+      <span class="corr-chip-cat">${p.category}</span>
+    </button>`;
+  }).join('');
+
+  return `
+    <div class="corr-picker-grid">${chips}</div>
+    <button type="button" id="chartsShowMoreBtn" class="corr-showmore">
+      ${chartsShowAllPairs ? '▲ Hide extra pairs' : `▼ Show ${CORR_ALL_PAIRS.length - CORR_DEFAULT_COUNT} more pairs (crosses & minors)`}
+    </button>`;
+}
+
+function chartsRenderPicker() {
+  document.getElementById('chartsPicker').innerHTML = chartsPickerHtml();
+}
+
+function chartBlockHtml(symbol, label) {
+  const symbolPath = symbol.replace(':', '-');
+  return `
+    <div class="chart-block">
+      <div class="chart-block-label">${label}</div>
+      <div class="tv-chart-widget">
+        <div class="tradingview-widget-container" style="height:100%;width:100%">
+          <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/${symbolPath}/" rel="noopener nofollow" target="_blank"><span class="blue-text">${symbol} chart</span></a><span class="trademark"> by TradingView</span></div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function renderCharts() {
+  const grid = document.getElementById('chartsGrid');
+  if (!chartsSelectedPair) {
+    grid.innerHTML = '';
+    return;
+  }
+  const symbol = tvSymbolFor(chartsSelectedPair);
+  grid.innerHTML = CHART_TIMEFRAMES.map((tf) => chartBlockHtml(symbol, tf.label)).join('');
+
+  // <script> tags inserted via innerHTML never execute — each one has to be
+  // created and appended manually so TradingView's embed script actually runs.
+  grid.querySelectorAll('.tradingview-widget-container').forEach((container, i) => {
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
+    script.text = JSON.stringify({
+      allow_symbol_change: false,
+      calendar: false,
+      details: false,
+      hide_side_toolbar: true,
+      hide_top_toolbar: false,
+      hide_legend: false,
+      hide_volume: false,
+      hotlist: false,
+      interval: CHART_TIMEFRAMES[i].interval,
+      locale: 'en',
+      save_image: false,
+      style: '1',
+      symbol,
+      theme: 'dark',
+      timezone: 'Etc/UTC',
+      backgroundColor: '#0F0F0F',
+      gridColor: 'rgba(242, 242, 242, 0.2)',
+      watchlist: [],
+      withdateranges: false,
+      compareSymbols: [],
+      support_host: 'https://www.tradingview.com',
+      studies: [],
+      autosize: true,
+    });
+    container.appendChild(script);
+  });
+}
+
+document.getElementById('chartsPicker').addEventListener('click', (e) => {
+  if (e.target.closest('#chartsShowMoreBtn')) {
+    chartsShowAllPairs = !chartsShowAllPairs;
+    chartsRenderPicker();
+    return;
+  }
+  const btn = e.target.closest('[data-pair]');
+  if (!btn || chartsSelectedPair === btn.dataset.pair) return;
+  chartsSelectedPair = btn.dataset.pair;
+  chartsRenderPicker();
+  renderCharts();
+});
+
+chartsRenderPicker();
+
+document.getElementById('chartsToggle')?.addEventListener('click', (e) => {
+  const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
+  e.currentTarget.setAttribute('aria-expanded', String(!expanded));
+  document.getElementById('chartsBody').classList.toggle('collapsed', expanded);
+});
+
 let currentEvents = [];
 const currentImpactFilters = new Set(['High']);
 
