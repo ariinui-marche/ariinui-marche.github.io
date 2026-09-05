@@ -1,12 +1,33 @@
 {
-  "timestamp": "2026-09-05T19:24:46.826Z",
+  "timestamp": "2026-09-05T21:24:28.743Z",
   "items": [
     {
       "title": "2026-09-05 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-09-05T19:18:00.000Z",
+      "pubDate": "2026-09-05T21:23:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "US strikes three Iranian oil tankers after IRGC attack on American naval ships, Central Command says",
+      "link": "https://www.investing.com/news/commodities-news/us-strikes-three-iranian-oil-tankers-after-irgc-attack-on-american-naval-ships-central-command-says-4890210",
+      "pubDate": "2026-09-05T21:00:29.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Greek PM unveils plan to boost incomes ahead of elections",
+      "link": "https://www.investing.com/news/economy-news/greek-pm-unveilsplan-to-boost-incomes-ahead-of-elections-4890230",
+      "pubDate": "2026-09-05T20:24:25.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "UBS: Commodities can add diversification as inflation, geopolitical risks rise",
+      "link": "https://www.investing.com/news/stock-market-news/ubs-commodities-can-add-diversification-as-inflation-geopolitical-risks-rise-4890234",
+      "pubDate": "2026-09-05T19:17:20.000Z",
+      "description": "",
+      "source": "Investing.com"
     },
     {
       "title": "Bitcoin consolidates near $82K resistance: Live levels",
@@ -19,20 +40,6 @@
       "title": "Milei finds unity in pushback against Falkland Islands oil project",
       "link": "https://www.investing.com/news/stock-market-news/milei-finds-unity-in-pushback-against-falkland-islands-oil-project-4890233",
       "pubDate": "2026-09-05T18:36:34.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "US strikes three Iranian oil tankers after IRGC attack on American naval ships, Central Command says",
-      "link": "https://www.investing.com/news/commodities-news/us-strikes-three-iranian-oil-tankers-after-irgc-attack-on-american-naval-ships-central-command-says-4890210",
-      "pubDate": "2026-09-05T18:18:28.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Greek PM unveils plan to boost incomes ahead of elections",
-      "link": "https://www.investing.com/news/economy-news/greek-pm-unveilsplan-to-boost-incomes-ahead-of-elections-4890230",
-      "pubDate": "2026-09-05T18:12:28.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -74,7 +81,7 @@
     {
       "title": "Bank of Canada unveils new vertical $20 bank note",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-unveils-new-vertical-20-bank-note/",
-      "pubDate": "2026-09-05T17:16:16.000Z",
+      "pubDate": "2026-09-05T17:15:18.000Z",
       "description": "Her Excellency the Right Honourable Louise Arbour, Governor General of Canada, and the Honourable Wayne Long, Secretary of State (Canada Revenue Agency and Financial Institutions), joined Bank of Canada Governor Tiff Macklem today at an eve",
       "source": "Bank of Canada"
     },
@@ -89,13 +96,6 @@
       "title": "Bitcoin holds below $80,000 as jobs data lifts Fed hike bets; ETF inflows continue",
       "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-falls-below-80000-as-strong-us-jobs-data-revives-fed-rate-hike-fears-4890184",
       "pubDate": "2026-09-05T16:17:27.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Federal appeals court upholds ban on Trump’s bid to use citizenship data for voter checks",
-      "link": "https://www.investing.com/news/economy-news/federal-appeals-court-upholds-ban-on-trumps-bid-to-use-citizenship-data-for-voter-checks-4890220",
-      "pubDate": "2026-09-05T16:06:33.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -310,6 +310,13 @@
       "source": "FXStreet"
     },
     {
+      "title": "Japanese yen surged this week. Why the rally may not last",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeXVpcl9mVXA5dDNzUTVQbWFucGJOcnJOdDRkVVNNYlgxdFU2eWd6Tm42Wk1zSzRDZHVEdW1xNzdOUVRLT3ZXM0NlUGt6Y28wLUNVaHZtQlJOS1NwOXE4ZWdMQ19hSnNCWWhZd19ITUlERlRqVVdxS3pTSDFQWHZnZDZ4UExiNlctX3RtTG01Rk9GaXc3ODJrdA?oc=5",
+      "pubDate": "2026-09-04T16:37:10.000Z",
+      "description": "Japanese yen surged this week. Why the rally may not last&nbsp;&nbsp;CNBC",
+      "source": "Google News"
+    },
+    {
       "title": "Silver claws back post-NFP losses after briefly crashing below $65",
       "link": "https://www.fxstreet.com/news/silver-claws-back-post-nfp-losses-after-briefly-crashing-below-65-202609041551",
       "pubDate": "2026-09-04T15:51:31.000Z",
@@ -335,6 +342,13 @@
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNYjNuenNBZEFnRFFvQk82SmxjeTV2Yk9DeUlRZzZFT05QdWZmSThJVTdtYkY4RFNQODhXcFdxMWxGV0xta0w4SEFzc3ZXVUtPNlRDcC02Zkdma2hDYXZqNHdmN3FEWHljaG1pdE5fRkZ5dmpXeDlRdmlLbkxIMlB4ZTFNWGhYeDRwSUtKc2tXbktob0JFaFVvU1JiSWlOaUZhVzhxZjF2YkpYTkpOYUE?oc=5",
       "pubDate": "2026-09-04T15:38:40.000Z",
       "description": "Yen's changing fortunes might finally be spooking the bears&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Gold slides after robust US payrolls boost rate hike bets",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNa0hqb2VPQUFuRk45bGpFaXNxaHc4NTVtSTJhcVJWdDNRSjEzbTRXWkhVOHRMVDNBdFNTajFBWTI0Z2RBX09VdTBjbmp4aS1zQkhHaWJWVjFYZmU2Q0J4MnZ2SU1rWXJzSy1ZeFBkTjZPWEY1RTVGREhfbGpVbXV5TFRnNTNBYmhubXZjQzRoY1IyM2RWT29XMw?oc=5",
+      "pubDate": "2026-09-04T15:26:38.000Z",
+      "description": "Gold slides after robust US payrolls boost rate hike bets&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -429,20 +443,6 @@
       "source": "Reuters"
     },
     {
-      "title": "The dollar is overvalued against almost all of the world's currencies: Bannockburn's Marc Chandler",
-      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOUy10dWJweE9CUklQeFFSQ1ItU1M4ZzQwdUlpdF9lYzF5akRHU2dRMXFobnExY2tUYjJXZHZ0a3E4NjVPMm5zTFZ1YTU3eHJGdmQtNTJ6QVRVUmkxcHF3UnNrUmd0SGdJcC1Zc2J1cWg4a1BSbFFUSmhiNmxnV0dzakJaZllha3VUam5FclpiVktIRE42ajJiaEJCOWZUMFFrZldXaUtqNVNZcm1zWW04MWIwUDlyWkVXSVF3MWZDd0ozZ2x0U0hwZF9ScHVlWDl6RW1UTQ?oc=5",
-      "pubDate": "2026-09-04T11:41:00.000Z",
-      "description": "The dollar is overvalued against almost all of the world's currencies: Bannockburn's Marc Chandler&nbsp;&nbsp;CNBC",
-      "source": "Google News"
-    },
-    {
-      "title": "WSJ Dollar Index Falls 0.57% to 95.15",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNeGhlMlRjbHlkdURNaXVuYVo5TDBaaWpjek9LWG9FTzJmXzZTQ1NzcnJJNUE4eXh5cFcwdkV1azhpeG04cGJ6M21YYTJCcHRQNllPc2VDcFNqYk93eDE5ZHBEMkVxbk9hd3lId21iR1ltM2tjdGtseWdiRGRfSjN4NmdGdWZlZlBIemphZzd4RHVkYklxS2NreF8tN2Jrb0txSDRDTGJORWU1RUxlYmFVWVJUZWlsaS1QbTVB?oc=5",
-      "pubDate": "2026-09-04T11:16:59.000Z",
-      "description": "WSJ Dollar Index Falls 0.57% to 95.15&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
       "title": "World Bank Warns Zimbabwe Against Rush to Make ZiG Sole Currency",
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTW9LTEpCOVYzdTg1cHFCdWxQR3R4R2VqSV9SdUQ2bG5SYlFJdmczZlBlVm5kX2ZkTWI2eXFQQTZzbUd3bEhJWnZkaWVMcEd3ZVV3OUoxaTNab3JoNjlBWlZIUjYwTjlvRU1hTDNzQ2hKaDF6dDVEX092VnJxVDN0SzJTbjRubVJSYVJReVpkQTB0bEg3Z1VGVDEyWTNjX2lwdTdaNEtwSWVYempwMGhfSC1mU2R0UQ?oc=5",
       "pubDate": "2026-09-04T11:14:42.000Z",
@@ -520,10 +520,10 @@
       "source": "Reuters"
     },
     {
-      "title": "Gold slides after robust US payrolls boost rate hike bets",
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNa0hqb2VPQUFuRk45bGpFaXNxaHc4NTVtSTJhcVJWdDNRSjEzbTRXWkhVOHRMVDNBdFNTajFBWTI0Z2RBX09VdTBjbmp4aS1zQkhHaWJWVjFYZmU2Q0J4MnZ2SU1rWXJzSy1ZeFBkTjZPWEY1RTVGREhfbGpVbXV5TFRnNTNBYmhubXZjQzRoY1IyM2RWT29XMw?oc=5",
-      "pubDate": "2026-09-04T02:30:00.000Z",
-      "description": "Gold slides after robust US payrolls boost rate hike bets&nbsp;&nbsp;Reuters",
+      "title": "Dollar bounces on job gains, then pares ahead of CPI",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPSUNQZU5RWWN5TXNDaU9CQkIyc1NPTE95RzBLc0lSMGQyRGRnT19DVldpRXF2TEVzYXdKUzRjR1RyNC1KZ3Rka2Z2ZS1HZUhyUkFYLTBYWE1JRXhXSDJBYWV5Tmpkc3psRy1TWHNlZUN1T1hrZnE5TVpkVTlObkdrZWRVSnA5MU41cWVhSEZSNVU2TlBjdG5SbDBSb3BTYTE3SmNGZU5wR3dDVlVDRXFMZkN0SllDUWVh?oc=5",
+      "pubDate": "2026-09-04T01:35:00.000Z",
+      "description": "Dollar bounces on job gains, then pares ahead of CPI&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
