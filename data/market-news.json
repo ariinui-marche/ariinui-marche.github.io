@@ -1,12 +1,33 @@
 {
-  "timestamp": "2026-09-05T23:02:04.776Z",
+  "timestamp": "2026-09-06T00:47:36.345Z",
   "items": [
     {
       "title": "2026-09-06 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-09-05T22:59:01.000Z",
+      "pubDate": "2026-09-06T00:46:01.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "Imperial Petroleum earnings missed, revenue fell short of estimates",
+      "link": "https://www.investing.com/news/earnings/imperial-petroleum-earnings-missed-revenue-fell-short-of-estimates-4890246",
+      "pubDate": "2026-09-06T00:13:20.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Europe’s satellite launch ambitions take off as German rocket reaches orbit",
+      "link": "https://www.investing.com/news/economy-news/europes-satellite-launch-ambitions-take-off-as-german-rocket-reaches-orbit-4890245",
+      "pubDate": "2026-09-06T00:03:34.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Is the latest rebound in the Japanese yen real?",
+      "link": "https://www.investing.com/news/forex-news/is-the-latest-rebound-in-the-japanese-yen-real-4890244",
+      "pubDate": "2026-09-05T23:02:37.000Z",
+      "description": "",
+      "source": "Investing.com"
     },
     {
       "title": "Banksy, Star Wars and JPMorgan Meet in a $1 Billion Museum",
@@ -65,27 +86,6 @@
       "source": "Investing.com"
     },
     {
-      "title": "EOS Climbs 14% In Bullish Trade",
-      "link": "https://www.investing.com/news/cryptocurrency-news/eos-climbs-14-in-bullish-trade-4890229",
-      "pubDate": "2026-09-05T18:01:01.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "UBS sees better bond carry in 3-5 year debt after global selloff",
-      "link": "https://www.investing.com/news/stock-market-news/ubs-sees-better-bond-carry-in-35-year-debt-after-global-selloff-4890225",
-      "pubDate": "2026-09-05T17:50:46.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Americans hit with record-high Labor Day Weekend gasoline prices",
-      "link": "https://www.investing.com/news/commodities-news/americans-hit-with-recordhigh-labor-day-weekend-gasoline-prices-4890194",
-      "pubDate": "2026-09-05T17:48:29.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Japan Vows to Keep Eye on Yen as Inflation Fears Rise",
       "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVnNWQ0dqeXNXZkJrOVRrd0lzMEttb0s2amZVZVFOUGpmSXl1T0RGbVRWNTZHbWdUODUyR1k0SXdlUHRBQ0JmNW1Ed0JVcUkzUnZ0U2l2S3dmMi1uYXpNZnItRklnNEYtY1BjaFg3OHBTUUtpal9vMzQwUVR6Rk1UbmZmX1VkSHlnc0dwRkdXRWg0a19WdV9OaU14TUx1emdaWXJr?oc=5",
       "pubDate": "2026-09-05T17:47:54.000Z",
@@ -102,7 +102,7 @@
     {
       "title": "Bank of Canada unveils new vertical $20 bank note",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-unveils-new-vertical-20-bank-note/",
-      "pubDate": "2026-09-05T17:15:00.000Z",
+      "pubDate": "2026-09-05T17:14:36.000Z",
       "description": "Her Excellency the Right Honourable Louise Arbour, Governor General of Canada, and the Honourable Wayne Long, Secretary of State (Canada Revenue Agency and Financial Institutions), joined Bank of Canada Governor Tiff Macklem today at an eve",
       "source": "Bank of Canada"
     },
@@ -161,6 +161,13 @@
       "pubDate": "2026-09-05T09:32:24.000Z",
       "description": "Ripple CEO Brad Garlinghouse says an $11 billion gold move shows banks still shift value like it is 1940.\nThe post Ripple CEO Slams $11 Billion Gold Move: Can Crypto Do Better? appeared first on BeInCrypto.",
       "source": "BeInCrypto"
+    },
+    {
+      "title": "Yields, dollar rise, stocks ease after solid US jobs report - reuters.com",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9rcFlLejhNNm1fZ1hhM3NvLV8zZTJuOTE5QUVSUVR2V0IxQWpuLUZxVHFmRXpWVHd2OWU0cUR3eW9ZMFZKQnhwcFdrOHBZclNEZkF1X01MYmw4dUZTbU9zWGJPMEJ4N3FXNkY1MHAwSFZWenJGVWM4blVzbw?oc=5",
+      "pubDate": "2026-09-05T02:51:25.000Z",
+      "description": "Yields, dollar rise, stocks ease after solid US jobs report&nbsp;&nbsp;reuters.com",
+      "source": "Reuters"
     },
     {
       "title": "Robinhood Chain Brings Arbitrum Token Back from the Dead. ARB is Up 90%",
@@ -338,10 +345,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "Yen's changing fortunes might finally be spooking the bears",
+      "title": "Yen's changing fortunes might finally be spooking the bears - reuters.com",
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNYjNuenNBZEFnRFFvQk82SmxjeTV2Yk9DeUlRZzZFT05QdWZmSThJVTdtYkY4RFNQODhXcFdxMWxGV0xta0w4SEFzc3ZXVUtPNlRDcC02Zkdma2hDYXZqNHdmN3FEWHljaG1pdE5fRkZ5dmpXeDlRdmlLbkxIMlB4ZTFNWGhYeDRwSUtKc2tXbktob0JFaFVvU1JiSWlOaUZhVzhxZjF2YkpYTkpOYUE?oc=5",
       "pubDate": "2026-09-04T15:38:40.000Z",
-      "description": "Yen's changing fortunes might finally be spooking the bears&nbsp;&nbsp;Reuters",
+      "description": "Yen's changing fortunes might finally be spooking the bears&nbsp;&nbsp;reuters.com",
       "source": "Reuters"
     },
     {
@@ -429,10 +436,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "Dollar deposits push India's forex reserves to fresh record for week ended August 28",
+      "title": "Dollar deposits push India's forex reserves to fresh record for week ended August 28 - reuters.com",
       "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQX3VBUFZ5YXQ5YV9zTnNwblR3V1JxbUlMVjM5Q3pNQi1TdmRhdFFtalYxVTNfMHk4N0ZEcWNTU0U4bzExYm1iRmQ1TG5IVkNlY3lBZV9ESDJwa1NmNUtydmtoRVZ0ajNoM2RqZW9vaEF2blpfbGRIWWFuWVZRclF6MkdjYUo3bmNXcXFURDY4VWdQNTlTZ1lJRmdac3hkSmVXRHJialdGVHdwQ0hSX3BQV002dUdyQ294X0tlVFQ4ZUR6QQ?oc=5",
       "pubDate": "2026-09-04T12:22:27.000Z",
-      "description": "Dollar deposits push India's forex reserves to fresh record for week ended August 28&nbsp;&nbsp;Reuters",
+      "description": "Dollar deposits push India's forex reserves to fresh record for week ended August 28&nbsp;&nbsp;reuters.com",
       "source": "Reuters"
     },
     {
@@ -478,10 +485,10 @@
       "source": "Bank of Japan"
     },
     {
-      "title": "EXCLUSIVE: Chinese banks purchasing Treasuries after wooing dollar deposits, sources say",
+      "title": "EXCLUSIVE: Chinese banks purchasing Treasuries after wooing dollar deposits, sources say - reuters.com",
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTl9McUNSanBsYWhzUDNIQUk5Y2VEOE55RjNQQzZFdW00cFpIZFN3bERyUE1Hcm9qMjVEYzhPbVlUbHdEd2pnSHRmcGt0cy1YaWplbFBnZnJRT1hjcWlsUU9BQU53SmZoRXBDUWtqWGgtMDA5d0pvclFyUTJTRjBCZVRRNEFzVDdabzR4d1RTV05RUEV3dHVEUUtHRzVjMndMMzExRTdKeDQ2d0pjZ1NjWEw3ZG5Ddw?oc=5",
       "pubDate": "2026-09-04T06:35:00.000Z",
-      "description": "EXCLUSIVE: Chinese banks purchasing Treasuries after wooing dollar deposits, sources say&nbsp;&nbsp;Reuters",
+      "description": "EXCLUSIVE: Chinese banks purchasing Treasuries after wooing dollar deposits, sources say&nbsp;&nbsp;reuters.com",
       "source": "Reuters"
     },
     {
@@ -506,24 +513,17 @@
       "source": "Google News"
     },
     {
-      "title": "Yields, dollar rise, stocks ease after solid US jobs report",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9rcFlLejhNNm1fZ1hhM3NvLV8zZTJuOTE5QUVSUVR2V0IxQWpuLUZxVHFmRXpWVHd2OWU0cUR3eW9ZMFZKQnhwcFdrOHBZclNEZkF1X01MYmw4dUZTbU9zWGJPMEJ4N3FXNkY1MHAwSFZWenJGVWM4blVzbw?oc=5",
-      "pubDate": "2026-09-04T02:34:00.000Z",
-      "description": "Yields, dollar rise, stocks ease after solid US jobs report&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Gold slides after robust US payrolls boost rate hike bets",
+      "title": "Gold slides after robust US payrolls boost rate hike bets - reuters.com",
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNa0hqb2VPQUFuRk45bGpFaXNxaHc4NTVtSTJhcVJWdDNRSjEzbTRXWkhVOHRMVDNBdFNTajFBWTI0Z2RBX09VdTBjbmp4aS1zQkhHaWJWVjFYZmU2Q0J4MnZ2SU1rWXJzSy1ZeFBkTjZPWEY1RTVGREhfbGpVbXV5TFRnNTNBYmhubXZjQzRoY1IyM2RWT29XMw?oc=5",
       "pubDate": "2026-09-04T02:30:00.000Z",
-      "description": "Gold slides after robust US payrolls boost rate hike bets&nbsp;&nbsp;Reuters",
+      "description": "Gold slides after robust US payrolls boost rate hike bets&nbsp;&nbsp;reuters.com",
       "source": "Reuters"
     },
     {
-      "title": "Dollar bounces on job gains, then pares ahead of CPI",
+      "title": "Dollar bounces on job gains, then pares ahead of CPI - reuters.com",
       "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPSUNQZU5RWWN5TXNDaU9CQkIyc1NPTE95RzBLc0lSMGQyRGRnT19DVldpRXF2TEVzYXdKUzRjR1RyNC1KZ3Rka2Z2ZS1HZUhyUkFYLTBYWE1JRXhXSDJBYWV5Tmpkc3psRy1TWHNlZUN1T1hrZnE5TVpkVTlObkdrZWRVSnA5MU41cWVhSEZSNVU2TlBjdG5SbDBSb3BTYTE3SmNGZU5wR3dDVlVDRXFMZkN0SllDUWVh?oc=5",
       "pubDate": "2026-09-04T01:35:00.000Z",
-      "description": "Dollar bounces on job gains, then pares ahead of CPI&nbsp;&nbsp;Reuters",
+      "description": "Dollar bounces on job gains, then pares ahead of CPI&nbsp;&nbsp;reuters.com",
       "source": "Reuters"
     },
     {
