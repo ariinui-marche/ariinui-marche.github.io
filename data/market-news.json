@@ -1,45 +1,108 @@
 {
-  "timestamp": "2026-09-06T12:55:47.964Z",
+  "timestamp": "2026-09-06T15:54:05.299Z",
   "items": [
     {
       "title": "2026-09-06 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-09-06T12:54:00.000Z",
+      "pubDate": "2026-09-06T15:45:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "HSBC cuts Carlsberg stock price target on execution concerns",
+      "link": "https://www.investing.com/news/analyst-ratings/hsbc-cuts-carlsberg-stock-price-target-on-execution-concerns-93CH-4890310",
+      "pubDate": "2026-09-06T15:32:43.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "BNP Paribas Exane raises Samsara stock price target on growth",
+      "link": "https://www.investing.com/news/analyst-ratings/bnp-paribas-exane-raises-samsara-stock-price-target-on-growth-93CH-4890308",
+      "pubDate": "2026-09-06T15:26:54.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Brazilian court suspends licenses for Sigma Lithium mine",
+      "link": "https://www.investing.com/news/stock-market-news/brazilian-court-suspends-licenses-for-sigma-lithium-mine-4890307",
+      "pubDate": "2026-09-06T15:12:44.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Bank of Canada unveils new vertical $20 bank note",
+      "link": "https://www.bankofcanada.ca/2026/09/bank-canada-unveils-new-vertical-20-bank-note/",
+      "pubDate": "2026-09-06T14:50:52.000Z",
+      "description": "Her Excellency the Right Honourable Louise Arbour, Governor General of Canada, and the Honourable Wayne Long, Secretary of State (Canada Revenue Agency and Financial Institutions), joined Bank of Canada Governor Tiff Macklem today at an eve",
+      "source": "Bank of Canada"
+    },
+    {
+      "title": "Bitcoin down but holds near $80,000 as corporate buying, U.S. crypto vote in focus",
+      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-trades-near-80000-as-corporate-demand-and-us-crypto-policy-stay-in-focus-4890272",
+      "pubDate": "2026-09-06T14:35:55.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "What is \"The Warsh Shadow Rate\"?",
+      "link": "https://www.investing.com/news/economy-news/what-is-the-warsh-shadow-rate-4890298",
+      "pubDate": "2026-09-06T14:26:09.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Israel cuts fuel tax as gasoline prices hit record high",
+      "link": "https://www.investing.com/news/economy-news/israel-cuts-fuel-tax-as-gasoline-prices-hit-record-high-93CH-4890297",
+      "pubDate": "2026-09-06T14:22:13.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Gulf markets close mixed amid US-Iran tensions",
+      "link": "https://www.investing.com/news/stock-market-news/gulf-markets-close-mixed-amid-usiran-tensions-93CH-4890296",
+      "pubDate": "2026-09-06T14:20:09.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Trump Says Canada’s Dollar ‘Imbalance’ With US Is Unacceptable",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPTlRqWTQwVG5ycG9OZXZnNFMwM2wxTXNNLVFBaEdpdHpCRTZmYXNUMk12eVNHRkJBNGtuZUJuOXhzNnFqeWxpTzdzTWpsRzJSNGI1OHY5eDd2VXBGNTYtaVdIUm9QdDhBckl5THJyaGZxMXdzWTN6cS1FODBQX1pNMTQ1YVQ3Z3d0REdFRHVnUzBVZE1BQVg1eWVDcTFNZk5JQjZBRFQtM1JROFN0Rmp2VQ?oc=5",
+      "pubDate": "2026-09-06T13:22:20.000Z",
+      "description": "Trump Says Canada’s Dollar ‘Imbalance’ With US Is Unacceptable&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "LeBron James Polymarket Deal: Will Prediction Markets Go Mainstream?",
+      "link": "https://beincrypto.com/lebron-james-polymarket-partnership-deal/",
+      "pubDate": "2026-09-06T13:14:41.000Z",
+      "description": "LeBron James backs Polymarket after his DraftKings deal expired, giving prediction markets their biggest sports name yet as legal fights intensify.\nThe post LeBron James Polymarket Deal: Will Prediction Markets Go Mainstream? appeared first",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Investors to pore over inflation data for signals on rate trajectory",
+      "link": "https://www.investing.com/news/economy-news/investors-to-pore-over-inflation-data-for-signals-on-rate-trajectory-4890293",
+      "pubDate": "2026-09-06T13:00:28.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "New Ethereum Upgrade Could Overhaul Crypto Transactions and Fees",
+      "link": "https://beincrypto.com/ethereum-upgrade-eip-8141-seed-phrases/",
+      "pubDate": "2026-09-06T12:46:47.000Z",
+      "description": "A new Ethereum upgrade lets apps pay your gas, bundles 64 actions and opens a path past seed phrases.\nThe post New Ethereum Upgrade Could Overhaul Crypto Transactions and Fees appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Saudi Arabia stocks higher at close of trade; Tadawul All Share up 0.32%",
+      "link": "https://www.investing.com/news/stock-market-news/saudi-arabia-stocks-higher-at-close-of-trade-tadawul-all-share-up-032-4890291",
+      "pubDate": "2026-09-06T12:45:03.000Z",
+      "description": "",
+      "source": "Investing.com"
     },
     {
       "title": "OPEC+ pauses oil output policy steady for October",
       "link": "https://www.investing.com/news/economy-news/opec-set-to-hold-oil-output-policy-steady-for-october--reuters-4890270",
       "pubDate": "2026-09-06T12:36:04.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "SpaceX’s European rival Isar Aerospace plans rapid expansion after first orbital launch",
-      "link": "https://www.investing.com/news/stock-market-news/spacexs-european-rival-isar-aerospace-plans-rapid-expansion-after-first-orbital-launch-93CH-4890288",
-      "pubDate": "2026-09-06T12:15:49.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "China to inject $54 billion into state banks and insurers",
-      "link": "https://www.investing.com/news/stock-market-news/china-to-inject-54-billion-into-state-banks-and-insurers-93CH-4890287",
-      "pubDate": "2026-09-06T12:13:37.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Italy could grow by up to 1% this year, minister says",
-      "link": "https://www.investing.com/news/economy-news/italy-could-grow-by-up-to-1-this-year-minister-says-93CH-4890286",
-      "pubDate": "2026-09-06T12:11:12.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "OPEC+ keeps oil output policy unchanged for October",
-      "link": "https://www.investing.com/news/commodities-news/opec-set-to-keep-oil-output-policy-unchanged-on-sunday-sources-say-4890267",
-      "pubDate": "2026-09-06T12:06:51.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -51,27 +114,6 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Canadians back Carney’s tougher trade stance as U.S. tensions deepen",
-      "link": "https://www.investing.com/news/stock-market-news/canadians-back-carneys-tougher-trade-stance-as-us-tensions-deepen-4890283",
-      "pubDate": "2026-09-06T11:26:08.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Which TSX stocks investors will be watching next week?",
-      "link": "https://www.investing.com/news/stock-market-news/which-tsx-stocks-investors-will-be-watching-next-week-4890282",
-      "pubDate": "2026-09-06T11:22:08.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "The AI Economy: Why cheaper tokens still lead to bigger bills",
-      "link": "https://www.investing.com/news/stock-market-news/the-ai-economy-why-cheaper-tokens-still-lead-to-bigger-bills-4890281",
-      "pubDate": "2026-09-06T11:15:25.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Nike Exits the S&#038;P 100 Index. 4 Tech Stocks Move In",
       "link": "https://beincrypto.com/nike-sp-100-exit-tech-replacements/",
       "pubDate": "2026-09-06T11:14:50.000Z",
@@ -79,25 +121,11 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "InvestingPro Fair Value delivers 64% return on GoodRx in 5 months",
-      "link": "https://www.investing.com/news/investment-ideas/investingpro-fair-value-delivers-64-return-on-goodrx-in-5-months-93CH-4890279",
-      "pubDate": "2026-09-06T11:09:10.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Poland&#039;s Crypto Law Fails a Third Time, Leaving the Only Gap in Europe",
       "link": "https://beincrypto.com/poland-crypto-regulation-failure/",
       "pubDate": "2026-09-06T11:04:39.000Z",
       "description": "Poland remains the only EU member state without a functioning national framework for MiCA, after the Sejm again failed to override President Karol Nawrocki&#8217;s veto of crypto regulation. Friday&#8217;s vote, the third such attempt, fell",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "InvestingPro’s Fair Value spotted Argan overvaluation before 41% drop",
-      "link": "https://www.investing.com/news/investment-ideas/investingpros-fair-value-spotted-argan-overvaluation-before-41-drop-93CH-4890278",
-      "pubDate": "2026-09-06T11:01:41.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Japan Vows to Keep Eye on Yen as Inflation Fears Rise",
@@ -135,13 +163,6 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Bank of Canada unveils new vertical $20 bank note",
-      "link": "https://www.bankofcanada.ca/2026/09/bank-canada-unveils-new-vertical-20-bank-note/",
-      "pubDate": "2026-09-05T17:15:00.000Z",
-      "description": "Her Excellency the Right Honourable Louise Arbour, Governor General of Canada, and the Honourable Wayne Long, Secretary of State (Canada Revenue Agency and Financial Institutions), joined Bank of Canada Governor Tiff Macklem today at an eve",
-      "source": "Bank of Canada"
-    },
-    {
       "title": "US Debt Hit $40 Trillion. So Where Is Bitcoin’s Debasement Trade?",
       "link": "https://beincrypto.com/bitcoin-us-debt-debasement-trade/",
       "pubDate": "2026-09-05T15:19:47.000Z",
@@ -160,20 +181,6 @@
       "link": "https://beincrypto.com/cz-yzi-labs-crypto-winter-investments/",
       "pubDate": "2026-09-05T14:00:00.000Z",
       "description": "CZ expects the YZi Labs deals struck during the crypto winter to perform best. Here is what the fund actually bought.\nThe post CZ Says These 7 Crypto Investments from YZi Labs Will Perform Best appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Cathie Wood Says Most Investors Do Not Appreciate This Critical Crypto Token",
-      "link": "https://beincrypto.com/cathie-wood-layerzero-zro-investors/",
-      "pubDate": "2026-09-05T13:31:57.000Z",
-      "description": "Cathie Wood says most investors miss LayerZero's role in cross-chain messaging, while ARK eyes nine-figure interop revenue.\nThe post Cathie Wood Says Most Investors Do Not Appreciate This Critical Crypto Token appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Solana Co-Founder Slams Robinhood Chain Fees, Calls Congestion Profits &#8216;Brain Dead&#039;",
-      "link": "https://beincrypto.com/solana-founder-robinhood-chain-fees-criticism/",
-      "pubDate": "2026-09-05T12:30:00.000Z",
-      "description": "Solana's Anatoly Yakovenko calls Robinhood Chain fees 'brain dead' and says Arbitrum's rev share could cover the cost.\nThe post Solana Co-Founder Slams Robinhood Chain Fees, Calls Congestion Profits &#8216;Brain Dead&#039; appeared first on",
       "source": "BeInCrypto"
     },
     {
@@ -336,20 +343,6 @@
       "pubDate": "2026-09-04T15:42:27.000Z",
       "description": "Commerzbank’s Commodity Research team, led by Barbara Lambrecht, notes that uncertainty over crude flows through the Strait of Hormuz and conflicting transit data are clouding the outlook for Brent.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Yen's changing fortunes might finally be spooking the bears",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNYjNuenNBZEFnRFFvQk82SmxjeTV2Yk9DeUlRZzZFT05QdWZmSThJVTdtYkY4RFNQODhXcFdxMWxGV0xta0w4SEFzc3ZXVUtPNlRDcC02Zkdma2hDYXZqNHdmN3FEWHljaG1pdE5fRkZ5dmpXeDlRdmlLbkxIMlB4ZTFNWGhYeDRwSUtKc2tXbktob0JFaFVvU1JiSWlOaUZhVzhxZjF2YkpYTkpOYUE?oc=5",
-      "pubDate": "2026-09-04T15:38:40.000Z",
-      "description": "Yen's changing fortunes might finally be spooking the bears&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Gold slides after robust US payrolls boost rate hike bets",
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNa0hqb2VPQUFuRk45bGpFaXNxaHc4NTVtSTJhcVJWdDNRSjEzbTRXWkhVOHRMVDNBdFNTajFBWTI0Z2RBX09VdTBjbmp4aS1zQkhHaWJWVjFYZmU2Q0J4MnZ2SU1rWXJzSy1ZeFBkTjZPWEY1RTVGREhfbGpVbXV5TFRnNTNBYmhubXZjQzRoY1IyM2RWT29XMw?oc=5",
-      "pubDate": "2026-09-04T15:26:38.000Z",
-      "description": "Gold slides after robust US payrolls boost rate hike bets&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "European Central Bank: Dovish hold may follow September hike - Rabobank",
@@ -524,6 +517,13 @@
       "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNQ3FZUThSdWpjTjlEZTNPVHBXN21mQi1Pb1JSWWxvMWtab1JmSllPeS1TUGFoUnBsdUxzSWdmUnJlQlV6R0Roc1JhR1ZKYkZYSXdXRkVpejBTdk4zX1VaLWI5TEVYMTJYUmFrdFVlZkFwTlpCWXMweDRxaDhFVUNYV2FYS3d4MmI3WmJESHF0aC1jRVhKdno1Q3lpVE4xMkpLa1RpSnJmd3BucUgwQzRCZ2RiU0c0cG9mT3hfeg?oc=5",
       "pubDate": "2026-09-03T16:24:00.000Z",
       "description": "Canada Picks Alstom to Build Passenger Railcars in Multibilllion-Dollar Deal&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "Gold Rises 3% As Dollar Weakens, Rate Hike Expectations Fall",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQX0NXcElraVEtN2U4TWRTSVY0WHdpMXRWc1ZFZmJZVlpBZjc0SmZsUlZpU29jSFphc2Jzelc2clhZQXVldmNLQWZtbUlpZzA4ZUtoTUl5RUNmdmRfNGtlYnhWQ0FqcUdNVkFkQURqY2dBSlotZmRLWUVTSW5Rc0YxRkhnd1gtYWxhLXJFQkFlMFJNSHg2VE5naHhKZVNLUy1WWUlfVGdtOThCYUs2WmE5ZDJLUzdzdw?oc=5",
+      "pubDate": "2026-09-03T15:59:21.000Z",
+      "description": "Gold Rises 3% As Dollar Weakens, Rate Hike Expectations Fall&nbsp;&nbsp;Forbes",
       "source": "Google News"
     },
     {
