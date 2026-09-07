@@ -5355,6 +5355,87 @@
       "forecast": "",
       "previous": "",
       "actual": ""
+    },
+    {
+      "title": "BOJ Press Conference",
+      "country": "JPY",
+      "date": "2026-10-30T12:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "ISM Manufacturing PMI",
+      "country": "USD",
+      "date": "2026-11-02T09:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Cash Rate",
+      "country": "AUD",
+      "date": "2026-11-02T21:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "RBA Monetary Policy Statement",
+      "country": "AUD",
+      "date": "2026-11-02T21:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "RBA Rate Statement",
+      "country": "AUD",
+      "date": "2026-11-02T21:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "BOE Monetary Policy Report",
+      "country": "GBP",
+      "date": "2026-11-05T06:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Monetary Policy Summary",
+      "country": "GBP",
+      "date": "2026-11-05T06:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "MPC Official Bank Rate Votes",
+      "country": "GBP",
+      "date": "2026-11-05T06:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Official Bank Rate",
+      "country": "GBP",
+      "date": "2026-11-05T06:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
     }
   ]
 }
