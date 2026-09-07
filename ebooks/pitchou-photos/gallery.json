@@ -1,0 +1,93 @@
+{
+  "categories": [
+    {
+      "title": "Basics + special setup",
+      "images": [
+        "images/basics-special-setup/00.webp",
+        "images/basics-special-setup/01.webp",
+        "images/basics-special-setup/02.webp"
+      ]
+    },
+    {
+      "title": "Breakouts",
+      "images": [
+        "images/breakouts/00.webp",
+        "images/breakouts/01.webp",
+        "images/breakouts/02.webp",
+        "images/breakouts/03.webp",
+        "images/breakouts/04.webp"
+      ]
+    },
+    {
+      "title": "Introduction to storyline",
+      "images": [
+        "images/introduction-to-storyline/00.webp",
+        "images/introduction-to-storyline/01.webp",
+        "images/introduction-to-storyline/02.webp",
+        "images/introduction-to-storyline/03.webp",
+        "images/introduction-to-storyline/04.webp",
+        "images/introduction-to-storyline/05.webp",
+        "images/introduction-to-storyline/06.webp",
+        "images/introduction-to-storyline/07.webp",
+        "images/introduction-to-storyline/08.webp",
+        "images/introduction-to-storyline/09.webp",
+        "images/introduction-to-storyline/10.webp",
+        "images/introduction-to-storyline/11.webp",
+        "images/introduction-to-storyline/12.webp",
+        "images/introduction-to-storyline/13.webp",
+        "images/introduction-to-storyline/14.webp",
+        "images/introduction-to-storyline/15.webp"
+      ]
+    },
+    {
+      "title": "Setups",
+      "images": [
+        "images/setups/00.webp",
+        "images/setups/01.webp",
+        "images/setups/02.webp",
+        "images/setups/03.webp",
+        "images/setups/04.webp",
+        "images/setups/05.webp"
+      ]
+    },
+    {
+      "title": "Trendline storyline example",
+      "images": [
+        "images/trendline-storyline-example/00.webp",
+        "images/trendline-storyline-example/01.webp",
+        "images/trendline-storyline-example/02.webp",
+        "images/trendline-storyline-example/03.webp",
+        "images/trendline-storyline-example/04.webp",
+        "images/trendline-storyline-example/05.webp",
+        "images/trendline-storyline-example/06.webp",
+        "images/trendline-storyline-example/07.webp",
+        "images/trendline-storyline-example/08.webp",
+        "images/trendline-storyline-example/09.webp",
+        "images/trendline-storyline-example/10.webp",
+        "images/trendline-storyline-example/11.webp",
+        "images/trendline-storyline-example/12.webp",
+        "images/trendline-storyline-example/13.webp",
+        "images/trendline-storyline-example/14.webp"
+      ]
+    },
+    {
+      "title": "Weekly and daily storyline examples",
+      "images": [
+        "images/weekly-and-daily-storyline-examples/00.webp",
+        "images/weekly-and-daily-storyline-examples/01.webp",
+        "images/weekly-and-daily-storyline-examples/02.webp",
+        "images/weekly-and-daily-storyline-examples/03.webp",
+        "images/weekly-and-daily-storyline-examples/04.webp",
+        "images/weekly-and-daily-storyline-examples/05.webp",
+        "images/weekly-and-daily-storyline-examples/06.webp",
+        "images/weekly-and-daily-storyline-examples/07.webp",
+        "images/weekly-and-daily-storyline-examples/08.webp",
+        "images/weekly-and-daily-storyline-examples/09.webp",
+        "images/weekly-and-daily-storyline-examples/10.webp",
+        "images/weekly-and-daily-storyline-examples/11.webp",
+        "images/weekly-and-daily-storyline-examples/12.webp",
+        "images/weekly-and-daily-storyline-examples/13.webp"
+      ]
+    }
+  ]
+}

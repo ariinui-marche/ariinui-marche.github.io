@@ -1255,6 +1255,42 @@ async function openEbookReader(book) {
   }
 }
 
+// A "gallery" book has no chapters/prose — just categorized screenshots.
+// Reuses the same fullscreen reader shell (bar + close + image viewer) since
+// the body's <img> click delegation already opens any tapped image, no new
+// wiring needed beyond rendering the category sections themselves.
+async function openGallery(book) {
+  currentBook = book;
+  currentChapters = [];
+  currentChapterIndex = null;
+  const reader = document.getElementById('ebookReader');
+  const body = document.getElementById('ebookReaderBody');
+  document.getElementById('ebookReaderTitle').textContent = book.title;
+  document.getElementById('ebookReaderToc').hidden = true;
+  body.innerHTML = '<div class="ebook-reader-loading">Loading…</div>';
+  reader.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  document.querySelector('.ebook-reader-bar').classList.remove('ebook-reader-bar-hidden');
+
+  try {
+    const galleryUrl = new URL(book.gallery, location.href);
+    const data = await loadJSON(book.gallery);
+    const categories = data?.categories || [];
+    body.innerHTML = categories.map((cat) => `
+      <section class="ebook-gallery-section">
+        <h3 class="ebook-gallery-title">${cat.title}</h3>
+        <div class="ebook-gallery-grid">
+          ${cat.images.map((src) => `<img loading="lazy" src="${new URL(src, galleryUrl).href}" alt="">`).join('')}
+        </div>
+      </section>`).join('') || '<div class="empty-state">No photos yet.</div>';
+  } catch (err) {
+    console.error(err);
+    body.innerHTML = '<div class="empty-state">Could not load this gallery.</div>';
+    return;
+  }
+  body.scrollTop = 0;
+}
+
 function closeEbookReader() {
   saveEbookProgressNow();
   const reader = document.getElementById('ebookReader');
@@ -1295,7 +1331,8 @@ document.getElementById('ebooksShelf').addEventListener('click', (e) => {
   const card = e.target.closest('.ebook-card');
   if (!card) return;
   const book = ebooksCache.find((b) => b.id === card.dataset.id);
-  if (book) openEbookReader(book);
+  if (!book) return;
+  if (book.type === 'gallery') openGallery(book); else openEbookReader(book);
 });
 document.getElementById('ebookReaderClose').addEventListener('click', closeEbookReader);
 document.getElementById('ebookReaderToc').addEventListener('click', showChapterList);

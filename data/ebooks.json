@@ -15,6 +15,30 @@
       "cover": "ebooks/malaysian-snr-strategy-fr/cover.webp",
       "chapters": "ebooks/malaysian-snr-strategy-fr/chapters.json",
       "landscape": true
+    },
+    {
+      "id": "malaysian-snr-10",
+      "title": "Malaysian SNR [1.0]",
+      "author": "Pitchou.FX",
+      "cover": "ebooks/malaysian-snr-10/cover.webp",
+      "chapters": "ebooks/malaysian-snr-10/chapters.json",
+      "landscape": true
+    },
+    {
+      "id": "malaysian-snr-02",
+      "title": "Malaysian SNR 02",
+      "author": "Pitchou.FX",
+      "cover": "ebooks/malaysian-snr-02/cover.webp",
+      "chapters": "ebooks/malaysian-snr-02/chapters.json",
+      "landscape": true
+    },
+    {
+      "id": "pitchou-photos",
+      "title": "PiT Chou — Chart Examples",
+      "author": "Pitchou.FX",
+      "cover": "ebooks/pitchou-photos/cover.webp",
+      "gallery": "ebooks/pitchou-photos/gallery.json",
+      "type": "gallery"
     }
   ]
 }
