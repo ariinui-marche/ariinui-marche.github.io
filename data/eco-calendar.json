@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-07T00:56:07.828Z",
+  "timestamp": "2026-09-07T05:28:56.246Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -4160,6 +4160,15 @@
       "actual": ""
     },
     {
+      "title": "Monetary Policy Report Hearings",
+      "country": "GBP",
+      "date": "2026-09-08T09:15:00-04:00",
+      "impact": "Medium",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
       "title": "Consumer Credit m/m",
       "country": "USD",
       "date": "2026-09-08T15:00:00-04:00",
@@ -4182,7 +4191,7 @@
       "country": "CNY",
       "date": "2026-09-08T21:30:00-04:00",
       "impact": "Low",
-      "forecast": "0.9%",
+      "forecast": "0.8%",
       "previous": "0.5%",
       "actual": ""
     },
@@ -4236,6 +4245,15 @@
       "country": "EUR",
       "date": "2026-09-09T13:00:00-04:00",
       "impact": "Low",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "ECB President Lagarde Speaks",
+      "country": "EUR",
+      "date": "2026-09-09T13:00:00-04:00",
+      "impact": "Medium",
       "forecast": "",
       "previous": "",
       "actual": ""
@@ -4562,6 +4580,15 @@
       "impact": "Medium",
       "forecast": "",
       "previous": "4.3%",
+      "actual": ""
+    },
+    {
+      "title": "ECB President Lagarde Speaks",
+      "country": "EUR",
+      "date": "2026-09-11T10:00:00-04:00",
+      "impact": "Medium",
+      "forecast": "",
+      "previous": "",
       "actual": ""
     },
     {
