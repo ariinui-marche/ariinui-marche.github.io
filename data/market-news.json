@@ -1,17 +1,129 @@
 {
-  "timestamp": "2026-09-06T23:07:25.251Z",
+  "timestamp": "2026-09-07T00:56:07.828Z",
   "items": [
     {
       "title": "2026-09-07 - Banknotes and coins - Access to cash",
       "link": "https://www.snb.ch/en/the-snb/mandates-goals/cash/access-to-cash",
-      "pubDate": "2026-09-06T23:07:00.000Z",
+      "pubDate": "2026-09-07T00:51:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
     },
     {
+      "title": "Euro holds gains above 1.1600 despite robust US jobs data, traders eye ECB rate decision",
+      "link": "https://www.fxstreet.com/news/euro-holds-gains-above-11600-despite-robust-us-jobs-data-traders-eye-ecb-rate-decision-202609070038",
+      "pubDate": "2026-09-07T00:38:45.000Z",
+      "description": "The EUR/USD pair posts modest gains near 1.1615 during the early Asian session on Monday. However, the potential upside for the major pair might be limited amid a stronger-than-expected U.S. August Nonfarm Payrolls (NFP) report. US markets ",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Japan’s August foreign reserves post largest-ever drop after record intervention",
+      "link": "https://www.investing.com/news/economic-indicators/japans-august-foreign-reserves-post-largestever-drop-after-record-intervention-4890332",
+      "pubDate": "2026-09-07T00:31:00.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Takaichi’s reflationist aide projects Bank of Japan rate hike in September",
+      "link": "https://www.investing.com/news/economy-news/takaichis-reflationist-aide-projects-bank-of-japan-rate-hike-in-september-4890331",
+      "pubDate": "2026-09-07T00:30:40.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Oil extends gains after US and Iran strike ships",
+      "link": "https://www.investing.com/news/commodities-news/oil-extends-gains-after-us-and-iran-strike-ships-4890330",
+      "pubDate": "2026-09-07T00:18:30.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Nvidia’s Huang says ‘AGI has arrived’ after OpenAI’s GPT-6 Astra launch",
+      "link": "https://www.investing.com/news/stock-market-news/nvidias-huang-says-agi-has-arrived-after-openais-gpt6-astra-launch-4890329",
+      "pubDate": "2026-09-07T00:16:58.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Amazon cargo plane crash at Miami airport kills five",
+      "link": "https://www.investing.com/news/stock-market-news/amazon-cargo-plane-reportedly-crashes-near-miami-airport-4890316",
+      "pubDate": "2026-09-07T00:00:29.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Foxconn says third quarter to outperform market expectations on AI strength",
+      "link": "https://www.investing.com/news/stock-market-news/foxconn-says-third-quarter-to-outperform-market-expectations-on-ai-strength-4890327",
+      "pubDate": "2026-09-06T23:54:27.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "China injects $54 billion stimulus for financial sector amid fears over sluggish growth",
+      "link": "https://www.fxstreet.com/news/china-injects-54-billion-stimulus-for-financial-sector-amid-fears-over-sluggish-growth-202609062351",
+      "pubDate": "2026-09-06T23:51:06.000Z",
+      "description": "China's Finance Ministry will inject billions into its largest banks and insurers, as Beijing moves to shore up balance sheets and sustain growth in a slowing economy, Bloomberg reported on Sunday.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Monetary Base and the Bank of Japan's Transactions (Aug.)",
+      "link": "http://www.boj.or.jp/en/statistics/boj/other/mbt/mbt2608.pdf",
+      "pubDate": "2026-09-06T23:50:00.000Z",
+      "description": "",
+      "source": "Bank of Japan"
+    },
+    {
+      "title": "Bank of Japan's Transactions with the Government (Aug.)",
+      "link": "http://www.boj.or.jp/en/statistics/boj/other/tseifu/release/2026/seifu2608.pdf",
+      "pubDate": "2026-09-06T23:50:00.000Z",
+      "description": "",
+      "source": "Bank of Japan"
+    },
+    {
+      "title": "Market Operations by the Bank of Japan (Aug.)",
+      "link": "http://www.boj.or.jp/en/statistics/boj/fm/ope/m_release/2026/ope2608.xlsx",
+      "pubDate": "2026-09-06T23:50:00.000Z",
+      "description": "",
+      "source": "Bank of Japan"
+    },
+    {
+      "title": "OPEC+ agrees to keep oil output policy unchanged for October",
+      "link": "https://www.fxstreet.com/news/opec-agrees-to-keep-oil-output-policy-unchanged-for-october-202609062342",
+      "pubDate": "2026-09-06T23:42:44.000Z",
+      "description": "The Organization of Petroleum Exporting Countries and its allies (OPEC+) agreed on Sunday to keep its oil output policy unchanged for October, as the group needs to agree on new quotas before deciding its next output steps.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Australia’s Ingenia rejects $1.4 bln Warburg Pincus buyout bid",
+      "link": "https://www.investing.com/news/stock-market-news/australias-ingenia-rejects-14-bln-warburg-pincus-buyout-bid-4890325",
+      "pubDate": "2026-09-06T23:37:35.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Australian Dollar drifts higher above 0.7200 despite as strong US NFP",
+      "link": "https://www.fxstreet.com/news/australian-dollar-drifts-higher-above-07200-despite-as-strong-us-nfp-202609062335",
+      "pubDate": "2026-09-06T23:35:11.000Z",
+      "description": "The AUD/USD pair gathers strength to around 0.7205 during the early Asian session on Monday. The Australian Dollar (AUD) edges higher against the US Dollar (USD) as China seeks to shore up capital across its financial system. US markets wil",
+      "source": "FXStreet"
+    },
+    {
+      "title": "UK recruiters see first rise in permanent role hiring since 2022",
+      "link": "https://www.investing.com/news/forex-news/uk-recruiters-see-first-rise-in-permanent-role-hiring-since-2022-4890324",
+      "pubDate": "2026-09-06T23:12:25.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
       "title": "At least 5 killed in Amazon Prime Air cargo plane crash in Miami",
       "link": "https://www.investing.com/news/stock-market-news/amazon-prime-air-boeing-767-overruns-runway-at-miami-airport-4890317",
-      "pubDate": "2026-09-06T22:42:29.000Z",
+      "pubDate": "2026-09-06T23:06:51.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "UK finance minister Healey seeks growth through decentralising power",
+      "link": "https://www.investing.com/news/economy-news/uk-finance-minister-healey-seeks-growth-through-decentralising-power-4890323",
+      "pubDate": "2026-09-06T23:06:33.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -37,41 +149,6 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "How to position as France is entering a new political cycle?",
-      "link": "https://www.investing.com/news/stock-market-news/how-to-position-as-france-is-entering-a-new-political-cycle-4890322",
-      "pubDate": "2026-09-06T21:31:16.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Russia stocks lower at close of trade; MOEX Russia Index unchanged",
-      "link": "https://www.investing.com/news/stock-market-news/russia-stocks-lower-at-close-of-trade-moex-russia-index-unchanged-4890321",
-      "pubDate": "2026-09-06T21:20:03.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Eli Lilly’s $100B incretin opportunity: Is more upside coming?",
-      "link": "https://www.investing.com/news/stock-market-news/eli-lillys-100b-incretin-opportunity-is-more-upside-coming-4890320",
-      "pubDate": "2026-09-06T21:19:22.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Goldman sees Cybercab giving Tesla a cost advantage in robotaxis",
-      "link": "https://www.investing.com/news/stock-market-news/goldman-sees-cybercab-giving-tesla-a-cost-advantage-in-robotaxis-4890319",
-      "pubDate": "2026-09-06T21:16:58.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Boeing 767 cargo plane bearing Amazon logo overruns Miami runway, halts flights",
-      "link": "https://www.investing.com/news/stock-market-news/amazon-cargo-plane-reportedly-crashes-near-miami-airport-4890316",
-      "pubDate": "2026-09-06T20:50:36.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Bitcoin Is Backed by Nothing? Peter Schiff Revives Old War",
       "link": "https://beincrypto.com/bitcoin-backing-controversy-peter-schiff/",
       "pubDate": "2026-09-06T20:43:43.000Z",
@@ -93,20 +170,6 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Trump administration focuses on boosting oil output, Wright says",
-      "link": "https://www.investing.com/news/economy-news/trump-administration-focuses-on-boosting-oil-output-wright-says-93CH-4890315",
-      "pubDate": "2026-09-06T19:04:33.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Bitcoin consolidates near $79,955 with overbought signals: Live levels",
-      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-consolidates-at-76200-support-live-levels-93CH-4882214",
-      "pubDate": "2026-09-06T19:02:11.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "McDonald’s India Drama Erupts While Wall Street Targets 24% Stock Rally",
       "link": "https://beincrypto.com/mcdonalds-india-drama-wall-street-rally/",
       "pubDate": "2026-09-06T17:52:20.000Z",
@@ -114,25 +177,11 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "KeyBanc warns Apple’s iPhone 18 launch may be a negative catalyst for shares",
-      "link": "https://www.investing.com/news/stock-market-news/keybanc-warns-apples-iphone-18-launch-may-be-a-negative-catalyst-for-shares-4890314",
-      "pubDate": "2026-09-06T17:05:45.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Hackers Demand $2 Million in Bitcoin from Germany. Berlin Refuses to Pay",
       "link": "https://beincrypto.com/bitcoin-ransom-berlin-rhysida-data-leak/",
       "pubDate": "2026-09-06T16:40:04.000Z",
       "description": "Berlin refused a $2.4 million Bitcoin ransom, so Rhysida published 5.7TB of state data on the dark web.\nThe post Hackers Demand $2 Million in Bitcoin from Germany. Berlin Refuses to Pay appeared first on BeInCrypto.",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Trump administration asks Supreme Court to allow mail ballot limits",
-      "link": "https://www.investing.com/news/economy-news/trump-administration-asks-supreme-court-to-allow-mail-ballot-limits-93CH-4890313",
-      "pubDate": "2026-09-06T16:32:48.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "The US Dollar Has Lost 97% of Its Value Since 1913: Is Bitcoin the Way Out?",
@@ -324,13 +373,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Japanese yen surged this week. Why the rally may not last",
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeXVpcl9mVXA5dDNzUTVQbWFucGJOcnJOdDRkVVNNYlgxdFU2eWd6Tm42Wk1zSzRDZHVEdW1xNzdOUVRLT3ZXM0NlUGt6Y28wLUNVaHZtQlJOS1NwOXE4ZWdMQ19hSnNCWWhZd19ITUlERlRqVVdxS3pTSDFQWHZnZDZ4UExiNlctX3RtTG01Rk9GaXc3ODJrdA?oc=5",
-      "pubDate": "2026-09-04T16:37:10.000Z",
-      "description": "Japanese yen surged this week. Why the rally may not last&nbsp;&nbsp;CNBC",
-      "source": "Google News"
-    },
-    {
       "title": "Silver claws back post-NFP losses after briefly crashing below $65",
       "link": "https://www.fxstreet.com/news/silver-claws-back-post-nfp-losses-after-briefly-crashing-below-65-202609041551",
       "pubDate": "2026-09-04T15:51:31.000Z",
@@ -398,34 +440,6 @@
       "link": "https://www.fxstreet.com/news/united-states-solid-jobs-data-support-steady-fed-commerzbank-202609041436",
       "pubDate": "2026-09-04T14:36:43.000Z",
       "description": "Commerzbank’s Dr. Christoph Balz notes that the U.S. labor market surprised to the upside in August, with Nonfarm Payrolls and private sector jobs both rising strongly while the unemployment rate held at 4.1%. Wage growth continued to slow.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "European Central Bank: September hike path and oil risks – Nomura",
-      "link": "https://www.fxstreet.com/news/european-central-bank-september-hike-path-and-oil-risks-nomura-202609041421",
-      "pubDate": "2026-09-04T14:21:06.000Z",
-      "description": "Nomura’s Global Markets Research team, led by Andrzej Szczepaniak, George Buckley and Josie Anderson, expects the ECB to raise the depo rate by 25bp to 2.50% at the 10 September meeting and then pause.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "\"Lower the rate or I’ll stop trading\": Trump pressures Fed after strong US jobs report",
-      "link": "https://www.fxstreet.com/news/lower-the-rate-or-ill-stop-trading-trump-pressures-fed-after-strong-us-jobs-report-202609041410",
-      "pubDate": "2026-09-04T14:10:55.000Z",
-      "description": "In a post on Truth Social, United States (US) President Donald Trump welcomed the creation of 162K jobs in August, a figure he described as significantly above expectations.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Canadian Dollar: Jobs weakness caps gains against US Dollar - TD Securities",
-      "link": "https://www.fxstreet.com/news/canadian-dollar-jobs-weakness-caps-gains-against-us-dollar-td-securities-202609041406",
-      "pubDate": "2026-09-04T14:06:57.000Z",
-      "description": "TD Securities strategists note that Canada’s softer August labour report, including weaker employment momentum and slower wage growth, is unlikely to materially change the Bank of Canada’s (BoC) assessment of the labour market.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Canadian Dollar slides as Canada sheds 41.7K jobs, US payrolls surge",
-      "link": "https://www.fxstreet.com/news/canadian-dollar-slides-as-canada-sheds-417k-jobs-us-payrolls-surge-202609041400",
-      "pubDate": "2026-09-04T14:00:41.000Z",
-      "description": "USD/CAD accelerates sharply higher on Friday, trading around 1.3850 at the time of writing, up 0.39% on the day.",
       "source": "FXStreet"
     },
     {
@@ -527,6 +541,13 @@
       "source": "Google News"
     },
     {
+      "title": "World’s Unusually High Dollar Exposure Risks Fueling Selloff",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNYWQzQzFfUmVlRlRHQkxaMnM0WC1oamw3eER3VzZVeEtGSExkTHRxOU1mQTdYWFVTYU1QRkZTcW5Xd2xBQVFJMWRUNF9ieXJUTlhyVFlwcHBlbHo5Q2ZZaHdSZnk5MTVmelNMakYyb1c4Q1ZtRWpRSjdoUWJmSmd6bWZrMEx2bGlWNGtabnRnbHRlZXBjRF9aNkRuUS1KMTZ6WW91ZHcwUGE1QlZTTkJldg?oc=5",
+      "pubDate": "2026-09-03T15:42:03.000Z",
+      "description": "World’s Unusually High Dollar Exposure Risks Fueling Selloff&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
       "title": "Homophones – Remarks by Huw Pill",
       "link": "https://www.bankofengland.co.uk/speech/2026/september/remarks-at-the-edinburgh-chamber-of-commerce",
       "pubDate": "2026-09-03T15:00:00.000Z",
@@ -555,13 +576,6 @@
       "source": "Bank of Japan"
     },
     {
-      "title": "Sources of Changes in Current Account Balances (Projections for Sept.)",
-      "link": "http://www.boj.or.jp/en/statistics/boj/fm/juqp/juqp2609.xlsx",
-      "pubDate": "2026-09-02T23:50:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
-    },
-    {
       "title": "2026-09-02 - Press release\t - Federal Council appoints Christoph Ammann as new President of SNB Bank Council",
       "link": "https://www.snb.ch/en/publications/communication/press-releases-restricted/pre_20260902",
       "pubDate": "2026-09-02T10:15:00.000Z",
@@ -574,20 +588,6 @@
       "pubDate": "2026-09-02T09:47:53.000Z",
       "description": "The Bank of Canada today held its target for the overnight rate at 2.25%, with the Bank Rate at 2.5% and the deposit rate at 2.20%.",
       "source": "Bank of Canada"
-    },
-    {
-      "title": "Japanese Government Bonds Held by the Bank of Japan",
-      "link": "http://www.boj.or.jp/en/statistics/boj/other/mei/release/2026/mei260831.xlsx",
-      "pubDate": "2026-09-02T08:00:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
-    },
-    {
-      "title": "Collateral Accepted by the Bank of Japan (End of Aug.)",
-      "link": "http://www.boj.or.jp/en/statistics/boj/other/col/col2608.xlsx",
-      "pubDate": "2026-09-02T08:00:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
     },
     {
       "title": "Boris Vujčić: Listening to households: expectations, behaviour and monetary policy",
