@@ -118,7 +118,9 @@ function computeTrendMomentum(raw) {
 
   const combined = Object.entries(acc)
     .map(([id, v]) => ({ id, name: CURRENCY_NAMES[id], fast: avg(v.fast), slow: avg(v.slow) }))
-    .map((c) => ({ ...c, raw: c.fast + c.slow }));
+    // Fast (SMA50) pondéré plus fort que Slow (SMA200) — sinon le score bouge à peine
+    // d'un rechargement à l'autre sur plusieurs jours (SMA200 quasi figée par nature).
+    .map((c) => ({ ...c, raw: c.fast * 0.7 + c.slow * 0.3 }));
 
   const rawValues = combined.map((c) => c.raw);
   const min = Math.min(...rawValues);
