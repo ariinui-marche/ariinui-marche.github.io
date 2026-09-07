@@ -38,7 +38,8 @@
       "author": "Pitchou.FX",
       "cover": "ebooks/pitchou-photos/cover.webp",
       "gallery": "ebooks/pitchou-photos/gallery.json",
-      "type": "gallery"
+      "type": "gallery",
+      "landscape": true
     }
   ]
 }
