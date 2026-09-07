@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-07T19:48:51.640Z",
+  "timestamp": "2026-09-07T22:17:11.380Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -4029,7 +4029,7 @@
       "country": "JPY",
       "date": "2026-09-07T19:30:00-04:00",
       "impact": "Low",
-      "forecast": "3.9%",
+      "forecast": "3.8%",
       "previous": "3.4%",
       "actual": ""
     },
@@ -4047,7 +4047,7 @@
       "country": "JPY",
       "date": "2026-09-07T19:50:00-04:00",
       "impact": "Low",
-      "forecast": "2.46T",
+      "forecast": "2.48T",
       "previous": "1.40T",
       "actual": ""
     },
@@ -4092,7 +4092,7 @@
       "country": "CNY",
       "date": "2026-09-07T22:03:00-04:00",
       "impact": "Low",
-      "forecast": "795B",
+      "forecast": "805B",
       "previous": "767B",
       "actual": ""
     },
@@ -4101,7 +4101,7 @@
       "country": "CNY",
       "date": "2026-09-07T22:04:00-04:00",
       "impact": "Low",
-      "forecast": "120.1B",
+      "forecast": "118.6B",
       "previous": "112.5B",
       "actual": ""
     },
