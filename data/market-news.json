@@ -1,87 +1,129 @@
 {
-  "timestamp": "2026-09-10T20:59:08.159Z",
+  "timestamp": "2026-09-10T22:56:52.986Z",
   "items": [
     {
-      "title": "Trump’s $5,000 dividend plan draws some Republican skepticism",
-      "link": "https://www.investing.com/news/economy-news/trumps-5000-dividend-plan-draws-some-republican-skepticism-4896744",
-      "pubDate": "2026-09-10T20:42:34.000Z",
+      "title": "AUD/JPY Price Forecast: Yen strength keeps 110.00 in sight",
+      "link": "https://www.fxstreet.com/news/aud-jpy-price-forecast-yen-strength-keeps-11000-in-sight-202609102252",
+      "pubDate": "2026-09-10T22:52:43.000Z",
+      "description": "The Australian Dollar weakens versus the Japanese Yen as risk-appetite shifted sour due to the escalation of the US-Iran conflict, which has broadened to a fight between Yemen’s Houthis vs Saudi Arabia, who fight for control of the Red Sea.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "New Zealand Dollar steadies after two-month low slide",
+      "link": "https://www.fxstreet.com/news/new-zealand-dollar-steadies-after-two-month-low-slide-202609102145",
+      "pubDate": "2026-09-10T21:45:24.000Z",
+      "description": "NZD/USD is clinging to the 0.5800 mark at the start of the Asian session on Friday after dipping to a near two-month low around 0.5797 earlier in the American session.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Texas Stock Exchange captures first primary equity market listings from NYSE",
+      "link": "https://www.investing.com/news/stock-market-news/texas-stock-exchange-captures-first-primary-equity-market-listings-from-nyse-4897004",
+      "pubDate": "2026-09-10T21:43:51.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "After-Hours Movers: ORCL, CRWV, ADBE, ACVA, CPRT, ZUMZ, PMTS, RH",
-      "link": "https://www.investing.com/news/stock-market-news/afterhours-movers-orcl-crwv-adbe-acva-cprt-zumz-pmts-432SI-4896900",
-      "pubDate": "2026-09-10T20:41:02.000Z",
+      "title": "Bitcoin dips to $77.1k as PPI data boosts Fed rate hike bets, oil prices jump",
+      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-down-to-783k-on-iran-jitters-higher-yields-4894954",
+      "pubDate": "2026-09-10T21:43:48.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Modine stock rises on rebranding plans after Gentherm merger",
-      "link": "https://www.investing.com/news/stock-market-news/modine-stock-rises-on-rebranding-plans-after-gentherm-merger-93CH-4896928",
-      "pubDate": "2026-09-10T20:40:51.000Z",
+      "title": "Earnings call transcript: Alliance Entertainment rallies on Q4 2026 growth",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-alliance-entertainment-rallies-on-q4-2026-growth-93CH-4897003",
+      "pubDate": "2026-09-10T21:41:15.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Beyond Air at cantors conference: generation 2 is the focus",
-      "link": "https://www.investing.com/news/transcripts/beyond-air-at-cantors-conference-generation-2-is-the-focus-93CH-4896927",
-      "pubDate": "2026-09-10T20:40:42.000Z",
+      "title": "Nexstar at Goldman Sachs conference: growth bets meet regulatory lift",
+      "link": "https://www.investing.com/news/transcripts/nexstar-at-goldman-sachs-conference-growth-bets-meet-regulatory-lift-93CH-4897002",
+      "pubDate": "2026-09-10T21:38:54.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Structure Therapeutics at Cantor conference: oral obesity push advances",
-      "link": "https://www.investing.com/news/transcripts/structure-therapeutics-at-cantor-conference-oral-obesity-push-advances-93CH-4896926",
-      "pubDate": "2026-09-10T20:40:41.000Z",
+      "title": "Lyft at Goldman Sachs Communacopia + Technology Conference 2026: growth shifts",
+      "link": "https://www.investing.com/news/transcripts/lyft-at-goldman-sachs-communacopia--technology-conference-2026-growth-shifts-93CH-4897001",
+      "pubDate": "2026-09-10T21:37:25.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Oracle ups full year profit guidance, books $30B in quarterly AI cloud contracts",
-      "link": "https://www.investing.com/news/earnings/oracle-raises-full-year-profit-guidance-stock-rises-after-hours-4896781",
-      "pubDate": "2026-09-10T20:40:32.000Z",
+      "title": "PAR Technology at Goldman Sachs Communacopia + Technology Conference 2026: AI push",
+      "link": "https://www.investing.com/news/transcripts/par-technology-at-goldman-sachs-communacopia--technology-conference-2026-ai-push-93CH-4896999",
+      "pubDate": "2026-09-10T21:36:35.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Tonix Pharmaceuticals at Cantor conference: launch gains and pipeline push",
-      "link": "https://www.investing.com/news/transcripts/tonix-pharmaceuticals-at-cantor-conference-launch-gains-and-pipeline-push-93CH-4896925",
-      "pubDate": "2026-09-10T20:40:12.000Z",
+      "title": "Portuguese group D3 sues Meta, TikTok and YouTube over addictive design",
+      "link": "https://www.investing.com/news/stock-market-news/portuguese-group-d3-sues-meta-tiktok-and-youtube-over-addictive-design-4896466",
+      "pubDate": "2026-09-10T21:36:32.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "CVD Equipment exits new system orders, cuts half of workforce",
-      "link": "https://www.investing.com/news/company-news/cvd-equipment-exits-new-system-orders-cuts-half-of-workforce-93CH-4896924",
-      "pubDate": "2026-09-10T20:39:33.000Z",
+      "title": "Earnings call transcript: Zumiez posts Q2 2026 miss as stock sinks after hours",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-zumiez-posts-q2-2026-miss-as-stock-sinks-after-hours-93CH-4896998",
+      "pubDate": "2026-09-10T21:36:15.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Krystal Biotech at Cantor healthcare conference: pipeline gains pace",
-      "link": "https://www.investing.com/news/transcripts/krystal-biotech-at-cantor-healthcare-conference-pipeline-gains-pace-93CH-4896923",
-      "pubDate": "2026-09-10T20:39:30.000Z",
+      "title": "ibex Q4 FY26 slides: AI push drives growth, margins face pressure",
+      "link": "https://www.investing.com/news/company-news/ibex-q4-fy26-slides-ai-push-drives-growth-margins-face-pressure-93CH-4896997",
+      "pubDate": "2026-09-10T21:33:05.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Bitwise Dogecoin ETF Shuts With $722,000 Left: Will Rival Funds Follow?",
-      "link": "https://beincrypto.com/bitwise-dogecoin-etf-liquidation-bwow/",
-      "pubDate": "2026-09-10T20:39:26.000Z",
-      "description": "Bitwise is closing its Dogecoin ETF after net outflows of $1.2 million. Trading ends October 14 and holders get cash.\nThe post Bitwise Dogecoin ETF Shuts With $722,000 Left: Will Rival Funds Follow? appeared first on BeInCrypto.",
+      "title": "COMPASS Pathways at cantor healthcare conference: launch path sharpens",
+      "link": "https://www.investing.com/news/transcripts/compass-pathways-at-cantor-healthcare-conference-launch-path-sharpens-93CH-4896996",
+      "pubDate": "2026-09-10T21:32:38.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Anthropic Says AI Aided Possible Biological Weapons Research",
+      "link": "https://beincrypto.com/anthropic-biological-weapons-report-claude/",
+      "pubDate": "2026-09-10T21:30:00.000Z",
+      "description": "Anthropic blocked biological weapons research on Claude. The scientists moved to a rival model within days.\nThe post Anthropic Says AI Aided Possible Biological Weapons Research appeared first on BeInCrypto.",
       "source": "BeInCrypto"
     },
     {
-      "title": "Editas Medicine at Cantor conference: in vivo CRISPR push advances",
-      "link": "https://www.investing.com/news/transcripts/editas-medicine-at-cantor-conference-in-vivo-crispr-push-advances-93CH-4896921",
-      "pubDate": "2026-09-10T20:38:58.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "WTI blasts past $100 as Red Sea, Hormuz risks collide",
+      "link": "https://www.fxstreet.com/news/wti-blasts-past-100-as-red-sea-hormuz-risks-collide-202609102126",
+      "pubDate": "2026-09-10T21:26:35.000Z",
+      "description": "West Texas Intermediate (WTI), the US crude Oil benchmark, rises more than 7% as attacks in the Middle East intensify, driving WTI above the $ 100-per-barrel barrier for the first time since May 2026. At the time of writing, WTI trades at $",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Former Ripple CTO Makes Surprising XRP Prediction",
+      "link": "https://beincrypto.com/former-ripple-cto-xrp-prediction/",
+      "pubDate": "2026-09-10T20:50:39.000Z",
+      "description": "David Schwartz, the longtime architect of the XRP Ledger and Ripple&#8217;s Chief Technology Officer emeritus, said publicly this week that XRP could one day overtake Bitcoin by market capitalization. Speaking during a recent X Spaces discu",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Bitwise Dogecoin ETF Shuts Down With $722,000 Left: Will Rival Funds Follow?",
+      "link": "https://beincrypto.com/bitwise-dogecoin-etf-liquidation-bwow/",
+      "pubDate": "2026-09-10T20:39:26.000Z",
+      "description": "Bitwise is closing its Dogecoin ETF after net outflows of $1.2 million. Trading ends October 14 and holders get cash.\nThe post Bitwise Dogecoin ETF Shuts Down With $722,000 Left: Will Rival Funds Follow? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Dollar Has Best Day in Two Weeks as PPI, Oil Add to Fed Bets",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPbm55QnlDTlZoMjdfQm9UejZYbDNic3hkOVF0cTBnLXRTSm9jQTFoYldycWdQbXdvRm9YdFNIMHpDSWdSRlZLaWF3QmptcldMUUtCM1dGbTBmdDhYWHVjcF83Ti1xRU1qNjJ5d0NtaHhaVU1lV29JSVR5Ukk3ZGR1U3VLVVlud2YwbVBXczEtNUFRYWswSHByVUZsNUJrZEFnOEJfRk01ejNUOTFjVWhJ?oc=5",
+      "pubDate": "2026-09-10T20:17:45.000Z",
+      "description": "Dollar Has Best Day in Two Weeks as PPI, Oil Add to Fed Bets&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
     },
     {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-09-10T20:15:52.000Z",
+      "pubDate": "2026-09-10T20:16:09.000Z",
       "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
       "source": "Bank of Canada"
     },
@@ -182,13 +224,6 @@
       "pubDate": "2026-09-10T17:21:03.000Z",
       "description": "The European Central Bank (ECB) increased the Deposit Facility Rate to 2.50%, the Refinancing Rate to 2.65% and the Marginal Lending Facility to 2.90%, effective from September 16.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Euro slips as dollar rises after ECB rate hike",
-      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOYU50UmRVNmIyeFBOSmd6azlDeDMxNlh1S0cycHpnYjU4NERYWjhoN2diSmthTngzdWZScmFTdldrTGtUcTh3SDFKbVIySmU2TUx3cnMtOEdKMnFkV3J1d3pYRmdvZDVWb2VPSXNjcG52cEVPTGtLNF9UT1BFSnJ3WlUzOXNuU1FwZmNSdGVTdV9Na1h6M3dPVGVtU0ttYlBlRWc0S1Q0Rl9HSmVCNlZaZXhjMVc0OUduMk1mOGRqVkxjY0d2SGhRbWJsUQ?oc=5",
-      "pubDate": "2026-09-10T16:53:36.000Z",
-      "description": "Euro slips as dollar rises after ECB rate hike&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "Canadian dollar edges lower, bond yields jump as oil tops $100 a barrel",
@@ -310,13 +345,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Dollar Has Best Day in Two Weeks as PPI, Oil Add to Fed Bets",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPbm55QnlDTlZoMjdfQm9UejZYbDNic3hkOVF0cTBnLXRTSm9jQTFoYldycWdQbXdvRm9YdFNIMHpDSWdSRlZLaWF3QmptcldMUUtCM1dGbTBmdDhYWHVjcF83Ti1xRU1qNjJ5d0NtaHhaVU1lV29JSVR5Ukk3ZGR1U3VLVVlud2YwbVBXczEtNUFRYWswSHByVUZsNUJrZEFnOEJfRk01ejNUOTFjVWhJ?oc=5",
-      "pubDate": "2026-09-10T14:23:22.000Z",
-      "description": "Dollar Has Best Day in Two Weeks as PPI, Oil Add to Fed Bets&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
       "title": "Canadian Dollar: Range trade with upside bias against US Dollar – Scotiabank",
       "link": "https://www.fxstreet.com/news/canadian-dollar-range-trade-with-upside-bias-against-us-dollar-scotiabank-202609101421",
       "pubDate": "2026-09-10T14:21:05.000Z",
@@ -329,13 +357,6 @@
       "pubDate": "2026-09-10T14:05:13.000Z",
       "description": "Brown Brothers Harriman's (BBH) Elias Haddad reports that the recent USD/JPY decline has stalled despite hawkish comments from Bank of Japan (BoJ) member Kazuyuki Masu, with markets already pricing a 25 bps hike to 1.25% on September 18.",
       "source": "FXStreet"
-    },
-    {
-      "title": "BTCC Exchange Kicks Off TOKEN2049 Trading Competition with $1M Prize Pool and Tesla Cybertruck Giveaway",
-      "link": "https://beincrypto.com/btcc-exchange-token-2049-trading-competition/",
-      "pubDate": "2026-09-10T14:00:00.000Z",
-      "description": "GEORGE TOWN, Cayman Islands, September 10, 2026 &#8212; BTCC, the world&#8217;s longest-serving cryptocurrency exchange, has launched its &#8220;Trade To Win&#8221; trading competition to celebrate TOKEN2049 Singapore 2026. Featuring a $1,0",
-      "source": "BeInCrypto"
     },
     {
       "title": "Japanese Yen comes under pressure as US PPI data boost US Dollar",
@@ -357,34 +378,6 @@
       "pubDate": "2026-09-10T13:24:07.000Z",
       "description": "Christine Lagarde, President of the European Central Bank (ECB), explains the ECB's decision to raise key rates by 25 basis points (bps) at the September policy meeting and responds to questions from the press.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Gold: Near-term selling may only delay next leg higher - TD Securities",
-      "link": "https://www.fxstreet.com/news/gold-near-term-selling-may-only-delay-next-leg-higher-td-securities-202609101317",
-      "pubDate": "2026-09-10T13:17:08.000Z",
-      "description": "TD Securities’ Ryan McKay and Bart Melek note that Gold is outperforming other precious metals even as higher energy prices and rising Fed hike expectations weigh on the complex.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Lagarde speech: Can't anticipate what will be the next move",
-      "link": "https://www.fxstreet.com/news/lagarde-speech-cant-anticipate-what-will-be-the-next-move-202609101314",
-      "pubDate": "2026-09-10T13:14:22.000Z",
-      "description": "Christine Lagarde, President of the European Central Bank (ECB), explains the ECB's decision to raise key rates by 25 basis points (bps) at the September policy meeting and responds to questions from the press.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "WTI US Oil rebounds toward $97 as US-Iran conflict escalates",
-      "link": "https://www.fxstreet.com/news/wti-us-oil-rebounds-toward-97-as-us-iran-conflict-escalates-202609101306",
-      "pubDate": "2026-09-10T13:06:46.000Z",
-      "description": "West Texas Intermediate (WTI) US Oil rises sharply on Thursday, trading around $97.00 per barrel at the time of writing, up 2.93% on the day.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "2 Chip Stocks Broke Out This Week. Neither Was Nvidia",
-      "link": "https://beincrypto.com/intel-amd-stock-breakout-nvidia-rotation/",
-      "pubDate": "2026-09-10T13:02:13.000Z",
-      "description": "Intel and AMD stock broke key downtrends this week while Nvidia gained 2.12%, as capital rotates inside the AI chip trade.\nThe post 2 Chip Stocks Broke Out This Week. Neither Was Nvidia appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
     },
     {
       "title": "Christine Lagarde, Boris Vujčić: Monetary policy statement (with Q&A)",
@@ -492,10 +485,24 @@
       "source": "Google News"
     },
     {
+      "title": "Dollar ticks higher, euro slips after expected ECB rate increase",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOdTNvLXFNN1ZZclg0akw4R1lJNVAzdGNXd0xIOUZBdXhoVEQySkNlVm9QLUhNQ19MaUt0RDJZM0xhMlpNY1RBZG1xelZGWTFRcXFZdlRTaXFKUjJKeHBSSkNwcDJyQjk0Qjg2Rk8wVGtoaGFmcTVnUlg5Z1hSZ2Fub2tSQXlSU3J5X0ZWRWN2Tkx4a1M5RXp3UWhB0gGfAUFVX3lxTE9XeDVJejYwX0llM0ZqYlZraHRzeVhjc1Z6b3RsOUR3cGMxYUZGbm0way0yem14UXhMN2ZyaVpxZGhXUnNlbFZOeUdva1JZRUxyeDI4RkVySmR2VXNSQmE4djZaNjEzSzFYV2VnbnhKUlJOWUlBWDRBWlZTaGdOUE1LTGV3TlhUb3VpT09EMzdYX0xnVHgxRUYtYUJDeGZmYw?oc=5",
+      "pubDate": "2026-09-10T03:02:00.000Z",
+      "description": "Dollar ticks higher, euro slips after expected ECB rate increase&nbsp;&nbsp;CNBC",
+      "source": "Google News"
+    },
+    {
       "title": "Gold falls over 1% as US inflation data boosts Fed hike bets",
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQU00zRjlwdjRLNzNsRDluVS1Rc0hCVmhNSTc0TThXMVUtMVgyYU1Mc3FVY1p4YlVIX0p2NzhYbEFCSkVUMEhHR2MtTlFRUHZlbXVGNkxINUVSc1FZNVB5S2hGOXdIUzMydEhHSllEcVVqbWM0VHlOajEzeHBQMlY4UW5nUnRNMm5NS1lvR3RYN2E5M1dIV3NMd3VuZDJOZDg2U0cxa1JR?oc=5",
       "pubDate": "2026-09-10T02:56:00.000Z",
       "description": "Gold falls over 1% as US inflation data boosts Fed hike bets&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Dollar rises, euro slips after ECB rate increase",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOYU50UmRVNmIyeFBOSmd6azlDeDMxNlh1S0cycHpnYjU4NERYWjhoN2diSmthTngzdWZScmFTdldrTGtUcTh3SDFKbVIySmU2TUx3cnMtOEdKMnFkV3J1d3pYRmdvZDVWb2VPSXNjcG52cEVPTGtLNF9UT1BFSnJ3WlUzOXNuU1FwZmNSdGVTdV9Na1h6M3dPVGVtU0ttYlBlRWc0S1Q0Rl9HSmVCNlZaZXhjMVc0OUduMk1mOGRqVkxjY0d2SGhRbWJsUQ?oc=5",
+      "pubDate": "2026-09-10T02:07:00.000Z",
+      "description": "Dollar rises, euro slips after ECB rate increase&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -531,13 +538,6 @@
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMnAyYWpRWDFDRmc0NHVQdlNwYjg4cTFfdDRtUDlsQ1FwU1lZRTlCUTVhX0FmcVFjY1c0bVg0SlRYbFRiLUlxa1huYmNPd1BYbHVqQ3M4X1Q1VUFLYkdDWFRqUDM4X0hScDh5cXBMdmRvMXpwdkdvYkhPd2dOcXltcHZmaDRfdFYtMkNOY3BaWmxJVUhFMU9WZGdDR3dGdS1Jd2Q1X3phck9xS0hBRVhlT0N6Qjk?oc=5",
       "pubDate": "2026-09-09T22:34:32.000Z",
       "description": "Bessent Yen Jawboning Risks Raising Expectations BOJ Can’t Meet&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
-      "title": "WSJ Dollar Index Falls 0.06% to 94.85",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSUdiZTg2ZEdMMzR6bHJ0akYyT0NVQWR2U2xFRzZUT1l5aXBoa1pKdS1mVVEtelJ3Y1RYbzBVN2pva1VfdVBtRE04RkM0eHE4ak9kSDdmRzZyckZIX3Z1LXg3Zjgycnc0TkxmR285WUliVEZ4NnhRNnJCM0dwd1c1Yl9NSmh1SWVRdldhTzlmajFKWHV6aXRmVFEtQy1XYndQX25qYkVCa1VxR0RYNWpB?oc=5",
-      "pubDate": "2026-09-09T21:20:00.000Z",
-      "description": "WSJ Dollar Index Falls 0.06% to 94.85&nbsp;&nbsp;WSJ",
       "source": "Google News"
     },
     {
