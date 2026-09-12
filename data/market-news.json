@@ -1,12 +1,103 @@
 {
-  "timestamp": "2026-09-12T11:38:50.231Z",
+  "timestamp": "2026-09-12T14:21:07.635Z",
   "items": [
+    {
+      "title": "The Trillion-Dollar Bright Spot in China’s Economy: Tourism",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNMzhYVVZWMzRyYlZyODdNYjlIYURDOUJOM0ZqOTJhbE1xUlZqM3NfUXY5OXlyRjB2c0NTVF9uWmp0VU5uLWtld3QwQzRKbmstVFUxekVWVmUxMGZ5WEVqaDNpT2FTZGhpbk4yS1AzSXRQUXlJemRvbzRFeVlEZlRyY1NSRzc1VFQ3cm5yY0Z5Z1NFOGF6V1ZIU2FvZV9vY28?oc=5",
+      "pubDate": "2026-09-12T14:16:51.000Z",
+      "description": "The Trillion-Dollar Bright Spot in China’s Economy: Tourism&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "Trump says Iran war likely to end after midterms as Yemen fighting escalates",
+      "link": "https://www.investing.com/news/economy-news/houthis-seize-red-sea-coast-as-saudi-pipeline-shutdown-deepens-oil-risks-4898630",
+      "pubDate": "2026-09-12T13:38:14.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Can AI Build a Startup in 72 Hours? Elon Musk&#039;s Team Will Livestream the Test",
+      "link": "https://beincrypto.com/grok-bot-livestream-72-hour-startup/",
+      "pubDate": "2026-09-12T13:23:38.000Z",
+      "description": "Three SpaceXAI staff will try to build a startup in 72 hours on livestream, testing how far AI agents go.\nThe post Can AI Build a Startup in 72 Hours? Elon Musk&#039;s Team Will Livestream the Test appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Analysis-Houthi advance in Yemen puts U.S. in a new bind",
+      "link": "https://www.investing.com/news/economic-indicators/analysishouthi-advance-in-yemen-puts-us-in-a-new-bind-4898657",
+      "pubDate": "2026-09-12T13:18:36.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Tom Lee Says Crypto Will Be “Really Bullish” For the Next 12 Months",
+      "link": "https://beincrypto.com/tom-lee-crypto-bull-market-prediction/",
+      "pubDate": "2026-09-12T12:47:55.000Z",
+      "description": "Tom Lee says crypto's next 12 months look really bullish. His own firm is $5 billion underwater on ether.\nThe post Tom Lee Says Crypto Will Be “Really Bullish” For the Next 12 Months appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Canadian boycott of US products pushes grocers to adapt, explore new supply sources",
+      "link": "https://www.investing.com/news/stock-market-news/canadian-boycott-of-us-products-pushes-grocers-to-adapt-explore-new-supply-sources-4898644",
+      "pubDate": "2026-09-12T12:19:05.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Nvidia Could Make Anthropic IPO Bigger than SpaceX With $10 Billion",
+      "link": "https://beincrypto.com/nvidia-muscle-anthropic-ipo-beat-spacex/",
+      "pubDate": "2026-09-12T12:02:59.000Z",
+      "description": "Nvidia may put $10 billion behind the Anthropic IPO, but traders give it 57% odds of pricing before November.\nThe post Nvidia Could Make Anthropic IPO Bigger than SpaceX With $10 Billion appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Saudis shut down oil pipeline as Houthis tighten grip on Red Sea shipping",
+      "link": "https://www.investing.com/news/commodities-news/saudis-shut-down-oil-pipeline-as-houthis-tighten-grip-on-red-sea-shipping-4898593",
+      "pubDate": "2026-09-12T11:36:26.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Carlyle group director David Rubenstein sells $17.1m in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/carlyle-group-director-david-rubenstein-sells-171m-in-shares-93CH-4898652",
+      "pubDate": "2026-09-12T11:15:58.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "How Fair Value spotted Mercury General’s 76% rally in advance",
+      "link": "https://www.investing.com/news/investment-ideas/how-fair-value-spotted-mercury-generals-76-rally-in-advance-93CH-4898651",
+      "pubDate": "2026-09-12T11:09:02.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "how Fair Value analysis predicted Fervo Energy’s 47% decline",
+      "link": "https://www.investing.com/news/investment-ideas/how-fair-value-analysis-predicted-fervo-energys-47-decline-93CH-4898648",
+      "pubDate": "2026-09-12T11:01:46.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Citi sees Fed delivering \"a dovish hike\" next week",
+      "link": "https://www.investing.com/news/economy-news/citi-sees-fed-delivering-a-dovish-hike-next-week-4898646",
+      "pubDate": "2026-09-12T10:57:57.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
     {
       "title": "Wall Street’s Tokenized Stock Rush Is Getting Messy",
       "link": "https://beincrypto.com/tokenized-stocks-wall-street-onchain/",
       "pubDate": "2026-09-12T10:56:31.000Z",
       "description": "At Geneva&#8217;s Onchain Leaders Gathering, BeInCrypto moderated a discussion on the infrastructure needed to bring capital markets onchain. Experts from Zama, G-20 Group, Blobb.io, and Rex Change argued that tokenization now faces a harde",
       "source": "BeInCrypto"
+    },
+    {
+      "title": "BRICS agrees to joint declaration in test of unity despite Mideast tensions",
+      "link": "https://www.investing.com/news/commodities-news/brics-agrees-on-joint-declaration-before-new-delhi-summit-sources-say-4898638",
+      "pubDate": "2026-09-12T10:42:27.000Z",
+      "description": "",
+      "source": "Investing.com"
     },
     {
       "title": "SKY7 and Fintech Amigo Combine Expertise to Launch IBAN Cloud",
@@ -23,6 +114,13 @@
       "source": "BeInCrypto"
     },
     {
+      "title": "Trump says Iran probably responsible for attack on Saudi pipeline",
+      "link": "https://www.investing.com/news/commodities-news/trump-says-iran-probably-responsible-for-attack-on-saudi-pipeline-4898645",
+      "pubDate": "2026-09-12T10:24:26.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
       "title": "Christine Lagarde: Europe seen from Normandy",
       "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp260912~fafa4b35b0.en.html",
       "pubDate": "2026-09-12T10:15:00.000Z",
@@ -30,81 +128,11 @@
       "source": "European Central Bank"
     },
     {
-      "title": "Fastly CTO Artur Bergman sells $203,613 in FSLY stock",
-      "link": "https://www.investing.com/news/insider-trading-news/fastly-cto-artur-bergman-sells-203613-in-fsly-stock-93CH-4898642",
-      "pubDate": "2026-09-12T09:31:11.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Toro 18 Holdings LLC sells $602k in Universal Electronics shares",
-      "link": "https://www.investing.com/news/insider-trading-news/toro-18-holdings-llc-sells-602k-in-universal-electronics-shares-93CH-4898641",
-      "pubDate": "2026-09-12T09:31:07.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Global industrial SVP Claudia Hughes acquires $3,966 in company stock",
-      "link": "https://www.investing.com/news/insider-trading-news/global-industrial-svp-claudia-hughes-acquires-3966-in-company-stock-93CH-4898640",
-      "pubDate": "2026-09-12T09:31:01.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Revolut Confirms Sending Passport and Bitcoin Records to Fake Government Email",
       "link": "https://beincrypto.com/revolut-data-breach-fake-government-request/",
       "pubDate": "2026-09-12T09:20:43.000Z",
       "description": "Revolut confirms a fake government email pulled customer data, including passports and Bitcoin records.\nThe post Revolut Confirms Sending Passport and Bitcoin Records to Fake Government Email appeared first on BeInCrypto.",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Marzetti Co strategic advisor sells $100,512 in common stock",
-      "link": "https://www.investing.com/news/insider-trading-news/marzetti-co-strategic-advisor-sells-100512-in-common-stock-93CH-4898639",
-      "pubDate": "2026-09-12T09:16:10.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "BRICS agrees on joint declaration before New Delhi summit, sources say",
-      "link": "https://www.investing.com/news/commodities-news/brics-agrees-on-joint-declaration-before-new-delhi-summit-sources-say-4898638",
-      "pubDate": "2026-09-12T09:12:26.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "How Europeans save — and why it matters for the economy",
-      "link": "https://www.investing.com/news/economy-news/how-europeans-save-matters-for-the-broader-economy-4898637",
-      "pubDate": "2026-09-12T08:43:19.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Sharon Binnun sells $221,995 in Heritage Insurance stock",
-      "link": "https://www.investing.com/news/insider-trading-news/sharon-binnun-sells-221995-in-heritage-insurance-stock-93CH-4898636",
-      "pubDate": "2026-09-12T08:16:07.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "PTC Therapeutics director Schmertzler sells $1.35m in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/ptc-therapeutics-director-schmertzler-sells-135m-in-stock-93CH-4898635",
-      "pubDate": "2026-09-12T08:16:05.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Ford to recall about 223,500 US vehicles over fuel tank issues",
-      "link": "https://www.investing.com/news/stock-market-news/ford-to-recall-about-223500-us-vehicles-over-fuel-tank-issues-4898631",
-      "pubDate": "2026-09-12T08:00:26.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Lagarde enters French election debate as ECB exit speculation grows",
-      "link": "https://www.investing.com/news/economy-news/lagarde-enters-french-election-debate-as-ecb-exit-speculation-grows-4898633",
-      "pubDate": "2026-09-12T07:58:03.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Meloni sees Italy 2026 growth at 1%, matching euro zone",
@@ -158,7 +186,7 @@
     {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-09-11T20:54:04.000Z",
+      "pubDate": "2026-09-11T20:54:17.000Z",
       "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
       "source": "Bank of Canada"
     },
@@ -247,6 +275,13 @@
       "source": "FXStreet"
     },
     {
+      "title": "Morgan Stanley Favors Trade With Yen Weakening to 163 per Dollar",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQXzNRNGNCQlh0UFJ5cllUdDdyS1hKaXpzYVhxZFR2ZC1SWWE1MTFyYTBaZDZLcm5pSG92Yld6LWpNdThjdG5ucVFUdEdRRXdKSUpPN3JYeGpETlNOckhmZDAxRWtDa0xyM0NZZlpNdVJodWNYMzNQbjdfZ2dONjhCWmpVRWg5VlQ3bEhfUlFoWDVRcmczdVRlYTJ5Y0RkYjQ1bkQ5M3hpT1cxc3Aydmtubm9qNlFTQQ?oc=5",
+      "pubDate": "2026-09-11T18:12:05.000Z",
+      "description": "Morgan Stanley Favors Trade With Yen Weakening to 163 per Dollar&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
       "title": "Zoomex Highlights Copy Trading Hub As ZWTC 2026 Championship Opens",
       "link": "https://beincrypto.com/zoomex-zwtc-2026-copy-trading-hub/",
       "pubDate": "2026-09-11T18:11:39.000Z",
@@ -268,13 +303,6 @@
       "source": "Reuters"
     },
     {
-      "title": "Fed Rate Hike Odds Near 90%. Where Did It Go Wrong For Trump’s Economy?",
-      "link": "https://beincrypto.com/fed-rate-hike-odds-trump-warsh/",
-      "pubDate": "2026-09-11T17:32:09.000Z",
-      "description": "Fed rate hike odds near 87% after hot core CPI data. Warsh has delivered zero cuts since replacing Powell as chair.\nThe post Fed Rate Hike Odds Near 90%. Where Did It Go Wrong For Trump’s Economy? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Gold price dodges CPI shock as US yields hand bulls lifeline",
       "link": "https://www.fxstreet.com/news/gold-price-dodges-cpi-shock-as-us-yields-hand-bulls-lifeline-202609111731",
       "pubDate": "2026-09-11T17:31:20.000Z",
@@ -287,13 +315,6 @@
       "pubDate": "2026-09-11T17:00:00.000Z",
       "description": "",
       "source": "European Central Bank"
-    },
-    {
-      "title": "Crypto Trader Gains $10 Million with Aggressive HODL Strategy",
-      "link": "https://beincrypto.com/stonk-crypto-trader-10-million-hodl-strategy/",
-      "pubDate": "2026-09-11T16:59:09.000Z",
-      "description": "A crypto trader known as Point Farm Capital has turned a bet on the Solana-based meme coin STONK into more than $10 million in profit by sticking to an aggressive hold strategy. According to on-chain analytics from Lookonchain, the trader n",
-      "source": "BeInCrypto"
     },
     {
       "title": "ECB rate hike gives Euro little to work with as Pound holds firm",
@@ -322,13 +343,6 @@
       "pubDate": "2026-09-11T16:02:34.000Z",
       "description": "West Texas Intermediate (WTI) Oil comes under heavy selling pressure on Friday as traders lock in profits following a sharp rally that pushed the US benchmark to its highest level since May 21. At the time of writing, WTI trades around $96.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Samsung Gets $250 For Every iPhone Duo You Buy",
-      "link": "https://beincrypto.com/apple-samsung-iphone-duo-folding-screen-deal/",
-      "pubDate": "2026-09-11T15:45:16.000Z",
-      "description": "Apple pays Samsung about $250 per iPhone Duo screen under a three-year exclusive deal with no rival supplier.\nThe post Samsung Gets $250 For Every iPhone Duo You Buy appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
     },
     {
       "title": "British Pound shakes off US CPI jolt as UK growth steals spotlight",
@@ -415,13 +429,6 @@
       "source": "Google News"
     },
     {
-      "title": "Agencies seek comment on proposed third-party risk management guidance and issue statement on community bank engagement with core service providers",
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260911a.htm",
-      "pubDate": "2026-09-11T14:00:00.000Z",
-      "description": "Agencies seek comment on proposed third-party risk management guidance and issue statement on community bank engagement with core service providers",
-      "source": "Federal Reserve"
-    },
-    {
       "title": "Polish Zloty: Dovish stance leaves PLN vulnerable against Euro – ING",
       "link": "https://www.fxstreet.com/news/polish-zloty-dovish-stance-leaves-pln-vulnerable-against-euro-ing-202609111343",
       "pubDate": "2026-09-11T13:43:02.000Z",
@@ -485,13 +492,6 @@
       "source": "Swiss National Bank"
     },
     {
-      "title": "WSJ Dollar Index Falls 0.68% This Week to 95.24",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPUWgyaUdzaDV5TFdtMGhXaFg3aGZtTGNUMW9SanUxNURRLW04a1NPWHVDR2JSTE1rdHNBZHFfWGx2VXdHRWZrYkI2dDJzREd3aDlYcnZxMWI5UGJvaXZiandmSXhMRXlSR2prVUtXN3pNT0h2ak04ZlRMVGthTnZDcGtucEo0eFk3bVNwOTFPUkc0MjBqQm44dHNWNHFZcG43MmpTUlh0R1c4U1BlSXlRZ3hQWnMtOWc?oc=5",
-      "pubDate": "2026-09-11T06:44:47.000Z",
-      "description": "WSJ Dollar Index Falls 0.68% This Week to 95.24&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
       "title": "Dollar edges higher against Swiss franc after U.S. inflation data",
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNUmd2RVVkOGlfUnlBMXFWMmtrTWlHY2lncVdKWjZ1OVE5R2xaU0dZRHdXdEVpbVNwM256RlpKVEZWXzk0cjZGeHQ1dHgtdmdmenJydjRvX1ByUzBES2VOX0NZSHNfQVlzaVFZRE9vY01Ma0l6dWMyV3NHZk5DX3h1bXhVOVFnQWRZZmdDc3p0S0ZTM0otRXUtOXQyZ1psZ9IBowFBVV95cUxNeklNQy1vU2pWRW53U0dnRjI5ZWhaZ1phTUtkZTRaaTJwa1VsQ1Q1Z1VQVE16Q3JyOG1lUTNQcG56Wkh6RTJsUUdKaDRHT1lha2JZVHczRk9hUGVucUMyYjdhZXkwQ1RXVnVIZlJKNTg0VWpaajVvbUtpa24xWmJ1cXcwdEpya1h0aGoxQmI4cExiVzNlanJDcmEybnB3WWxLNk9V?oc=5",
       "pubDate": "2026-09-11T05:11:06.000Z",
@@ -513,13 +513,6 @@
       "source": "Reuters"
     },
     {
-      "title": "Yen Rally Puts Global Stocks on Watch for Carry Trade Unwind",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOQ01TU2thNS1ETEpYamdxRHBXNmZ1STZDNmNSV3Z1czNpbFRHMlkzd0luUjVEVC1GaXhuWXNVc2lDcFBGMVFmQnFkLVZrRmJTRlVPYW5zUEJvMjducVpjTWRkNndPbHg3VHVxX2g1bGc0djltaUpqNElsZmR0eWhPR0JVTllZZkpuMXRaWlplTFlRS2VsbFFWd3RsaDhYZEtNQVBiWDU2Sll0U2pHc1k1Sg?oc=5",
-      "pubDate": "2026-09-11T01:16:00.000Z",
-      "description": "Yen Rally Puts Global Stocks on Watch for Carry Trade Unwind&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
       "title": "Central Bank Digital Currency Experiments: Progress Report on the Pilot Program (June 2026)",
       "link": "http://www.boj.or.jp/en/paym/digital/dig260911a.pdf",
       "pubDate": "2026-09-11T01:00:00.000Z",
@@ -539,13 +532,6 @@
       "pubDate": "2026-09-10T23:50:00.000Z",
       "description": "",
       "source": "Bank of Japan"
-    },
-    {
-      "title": "Agencies reduce regulatory burden for community banks, increase eligibility for 18-month exam cycle",
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260910a.htm",
-      "pubDate": "2026-09-10T20:00:00.000Z",
-      "description": "Agencies reduce regulatory burden for community banks, increase eligibility for 18-month exam cycle",
-      "source": "Federal Reserve"
     },
     {
       "title": "Christine Lagarde, Boris Vujčić: Monetary policy statement (with Q&A)",
@@ -618,13 +604,6 @@
       "source": "Swiss National Bank"
     },
     {
-      "title": "Federal Reserve Board announces termination of enforcement actions with United Texas Bank, Quontic Bank Acquisition Corp., and Quontic Bank Holdings Corp.",
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260904a.htm",
-      "pubDate": "2026-09-04T15:00:00.000Z",
-      "description": "Federal Reserve Board announces termination of enforcement actions with United Texas Bank, Quontic Bank Acquisition Corp., and Quontic Bank Holdings Corp.",
-      "source": "Federal Reserve"
-    },
-    {
       "title": "The institutional form of independent central banks: from history to contemporary challenges - speech by Andrew Bailey",
       "link": "https://www.bankofengland.co.uk/speech/2026/september/andrew-bailey-keynote-speech-at-lse-trium-anniversary-conference",
       "pubDate": "2026-09-04T08:50:00.000Z",
@@ -674,6 +653,13 @@
       "source": "Federal Reserve"
     },
     {
+      "title": "Warsh, In Our Time",
+      "link": "https://www.federalreserve.gov/newsevents/speech/warsh20260828a.htm",
+      "pubDate": "2026-08-28T14:00:00.000Z",
+      "description": "Speech At “Financial Innovation: Implications for Payments and Policy,” an economic policy symposium sponsored by the Federal Reserve Bank of Kansas City, Jackson Hole, Wyoming",
+      "source": "Federal Reserve"
+    },
+    {
       "title": "Delay to the November 2026 RTGS standards release",
       "link": "https://www.bankofengland.co.uk/news/2026/august/delay-to-the-november-2026-rtgs-standards-release",
       "pubDate": "2026-08-27T13:16:29.000Z",
@@ -688,6 +674,13 @@
       "source": "Bank of England"
     },
     {
+      "title": "Cook, Outlook for the U.S. and Alaskan Economies",
+      "link": "https://www.federalreserve.gov/newsevents/speech/cook20260805a.htm",
+      "pubDate": "2026-08-05T20:05:00.000Z",
+      "description": "Speech At the 2026 Economic Luncheon of the Anchorage Economic Development Corporation, Anchorage, Alaska",
+      "source": "Federal Reserve"
+    },
+    {
       "title": "G7 2026 Cross-Border Coordination Exercise (CBCE)",
       "link": "https://www.bankofcanada.ca/2026/07/g7-2026-cross-border-coordination-exercise-cbce/",
       "pubDate": "2026-07-31T09:30:53.000Z",
@@ -700,6 +693,13 @@
       "pubDate": "2026-07-27T10:00:38.000Z",
       "description": "The Bank of Canada today published its 2027 schedule for policy interest rate announcements and the release of the quarterly Monetary Policy Report.",
       "source": "Bank of Canada"
+    },
+    {
+      "title": "Jefferson, Navigating Economic Shocks: A Monetary Policymaker’s Perspective",
+      "link": "https://www.federalreserve.gov/newsevents/speech/jefferson20260716a.htm",
+      "pubDate": "2026-07-16T23:00:00.000Z",
+      "description": "Speech At the Stanford Institute for Economic Policy Research, Stanford University, Stanford, California",
+      "source": "Federal Reserve"
     }
   ]
 }
