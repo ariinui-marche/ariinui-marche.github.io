@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-13T17:37:28.164Z",
+  "timestamp": "2026-09-13T19:44:13.095Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -5181,7 +5181,7 @@
       "country": "USD",
       "date": "2026-09-16T14:00:00-04:00",
       "impact": "High",
-      "forecast": "",
+      "forecast": "3.75%",
       "previous": "3.75%",
       "actual": ""
     },
