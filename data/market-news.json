@@ -1,12 +1,96 @@
 {
-  "timestamp": "2026-09-13T21:43:04.359Z",
+  "timestamp": "2026-09-13T23:31:35.800Z",
   "items": [
+    {
+      "title": "Iran says commercial vessel struck in Strait of Hormuz",
+      "link": "https://www.fxstreet.com/news/iran-says-commercial-vessel-struck-in-strait-of-hormuz-202609132306",
+      "pubDate": "2026-09-13T23:06:53.000Z",
+      "description": "Iranian state media claimed an Iranian commercial vessel was struck in the Strait of Hormuz on Saturday, killing one person, amid an ongoing conflicts between the United States (US) and Iran for control over the crucial energy chokepoint, C",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Diplomacy stumbles with postponement of meeting on Strait of Hormuz proposal",
+      "link": "https://www.investing.com/news/commodities-news/diplomacy-stumbles-with-postponement-of-meeting-on-strait-of-hormuz-proposal-4898762",
+      "pubDate": "2026-09-13T23:06:29.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Anthropic tells investors it will be profitable for second straight quarter, FT reports",
+      "link": "https://www.investing.com/news/stock-market-news/anthropic-tells-investors-it-will-be-profitable-for-second-straight-quarter-ft-reports-4898761",
+      "pubDate": "2026-09-13T23:00:29.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Bitcoin Faces 87% Fed Hike Odds Wednesday: Will Treasury Save the Rally?",
+      "link": "https://beincrypto.com/bitcoin-fed-rate-hike-odds-wednesday/",
+      "pubDate": "2026-09-13T23:00:00.000Z",
+      "description": "Traders price an 87% chance of a Fed rate hike Wednesday as Caitlin Long argues Treasury now holds the real power.\nThe post Bitcoin Faces 87% Fed Hike Odds Wednesday: Will Treasury Save the Rally? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Oman meeting between Gulf states and Iran delayed — Reuters",
+      "link": "https://www.fxstreet.com/news/oman-meeting-between-gulf-states-and-iran-delayed-reuters-202609132229",
+      "pubDate": "2026-09-13T22:29:21.000Z",
+      "description": "Omani Foreign Minister Badr Albusaidi said that a meeting in Oman between ‌Gulf countries and Iran to discuss possible agreements on the Strait of Hormuz, which had been scheduled for Monday, ‌has been postponed, Reuters reported on Sunday.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Oil prices jump more than $3 after new strikes on Saudi, Strait of Hormuz",
+      "link": "https://www.investing.com/news/commodities-news/oil-prices-jump-more-than-3-after-new-strikes-on-saudi-strait-of-hormuz-4898759",
+      "pubDate": "2026-09-13T22:24:25.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Charles Hoskinson Says AI Has Destroyed The Old Crypto Growth Metric",
+      "link": "https://beincrypto.com/hoskinson-ai-crypto-developer-count-metric/",
+      "pubDate": "2026-09-13T22:00:00.000Z",
+      "description": "Charles Hoskinson says AI made developer counts meaningless, driving Midnight's pivot from developers to builders.\nThe post Charles Hoskinson Says AI Has Destroyed The Old Crypto Growth Metric appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Bitcoin little changed at $77k as rate pressure clashes with diversification case",
+      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-slips-to-77200-as-rate-pressure-clashes-with-diversification-case-4898694",
+      "pubDate": "2026-09-13T21:59:53.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Russia stocks lower at close of trade; MOEX Russia Index down 1.21%",
+      "link": "https://www.investing.com/news/stock-market-news/russia-stocks-lower-at-close-of-trade-moex-russia-index-down-121-4898756",
+      "pubDate": "2026-09-13T21:20:02.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Definium to present phase 3 anxiety disorder trial results Monday",
+      "link": "https://www.investing.com/news/company-news/definium-to-present-phase-3-anxiety-disorder-trial-results-monday-93CH-4898754",
+      "pubDate": "2026-09-13T21:04:38.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
     {
       "title": "Nvidia Gets the AI Hype. Dell Gets the Billionaire Fortune",
       "link": "https://beincrypto.com/michael-dell-net-worth-passes-bezos/",
       "pubDate": "2026-09-13T21:00:00.000Z",
       "description": "Michael Dell's net worth hits $276.5 billion, beating Bezos and Nvidia's Jensen Huang. His 40% stake explains why.\nThe post Nvidia Gets the AI Hype. Dell Gets the Billionaire Fortune appeared first on BeInCrypto.",
       "source": "BeInCrypto"
+    },
+    {
+      "title": "Wall Street’s AI trade on watch as Altman, Musk join calls for slowing development",
+      "link": "https://www.investing.com/news/stock-market-news/wall-streets-ai-trade-on-watch-as-altman-musk-join-calls-for-slowing-development-4898752",
+      "pubDate": "2026-09-13T20:27:59.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "New attacks in Hormuz and Saudi test nerves as war’s spread worsens oil disruption",
+      "link": "https://www.investing.com/news/commodities-news/new-report-of-attack-on-strait-of-hormuz-shipping-fans-fears-of-threats-to-oil-supplies-4898701",
+      "pubDate": "2026-09-13T20:18:27.000Z",
+      "description": "",
+      "source": "Investing.com"
     },
     {
       "title": "Kevin O&#039;Leary&#039;s New Investment Is Not Bitcoin or Stocks",
@@ -26,20 +110,6 @@
       "title": "Trump says he is lifting tariffs on Irish whiskey",
       "link": "https://www.investing.com/news/stock-market-news/trump-says-he-is-lifting-tariffs-on-irish-whiskey-4898747",
       "pubDate": "2026-09-13T18:00:28.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Trump calls $5,000 payouts ’easy’ to fit into federal budget",
-      "link": "https://www.investing.com/news/economy-news/ahead-of-fed-meeting-trump-says-us-should-have-worlds-lowest-interest-rate-4898742",
-      "pubDate": "2026-09-13T17:48:28.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Trump reiterates support for united Ireland, says won’t talk about Scotland ’yet’",
-      "link": "https://www.investing.com/news/economy-news/trump-reiterates-support-for-united-ireland-says-wont-talk-about-scotland-yet-4898746",
-      "pubDate": "2026-09-13T17:24:29.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -65,53 +135,11 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Anthropic selects Nasdaq for IPO, Business Insider reports",
-      "link": "https://www.investing.com/news/stock-market-news/anthropic-selects-nasdaq-for-ipo-business-insider-reports-4898744",
-      "pubDate": "2026-09-13T16:24:26.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Will Secretary Scott Bessent fire his bazooka to avert yields climbing above 5%?",
-      "link": "https://www.investing.com/news/economy-news/will-secretary-scott-bessent-fire-his-bazooka-to-avert-yields-climbing-above-5-4898743",
-      "pubDate": "2026-09-13T16:19:42.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-09-13T16:06:25.000Z",
+      "pubDate": "2026-09-13T16:06:07.000Z",
       "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
       "source": "Bank of Canada"
-    },
-    {
-      "title": "S&P Dow Jones Indices loosens Canadian index inclusion criteria",
-      "link": "https://www.investing.com/news/stock-market-news/sp-dow-jones-indicesloosens-canadian-index-inclusion-criteria-4898741",
-      "pubDate": "2026-09-13T16:00:32.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "New attacks in Hormuz and Saudi test nerves as war’s spread worsens oil disruption",
-      "link": "https://www.investing.com/news/commodities-news/new-report-of-attack-on-strait-of-hormuz-shipping-fans-fears-of-threats-to-oil-supplies-4898701",
-      "pubDate": "2026-09-13T15:36:41.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Canadian boycott of US products pushes grocers to adapt, explore new supply sources",
-      "link": "https://www.investing.com/news/stock-market-news/canadian-boycott-of-us-products-pushes-grocers-to-adapt-explore-new-supply-sources-4898644",
-      "pubDate": "2026-09-13T15:18:27.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Central banks should favor market inflation expectations when setting policy - UBS",
-      "link": "https://www.investing.com/news/economy-news/central-banks-should-favor-market-inflation-expectations-when-setting-policy--ubs-4898740",
-      "pubDate": "2026-09-13T15:05:33.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Morgan Stanley Gives Huge Stock Market Crash Warning in 30 Days",
@@ -149,25 +177,11 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Why Are AI Rivals Suddenly Agreeing to Slow Down and Why Russia Says No",
-      "link": "https://beincrypto.com/ai-slowdown-dmitriev-altman-musk-amodei/",
-      "pubDate": "2026-09-13T05:45:44.000Z",
-      "description": "Altman, Musk and Amodei back an AI slowdown after 700 agents hacked Hugging Face. Kirill Dmitriev says no.\nThe post Why Are AI Rivals Suddenly Agreeing to Slow Down and Why Russia Says No appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Speculators turn net long on yen for first time since February - reuters.com",
       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPSVh0SVo5eDhlZlBSX1U5RVFnWTM5Wk5PWWs5WENsOWhOMTBCN0pQcVhiN2tXS1NSaUNHZjNFbnFRSWFEUThieVQ3NjR6NXp1NnBDN2xBbzBIQ3ktZHpmanpKc3FSM3dQQzVPZ2F5X2UyVTFpUEtSVHM2ZUF3a3NhZmhWWTJpRHpGcWUwOFVyYS0wODJ0Wmw5UWszYlRxVDZwQWpURVpjRUdWWEx4ZFFZ?oc=5",
       "pubDate": "2026-09-13T03:07:00.000Z",
       "description": "Speculators turn net long on yen for first time since February&nbsp;&nbsp;reuters.com",
       "source": "Reuters"
-    },
-    {
-      "title": "US Housing Market Is Breaking. Will It Impact Stocks and Bitcoin Prices?",
-      "link": "https://beincrypto.com/american-housing-crisis-home-seller-surplus-buyers-vanish/",
-      "pubDate": "2026-09-13T02:00:00.000Z",
-      "description": "The US home seller surplus hit a record 58% in August. Buyer numbers, not a listings flood, drove the widest gap yet.\nThe post US Housing Market Is Breaking. Will It Impact Stocks and Bitcoin Prices? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
     },
     {
       "title": "Christine Lagarde: Interview with Ouest-France",
@@ -422,13 +436,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "US UoM Consumer Sentiment Index is seen at 47.8 in September",
-      "link": "https://www.fxstreet.com/news/us-uom-consumer-sentiment-index-is-seen-at-478-in-september-202609111405",
-      "pubDate": "2026-09-11T14:05:04.000Z",
-      "description": "American consumer confidence is expected to lose some traction in September, as households have been growing more pessimistic about current conditions and the broader economic outlook, according to preliminary data from the University of Mi",
-      "source": "FXStreet"
-    },
-    {
       "title": "Europe is still waiting for a trillion-dollar company. Here’s PitchBook’s frontrunner",
       "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBHclBySXBJTzdPYzFBMEFYblFsYjJFTkV6V0NQamNFRWk4cXBzdFVPQzY4ajdCNVpiVHgtdS1yRFFDLUltTXpiS1RYaHU3YXFBMVRsRDA3V0hDaVk2VmtJU3J2OUFZZGZvblJxdHJyMkt1YlZQQ29iWlVhWHBOUQ?oc=5",
       "pubDate": "2026-09-11T14:03:44.000Z",
@@ -441,13 +448,6 @@
       "pubDate": "2026-09-11T14:00:00.000Z",
       "description": "Agencies seek comment on proposed third-party risk management guidance and issue statement on community bank engagement with core service providers",
       "source": "Federal Reserve"
-    },
-    {
-      "title": "Polish Zloty: Dovish stance leaves PLN vulnerable against Euro – ING",
-      "link": "https://www.fxstreet.com/news/polish-zloty-dovish-stance-leaves-pln-vulnerable-against-euro-ing-202609111343",
-      "pubDate": "2026-09-11T13:43:02.000Z",
-      "description": "ING’s Frantisek Taborsky notes that the National Bank of Poland maintained a dovish stance, signalling no need to adjust rates potentially until mid-next year despite rising inflation.",
-      "source": "FXStreet"
     },
     {
       "title": "India Forex Reserves Jump to Record $785.7 Billion on Flows",

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-13T21:43:04.359Z",
+  "timestamp": "2026-09-13T23:31:35.800Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -5561,6 +5561,15 @@
       "impact": "Low",
       "forecast": "0.2%",
       "previous": "0.2%",
+      "actual": ""
+    },
+    {
+      "title": "FOMC Member Schmid Speaks",
+      "country": "USD",
+      "date": "2026-09-18T11:45:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "",
       "actual": ""
     },
     {
