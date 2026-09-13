@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-13T19:44:13.095Z",
+  "timestamp": "2026-09-13T21:43:04.359Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -4781,6 +4781,15 @@
       "actual": ""
     },
     {
+      "title": "ECB President Lagarde Speaks",
+      "country": "EUR",
+      "date": "2026-09-14T11:15:00-04:00",
+      "impact": "Medium",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
       "title": "New Home Prices m/m",
       "country": "CNY",
       "date": "2026-09-14T21:30:00-04:00",
@@ -5181,7 +5190,7 @@
       "country": "USD",
       "date": "2026-09-16T14:00:00-04:00",
       "impact": "High",
-      "forecast": "3.75%",
+      "forecast": "4.00%",
       "previous": "3.75%",
       "actual": ""
     },
@@ -5492,6 +5501,33 @@
       "actual": ""
     },
     {
+      "title": "Eurogroup Meetings",
+      "country": "EUR",
+      "date": "2026-09-18T06:15:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "ECOFIN Meetings",
+      "country": "EUR",
+      "date": "2026-09-18T06:15:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "ECB President Lagarde Speaks",
+      "country": "EUR",
+      "date": "2026-09-18T06:30:00-04:00",
+      "impact": "Medium",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
       "title": "Capacity Utilization Rate",
       "country": "USD",
       "date": "2026-09-18T09:15:00-04:00",
@@ -5525,6 +5561,15 @@
       "impact": "Low",
       "forecast": "0.2%",
       "previous": "0.2%",
+      "actual": ""
+    },
+    {
+      "title": "ECOFIN Meetings",
+      "country": "EUR",
+      "date": "2026-09-19T06:15:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "",
       "actual": ""
     },
     {
