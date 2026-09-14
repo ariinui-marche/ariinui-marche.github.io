@@ -1,26 +1,124 @@
 {
-  "timestamp": "2026-09-13T23:31:35.800Z",
+  "timestamp": "2026-09-14T01:28:38.462Z",
   "items": [
+    {
+      "title": "WTI rebounds toward nearly four-month highs after Saudi pipeline shutdown",
+      "link": "https://www.fxstreet.com/news/wti-rebounds-toward-nearly-four-month-highs-after-saudi-pipeline-shutdown-202609140124",
+      "pubDate": "2026-09-14T01:24:00.000Z",
+      "description": "West Texas Intermediate (WTI) oil price rebounds after falling nearly 4% in the previous trading day, hovering around $99.40 per barrel during Asian hours on Monday.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "British Pound consolidates above 1.3500 vs USD ahead of this week's UK data, Fed, BoE",
+      "link": "https://www.fxstreet.com/news/british-pound-consolidates-above-13500-vs-usd-ahead-of-this-weeks-uk-data-fed-boe-202609140119",
+      "pubDate": "2026-09-14T01:19:13.000Z",
+      "description": "The GBP/USD pair struggles to capitalize on Friday's bounce from the vicinity of the monthly swing low and consolidates above the 1.3500 psychological mark at the start of a new week.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "PBOC sets USD/CNY reference rate at 6.7698 vs. 6.7743 previous",
+      "link": "https://www.fxstreet.com/news/pboc-sets-usd-cny-reference-rate-at-67698-vs-67743-previous-202609140115",
+      "pubDate": "2026-09-14T01:15:27.000Z",
+      "description": "On Monday, the People’s Bank of China (PBOC) sets the USD/CNY central rate for the trading session ahead at 6.7698 compared to Friday's fix of 6.7743 and 6.7083 Reuters estimate.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Trump calls $5,000 payouts ’easy’ to fit into federal budget",
+      "link": "https://www.investing.com/news/economy-news/ahead-of-fed-meeting-trump-says-us-should-have-worlds-lowest-interest-rate-4898742",
+      "pubDate": "2026-09-14T01:00:57.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Bank of Japan Accounts (September 10)",
+      "link": "http://www.boj.or.jp/en/statistics/boj/other/acmai/release/2026/ac260910.htm",
+      "pubDate": "2026-09-14T01:00:00.000Z",
+      "description": "",
+      "source": "Bank of Japan"
+    },
+    {
+      "title": "Kennedy Center on brink of bankruptcy, could close as early as Tuesday, Washington Post reports",
+      "link": "https://www.investing.com/news/stock-market-news/kennedy-center-on-brink-of-bankruptcy-could-close-as-early-as-tuesday-washington-post-reports-4898776",
+      "pubDate": "2026-09-14T00:54:50.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Shares skid in Asia as oil rises, rate hikes loom",
+      "link": "https://www.investing.com/news/stock-market-news/shares-slip-in-asia-as-oil-climbs-rate-hikes-loom-4898763",
+      "pubDate": "2026-09-14T00:48:52.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "’Musk’ director wants viewers to reclaim power from ’tech oligarchs’",
+      "link": "https://www.investing.com/news/economy-news/musk-director-wants-viewers-to-reclaim-power-from-tech-oligarchs-4898782",
+      "pubDate": "2026-09-14T00:48:32.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Euro softens below 1.1600 as markets price in Fed rate hike",
+      "link": "https://www.fxstreet.com/news/euro-softens-below-11600-as-markets-price-in-fed-rate-hike-202609140047",
+      "pubDate": "2026-09-14T00:47:22.000Z",
+      "description": "The EUR/USD pair declines to near 1.1585 during the early Asian session on Monday. The pair extends the decline amid aggressive Federal Reserve (Fed) rate-hike bets following hotter US inflation reports. Traders brace for the Fed interest r",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Amazon to pause operations with 21Air after deadly crash",
+      "link": "https://www.investing.com/news/stock-market-news/amazon-to-pause-operations-with-21air-after-deadly-crash-4898781",
+      "pubDate": "2026-09-14T00:42:39.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Dollar steady, yen near 7-month high ahead of Fed, BOJ meetings",
+      "link": "https://www.investing.com/news/economy-news/dollar-steady-yen-near-7month-high-ahead-of-fed-boj-meetings-4898780",
+      "pubDate": "2026-09-14T00:30:24.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "U.S. stock futures slide on calls to slow AI development, M.East escalation",
+      "link": "https://www.investing.com/news/stock-market-news/us-stock-futures-slide-on-calls-to-slow-ai-development-meast-escalation-4898779",
+      "pubDate": "2026-09-14T00:26:04.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Anthropic tells investors it will post second straight quarterly profit - FT",
+      "link": "https://www.investing.com/news/stock-market-news/anthropic-tells-investors-it-will-post-second-straight-quarterly-profit--ft-4898778",
+      "pubDate": "2026-09-14T00:26:02.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Oil prices jump over 3% on more M.East action, Hormuz meeting delay",
+      "link": "https://www.investing.com/news/commodities-news/oil-prices-jump-over-3-on-more-meast-action-hormuz-meeting-delay-4898772",
+      "pubDate": "2026-09-13T23:48:44.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Australian Dollar declines to near 0.7150 as hot US inflation data boost case for Fed rate hike",
+      "link": "https://www.fxstreet.com/news/australian-dollar-declines-to-near-07150-as-hot-us-inflation-data-boost-case-for-fed-rate-hike-202609132339",
+      "pubDate": "2026-09-13T23:39:47.000Z",
+      "description": "The AUD/USD pair edges lower to around 0.7160 during the early Asian session on Monday. Stronger-than-expected US inflation reports provide some support to the US Dollar (USD) against the Australian Dollar (AUD). All eyes will be on the US ",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Michael Dell’s DFO Management nears take-private deal for Baldwin Insurance Group, FT reports",
+      "link": "https://www.investing.com/news/stock-market-news/michael-dells-dfo-management-nears-takeprivate-deal-for-baldwin-insurance-group-ft-reports-4898767",
+      "pubDate": "2026-09-13T23:30:49.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
     {
       "title": "Iran says commercial vessel struck in Strait of Hormuz",
       "link": "https://www.fxstreet.com/news/iran-says-commercial-vessel-struck-in-strait-of-hormuz-202609132306",
       "pubDate": "2026-09-13T23:06:53.000Z",
       "description": "Iranian state media claimed an Iranian commercial vessel was struck in the Strait of Hormuz on Saturday, killing one person, amid an ongoing conflicts between the United States (US) and Iran for control over the crucial energy chokepoint, C",
       "source": "FXStreet"
-    },
-    {
-      "title": "Diplomacy stumbles with postponement of meeting on Strait of Hormuz proposal",
-      "link": "https://www.investing.com/news/commodities-news/diplomacy-stumbles-with-postponement-of-meeting-on-strait-of-hormuz-proposal-4898762",
-      "pubDate": "2026-09-13T23:06:29.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Anthropic tells investors it will be profitable for second straight quarter, FT reports",
-      "link": "https://www.investing.com/news/stock-market-news/anthropic-tells-investors-it-will-be-profitable-for-second-straight-quarter-ft-reports-4898761",
-      "pubDate": "2026-09-13T23:00:29.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Bitcoin Faces 87% Fed Hike Odds Wednesday: Will Treasury Save the Rally?",
@@ -37,39 +135,11 @@
       "source": "FXStreet"
     },
     {
-      "title": "Oil prices jump more than $3 after new strikes on Saudi, Strait of Hormuz",
-      "link": "https://www.investing.com/news/commodities-news/oil-prices-jump-more-than-3-after-new-strikes-on-saudi-strait-of-hormuz-4898759",
-      "pubDate": "2026-09-13T22:24:25.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Charles Hoskinson Says AI Has Destroyed The Old Crypto Growth Metric",
       "link": "https://beincrypto.com/hoskinson-ai-crypto-developer-count-metric/",
       "pubDate": "2026-09-13T22:00:00.000Z",
       "description": "Charles Hoskinson says AI made developer counts meaningless, driving Midnight's pivot from developers to builders.\nThe post Charles Hoskinson Says AI Has Destroyed The Old Crypto Growth Metric appeared first on BeInCrypto.",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Bitcoin little changed at $77k as rate pressure clashes with diversification case",
-      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-slips-to-77200-as-rate-pressure-clashes-with-diversification-case-4898694",
-      "pubDate": "2026-09-13T21:59:53.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Russia stocks lower at close of trade; MOEX Russia Index down 1.21%",
-      "link": "https://www.investing.com/news/stock-market-news/russia-stocks-lower-at-close-of-trade-moex-russia-index-down-121-4898756",
-      "pubDate": "2026-09-13T21:20:02.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Definium to present phase 3 anxiety disorder trial results Monday",
-      "link": "https://www.investing.com/news/company-news/definium-to-present-phase-3-anxiety-disorder-trial-results-monday-93CH-4898754",
-      "pubDate": "2026-09-13T21:04:38.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Nvidia Gets the AI Hype. Dell Gets the Billionaire Fortune",
@@ -79,39 +149,11 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Wall Street’s AI trade on watch as Altman, Musk join calls for slowing development",
-      "link": "https://www.investing.com/news/stock-market-news/wall-streets-ai-trade-on-watch-as-altman-musk-join-calls-for-slowing-development-4898752",
-      "pubDate": "2026-09-13T20:27:59.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "New attacks in Hormuz and Saudi test nerves as war’s spread worsens oil disruption",
-      "link": "https://www.investing.com/news/commodities-news/new-report-of-attack-on-strait-of-hormuz-shipping-fans-fears-of-threats-to-oil-supplies-4898701",
-      "pubDate": "2026-09-13T20:18:27.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Kevin O&#039;Leary&#039;s New Investment Is Not Bitcoin or Stocks",
       "link": "https://beincrypto.com/kevin-oleary-sports-cards-bitcoin/",
       "pubDate": "2026-09-13T20:00:00.000Z",
       "description": "Kevin O'Leary's investment play now points at sports cards, not Bitcoin. He wants 5% of his portfolio in them.\nThe post Kevin O&#039;Leary&#039;s New Investment Is Not Bitcoin or Stocks appeared first on BeInCrypto.",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Bitcoin stalls at $77,338 between key support and resistance: Live",
-      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-trapped-in-775k822k-range-live-levels-93CH-4890481",
-      "pubDate": "2026-09-13T19:02:21.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Trump says he is lifting tariffs on Irish whiskey",
-      "link": "https://www.investing.com/news/stock-market-news/trump-says-he-is-lifting-tariffs-on-irish-whiskey-4898747",
-      "pubDate": "2026-09-13T18:00:28.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "New Tesla Roadster Uses SpaceX Tech. Will It Impact the Stock Price?",
@@ -137,7 +179,7 @@
     {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-09-13T16:06:07.000Z",
+      "pubDate": "2026-09-13T16:06:25.000Z",
       "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
       "source": "Bank of Canada"
     },
@@ -177,10 +219,10 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Speculators turn net long on yen for first time since February - reuters.com",
+      "title": "Speculators turn net long on yen for first time since February",
       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPSVh0SVo5eDhlZlBSX1U5RVFnWTM5Wk5PWWs5WENsOWhOMTBCN0pQcVhiN2tXS1NSaUNHZjNFbnFRSWFEUThieVQ3NjR6NXp1NnBDN2xBbzBIQ3ktZHpmanpKc3FSM3dQQzVPZ2F5X2UyVTFpUEtSVHM2ZUF3a3NhZmhWWTJpRHpGcWUwOFVyYS0wODJ0Wmw5UWszYlRxVDZwQWpURVpjRUdWWEx4ZFFZ?oc=5",
       "pubDate": "2026-09-13T03:07:00.000Z",
-      "description": "Speculators turn net long on yen for first time since February&nbsp;&nbsp;reuters.com",
+      "description": "Speculators turn net long on yen for first time since February&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -198,17 +240,10 @@
       "source": "European Central Bank"
     },
     {
-      "title": "Meloni sees Italy 2026 growth at 1%, matching euro zone - reuters.com",
+      "title": "Meloni sees Italy 2026 growth at 1%, matching euro zone",
       "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQallZcGJiQW1wU1JNa1ljd3FBNDdMNFF4c1NjaDBZMlo0aWt1MUkySGVPMHNHVjBqajctUkpvS1g1TnJvcDg2OGZXMElDd2Q4OXpfSnpvVlprdlhUOGJleU9NVVpGVS1CTm9qQVd3azloS2J1eXBUVER5cU56SGtkUFlvNktFMW9wTmlRdTJGTndSQzZVaGc3dF9DUQ?oc=5",
       "pubDate": "2026-09-12T07:27:43.000Z",
-      "description": "Meloni sees Italy 2026 growth at 1%, matching euro zone&nbsp;&nbsp;reuters.com",
-      "source": "Reuters"
-    },
-    {
-      "title": "Gold rises on dip-buying even as Fed rate hike bets rise after US inflation data - reuters.com",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOMk9xQnh0dkJvU0VUbjhfa0E5ZHhmb21sU1k4RWktNC0tdERMUlFyb05jamhUa0p0dUEwejVJbHlUaWp6VnZuUEJrc0ZmYzBMM1RwaUp0SUdWWXBiU2pRVUF4ZlRsQk1fVmY2MUlTcTFFV3RjSnQzSE5UUHdKWHJYcV9YaUVmZ01PVnVUWHI0MzU4dnJja25CTmpxc3N4STVOb1E?oc=5",
-      "pubDate": "2026-09-11T23:53:51.000Z",
-      "description": "Gold rises on dip-buying even as Fed rate hike bets rise after US inflation data&nbsp;&nbsp;reuters.com",
+      "description": "Meloni sees Italy 2026 growth at 1%, matching euro zone&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -219,18 +254,18 @@
       "source": "FXStreet"
     },
     {
+      "title": "WSJ Dollar Index Falls 0.13% This Week to 95.12 - wsj.com",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZ0x3QndyWGtvYzFuVTNHUWs2SFBQR1ZtUEpqUFczdV9wZWZHVVZnaFFyeWJsTDFoTFBjTnUxT0l1bkxYM2JjVHdUVkdlOTc4QUw3VTVHaTlRQVREUDE2ZVl4UXpMVFV2bGx2d3JRYnBIRDUxSmJtUDduUVZDYVd6Y0ZzWUNFcmhFaHJreGM3TVcxbDlBZ1dpU1hWNnNDZFB6aEZOdDFXTklRYkhCbnJDSmFYVlE?oc=5",
+      "pubDate": "2026-09-11T21:21:00.000Z",
+      "description": "WSJ Dollar Index Falls 0.13% This Week to 95.12&nbsp;&nbsp;wsj.com",
+      "source": "Google News"
+    },
+    {
       "title": "Singapore Dollar: Downside bias capped with 1.2705 against US Dollar – UOB",
       "link": "https://www.fxstreet.com/news/singapore-dollar-downside-bias-capped-with-12705-against-us-dollar-uob-202609112121",
       "pubDate": "2026-09-11T21:21:00.000Z",
       "description": "United Overseas Bank (UOB) strategists Quek Ser Leang and Lee Sue Ann note that USD/SGD has rebounded strongly, with short-term momentum pointing higher but key resistance at 1.2705 expected to limit gains.",
       "source": "FXStreet"
-    },
-    {
-      "title": "WSJ Dollar Index Falls 0.13% This Week to 95.12",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZ0x3QndyWGtvYzFuVTNHUWs2SFBQR1ZtUEpqUFczdV9wZWZHVVZnaFFyeWJsTDFoTFBjTnUxT0l1bkxYM2JjVHdUVkdlOTc4QUw3VTVHaTlRQVREUDE2ZVl4UXpMVFV2bGx2d3JRYnBIRDUxSmJtUDduUVZDYVd6Y0ZzWUNFcmhFaHJreGM3TVcxbDlBZ1dpU1hWNnNDZFB6aEZOdDFXTklRYkhCbnJDSmFYVlE?oc=5",
-      "pubDate": "2026-09-11T21:21:00.000Z",
-      "description": "WSJ Dollar Index Falls 0.13% This Week to 95.12&nbsp;&nbsp;WSJ",
-      "source": "Google News"
     },
     {
       "title": "USD/CHF Price Forecast: Bulls break 0.8150 as CPI fuels Fed bets",
@@ -282,10 +317,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "Football Players Are Leveraging NIL Paydays to Buy Million-Dollar Homes",
+      "title": "Football Players Are Leveraging NIL Paydays to Buy Million-Dollar Homes - wsj.com",
       "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOSzY4Q3JlNVBDeHNmRHkyc2VuSTdQZ3ljMkFlOU9DckF3R2EwY2F5bTZ4V1NCWGdCOGs2OEIwTDZlS2FNdTN6LTBVUkpYc3NnY2pzWnh5cWw4MnpadGxqN2dDUmNpSVJERlFlQ0RnN0RjRXBSUUhQY3BwVDUycE1VcG5SWmFQWjRCMmRlSzJBWXJLeXdIc1NpaDl3LTMzLVhjYnRERUhybXQtZF9fT3VZYXFmWWRpVGZmUDI2cTdDcmIyQTQ?oc=5",
       "pubDate": "2026-09-11T19:25:00.000Z",
-      "description": "Football Players Are Leveraging NIL Paydays to Buy Million-Dollar Homes&nbsp;&nbsp;WSJ",
+      "description": "Football Players Are Leveraging NIL Paydays to Buy Million-Dollar Homes&nbsp;&nbsp;wsj.com",
       "source": "Google News"
     },
     {
@@ -401,41 +436,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Japan: BoJ tightening path in focus – ING",
-      "link": "https://www.fxstreet.com/news/japan-boj-tightening-path-in-focus-ing-202609111436",
-      "pubDate": "2026-09-11T14:36:16.000Z",
-      "description": "ING economists Deepali Bhargava and Lynn Song expect the Bank of Japan to raise its policy rate by 25bp to 1.25%, citing persistent price pressures. They project two further 25bp hikes in January and April 2027, taking the rate to 1.75%.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Swiss Franc struggles even as US Dollar gives back CPI-led gains",
-      "link": "https://www.fxstreet.com/news/swiss-franc-struggles-even-as-us-dollar-gives-back-cpi-led-gains-202609111435",
-      "pubDate": "2026-09-11T14:35:32.000Z",
-      "description": "USD/CHF holds onto gains on Friday even as the US Dollar (USD) turns lower following the release of the latest United States (US) Consumer Price Index (CPI) report, which strengthened expectations that the Federal Reserve (Fed) could raise ",
-      "source": "FXStreet"
-    },
-    {
-      "title": "India: Inflation pressures point to tighter bias – DBS",
-      "link": "https://www.fxstreet.com/news/india-inflation-pressures-point-to-tighter-bias-dbs-202609111421",
-      "pubDate": "2026-09-11T14:21:52.000Z",
-      "description": "DBS Group Research expects India’s inflation to accelerate to 4.9% year-on-year, with food and energy costs driving a gradual broadening of price pressures.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Canadian Dollar slides with Oil prices, US CPI fails to keep US Dollar higher",
-      "link": "https://www.fxstreet.com/news/canadian-dollar-slides-with-oil-prices-us-cpi-fails-to-keep-us-dollar-higher-202609111409",
-      "pubDate": "2026-09-11T14:09:51.000Z",
-      "description": "USD/CAD rises 0.27% on Friday and trades around 1.3870 at the time of writing, after reaching a daily high of 1.3882 in the immediate reaction to the release of United States (US) inflation data.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "United Kingdom: Growth outlook strengthens with AI-driven services – Deutsche Bank",
-      "link": "https://www.fxstreet.com/news/united-kingdom-growth-outlook-strengthens-with-ai-driven-services-deutsche-bank-202609111408",
-      "pubDate": "2026-09-11T14:08:31.000Z",
-      "description": "Deutsche Bank’s Chief UK Economist Sanjay Raja highlights stronger-than-expected UK GDP data, with July output rising 0.4% month-on-month and broad-based gains across services, production and construction.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Europe is still waiting for a trillion-dollar company. Here’s PitchBook’s frontrunner",
       "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBHclBySXBJTzdPYzFBMEFYblFsYjJFTkV6V0NQamNFRWk4cXBzdFVPQzY4ajdCNVpiVHgtdS1yRFFDLUltTXpiS1RYaHU3YXFBMVRsRDA3V0hDaVk2VmtJU3J2OUFZZGZvblJxdHJyMkt1YlZQQ29iWlVhWHBOUQ?oc=5",
       "pubDate": "2026-09-11T14:03:44.000Z",
@@ -513,10 +513,10 @@
       "source": "Bank of Japan"
     },
     {
-      "title": "WSJ Dollar Index Rises 0.35% to 95.18",
+      "title": "WSJ Dollar Index Rises 0.35% to 95.18 - wsj.com",
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQNnBlLTNqR1B1TElLeTdjVEtmbWdWVlBYT2pKLTk5UWxHUm5taEE5RkdCczc4UUxmM3l4aU1qRkdscGI2TUp2aVdtM1dURE92bjRzdVVPVWhQb3FmMVFZZjVmeXR0cHVuUExPaEFQTlRadXlpdElTQnBEMTh1YnU0QjQ4R2drZGVmbF9JSHNqRHNFZ0kxSjBVSQ?oc=5",
       "pubDate": "2026-09-10T21:19:00.000Z",
-      "description": "WSJ Dollar Index Rises 0.35% to 95.18&nbsp;&nbsp;WSJ",
+      "description": "WSJ Dollar Index Rises 0.35% to 95.18&nbsp;&nbsp;wsj.com",
       "source": "Google News"
     },
     {
@@ -569,10 +569,10 @@
       "source": "Bank of Japan"
     },
     {
-      "title": "Bank of Japan Tightening Bets, U.S. Pressure Spark Yen Recovery",
+      "title": "Bank of Japan Tightening Bets, U.S. Pressure Spark Yen Recovery - wsj.com",
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQdW9ZS0psc21iR3I3WTRfNU9hRkg4aEdLVmJEdVY4cUxyRE53bVFkTTFtYzg4eU94N3d0Y21PVi01S2FvcFRNQ1YydFJUVWFXQkowbm5OVE5YQkFiV2RVMmQ4bG9hNkVsalFPcnBsSm52V2x4eHFuSEVwUDR2cjZNR2tkU3VkVjcwV0ExYVA0WDBqNUtWRjlLeFc5LU9oelRLOFlmNVEySXRuNzJnTmc?oc=5",
       "pubDate": "2026-09-10T05:14:00.000Z",
-      "description": "Bank of Japan Tightening Bets, U.S. Pressure Spark Yen Recovery&nbsp;&nbsp;WSJ",
+      "description": "Bank of Japan Tightening Bets, U.S. Pressure Spark Yen Recovery&nbsp;&nbsp;wsj.com",
       "source": "Google News"
     },
     {
@@ -583,11 +583,11 @@
       "source": "Google News"
     },
     {
-      "title": "Speech by Board Member MASU in Fukui (Economic Activity, Prices, and Monetary Policy in Japan)",
-      "link": "http://www.boj.or.jp/en/about/press/koen_2026/ko260910a.htm",
-      "pubDate": "2026-09-10T01:30:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
+      "title": "Dollar ticks higher, euro slips after expected ECB rate increase",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOdTNvLXFNN1ZZclg0akw4R1lJNVAzdGNXd0xIOUZBdXhoVEQySkNlVm9QLUhNQ19MaUt0RDJZM0xhMlpNY1RBZG1xelZGWTFRcXFZdlRTaXFKUjJKeHBSSkNwcDJyQjk0Qjg2Rk8wVGtoaGFmcTVnUlg5Z1hSZ2Fub2tSQXlSU3J5X0ZWRWN2Tkx4a1M5RXp3UWhB0gGfAUFVX3lxTE9XeDVJejYwX0llM0ZqYlZraHRzeVhjc1Z6b3RsOUR3cGMxYUZGbm0way0yem14UXhMN2ZyaVpxZGhXUnNlbFZOeUdva1JZRUxyeDI4RkVySmR2VXNSQmE4djZaNjEzSzFYV2VnbnhKUlJOWUlBWDRBWlZTaGdOUE1LTGV3TlhUb3VpT09EMzdYX0xnVHgxRUYtYUJDeGZmYw?oc=5",
+      "pubDate": "2026-09-10T03:02:00.000Z",
+      "description": "Dollar ticks higher, euro slips after expected ECB rate increase&nbsp;&nbsp;CNBC",
+      "source": "Google News"
     },
     {
       "title": "WP - 2026-09-09 - Alexander  Goetz, Lucas Kyriacou, Florence Miguet Heimlicher and Stefanie Siegrist: Do Swiss households revise their inflation expectations after monetary policy announcements?",
