@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-15T14:45:23.360Z",
+  "timestamp": "2026-09-15T18:29:39.566Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -4981,7 +4981,7 @@
     {
       "title": "GDT Price Index",
       "country": "NZD",
-      "date": "2026-09-15T10:55:00-04:00",
+      "date": "2026-09-15T11:39:00-04:00",
       "impact": "Low",
       "forecast": "",
       "previous": "0.9%",
