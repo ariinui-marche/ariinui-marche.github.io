@@ -1,75 +1,145 @@
 {
-  "timestamp": "2026-09-14T22:03:15.292Z",
+  "timestamp": "2026-09-15T00:28:18.955Z",
   "items": [
+    {
+      "title": "Dolphin entertainment CEO O’Dowd buys $4,816 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/dolphin-entertainment-ceo-odowd-buys-4816-in-stock-93CH-4900686",
+      "pubDate": "2026-09-15T00:15:47.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Cathie Wood’s ARK sells Alphabet stock, buys Meta Platforms",
+      "link": "https://www.investing.com/news/company-news/cathie-woods-ark-sells-alphabet-stock-buys-meta-platforms-93CH-4900685",
+      "pubDate": "2026-09-15T00:13:23.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Wall Street ends down, calls for AI slowdown pummel chipmakers",
+      "link": "https://www.investing.com/news/economy-news/ai-warnings-knock-nasdaq-futures-pressure-tech-stocks-4898987",
+      "pubDate": "2026-09-15T00:12:26.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "U.S. stock futures flat as markets parse slowing AI development, Fed anticipation",
+      "link": "https://www.investing.com/news/stock-market-news/us-stock-futures-flat-as-markets-parse-slowing-ai-development-fed-anticipation-4900683",
+      "pubDate": "2026-09-15T00:08:43.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Moody’s to acquire minority stake in Philippine rating agency",
+      "link": "https://www.investing.com/news/company-news/moodys-to-acquire-minority-stake-in-philippine-rating-agency-93CH-4900682",
+      "pubDate": "2026-09-15T00:04:29.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Pro Dex CEO Richard Van Kirk sells $45,412 in PDEX stock",
+      "link": "https://www.investing.com/news/insider-trading-news/pro-dex-ceo-richard-van-kirk-sells-45412-in-pdex-stock-93CH-4900679",
+      "pubDate": "2026-09-15T00:01:01.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Oportun financial SVP-controller Schueller sells $22,300 in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/oportun-financial-svpcontroller-schueller-sells-22300-in-shares-93CH-4900678",
+      "pubDate": "2026-09-15T00:01:00.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Guardant Health CIO Kumud Kalia sells $632k in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/guardant-health-cio-kumud-kalia-sells-632k-in-stock-93CH-4900677",
+      "pubDate": "2026-09-15T00:00:58.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Enveno medical director Francis Duhay sells $123 in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/enveno-medical-director-francis-duhay-sells-123-in-shares-93CH-4900676",
+      "pubDate": "2026-09-15T00:00:57.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Iran's President Pezeshkian: Our demands are the same as our previous demands",
+      "link": "https://www.fxstreet.com/news/irans-president-pezeshkian-our-demands-are-the-same-as-our-previous-demands-202609142353",
+      "pubDate": "2026-09-14T23:53:40.000Z",
+      "description": "Iran's President Masoud Pezeshkian said on Monday that Tehran is not at war with Saudi Arabia. Pezeshkian added that Iran’s demands for negotiation with the United States (US) are the same as our previous demands.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "PACS group co-founder, CEO Jason Hulse sells $886,569 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/pacs-group-cofounder-ceo-jason-hulse-sells-886569-in-stock-93CH-4900673",
+      "pubDate": "2026-09-14T23:46:45.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "DOJ Seeks to Seize $61M in Iran Oil Funds From Binance Accounts It Vouched For",
+      "link": "https://beincrypto.com/doj-61m-binance-iran-forfeiture/",
+      "pubDate": "2026-09-14T23:37:29.000Z",
+      "description": "DOJ moves to seize $61 million in crypto tied to Iranian oil sales moved through Binance accounts the exchange defended.\nThe post DOJ Seeks to Seize $61M in Iran Oil Funds From Binance Accounts It Vouched For appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Saudi Arabia issues emergency alert for Khamis Mushait, Abha",
+      "link": "https://www.fxstreet.com/news/saudi-arabia-issues-emergency-alert-for-khamis-mushait-abha-202609142332",
+      "pubDate": "2026-09-14T23:32:35.000Z",
+      "description": "Saudi Arabia's Civil Defense on Monday issued emergency alerts for the Khamis Mushait Governorate and Abha City. The officials then lifted the warnings shortly after, urging residents to continue following official instructions and avoid ga",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Gold falls below $4,300 as higher US yields bolster Fed rate hike bets",
+      "link": "https://www.fxstreet.com/news/gold-falls-below-4-300-as-higher-us-yields-bolster-fed-rate-hike-bets-202609142314",
+      "pubDate": "2026-09-14T23:14:36.000Z",
+      "description": "Gold price (XAU/USD) tumbles to near $4,295 during the early Asian session on Tuesday. The precious metal faces some selling pressure as rising bond yields and surging energy prices strengthen expectations that the US Federal Reserve (Fed) ",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Football Players Are Leveraging NIL Paydays to Buy Million-Dollar Homes",
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOSzY4Q3JlNVBDeHNmRHkyc2VuSTdQZ3ljMkFlOU9DckF3R2EwY2F5bTZ4V1NCWGdCOGs2OEIwTDZlS2FNdTN6LTBVUkpYc3NnY2pzWnh5cWw4MnpadGxqN2dDUmNpSVJERlFlQ0RnN0RjRXBSUUhQY3BwVDUycE1VcG5SWmFQWjRCMmRlSzJBWXJLeXdIc1NpaDl3LTMzLVhjYnRERUhybXQtZF9fT3VZYXFmWWRpVGZmUDI2cTdDcmIyQTQ?oc=5",
+      "pubDate": "2026-09-14T23:12:43.000Z",
+      "description": "Football Players Are Leveraging NIL Paydays to Buy Million-Dollar Homes&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "Australian Dollar gets caught between AI selloff and 5% US yields",
+      "link": "https://www.fxstreet.com/news/australian-dollar-gets-caught-between-ai-selloff-and-5-us-yields-202609142246",
+      "pubDate": "2026-09-14T22:46:21.000Z",
+      "description": "The Aussie Dollar registered losses of over 0.73% on Monday as sentiment soured due to a fall in technology shares, along with heightened tensions in the Middle East, high energy prices, and a jump in bond yields. The AUD/USD trades at 0.71",
+      "source": "FXStreet"
+    },
+    {
+      "title": "The Euro breaks both its moving averages as the Fed's hike becomes certain",
+      "link": "https://www.fxstreet.com/news/the-euro-breaks-both-its-moving-averages-as-the-feds-hike-becomes-certain-202609142226",
+      "pubDate": "2026-09-14T22:26:58.000Z",
+      "description": "EUR/USD closed near 1.1550 on Monday, 0.42% lower, and beneath both of its moving averages for the first time since late July. The 50-day and 200-day Exponential Moving Averages (EMA), the chart's two usual reference lines, now sit two pips",
+      "source": "FXStreet"
+    },
+    {
+      "title": "The Pound tests an August low on the Fed's hike odds",
+      "link": "https://www.fxstreet.com/news/the-pound-tests-an-august-low-on-the-feds-hike-odds-202609142206",
+      "pubDate": "2026-09-14T22:06:01.000Z",
+      "description": "GBP/USD closed just beneath 1.3500 on Monday, 0.19% lower, after trading to its lowest since August 14 in the London morning and buying back half of the drop by the close.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "If Sam Bankman-Fried Left Prison Today, He&#039;d Be Poor Forever, Lawyer Says",
+      "link": "https://beincrypto.com/sbf-11-billion-fine-lawyer-supreme-court/",
+      "pubDate": "2026-09-14T22:00:00.000Z",
+      "description": "SBF's lawyer says the $11 billion FTX fine would leave him broke for life as the Supreme Court weighs his appeal.\nThe post If Sam Bankman-Fried Left Prison Today, He&#039;d Be Poor Forever, Lawyer Says appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
     {
       "title": "GBP/JPY Price Forecast: Bears circle 207.00 as RSI rebounds",
       "link": "https://www.fxstreet.com/news/gbp-jpy-price-forecast-bears-circle-20700-as-rsi-rebounds-202609142156",
       "pubDate": "2026-09-14T21:56:58.000Z",
       "description": "The GBP/JPY cross-pair rises over 0.12% and trades at around 208.30 as risk appetite shifts to the sour side due to a rise in energy prices and bond yields, as investors grow uneasy about a possible reacceleration of inflation ahead of thre",
       "source": "FXStreet"
-    },
-    {
-      "title": "Earnings call transcript: MindWalk Holdings Q1 2027 revenue rises 21% as loss widens",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-mindwalk-holdings-q1-2027-revenue-rises-21-as-loss-widens-93CH-4900623",
-      "pubDate": "2026-09-14T21:45:25.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Immuneering at H.C. Wainwright conference: pancreatic cancer push",
-      "link": "https://www.investing.com/news/transcripts/immuneering-at-hc-wainwright-conference-pancreatic-cancer-push-93CH-4900622",
-      "pubDate": "2026-09-14T21:45:09.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Sobi at Morgan Stanley healthcare conference: growth outlook brightens",
-      "link": "https://www.investing.com/news/transcripts/sobi-at-morgan-stanley-healthcare-conference-growth-outlook-brightens-93CH-4900621",
-      "pubDate": "2026-09-14T21:43:33.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Texas moves to penalize data centers for water violations",
-      "link": "https://www.investing.com/news/commodities-news/texas-moves-to-penalize-data-centers-for-water-violations-4900620",
-      "pubDate": "2026-09-14T21:43:14.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Sana Biotechnology at Morgan Stanley conference: diabetes push leads",
-      "link": "https://www.investing.com/news/transcripts/sana-biotechnology-at-morgan-stanley-conference-diabetes-push-leads-93CH-4900619",
-      "pubDate": "2026-09-14T21:42:51.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "CenterPoint Energy investigates customer data breach, services remain operational",
-      "link": "https://www.investing.com/news/sec-filings/centerpoint-energy-investigates-customer-data-breach-services-remain-operational-93CH-4900618",
-      "pubDate": "2026-09-14T21:42:36.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "US EPA repeals carbon emission limits for power plants at G20 meeting",
-      "link": "https://www.investing.com/news/commodities-news/epa-to-undo-carbon-emission-limits-for-power-plants-at-g20-meeting-4899948",
-      "pubDate": "2026-09-14T21:42:30.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Rithm Capital sells Arlington office property for $56.25m",
-      "link": "https://www.investing.com/news/company-news/rithm-capital-sells-arlington-office-property-for-5625m-93CH-4900616",
-      "pubDate": "2026-09-14T21:40:28.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "BAE Systems wins $818 million contract modification from U.S. Army",
-      "link": "https://www.investing.com/news/stock-market-news/bae-systems-wins-818-million-contract-modification-from-us-army-93CH-4900615",
-      "pubDate": "2026-09-14T21:40:06.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "New Zealand Dollar sinks to two-month low as Greenback firms",
@@ -105,13 +175,6 @@
       "pubDate": "2026-09-14T20:11:54.000Z",
       "description": "Trump phoned Jensen Huang live on stage to call AI fears a hoax. NVIDIA still fell 3% as chip stocks slid.\nThe post Trump Phones Jensen Huang Live Against AI Slowdown Fears. NVIDIA Stock Reacts appeared first on BeInCrypto.",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Dollar Jumps Most Since June as 10-Year Treasury Yield Tops 5%",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMnIxQXlwUVJSLVRBQUpqUmZWT0J0NEZUOEt4b2tieHlSS1ZGYjRXUElOczBzb1gxNk5PMEEtTWpYalk5RWFXNW9IS1JhN1pNUTNxd3lJSkV1c3gzUVV3TU9DNUNpaFFCYUtTaDJPTlNDMTJJeTU3c0lBajJqWU9GdElHRnJkN2FfZkR3bzYzVmpzMFNlS1VkdFVqUGhHU0ZXM1h5SEFyanlxcHRqYnFYblBR?oc=5",
-      "pubDate": "2026-09-14T20:00:43.000Z",
-      "description": "Dollar Jumps Most Since June as 10-Year Treasury Yield Tops 5%&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
     },
     {
       "title": "Forex Today: US Dollar firms ahead of UK jobs and a midweek Fed decision",
@@ -324,46 +387,11 @@
       "source": "FXStreet"
     },
     {
-      "title": "Japanese Yen: Further gains favored against US Dollar - BBH",
-      "link": "https://www.fxstreet.com/news/japanese-yen-further-gains-favored-against-us-dollar-bbh-202609141442",
-      "pubDate": "2026-09-14T14:42:31.000Z",
-      "description": "Brown Brothers Harriman’s (BBH) Elias Haddad notes that recent Oil-driven market moves and sticky US Consumer Price Index (CPI) have strengthened expectations for a September Fed hike, but the futures curve already prices nearly 100 bps of ",
-      "source": "FXStreet"
-    },
-    {
-      "title": "US 10-year yield crosses 5% rubicon as Fed hike looks locked",
-      "link": "https://www.fxstreet.com/news/us-10-year-yield-crosses-5-rubicon-as-fed-hike-looks-locked-202609141440",
-      "pubDate": "2026-09-14T14:40:28.000Z",
-      "description": "The US 10-year Treasury yield has breached the 5% threshold on Monday for the first time since 2023, rising by more than four basis points as investors almost fully price in a 25-basis-point rate hike by the Federal Reserve (Fed) on Wednesd",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Euro tumbles to one-month low as Fed rate hike bets dominate",
-      "link": "https://www.fxstreet.com/news/euro-tumbles-to-one-month-low-as-fed-rate-hike-bets-dominate-202609141433",
-      "pubDate": "2026-09-14T14:33:34.000Z",
-      "description": "EUR/USD trades under pressure on Monday, with the Euro (EUR) losing around 0.55% against the US Dollar (USD). The Greenback strengthens across the board as traders position for a possible Federal Reserve (Fed) interest rate hike at the Sept",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Canada: Contained inflation pressures support steady BoC – RBC",
-      "link": "https://www.fxstreet.com/news/canada-contained-inflation-pressures-support-steady-boc-rbc-202609141432",
-      "pubDate": "2026-09-14T14:32:53.000Z",
-      "description": "Royal Bank of Canada (RBC) economist Abbey Xu notes that Canadian inflation stayed at 3% year-over-year in August, with Food and energy components still elevated but easing somewhat.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Federal Reserve: One-off September hike view – ING",
-      "link": "https://www.fxstreet.com/news/federal-reserve-one-off-september-hike-view-ing-202609141417",
-      "pubDate": "2026-09-14T14:17:38.000Z",
-      "description": "ING economists James Knightley, Padhraic Garvey and Chris Turner now expect a 25bp Federal Reserve rate hike in September following Chair Kevin Warsh’s Jackson Hole remarks.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "British Pound: BoE risks in focus – Scotiabank",
-      "link": "https://www.fxstreet.com/news/british-pound-boe-risks-in-focus-scotiabank-202609141404",
-      "pubDate": "2026-09-14T14:04:46.000Z",
-      "description": "Scotiabank strategists Shaun Osborne and Eric Theoret note the British Pound (GBP) is softer against the Dollar but still outperforming most G10 currencies in a risk-off environment. Markets expect a hawkish hold from the Bank of England (B",
-      "source": "FXStreet"
+      "title": "Dollar Jumps Most Since June as 10-Year Treasury Yield Tops 5%",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMnIxQXlwUVJSLVRBQUpqUmZWT0J0NEZUOEt4b2tieHlSS1ZGYjRXUElOczBzb1gxNk5PMEEtTWpYalk5RWFXNW9IS1JhN1pNUTNxd3lJSkV1c3gzUVV3TU9DNUNpaFFCYUtTaDJPTlNDMTJJeTU3c0lBajJqWU9GdElHRnJkN2FfZkR3bzYzVmpzMFNlS1VkdFVqUGhHU0ZXM1h5SEFyanlxcHRqYnFYblBR?oc=5",
+      "pubDate": "2026-09-14T14:39:57.000Z",
+      "description": "Dollar Jumps Most Since June as 10-Year Treasury Yield Tops 5%&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
     },
     {
       "title": "'The Pitt' and 'Hacks' compete for gold at TV's Emmy Awards",
@@ -426,20 +454,6 @@
       "link": "https://beincrypto.com/circle-arc-mainnet-meme-coin-traders/",
       "pubDate": "2026-09-14T12:52:52.000Z",
       "description": "Circle opens Arc public mainnet on Wednesday with 11 founding validators drawn from traditional finance. Traders are already positioning for a meme coin rush at launch. The setup mirrors Robinhood Chain, which launched in July, pitching tok",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Biggest Macro Risk for Bitcoin Presents for the First Time Since 2006",
-      "link": "https://beincrypto.com/bitcoin-macro-risk-fed-ecb-boj/",
-      "pubDate": "2026-09-14T12:52:21.000Z",
-      "description": "The Fed, ECB, and Bank of Japan may tighten together for the first time since 2006, reviving Bitcoin's biggest macro risk.\nThe post Biggest Macro Risk for Bitcoin Presents for the First Time Since 2006 appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Elon Musk Drops a Bombshell: Grok 5 Could Be the AGI Breakthrough",
-      "link": "https://beincrypto.com/elon-musk-grok-5-agi-claim/",
-      "pubDate": "2026-09-14T12:23:39.000Z",
-      "description": "Elon Musk signaled on September 14 that Grok 5, xAI&#8217;s next major model, is the version he expects to reach artificial general intelligence (AGI). The billionaire made the claim across two related posts on X, sparking immediate debate ",
       "source": "BeInCrypto"
     },
     {
@@ -560,20 +574,6 @@
       "pubDate": "2026-09-12T10:15:00.000Z",
       "description": "",
       "source": "European Central Bank"
-    },
-    {
-      "title": "WSJ Dollar Index Falls 0.13% This Week to 95.12",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZ0x3QndyWGtvYzFuVTNHUWs2SFBQR1ZtUEpqUFczdV9wZWZHVVZnaFFyeWJsTDFoTFBjTnUxT0l1bkxYM2JjVHdUVkdlOTc4QUw3VTVHaTlRQVREUDE2ZVl4UXpMVFV2bGx2d3JRYnBIRDUxSmJtUDduUVZDYVd6Y0ZzWUNFcmhFaHJreGM3TVcxbDlBZ1dpU1hWNnNDZFB6aEZOdDFXTklRYkhCbnJDSmFYVlE?oc=5",
-      "pubDate": "2026-09-11T21:21:00.000Z",
-      "description": "WSJ Dollar Index Falls 0.13% This Week to 95.12&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
-      "title": "Dollar Wavers as CPI Adds to Fed Hike Bets While Oil Falls",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQeWlMZGtUTzRWWVpPMGVET0dKdGZIN2NvNWZrNE1acjJrWnVleGVlMmk5WFVoNGV2NGhKZFM0WENiTWtiU3A1UTdpZGVQVUQ4dTNzQmxsczM0cERDMk5IWmNTdDNmNFh1c0szOG05R25jNXdUR3hORTU0RGpySDdSbm1oMHNHSkNtY0F6ZHlKZ3BkbmJhQUxGM1NzNWczLW8yclhQZlZzRDlSMjRBV08xOTl3?oc=5",
-      "pubDate": "2026-09-11T20:29:19.000Z",
-      "description": "Dollar Wavers as CPI Adds to Fed Hike Bets While Oil Falls&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
     },
     {
       "title": "Agencies seek comment on proposed third-party risk management guidance and issue statement on community bank engagement with core service providers",
