@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-18T18:17:06.919Z",
+  "timestamp": "2026-09-18T20:56:42.764Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -5519,15 +5519,6 @@
       "actual": ""
     },
     {
-      "title": "Foreign Direct Investment ytd/y",
-      "country": "CNY",
-      "date": "2026-09-18T02:02:00-04:00",
-      "impact": "Low",
-      "forecast": "",
-      "previous": "-6.2%",
-      "actual": ""
-    },
-    {
       "title": "BOJ Press Conference",
       "country": "JPY",
       "date": "2026-09-18T02:30:00-04:00",
@@ -5543,6 +5534,15 @@
       "impact": "Low",
       "forecast": "30.7B",
       "previous": "35.1B",
+      "actual": ""
+    },
+    {
+      "title": "Foreign Direct Investment ytd/y",
+      "country": "CNY",
+      "date": "2026-09-18T05:02:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "-6.2%",
       "actual": ""
     },
     {
