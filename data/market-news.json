@@ -1,47 +1,131 @@
 {
-  "timestamp": "2026-09-17T23:41:02.762Z",
+  "timestamp": "2026-09-18T01:28:10.510Z",
   "items": [
+    {
+      "title": "WTI drops as Middle East supply fears ease",
+      "link": "https://www.fxstreet.com/news/wti-drops-as-middle-east-supply-fears-ease-202609180127",
+      "pubDate": "2026-09-18T01:27:50.000Z",
+      "description": "West Texas Intermediate (WTI) oil price remains subdued for the third successive day, trading around $96.40 per barrel during the Asian hours on Friday.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Samsara’s chief accounting officer sells $92,120 in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/samsaras-chief-accounting-officer-sells-92120-in-shares-93CH-4906602",
+      "pubDate": "2026-09-18T01:15:53.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "PBOC sets USD/CNY reference rate at 6.7521 vs. 6.7580 previous",
+      "link": "https://www.fxstreet.com/news/pboc-sets-usd-cny-reference-rate-at-67521-vs-67580-previous-202609180115",
+      "pubDate": "2026-09-18T01:15:31.000Z",
+      "description": "On Friday, the People’s Bank of China (PBOC) sets the USD/CNY central rate for the trading session ahead at 6.7521 compared to the previous day's fix of 6.7580 and 6.7065 Reuters estimate.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Oil prices fall 1% on hopes of limited supply disruptions",
+      "link": "https://www.investing.com/news/commodities-news/oil-prices-fall-1-on-hopes-of-limited-supply-disruptions-4906600",
+      "pubDate": "2026-09-18T01:12:23.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "RBA to assess if rates adequate to cool inflation, says Governor Bullock",
+      "link": "https://www.investing.com/news/stock-market-news/rba-to-assess-if-rates-adequate-to-cool-inflation-says-governor-bullock-93CH-4906601",
+      "pubDate": "2026-09-18T01:09:25.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Yen weak ahead of BOJ decision; rate hike expected",
+      "link": "https://www.investing.com/news/economy-news/yen-weak-ahead-of-boj-decision-rate-hike-expected-4906595",
+      "pubDate": "2026-09-18T01:06:51.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "SK Hynix tests KRW 1,888,000 resistance on weak trend: Live levels",
+      "link": "https://www.investing.com/news/stock-market-news/sk-hynix-trapped-in-ichimoku-cloud-near-vwap-live-levels-93CH-4898785",
+      "pubDate": "2026-09-18T01:05:40.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Nikkei 225 hits overbought cloud ceiling: Live levels",
+      "link": "https://www.investing.com/news/stock-market-news/nikkei-225-nears-62500-breakdown-in-bearish-trend-live-levels-93CH-4898786",
+      "pubDate": "2026-09-18T01:05:40.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Japanese Yen flirts with two-week low vs USD after CPI report, ahead of BoJ",
+      "link": "https://www.fxstreet.com/news/japanese-yen-flirts-with-two-week-low-vs-usd-after-cpi-report-ahead-of-boj-202609180104",
+      "pubDate": "2026-09-18T01:04:53.000Z",
+      "description": "The USD/JPY pair attracts fresh buyers during the Asian session on Friday and currently trades above the 156.00 mark, near a two-week high as traders await the outcome of a two-day Bank of Japan (BoJ) meeting.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Zscaler CPO Adam Geller sells $1.96 million in company stock",
+      "link": "https://www.investing.com/news/insider-trading-news/zscaler-cpo-adam-geller-sells-196-million-in-company-stock-93CH-4906599",
+      "pubDate": "2026-09-18T01:01:06.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Kratos Defense president Carrai sells $310,900 in company stock",
+      "link": "https://www.investing.com/news/insider-trading-news/kratos-defense-president-carrai-sells-310900-in-company-stock-93CH-4906598",
+      "pubDate": "2026-09-18T01:01:03.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Zscaler CEO Chaudhry sells $549,759 in company stock",
+      "link": "https://www.investing.com/news/insider-trading-news/zscaler-ceo-chaudhry-sells-549759-in-company-stock-93CH-4906597",
+      "pubDate": "2026-09-18T01:00:59.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Zscaler CFO Kevin Rubin sells $1.15 million in company stock",
+      "link": "https://www.investing.com/news/insider-trading-news/zscaler-cfo-kevin-rubin-sells-115-million-in-company-stock-93CH-4906596",
+      "pubDate": "2026-09-18T01:00:55.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Euro nudges higher above 1.1450 as US yields, oil retreat",
+      "link": "https://www.fxstreet.com/news/euro-nudges-higher-above-11450-as-us-yields-oil-retreat-202609180058",
+      "pubDate": "2026-09-18T00:58:02.000Z",
+      "description": "The EUR/USD pair trades with mild gains around 1.1480 during the early Asian session on Friday. The US Dollar (USD) edges lower against the Euro (EUR) amid lower US Treasury yields and moderating oil prices. Federal Reserve (Fed) Governor M",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Why Banks Suddenly Want Stablecoins, and Why It May Matter for You",
+      "link": "https://beincrypto.com/why-banks-want-stablecoins/",
+      "pubDate": "2026-09-18T00:11:12.000Z",
+      "description": "For most of their first decade, stablecoins lived inside crypto, sitting on exchanges as dry powder between trades. Supply rose from $27 billion at the end of 2020 to more than $300 billion today. A significant portion of that growth now oc",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Iran’s IRGC claims attack on Togolese oil tanker for 'illegal transit' in Strait of Hormuz",
+      "link": "https://www.fxstreet.com/news/irans-irgc-claims-attack-on-togolese-oil-tanker-for-illegal-transit-in-strait-of-hormuz-202609172354",
+      "pubDate": "2026-09-17T23:54:18.000Z",
+      "description": "Iran's Islamic Revolutionary Guard Corps (IRGC) said on Thursday that a Togo-flagged oil ‌tanker was struck ‌while attempting to make an “illegal passage” through the Strait of ‌Hormuz, Arab news reported.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "RBA's Bullock: At August board meeting, risks to outlook were skewed to the upside",
+      "link": "https://www.fxstreet.com/news/rbas-bullock-at-august-board-meeting-risks-to-outlook-were-skewed-to-the-upside-202609172341",
+      "pubDate": "2026-09-17T23:41:14.000Z",
+      "description": "Reserve Bank of Australia (RBA) Governor Michele Bullock said on Friday that risks to outlook were skewed to the upside at August board meeting.",
+      "source": "FXStreet"
+    },
     {
       "title": "1.9%: Japan’s National CPI steadies in August",
       "link": "https://www.fxstreet.com/news/19-japans-national-cpi-steadies-in-august-202609172333",
       "pubDate": "2026-09-17T23:33:27.000Z",
       "description": "Japan’s National Consumer Price Index (CPI) climbed by 1.9% YoY in August, compared to the previous reading of 1.9%, according to the latest data released by the Japan Statistics Bureau on Friday.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Dell Technologies director-owner Silver Lake sells $263,126 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/dell-technologies-directorowner-silver-lake-sells-263126-in-stock-93CH-4906561",
-      "pubDate": "2026-09-17T23:31:21.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "PACS Group president & COO Joshua Jergensen sells $1.73m in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/pacs-group-president--coo-joshua-jergensen-sells-173m-in-stock-93CH-4906559",
-      "pubDate": "2026-09-17T23:31:18.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Cricut CEO Ashish Arora sells $1.01m in CRCT shares",
-      "link": "https://www.investing.com/news/insider-trading-news/cricut-ceo-ashish-arora-sells-101m-in-crct-shares-93CH-4906560",
-      "pubDate": "2026-09-17T23:31:18.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Saudis and Houthis exchange strikes, Yemenis flee by boat as Middle East war spreads",
-      "link": "https://www.investing.com/news/commodities-news/trump-hopes-iran-war-nearing-end-as-houthisaudi-fighting-escalates-4904794",
-      "pubDate": "2026-09-17T23:25:07.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "How Bessent, America’s bond salesman, cornered Japan on big spending",
-      "link": "https://www.investing.com/news/economy-news/how-bessent-americas-bond-salesman-cornered-japan-on-big-spending-4906555",
-      "pubDate": "2026-09-17T23:24:53.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Gold rebounds to near $4,350 on weaker US Dollar, falling oil prices",
@@ -51,13 +135,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Caris Life Sciences vice chairman Brille sells $12.1 million shares",
-      "link": "https://www.investing.com/news/insider-trading-news/caris-life-sciences-vice-chairman-brille-sells-121-million-shares-93CH-4906556",
-      "pubDate": "2026-09-17T23:16:10.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Australian Dollar finds a floor as Oil retreat loosens USD’s grip",
       "link": "https://www.fxstreet.com/news/australian-dollar-finds-a-floor-as-oil-retreat-loosens-usds-grip-202609172315",
       "pubDate": "2026-09-17T23:15:56.000Z",
@@ -65,35 +142,7 @@
       "source": "FXStreet"
     },
     {
-      "title": "Silver Lake fund sells $582,093 of Dell Technologies stock",
-      "link": "https://www.investing.com/news/insider-trading-news/silver-lake-fund-sells-582093-of-dell-technologies-stock-93CH-4906554",
-      "pubDate": "2026-09-17T23:01:07.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "US FCC approves foreign investment in Paramount Warner merger",
-      "link": "https://www.investing.com/news/stock-market-news/us-fcc-approves-foreign-investment-in-paramount-warner-merger-deal-4906507",
-      "pubDate": "2026-09-17T23:00:55.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "US judge strikes down Education Department’s anti-DEI grant policy",
-      "link": "https://www.investing.com/news/economy-news/us-judge-strikes-down-education-departments-antidei-grant-policy-4906553",
-      "pubDate": "2026-09-17T23:00:35.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Tech leads Wall St to higher close as oil eases, Treasury yields dip",
-      "link": "https://www.investing.com/news/economy-news/wall-st-futures-rise-as-fed-rate-hike-lifts-longstanding-overhang-4905088",
-      "pubDate": "2026-09-17T22:48:29.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Bank of Japan is set to raise interest rates as inflation, economic growth support tighter policy",
+      "title": "Bank of Japan is set to raise interest rates as inflation pressures build",
       "link": "https://www.fxstreet.com/news/bank-of-japan-is-expected-to-deliver-a-hawkish-hike-pressured-by-rising-inflation-202609172200",
       "pubDate": "2026-09-17T22:00:00.000Z",
       "description": "The Bank of Japan’s (BoJ) monetary policy meeting will close a week packed with central bank decisions on Friday, with markets particularly interested in confirming expectations of a hawkish shift that has boosted a strong Japanese Yen (JPY",
@@ -289,25 +338,11 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "New Zealand Dollar gains ground as GDP growth beats expectations",
-      "link": "https://www.fxstreet.com/news/new-zealand-dollar-gains-ground-as-gdp-growth-beats-expectations-202609171555",
-      "pubDate": "2026-09-17T15:55:54.000Z",
-      "description": "NZD/USD rebounds on Thursday, trading around 0.5730 at the time of writing, up 0.35% on the day. The New Zealand Dollar (NZD) benefits from stronger-than-expected domestic growth data, allowing the pair to recover from the two-month low rea",
-      "source": "FXStreet"
-    },
-    {
       "title": "Dollar pressure weighs on LatAm FX; regional stocks edge higher",
       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxORHBHWWNMXzJ6VlVwbnBOc3ZudVowMk1sUkw0M1l5MjRzX1BrQzhNUjZrNmdMYTdKakR0OTJaeGZtUC1JeERMVVRpVUZyc2V3ZTgydlNBTE5aZW9SZTZiejBydGJIWExHS0N1eWhVVGpUNlpmdUVwOEpMbWY3dGxybklRUEVKNU1JOEVZaGYtcjRqeVg0S2g2ODFVWmRmbExyRjdPWHJRR3BYZjBMS0w4?oc=5",
       "pubDate": "2026-09-17T15:46:31.000Z",
       "description": "Dollar pressure weighs on LatAm FX; regional stocks edge higher&nbsp;&nbsp;Reuters",
       "source": "Reuters"
-    },
-    {
-      "title": "British Pound loses its footing as BoE hold meets Fed hike",
-      "link": "https://www.fxstreet.com/news/british-pound-loses-its-footing-as-boe-holds-meet-fed-tightening-202609171543",
-      "pubDate": "2026-09-17T15:43:17.000Z",
-      "description": "The Pound Sterling (GBP) extends its losses on Thursday after the Bank of England's (BoE) decision to hold rates unchanged in a 6-3 vote, while leaving the door open for a potential hike.",
-      "source": "FXStreet"
     },
     {
       "title": "SEC Backs Real Stock Tokens Over Synthetics: Who Loses?",
@@ -326,37 +361,9 @@
     {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-09-17T15:14:05.000Z",
+      "pubDate": "2026-09-17T15:14:02.000Z",
       "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
       "source": "Bank of Canada"
-    },
-    {
-      "title": "Japanese Yen: Further weakness could target 157.30 against US Dollar - UOB",
-      "link": "https://www.fxstreet.com/news/japanese-yen-further-weakness-could-target-15730-against-us-dollar-uob-202609171506",
-      "pubDate": "2026-09-17T15:06:14.000Z",
-      "description": "United Overseas Bank’s (UOB) Quek Ser Leang and Lee Sue Ann note USD/JPY surged above 156.30 to a high of 156.41, with momentum still modest but supportive of further gains. Intraday, the pair could test 156.50 while holding above support a",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Euro: Stabilizing with policy support – Scotiabank",
-      "link": "https://www.fxstreet.com/news/euro-stabilizing-with-policy-support-scotiabank-202609171454",
-      "pubDate": "2026-09-17T14:54:44.000Z",
-      "description": "Scotiabank strategists Shaun Osborne and Eric Theoret say EUR/USD is stabilizing after Wednesday’s Fed decision, as improving Germany-US 2-year yield spreads and a hawkish ECB stance support the euro.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Australian Dollar rebound offsets the hawkish Fed hike",
-      "link": "https://www.fxstreet.com/news/australian-dollar-rebound-offsets-the-hawkish-fed-hike-202609171451",
-      "pubDate": "2026-09-17T14:51:15.000Z",
-      "description": "AUD/USD rebounds near the 0.7110s area on Thursday after the pair spent recent sessions nursing losses on bets for a hawkish Federal Reserve (Fed). At the time of writing, the pair rises by over 0.40%, but the rebound has little to do with ",
-      "source": "FXStreet"
-    },
-    {
-      "title": "1.25%: Why the Bank of Japan hike is a done deal and the Japanese Yen now hinges on Ueda's guidance",
-      "link": "https://www.fxstreet.com/news/125-why-the-bank-of-japan-hike-is-a-done-deal-and-the-japanese-yen-now-hinges-on-uedas-guidance-202609171451",
-      "pubDate": "2026-09-17T14:51:06.000Z",
-      "description": "The Bank of Japan (BoJ) stands on the verge of delivering a 25 basis point rate hike to 1.25%, with financial markets pricing in a near 100% probability of such an action.",
-      "source": "FXStreet"
     },
     {
       "title": "Is Being Indian a Fraud Signal? Arc Traders Sold Like It Is",
@@ -384,13 +391,6 @@
       "link": "https://beincrypto.com/sbf-network-anthropic-ai-safety-debate/",
       "pubDate": "2026-09-17T12:28:34.000Z",
       "description": "Sam Bankman-Fried funded Anthropic before FTX collapsed. Critics say his network still drives the AI safety debate.\nThe post Sam Bankman-Fried’s $500 Million Investment Still Haunts Anthropic appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "The Vault Launches Its own MPC Library for Institutional Custody",
-      "link": "https://beincrypto.com/the-vault-sovereign-mpc-library-halborn-audit/",
-      "pubDate": "2026-09-17T12:21:33.000Z",
-      "description": "Barcelona, 17 September 2026.&#160;The Vault, the institutional digital asset custody platform regulated in Switzerland and the EU, has launched its own multi-party computation (MPC) library, the cryptography that allows separate parties to",
       "source": "BeInCrypto"
     },
     {
@@ -480,15 +480,15 @@
     {
       "title": "Japan vows effort to maintain orderly yen moves",
       "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNdGhvWmtWbmFTbFZLWkU2bHpZR2gxSFRkMDlPM1pxMFc1TWhnTGhjNjBWcE84UVZYZ290Wlp6cC1xZFBzbWhmU00tUjZ5ekV6X05KbmZ5TUVNUnlrS2tIMTN5a2ozUFFPOXU2OTdtSmFLZFBfODExN2xRRE1yYm1fT085NVJFdHdyWGE5c3l2cHllOWtPcUVoRlVBdFhvNlZW?oc=5",
-      "pubDate": "2026-09-17T06:14:25.000Z",
+      "pubDate": "2026-09-17T05:54:00.000Z",
       "description": "Japan vows effort to maintain orderly yen moves&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
-      "title": "Gold gains over 2% on weaker dollar, easing oil prices",
+      "title": "Gold gains more than 2% on weaker dollar, easing oil prices",
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQaG9YazhGMnhxa0V4TFlVbVFjSldNRkUwTUdRZV9FY0RQXzlTTFMzekN4WlVrMzdESVpZbmNNV0IwUXZDeGZCYmljN0pGTUNnZWxZdWRiSmh5a3VjcDB5a3hlbzhUclBCZTB6eVdhWGRWR2dBSE9Nc19hX3pPN0JfbThqbnI1dzJwcVJRTUdsQjBTYWxobkgzM9IBngFBVV95cUxPYzNuR1dpWnNWeDRxTWJCY1g3ZXR0T2ZlOWdMSXB1TGNYR3VBOHdyajR4ekxFalhIUk9hUGlLM1I4RjZXdl9NS1lUeVFvRDBpQjNYbU9uOG9XNkxnc2FsZWhaMXAtN3djMkNmTnVvSktqMV9uckpVRVlYTWJQbWtOT2U3X2F2b196ZjhsLVljSHNiaTAycUtsOGhTT192UQ?oc=5",
       "pubDate": "2026-09-17T05:42:30.000Z",
-      "description": "Gold gains over 2% on weaker dollar, easing oil prices&nbsp;&nbsp;CNBC",
+      "description": "Gold gains more than 2% on weaker dollar, easing oil prices&nbsp;&nbsp;CNBC",
       "source": "Google News"
     },
     {
@@ -506,10 +506,17 @@
       "source": "Google News"
     },
     {
-      "title": "Dollar eases after Fed-driven jump as Treasury yields and oil prices retreat",
+      "title": "Gold gains over 2% on weaker dollar, easing oil prices",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdmRrQzlscmZjQ08wVi1BSUZCTEU4d0xkdFpFelAzQURMS0VyS21Gb1VWUkV2OEIzRTVUWmJQTXkxRXJnTEltLXR6dWJiWW9UV1pzZWJQOEdJRGpkMnhXV0lIWUlHUEdHNVIzYmU2UTY3OHAwczNsVmpuRDNUVlpkeVl5emEtTlJoWFJrUnhWSUxFTkZqMGxSYUd5M05GVHA0bGZ6eWZ5YWpLWFMy?oc=5",
+      "pubDate": "2026-09-17T02:27:00.000Z",
+      "description": "Gold gains over 2% on weaker dollar, easing oil prices&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Dollar pauses after Fed rally as yields, oil retreat",
       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTVZNWlJSb0NGaG9WNmRjR0U4YUM2anpuRFREdGRvRmRaRUhwbzVIb2JndlpsZ2g4a1hvbkdZWEl2YUV6WWRjYThBSGt2VGlzak44MmVyWkFPeTJfdlBreG1ERkhYbjVEaTVlLXpwOW9SeDRvbzZIYVJLTUdWcWc1Y2RFTFVPelhoaWNqWVpNd1YxWTR2ZWxaX2U5dzQwUUxNWWFyQXB5U2d4UFJTMXM4?oc=5",
       "pubDate": "2026-09-17T02:08:00.000Z",
-      "description": "Dollar eases after Fed-driven jump as Treasury yields and oil prices retreat&nbsp;&nbsp;Reuters",
+      "description": "Dollar pauses after Fed rally as yields, oil retreat&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -532,13 +539,6 @@
       "pubDate": "2026-09-16T21:59:39.000Z",
       "description": "Goldman Sachs sees slightly softer fixed income, currencies, commodities business, higher costs&nbsp;&nbsp;Reuters",
       "source": "Reuters"
-    },
-    {
-      "title": "Dollar Jumps as Fed Sends Hawkish Signal After Rate Increase",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQc0ZjVWJJZTQ4WXUtdGoxOEZpRU96ZHlTMkhqeC1vTzRRMUxJaDNkWmhjQ3hZUnFKa2RKRXgyMWRFajE4T1pDTHoxRzJIdVpMX1Ftd3NjazZKY3hLY3ptdzZZTnhXTWJ4enloSVJKa3p5T2NoZ1kyMjNMZkJuYXFWZHVXRi14aFRNT2xSMldjRkhCeHZncE9CZlkwTjRGbzRvQzBRUmdrRXFUdms?oc=5",
-      "pubDate": "2026-09-16T20:47:05.000Z",
-      "description": "Dollar Jumps as Fed Sends Hawkish Signal After Rate Increase&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
     },
     {
       "title": "Federal Reserve issues FOMC statement",
