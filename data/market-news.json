@@ -1,10 +1,24 @@
 {
-  "timestamp": "2026-09-19T21:03:55.714Z",
+  "timestamp": "2026-09-19T22:53:32.180Z",
   "items": [
     {
       "title": "Flames, smoke seen near Riyadh airport; Houthis claim attacks on Saudi capital",
       "link": "https://www.investing.com/news/commodities-news/smoke-visible-near-riyadh-airport-after-saudi-arabia-issues-allclear-4908080",
-      "pubDate": "2026-09-19T20:30:26.000Z",
+      "pubDate": "2026-09-19T22:06:28.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "AI safety efforts will require more compute, not less: experts",
+      "link": "https://www.investing.com/news/stock-market-news/ai-safety-efforts-will-require-more-compute-not-less-experts-4908122",
+      "pubDate": "2026-09-19T21:29:18.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Russia stocks lower at close of trade; MOEX Russia Index unchanged",
+      "link": "https://www.investing.com/news/stock-market-news/russia-stocks-lower-at-close-of-trade-moex-russia-index-unchanged-4908121",
+      "pubDate": "2026-09-19T21:20:03.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -65,20 +79,6 @@
       "source": "Investing.com"
     },
     {
-      "title": "Brazil’s Petrobras board approves joining diesel subsidy program",
-      "link": "https://www.investing.com/news/commodities-news/brazils-petrobras-board-approves-joining-diesel-subsidy-program-4908111",
-      "pubDate": "2026-09-19T18:18:31.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Trump calls for plans to form federal ’AI Force’",
-      "link": "https://www.investing.com/news/economy-news/trump-calla-for-plans-to-form-federal-ai-force-4908110",
-      "pubDate": "2026-09-19T18:14:18.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Fuel Shortages Hit 5 Countries on Day 203 of the Iran War: Full List",
       "link": "https://beincrypto.com/iran-war-5-countries-running-out-fuel/",
       "pubDate": "2026-09-19T17:07:41.000Z",
@@ -88,7 +88,7 @@
     {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-09-19T16:20:39.000Z",
+      "pubDate": "2026-09-19T16:20:26.000Z",
       "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
       "source": "Bank of Canada"
     },
@@ -212,10 +212,10 @@
       "source": "Google News"
     },
     {
-      "title": "With Latest Hike, BOJ Doubles Down on Aggressive Monetary Policy Plans - Bloomberg",
+      "title": "With Latest Hike, BOJ Doubles Down on Aggressive Monetary Policy Plans",
       "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNbXhkLUJBMDBvMnhDeUdJZlpjT0VxZXZKYTVxWjh0YmVOenhDb0YtWklia1dBQlNFcndBZHhTWk95ekdwNWNseHpTaWdCWlhHV2hPaEN4U3hYV0d5TG0wZjRmY3U3UV9mdEpxWTktQjd4UkduZ0JWTTJURDFvS1ItdE1nT0FTdjVJQmZ4OE8yLWt2NDU5V0U1UmxjaFo3S3Ax?oc=5",
       "pubDate": "2026-09-18T21:19:22.000Z",
-      "description": "With Latest Hike, BOJ Doubles Down on Aggressive Monetary Policy Plans&nbsp;&nbsp;Bloomberg",
+      "description": "With Latest Hike, BOJ Doubles Down on Aggressive Monetary Policy Plans&nbsp;&nbsp;bloomberg.com",
       "source": "Google News"
     },
     {
@@ -247,17 +247,17 @@
       "source": "FXStreet"
     },
     {
-      "title": "Dollar Surges to Best Week Since June on Higher Rate Outlook - Bloomberg",
+      "title": "Dollar Surges to Best Week Since June on Higher Rate Outlook",
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPRHFpM2dKdUpqYXVMX3k4bDlyTlZZeGFVWEtWdlZqcm55R0NvSVg0eE1hMXo1VndidFo0ZUpFX0JZOE9WVkFZcXB6V1F3MjJUMDhGNkM3YTloMkRJREdWbzhPQmQ5UHZoUVhPLUgybUZQUGROeHp1Z3Y0YlpoZEZISHlrd0JVWE9YcGgwekkxMzc4UlhIOGloUDFaam5nMHBOT2tXTWdWRTBiazU5VDNBUA?oc=5",
       "pubDate": "2026-09-18T20:28:47.000Z",
-      "description": "Dollar Surges to Best Week Since June on Higher Rate Outlook&nbsp;&nbsp;Bloomberg",
+      "description": "Dollar Surges to Best Week Since June on Higher Rate Outlook&nbsp;&nbsp;bloomberg.com",
       "source": "Google News"
     },
     {
-      "title": "Yen Pares BOJ-Fueled Declines as Nikkei Reports a Rate Check - Bloomberg",
+      "title": "Yen Pares BOJ-Fueled Declines as Nikkei Reports a Rate Check",
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxONW5PTWdWd3FXTGdyRVVtVklQZUl4cUJ6bDZNeE5FMzBqVjJKTXBxeDBnUDBNZ3ozRHFYVkxYdmtWNC1xQ1phZ3E2WkJtdm9sNElQcXk4MXZLVUpUMDJtb0dhd3Q5czZNeVM3LWFlNkNmQW90djU4cUh2cVh1TnlVNzVUT0hmNTMwb1pXR3pxVWtQOEhmOTY3U3JiSW51R3ptZGl2RUR2SjRIOEhxSTM5bQ?oc=5",
       "pubDate": "2026-09-18T19:57:26.000Z",
-      "description": "Yen Pares BOJ-Fueled Declines as Nikkei Reports a Rate Check&nbsp;&nbsp;Bloomberg",
+      "description": "Yen Pares BOJ-Fueled Declines as Nikkei Reports a Rate Check&nbsp;&nbsp;bloomberg.com",
       "source": "Google News"
     },
     {
@@ -268,10 +268,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "Multiple unions threaten strikes at Barrick's flagship Mali gold mine, documents show",
+      "title": "Multiple unions threaten strikes at Barrick's flagship Mali gold mine, documents show - reuters.com",
       "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOMjF4X1Jwa0cwbFpqTjZ2OFFSSkdkcFVyVUFmM3lobVZnc2Iwd3g5aDdzMUZJRGstUFUxdGptT2ZPRC11ajdXU1NWbW1EZkxIek1YOFZCb3BFNkRjRE1MTjFYNjgxaWlkaFNEWEd4NXFtRFpLanloRXU4b2xTR2Z6dkVrZGFwRWFtWUl3TjFYcU1BRjctM0JZdXFKajl4MC1WLUVPYVVtcUZla3ZGSGxNLTJWenRkdTRPbHNqSEsyb2hqLU9zdmtrai1QWGlGU2xNZXppbnR3?oc=5",
       "pubDate": "2026-09-18T19:35:27.000Z",
-      "description": "Multiple unions threaten strikes at Barrick's flagship Mali gold mine, documents show&nbsp;&nbsp;Reuters",
+      "description": "Multiple unions threaten strikes at Barrick's flagship Mali gold mine, documents show&nbsp;&nbsp;reuters.com",
       "source": "Reuters"
     },
     {
@@ -310,10 +310,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "Gold rises to one-week high, heads for weekly gain on easing oil prices",
+      "title": "Gold rises to one-week high, heads for weekly gain on easing oil prices - reuters.com",
       "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQaEtrczJxeXh5VlUxY1VWWF9xVVdYX0xwZjU4UGlCU19tTV91TzlFdzVyeXJWS0JmNjBVVHo2VVVSa1FwN1RWODJXbko1MkxmQnlwVEZ6eHV5cV9RRno1VHl3Si1OZU51bEgtSV9SeUNOaERzMjdmQ0wwelFVR3lPTWhXV3VlamQwU09XZkFsTlRTb0cyQ0VaaThBWWxIRUwtOFAw?oc=5",
       "pubDate": "2026-09-18T18:30:12.000Z",
-      "description": "Gold rises to one-week high, heads for weekly gain on easing oil prices&nbsp;&nbsp;Reuters",
+      "description": "Gold rises to one-week high, heads for weekly gain on easing oil prices&nbsp;&nbsp;reuters.com",
       "source": "Reuters"
     },
     {
@@ -359,10 +359,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "Canadian dollar extends weekly decline, weighed by wider yield spreads",
+      "title": "Canadian dollar extends weekly decline, weighed by wider yield spreads - reuters.com",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNLXhfaG9sdjY5dkkzLVJXWEtGWUpxbWRpcnZyZm1kRVUzZEZQMGhHeHVkZHlOY1FYeUVBcnJNNHRnMUVCQ01aSUJCZmdiVlAxdkp1dTVtT0RHSFZBdXprTE90NnY3b1k1amNYUml4TGdhdkhqblpXQ2NKZ3RkTFNnMklBR1pMdklOTjhOUU9CODJHMndCUDFwdkJYVkF2T2FmbVl1VkRKT3JwaTNfVEp3M21fcFE?oc=5",
       "pubDate": "2026-09-18T15:47:43.000Z",
-      "description": "Canadian dollar extends weekly decline, weighed by wider yield spreads&nbsp;&nbsp;Reuters",
+      "description": "Canadian dollar extends weekly decline, weighed by wider yield spreads&nbsp;&nbsp;reuters.com",
       "source": "Reuters"
     },
     {
@@ -443,10 +443,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "Breakingviews - COMMENTARY: Japan’s weak currency has a three-body problem",
+      "title": "Breakingviews - COMMENTARY: Japan’s weak currency has a three-body problem - reuters.com",
       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNFk0eGh3eEFGNzJXblVMSDhVS3VEazc0QlZTcGVjX1dQdTBLZE1MOC1iSW0wX09FWlhNUklUbkJ1YUlKMlhZZnJrT1RNZFlXb24wUXEzZjBGanhiYlFVNm1uamx5LUVVeWNDdTQ5c21IRnV2Tm9aNk5BVjJ0czBKdDVzZElZaDlfcGkxRXNreU9vdk9ZMnJjTnVlZ1hHbmE1THVlV0xyVQ?oc=5",
       "pubDate": "2026-09-18T13:32:59.000Z",
-      "description": "Breakingviews - COMMENTARY: Japan’s weak currency has a three-body problem&nbsp;&nbsp;Reuters",
+      "description": "Breakingviews - COMMENTARY: Japan’s weak currency has a three-body problem&nbsp;&nbsp;reuters.com",
       "source": "Reuters"
     },
     {
@@ -471,10 +471,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "BOJ Hikes Rates at Fastest Pace Since 1990 as Inflation Persists - Bloomberg",
+      "title": "BOJ Hikes Rates at Fastest Pace Since 1990 as Inflation Persists",
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOMmJhTEJsZmtNdk1Nb0V6RTJiY3RFODk5WnZBLWFta0FFek1vbEhwaFhlYmktMmhvN2gzZXNGRUhVTjJaYnhXRER6TEk1WEVHdEx0NEVjWjhXS3FkTE9hczhocHlIc1gzNkIzU1ZJY0hhM3FQbURaVkE3OTUyV1FCZzFabUtaMTZwOFlra2w0VXhQVmNOVlhDVkluZXRjVjB4Vkh5eHgxZ3VNTk1NVEdfRFR2VUVmQQ?oc=5",
       "pubDate": "2026-09-18T11:17:22.000Z",
-      "description": "BOJ Hikes Rates at Fastest Pace Since 1990 as Inflation Persists&nbsp;&nbsp;Bloomberg",
+      "description": "BOJ Hikes Rates at Fastest Pace Since 1990 as Inflation Persists&nbsp;&nbsp;bloomberg.com",
       "source": "Google News"
     },
     {
@@ -485,45 +485,45 @@
       "source": "Bank of England"
     },
     {
+      "title": "Yen Extends Declines After Ueda Gives Mixed Signals on Hikes",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPejFGM2tfUXdEcFpSb2pXX0xadVMwblF0dXhMaEo5UlQwZF8tajNhWU9PM3g4MDFXR1d2UDVWUDhVaFc4NVRGcmJHM1BkdkRYMkZpWXRpaDBQQUYyaFhBcHVKeVNrb0RtVGdfWlRNZTVhOTFfUjJqVzg3N3VBQmFPdFZkYnFCbk00YjlrVDFxUFNtUDIyendfeGtBaWtCOXlfb1NmUXZaR3lXSHpFcHpz?oc=5",
+      "pubDate": "2026-09-18T10:26:11.000Z",
+      "description": "Yen Extends Declines After Ueda Gives Mixed Signals on Hikes&nbsp;&nbsp;bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "Mapping the Market: Somehow, the euro keeps hanging in - reuters.com",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQVkZWZ0dYTnRpVnpNZUpyaFB5S1VnR3B4eG52ZDE5dGRlemJXSWdXUVRqUGpETklKT3dtSGozc3hCUmVMb3ZFeGR4bFdIQXRLNkhmc1ZQRHFueWtVLVlRRERCMmtuTWR0R1VfazNfT3RSNGNuTE5VMzVVX0hoYlNqT29WMDZYcUZTei14ag?oc=5",
+      "pubDate": "2026-09-18T10:13:11.000Z",
+      "description": "Mapping the Market: Somehow, the euro keeps hanging in&nbsp;&nbsp;reuters.com",
+      "source": "Reuters"
+    },
+    {
+      "title": "Pakistan Forex Reserves at Record $21.4 Billion on Bond Sale",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOM0tKT2JDcmxqM2czQ0QzWnlLcWwwTlhXWEZsRjlOSld6YkNTTUZKa2VCN1A2bWUxeEdJZkxXeVBXbkxzQ1pDemp0c29vV3NYTTg0eVVEQ0dmdjAyQ1U4TGpLZTJkb0JHWWlyZ2Z0VzA4RUVmd21NTF85VFM5MllhVmVCTmU3cXMzdktPY3lmYjk2bTFSd2p0WDBhYkhYTm5Ram04YzZhemtkX2NVNEhfSlVHM2M?oc=5",
+      "pubDate": "2026-09-18T10:01:10.000Z",
+      "description": "Pakistan Forex Reserves at Record $21.4 Billion on Bond Sale&nbsp;&nbsp;bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "PODCAST: If not now, yen? - reuters.com",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQdk0tSUNjVHhUcmtyU0lpT2RQcVVZUC1hZ0RaTDFoYUhncXk1UnloZGp1bnRmQlZNNzVYTnl6YW5mTW1KRGtWeERacHNSbk1NNXFoT0x0Z3kyWlk5WTd5eUFER3V6aUl5OWRCV0QtaUtVUG1OLWRyU3Q2S21GWWlXY09GencxUQ?oc=5",
+      "pubDate": "2026-09-18T09:35:28.000Z",
+      "description": "PODCAST: If not now, yen?&nbsp;&nbsp;reuters.com",
+      "source": "Reuters"
+    },
+    {
       "title": "Yen Swings as Markets Digest Bank of Japan’s Rate Path",
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNWJMQTlUdklLNlVnQWxVN0RNb1YyVWtPcG5pY19oUnhfbzVUWEVFc1NxQi1PRDAyVkNjdDBTOHZLU1A1ZGxyUFhOY3cxblBmX1l2aDc3RDZfUmp4cXpTNHI0X1FzZ2VoSXVRalAxTGYxR0UxZHdoTU9PS1VjaW1RWUt5eC05emI0VXAyV2s5ZkRDTks0aVROMWlnODN0a210bmpnOWgwZHFzNHlzSno0RVZPeUFzdw?oc=5",
-      "pubDate": "2026-09-18T10:51:51.000Z",
+      "pubDate": "2026-09-18T09:25:00.000Z",
       "description": "Yen Swings as Markets Digest Bank of Japan’s Rate Path&nbsp;&nbsp;WSJ",
       "source": "Google News"
     },
     {
-      "title": "Yen Extends Declines After Ueda Gives Mixed Signals on Hikes - Bloomberg",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPejFGM2tfUXdEcFpSb2pXX0xadVMwblF0dXhMaEo5UlQwZF8tajNhWU9PM3g4MDFXR1d2UDVWUDhVaFc4NVRGcmJHM1BkdkRYMkZpWXRpaDBQQUYyaFhBcHVKeVNrb0RtVGdfWlRNZTVhOTFfUjJqVzg3N3VBQmFPdFZkYnFCbk00YjlrVDFxUFNtUDIyendfeGtBaWtCOXlfb1NmUXZaR3lXSHpFcHpz?oc=5",
-      "pubDate": "2026-09-18T10:26:11.000Z",
-      "description": "Yen Extends Declines After Ueda Gives Mixed Signals on Hikes&nbsp;&nbsp;Bloomberg",
-      "source": "Google News"
-    },
-    {
-      "title": "Mapping the Market: Somehow, the euro keeps hanging in",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQVkZWZ0dYTnRpVnpNZUpyaFB5S1VnR3B4eG52ZDE5dGRlemJXSWdXUVRqUGpETklKT3dtSGozc3hCUmVMb3ZFeGR4bFdIQXRLNkhmc1ZQRHFueWtVLVlRRERCMmtuTWR0R1VfazNfT3RSNGNuTE5VMzVVX0hoYlNqT29WMDZYcUZTei14ag?oc=5",
-      "pubDate": "2026-09-18T10:13:11.000Z",
-      "description": "Mapping the Market: Somehow, the euro keeps hanging in&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Pakistan Forex Reserves at Record $21.4 Billion on Bond Sale - Bloomberg",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOM0tKT2JDcmxqM2czQ0QzWnlLcWwwTlhXWEZsRjlOSld6YkNTTUZKa2VCN1A2bWUxeEdJZkxXeVBXbkxzQ1pDemp0c29vV3NYTTg0eVVEQ0dmdjAyQ1U4TGpLZTJkb0JHWWlyZ2Z0VzA4RUVmd21NTF85VFM5MllhVmVCTmU3cXMzdktPY3lmYjk2bTFSd2p0WDBhYkhYTm5Ram04YzZhemtkX2NVNEhfSlVHM2M?oc=5",
-      "pubDate": "2026-09-18T10:01:10.000Z",
-      "description": "Pakistan Forex Reserves at Record $21.4 Billion on Bond Sale&nbsp;&nbsp;Bloomberg",
-      "source": "Google News"
-    },
-    {
-      "title": "PODCAST: If not now, yen?",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQdk0tSUNjVHhUcmtyU0lpT2RQcVVZUC1hZ0RaTDFoYUhncXk1UnloZGp1bnRmQlZNNzVYTnl6YW5mTW1KRGtWeERacHNSbk1NNXFoT0x0Z3kyWlk5WTd5eUFER3V6aUl5OWRCV0QtaUtVUG1OLWRyU3Q2S21GWWlXY09GencxUQ?oc=5",
-      "pubDate": "2026-09-18T09:35:28.000Z",
-      "description": "PODCAST: If not now, yen?&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Euro zone consumers nudge up inflation expectations, ECB poll shows",
+      "title": "Euro zone consumers nudge up inflation expectations, ECB poll shows - reuters.com",
       "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOb0swQ0JYZFNTeTA4RkdTU3F2UVFWNElBTG5EbHJNVGkzTEtsOU9HSlgyOHJ3c05OZG4tQ3hFSExYUWRxSjBYclktTlJLMVNSRko5M0xCR3pQcUV0UEcteHN5V1RIQ0lvZkU4Q1JsV1RneFZheDByVG12LW8yRFBYVTN1UW5KdFNwaXIwdW5fQU9uRGR5eThUNlU0UUtPaVB3LTlPMFNLbi14b2RWMHU2MGRrUjZrZHBM?oc=5",
       "pubDate": "2026-09-18T08:24:09.000Z",
-      "description": "Euro zone consumers nudge up inflation expectations, ECB poll shows&nbsp;&nbsp;Reuters",
+      "description": "Euro zone consumers nudge up inflation expectations, ECB poll shows&nbsp;&nbsp;reuters.com",
       "source": "Reuters"
     },
     {
