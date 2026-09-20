@@ -1,6 +1,48 @@
 {
-  "timestamp": "2026-09-20T21:35:01.895Z",
+  "timestamp": "2026-09-20T23:27:40.906Z",
   "items": [
+    {
+      "title": "UK property asking prices rise for first time since May, Rightmove says",
+      "link": "https://www.investing.com/news/economic-indicators/uk-property-asking-prices-rise-for-first-time-since-may-rightmove-says-4908200",
+      "pubDate": "2026-09-20T23:06:24.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Qatar’s Prime Minister says Gulf states have to act together on Iran",
+      "link": "https://www.fxstreet.com/news/qatars-prime-minister-says-gulf-states-have-to-act-together-on-iran-202609202229",
+      "pubDate": "2026-09-20T22:29:23.000Z",
+      "description": "Qatar’s prime minister, Sheikh Mohammed bin Abdulrahman Al-Thani, said Gulf states must work together to restore stability in the Middle East and help find a settlement between the United States (US) and Iran, Bloomberg reported on Sunday.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Oil rises after Houthi attack on Saudi capital",
+      "link": "https://www.investing.com/news/commodities-news/oil-rises-after-houthi-attack-on-saudi-capital-4908199",
+      "pubDate": "2026-09-20T22:18:25.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Jefferies stays bullish on S&P 500, sees 9,000 by end-2027",
+      "link": "https://www.investing.com/news/stock-market-news/jefferies-stays-bullish-on-sp-500-sees-9000-by-end2027-4908198",
+      "pubDate": "2026-09-20T22:03:44.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Midterm elections: What do equity markets typically do and what is priced?",
+      "link": "https://www.investing.com/news/stock-market-news/midterm-elections-what-do-equity-markets-typically-do-and-what-is-priced-4908197",
+      "pubDate": "2026-09-20T22:01:14.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "AI Bubble Fears Grow, But Nvidia CEO Gives Bulls a New Argument Anyway",
+      "link": "https://beincrypto.com/nvidia-ceo-ai-production-ramp/",
+      "pubDate": "2026-09-20T21:31:46.000Z",
+      "description": "Nvidia CEO Jensen Huang says AI has entered a high production ramp, giving bulls a new argument as bubble fears grow.\nThe post AI Bubble Fears Grow, But Nvidia CEO Gives Bulls a New Argument Anyway appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
     {
       "title": "Russia stocks lower at close of trade; MOEX Russia Index unchanged",
       "link": "https://www.investing.com/news/stock-market-news/russia-stocks-lower-at-close-of-trade-moex-russia-index-unchanged-4908195",
@@ -72,34 +114,6 @@
       "source": "Google News"
     },
     {
-      "title": "Bitcoin slips 1% but above $80,000 as ETF inflows revive institutional demand",
-      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-holds-above-80000-as-etf-inflows-revive-institutional-demand-4908141",
-      "pubDate": "2026-09-20T16:08:07.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "US Treasury’s Bessent and China’s He launch talks on AI, trade and critical minerals",
-      "link": "https://www.investing.com/news/stock-market-news/us-treasurys-bessent-chinas-he-to-launch-talks-on-ai-trade-critical-minerals-4908142",
-      "pubDate": "2026-09-20T16:06:25.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "CIBC stands out as the value pick among Canada’s major bank stocks",
-      "link": "https://www.investing.com/news/stock-market-news/cibc-stands-out-as-the-value-pick-among-canadas-major-bank-stocks-93CH-4908183",
-      "pubDate": "2026-09-20T15:29:23.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Minneapolis Fed’s Kashkari says inflation remains too high",
-      "link": "https://www.investing.com/news/economy-news/minneapolis-feds-kashkari-says-inflation-remains-too-high-4908181",
-      "pubDate": "2026-09-20T15:13:02.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "You Can Soon Get Pre-IPO Exposure on Binance Wallet, But There&#039;s A Catch",
       "link": "https://beincrypto.com/binance-wallet-pre-ipo-tokens-pancakeswap/",
       "pubDate": "2026-09-20T15:10:28.000Z",
@@ -116,7 +130,7 @@
     {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-09-20T13:56:49.000Z",
+      "pubDate": "2026-09-20T13:57:03.000Z",
       "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
       "source": "Bank of Canada"
     },
@@ -163,13 +177,6 @@
       "source": "Google News"
     },
     {
-      "title": "Yen Swings as Markets Digest Bank of Japan’s Rate Path",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNWJMQTlUdklLNlVnQWxVN0RNb1YyVWtPcG5pY19oUnhfbzVUWEVFc1NxQi1PRDAyVkNjdDBTOHZLU1A1ZGxyUFhOY3cxblBmX1l2aDc3RDZfUmp4cXpTNHI0X1FzZ2VoSXVRalAxTGYxR0UxZHdoTU9PS1VjaW1RWUt5eC05emI0VXAyV2s5ZkRDTks0aVROMWlnODN0a210bmpnOWgwZHFzNHlzSno0RVZPeUFzdw?oc=5",
-      "pubDate": "2026-09-20T07:24:11.000Z",
-      "description": "Yen Swings as Markets Digest Bank of Japan’s Rate Path&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
       "title": "Trump Wants an AI Force and a Czar Who Meets One Key Bar",
       "link": "https://beincrypto.com/trump-ai-force-czar-announcement/",
       "pubDate": "2026-09-20T07:18:44.000Z",
@@ -196,13 +203,6 @@
       "pubDate": "2026-09-20T00:13:13.000Z",
       "description": "Dollar Strengthens as Treasury Yields Rise Amid Inflation Fears&nbsp;&nbsp;WSJ",
       "source": "Google News"
-    },
-    {
-      "title": "Fuel Shortages Hit 5 Countries on Day 203 of the Iran War: Full List",
-      "link": "https://beincrypto.com/iran-war-5-countries-running-out-fuel/",
-      "pubDate": "2026-09-19T17:07:41.000Z",
-      "description": "It&#8217;s day 203 of the Iran war. And, at least five countries are rationing fuel or reporting empty pumps as of September 19. Brent crude traded at nearly $110 this month, its strongest level since spring. The Strait of Hormuz has been l",
-      "source": "BeInCrypto"
     },
     {
       "title": "Venezuela, opposition faction weighing deal to move $4 bln in gold to US from UK, sources say",
@@ -464,13 +464,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "European Central Bank: Quarterly hikes still baseline – Nordea",
-      "link": "https://www.fxstreet.com/news/european-central-bank-quarterly-hikes-still-baseline-nordea-202609181350",
-      "pubDate": "2026-09-18T13:50:19.000Z",
-      "description": "Nordea’s team sees the European Central Bank delivering two more 25bp rate hikes, in December and March 2027, despite more aggressive market pricing.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Bowman, Initial Findings from Independent Review of Silicon Valley Bank",
       "link": "https://www.federalreserve.gov/newsevents/speech/bowman20260918b.htm",
       "pubDate": "2026-09-18T13:30:00.000Z",
@@ -483,6 +476,13 @@
       "pubDate": "2026-09-18T13:30:00.000Z",
       "description": "Speech At the Luncheon of the Lord Mayor City of London at Mansion House, London, United Kingdom",
       "source": "Federal Reserve"
+    },
+    {
+      "title": "Watch Yen Falls After BOJ Rate Hike as Oil Extends Slide",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1pbldvYThTTTJ3U0pITkRaZ3ZqQk4wWVF2NVhvTXMzU293RmlKWWJ3djFFVWluNFFRaTdhUGw0MlRQdFk5TzRoSUEzYzF4YXdyX0RSN25yRmVKclF5V01zR2RMSElaYlNtOUVMS3lMX2tuYWU2ZW1pb0VLdXNLa1U?oc=5",
+      "pubDate": "2026-09-18T11:54:39.000Z",
+      "description": "Watch Yen Falls After BOJ Rate Hike as Oil Extends Slide&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
     },
     {
       "title": "Gold outlook hinges on Oil prices and shifting Fed expectations",
@@ -513,6 +513,13 @@
       "source": "Google News"
     },
     {
+      "title": "Yen Swings as Markets Digest Bank of Japan’s Rate Path",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNNWJMQTlUdklLNlVnQWxVN0RNb1YyVWtPcG5pY19oUnhfbzVUWEVFc1NxQi1PRDAyVkNjdDBTOHZLU1A1ZGxyUFhOY3cxblBmX1l2aDc3RDZfUmp4cXpTNHI0X1FzZ2VoSXVRalAxTGYxR0UxZHdoTU9PS1VjaW1RWUt5eC05emI0VXAyV2s5ZkRDTks0aVROMWlnODN0a210bmpnOWgwZHFzNHlzSno0RVZPeUFzdw?oc=5",
+      "pubDate": "2026-09-18T09:25:00.000Z",
+      "description": "Yen Swings as Markets Digest Bank of Japan’s Rate Path&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
       "title": "BOJ Split Vote Sends Bearish Signal on Yen, Strategists Say",
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOUU45Mkg4WmhsUGVuRDZ3a1ZDd252OVNEWE4zUTg2bHFSUjk0Q05TeWZqVFF1akRRcm1UYzNsZU9mNlFNeVNDVkhxVFhaWnBCVGxiYl8xS0R3azdibHcxcXFIdGhDYnplM3RUS2RXVl9CNlBzZWlyeGlhNVFpTU8tUi1aOWlfMVZBeko4WE9RQTE4UGFOVHM2RFJHMXlvUndfbFd3QU5DS3hxUmRJS0E?oc=5",
       "pubDate": "2026-09-18T08:18:00.000Z",
@@ -525,13 +532,6 @@
       "pubDate": "2026-09-18T08:00:00.000Z",
       "description": "",
       "source": "European Central Bank"
-    },
-    {
-      "title": "Why Japan’s markets flipped the usual script after central bank rate hike",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxORWppQ2FNczcyUmFXOEVSREtHVGxhcGNQQ0ZRLVZXR0RzY2p2N1VRZ1BpY2JKbmo2Rl9sTXY1MUJHTWd0T0xOZVV4bkxUM1RmVFYtbVZGNG0tMEN6N1lqaGlrUW1hOXpDcjdrTjRpSW96WHVnZnlSbkd3cW9QQUNIU2x5NTJrYkZSZ0FaUjVB0gGTAUFVX3lxTE5uT3ptTkU0ZGlvTGNaRmpJdGZuelVRMWNVdHVETmZQbWg1V1VuMmZFbXNUU0UyOFlDeVJKMEp1YUllU3pyS2hBQjVLRklmemc1S21IcENhY184Q0JoM05IbTl0ZDlQODBjUjF6NjBXRGhrN2xPSGdLZnFKZUVZeElIUWV2REtpQ01tVGNXUjA2YkZoQQ?oc=5",
-      "pubDate": "2026-09-18T07:19:25.000Z",
-      "description": "Why Japan’s markets flipped the usual script after central bank rate hike&nbsp;&nbsp;CNBC",
-      "source": "Google News"
     },
     {
       "title": "Boris Vujčić: Interview with Reuters",
