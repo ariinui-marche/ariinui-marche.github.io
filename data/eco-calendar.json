@@ -7029,6 +7029,96 @@
       "forecast": "",
       "previous": "",
       "actual": ""
+    },
+    {
+      "title": "Core PPI m/m",
+      "country": "USD",
+      "date": "2026-11-13T07:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "PPI m/m",
+      "country": "USD",
+      "date": "2026-11-13T07:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Claimant Count Change",
+      "country": "GBP",
+      "date": "2026-11-16T01:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "CPI m/m",
+      "country": "CAD",
+      "date": "2026-11-16T07:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Median CPI y/y",
+      "country": "CAD",
+      "date": "2026-11-16T07:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Trimmed CPI y/y",
+      "country": "CAD",
+      "date": "2026-11-16T07:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Inflation Expectations q/q",
+      "country": "NZD",
+      "date": "2026-11-16T20:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "FOMC Meeting Minutes",
+      "country": "USD",
+      "date": "2026-11-18T13:00:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Employment Change",
+      "country": "AUD",
+      "date": "2026-11-18T18:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Unemployment Rate",
+      "country": "AUD",
+      "date": "2026-11-18T18:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
     }
   ]
 }
