@@ -1,75 +1,159 @@
 {
-  "timestamp": "2026-09-21T18:39:51.935Z",
+  "timestamp": "2026-09-21T22:11:29.798Z",
   "items": [
     {
-      "title": "Paramount settles with US states in big step towards closing Warner Bros merger",
-      "link": "https://www.investing.com/news/stock-market-news/paramountsettles-with-california-other-states-clearing-major-hurdle-for-warner-bros-merger-source-says-4909370",
-      "pubDate": "2026-09-21T18:36:42.000Z",
+      "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
+      "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
+      "pubDate": "2026-09-21T22:10:37.000Z",
+      "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
+      "source": "Bank of Canada"
+    },
+    {
+      "title": "Why is Quest Diagnostics stock sliding today?",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-quest-diagnostics-stock-sliding-today-93CH-4909711",
+      "pubDate": "2026-09-21T21:52:08.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Esquire financial vice chairman Andrew Sagliocca sells $1.2m stock",
-      "link": "https://www.investing.com/news/insider-trading-news/esquire-financial-vice-chairman-andrew-sagliocca-sells-12m-stock-93CH-4909518",
-      "pubDate": "2026-09-21T18:31:06.000Z",
+      "title": "Why is Labcorp stock sliding today?",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-labcorp-stock-sliding-today-93CH-4909710",
+      "pubDate": "2026-09-21T21:51:54.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Wall Street rallies as AI optimism reignites and Treasury yields retreat",
-      "link": "https://www.investing.com/news/stock-market-news/wall-st-futures-rise-as-ai-stocks-gain-oil-prices-slide-4908497",
-      "pubDate": "2026-09-21T18:30:52.000Z",
+      "title": "Nvidia, QIA-backed Iambic Therapeutics files for US IPO as biotech boom rolls on",
+      "link": "https://www.investing.com/news/economy-news/nvidia-qiabacked-iambic-therapeutics-files-for-us-ipo-as-biotech-boom-rolls-on-4909708",
+      "pubDate": "2026-09-21T21:48:55.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Exclusive-Fed’s Musalem says more rate hikes likely needed to quell inflation",
-      "link": "https://www.investing.com/news/economy-news/exclusivefeds-musalem-says-more-rate-hikes-likely-needed-to-quell-inflation-4909515",
-      "pubDate": "2026-09-21T18:30:32.000Z",
+      "title": "Samsara CAO Benjamin Kirchhoff sells $31,123 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/samsara-cao-benjamin-kirchhoff-sells-31123-in-stock-93CH-4909707",
+      "pubDate": "2026-09-21T21:45:55.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "AI could boost LatAm, Caribbean economy 5.1% but wages may fall, IDB says",
-      "link": "https://www.investing.com/news/economic-indicators/ai-could-boost-latam-caribbean-economy-51-but-wages-may-fall-idb-says-4909514",
-      "pubDate": "2026-09-21T18:24:38.000Z",
+      "title": "Ulta Beauty CEO Kecia Steelman sells $1.09m in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/ulta-beauty-ceo-kecia-steelman-sells-109m-in-stock-93CH-4909706",
+      "pubDate": "2026-09-21T21:45:51.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Fed’s Musalem says more rate hikes likely needed to curb inflation",
-      "link": "https://www.investing.com/news/economy-news/feds-musalem-says-more-rate-hikes-likely-needed-to-curb-inflation-4909511",
-      "pubDate": "2026-09-21T18:22:43.000Z",
+      "title": "Schrodinger president Karen Akinsanya sells $927,970 in company stock",
+      "link": "https://www.investing.com/news/insider-trading-news/schrodinger-president-karen-akinsanya-sells-927970-in-company-stock-93CH-4909705",
+      "pubDate": "2026-09-21T21:45:50.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Trump administration sued over withheld federal grants for US community lenders",
-      "link": "https://www.investing.com/news/economy-news/trump-administration-sued-over-withheld-federal-grants-for-us-community-lenders-4909510",
-      "pubDate": "2026-09-21T18:18:55.000Z",
+      "title": "Lockheed Martin secures $1.2B Army contract for missile system",
+      "link": "https://www.investing.com/news/company-news/lockheed-martin-secures-12b-army-contract-for-missile-system-93CH-4909704",
+      "pubDate": "2026-09-21T21:44:26.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Moderna stock hits 52-week high at 176.75 USD",
-      "link": "https://www.investing.com/news/company-news/moderna-stock-hits-52week-high-at-17675-usd-93CH-4909507",
-      "pubDate": "2026-09-21T18:16:49.000Z",
+      "title": "Texas Governor Abbott halts all state-issued permits for data centers until grid audit is complete",
+      "link": "https://www.investing.com/news/commodities-news/texas-gov-abbott-halts-all-stateissued-permits-for-data-centers-until-grid-audit-is-complete-4909646",
+      "pubDate": "2026-09-21T21:42:55.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Intel options flow analysis: 1.78M contracts traded as stock surges 11.69%",
-      "link": "https://www.investing.com/news/stock-market-news/intel-options-flow-analysis-178m-contracts-traded-as-stock-surges-1169-93CH-4909506",
-      "pubDate": "2026-09-21T18:13:56.000Z",
+      "title": "Latam Airlines rating upgraded by S&P on strong performance",
+      "link": "https://www.investing.com/news/stock-market-news/latam-airlines-rating-upgraded-by-sp-on-strong-performance-93CH-4909703",
+      "pubDate": "2026-09-21T21:42:45.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Nasdaq soars 2%, S&P up 1.5% as AI stocks rally, led by surge in Meta Platforms",
-      "link": "https://www.investing.com/news/stock-market-news/us-stock-index-futures-rise-with-china-summit-iran-escalation-in-focus-4908205",
-      "pubDate": "2026-09-21T18:13:06.000Z",
+      "title": "XRP Climbs 10% In a Green Day",
+      "link": "https://www.investing.com/news/cryptocurrency-news/xrp-climbs-10-in-a-green-day-4909700",
+      "pubDate": "2026-09-21T21:39:05.000Z",
       "description": "",
       "source": "Investing.com"
+    },
+    {
+      "title": "Silver Price Forecast: 100-day SMA caps bulls as range tightens",
+      "link": "https://www.fxstreet.com/news/silver-price-forecast-100-day-sma-caps-bulls-as-range-tightens-202609212137",
+      "pubDate": "2026-09-21T21:37:57.000Z",
+      "description": "Silver price advance stalled at the 100-day Simple Moving Average (SMA) of $66.39 and is set to end Monday’s session with losses of 0.39% as the Greenback rises following last week’s Fed decision. The XAG/USD trades at $66.03 after reaching",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Fed’s Collins eyes another hike as energy risks linger",
+      "link": "https://www.fxstreet.com/news/feds-collins-eyes-another-hike-as-energy-risks-linger-202609212044",
+      "pubDate": "2026-09-21T20:44:17.000Z",
+      "description": "On Monday, Boston Federal Reserve (Fed) President Susan Collins said the resumption of hostilities in the Middle East was a key reason for supporting the increase in the Fed funds rate last week.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Singapore Dollar: Labour slack limits MAS tightening risk – UOB",
+      "link": "https://www.fxstreet.com/news/singapore-dollar-labour-slack-limits-mas-tightening-risk-uob-202609212018",
+      "pubDate": "2026-09-21T20:18:00.000Z",
+      "description": "UOB’s Jester Koh assesses Singapore’s soft labour market and its implications for Monetary Authority of Singapore policy. The Labour Market Pressure Index shows rising slack, which UOB links to weaker passthrough of supply-side shocks into ",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Gold price retraces as Fed hawks keep the US Dollar bid",
+      "link": "https://www.fxstreet.com/news/gold-price-retraces-as-fed-hawks-keep-the-us-dollar-bid-202609212010",
+      "pubDate": "2026-09-21T20:10:00.000Z",
+      "description": "Gold price retreats on Monday, down over 0.6% following last week’s Federal Reserve (Fed) interest rate hike. That 25 bps hike initially pushed US bond yields higher, but the US Dollar Index (DXY) has recovered some ground on Monday despite",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Indonesian Rupiah: Policy continuity offsets but cannot erase external headwinds – OCBC",
+      "link": "https://www.fxstreet.com/news/indonesian-rupiah-policy-continuity-offsets-but-cannot-erase-external-headwinds-ocbc-202609211937",
+      "pubDate": "2026-09-21T19:37:00.000Z",
+      "description": "OCBC’s Christopher Wong notes that Indonesia’s appointment of Finance Minister Suahasil Nazara signals fiscal continuity and discipline, helping to reduce domestic risk premia for the Rupiah.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Yen eases as potential for intervention eyed",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOeEFyOHhrcWVmUjJqdnBjS2NLMUtvajJaU1ZBNHdFNDhobTd6d2VKbEl1cThLOTJOSVdHN3lMUmZXNGluMTJTVW9lckdWSUVKdERCaVFxU1U5ZVowMVE5c2ZxcXE0RDMwLXpfWUtvbDZOajI0N3ZNbG1PUU8yenhDbW5ybG1zbDRjWDRNQXRFVlMwWnZFTnRZbkZVRncxdWlLN0FMX29obHIwOFJyX2gxa0c2Y0E3cTlS?oc=5",
+      "pubDate": "2026-09-21T19:20:51.000Z",
+      "description": "Yen eases as potential for intervention eyed&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "AMD Hits $1 Trillion Market Cap: 3 Reasons Nvidia Sat Out the AI Rally",
+      "link": "https://beincrypto.com/amd-1-trillion-market-cap-nvidia/",
+      "pubDate": "2026-09-21T19:18:55.000Z",
+      "description": "AMD touched $1 trillion as Meta's Muse agent, a 10% chip price hike and a CPU rotation left Nvidia trailing.\nThe post AMD Hits $1 Trillion Market Cap: 3 Reasons Nvidia Sat Out the AI Rally appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Brent: Supply risks contrast softer prices – ING",
+      "link": "https://www.fxstreet.com/news/brent-supply-risks-contrast-softer-prices-ing-202609211912",
+      "pubDate": "2026-09-21T19:12:00.000Z",
+      "description": "ING strategists Ewa Manthey and Warren Patterson note ICE Brent and WTI started the week lower despite persistent supply risks and elevated speculative length. They highlight Saudi Aramco’s curtailed allocations after pipeline damage, tight",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Singapore Dollar: Inflation keeps MAS tightening risk alive - Commerzbank",
+      "link": "https://www.fxstreet.com/news/singapore-dollar-inflation-keeps-mas-tightening-risk-alive-commerzbank-202609211851",
+      "pubDate": "2026-09-21T18:51:00.000Z",
+      "description": "Commerzbank’s Henry Hao and Moses Lim highlight that Singapore’s August NODX growth was the strongest since 1998, driven by surging electronics and robust AI-related demand. They expect NODX to stay firm but moderate as base effects fade.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Fed's Musalem calls for more rate hikes",
+      "link": "https://www.fxstreet.com/news/feds-musalem-calls-for-more-rate-hikes-202609211846",
+      "pubDate": "2026-09-21T18:46:03.000Z",
+      "description": "St. Louis Federal Reserve (Fed) President Alberto Musalem said interest rates likely need to rise further to tame inflation that is both demand- and supply-driven.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Gold falls on rising odds of Fed rate hike, stronger dollar",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQQUtKdjloRHZCamhPWmFUa00yUkQwRWZJNFVpbUFiRl9KQmNWbmViLTJQN1hvUmphTzVuMm9ubU5VaXNoQ2NPdVgzM3JPd0t6Qk5XOHQ4ZG96bDRkMlhEMG1kN09OaElGdGxsOEpYdzA2eE53aXBsZm1ZaWhXR1JJY0FSN2NPdzFaX2d6UjY4VU5aWTJOcDNRZC1kTURhRWFPUVNoeU9NTEVUcFRuQmc?oc=5",
+      "pubDate": "2026-09-21T18:45:41.000Z",
+      "description": "Gold falls on rising odds of Fed rate hike, stronger dollar&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "AUD/USD Price Forecast: Upside bias intact despite mixed momentum",
@@ -84,13 +168,6 @@
       "pubDate": "2026-09-21T18:09:35.000Z",
       "description": "OCBC’s Christopher Wong comments that USD/KRW eased as Korean equities rebounded and foreign investors briefly turned net buyers, but warns this may not mark a lasting shift.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
-      "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-09-21T18:07:22.000Z",
-      "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
-      "source": "Bank of Canada"
     },
     {
       "title": "OpenAI and Anthropic Weighed Mutual AI Tests. Palantir CEO Says One May Never List",
@@ -140,13 +217,6 @@
       "pubDate": "2026-09-21T16:15:44.000Z",
       "description": "iFX EXPO has unveiled the expanded trader-first format for The Trading Festival Mexico 2026, designed to connect brokers and prop firms directly with Mexico&#8217;s growing retail trading community. Taking place on November 12&#8211;13 at t",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Gold falls on rising odds of Fed rate hike, stronger dollar",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQQUtKdjloRHZCamhPWmFUa00yUkQwRWZJNFVpbUFiRl9KQmNWbmViLTJQN1hvUmphTzVuMm9ubU5VaXNoQ2NPdVgzM3JPd0t6Qk5XOHQ4ZG96bDRkMlhEMG1kN09OaElGdGxsOEpYdzA2eE53aXBsZm1ZaWhXR1JJY0FSN2NPdzFaX2d6UjY4VU5aWTJOcDNRZC1kTURhRWFPUVNoeU9NTEVUcFRuQmc?oc=5",
-      "pubDate": "2026-09-21T16:11:25.000Z",
-      "description": "Gold falls on rising odds of Fed rate hike, stronger dollar&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "BoC’s Macklem: Rate decisions must look beyond initial Oil shock",
@@ -324,13 +394,6 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Is the M&#038;A Boom Real? BCG Says Yes at the Top, Not Below $1 Billion",
-      "link": "https://beincrypto.com/global-ma-value-megadeals-record-2026/",
-      "pubDate": "2026-09-21T12:12:27.000Z",
-      "description": "Global mergers and acquisitions (M&#38;A) value ran 11% above its 10-year average in the first eight months of 2026, according to Boston Consulting Group (BCG). The gains sit almost entirely at the top of the market. Deal volumes below $1 b",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Experts agree: Further US Dollar’s upside hinges on upcoming data and not hawkish Fed prospects",
       "link": "https://www.fxstreet.com/news/experts-agree-further-us-dollars-upside-hinges-on-upcoming-data-and-not-hawkish-fed-prospects-202609211209",
       "pubDate": "2026-09-21T12:09:28.000Z",
@@ -352,67 +415,11 @@
       "source": "Bank of England"
     },
     {
-      "title": "Silver price edges up as lower Oil, guarded Fed stance temper upside",
-      "link": "https://www.fxstreet.com/news/silver-price-edges-up-as-lower-oil-guarded-fed-stance-temper-upside-202609211158",
-      "pubDate": "2026-09-21T11:58:34.000Z",
-      "description": "Silver (XAG/USD) starts the week on a positive note, gaining 0.37% on Monday to trade around $66.50 at the time of writing. The precious metal manages to advance despite a stable US Dollar (USD), with the US Dollar Index (DXY) trading virtu",
-      "source": "FXStreet"
-    },
-    {
-      "title": "EUR/USD Price Forecasts: Bears remain in control with 1.1450 support eyed",
-      "link": "https://www.fxstreet.com/news/eur-usd-price-forecasts-bears-remain-in-control-with-11450-support-eyed-202609211158",
-      "pubDate": "2026-09-21T11:58:05.000Z",
-      "description": "The Euro (EUR) is consolidating last week’s decline against the US Dollar (USD) on Monday, with price action capped below 1.1500 and the seven-week low in the mid 1.1400s still on the bears’ radar.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Mexican Peso: Sideways range against US Dollar intact – Rabobank",
-      "link": "https://www.fxstreet.com/news/mexican-peso-sideways-range-against-us-dollar-intact-rabobank-202609211151",
-      "pubDate": "2026-09-21T11:51:31.000Z",
-      "description": "Rabobank's Christian Lawrence and Molly Schwartz expect USD/MXN to trade broadly between 17 and 18 over the next 12 months. They see room for both Fed and Banxico rate expectations to be repriced, with the timing of those adjustments likely",
-      "source": "FXStreet"
-    },
-    {
-      "title": "GBP/JPY Price Forecast: Momentum stabilizes, but lacks bullish conviction",
-      "link": "https://www.fxstreet.com/news/gbp-jpy-price-forecast-momentum-stabilizes-but-lacks-bullish-conviction-202609211150",
-      "pubDate": "2026-09-21T11:50:17.000Z",
-      "description": "GBP/JPY edges higher on Monday as the Japanese Yen (JPY) remains under pressure across the board in thin trading conditions. Japanese markets are closed until Wednesday for the country’s Silver Week holidays.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Brent: Diesel signals higher prices – Societe Generale",
-      "link": "https://www.fxstreet.com/news/brent-diesel-signals-higher-prices-societe-generale-202609211130",
-      "pubDate": "2026-09-21T11:30:14.000Z",
-      "description": "Societe Generale analysts Michael Haigh and Jeremy Sellem highlight a sharp divergence between physical Brent and futures, with Dated Brent trading at a substantial premium. They note that Diesel strength implies Brent should be above $150/",
-      "source": "FXStreet"
-    },
-    {
       "title": "Foreign Currency Reserves 2026 – Market Notice 21 September 2026",
       "link": "https://www.bankofengland.co.uk/markets/market-notices/2026/september/foreign-currency-reserves-2026-market-notice-21-september-2026",
       "pubDate": "2026-09-21T11:30:00.000Z",
       "description": "Not for distribution, directly or indirectly, in or into the United States, Canada, Australia, Japan or any other jurisdiction where it is unlawful to distribute this announcement",
       "source": "Bank of England"
-    },
-    {
-      "title": "New Zealand Dollar wavers near two-month lows despite a brighter market mood",
-      "link": "https://www.fxstreet.com/news/new-zealand-dollar-wavers-near-two-month-lows-despite-a-brighter-market-mood-202609211118",
-      "pubDate": "2026-09-21T11:18:40.000Z",
-      "description": "The New Zealand Dollar (NZD) languishes just above two-and-a-half-month lows against the US Dollar (USD), despite a somewhat brighter market mood, as a sustained reversal in Oil prices has eased risk aversion on Monday.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Gold: Range-bound outlook with Fed headwinds – ING",
-      "link": "https://www.fxstreet.com/news/gold-range-bound-outlook-with-fed-headwinds-ing-202609211116",
-      "pubDate": "2026-09-21T11:16:01.000Z",
-      "description": "ING’s commodities team reports Gold eased as markets digest the Federal Reserve’s first rate hike since 2023 and guidance for prolonged restrictive policy. They stress that higher rates remain a headwind, but ETF holdings at six‑month highs",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Fed’s Goolsbee: Demand, tariffs, energy, supply shocks all are fuelling inflation",
-      "link": "https://www.fxstreet.com/news/feds-goolsbee-demand-tariffs-energy-supply-shocks-all-are-fuelling-inflation-202609211113",
-      "pubDate": "2026-09-21T11:13:18.000Z",
-      "description": "Chicago Federal Reserve (Fed) Bank President Austan Goolsbee said at an Official Monetary and Financial Institutions Forum event on Monday that various factors including strong demand, tariffs, energy and supply shocks are fuelling United S",
-      "source": "FXStreet"
     },
     {
       "title": "Gold struggles near $4,350 as hawksih Fed outlook supports the Greenback",
@@ -492,13 +499,6 @@
       "source": "Google News"
     },
     {
-      "title": "Yen weaker as focus on possible intervention increases",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOeEFyOHhrcWVmUjJqdnBjS2NLMUtvajJaU1ZBNHdFNDhobTd6d2VKbEl1cThLOTJOSVdHN3lMUmZXNGluMTJTVW9lckdWSUVKdERCaVFxU1U5ZVowMVE5c2ZxcXE0RDMwLXpfWUtvbDZOajI0N3ZNbG1PUU8yenhDbW5ybG1zbDRjWDRNQXRFVlMwWnZFTnRZbkZVRncxdWlLN0FMX29obHIwOFJyX2gxa0c2Y0E3cTlS?oc=5",
-      "pubDate": "2026-09-21T01:34:00.000Z",
-      "description": "Yen weaker as focus on possible intervention increases&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "Yen Is Vulnerable With Japan on Holiday After BOJ Disappoints",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNUVVhQ09jQk1xT0hWOEZXWUVSdnFSRmJWNjk5eUJGTHBKMEI3ajNybGNGU296OUNBcGk0ZUk2YU5MOXZ0QWZZc0VfSU1CVG1xT2pKVTBpSGJ2eWd6c3dQMC1WUkk5RHR3MVJEWVNzWmo3djFjNDhGc3RmTzNYRndBNVR4VHIzc1NiSzF1QmJNTVp1dE9rczhHXzdkWVlVQlRfalJKeWxIZUNmSW5hTEdieTd3?oc=5",
       "pubDate": "2026-09-20T22:24:09.000Z",
@@ -543,7 +543,7 @@
     {
       "title": "Multibillion-Dollar Stock-Market Scandal Roils Erdogan’s Turkey",
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNSFZJNjlYdTAzcGlzSzFYVDdlRXNaWnk5Z3JKT0gyQWlWb1kyMDBWYUt1LXZRbEtGelNwNW44Ylp5OW9QSDZSU1VmbkJ6MUlWSVZFdXJYdTFRWEtHMTRCY3lodTVITmFkS0dQaDVTd3NZejl4cUpJWS1UTGdiX0VOd3BNckh4Z0otWjZib3NHWWFseXZjWF9aNVh4RlZkUQ?oc=5",
-      "pubDate": "2026-09-18T16:58:47.000Z",
+      "pubDate": "2026-09-18T16:57:00.000Z",
       "description": "Multibillion-Dollar Stock-Market Scandal Roils Erdogan’s Turkey&nbsp;&nbsp;WSJ",
       "source": "Google News"
     },
