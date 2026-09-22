@@ -1,26 +1,152 @@
 {
-  "timestamp": "2026-09-22T21:27:59.420Z",
+  "timestamp": "2026-09-22T23:41:15.762Z",
   "items": [
     {
-      "title": "Talos Energy stock rises on $420M Gulf of America asset deal",
-      "link": "https://www.investing.com/news/stock-market-news/talos-energy-stock-rises-on-420m-gulf-of-america-asset-deal-93CH-4911722",
-      "pubDate": "2026-09-22T21:13:09.000Z",
+      "title": "Explosion heard near Iran’s Qeshm Island",
+      "link": "https://www.fxstreet.com/news/explosion-heard-near-irans-qeshm-island-202609222337",
+      "pubDate": "2026-09-22T23:37:11.000Z",
+      "description": "An explosion was heard near Qeshm Island in southern Iran's Hormozgan province, the official news agency IRNA reported on Tuesday.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Trump supports diesel export ban as fuel prices hit records",
+      "link": "https://www.investing.com/news/commodities-news/trump-says-he-backs-the-idea-of-a-ban-on-diesel-exports-4911466",
+      "pubDate": "2026-09-22T23:24:26.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Trading Day: Oil slips, Nasdaq rips",
-      "link": "https://www.investing.com/news/economy-news/trading-day-oil-slips-nasdaq-rips-4911721",
-      "pubDate": "2026-09-22T21:12:38.000Z",
+      "title": "Gold recovers above $4,350 on US–Iran diplomacy hopes",
+      "link": "https://www.fxstreet.com/news/gold-recovers-above-4-350-on-us-iran-diplomacy-hopes-202609222322",
+      "pubDate": "2026-09-22T23:22:59.000Z",
+      "description": "Gold price (XAU/USD) rebounds to near $4,360 during the early Asian session on Wednesday. The precious metal edges higher amid hopes for diplomatic progress between the US and Iran.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Western New England Bancorp SVP sells $47,498 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/western-new-england-bancorp-svp-sells-47498-in-stock-93CH-4911850",
+      "pubDate": "2026-09-22T23:15:56.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Gran Tierra secures bondholder consent for indenture amendments",
-      "link": "https://www.investing.com/news/company-news/gran-tierra-secures-bondholder-consent-for-indenture-amendments-93CH-4911720",
-      "pubDate": "2026-09-22T21:12:37.000Z",
+      "title": "UK employers’ pay awards cool to 3%, Brightmine data shows",
+      "link": "https://www.investing.com/news/economy-news/uk-employers-pay-awards-cool-to-3-brightmine-data-shows-4911840",
+      "pubDate": "2026-09-22T23:12:30.000Z",
       "description": "",
       "source": "Investing.com"
+    },
+    {
+      "title": "United Parks & Resorts appoints Kyle Miller as president, amends bylaws",
+      "link": "https://www.investing.com/news/sec-filings/united-parks--resorts-appoints-kyle-miller-as-president-amends-bylaws-93CH-4911839",
+      "pubDate": "2026-09-22T23:04:19.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "49.3: Australia’s S&P Global Manufacturing PMI declines in September",
+      "link": "https://www.fxstreet.com/news/493-australias-sp-global-manufacturing-pmi-declines-in-september-202609222301",
+      "pubDate": "2026-09-22T23:01:34.000Z",
+      "description": "The preliminary reading of Australia's S&P Global Manufacturing Purchasing Managers Index (PMI) eased to 49.3 in September versus 52.0 prior, the latest data published by S&P Global showed on Wednesday.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "BlackSky technology general counsel & CAO Lin sells $138,600 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/blacksky-technology-general-counsel--cao-lin-sells-138600-in-stock-93CH-4911835",
+      "pubDate": "2026-09-22T23:00:59.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "BlackSky CFO Dubois sells $91,880 in company stock",
+      "link": "https://www.investing.com/news/insider-trading-news/blacksky-cfo-dubois-sells-91880-in-company-stock-93CH-4911834",
+      "pubDate": "2026-09-22T23:00:53.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "BlackSky CEO Brian O’Toole sells $457,600 in BKSY shares.",
+      "link": "https://www.investing.com/news/insider-trading-news/blacksky-ceo-brian-otoole-sells-457600-in-bksy-shares-93CH-4911833",
+      "pubDate": "2026-09-22T23:00:52.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "QVC Group files monthly operating report following Chapter 11 emergence",
+      "link": "https://www.investing.com/news/sec-filings/qvc-group-files-monthly-operating-report-following-chapter-11-emergence-93CH-4911832",
+      "pubDate": "2026-09-22T23:00:40.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Explainer-Ban on US diesel exports would hurt, not help fuel markets, analysts say",
+      "link": "https://www.investing.com/news/commodities-news/explainerban-on-us-diesel-exports-would-hurt-not-help-fuel-markets-analysts-say-4911830",
+      "pubDate": "2026-09-22T23:00:32.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Millrose Properties prices $1 billion senior notes offering",
+      "link": "https://www.investing.com/news/company-news/millrose-properties-prices-1-billion-senior-notes-offering-93CH-4911829",
+      "pubDate": "2026-09-22T23:00:31.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Strategy CEO Phong Le Reveals the One Mistake Behind STRC&#039;s 25% Collapse",
+      "link": "https://beincrypto.com/phong-le-strc-collapse-leverage-mistake/",
+      "pubDate": "2026-09-22T23:00:00.000Z",
+      "description": "Strategy CEO Phong Le says unexpected leverage sank STRC to $75 and explains why buybacks beat a dividend hike.\nThe post Strategy CEO Phong Le Reveals the One Mistake Behind STRC&#039;s 25% Collapse appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "The New Zealand Dollar dips to a new low and bounces as Crude Oil gets cheaper",
+      "link": "https://www.fxstreet.com/news/the-new-zealand-dollar-dips-to-a-new-low-and-bounces-as-crude-oil-gets-cheaper-202609222254",
+      "pubDate": "2026-09-22T22:54:38.000Z",
+      "description": "Four weeks of selling have taken NZD/USD from just under 0.6000 to its lowest since early July. On Tuesday the pair dipped under 0.5700, then climbed back into the 0.5700 to 0.5800 range it has traded in since September 16, and it's trading",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Australian Dollar remains subdued as Fed and RBA hawks collide",
+      "link": "https://www.fxstreet.com/news/australian-dollar-remains-subdued-as-fed-and-rba-hawks-collide-202609222249",
+      "pubDate": "2026-09-22T22:49:21.000Z",
+      "description": "The Aussie Dollar is poised to end Tuesday’s session unchanged versus the Greenback amid renewed hopes for an end of the Middle East conflict, while Federal Reserve officials struck a hawkish tone in their speeches. The AUD/USD trades at 0.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "The Japanese Yen spikes and unwinds as Iran offers to reopen Hormuz",
+      "link": "https://www.fxstreet.com/news/the-japanese-yen-spikes-and-unwinds-as-iran-offers-to-reopen-hormuz-202609222245",
+      "pubDate": "2026-09-22T22:45:42.000Z",
+      "description": "Cheaper Crude Oil should help the Yen, since Japan buys almost all of its Crude Oil abroad, and on Tuesday it helped only briefly. USD/JPY dropped close to 157.00 after reports that Iran has offered to reopen the Strait of Hormuz, then clim",
+      "source": "FXStreet"
+    },
+    {
+      "title": "The Euro drops to its lowest since July as the Dollar keeps climbing",
+      "link": "https://www.fxstreet.com/news/the-euro-drops-to-its-lowest-since-july-as-the-dollar-keeps-climbing-202609222219",
+      "pubDate": "2026-09-22T22:19:16.000Z",
+      "description": "About 80% of the Euro's August rally is gone. EUR/USD climbed from near 1.1350 at the end of July to just above 1.1700 in the second half of August, and on Tuesday it dipped under 1.1450 to its lowest since late July before recovering to tr",
+      "source": "FXStreet"
+    },
+    {
+      "title": "The British Pound sets a new September low as Fed officials argue for more",
+      "link": "https://www.fxstreet.com/news/the-british-pound-sets-a-new-september-low-as-fed-officials-argue-for-more-202609222204",
+      "pubDate": "2026-09-22T22:04:34.000Z",
+      "description": "1.3400 has capped GBP/USD in every session since the Fed raised rates on September 16. The pair went through that level on the day of the decision and has failed to get back above it four times since.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Goldman Sachs and Deutsche Bank Agree: The S&#038;P 500 Rally Isn&#039;t Over",
+      "link": "https://beincrypto.com/goldman-sachs-earnings-bubble-sp500-deutsche-bank/",
+      "pubDate": "2026-09-22T22:00:00.000Z",
+      "description": "Goldman Sachs pushed back hard against fears of an S&#38;P 500 earnings bubble on Tuesday. The firm projects another quarter of double-digit growth starting next week. Deutsche Bank echoed that confidence separately, reaffirming its year-en",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Chinese Yuan: RMB gains hinge on PBoC fix – OCBC",
+      "link": "https://www.fxstreet.com/news/chinese-yuan-rmb-gains-hinge-on-pboc-fix-ocbc-202609222154",
+      "pubDate": "2026-09-22T21:54:00.000Z",
+      "description": "OCBC strategists Sim Moh Siong and Christopher Wong note that the Renminbi (RMB) has extended gains, with USD/CNY breaking below 6.70 as the People's Bank of China (PBoC) strengthened the fix for nine straight sessions ahead of the Trump–Xi",
+      "source": "FXStreet"
     },
     {
       "title": "Singapore Dollar: Sideways bias holds above support against US Dollar – UOB",
@@ -30,53 +156,11 @@
       "source": "FXStreet"
     },
     {
-      "title": "Why is KB Home stock sliding today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-kb-home-stock-sliding-today-93CH-4911713",
-      "pubDate": "2026-09-22T21:04:41.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Helus Pharma shareholders approve name change from Cybin Inc.",
-      "link": "https://www.investing.com/news/company-news/helus-pharma-shareholders-approve-name-change-from-cybin-inc-93CH-4911711",
-      "pubDate": "2026-09-22T21:04:32.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Parke Bancorp declares $0.20 per share quarterly dividend",
-      "link": "https://www.investing.com/news/company-news/parke-bancorp-declares-020-per-share-quarterly-dividend-93CH-4911710",
-      "pubDate": "2026-09-22T21:04:24.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Why is Voyager Technologies stock sliding today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-voyager-technologies-stock-sliding-today-93CH-4911709",
-      "pubDate": "2026-09-22T21:03:15.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Jefferies maintains Capri Holdings stock rating after acquisition report",
-      "link": "https://www.investing.com/news/analyst-ratings/jefferies-maintains-capri-holdings-stock-rating-after-acquisition-report-93CH-4911708",
-      "pubDate": "2026-09-22T21:02:48.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Scott Peters from California’s 50th District Conducts Significant Trades in August 2026",
-      "link": "https://www.investing.com/news/company-news/scott-peters-from-californias-50th-district-conducts-significant-trades-in-august-2026-93CH-4911707",
-      "pubDate": "2026-09-22T21:01:18.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Trump bought and sold shares in Musk’s SpaceX in July, financial disclosure shows",
-      "link": "https://www.investing.com/news/stock-market-news/trump-bought-and-sold-shares-in-musks-spacex-in-july-financial-disclosure-shows-4911482",
-      "pubDate": "2026-09-22T21:01:12.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "Tom Lee and iTrustCapital CEO Say the Worst Is Over: Can Bitcoin Hold $86,000?",
+      "link": "https://beincrypto.com/tom-lee-itrustcapital-bitcoin-worst-over/",
+      "pubDate": "2026-09-22T21:02:53.000Z",
+      "description": "Tom Lee and iTrustCapital's CEO say the worst is over as Bitcoin trades near $86,000. Can the rally hold?\nThe post Tom Lee and iTrustCapital CEO Say the Worst Is Over: Can Bitcoin Hold $86,000? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
     },
     {
       "title": "Banxico expected to stay put as inflation risks block easing – Reuters",
@@ -116,7 +200,7 @@
     {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-09-22T19:56:05.000Z",
+      "pubDate": "2026-09-22T19:56:15.000Z",
       "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
       "source": "Bank of Canada"
     },
@@ -133,6 +217,13 @@
       "pubDate": "2026-09-22T19:51:00.000Z",
       "description": "OCBC strategists Sim Moh Siong and Christopher Wong highlight that the Taiwan Dollar (TWD) has extended gains, briefly strengthening near 31.71 versus the US Dollar (USD), supported by strong foreign portfolio inflows and domestic equity ou",
       "source": "FXStreet"
+    },
+    {
+      "title": "Opinion | The Staring Contest Over the Dollar and the Yen",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNLXRPVTVlSENGeDgzbUFtUWo3X2NxM1RKbkhyUW1hWHMwTnhzdGx5MVF2YkpXaXFHd2RZNVhHZE42eHI0VnlEenloS0l6VHpvSWdUZUd6dkJoS2J4UzhDbU0wMUNlVTRMalhzQjdMaExSbmEyNFdJZGRWb3gtV1NyWUdZMGN4MmVZUFE?oc=5",
+      "pubDate": "2026-09-22T19:43:37.000Z",
+      "description": "Opinion | The Staring Contest Over the Dollar and the Yen&nbsp;&nbsp;WSJ",
+      "source": "Google News"
     },
     {
       "title": "Gold losses altitude as peace hopes meet hawkish Fed bets",
@@ -289,74 +380,11 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Bank of Canada: Slack delays hikes despite crude shock – NBC",
-      "link": "https://www.fxstreet.com/news/bank-of-canada-slack-delays-hikes-despite-crude-shock-nbc-202609221506",
-      "pubDate": "2026-09-22T15:06:29.000Z",
-      "description": "National Bank of Canada's Ethan Currie notes that while oil-driven inflation risks have increased, the Bank of Canada is likely to remain on hold in October as domestic slack and trade uncertainty continue to weigh on the economic outlook.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Trump sees post-election Iran deal, calls for pressure to stay",
-      "link": "https://www.fxstreet.com/news/trump-sees-post-election-iran-deal-calls-for-pressure-to-stay-202609221502",
-      "pubDate": "2026-09-22T15:02:52.000Z",
-      "description": "US President Donald Trump said at the UN General Assembly that “we must be united in maintaining pressure on Iran,” adding that he believes that the US and Iran will strike a deal following the US midterm elections in November.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "United States: September inflation profile – TD Securities",
-      "link": "https://www.fxstreet.com/news/united-states-september-inflation-profile-td-securities-202609221456",
-      "pubDate": "2026-09-22T14:56:06.000Z",
-      "description": "TD Securities economists Oscar Munoz and Eli Nir provide an early projection for United States (US) September Consumer Price Index (CPI , expecting Headline CPI to rise 0.54% m/m, driven mainly by an almost 8% jump in gasoline and firmer fo",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Natural gas: Price downside limited – Commerzbank",
-      "link": "https://www.fxstreet.com/news/natural-gas-price-downside-limited-commerzbank-202609221442",
-      "pubDate": "2026-09-22T14:42:29.000Z",
-      "description": "Norman Liebke at Commerzbank argues that European gas prices may see only limited further declines despite a brief 8% drop on US–Iran diplomatic headlines.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Canadian Dollar: USD strength keeps CAD weakness in focus - Scotiabank",
-      "link": "https://www.fxstreet.com/news/canadian-dollar-usd-strength-keeps-cad-weakness-in-focus-scotiabank-202609221427",
-      "pubDate": "2026-09-22T14:27:11.000Z",
-      "description": "Scotiabank strategists Shaun Osborne and Eric Theoret note that the Canadian Dollar (CAD) is largely unchanged, with Governor Macklem’s comments leaving the Bank of Canada (BoC) outlook broadly consistent with the latest policy statement.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Fed’s Collins: More restrictive policy should help inflation return to 2%",
-      "link": "https://www.fxstreet.com/news/feds-collins-more-restrictive-policy-should-help-inflation-return-to-2-202609221422",
-      "pubDate": "2026-09-22T14:22:30.000Z",
-      "description": "Boston Federal Reserve (Fed) President Susan Collins said in a LinkedIn post on Tuesday that she supported last week’s interest-rate hike and sees a somewhat more restrictive policy stance as appropriate to bring inflation sustainably back ",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Risk sentiment improved and Oil prices fell: Why the US Dollar is still holding firm",
-      "link": "https://www.fxstreet.com/news/risk-sentiment-improved-and-oil-prices-fell-why-the-us-dollar-is-still-holding-firm-202609221420",
-      "pubDate": "2026-09-22T14:20:07.000Z",
-      "description": "The US Dollar (USD) remains on a solid footing following a hawkish Federal Reserve (Fed) interest rate decision and persistent hawkish rhetoric from Fed officials.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Jefferson, Discount Window Modernization and Treasury Market Functioning",
       "link": "https://www.federalreserve.gov/newsevents/speech/jefferson20260922a.htm",
       "pubDate": "2026-09-22T14:20:00.000Z",
       "description": "Speech At the 2026 U.S. Treasury Market Conference, Federal Reserve Bank of New York, New York, New York",
       "source": "Federal Reserve"
-    },
-    {
-      "title": "Euro remains cautious as Middle East headlines, Fed outlook drive sentiment",
-      "link": "https://www.fxstreet.com/news/euro-remains-cautious-as-middle-east-headlines-fed-outlook-drive-sentiment-202609221411",
-      "pubDate": "2026-09-22T14:11:27.000Z",
-      "description": "EUR/USD is little changed on Tuesday as the US Dollar (USD) gives back earlier gains following fresh diplomatic signals surrounding the war between the United States (US) and Iran.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Silver edges lower as demand-led inflation keeps Fed tightening risks in focus",
-      "link": "https://www.fxstreet.com/news/silver-edges-lower-as-demand-led-inflation-keeps-fed-tightening-risks-in-focus-202609221407",
-      "pubDate": "2026-09-22T14:07:03.000Z",
-      "description": "Silver (XAG/USD) declines 0.38% on Tuesday and trades around $65.85 at the time of writing.",
-      "source": "FXStreet"
     },
     {
       "title": "Dollar Little Moved by Pullback in Energy Prices",
@@ -392,27 +420,6 @@
       "pubDate": "2026-09-22T11:20:21.000Z",
       "description": "Gold (XAU/USD) consolidates on Tuesday as traders weigh fresh Middle East headlines while the broader geopolitical backdrop remains tense. At the time of writing, XAU/USD trades around $4,328 after rebounding from an intraday low of $4,291 ",
       "source": "FXStreet"
-    },
-    {
-      "title": "Binance Invests $100M In Circle Equity: How Will Stock React?",
-      "link": "https://beincrypto.com/binance-100m-circle-equity-stake/",
-      "pubDate": "2026-09-22T11:08:12.000Z",
-      "description": "Binance bought $100 million of Circle stock at $80.84 a share, a 14% discount, with a two-year lockup attached.\nThe post Binance Invests $100M In Circle Equity: How Will Stock React? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Cregis to Host Institutional Onchain Finance Summit 2026 in Singapore",
-      "link": "https://beincrypto.com/cregis-institutional-onchain-finance-summit-singapore/",
-      "pubDate": "2026-09-22T10:52:05.000Z",
-      "description": "Stablecoins are moving beyond crypto trading into payments, settlement and cross-border finance. As adoption grows, institutions are turning to a different set of questions: how to manage onchain funds, integrate digital assets into existin",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Bitcoin Hits 7-Month High as FOMO Peaks, But 2 Signals Still Flash Caution",
-      "link": "https://beincrypto.com/bitcoin-price-7-month-high-fomo-caution-signals/",
-      "pubDate": "2026-09-22T10:23:09.000Z",
-      "description": "Bitcoin (BTC) surged to a 7-month high on Monday, lifting market sentiment and institutional confidence with it. The peak arrived after Bitcoin flashed a key bottom sign. Yet, two key signals raise questions about whether the rally can sust",
-      "source": "BeInCrypto"
     },
     {
       "title": "Sterling steady after report says Iran may reopen Hormuz",
@@ -569,13 +576,6 @@
       "source": "Reuters"
     },
     {
-      "title": "Yen Is Vulnerable With Japan on Holiday After BOJ Disappoints",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNUVVhQ09jQk1xT0hWOEZXWUVSdnFSRmJWNjk5eUJGTHBKMEI3ajNybGNGU296OUNBcGk0ZUk2YU5MOXZ0QWZZc0VfSU1CVG1xT2pKVTBpSGJ2eWd6c3dQMC1WUkk5RHR3MVJEWVNzWmo3djFjNDhGc3RmTzNYRndBNVR4VHIzc1NiSzF1QmJNTVp1dE9rczhHXzdkWVlVQlRfalJKeWxIZUNmSW5hTEdieTd3?oc=5",
-      "pubDate": "2026-09-20T22:24:09.000Z",
-      "description": "Yen Is Vulnerable With Japan on Holiday After BOJ Disappoints&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
       "title": "Federal Reserve Board issues enforcement actions with former employee of Northstar Bank, former employee of American Express Travel Related Services Company, Inc., and former employee of Regions Bank",
       "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260918a.htm",
       "pubDate": "2026-09-18T15:00:00.000Z",
@@ -619,21 +619,21 @@
     },
     {
       "title": "Change in the Guideline for Money Market Operations",
-      "link": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
+      "link": "http://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918a.pdf",
       "pubDate": "2026-09-18T03:40:00.000Z",
       "description": "",
       "source": "Bank of Japan"
     },
     {
       "title": "Amendment to \"Principal Terms and Conditions of Complementary Deposit Facility\"",
-      "link": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/mpr260918b.pdf",
+      "link": "http://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/mpr260918b.pdf",
       "pubDate": "2026-09-18T03:30:00.000Z",
       "description": "",
       "source": "Bank of Japan"
     },
     {
       "title": "(Reference) Change in the Guideline for Money Market Operations (September 2026 MPM)",
-      "link": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918b.pdf",
+      "link": "http://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260918b.pdf",
       "pubDate": "2026-09-18T02:54:00.000Z",
       "description": "",
       "source": "Bank of Japan"
@@ -654,14 +654,14 @@
     },
     {
       "title": "Developments in Real Exports and Real Imports",
-      "link": "https://www.boj.or.jp/en/research/research_data/reri/index.htm",
+      "link": "http://www.boj.or.jp/en/research/research_data/reri/index.htm",
       "pubDate": "2026-09-17T07:00:00.000Z",
       "description": "",
       "source": "Bank of Japan"
     },
     {
       "title": "Flow of Funds Accounts (2nd Quarter 2026, Preliminary Figures)",
-      "link": "https://www.boj.or.jp/en/statistics/sj/sj.htm",
+      "link": "http://www.boj.or.jp/en/statistics/sj/sj.htm",
       "pubDate": "2026-09-16T23:50:00.000Z",
       "description": "",
       "source": "Bank of Japan"
