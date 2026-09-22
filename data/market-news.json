@@ -1,82 +1,173 @@
 {
-  "timestamp": "2026-09-21T22:11:29.798Z",
+  "timestamp": "2026-09-22T00:48:32.269Z",
   "items": [
+    {
+      "title": "Donald Trump administration plans $5 billion Middle East reconstruction fund for Iran war",
+      "link": "https://www.fxstreet.com/news/donald-trump-administration-plans-5-billion-middle-east-reconstruction-fund-for-iran-war-202609220024",
+      "pubDate": "2026-09-22T00:24:02.000Z",
+      "description": "US President Donald Trump administration ‌has proposed investing $5 billion in a new fund to help rebuild critical infrastructure across the Middle East damaged in the war with Iran and reduce their reliance on the Strait of Hormuz to ‌tran",
+      "source": "FXStreet"
+    },
+    {
+      "title": "DocuSign president Robert Chatwani sells $1.02m in company stock",
+      "link": "https://www.investing.com/news/insider-trading-news/docusign-president-robert-chatwani-sells-102m-in-company-stock-93CH-4909772",
+      "pubDate": "2026-09-22T00:16:05.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Epsilon Energy CEO Jason Stabell buys $136,553 of EPSN shares",
+      "link": "https://www.investing.com/news/insider-trading-news/epsilon-energy-ceo-jason-stabell-buys-136553-of-epsn-shares-93CH-4909770",
+      "pubDate": "2026-09-22T00:16:01.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Bolt Biotherapeutics senior VP Nemec sells $26,072 in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/bolt-biotherapeutics-senior-vp-nemec-sells-26072-in-shares-93CH-4909771",
+      "pubDate": "2026-09-22T00:16:01.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Bolt Biotherapeutics COO Grant Yonehiro sells $43,806 in company shares",
+      "link": "https://www.investing.com/news/insider-trading-news/bolt-biotherapeutics-coo-grant-yonehiro-sells-43806-in-company-shares-93CH-4909769",
+      "pubDate": "2026-09-22T00:15:55.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Cathie Wood’s ARK stock trades: Meta bought, CrowdStrike sold",
+      "link": "https://www.investing.com/news/company-news/cathie-woods-ark-stock-trades-meta-bought-crowdstrike-sold-93CH-4909768",
+      "pubDate": "2026-09-22T00:11:57.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Terra Balcanica acquires remaining 10% of Bosnian subsidiary",
+      "link": "https://www.investing.com/news/company-news/terra-balcanica-acquires-remaining-10-of-bosnian-subsidiary-93CH-4909767",
+      "pubDate": "2026-09-22T00:08:29.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Paramount wins Warner Bros takeover after settling states, union lawsuits",
+      "link": "https://www.investing.com/news/stock-market-news/paramountsettles-with-california-other-states-clearing-major-hurdle-for-warner-bros-merger-source-says-4909370",
+      "pubDate": "2026-09-22T00:07:40.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "CNN, MS NOW and Politico sue Trump, challenging White House ban",
+      "link": "https://www.investing.com/news/stock-market-news/cnn-ms-now-and-politico-file-lawsuit-against-trump-administration-over-white-house-access-4908656",
+      "pubDate": "2026-09-22T00:07:22.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Critics say California got too little in deal to let Paramount buy Warner Bros",
+      "link": "https://www.investing.com/news/stock-market-news/critics-say-california-got-too-little-in-deal-to-let-paramount-buy-warner-bros-4909686",
+      "pubDate": "2026-09-22T00:07:00.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "South Korea to brief lawmakers on US investment package amid profitability concerns",
+      "link": "https://www.investing.com/news/commodities-news/south-korea-to-brief-lawmakers-on-us-investment-package-amid-profitability-concerns-4909766",
+      "pubDate": "2026-09-22T00:06:36.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "RBA’s Hunter backs more hikes as inflation risks entrench",
+      "link": "https://www.fxstreet.com/news/rbas-hunter-backs-more-hikes-as-inflation-risks-entrench-202609212357",
+      "pubDate": "2026-09-21T23:57:53.000Z",
+      "description": "The Reserve Bank of Australia (RBA) Assistant Governor Sarah Hunter confirmed the need for further rate hikes this year, to keep inflation in check. This has increased the chances for a rate increase at the September 29 meeting.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Houthis push for control of Yemen highlands",
+      "link": "https://www.fxstreet.com/news/houthis-push-for-control-of-yemen-highlands-202609212353",
+      "pubDate": "2026-09-21T23:53:35.000Z",
+      "description": "Yemen’s Houthis pushed to seize strategic heights in Yemen on Monday to cut off the Red Sea coast from remaining areas held by Saudi-backed forces, after a report that US President Donald Trump had called off US strikes on the group at the ",
+      "source": "FXStreet"
+    },
+    {
+      "title": "ECB’s Lane says energy shock could delay inflation’s return to 2%",
+      "link": "https://www.fxstreet.com/news/ecbs-lane-says-energy-shock-could-delay-inflations-return-to-2-202609212347",
+      "pubDate": "2026-09-21T23:47:09.000Z",
+      "description": "The European Central Bank (ECB) Chief Economist Philip Lane stated that the European economy will expand steadily at a moderate pace if the energy shocks ease, according to Le Temps.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Australian Dollar holds its nerve as Fed hawks meet RBA hike bets",
+      "link": "https://www.fxstreet.com/news/australian-dollar-holds-its-nerve-as-fed-hawks-meet-rba-hike-bets-202609212339",
+      "pubDate": "2026-09-21T23:39:52.000Z",
+      "description": "The Aussie Dollar holds firm versus the Greenback at the start of the week, hovering near 0.7119 as risk appetite remains positive despite Fed officials turning more hawkish than expected, ahead of the Trump-Xi summit in the US, later this ",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Iranian President will head to New York for UN meeting",
+      "link": "https://www.fxstreet.com/news/iranian-president-will-head-to-new-york-for-un-meeting-202609212332",
+      "pubDate": "2026-09-21T23:32:32.000Z",
+      "description": "President Masoud Pezeshkian will lead an Iranian delegation at the United Nations General Assembly in New York on Tuesday, amid renewed hopes for a diplomatic solution to the Middle East conflict, CNBC reported on Monday.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Trump, Xi Meet on S&#038;P 500&#039;s Best Day Since Early August: Will Markets Stay Bullish?",
+      "link": "https://beincrypto.com/trump-xi-summit-best-day/",
+      "pubDate": "2026-09-21T23:20:00.000Z",
+      "description": "Trump and Xi meet in Washington as the S&#038;P 500 posts its best day since Aug. 4, driven by a rally in AI stocks.\nThe post Trump, Xi Meet on S&P 500&#039;s Best Day Since Early August: Will Markets Stay Bullish? appeared first on BeInCry",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Gold declines to near $4,350 on rising odds of Fed rate hike",
+      "link": "https://www.fxstreet.com/news/gold-declines-to-near-4-350-on-rising-odds-of-fed-rate-hike-202609212317",
+      "pubDate": "2026-09-21T23:17:19.000Z",
+      "description": "Gold price (XAU/USD) declines to near $4,365, snapping the two-day winning streak during the early Asian session on Tuesday. The precious metal loses ground on the prospect of further monetary tightening by the US Federal Reserve (Fed). Tra",
+      "source": "FXStreet"
+    },
+    {
+      "title": "The Japanese Yen keeps sliding after the Bank of Japan's split vote",
+      "link": "https://www.fxstreet.com/news/the-japanese-yen-keeps-sliding-after-the-bank-of-japans-split-vote-202609212301",
+      "pubDate": "2026-09-21T23:01:01.000Z",
+      "description": "Japan's markets are shut from Monday to Wednesday for national holidays, which is when a government that wants to move its currency gets the most for its money. USD/JPY is higher for a fifth session in six and is trading just below 157.50.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "NZD/USD Price Forecast: Bears lean on 0.5700 as RSI sinks",
+      "link": "https://www.fxstreet.com/news/nzd-usd-price-forecast-bears-lean-on-05700-as-rsi-sinks-202609212252",
+      "pubDate": "2026-09-21T22:52:24.000Z",
+      "description": "The New Zealand Dollar extends its losses for the second straight trading session, down 0.13% after last week’s Fed rate hike and a hawkish tilt within the board, which was reinforced by speeches of Fed officials on Monday. The NZD/USD trad",
+      "source": "FXStreet"
+    },
+    {
+      "title": "The British Pound slips again as bets on an October Fed hike build",
+      "link": "https://www.fxstreet.com/news/the-british-pound-slips-again-as-bets-on-an-october-fed-hike-build-202609212242",
+      "pubDate": "2026-09-21T22:42:45.000Z",
+      "description": "GBP/USD has stalled at 1.3400 in each of the last three sessions, and it trades just under that level again on Monday. The Dollar is up against most major currencies, so this is more a Dollar move than a Pound one.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "As Wall Street Turns Suddenly Bullish, Questions Arise if Bitcoin Will Follow or Flop",
+      "link": "https://beincrypto.com/bitcoin-btc-rally-stocks-question/",
+      "pubDate": "2026-09-21T22:41:25.000Z",
+      "description": "Wall Street strategists see stocks rallying further, and a Bitcoin rally could be next, analysts say.\nThe post As Wall Street Turns Suddenly Bullish, Questions Arise if Bitcoin Will Follow or Flop appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Market Is Primed for a &#8216;Face Ripper&#039; Rally Thanks to Four Ingredients Says Tom Lee",
+      "link": "https://beincrypto.com/tom-lee-face-ripper-four-ingredients/",
+      "pubDate": "2026-09-21T22:36:09.000Z",
+      "description": "Fundstrat's Tom Lee names four ingredients behind his 'face ripper' rally call, from cooling oil to oversold conditions.\nThe post Market Is Primed for a &#8216;Face Ripper&#039; Rally Thanks to Four Ingredients Says Tom Lee appeared first o",
+      "source": "BeInCrypto"
+    },
     {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-09-21T22:10:37.000Z",
+      "pubDate": "2026-09-21T22:12:27.000Z",
       "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
       "source": "Bank of Canada"
-    },
-    {
-      "title": "Why is Quest Diagnostics stock sliding today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-quest-diagnostics-stock-sliding-today-93CH-4909711",
-      "pubDate": "2026-09-21T21:52:08.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Why is Labcorp stock sliding today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-labcorp-stock-sliding-today-93CH-4909710",
-      "pubDate": "2026-09-21T21:51:54.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Nvidia, QIA-backed Iambic Therapeutics files for US IPO as biotech boom rolls on",
-      "link": "https://www.investing.com/news/economy-news/nvidia-qiabacked-iambic-therapeutics-files-for-us-ipo-as-biotech-boom-rolls-on-4909708",
-      "pubDate": "2026-09-21T21:48:55.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Samsara CAO Benjamin Kirchhoff sells $31,123 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/samsara-cao-benjamin-kirchhoff-sells-31123-in-stock-93CH-4909707",
-      "pubDate": "2026-09-21T21:45:55.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Ulta Beauty CEO Kecia Steelman sells $1.09m in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/ulta-beauty-ceo-kecia-steelman-sells-109m-in-stock-93CH-4909706",
-      "pubDate": "2026-09-21T21:45:51.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Schrodinger president Karen Akinsanya sells $927,970 in company stock",
-      "link": "https://www.investing.com/news/insider-trading-news/schrodinger-president-karen-akinsanya-sells-927970-in-company-stock-93CH-4909705",
-      "pubDate": "2026-09-21T21:45:50.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Lockheed Martin secures $1.2B Army contract for missile system",
-      "link": "https://www.investing.com/news/company-news/lockheed-martin-secures-12b-army-contract-for-missile-system-93CH-4909704",
-      "pubDate": "2026-09-21T21:44:26.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Texas Governor Abbott halts all state-issued permits for data centers until grid audit is complete",
-      "link": "https://www.investing.com/news/commodities-news/texas-gov-abbott-halts-all-stateissued-permits-for-data-centers-until-grid-audit-is-complete-4909646",
-      "pubDate": "2026-09-21T21:42:55.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Latam Airlines rating upgraded by S&P on strong performance",
-      "link": "https://www.investing.com/news/stock-market-news/latam-airlines-rating-upgraded-by-sp-on-strong-performance-93CH-4909703",
-      "pubDate": "2026-09-21T21:42:45.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "XRP Climbs 10% In a Green Day",
-      "link": "https://www.investing.com/news/cryptocurrency-news/xrp-climbs-10-in-a-green-day-4909700",
-      "pubDate": "2026-09-21T21:39:05.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Silver Price Forecast: 100-day SMA caps bulls as range tightens",
@@ -112,13 +203,6 @@
       "pubDate": "2026-09-21T19:37:00.000Z",
       "description": "OCBC’s Christopher Wong notes that Indonesia’s appointment of Finance Minister Suahasil Nazara signals fiscal continuity and discipline, helping to reduce domestic risk premia for the Rupiah.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Yen eases as potential for intervention eyed",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOeEFyOHhrcWVmUjJqdnBjS2NLMUtvajJaU1ZBNHdFNDhobTd6d2VKbEl1cThLOTJOSVdHN3lMUmZXNGluMTJTVW9lckdWSUVKdERCaVFxU1U5ZVowMVE5c2ZxcXE0RDMwLXpfWUtvbDZOajI0N3ZNbG1PUU8yenhDbW5ybG1zbDRjWDRNQXRFVlMwWnZFTnRZbkZVRncxdWlLN0FMX29obHIwOFJyX2gxa0c2Y0E3cTlS?oc=5",
-      "pubDate": "2026-09-21T19:20:51.000Z",
-      "description": "Yen eases as potential for intervention eyed&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "AMD Hits $1 Trillion Market Cap: 3 Reasons Nvidia Sat Out the AI Rally",
@@ -268,25 +352,11 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Euro struggles against US Dollar as hawkish Fed outlook weighs",
-      "link": "https://www.fxstreet.com/news/euro-struggles-against-us-dollar-as-hawkish-fed-outlook-weighs-202609211444",
-      "pubDate": "2026-09-21T14:44:35.000Z",
-      "description": "EUR/USD trades with a downside bias on Monday as the US Dollar holds near recent highs, supported by expectations of additional Federal Reserve (Fed) interest rate hikes. Developments in the Middle East also remain in focus.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Zoomex to Host Traders After Party During TOKEN2049 Singapore, Connecting Traders and the Web3 Community",
       "link": "https://beincrypto.com/zoomex-host-traders-after-party-token2049-singapore/",
       "pubDate": "2026-09-21T14:42:52.000Z",
       "description": "Global cryptocurrency derivatives platform Zoomex will host the &#8220;ZOOMEX TRADERS AFTER PARTY @ TOKEN2049 SINGAPORE&#8221; on October 7, 2026, at the Echo Live Party in Singapore. Organized as an official side event during TOKEN2049 Sin",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Oil: Tightness turning critical – Societe Generale",
-      "link": "https://www.fxstreet.com/news/oil-tightness-turning-critical-societe-generale-202609211435",
-      "pubDate": "2026-09-21T14:35:41.000Z",
-      "description": "Societe Generale strategists Michael Haigh and Jeremy Sellem argue that global Oil product markets have shifted from tight to critical. They link East-West pipeline disruptions, Russian outages, elevated freight and low inventories to struc",
-      "source": "FXStreet"
     },
     {
       "title": "Waited for Bitcoin&#039;s October Bottom? Benjamin Cowen Says He Was Wrong",
@@ -303,27 +373,6 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "United States: Midterm outcomes and policy paths – NBC",
-      "link": "https://www.fxstreet.com/news/united-states-midterm-outcomes-and-policy-paths-nbc-202609211417",
-      "pubDate": "2026-09-21T14:17:02.000Z",
-      "description": "National Bank of Canada (NBC) strategist Angelo Katsoras analyzes how the 2026 United States (US) midterm elections could reshape policy under President Trump. He notes Democrats are favoured by high inflation, weak approval ratings and a s",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Euro steadies vs British Pound as German political uncertainty, PMIs cap direction",
-      "link": "https://www.fxstreet.com/news/euro-steadies-vs-british-pound-as-german-political-uncertainty-pmis-cap-direction-202609211342",
-      "pubDate": "2026-09-21T13:42:30.000Z",
-      "description": "EUR/GBP trades around 0.8575 on Monday at the time of writing, virtually unchanged on the day. The Euro (EUR) struggles to regain bullish momentum against the British Pound (GBP), as political concerns in Germany partly offset support from ",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Indian Rupee: AI imports add pressure against US Dollar – Standard Chartered",
-      "link": "https://www.fxstreet.com/news/indian-rupee-ai-imports-add-pressure-against-us-dollar-standard-chartered-202609211339",
-      "pubDate": "2026-09-21T13:39:12.000Z",
-      "description": "Standard Chartered economists Anubhuti Sahay and Saurav Anand highlight that India’s AI-enabling goods trade deficit has become the second-largest contributor to the country’s trade gap after Oil, overtaking Gold.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Euro Could Trade in Record Narrow Range Vs Dollar",
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQbTBGNThKaUNwbHF6RmVDbjR5bm5hNm54dGZnclFrWElFSGpoMUpvdm0yRk5EYTd3T0w3Z3hSSXRPU0F3TW5nN0d0a2c2bW9ZXzdhNnFEMlViaWw3T0s4TFZWbUY0dzFNaTFSVUU4R3kteEZBLWV4UHJLYzJya0dQOG9zaEtGQ2hyVmZLWVRlalpUU2xoMURRZjBOcE1NQ09wWXpvV0t3cTFfclZXVFFLYg?oc=5",
       "pubDate": "2026-09-21T13:34:00.000Z",
@@ -338,67 +387,11 @@
       "source": "Reuters"
     },
     {
-      "title": "Gold: CTA whipsaws but support holds – TD Securities",
-      "link": "https://www.fxstreet.com/news/gold-cta-whipsaws-but-support-holds-td-securities-202609211314",
-      "pubDate": "2026-09-21T13:14:55.000Z",
-      "description": "TD Securities’ commodity strategists report that CTAs (Commodity Trading Advisors) have reversed recent Gold buying, yet emphasize that discretionary investors continue to support the metal.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Sota Watanabe Says October Will Be Great: Bitcoin Bulls Stack $100,000 Bets",
-      "link": "https://beincrypto.com/bitcoin-options-100k-bets-watanabe-october/",
-      "pubDate": "2026-09-21T13:11:18.000Z",
-      "description": "Sota Watanabe talks up October as Bitcoin options traders stack $100,000 bets into Friday's expiry.\nThe post Sota Watanabe Says October Will Be Great: Bitcoin Bulls Stack $100,000 Bets appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "USDT on TRON Becomes Most Used Onchain Payment Option on CoinsBee as Stablecoin Spending Grows",
-      "link": "https://beincrypto.com/usdt-tron-most-used-onchain-payment-coinsbee/",
-      "pubDate": "2026-09-21T13:00:00.000Z",
-      "description": "CoinsBee payment data shows USDT on TRON recorded nearly twice as many payments as Bitcoin over the past 90 days, while its share of all payments on CoinsBee increased by 64% compared with 2025. CoinsBee, a global platform that makes it eas",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Canadian Dollar remains under pressure as hawkish Fed contrasts with steady BoC",
-      "link": "https://www.fxstreet.com/news/canadian-dollar-remains-under-pressure-as-hawkish-fed-contrasts-with-steady-boc-202609211253",
-      "pubDate": "2026-09-21T12:53:51.000Z",
-      "description": "USD/CAD holds firm near the 1.4000 psychological mark on Monday as the Federal Reserve’s (Fed) hawkish outlook and widening US-Canada interest-rate differentials keep the Canadian Dollar (CAD) on the back foot.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "US Dollar: Oil-driven support as Fed seen hiking – ING",
-      "link": "https://www.fxstreet.com/news/us-dollar-oil-driven-support-as-fed-seen-hiking-ing-202609211248",
-      "pubDate": "2026-09-21T12:48:30.000Z",
-      "description": "ING strategist Francesco Pesole notes the Dollar remains supported as ING now expects the Fed to deliver one final rate hike in December. Despite near-term upside risks for the Dollar, ING keeps a gradually negative longer-term view and ant",
-      "source": "FXStreet"
-    },
-    {
       "title": "UBS AM’s Zhao Is Ready to Sell Yen If Japan Intervenes Again",
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOZ0JsbTRIVXBKSEgxUVRCY2xiVGJGVkZIYmZWOFBjOUM2TFRubEdWcjJZVzE4ekptVms3NXd4bmt0bEt3NS16eTl5VVM5SFBNalVwZHhTdFBZRF9QY21TM3ViMXhsZ0RRRFQ1UGJjeFRxdDR1emlyOWVYQ1YwbDhkZHZPS3IyS3FGR0p1YTlWcFd3a25EbEVPcEswSTQzN1o5bzBPRlk4dDdham1IaG1UMw?oc=5",
       "pubDate": "2026-09-21T12:42:48.000Z",
       "description": "UBS AM’s Zhao Is Ready to Sell Yen If Japan Intervenes Again&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
-    },
-    {
-      "title": "Japanese Yen: BoJ hike underwhelms as yields drive JPY against US Dollar – OCBC",
-      "link": "https://www.fxstreet.com/news/japanese-yen-boj-hike-underwhelms-as-yields-drive-jpy-against-us-dollar-ocbc-202609211222",
-      "pubDate": "2026-09-21T12:22:15.000Z",
-      "description": "OCBC’s Christopher Wong notes that the Japanese Yen (JPY) weakened after the BoJ’s 25 bp hike to 1.25% as limited guidance on further normalisation disappointed hawkish expectations.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "MicroStrategy Ends Two-Week Pause With 950 Bitcoin: Is the Buying Engine Stalling?",
-      "link": "https://beincrypto.com/strategy-950-bitcoin-buy-strc-buyback/",
-      "pubDate": "2026-09-21T12:14:59.000Z",
-      "description": "Strategy bought 950 BTC and spent $174 million on its own preferred shares, ending a two-week buying pause.\nThe post MicroStrategy Ends Two-Week Pause With 950 Bitcoin: Is the Buying Engine Stalling? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Experts agree: Further US Dollar’s upside hinges on upcoming data and not hawkish Fed prospects",
-      "link": "https://www.fxstreet.com/news/experts-agree-further-us-dollars-upside-hinges-on-upcoming-data-and-not-hawkish-fed-prospects-202609211209",
-      "pubDate": "2026-09-21T12:09:28.000Z",
-      "description": "The US Dollar (USD) trades slightly higher on Monday as traders remain confident that the Federal Reserve (Fed) will hike interest rates again this year. At press time, the US Dollar Index (DXY), which tracks the Greenback’s value against s",
-      "source": "FXStreet"
     },
     {
       "title": "Swimming sensation Yu, 13, fuels China's Asian Games gold rush",
@@ -464,13 +457,6 @@
       "source": "Swiss National Bank"
     },
     {
-      "title": "Dollar Strengthens as Treasury Yields Rise Amid Inflation Fears",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPdDJfMklUNnJ6NTYySURnUS03MnJzSGphbVEyWmtGclNwcXRXemdhSkx3ZUlidjM1Z0xFc1VCYmVsV3pGTWR5ZV9scW1kYkYzX09YYWVWNS1oNFNEZHJBQ3h2a0hDNFlVYS1WR19id3A0c1dxYVJweDBwMGxnY3VLd0Z5RWVNWXVJOE0yLU83ZXhNd1lVa3l5TklycXhfSDh3WktDWXJJM3NHRVNleWc?oc=5",
-      "pubDate": "2026-09-21T07:13:43.000Z",
-      "description": "Dollar Strengthens as Treasury Yields Rise Amid Inflation Fears&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
       "title": "2026-09-21 - Data portal - Economic data, September 2026",
       "link": "https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/09/statpub_news_20260921_b",
       "pubDate": "2026-09-21T07:00:00.000Z",
@@ -499,6 +485,13 @@
       "source": "Google News"
     },
     {
+      "title": "Yen eases as potential for intervention eyed",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOeEFyOHhrcWVmUjJqdnBjS2NLMUtvajJaU1ZBNHdFNDhobTd6d2VKbEl1cThLOTJOSVdHN3lMUmZXNGluMTJTVW9lckdWSUVKdERCaVFxU1U5ZVowMVE5c2ZxcXE0RDMwLXpfWUtvbDZOajI0N3ZNbG1PUU8yenhDbW5ybG1zbDRjWDRNQXRFVlMwWnZFTnRZbkZVRncxdWlLN0FMX29obHIwOFJyX2gxa0c2Y0E3cTlS?oc=5",
+      "pubDate": "2026-09-21T01:34:00.000Z",
+      "description": "Yen eases as potential for intervention eyed&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
       "title": "Yen Is Vulnerable With Japan on Holiday After BOJ Disappoints",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNUVVhQ09jQk1xT0hWOEZXWUVSdnFSRmJWNjk5eUJGTHBKMEI3ajNybGNGU296OUNBcGk0ZUk2YU5MOXZ0QWZZc0VfSU1CVG1xT2pKVTBpSGJ2eWd6c3dQMC1WUkk5RHR3MVJEWVNzWmo3djFjNDhGc3RmTzNYRndBNVR4VHIzc1NiSzF1QmJNTVp1dE9rczhHXzdkWVlVQlRfalJKeWxIZUNmSW5hTEdieTd3?oc=5",
       "pubDate": "2026-09-20T22:24:09.000Z",
@@ -517,6 +510,13 @@
       "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNLXRPVTVlSENGeDgzbUFtUWo3X2NxM1RKbkhyUW1hWHMwTnhzdGx5MVF2YkpXaXFHd2RZNVhHZE42eHI0VnlEenloS0l6VHpvSWdUZUd6dkJoS2J4UzhDbU0wMUNlVTRMalhzQjdMaExSbmEyNFdJZGRWb3gtV1NyWUdZMGN4MmVZUFE?oc=5",
       "pubDate": "2026-09-18T21:38:00.000Z",
       "description": "Opinion | The Staring Contest Over the Dollar and the Yen&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "With Latest Hike, BOJ Doubles Down on Aggressive Monetary Policy Plans",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNbXhkLUJBMDBvMnhDeUdJZlpjT0VxZXZKYTVxWjh0YmVOenhDb0YtWklia1dBQlNFcndBZHhTWk95ekdwNWNseHpTaWdCWlhHV2hPaEN4U3hYV0d5TG0wZjRmY3U3UV9mdEpxWTktQjd4UkduZ0JWTTJURDFvS1ItdE1nT0FTdjVJQmZ4OE8yLWt2NDU5V0U1UmxjaFo3S3Ax?oc=5",
+      "pubDate": "2026-09-18T21:19:22.000Z",
+      "description": "With Latest Hike, BOJ Doubles Down on Aggressive Monetary Policy Plans&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
     },
     {
