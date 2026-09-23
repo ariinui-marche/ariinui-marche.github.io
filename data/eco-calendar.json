@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-22T23:41:15.762Z",
+  "timestamp": "2026-09-23T01:46:35.743Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -5964,8 +5964,17 @@
       "country": "USD",
       "date": "2026-09-23T10:30:00-04:00",
       "impact": "Low",
-      "forecast": "-0.6M",
+      "forecast": "-0.7M",
       "previous": "-0.6M",
+      "actual": ""
+    },
+    {
+      "title": "FOMC Member Goolsbee Speaks",
+      "country": "USD",
+      "date": "2026-09-23T12:00:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "",
       "actual": ""
     },
     {
@@ -6189,7 +6198,7 @@
       "country": "USD",
       "date": "2026-09-24T10:30:00-04:00",
       "impact": "Low",
-      "forecast": "52B",
+      "forecast": "50B",
       "previous": "44B",
       "actual": ""
     },
@@ -6281,6 +6290,15 @@
       "impact": "Low",
       "forecast": "-0.3%",
       "previous": "1.1%",
+      "actual": ""
+    },
+    {
+      "title": "FOMC Member Schmid Speaks",
+      "country": "USD",
+      "date": "2026-09-25T09:20:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "",
       "actual": ""
     },
     {
