@@ -1,82 +1,152 @@
 {
-  "timestamp": "2026-09-23T19:55:14.993Z",
+  "timestamp": "2026-09-23T22:32:08.101Z",
   "items": [
     {
-      "title": "Why is Fastly stock surging today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-fastly-stock-surging-today-93CH-4913790",
-      "pubDate": "2026-09-23T19:44:01.000Z",
+      "title": "Euro extends its slide as US surveys top Europe's strong reading",
+      "link": "https://www.fxstreet.com/news/euro-extends-its-slide-as-us-surveys-top-europes-strong-reading-202609232230",
+      "pubDate": "2026-09-23T22:30:47.000Z",
+      "description": "Europe's September business surveys were the strongest since April 2023, and the Euro fell to its lowest since late July on the day they came out. The eurozone's flash Purchasing Managers Index (PMI) composite reading came in at 53.1 agains",
+      "source": "FXStreet"
+    },
+    {
+      "title": "British Pound sells off hard as US surveys outpace the UK's",
+      "link": "https://www.fxstreet.com/news/british-pound-sells-off-hard-as-us-surveys-outpace-the-uks-202609232224",
+      "pubDate": "2026-09-23T22:24:19.000Z",
+      "description": "Wednesday's flash Purchasing Managers Index (PMI) surveys showed US business growing at its fastest pace since July 2021 and British business slowing.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Stitch Fix Q4 2026 slides show transformation progress, FY27 concerns",
+      "link": "https://www.investing.com/news/company-news/stitch-fix-q4-2026-slides-show-transformation-progress-fy27-concerns-93CH-4914150",
+      "pubDate": "2026-09-23T22:20:12.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Orchid Island stock hits 52-week low at 5.96 USD",
-      "link": "https://www.investing.com/news/company-news/orchid-island-stock-hits-52week-low-at-596-usd-93CH-4913789",
-      "pubDate": "2026-09-23T19:43:39.000Z",
+      "title": "Barry Diller withdraws bid for MGM Resorts, WSJ reports",
+      "link": "https://www.investing.com/news/stock-market-news/barry-diller-withdraws-bid-for-mgm-resorts-wsj-reports-4914144",
+      "pubDate": "2026-09-23T22:18:34.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "World’s largest copper mine halts operations after worker death",
-      "link": "https://www.investing.com/news/stock-market-news/worlds-largest-copper-mine-halts-operations-after-worker-death-4913788",
-      "pubDate": "2026-09-23T19:42:33.000Z",
+      "title": "Mercury Systems EVP Stuart Kupinsky sells $86,520 in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/mercury-systems-evp-stuart-kupinsky-sells-86520-in-shares-93CH-4914143",
+      "pubDate": "2026-09-23T22:16:11.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Rollins at U.S. All Stars Conference: ai search shift clouds growth",
-      "link": "https://www.investing.com/news/transcripts/rollins-at-us-all-stars-conference-ai-search-shift-clouds-growth-93CH-4913787",
-      "pubDate": "2026-09-23T19:42:15.000Z",
+      "title": "Block, Inc. director Anthony Eisen sells $1.4 million in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/block-inc-director-anthony-eisen-sells-14-million-in-stock-93CH-4914142",
+      "pubDate": "2026-09-23T22:16:07.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Alto Neuroscience at TD Cowen summit: pramipexole combo takes center stage",
-      "link": "https://www.investing.com/news/transcripts/alto-neuroscience-at-td-cowen-summit-pramipexole-combo-takes-center-stage-93CH-4913786",
-      "pubDate": "2026-09-23T19:40:36.000Z",
+      "title": "Rimini Street EVP David Rowe sells $21,294 in tax-related stock",
+      "link": "https://www.investing.com/news/insider-trading-news/rimini-street-evp-david-rowe-sells-21294-in-taxrelated-stock-93CH-4914140",
+      "pubDate": "2026-09-23T22:16:04.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Google expands Vids access with Gemini Omni 1.1 Flash for free",
-      "link": "https://www.investing.com/news/stock-market-news/google-expands-vids-access-with-gemini-omni-11-flash-for-free-93CH-4913785",
-      "pubDate": "2026-09-23T19:39:47.000Z",
+      "title": "BillionToOne SVP John ten Bosch sells $150,959 of class A common stock",
+      "link": "https://www.investing.com/news/insider-trading-news/billiontoone-svp-john-ten-bosch-sells-150959-of-class-a-common-stock-93CH-4914141",
+      "pubDate": "2026-09-23T22:16:04.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "OpenAI launches MentalHealthBench to evaluate AI mental health responses",
-      "link": "https://www.investing.com/news/stock-market-news/openai-launches-mentalhealthbench-to-evaluate-ai-mental-health-responses-93CH-4913784",
-      "pubDate": "2026-09-23T19:38:45.000Z",
+      "title": "Bitcoin slips nearly 2%, extends pullback after rally amid hit to risk sentiment",
+      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-steady-near-87k-as-etf-inflows-soar-trumpxi-summit-in-focus-4912118",
+      "pubDate": "2026-09-23T22:15:55.000Z",
       "description": "",
       "source": "Investing.com"
+    },
+    {
+      "title": "Tesla’s supervised self-driving system often misreads speed limits, Belgian safety group finds",
+      "link": "https://www.investing.com/news/stock-market-news/teslas-supervised-selfdriving-system-often-misreads-speed-limits-belgian-safety-group-finds-4914134",
+      "pubDate": "2026-09-23T22:12:46.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Trump plans grand spectacle for potentially tense talks as Xi arrives in US",
+      "link": "https://www.investing.com/news/stock-market-news/trump-plans-grand-spectacle-for-potentially-tense-xi-talks-4912458",
+      "pubDate": "2026-09-23T22:12:30.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "People Incorporated withdraws MGM Resorts buyout proposal",
+      "link": "https://www.investing.com/news/company-news/people-incorporated-withdraws-mgm-resorts-buyout-proposal-93CH-4914133",
+      "pubDate": "2026-09-23T22:12:29.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Britain&#039;s Bank Lobby Kicks Out Coinbase: Are Lenders Shutting Crypto Out?",
+      "link": "https://beincrypto.com/bank-lobby-kicks-out-coinbase/",
+      "pubDate": "2026-09-23T22:00:00.000Z",
+      "description": "UK Finance ends Coinbase's membership as British banks and crypto firms clash over payments. Coinbase can appeal.\nThe post Britain&#039;s Bank Lobby Kicks Out Coinbase: Are Lenders Shutting Crypto Out? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "GBP/JPY Price Forecast: Bears press 209.00 as downtrend deepens",
+      "link": "https://www.fxstreet.com/news/gbp-jpy-price-forecast-bears-press-20900-as-downtrend-deepens-202609232135",
+      "pubDate": "2026-09-23T21:35:39.000Z",
+      "description": "The GBP/JPY pair extends its losses on Wednesday to two straight trading sessions, down over 0.17% and trading near the week's lows, with 209.40 seen as the first support level before sellers push prices lower.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Australia unemployment rate expected to remain unchanged at 4.5% in August",
+      "link": "https://www.fxstreet.com/news/australia-unemployment-rate-expected-to-remain-unchanged-at-45-in-august-202609232130",
+      "pubDate": "2026-09-23T21:30:00.000Z",
+      "description": "Australia will release the August monthly employment report on Thursday at 01:30 GMT. Ahead of the announcement, analysts expect the country to have added 20K new jobs in the month, while the Unemployment Rate is expected to remain steady a",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
+      "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
+      "pubDate": "2026-09-23T21:01:47.000Z",
+      "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
+      "source": "Bank of Canada"
+    },
+    {
+      "title": "Paramount Courts Elon Musk for Investment as Stock Nears Multi-Year Lows",
+      "link": "https://beincrypto.com/paramount-courts-elon-musk-investment-stock/",
+      "pubDate": "2026-09-23T21:00:00.000Z",
+      "description": "Paramount has discussed bringing Elon Musk in as an equity investor as its stock trades near multi-year lows.\nThe post Paramount Courts Elon Musk for Investment as Stock Nears Multi-Year Lows appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Mexican Peso selloff deepens as Fed hawks drive USD/MXN toward 17.50",
+      "link": "https://www.fxstreet.com/news/mexican-peso-selloff-deepens-as-fed-hawks-drive-usd-mxn-toward-1750-202609232057",
+      "pubDate": "2026-09-23T20:57:32.000Z",
+      "description": "The Mexican Peso (MXN) extends its depreciation against the Greenback as the USD/MXN pair rallies over 1.25% amid speculation that the Federal Reserve (Fed) will raise rates again, with Fed officials leaning hawkish and underpinning the US ",
+      "source": "FXStreet"
+    },
+    {
+      "title": "WSJ Dollar Index Falls 0.10% to 96.07",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPMmdWTThqV3JQbklMdFZEczc3aHROWWxNT3RhT0RJWklZYTc0aFJvOVIyVnNsLUl0cm9jUVRQVGIyQnpQSFpMRHM1ZU14SE9fNTh0SjdzSVNhSzVrSHRIOERZTUw5QkJpSDBYX0ZiU0ZkOGdJbGdEanQ5Qy1QeHI0QlhFNFRyRkoxdk5HbkdxSUt4TTItWW4xdw?oc=5",
+      "pubDate": "2026-09-23T20:19:53.000Z",
+      "description": "WSJ Dollar Index Falls 0.10% to 96.07&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "15 Institutions Reveal Why They Refused to Sell Bitcoin During a 50% Crash",
+      "link": "https://beincrypto.com/institutions-refused-sell-bitcoin-crash-bitwise/",
+      "pubDate": "2026-09-23T20:00:00.000Z",
+      "description": "Bitwise interviewed 15 institutions. None sold crypto as prices fell 50%, and several bought more Bitcoin.\nThe post 15 Institutions Reveal Why They Refused to Sell Bitcoin During a 50% Crash appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
     },
     {
       "title": "USD/CHF Price Forecast: Bulls retake control, eye 0.8300 break",
       "link": "https://www.fxstreet.com/news/usd-chf-price-forecast-bulls-retake-control-eye-08300-break-202609231936",
       "pubDate": "2026-09-23T19:36:09.000Z",
-      "description": "The USD/CHF pair climbs some 0.52% on Wednesday as the uptrend resumes following a retracement after hitting a yearly high on September 16 at 0.8263, which dragged the exchange rate below 0.8200, before recovering some ground. At the time o",
+      "description": "The USD/CHF pair climbs some 0.5% on Wednesday as the uptrend resumes following a retracement after hitting a yearly high on September 16 at 0.8263, which dragged the exchange rate below 0.8200, before recovering some ground. At the time of",
       "source": "FXStreet"
-    },
-    {
-      "title": "Why is Rapport Therapeutics stock sliding today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-rapport-therapeutics-stock-sliding-today-93CH-4913783",
-      "pubDate": "2026-09-23T19:33:11.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "AI leaders warn UN of security risks as systems grow more powerful",
-      "link": "https://www.investing.com/news/economy-news/ai-leaders-to-brief-un-amid-warnings-the-technology-could-slip-beyond-human-control-4912463",
-      "pubDate": "2026-09-23T19:30:32.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Fastly stock surges on Meta Muse traffic analysis",
-      "link": "https://www.investing.com/news/stock-market-news/fastly-stock-surges-on-meta-muse-traffic-analysis-93CH-4913779",
-      "pubDate": "2026-09-23T19:29:50.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Gold buckles as 5% yields and Fed hawks take control",
@@ -114,10 +184,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "Canadian dollar hits eight-week low as investors brace for domestic slowdown - reuters.com",
+      "title": "Canadian dollar hits eight-week low as investors brace for domestic slowdown",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPMmlGYjdQUmtLVUhEdTRXak5uM3pmTWRlTnprTy1pRFo5NDNzSmR1ZG00bkRlbl9GVkpjS0hrdXR5UE5ZS1M4c0hkTGxMaGNyRnpDdll1MUVENC12Rm1PMEZDZklveUozX1lSTzc1WjdFcUN0MkVwcnQ4dnRybFJ3RTFFWXJVY3JGeWZLMnVTSDc1dmNHMmZsVFN2cGgtRGMxU003LS05RU9kaEh4TXhXenp1LUM?oc=5",
       "pubDate": "2026-09-23T17:08:35.000Z",
-      "description": "Canadian dollar hits eight-week low as investors brace for domestic slowdown&nbsp;&nbsp;reuters.com",
+      "description": "Canadian dollar hits eight-week low as investors brace for domestic slowdown&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -133,13 +203,6 @@
       "pubDate": "2026-09-23T16:19:52.000Z",
       "description": "Federal Reserve (Fed) Governor Michael Barr made on Wednesday the case for more rate increases, saying the risks to getting inflation back to 2% have grown while the risks to jobs have eased.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
-      "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-09-23T16:08:06.000Z",
-      "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
-      "source": "Bank of Canada"
     },
     {
       "title": "Dow Jones Industrial Average keeps sliding as yields climb on a strong PMI",
@@ -170,10 +233,10 @@
       "source": "European Central Bank"
     },
     {
-      "title": "Yu completes hat-trick of gold in fairytale Asian Games debut - reuters.com",
+      "title": "Yu completes hat-trick of gold in fairytale Asian Games debut",
       "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPcnRvYjh6a0dtT2F4ZUtJR1Boemg0dVNubnNILV9fR09DNFQ4V05ZcGI1Z0p1a0RCaklaYUhycmxEcHdOTUFpQjFKdmpNU005VWR4ekp4cE51cFdJRXB1UjNHdTBnNjBGVXVieERkLVh2VllqN205b293enVYWnhpTWxIeTM2UnJGUnJuOXhLZWdqZ3o1NTJtUS1xSjVlUE0?oc=5",
       "pubDate": "2026-09-23T15:53:06.000Z",
-      "description": "Yu completes hat-trick of gold in fairytale Asian Games debut&nbsp;&nbsp;reuters.com",
+      "description": "Yu completes hat-trick of gold in fairytale Asian Games debut&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -184,10 +247,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "Breakingviews - COMMENTARY: Bitcoin miners reveal the real AI scarcity trade - reuters.com",
+      "title": "Breakingviews - COMMENTARY: Bitcoin miners reveal the real AI scarcity trade",
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOTE5oU01ueU0zN0t6Mlh0QU1vU3M5bDNTSHUwSU12RmR3M0JaUjlGSUFTbkF1ZGNqWHVCN2JuR1JsRW40RnZvMUlqZk5TOTR3cGI0Z0pGX0R3U1RWZTh2UmRsUUllQlYwa1MyZ0VpRk95cUdOOWVnRjczSkV6UUhrOUN1cVltOG1YVnNJbWRlTEczRGdoWDBuQ3JUM2NOMzhHNjhzTGE3NjY?oc=5",
       "pubDate": "2026-09-23T15:42:51.000Z",
-      "description": "Breakingviews - COMMENTARY: Bitcoin miners reveal the real AI scarcity trade&nbsp;&nbsp;reuters.com",
+      "description": "Breakingviews - COMMENTARY: Bitcoin miners reveal the real AI scarcity trade&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -226,13 +289,6 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Dollar Jumps to 8-Week High on Fed Rate-Hike Bets",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxONWd1TXlQMWFteE5laG9vTTFUNkFieFpXVlo2SG5TWS1mNUxZbW5kUkhGUkpBa0tkNW1hc1Q2ZEhXMVQ4TW84Q2ZYdld5OHZzV3dXbi1FYTc4WjZpVko1QVo4NU4zdEdJakpOM1UyeFI2RktZeDA3UklxSUhNaFQyVUs2UjhsSDRuMVNxaExiSmptWDdJcmdfb01MdFowS2tSM2RCWDZJcGszQzR1anJYcDB0MlVrY0tleEFsSnMyTmJaUTktSmJr?oc=5",
-      "pubDate": "2026-09-23T14:48:17.000Z",
-      "description": "Dollar Jumps to 8-Week High on Fed Rate-Hike Bets&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
       "title": "Fed's Barr: Further rate hikes needed for timely return to 2% inflation",
       "link": "https://www.fxstreet.com/news/feds-barr-further-rate-hikes-needed-for-timely-return-to-2-inflation-202609231443",
       "pubDate": "2026-09-23T14:43:16.000Z",
@@ -240,10 +296,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "Hungarian bond bulls bet on euro path as central bank cuts inflation target - reuters.com",
+      "title": "Hungarian bond bulls bet on euro path as central bank cuts inflation target",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxORHg3bl9QcE1XcnAtN2p3NG9pUlVvLUpFUm9BbTdjaDFPaDhfTE1zNFBfbHlZM3Q5NmlSd3ZtMHhjaHMxQ3BiQ3M3b1dnSnpVWEIzSDhKZ3ZZR1pvaFpWcF9VWnJObnhwUlh4Y19nU2kzSy13VWstOVBJX09zdDJhYmN5Z1N0a2JwMmdQdnVCbVhKaXRpa3F5MUFjOEJ2cXM2VWlyVkFFTXBaV1NwTXpNZFNhZkE?oc=5",
       "pubDate": "2026-09-23T14:41:44.000Z",
-      "description": "Hungarian bond bulls bet on euro path as central bank cuts inflation target&nbsp;&nbsp;reuters.com",
+      "description": "Hungarian bond bulls bet on euro path as central bank cuts inflation target&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -268,6 +324,13 @@
       "source": "BeInCrypto"
     },
     {
+      "title": "Dollar Jumps to 8-Week High on Fed Rate-Hike Bets",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxONWd1TXlQMWFteE5laG9vTTFUNkFieFpXVlo2SG5TWS1mNUxZbW5kUkhGUkpBa0tkNW1hc1Q2ZEhXMVQ4TW84Q2ZYdld5OHZzV3dXbi1FYTc4WjZpVko1QVo4NU4zdEdJakpOM1UyeFI2RktZeDA3UklxSUhNaFQyVUs2UjhsSDRuMVNxaExiSmptWDdJcmdfb01MdFowS2tSM2RCWDZJcGszQzR1anJYcDB0MlVrY0tleEFsSnMyTmJaUTktSmJr?oc=5",
+      "pubDate": "2026-09-23T14:11:00.000Z",
+      "description": "Dollar Jumps to 8-Week High on Fed Rate-Hike Bets&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
       "title": "India: Russian dependence and security focus – Standard Chartered",
       "link": "https://www.fxstreet.com/news/india-russian-dependence-and-security-focus-standard-chartered-202609231409",
       "pubDate": "2026-09-23T14:09:10.000Z",
@@ -282,10 +345,10 @@
       "source": "Federal Reserve"
     },
     {
-      "title": "Ghana to focus on rebuilding reserves as gold exports pause - reuters.com",
+      "title": "Ghana to focus on rebuilding reserves as gold exports pause",
       "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQc2VDN2hoVXRiOHIxLUEyRmljamRuX2dYZWJ5MzZSdkRFLWRQMUhvRldlRUk2cWo3RUxITmtqVjIzenIxNEYxSEx3M1AyMGVOQ2FNbER1MWZvbDdiS2pIMnFmbGxGUjBoU0wzaktCWkI3YUU4elFxMHRuX3VqTHdaVkRjTHRkd3FIVnBYb0JLX2l3TUZMYnYySzhacEFHUG5z?oc=5",
       "pubDate": "2026-09-23T13:52:09.000Z",
-      "description": "Ghana to focus on rebuilding reserves as gold exports pause&nbsp;&nbsp;reuters.com",
+      "description": "Ghana to focus on rebuilding reserves as gold exports pause&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -298,7 +361,7 @@
     {
       "title": "Dollar More Attractive After Fed Defies Trump With Rate Rise",
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQTHlLZmNLazlCOU5SNjdZLTZnNm1tbnBsZmctN3NTUDRlaWJXN0dzNWxBSm5lMTRfNnBPdlhvOGwtRG42dkRYX3pkcTBvUmZMd3BNbDVaV0lyY19uRUh3c0FLTmk3bG1rMGdEUTR1V0FqbnA0UmJpUUhsOEhxVklOekF5WjBuc1ZXSDB6d01aRnVCWFlETU9ycnRUVGY1NlZnX0E?oc=5",
-      "pubDate": "2026-09-23T13:41:56.000Z",
+      "pubDate": "2026-09-23T13:38:00.000Z",
       "description": "Dollar More Attractive After Fed Defies Trump With Rate Rise&nbsp;&nbsp;WSJ",
       "source": "Google News"
     },
@@ -352,10 +415,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "China avenge Olympic defeat to take men's team gold in gymnastics showdown with Japan - reuters.com",
+      "title": "China avenge Olympic defeat to take men's team gold in gymnastics showdown with Japan",
       "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPa3B4RHh6VU1KeWYtVVZtX1ZzZzEwUnNtRTczaWUza0E2YjVmTkxTSUEzaXZNUUtud0U2ZWh5Y3BMVjdnZUtURHFGNWxINThENmFZejRQVnpjWjR4VTZjdjJieUp5VDJHbFFWbUFFMkJBcEFKNmJ2WVBhQndVbUw0a2N6cGpVd3AxMDMxazdYTWJVVEczc0o5TUxsY1hieUMyem5Ma0J0NG55THBoVDVFXzA4b1c2M3gwdGc?oc=5",
       "pubDate": "2026-09-23T13:06:18.000Z",
-      "description": "China avenge Olympic defeat to take men's team gold in gymnastics showdown with Japan&nbsp;&nbsp;reuters.com",
+      "description": "China avenge Olympic defeat to take men's team gold in gymnastics showdown with Japan&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -373,13 +436,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Copper: Chinese tightness supports prices despite weak positioning – ING",
-      "link": "https://www.fxstreet.com/news/copper-chinese-tightness-supports-prices-despite-weak-positioning-ing-202609231235",
-      "pubDate": "2026-09-23T12:35:03.000Z",
-      "description": "ING analysts Ewa Manthey and Warren Patterson report that LME Copper has extended gains on tight physical conditions in China, falling inventories and holiday-related restocking, even as investor positioning remains subdued.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Bitcoin Is Up 13% Since the Fed Hike. Here&#039;s Why the Funds That Sold Came Back",
       "link": "https://beincrypto.com/bitcoin-price-fed-hike-43-percent-breakout/",
       "pubDate": "2026-09-23T12:19:26.000Z",
@@ -387,66 +443,17 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Silver Price Forecast: Daily range holds, but 4-hour chart turns bearish",
-      "link": "https://www.fxstreet.com/news/silver-price-forecast-daily-range-holds-but-4-hour-chart-turns-bearish-202609231219",
-      "pubDate": "2026-09-23T12:19:04.000Z",
-      "description": "Silver (XAG/USD) slides nearly 3% on Wednesday as the hawkish Federal Reserve (Fed) outlook pushes the US Dollar (USD) to a two-month high and weighs on non-yielding metals. Gold (XAU/USD) is also down more than 1%. At the time of writing, ",
-      "source": "FXStreet"
-    },
-    {
-      "title": "US Dollar: Growth edge narrative supports gains – BBH",
-      "link": "https://www.fxstreet.com/news/us-dollar-growth-edge-narrative-supports-gains-bbh-202609231215",
-      "pubDate": "2026-09-23T12:15:54.000Z",
-      "description": "Brown Brothers Harriman’s (BBH) Elias Haddad notes the Dollar is extending gains as US economic data and policy dynamics remain supportive. September US PMI is expected to confirm US growth leadership versus Eurozone, UK and Japan.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Trump Accounts Bought MicroStrategy Stock Before an 83% Rally",
-      "link": "https://beincrypto.com/trump-sold-microstrategy-bought-back-rally/",
-      "pubDate": "2026-09-23T12:08:17.000Z",
-      "description": "Trump's accounts sold MicroStrategy stock in June, then bought back in July. Shares have since rallied about 83%.\nThe post Trump Accounts Bought MicroStrategy Stock Before an 83% Rally appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Santander, BBVA, Trade Republic and Western Union to Discuss the Future of Stablecoins at MERGE Madrid 2026",
-      "link": "https://beincrypto.com/merge-madrid-2026-stablecoins-banks-payments/",
-      "pubDate": "2026-09-23T11:58:18.000Z",
-      "description": "Madrid, September 2026.&#8211; Stablecoins have ceased to be an exclusive tool of the crypto ecosystem and have become a strategic priority for banks, fintechs, and global payment companies. Santander, BBVA, Trade Republic, and Western Unio",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Swiss Franc: Range-bound trading outlook against US Dollar – UOB",
-      "link": "https://www.fxstreet.com/news/swiss-franc-range-bound-trading-outlook-against-us-dollar-uob-202609231152",
-      "pubDate": "2026-09-23T11:52:40.000Z",
-      "description": "United Overseas Bank (UOB) analysts Quek Ser Leang and Lee Sue Ann see USD/CHF stuck in tight ranges across timeframes. Intraday, they expect the US Dollar (USD) to hold between 0.8185 and 0.8230 as prior downside momentum has faded.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "US Dollar Index: Rally extend to near 101.00 as hawkish Fed narrative takes hold",
-      "link": "https://www.fxstreet.com/news/us-dollar-index-rally-extend-to-near-10100-as-hawkish-fed-narrative-takes-hold-202609231147",
-      "pubDate": "2026-09-23T11:47:22.000Z",
-      "description": "The US Dollar trades higher as financial markets embrace hawkish Federal Reserve (Fed) view. As of writing, the US Dollar Index (DXY), which tracks the Greenback’s value against six major currencies, trades 0.35% higher to near 100.90, the ",
-      "source": "FXStreet"
-    },
-    {
-      "title": "US PMI Data Drops Today. Here&#039;s What Traders Expect",
-      "link": "https://beincrypto.com/us-pmi-data-drops-traders-expect/",
-      "pubDate": "2026-09-23T11:40:37.000Z",
-      "description": "S&#38;P Global will release on Wednesday its preliminary September Purchasing Managers&#8217; Indices (PMIs) for the United States, based on surveys of top private sector executives, to provide an early indication of economic momentum. The ",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Thai sprinter Puripol eyes Asian Games gold - reuters.com",
+      "title": "Thai sprinter Puripol eyes Asian Games gold",
       "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOT1V2aDdKUUlhWkFPeE9Yd2F1Ul9oUDdnRjRPbG5OYmhuckNaUWpNMG1kdktiY2IwU25XWlJXY1FvUEgtNnlaMTNiUHhqNWdNWE0yLXA1Mk1TendKeHFDYktCS1hCRERfSW5hTzlhczZYcHdZN2xROFM5TnZ6N2tHYWJ0clpaRlFaX21Cb1pyNA?oc=5",
       "pubDate": "2026-09-23T11:32:48.000Z",
-      "description": "Thai sprinter Puripol eyes Asian Games gold&nbsp;&nbsp;reuters.com",
+      "description": "Thai sprinter Puripol eyes Asian Games gold&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
-      "title": "Pound caught in three-day slide as dollar rallies broadly - reuters.com",
+      "title": "Pound caught in three-day slide as dollar rallies broadly",
       "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPVUpaYmdPdEdWSGFSbDZJc05MSy1aSlpsU0NtQ0gzcXpiTklyNXpNUXpBTVpaTkxXd2pEM3Y0QXJ6bng5eHhnX2xjVm8xV0k3eVhRZVB3UUtpUHRpMmdUR3JOU092OFUtbExWelc2X0p1R1hsOXJidVhVNzZIVmpHQ242WUF5WlBSazIxYmxTcW1oOF9LV1JVUzVlVjY?oc=5",
       "pubDate": "2026-09-23T11:13:40.000Z",
-      "description": "Pound caught in three-day slide as dollar rallies broadly&nbsp;&nbsp;reuters.com",
+      "description": "Pound caught in three-day slide as dollar rallies broadly&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -457,17 +464,24 @@
       "source": "FXStreet"
     },
     {
-      "title": "TSX futures inch lower as gold, silver prices slip - reuters.com",
+      "title": "TSX futures inch lower as gold, silver prices slip",
       "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNZXV4Wnp6cUFlTjJNWmxHWnVPQWxUa28zUHY5RmU4cHZiaHF4aGZYUnZuNXc0bHVGT0lyR0p0ME5haFR4Yk9pWU80Q1lIdmxadTdlNVU5ak01MjJHQ253ZzUxazhORnczdnlPUTVIazNBLUNzeUxfN0sxWEREZEQxY2E3TVF2ZmRGenJ0dWdIclpOQkRiT3c?oc=5",
       "pubDate": "2026-09-23T10:15:50.000Z",
-      "description": "TSX futures inch lower as gold, silver prices slip&nbsp;&nbsp;reuters.com",
+      "description": "TSX futures inch lower as gold, silver prices slip&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
-      "title": "AI Rally, Weaker Yen Set the Stage for Japan’s Market Return - Bloomberg",
+      "title": "Rupee slips as dollar gets Fed hike expectations tailwind",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPbVNmdlVNbHl0UDFJQll5ckV0NHkzNXZVTmhvdlVPNk1Bci1RSXJRV2RRc3FVRm4zTlNONm15dlNZOFhNTzlOYVFnVWJQUUJmWnMzZnJCdzV6RV9OblJldlBZMExybTBaVDk2X0VVbXVYNHVTNy1wcWF4TzdiVXZNbXBSYnpYZjhsVzNjZTJhWF8zR183OXBCX0lWMm1TamR5WjRJSjhrMWZ2UQ?oc=5",
+      "pubDate": "2026-09-23T10:08:31.000Z",
+      "description": "Rupee slips as dollar gets Fed hike expectations tailwind&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "AI Rally, Weaker Yen Set the Stage for Japan’s Market Return",
       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNbW5heHhsVnBYQ2tkX1NqTEZiQzFsOFdOR2c2eE92M1RmYTg3Z3I0SXBkZldRRDZNOEd2Nk9wbmExOEI0S2hfNUY3WWM0eHZja3RFelA3X2ZtcHNScUxDREtpR0t4RXB6aW5QM1JDM2Vra0ZPRUNORllZYXlXbmo0S1BCUWdwM2hSdU5hQUo2Wjl2cjM0M1RkOTV6dkVJNzBmaF8wQnAwUkpnRmVLRDZB?oc=5",
       "pubDate": "2026-09-23T09:17:39.000Z",
-      "description": "AI Rally, Weaker Yen Set the Stage for Japan’s Market Return&nbsp;&nbsp;Bloomberg",
+      "description": "AI Rally, Weaker Yen Set the Stage for Japan’s Market Return&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
     },
     {
@@ -506,25 +520,11 @@
       "source": "Google News"
     },
     {
-      "title": "Gold loses shine as rate hike bets foster a stronger dollar - reuters.com",
+      "title": "Gold loses shine as rate hike bets foster a stronger dollar",
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQVGROaTNUbzBNRWdvU1J1SVRKaURrN0FDVHMteG50VExEUUhKN3UyQ0pMZ3F0ZUtXRHoyc2c2aDgzRkFrTFhHR01OdVROSVBWVnRLWmhqSjNDdW5FVjdHeEptYW5fUFg1VFVnX0xXZURtemZqOVNqNmRqc19yVjdYX3BwM1I1T0M4VUIwdDNqdmxFcnlXX2pKS3VCNllNbEJTQkZxZTJkd1NpNDZwOGpBSw?oc=5",
       "pubDate": "2026-09-23T04:53:00.000Z",
-      "description": "Gold loses shine as rate hike bets foster a stronger dollar&nbsp;&nbsp;reuters.com",
+      "description": "Gold loses shine as rate hike bets foster a stronger dollar&nbsp;&nbsp;Reuters",
       "source": "Reuters"
-    },
-    {
-      "title": "Rupee slips as dollar gets Fed hike expectations tailwind - reuters.com",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPbVNmdlVNbHl0UDFJQll5ckV0NHkzNXZVTmhvdlVPNk1Bci1RSXJRV2RRc3FVRm4zTlNONm15dlNZOFhNTzlOYVFnVWJQUUJmWnMzZnJCdzV6RV9OblJldlBZMExybTBaVDk2X0VVbXVYNHVTNy1wcWF4TzdiVXZNbXBSYnpYZjhsVzNjZTJhWF8zR183OXBCX0lWMm1TamR5WjRJSjhrMWZ2UQ?oc=5",
-      "pubDate": "2026-09-23T02:46:00.000Z",
-      "description": "Rupee slips as dollar gets Fed hike expectations tailwind&nbsp;&nbsp;reuters.com",
-      "source": "Reuters"
-    },
-    {
-      "title": "Dollar holds near 2-month high as markets weigh rate hikes, Iran diplomacy",
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNUXhJVHpLOEZ0bFFvSlVUdVJyYkZPVThKQ290WUpfbkN1eVZ3WDc3QVVMVE9GNFBXWThfVktHNHdaNzNIZGZtd2U0WE9uUU5XUi1oZ0NCUmNGWU94cTV5QTlWaVZJcTVvMWVmTnljWVVFcERqLWdZZnlLeWRwS3JaYlVGV0FqQjN2MTdLVHNkeXloTF85MnVIOHIwckZncWc5MFHSAacBQVVfeXFMTWtTWlpCSGpMbWxhdUtDdHhYam9Vc3Vrd2tyUEFHNTg4Qjl6M3ZQVXE0LWhKY3VjN2Y5NGRYeEdBZjVpSlhxZnFWSmxRUzJEemxTczNVT3JOcUhGeGp2R1lRNHdzLUUwQW5BWXFNbXQwdm40WXk5aERDenROSXBCNmtscVRjbnBsa1c5bEJMZjJ2NDI4X2tzNXBXclBkeVZxZDItNVVaSUU?oc=5",
-      "pubDate": "2026-09-23T02:37:00.000Z",
-      "description": "Dollar holds near 2-month high as markets weigh rate hikes, Iran diplomacy&nbsp;&nbsp;CNBC",
-      "source": "Google News"
     },
     {
       "title": "Assessment of ASX Clearing and Settlement Facilities - September 2026",
