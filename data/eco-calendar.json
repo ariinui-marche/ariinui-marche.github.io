@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-24T10:23:19.069Z",
+  "timestamp": "2026-09-24T15:16:41.289Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -6189,6 +6189,15 @@
       "country": "USD",
       "date": "2026-09-24T10:10:00-04:00",
       "impact": "Low",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "President Trump Speaks",
+      "country": "USD",
+      "date": "2026-09-24T10:15:00-04:00",
+      "impact": "Medium",
       "forecast": "",
       "previous": "",
       "actual": ""
