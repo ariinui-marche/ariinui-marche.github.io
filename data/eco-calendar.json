@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-24T00:48:42.851Z",
+  "timestamp": "2026-09-24T05:30:38.532Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -6218,6 +6218,15 @@
       "impact": "Holiday",
       "forecast": "",
       "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "NAB Quarterly Business Confidence",
+      "country": "AUD",
+      "date": "2026-09-24T21:30:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "-19",
       "actual": ""
     },
     {
