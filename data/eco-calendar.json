@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-24T22:23:10.361Z",
+  "timestamp": "2026-09-25T00:37:01.766Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -6194,15 +6194,6 @@
       "actual": ""
     },
     {
-      "title": "President Trump Speaks",
-      "country": "USD",
-      "date": "2026-09-24T10:15:00-04:00",
-      "impact": "Medium",
-      "forecast": "",
-      "previous": "",
-      "actual": ""
-    },
-    {
       "title": "Natural Gas Storage",
       "country": "USD",
       "date": "2026-09-24T10:30:00-04:00",
@@ -6225,6 +6216,15 @@
       "country": "CNY",
       "date": "2026-09-24T19:01:00-04:00",
       "impact": "Holiday",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "President Trump Speaks",
+      "country": "USD",
+      "date": "2026-09-24T19:55:00-04:00",
+      "impact": "Medium",
       "forecast": "",
       "previous": "",
       "actual": ""
