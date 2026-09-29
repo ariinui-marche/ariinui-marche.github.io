@@ -363,49 +363,67 @@ main {
 }
 
 .eco-countdown {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(239, 68, 68, 0.08);
-  border: 1px solid rgba(239, 68, 68, 0.35);
-  border-radius: 10px;
-  padding: 10px 12px;
+  background: #05070b;
+  border: 1px solid #2a2f3a;
+  border-left: 3px solid var(--red);
+  border-radius: 4px;
   margin-bottom: 14px;
+  font-family: Consolas, "SF Mono", Menlo, "Courier New", monospace;
 }
 .eco-countdown:empty { display: none; }
-.eco-countdown .countdown-ccy { color: var(--text); font-weight: 700; font-size: 12px; flex-shrink: 0; }
-.eco-countdown .countdown-flag { font-size: 20px; flex-shrink: 0; }
-.eco-countdown .countdown-info {
+.eco-countdown .cd-head {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 5px 12px;
+  border-bottom: 1px solid #2a2f3a;
+  background: #0b0f16;
+}
+.eco-countdown .cd-date {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.eco-countdown .cd-tag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--red);
+  padding: 1px 6px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+.eco-countdown .cd-body {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+}
+.eco-countdown .countdown-at {
+  font-size: 22px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  padding-right: 12px;
+  border-right: 1px solid #2a2f3a;
+  flex-shrink: 0;
+}
+.eco-countdown .cd-event {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   flex: 1;
   min-width: 0;
 }
-.eco-countdown .countdown-label {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--red);
-  font-weight: 700;
-}
-.eco-countdown .countdown-meta {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 2px;
-}
-.eco-countdown .countdown-at {
-  font-size: 15px;
-  font-weight: 700;
-  font-variant-numeric: tabular-nums;
-}
-.eco-countdown .countdown-date {
-  font-size: 11px;
-  color: var(--muted, #9ca3af);
-  white-space: nowrap;
-}
+.eco-countdown .countdown-flag { font-size: 18px; flex-shrink: 0; }
+.eco-countdown .countdown-ccy { color: var(--accent); font-weight: 700; font-size: 12px; flex-shrink: 0; }
 .eco-countdown .countdown-title {
+  font-family: inherit;
   font-size: 13px;
   color: var(--text);
   white-space: nowrap;
@@ -413,12 +431,13 @@ main {
   text-overflow: ellipsis;
 }
 .eco-countdown .countdown-time {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   color: var(--red);
   white-space: nowrap;
   flex-shrink: 0;
+  letter-spacing: 1px;
 }
 
 .mini-calendar {
@@ -870,8 +889,12 @@ footer {
 @media (max-width: 480px) {
   .eco-event { grid-template-columns: 56px 32px 26px 1fr auto; font-size: 12px; }
   .eco-values { padding-left: 114px; }
+  .eco-countdown .cd-date { font-size: 10px; letter-spacing: 0.5px; }
+  .eco-countdown .cd-body { gap: 8px; padding: 8px 10px; flex-wrap: wrap; }
+  .eco-countdown .countdown-at { font-size: 18px; padding-right: 8px; }
+  .eco-countdown .countdown-time { font-size: 18px; margin-left: auto; }
+  .eco-countdown .cd-event { flex-basis: 100%; order: 3; }
   .eco-countdown .countdown-title { font-size: 12px; }
-  .eco-countdown .countdown-time { font-size: 15px; }
 
   main { padding: 12px 8px; }
   .panel { padding: 12px 10px; }
