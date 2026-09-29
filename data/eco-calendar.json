@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-29T09:05:20.674Z",
+  "timestamp": "2026-09-29T15:41:46.332Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -6509,21 +6509,21 @@
       "actual": ""
     },
     {
-      "title": "Italian 10-y Bond Auction",
-      "country": "EUR",
-      "date": "2026-09-29T05:33:00-04:00",
-      "impact": "Low",
-      "forecast": "",
-      "previous": "4.10|1.6",
-      "actual": ""
-    },
-    {
       "title": "10-y Bond Auction",
       "country": "GBP",
-      "date": "2026-09-29T05:33:00-04:00",
+      "date": "2026-09-29T05:02:00-04:00",
       "impact": "Low",
       "forecast": "",
       "previous": "5.16|3.6",
+      "actual": ""
+    },
+    {
+      "title": "Italian 10-y Bond Auction",
+      "country": "EUR",
+      "date": "2026-09-29T05:04:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "4.10|1.6",
       "actual": ""
     },
     {
@@ -7026,7 +7026,7 @@
       "country": "USD",
       "date": "2026-09-30T10:30:00-04:00",
       "impact": "Low",
-      "forecast": "",
+      "forecast": "-1.9M",
       "previous": "3.0M",
       "actual": ""
     },
