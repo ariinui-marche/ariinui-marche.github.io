@@ -388,6 +388,23 @@ main {
   color: var(--red);
   font-weight: 700;
 }
+.eco-countdown .countdown-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
+.eco-countdown .countdown-at {
+  font-size: 15px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.eco-countdown .countdown-date {
+  font-size: 11px;
+  color: var(--muted, #9ca3af);
+  white-space: nowrap;
+}
 .eco-countdown .countdown-title {
   font-size: 13px;
   color: var(--text);
