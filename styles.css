@@ -439,6 +439,9 @@ main {
   flex-shrink: 0;
   letter-spacing: 1px;
 }
+.eco-countdown .countdown-time.cd-green { color: var(--green); }
+.eco-countdown .countdown-time.cd-orange { color: var(--orange); }
+.eco-countdown .countdown-time.cd-red { color: var(--red); }
 
 .mini-calendar {
   background: #0e1219;

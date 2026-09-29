@@ -748,6 +748,7 @@ function tickCountdown() {
   const pad = (n) => String(n).padStart(2, '0');
   const timeEl = document.getElementById('countdownTime');
   if (timeEl) timeEl.textContent = `${pad(h)}:${pad(m)}:${pad(s)}`;
+  if (timeEl) timeEl.className = 'countdown-time ' + (totalSec > 6 * 3600 ? 'cd-green' : totalSec > 3600 ? 'cd-orange' : 'cd-red');
 }
 
 setInterval(tickCountdown, 1000);

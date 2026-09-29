@@ -32,6 +32,7 @@ body {
 .w-ccy { color: var(--amber); font-weight: 700; font-size: 14px; }
 .w-title { font-size: 16px; }
 .w-count { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 46px; font-weight: 700; letter-spacing: 1px; color: var(--red); font-variant-numeric: tabular-nums; line-height: 1; }
+.w-count.cd-green { color: var(--green); } .w-count.cd-orange { color: #f59e0b; } .w-count.cd-red { color: var(--red); }
 .w-sub { margin-top: 8px; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: var(--dim); }
 .w-empty { padding: 28px 14px; text-align: center; color: var(--dim); font-size: 13px; }
 img.emoji { height: 1.15em; width: 1.15em; vertical-align: -0.15em; }
@@ -92,7 +93,10 @@ function tick() {
   const t = Math.floor(diff / 1000);
   const pad = (n) => String(n).padStart(2, '0');
   const cd = document.getElementById('cd');
-  if (cd) cd.textContent = `${pad(Math.floor(t / 3600))}:${pad(Math.floor((t % 3600) / 60))}:${pad(t % 60)}`;
+  if (cd) {
+    cd.textContent = `${pad(Math.floor(t / 3600))}:${pad(Math.floor((t % 3600) / 60))}:${pad(t % 60)}`;
+    cd.className = 'w-count ' + (t > 6 * 3600 ? 'cd-green' : t > 3600 ? 'cd-orange' : 'cd-red');
+  }
 }
 
 async function load() {
