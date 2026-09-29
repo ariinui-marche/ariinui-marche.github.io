@@ -1,0 +1,17 @@
+{
+  "id": "./widget.html",
+  "name": "Next High Countdown",
+  "short_name": "Next High",
+  "description": "Countdown to the next high-impact economic event",
+  "start_url": "./widget.html",
+  "scope": "./widget.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#05070b",
+  "theme_color": "#05070b",
+  "icons": [
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
