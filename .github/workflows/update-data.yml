@@ -24,6 +24,9 @@ jobs:
 
       - run: node scripts/fetch-data.mjs
 
+      # Actual quasi temps réel depuis le calendrier TradingView ; non bloquant (Apify reste le filet)
+      - run: node scripts/fetch-tv-actuals.mjs || true
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
