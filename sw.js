@@ -1,12 +1,10 @@
-const CACHE = 'ariinui-marche-shell-v18';
+const CACHE = 'ariinui-marche-shell-v19';
 const SHELL_PATHS = [
   '/',
   '/index.html',
   '/styles.css',
   '/script.js',
   '/manifest.json',
-  '/widget.html',
-  '/widget.webmanifest',
   '/icons/icon-192.png',
   '/icons/icon-512.png',
 ].map((p) => new URL(p, self.location).pathname);
