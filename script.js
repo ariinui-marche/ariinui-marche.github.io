@@ -675,7 +675,7 @@ function renderEcoCalendar() {
       <span class="cal-month-label">${monthLabel}</span>
       <button class="cal-nav" id="calNext">›</button>
     </div>
-    <div class="cal-weekdays">${['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'].map((d) => `<div>${d}</div>`).join('')}</div>
+    <div class="cal-weekdays">${['Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa', 'Di'].map((d) => `<div>${d}</div>`).join('')}</div>
     <div class="cal-grid">${cells}</div>
     <div class="cal-footer">
       ${calShowAll ? '<button class="cal-link" id="calThisWeek">This week</button>' : ''}
