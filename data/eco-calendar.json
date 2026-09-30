@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-30T02:23:56.588Z",
+  "timestamp": "2026-09-30T02:27:37.929Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -6443,7 +6443,7 @@
       "impact": "High",
       "forecast": "4.60%",
       "previous": "4.35%",
-      "actual": ""
+      "actual": "4.60%"
     },
     {
       "title": "RBA Rate Statement",
@@ -6713,7 +6713,7 @@
       "impact": "High",
       "forecast": "0.5%",
       "previous": "1.0%",
-      "actual": ""
+      "actual": "0.4%"
     },
     {
       "title": "CPI y/y",
@@ -6722,7 +6722,7 @@
       "impact": "High",
       "forecast": "4.1%",
       "previous": "3.5%",
-      "actual": ""
+      "actual": "4.0%"
     },
     {
       "title": "Trimmed Mean CPI m/m",
@@ -6731,7 +6731,7 @@
       "impact": "High",
       "forecast": "0.3%",
       "previous": "0.5%",
-      "actual": ""
+      "actual": "0.2%"
     },
     {
       "title": "Building Approvals m/m",

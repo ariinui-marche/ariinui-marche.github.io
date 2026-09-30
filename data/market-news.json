@@ -1,6 +1,13 @@
 {
-  "timestamp": "2026-09-30T02:23:56.588Z",
+  "timestamp": "2026-09-30T02:27:37.929Z",
   "items": [
+    {
+      "title": "2026-09-30 - Web-TV - Web TV: SNB events",
+      "link": "https://www.snb.ch/en/services-events/digital-services/webtv/webtv-2026-09-24",
+      "pubDate": "2026-09-30T02:27:01.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
+    },
     {
       "title": "US-Iran talks deadlocked as Qatar mediation yields little",
       "link": "https://www.fxstreet.com/news/us-iran-talks-deadlocked-as-qatar-mediation-yields-little-202609300222",
@@ -14,13 +21,6 @@
       "pubDate": "2026-09-30T02:20:00.000Z",
       "description": "",
       "source": "European Central Bank"
-    },
-    {
-      "title": "2026-09-30 - Web-TV - Web TV: SNB events",
-      "link": "https://www.snb.ch/en/services-events/digital-services/webtv/webtv-2026-09-24",
-      "pubDate": "2026-09-30T02:18:01.000Z",
-      "description": "",
-      "source": "Swiss National Bank"
     },
     {
       "title": "Indonesia’s August trade surplus expected to widen, September inflation seen higher: Reuters poll",
