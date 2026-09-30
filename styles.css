@@ -503,15 +503,11 @@ main {
 .cal-day:hover { background: #1a2030; }
 .cal-day.today { border-color: var(--border); }
 .cal-day.selected { border-color: var(--accent); }
-.cal-day.cal-past { background: rgba(107,114,128,0.22); }
-.cal-day.cal-empty-past { background: #000; }
-.cal-day.cal-empty-future { background: rgba(203,213,225,0.35); }
-.cal-day.cal-empty-past:hover { background: #0a0a0a; }
-.cal-day.cal-empty-future:hover { background: rgba(203,213,225,0.5); }
+.cal-day.cal-past { background: rgba(203,213,225,0.35); }
 .cal-day.cal-today { background: rgba(239,68,68,0.40); }
 .cal-day.cal-week { background: rgba(245,158,11,0.28); }
 .cal-day.cal-nextweek { background: rgba(34,197,94,0.28); }
-.cal-day.cal-past:hover { background: rgba(107,114,128,0.34); }
+.cal-day.cal-past:hover { background: rgba(203,213,225,0.5); }
 .cal-day.cal-today:hover { background: rgba(239,68,68,0.55); }
 .cal-day.cal-week:hover { background: rgba(245,158,11,0.4); }
 .cal-day.cal-nextweek:hover { background: rgba(34,197,94,0.4); }

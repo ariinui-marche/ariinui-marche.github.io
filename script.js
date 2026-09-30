@@ -616,14 +616,12 @@ function isThisWeek(date) {
 }
 
 // Couleur d'une case selon sa position dans le temps (semaines lundi→dimanche) :
-// avec événement : passé = gris, aujourd'hui = rouge, reste de la semaine = orange, semaine suivante = vert.
-// Sans événement : passé = noir pur, futur = gris clair (aujourd'hui reste rouge).
-function calDayStatus(y, m, d, hasEvent) {
+// passé = gris clair, aujourd'hui = rouge, reste de la semaine = orange, semaine suivante = vert.
+function calDayStatus(y, m, d) {
   const t0 = new Date(today.getFullYear(), today.getMonth(), today.getDate());
   const diff = Math.round((new Date(y, m, d) - t0) / 86400000);
-  if (diff < 0) return hasEvent ? 'cal-past' : 'cal-empty-past';
+  if (diff < 0) return 'cal-past';
   if (diff === 0) return 'cal-today';
-  if (!hasEvent) return 'cal-empty-future';
   const daysToSunday = (7 - today.getDay()) % 7; // dimanche = fin de semaine
   if (diff <= daysToSunday) return 'cal-week';
   if (diff <= daysToSunday + 7) return 'cal-nextweek';
@@ -660,7 +658,7 @@ function renderEcoCalendar() {
     const dateStr = `${calViewYear}-${String(calViewMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
     const info = dateMap.get(dateStr);
     const cls = ['cal-day'];
-    cls.push(calDayStatus(calViewYear, calViewMonth, day, !!info));
+    cls.push(calDayStatus(calViewYear, calViewMonth, day));
     if (dateStr === todayStr) cls.push('today');
     if (dateStr === calSelectedDate) cls.push('selected');
     cells += `
@@ -998,11 +996,6 @@ document.getElementById('trendToggle')?.addEventListener('click', (e) => {
   const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
   e.currentTarget.setAttribute('aria-expanded', String(!expanded));
   document.getElementById('trendGrid').classList.toggle('collapsed', expanded);
-});
-document.getElementById('ecoNewsToggle')?.addEventListener('click', (e) => {
-  const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
-  e.currentTarget.setAttribute('aria-expanded', String(!expanded));
-  document.getElementById('ecoNewsBody').classList.toggle('collapsed', expanded);
 });
 document.getElementById('marketNewsToggle')?.addEventListener('click', (e) => {
   const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
