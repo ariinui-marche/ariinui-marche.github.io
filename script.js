@@ -809,7 +809,7 @@ function ecoTableHtml(rows) {
       <div class="ct-row${isNext ? ' ct-next' : ''}${past ? ' ct-past' : ''}">
         <span class="ct-time ${ecoTimeColorClass(d.getHours())}">${time}</span>
         <span class="ct-imp ct-imp-${impCls}" title="${e.impact}"></span>
-        <span class="ct-title" title="${e.title}">${multi ? `<span class="ct-ccy">${e.country}</span>` : ''}${e.title}</span>
+        <span class="ct-title" title="${e.title}">${multi ? `<span class="ct-ccy">${e.country}</span>` : ''}${e.title}${isLiveWindow(e) ? `<button class="live-btn" data-date="${e.date}" data-title="${e.title.replace(/"/g, '&quot;')}">▶ Live</button>` : ''}</span>
         ${cell(e.actual, 'ct-act' + (bm !== 'neutral' ? ' ct-' + bm : ''))}
         ${cell(e.forecast)}
         ${cell(e.previous, 'ct-prev')}
@@ -907,12 +907,68 @@ function tickCountdown() {
 
 setInterval(tickCountdown, 1000);
 
+// ── Speaks en direct (YouTube) : lecteur sous le panneau Next High, seulement pendant la fenêtre du speak ──
+const LIVE_BEFORE_MS = 10 * 60000, LIVE_AFTER_MS = 60 * 60000;
+const SPEAK_RE = /\b(speaks|testifies|speech|press conference)\b/i;
+// La chaîne financière est toujours en direct ; la banque centrale l'est seulement pendant ses conférences.
+const LIVE_SOURCES = {
+  yahoo: { label: 'Yahoo Finance', channel: 'UCEAZeUIeJs0IjQiqTCdVSIg' },
+  reuters: { label: 'Reuters', channel: 'UChqUTb7kYRX8-EiaN3XFrSQ' },
+  fed: { label: 'Fed', channel: 'UCAzhpt9DmG6PnHXjmJTvRGQ', ccy: 'USD' },
+  boe: { label: 'BoE', channel: 'UCZ25rmSDSnjIWZxjd2-04Rg', ccy: 'GBP' },
+  snb: { label: 'SNB', channel: 'UC4vQTVEqtj2orppzBkdGmyg', ccy: 'CHF' },
+};
+function isLiveWindow(e) {
+  if (e.impact !== 'High' || !SPEAK_RE.test(e.title)) return false;
+  const d = new Date(e.date).getTime() - Date.now();
+  return d <= LIVE_BEFORE_MS && d >= -LIVE_AFTER_MS;
+}
+let liveKey = null, liveSrc = 'yahoo', liveDismissed = new Set(), liveRenderedKey = 'null|';
+function updateLivePlayer() {
+  const el = document.getElementById('livePlayer');
+  if (!el) return;
+  const ev = currentEvents.filter(isLiveWindow).find((e) => !liveDismissed.has(e.date + e.title)) || null;
+  const key = ev ? ev.date + ev.title : null;
+  const state = key + '|' + liveSrc;
+  if (state === liveRenderedKey) return;
+  const hadPlayer = liveRenderedKey.split('|')[0] !== 'null';
+  const sameEvent = liveRenderedKey.split('|')[0] === String(key);
+  liveRenderedKey = state;
+  if (!ev) { liveKey = null; el.innerHTML = ''; el.classList.remove('open'); if (hadPlayer) renderEvents(); return; }
+  liveKey = key;
+  const srcs = Object.entries(LIVE_SOURCES).filter(([, v]) => !v.ccy || v.ccy === ev.country);
+  if (!srcs.some(([id]) => id === liveSrc)) liveSrc = 'yahoo';
+  const tabs = srcs.map(([id, v]) => `<button class="live-tab${id === liveSrc ? ' active' : ''}" data-src="${id}">${v.label}</button>`).join('');
+  const t = new Date(ev.date).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+  el.classList.add('open');
+  el.innerHTML = `
+    <div class="live-head"><span class="live-dot"></span><span class="live-title">LIVE · ${ev.country} ${ev.title} · ${t}</span><button class="live-close" aria-label="Fermer">✕</button></div>
+    <div class="live-tabs">${tabs}</div>
+    <div class="live-frame"><iframe src="https://www.youtube.com/embed/live_stream?channel=${LIVE_SOURCES[liveSrc].channel}&rel=0" title="Live" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy"></iframe></div>
+    <div class="live-note">Si l'écran est noir, la chaîne n'est pas en direct : essaie un autre flux.</div>`;
+  if (!sameEvent) renderEvents();
+}
+document.addEventListener('click', (e) => {
+  const tab = e.target.closest('.live-tab');
+  if (tab) { liveSrc = tab.dataset.src; updateLivePlayer(); return; }
+  if (e.target.closest('.live-close')) { if (liveKey) liveDismissed.add(liveKey); updateLivePlayer(); return; }
+  const btn = e.target.closest('.live-btn');
+  if (btn) {
+    liveDismissed.delete(btn.dataset.date + btn.dataset.title.replace(/&quot;/g, '"'));
+    updateLivePlayer();
+    document.getElementById('livePlayer')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+});
+setInterval(updateLivePlayer, 5000);
+
 function renderEvents() {
   const list = document.getElementById('ecoList');
   let filtered = currentImpactFilters.size === 0
     ? currentEvents
     : currentEvents.filter((e) => currentImpactFilters.has(e.impact));
   if (focusActive()) filtered = filtered.filter((e) => focusCcys.includes(e.country));
+  // Événements déjà passés : seuls les High restent affichés
+  { const nowMs = Date.now(); filtered = filtered.filter((e) => e.impact === 'High' || new Date(e.date).getTime() >= nowMs); }
   if (calSelectedDate) {
     filtered = filtered.filter((e) => {
       const d = new Date(e.date);
@@ -1177,6 +1233,7 @@ async function loadAll() {
     renderCountdownStatic();
     renderEcoCalendar();
     renderEvents();
+    updateLivePlayer();
 
     currentNews = (newsData?.items || [])
       .map((n) => {
