@@ -734,9 +734,11 @@ function inNextGroup(e) {
   return t >= t0 && t <= t0 + GROUP_WINDOW_MS;
 }
 
+// Après sa sortie, le groupe reste affiché (et le Focus dessus) HOLD_MS pour voir l'actual avant la bascule.
+const HOLD_MS = 10 * 60 * 1000;
 function findNextHighEvent() {
   const now = Date.now();
-  nextHighEvent = currentEvents.find((e) => e.impact === 'High' && new Date(e.date).getTime() > now) || null;
+  nextHighEvent = currentEvents.find((e) => e.impact === 'High' && new Date(e.date).getTime() > now - HOLD_MS) || null;
   // Devises en focus = toutes celles qui ont un High exactement à cette heure-là
   focusCcys = nextHighEvent
     ? [...new Set(currentEvents.filter(inNextGroup).map((e) => e.country))]
@@ -866,22 +868,39 @@ function renderCountdownStatic() {
   tickCountdown();
 }
 
+let releaseHandledFor = null;
 function tickCountdown() {
   if (!nextHighEvent) return;
   const diff = new Date(nextHighEvent.date).getTime() - Date.now();
-  if (diff <= 0) {
+  if (diff <= -HOLD_MS) {
+    // Fin du maintien : bascule sur le High suivant
     findNextHighEvent();
     renderCountdownStatic();
     renderFocusViews();
-    scheduleReleaseRefresh();
+    return;
+  }
+  const pad = (n) => String(n).padStart(2, '0');
+  const timeEl = document.getElementById('countdownTime');
+  if (diff <= 0) {
+    // Sorti : on garde le groupe, chrono "sorti il y a" + actual en direct
+    if (releaseHandledFor !== nextHighEvent.date) {
+      releaseHandledFor = nextHighEvent.date;
+      scheduleReleaseRefresh();
+      pollLiveActuals();
+      renderCountdownStatic();
+      return;
+    }
+    const sec = Math.floor(-diff / 1000);
+    if (timeEl) {
+      timeEl.textContent = `SORTI +${pad(Math.floor(sec / 60))}:${pad(sec % 60)}`;
+      timeEl.className = 'countdown-time cd-released';
+    }
     return;
   }
   const totalSec = Math.floor(diff / 1000);
   const h = Math.floor(totalSec / 3600);
   const m = Math.floor((totalSec % 3600) / 60);
   const s = totalSec % 60;
-  const pad = (n) => String(n).padStart(2, '0');
-  const timeEl = document.getElementById('countdownTime');
   if (timeEl) timeEl.textContent = `${pad(h)}:${pad(m)}:${pad(s)}`;
   if (timeEl) timeEl.className = 'countdown-time ' + (totalSec > 6 * 3600 ? 'cd-green' : totalSec > 3600 ? 'cd-orange' : 'cd-red');
 }
@@ -1060,9 +1079,66 @@ async function refreshEco() {
   const ecoData = await loadJSON('./data/eco-calendar.json').catch(() => null);
   if (!ecoData) return;
   currentEvents = prepareEvents(ecoData.events);
+  await applyLiveActuals();
   findNextHighEvent();
   renderCountdownStatic();
   renderFocusViews();
+}
+
+// ── Actual quasi instantané : calendrier public TradingView via le proxy Vercel ──
+// (le cron GitHub Actions est trop lent). Rapprochement par devise + heure ±10 min
+// + forecast/previous numériquement égaux — les titres FF/TV diffèrent.
+const TV_ACTUALS_URL = 'https://ariinuiirgina.vercel.app/api/tv-actuals';
+function tvNum(s) {
+  if (s == null || s === '') return null;
+  const m = String(s).replace(/,/g, '').match(/-?\d+(?:\.\d+)?/);
+  return m ? parseFloat(m[0]) : null;
+}
+function tvSame(ffText, tvVal) {
+  const a = tvNum(ffText);
+  if (a == null || tvVal == null) return null;
+  return Math.abs(a - tvVal) <= 1e-6 * Math.max(1, Math.abs(a), Math.abs(tvVal));
+}
+function tvFormatLike(ev, v) {
+  const ref = [ev.forecast, ev.previous].find((x) => x && tvNum(x) != null) || '';
+  const m = String(ref).match(/-?\d+(?:\.(\d+))?\s*([A-Za-z%]*)/);
+  return m ? `${v.toFixed(m[1] ? m[1].length : 0)}${m[2]}` : String(v);
+}
+// Renvoie true si au moins un actual a été ajouté.
+async function applyLiveActuals() {
+  try {
+    const res = await fetch(`${TV_ACTUALS_URL}?hours=12`, { cache: 'no-store' });
+    if (!res.ok) return false;
+    const tv = ((await res.json()).result || []).filter((t) => t.actual != null);
+    let changed = false;
+    for (const ev of currentEvents) {
+      if (ev.actual) continue;
+      const evT = new Date(ev.date).getTime();
+      let best = null;
+      for (const t of tv) {
+        if (t.currency !== ev.country || Math.abs(new Date(t.date).getTime() - evT) > 10 * 60000) continue;
+        const f = tvSame(ev.forecast, t.forecast), p = tvSame(ev.previous, t.previous);
+        if (f === false || p === false || (f == null && p == null)) continue;
+        const score = (f ? 1 : 0) + (p ? 1 : 0);
+        if (!best || score > best.score) best = { t, score };
+      }
+      if (best) { ev.actual = tvFormatLike(ev, best.t.actual); changed = true; }
+    }
+    return changed;
+  } catch (e) { return false; }
+}
+
+// Pendant le maintien post-sortie : interroge le proxy toutes les 15 s tant qu'il manque un actual
+// (fenêtre bornée à l'événement précis, pas un polling permanent).
+let livePollTimer = null;
+async function pollLiveActuals() {
+  clearTimeout(livePollTimer);
+  if (!nextHighEvent) return;
+  const t0 = new Date(nextHighEvent.date).getTime();
+  if (Date.now() > t0 + HOLD_MS) return;
+  if (await applyLiveActuals()) { renderCountdownStatic(); renderEcoCalendar(); renderEvents(); }
+  const missing = currentEvents.filter(inNextGroup).some((e) => !e.actual);
+  if (missing) livePollTimer = setTimeout(pollLiveActuals, 15000);
 }
 
 // Pas de polling : rafraîchissements ponctuels déclenchés par un événement précis
@@ -1087,6 +1163,7 @@ async function loadAll() {
     renderCorrelation();
 
     currentEvents = prepareEvents(ecoData?.events);
+    await applyLiveActuals();
     findNextHighEvent();
     renderCountdownStatic();
     renderEcoCalendar();
