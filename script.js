@@ -746,6 +746,7 @@ function setFocusPanelsOpen(open) {
 // Ré-applique le focus partout (changement de devise, interrupteur, chargement).
 function renderFocusViews() {
   document.body.classList.toggle('focus-on', focusActive());
+  renderCountdownStatic();
   const btn = document.getElementById('focusBtn');
   if (btn) {
     btn.classList.toggle('active', focusActive());
@@ -773,6 +774,49 @@ function renderFocusBar() {
     `<span class="fb-stat"><b>${evCount}</b> High cette semaine</span><span class="fb-stat"><b>${newsCount}</b> news</span>`;
 }
 
+// ── Tableau ECO (type terminal) : tous les événements des devises en Focus ──
+function ecoTableHtml() {
+  const start = new Date(); start.setHours(0, 0, 0, 0);
+  const endMs = start.getTime() + 8 * 86400000;
+  const now = Date.now();
+  const rows = currentEvents.filter((e) => {
+    const t = new Date(e.date).getTime();
+    return focusCcys.includes(e.country) && !isNaN(t) && t >= start.getTime() && t < endMs;
+  });
+  const multi = focusCcys.length > 1;
+  const cell = (v, cls = '') => `<span class="ct-v ${cls}">${v ? v : '–'}</span>`;
+  let lastDay = null;
+  const body = rows.map((e) => {
+    const d = new Date(e.date);
+    const dayKey = d.toDateString();
+    let head = '';
+    if (dayKey !== lastDay) {
+      lastDay = dayKey;
+      const label = d.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' });
+      head = `<div class="ct-day ${calDayStatus(d.getFullYear(), d.getMonth(), d.getDate(), true)}">${label}</div>`;
+    }
+    const isNext = nextHighEvent && e.impact === 'High' && e.date === nextHighEvent.date;
+    const past = d.getTime() < now;
+    const bm = actualVsForecast(e.actual, e.forecast);
+    const impCls = ['High', 'Medium', 'Low'].includes(e.impact) ? e.impact : 'Other';
+    const time = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+    return `${head}
+      <div class="ct-row${isNext ? ' ct-next' : ''}${past ? ' ct-past' : ''}">
+        <span class="ct-time ${ecoTimeColorClass(d.getHours())}">${time}</span>
+        <span class="ct-imp ct-imp-${impCls}" title="${e.impact}"></span>
+        <span class="ct-title" title="${e.title}">${multi ? `<span class="ct-ccy">${e.country}</span>` : ''}${e.title}</span>
+        ${cell(e.actual, 'ct-act' + (bm !== 'neutral' ? ' ct-' + bm : ''))}
+        ${cell(e.forecast)}
+        ${cell(e.previous, 'ct-prev')}
+      </div>`;
+  }).join('');
+  return `
+    <div class="ct-wrap">
+      <div class="ct-header"><span>Heure</span><span></span><span>Événement</span><span class="ct-r">Actual</span><span class="ct-r">Fcst</span><span class="ct-r">Prev</span></div>
+      <div class="ct-body" id="ctBody">${body || '<div class="ct-empty">Aucun événement sur cette période</div>'}</div>
+    </div>`;
+}
+
 function renderCountdownStatic() {
   const el = document.getElementById('ecoCountdown');
   if (!nextHighEvent) {
@@ -796,8 +840,13 @@ function renderCountdownStatic() {
         <span class="countdown-title" title="${nextHighEvent.title}">${nextHighEvent.title}</span>
       </span>
       <span class="countdown-time" id="countdownTime">--:--:--</span>
-    </div>`;
+    </div>
+    ${focusActive() ? ecoTableHtml() : ''}`;
   parseEmoji(el);
+  // Fait apparaître la ligne du prochain événement High dans la zone défilante
+  const ctBody = document.getElementById('ctBody');
+  const nextRow = ctBody && ctBody.querySelector('.ct-next');
+  if (nextRow) ctBody.scrollTop = Math.max(0, nextRow.offsetTop - ctBody.offsetTop - 30);
   tickCountdown();
 }
 

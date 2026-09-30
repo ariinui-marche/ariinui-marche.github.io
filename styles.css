@@ -1000,3 +1000,84 @@ body.focus-on main > section:has(#trendGrid) { order: 4; }
   font-weight: 700;
   cursor: pointer;
 }
+
+
+/* ── Tableau ECO du module compte à rebours (style terminal) ── */
+.eco-countdown .ct-wrap { border-top: 1px solid #2a2f3a; }
+.eco-countdown .ct-header,
+.eco-countdown .ct-row {
+  display: grid;
+  grid-template-columns: 46px 8px minmax(0, 1fr) 58px 58px 58px;
+  align-items: center;
+  column-gap: 8px;
+  padding: 0 12px;
+}
+.eco-countdown .ct-header {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #0b0f16;
+  border-bottom: 1px solid #2a2f3a;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.eco-countdown .ct-r { text-align: right; }
+.eco-countdown .ct-body { max-height: 340px; overflow-y: auto; position: relative; }
+.eco-countdown .ct-day {
+  padding: 4px 12px;
+  background: #0b0f16;
+  border-bottom: 1px solid #1a1f2a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.eco-countdown .ct-day.cal-past { color: #cbd5e1; }
+.eco-countdown .ct-day.cal-today { color: var(--red); }
+.eco-countdown .ct-day.cal-week { color: var(--orange); }
+.eco-countdown .ct-day.cal-nextweek { color: var(--green); }
+.eco-countdown .ct-row {
+  min-height: 30px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #141923;
+  font-size: 12px;
+  border-left: 3px solid transparent;
+  padding-left: 9px;
+}
+.eco-countdown .ct-row:hover { background: #0b0f16; }
+.eco-countdown .ct-row.ct-next {
+  background: rgba(239, 68, 68, 0.12);
+  border-left-color: var(--red);
+}
+.eco-countdown .ct-row.ct-past .ct-title,
+.eco-countdown .ct-row.ct-past .ct-time { opacity: 0.55; }
+.eco-countdown .ct-time { font-weight: 700; font-variant-numeric: tabular-nums; }
+.eco-countdown .ct-imp { width: 8px; height: 8px; border-radius: 1px; background: #4b5563; }
+.eco-countdown .ct-imp-High { background: var(--red); }
+.eco-countdown .ct-imp-Medium { background: var(--orange); }
+.eco-countdown .ct-imp-Low { background: #eab308; opacity: 0.7; }
+.eco-countdown .ct-title { color: var(--text); overflow-wrap: anywhere; line-height: 1.25; }
+.eco-countdown .ct-ccy { color: var(--accent); font-weight: 700; margin-right: 6px; font-size: 10px; }
+.eco-countdown .ct-v {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.eco-countdown .ct-v.ct-prev { color: var(--text-dim); }
+.eco-countdown .ct-v.ct-act { font-weight: 700; }
+.eco-countdown .ct-v.ct-pos { color: var(--green); }
+.eco-countdown .ct-v.ct-neg { color: var(--red); }
+.eco-countdown .ct-empty { padding: 16px 12px; text-align: center; color: var(--text-dim); font-size: 12px; }
+@media (max-width: 480px) {
+  .eco-countdown .ct-header,
+  .eco-countdown .ct-row { grid-template-columns: 40px 7px minmax(0, 1fr) 46px 46px 46px; column-gap: 6px; padding-left: 6px; padding-right: 8px; }
+  .eco-countdown .ct-row { font-size: 11px; padding-left: 5px; }
+  .eco-countdown .ct-day { padding-left: 8px; }
+}
