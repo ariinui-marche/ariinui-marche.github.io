@@ -823,7 +823,25 @@ function renderCountdownStatic() {
     el.innerHTML = '';
     return;
   }
-  const flag = COUNTRY_FLAGS[nextHighEvent.country] || '🏳️';
+  // Tous les High qui sortent exactement à la même heure (toutes devises), pas seulement le premier
+  const sims = currentEvents.filter((e) => e.impact === 'High' && e.date === nextHighEvent.date);
+  const val = (label, v, cls = '') => `<span class="cd-v ${cls}"><em>${label}</em>${v ? v : '–'}</span>`;
+  const evLines = sims.map((e) => {
+    const bm = actualVsForecast(e.actual, e.forecast);
+    return `
+      <div class="cd-ev">
+        <div class="cd-ev-line">
+          <span class="countdown-flag">${COUNTRY_FLAGS[e.country] || '🏳️'}</span>
+          <span class="countdown-ccy">${e.country}</span>
+          <span class="countdown-title" title="${e.title}">${e.title}</span>
+        </div>
+        <div class="cd-ev-vals">
+          ${val('Actual', e.actual, 'cd-act' + (bm !== 'neutral' ? ' ct-' + bm : ''))}
+          ${val('Fcst', e.forecast)}
+          ${val('Prev', e.previous, 'cd-prev')}
+        </div>
+      </div>`;
+  }).join('');
   const d = new Date(nextHighEvent.date);
   const evTime = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
   const evDate = d.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
@@ -834,19 +852,16 @@ function renderCountdownStatic() {
     </div>
     <div class="cd-body">
       <span class="countdown-at ${ecoTimeColorClass(d.getHours())}">${evTime}</span>
-      <span class="cd-event">
-        <span class="countdown-flag">${flag}</span>
-        <span class="countdown-ccy">${nextHighEvent.country}</span>
-        <span class="countdown-title" title="${nextHighEvent.title}">${nextHighEvent.title}</span>
-      </span>
+      <span class="cd-count">${sims.length > 1 ? sims.length + ' événements' : ''}</span>
       <span class="countdown-time" id="countdownTime">--:--:--</span>
     </div>
+    <div class="cd-evlist">${evLines}</div>
     ${focusActive() ? ecoTableHtml() : ''}`;
   parseEmoji(el);
   // Fait apparaître la ligne du prochain événement High dans la zone défilante
   const ctBody = document.getElementById('ctBody');
   const nextRow = ctBody && ctBody.querySelector('.ct-next');
-  if (nextRow) ctBody.scrollTop = Math.max(0, nextRow.offsetTop - ctBody.offsetTop - 30);
+  if (nextRow) ctBody.scrollTop = Math.max(0, nextRow.offsetTop - 34); // ct-body est position:relative → offsetTop relatif à lui
   tickCountdown();
 }
 

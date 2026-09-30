@@ -1081,3 +1081,41 @@ body.focus-on main > section:has(#trendGrid) { order: 4; }
   .eco-countdown .ct-row { font-size: 11px; padding-left: 5px; }
   .eco-countdown .ct-day { padding-left: 8px; }
 }
+
+
+/* ── Bloc décompte : liste de tous les High à la même heure ── */
+.eco-countdown .cd-count {
+  flex: 1;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.eco-countdown .cd-evlist { border-top: 1px solid #2a2f3a; }
+.eco-countdown .cd-ev {
+  padding: 8px 12px;
+  border-bottom: 1px solid #141923;
+}
+.eco-countdown .cd-ev:last-child { border-bottom: 0; }
+.eco-countdown .cd-ev-line { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.eco-countdown .cd-ev-vals { display: flex; gap: 18px; margin: 4px 0 0 28px; flex-wrap: wrap; }
+.eco-countdown .cd-v {
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  white-space: nowrap;
+}
+.eco-countdown .cd-v em {
+  font-style: normal;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-right: 6px;
+}
+.eco-countdown .cd-v.cd-prev { color: var(--text-dim); }
+.eco-countdown .cd-v.ct-pos { color: var(--green); }
+.eco-countdown .cd-v.ct-neg { color: var(--red); }
