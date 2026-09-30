@@ -10,7 +10,7 @@ const SOURCE_CURRENCY = {
 };
 
 // ── Focus devise : la devise du prochain event High pilote la page ──
-let focusMode = (() => { try { return localStorage.getItem('focusMode') !== 'off'; } catch (e) { return true; } })();
+let focusMode = true; // toujours activé à l'ouverture ; l'interrupteur ne vaut que pour la session en cours
 let focusCcys = [];
 let lastCurrencyData;
 let lastTrendData;
@@ -1068,7 +1068,6 @@ async function loadAll() {
 
 document.getElementById('focusBtn')?.addEventListener('click', () => {
   focusMode = !focusMode;
-  try { localStorage.setItem('focusMode', focusMode ? 'on' : 'off'); } catch (e) { /* ignore */ }
   if (!focusMode) setFocusPanelsOpen(false);
   renderFocusViews();
 });
