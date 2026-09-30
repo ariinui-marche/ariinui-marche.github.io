@@ -9,6 +9,14 @@ const SOURCE_CURRENCY = {
   'Swiss National Bank': 'CHF',
 };
 
+// ── Focus devise : la devise du prochain event High pilote la page ──
+let focusMode = (() => { try { return localStorage.getItem('focusMode') !== 'off'; } catch (e) { return true; } })();
+let focusCcys = [];
+let lastCurrencyData;
+let lastTrendData;
+const focusActive = () => focusMode && focusCcys.length > 0;
+const inFocus = (ccy) => !focusActive() || focusCcys.includes(ccy);
+
 const CURRENCY_FLAGS = {
   USD: '🇺🇸', EUR: '🇪🇺', GBP: '🇬🇧', JPY: '🇯🇵',
   CHF: '🇨🇭', AUD: '🇦🇺', CAD: '🇨🇦', NZD: '🇳🇿',
@@ -136,13 +144,14 @@ function computeTrendMomentum(raw) {
 }
 
 function renderTrendMomentum(data) {
+  lastTrendData = data;
   const grid = document.getElementById('trendGrid');
   if (!grid) return;
   if (!data?.currencies?.length) {
     grid.innerHTML = '<div class="empty-state">Data unavailable</div>';
     return;
   }
-  grid.innerHTML = data.currencies.map((c) => {
+  grid.innerHTML = data.currencies.filter((c) => inFocus(c.id)).map((c) => {
     const label = momentumLabel(c.score);
     return `
       <div class="trend-card">
@@ -163,12 +172,13 @@ function renderTrendMomentum(data) {
 }
 
 function renderCurrencies(data) {
+  lastCurrencyData = data;
   const grid = document.getElementById('currencyGrid');
   if (!data?.currencies?.length) {
     grid.innerHTML = '<div class="empty-state">Data unavailable</div>';
     return;
   }
-  grid.innerHTML = data.currencies.map((c) => {
+  grid.innerHTML = data.currencies.filter((c) => inFocus(c.id)).map((c) => {
     const pctClass = c.changePct >= 0 ? 'pct-pos' : 'pct-neg';
     const pctSign = c.changePct >= 0 ? '+' : '';
     return `
@@ -637,7 +647,7 @@ function renderEcoCalendar() {
     : currentEvents.filter((e) => currentImpactFilters.has(e.impact));
 
   const dateMap = new Map();
-  for (const e of visibleEvents) {
+  for (const e of visibleEvents.filter((ev) => inFocus(ev.country))) {
     const d = new Date(e.date);
     if (isNaN(d)) continue;
     const key = localDateStr(d);
@@ -717,6 +727,36 @@ let nextHighEvent = null;
 function findNextHighEvent() {
   const now = Date.now();
   nextHighEvent = currentEvents.find((e) => e.impact === 'High' && new Date(e.date).getTime() > now) || null;
+  // Devises en focus = toutes celles qui ont un High exactement à cette heure-là
+  focusCcys = nextHighEvent
+    ? [...new Set(currentEvents.filter((e) => e.impact === 'High' && e.date === nextHighEvent.date).map((e) => e.country))]
+    : [];
+}
+
+const FOCUS_BODIES = [['currencyToggle', 'currencyGrid'], ['trendToggle', 'trendGrid'], ['marketNewsToggle', 'marketNewsBody']];
+
+function setFocusPanelsOpen(open) {
+  for (const [toggleId, bodyId] of FOCUS_BODIES) {
+    document.getElementById(toggleId)?.setAttribute('aria-expanded', String(open));
+    document.getElementById(bodyId)?.classList.toggle('collapsed', !open);
+  }
+}
+
+// Ré-applique le focus partout (changement de devise, interrupteur, chargement).
+function renderFocusViews() {
+  document.body.classList.toggle('focus-on', focusActive());
+  const btn = document.getElementById('focusBtn');
+  if (btn) {
+    btn.classList.toggle('active', focusActive());
+    btn.textContent = focusActive() ? `Focus · ${focusCcys.join('/')}` : (focusMode ? 'Focus' : 'Focus off');
+    btn.setAttribute('aria-pressed', String(focusMode));
+  }
+  if (focusActive()) setFocusPanelsOpen(true);
+  if (lastCurrencyData !== undefined) renderCurrencies(lastCurrencyData);
+  if (lastTrendData !== undefined) renderTrendMomentum(lastTrendData);
+  renderEcoCalendar();
+  renderEvents();
+  renderNews();
 }
 
 function renderCountdownStatic() {
@@ -753,6 +793,7 @@ function tickCountdown() {
   if (diff <= 0) {
     findNextHighEvent();
     renderCountdownStatic();
+    renderFocusViews();
     return;
   }
   const totalSec = Math.floor(diff / 1000);
@@ -772,6 +813,7 @@ function renderEvents() {
   let filtered = currentImpactFilters.size === 0
     ? currentEvents
     : currentEvents.filter((e) => currentImpactFilters.has(e.impact));
+  if (focusActive()) filtered = filtered.filter((e) => focusCcys.includes(e.country));
   if (calSelectedDate) {
     filtered = filtered.filter((e) => {
       const d = new Date(e.date);
@@ -927,9 +969,11 @@ let currentNewsFilter = loadStoredNewsFilter();
 
 function renderNews() {
   const list = document.getElementById('newsList');
-  const filtered = currentNewsFilter === 'all'
-    ? currentNews
-    : currentNews.filter((n) => n.currencies.includes(currentNewsFilter));
+  const filtered = focusActive()
+    ? currentNews.filter((n) => n.currencies.some((c) => focusCcys.includes(c)))
+    : currentNewsFilter === 'all'
+      ? currentNews
+      : currentNews.filter((n) => n.currencies.includes(currentNewsFilter));
 
   if (!filtered.length) {
     list.innerHTML = '<div class="empty-state">No news</div>';
@@ -982,11 +1026,18 @@ async function loadAll() {
       })
       .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
     renderNews();
+    renderFocusViews();
   } catch (err) {
     console.error(err);
   }
 }
 
+document.getElementById('focusBtn')?.addEventListener('click', () => {
+  focusMode = !focusMode;
+  try { localStorage.setItem('focusMode', focusMode ? 'on' : 'off'); } catch (e) { /* ignore */ }
+  if (!focusMode) setFocusPanelsOpen(false);
+  renderFocusViews();
+});
 document.getElementById('refreshBtn').addEventListener('click', loadAll);
 document.getElementById('currencyToggle').addEventListener('click', (e) => {
   const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';

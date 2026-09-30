@@ -18,6 +18,7 @@
   <header class="topbar">
     <h1>Market</h1>
     <div class="update-info">
+      <button id="focusBtn" title="Focus currency: only shows what concerns the currency of the next High event" aria-pressed="true">Focus</button>
       <button id="refreshBtn" title="Refresh">⟳</button>
     </div>
   </header>
@@ -55,7 +56,7 @@
       <div id="trendGrid" class="trend-grid collapsed"></div>
     </section>
 
-    <section class="panel">
+    <section class="panel focus-hide">
       <h2 class="panel-toggle" id="corrToggle" aria-expanded="false" aria-controls="corrBody">
         Live Correlation
         <span class="chevron">▾</span>
@@ -63,7 +64,7 @@
       <div id="corrBody" class="corr-body collapsed"></div>
     </section>
 
-    <section class="panel">
+    <section class="panel focus-hide">
       <h2 class="panel-toggle" id="chartsToggle" aria-expanded="false" aria-controls="chartsBody">
         Charts
         <span class="chevron">▾</span>
@@ -100,7 +101,7 @@
       </div>
     </section>
 
-    <section class="panel">
+    <section class="panel focus-hide">
       <h2 class="panel-toggle" id="tvNewsToggle" aria-expanded="false" aria-controls="tvNewsBody">
         TradingView News
         <span class="chevron">▾</span>
@@ -110,7 +111,7 @@
       </div>
     </section>
 
-    <section class="panel">
+    <section class="panel focus-hide">
       <h2 class="panel-toggle" id="ebooksToggle" aria-expanded="false" aria-controls="ebooksBody">
         Ebook Library
         <span class="chevron">▾</span>
