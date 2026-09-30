@@ -1099,6 +1099,11 @@ function tvSame(ffText, tvVal) {
   if (a == null || tvVal == null) return null;
   return Math.abs(a - tvVal) <= 1e-6 * Math.max(1, Math.abs(a), Math.abs(tvVal));
 }
+function tvTokens(title) {
+  const t = String(title).toLowerCase().replace(/m\/m/g, 'mom').replace(/y\/y/g, 'yoy').replace(/q\/q/g, 'qoq')
+    .replace(/prices/g, 'price').split(/[^a-z0-9]+/).filter((w) => w && !['final', 'prelim', 'adv', 'flash', 'the', 'of', 'non', 'farm'].includes(w));
+  return new Set(t);
+}
 function tvFormatLike(ev, v) {
   const ref = [ev.forecast, ev.previous].find((x) => x && tvNum(x) != null) || '';
   const m = String(ref).match(/-?\d+(?:\.(\d+))?\s*([A-Za-z%]*)/);
@@ -1115,11 +1120,15 @@ async function applyLiveActuals() {
       if (ev.actual) continue;
       const evT = new Date(ev.date).getTime();
       let best = null;
+      const evTok = tvTokens(ev.title);
       for (const t of tv) {
         if (t.currency !== ev.country || Math.abs(new Date(t.date).getTime() - evT) > 10 * 60000) continue;
         const f = tvSame(ev.forecast, t.forecast), p = tvSame(ev.previous, t.previous);
-        if (f === false || p === false || (f == null && p == null)) continue;
-        const score = (f ? 1 : 0) + (p ? 1 : 0);
+        const tt = tvTokens(t.title);
+        const overlap = [...evTok].filter((w) => tt.has(w)).length;
+        // Le précédent est souvent révisé, le titre diffère : on cumule valeurs égales + mots communs.
+        const score = (f ? 2 : 0) + (p ? 2 : 0) + overlap;
+        if (score < 3) continue;
         if (!best || score > best.score) best = { t, score };
       }
       if (best) { ev.actual = tvFormatLike(ev, best.t.actual); changed = true; }
