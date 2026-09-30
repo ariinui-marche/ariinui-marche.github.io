@@ -601,7 +601,7 @@ document.getElementById('chartsToggle')?.addEventListener('click', (e) => {
 });
 
 let currentEvents = [];
-const currentImpactFilters = new Set(['High']);
+const currentImpactFilters = new Set(); // vide = All
 
 // ── Mini calendrier mensuel (Calendrier Économique) ─────────────────────────
 
@@ -688,7 +688,7 @@ function renderEcoCalendar() {
     <div class="cal-weekdays">${['Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa', 'Di'].map((d) => `<div>${d}</div>`).join('')}</div>
     <div class="cal-grid">${cells}</div>
     <div class="cal-footer">
-      ${calShowAll ? '<button class="cal-link" id="calThisWeek">Cette semaine</button>' : ''}
+      ${calShowAll ? '<button class="cal-link" id="calThisWeek">8 jours</button>' : ''}
       ${(calSelectedDate || !calShowAll) ? '<button class="cal-link" id="calShowAll">Tout afficher</button>' : ''}
       ${calSelectedDate !== todayStr ? '<button class="cal-link" id="calToday">Aujourd&rsquo;hui</button>' : ''}
     </div>`;
@@ -775,15 +775,9 @@ function renderFocusBar() {
 }
 
 // ── Tableau ECO (type terminal) : tous les événements des devises en Focus ──
-function ecoTableHtml() {
-  const start = new Date(); start.setHours(0, 0, 0, 0);
-  const endMs = start.getTime() + 8 * 86400000;
+function ecoTableHtml(rows) {
   const now = Date.now();
-  const rows = currentEvents.filter((e) => {
-    const t = new Date(e.date).getTime();
-    return focusCcys.includes(e.country) && !isNaN(t) && t >= start.getTime() && t < endMs;
-  });
-  const multi = focusCcys.length > 1;
+  const multi = !focusActive() || focusCcys.length > 1; // plusieurs devises affichées → étiquette devant le titre
   const cell = (v, cls = '') => `<span class="ct-v ${cls}">${v ? v : '–'}</span>`;
   let lastDay = null;
   const body = rows.map((e) => {
@@ -813,7 +807,7 @@ function ecoTableHtml() {
   return `
     <div class="ct-wrap">
       <div class="ct-header"><span>Heure</span><span></span><span>Événement</span><span class="ct-r">Actual</span><span class="ct-r">Fcst</span><span class="ct-r">Prev</span></div>
-      <div class="ct-body" id="ctBody">${body || '<div class="ct-empty">Aucun événement sur cette période</div>'}</div>
+      <div class="ct-body" id="ctBody">${body || '<div class="ct-empty">Aucun événement</div>'}</div>
     </div>`;
 }
 
@@ -855,13 +849,8 @@ function renderCountdownStatic() {
       <span class="cd-count">${sims.length > 1 ? sims.length + ' événements' : ''}</span>
       <span class="countdown-time" id="countdownTime">--:--:--</span>
     </div>
-    <div class="cd-evlist">${evLines}</div>
-    ${focusActive() ? ecoTableHtml() : ''}`;
+    <div class="cd-evlist">${evLines}</div>`;
   parseEmoji(el);
-  // Fait apparaître la ligne du prochain événement High dans la zone défilante
-  const ctBody = document.getElementById('ctBody');
-  const nextRow = ctBody && ctBody.querySelector('.ct-next');
-  if (nextRow) ctBody.scrollTop = Math.max(0, nextRow.offsetTop - 34); // ct-body est position:relative → offsetTop relatif à lui
   tickCountdown();
 }
 
@@ -899,52 +888,20 @@ function renderEvents() {
       return !isNaN(d) && localDateStr(d) === calSelectedDate;
     });
   } else if (!calShowAll) {
+    // Par défaut : d'aujourd'hui (minuit) jusqu'à J+8
+    const start = new Date(); start.setHours(0, 0, 0, 0);
+    const endMs = start.getTime() + 8 * 86400000;
     filtered = filtered.filter((e) => {
-      const d = new Date(e.date);
-      return !isNaN(d) && isThisWeek(d);
+      const t = new Date(e.date).getTime();
+      return !isNaN(t) && t >= start.getTime() && t < endMs;
     });
   }
-
-  if (!filtered.length) {
-    list.innerHTML = '<div class="empty-state">Aucun événement</div>';
-    return;
-  }
-
-  let lastDateKey = null;
-
-  list.innerHTML = filtered.map((e) => {
-    const d = new Date(e.date);
-    const time = isNaN(d) ? '--:--' : d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
-    const timeClass = isNaN(d) ? '' : ecoTimeColorClass(d.getHours());
-    const dateKey = isNaN(d) ? '' : d.toDateString();
-    const dateLabel = isNaN(d)
-      ? ''
-      : d.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
-    const showDateHeader = dateKey && dateKey !== lastDateKey;
-    lastDateKey = dateKey || lastDateKey;
-
-    const flag = COUNTRY_FLAGS[e.country] || '🏳️';
-    const hasValues = e.forecast || e.previous || e.actual;
-    const beatMiss = actualVsForecast(e.actual, e.forecast);
-
-    return `
-      ${showDateHeader ? `<div class="eco-date-header ${calDayStatus(d.getFullYear(), d.getMonth(), d.getDate(), true)}">${dateLabel}</div>` : ''}
-      <div class="eco-event">
-        <span class="eco-time ${timeClass}">${time}</span>
-        <span class="eco-ccy">${e.country}</span>
-        <span class="eco-flag">${flag}</span>
-        <span class="eco-title" title="${e.title}">${e.title}</span>
-        <span class="eco-impact-wrap">
-          <span class="impact-badge impact-${e.impact}">${e.impact}</span>
-        </span>
-      </div>
-      ${hasValues ? `<div class="eco-values">
-        ${e.actual ? `<span>${beatMiss !== 'neutral' ? `<span class="sentiment-tri tri-${beatMiss}"></span>` : ''}Actual: <b class="${valueColorClass(e.actual)}">${e.actual}</b></span>` : ''}
-        ${e.forecast ? `<span>Forecast: <b class="${valueColorClass(e.forecast)}">${e.forecast}</b></span>` : ''}
-        ${e.previous ? `<span>Previous: <b class="${valueColorClass(e.previous)}">${e.previous}</b></span>` : ''}
-      </div>` : ''}`;
-  }).join('');
+  list.innerHTML = ecoTableHtml(filtered);
   parseEmoji(list);
+  // Fait apparaître la ligne du prochain événement High dans la zone défilante
+  const ctBody = document.getElementById('ctBody');
+  const nextRow = ctBody && ctBody.querySelector('.ct-next');
+  if (nextRow && !calSelectedDate) ctBody.scrollTop = Math.max(0, nextRow.offsetTop - 34); // ct-body est position:relative
 }
 
 function ecoTimeColorClass(hour) {
