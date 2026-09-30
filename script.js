@@ -615,6 +615,19 @@ function isThisWeek(date) {
   return date >= monday && date <= sunday;
 }
 
+// Couleur d'une case selon sa position dans le temps (semaines lundi→dimanche) :
+// passé = gris, aujourd'hui = rouge, reste de la semaine = orange, semaine suivante = vert.
+function calDayStatus(y, m, d) {
+  const t0 = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+  const diff = Math.round((new Date(y, m, d) - t0) / 86400000);
+  if (diff < 0) return 'cal-past';
+  if (diff === 0) return 'cal-today';
+  const daysToSunday = (7 - today.getDay()) % 7; // dimanche = fin de semaine
+  if (diff <= daysToSunday) return 'cal-week';
+  if (diff <= daysToSunday + 7) return 'cal-nextweek';
+  return '';
+}
+
 function renderEcoCalendar() {
   const el = document.getElementById('ecoCalendar');
 
@@ -645,7 +658,7 @@ function renderEcoCalendar() {
     const dateStr = `${calViewYear}-${String(calViewMonth + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
     const info = dateMap.get(dateStr);
     const cls = ['cal-day'];
-    if (info) cls.push(`cal-impact-${info.impact}`);
+    cls.push(calDayStatus(calViewYear, calViewMonth, day));
     if (dateStr === todayStr) cls.push('today');
     if (dateStr === calSelectedDate) cls.push('selected');
     cells += `

@@ -189,8 +189,8 @@ main {
   border-top: 1px solid var(--border);
 }
 .corr-selbar-left { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; min-width: 0; }
-.corr-selbar-empty { font-size: 11px; color: var(--text-dim); }
-.corr-selbar-count { font-size: 11px; color: var(--text-dim); }
+.corr-selbar-empty { font-size: 11px; }
+.corr-selbar-count { font-size: 11px; }
 .corr-selected-chips { display: flex; gap: 4px; flex-wrap: wrap; }
 .corr-selected-chip {
   background: rgba(245, 182, 66, 0.12);
@@ -503,12 +503,14 @@ main {
 .cal-day:hover { background: #1a2030; }
 .cal-day.today { border-color: var(--border); }
 .cal-day.selected { border-color: var(--accent); }
-.cal-day.cal-impact-High { background: rgba(239,68,68,0.28); }
-.cal-day.cal-impact-Medium { background: rgba(245,158,11,0.28); }
-.cal-day.cal-impact-Low { background: rgba(107,114,128,0.28); }
-.cal-day.cal-impact-High:hover { background: rgba(239,68,68,0.4); }
-.cal-day.cal-impact-Medium:hover { background: rgba(245,158,11,0.4); }
-.cal-day.cal-impact-Low:hover { background: rgba(107,114,128,0.4); }
+.cal-day.cal-past { background: rgba(107,114,128,0.22); }
+.cal-day.cal-today { background: rgba(239,68,68,0.40); }
+.cal-day.cal-week { background: rgba(245,158,11,0.28); }
+.cal-day.cal-nextweek { background: rgba(34,197,94,0.28); }
+.cal-day.cal-past:hover { background: rgba(107,114,128,0.34); }
+.cal-day.cal-today:hover { background: rgba(239,68,68,0.55); }
+.cal-day.cal-week:hover { background: rgba(245,158,11,0.4); }
+.cal-day.cal-nextweek:hover { background: rgba(34,197,94,0.4); }
 .cal-footer {
   display: flex;
   justify-content: center;
@@ -566,7 +568,7 @@ main {
 
 .eco-values b.val-pos { color: var(--green); }
 .eco-values b.val-neg { color: var(--red); }
-.eco-values b.val-zero { color: var(--text-dim); }
+.eco-values b.val-zero { }
 
 .impact-badge {
   font-size: 10px;
@@ -676,7 +678,7 @@ footer {
   font-weight: 600;
   line-height: 1.3;
 }
-.ebook-author { font-size: 11px; color: var(--text-dim); }
+.ebook-author { font-size: 11px; }
 
 .ebook-reader {
   display: none;
