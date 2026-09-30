@@ -1126,3 +1126,5 @@ body.focus-on main > section:has(#trendGrid) { order: 4; }
 .eco-countdown .cd-v.cd-prev { color: var(--text-dim); }
 .eco-countdown .cd-v.ct-pos { color: var(--green); }
 .eco-countdown .cd-v.ct-neg { color: var(--red); }
+
+.eco-countdown .cd-t { font-size: 11px; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; }

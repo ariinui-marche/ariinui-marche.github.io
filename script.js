@@ -725,12 +725,21 @@ document.getElementById('ecoCalendar').addEventListener('click', (e) => {
 
 let nextHighEvent = null;
 
+// Groupe "simultané" : le prochain High + tous les High qui sortent dans les 5 minutes qui suivent (toutes devises).
+const GROUP_WINDOW_MS = 5 * 60 * 1000;
+function inNextGroup(e) {
+  if (!nextHighEvent || e.impact !== 'High') return false;
+  const t = new Date(e.date).getTime();
+  const t0 = new Date(nextHighEvent.date).getTime();
+  return t >= t0 && t <= t0 + GROUP_WINDOW_MS;
+}
+
 function findNextHighEvent() {
   const now = Date.now();
   nextHighEvent = currentEvents.find((e) => e.impact === 'High' && new Date(e.date).getTime() > now) || null;
   // Devises en focus = toutes celles qui ont un High exactement à cette heure-là
   focusCcys = nextHighEvent
-    ? [...new Set(currentEvents.filter((e) => e.impact === 'High' && e.date === nextHighEvent.date).map((e) => e.country))]
+    ? [...new Set(currentEvents.filter(inNextGroup).map((e) => e.country))]
     : [];
 }
 
@@ -789,7 +798,7 @@ function ecoTableHtml(rows) {
       const label = d.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' });
       head = `<div class="ct-day ${calDayStatus(d.getFullYear(), d.getMonth(), d.getDate(), true)}">${label}</div>`;
     }
-    const isNext = nextHighEvent && e.impact === 'High' && e.date === nextHighEvent.date;
+    const isNext = inNextGroup(e);
     const past = d.getTime() < now;
     const bm = actualVsForecast(e.actual, e.forecast);
     const impCls = ['High', 'Medium', 'Low'].includes(e.impact) ? e.impact : 'Other';
@@ -818,13 +827,16 @@ function renderCountdownStatic() {
     return;
   }
   // Tous les High qui sortent exactement à la même heure (toutes devises), pas seulement le premier
-  const sims = currentEvents.filter((e) => e.impact === 'High' && e.date === nextHighEvent.date);
+  const sims = currentEvents.filter(inNextGroup);
   const val = (label, v, cls = '') => `<span class="cd-v ${cls}"><em>${label}</em>${v ? v : '–'}</span>`;
+  const fmtT = (iso) => new Date(iso).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
   const evLines = sims.map((e) => {
     const bm = actualVsForecast(e.actual, e.forecast);
+    const offset = e.date !== nextHighEvent.date ? `<span class="cd-t">${fmtT(e.date)}</span>` : '';
     return `
       <div class="cd-ev">
         <div class="cd-ev-line">
+          ${offset}
           <span class="countdown-flag">${COUNTRY_FLAGS[e.country] || '🏳️'}</span>
           <span class="countdown-ccy">${e.country}</span>
           <span class="countdown-title" title="${e.title}">${e.title}</span>
