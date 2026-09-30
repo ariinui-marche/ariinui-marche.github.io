@@ -1060,11 +1060,22 @@ function renderNews() {
   }).join('');
 }
 
+// Tous les discours (Speaks / Testifies / Speech) visant une devise précise passent en High,
+// quel que soit le classement ForexFactory. Affichage seulement : les données brutes ne changent pas.
+const SPEECH_RE = /\b(speaks|testifies|speech)\b/i;
+function prepareEvents(events) {
+  return (events || [])
+    .map((e) => (SPEECH_RE.test(e.title) && COUNTRY_FLAGS[e.country] && e.impact !== 'High'
+      ? { ...e, impact: 'High', impactOrig: e.impact }
+      : e))
+    .sort((a, b) => new Date(a.date) - new Date(b.date));
+}
+
 // Recharge seulement le calendrier (JSON statique, pas l'API BabyPips) puis ré-applique le Focus.
 async function refreshEco() {
   const ecoData = await loadJSON('./data/eco-calendar.json').catch(() => null);
   if (!ecoData) return;
-  currentEvents = (ecoData.events || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
+  currentEvents = prepareEvents(ecoData.events);
   findNextHighEvent();
   renderCountdownStatic();
   renderFocusViews();
@@ -1091,7 +1102,7 @@ async function loadAll() {
     renderTrendMomentum(marketRaw ? computeTrendMomentum(marketRaw) : null);
     renderCorrelation();
 
-    currentEvents = (ecoData?.events || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
+    currentEvents = prepareEvents(ecoData?.events);
     findNextHighEvent();
     renderCountdownStatic();
     renderEcoCalendar();
