@@ -917,6 +917,11 @@ const LIVE_SOURCES = {
   fed: { label: 'Fed', channel: 'UCAzhpt9DmG6PnHXjmJTvRGQ', ccy: 'USD' },
   boe: { label: 'BoE', channel: 'UCZ25rmSDSnjIWZxjd2-04Rg', ccy: 'GBP' },
   snb: { label: 'SNB', channel: 'UC4vQTVEqtj2orppzBkdGmyg', ccy: 'CHF' },
+  ecb: { label: 'ECB', channel: 'UCXB8fM4VyQubRu3UVGhd3wA', ccy: 'EUR' },
+  boj: { label: 'BoJ', channel: 'UC32Yu7NyStgmKYsXvYofPvQ', ccy: 'JPY' },
+  rba: { label: 'RBA', channel: 'UCaLmgAMEglL-yGvuGzTx6ig', ccy: 'AUD' },
+  boc: { label: 'BoC', channel: 'UCY4EvEbIox0M4JuEsu5OKnQ', ccy: 'CAD' },
+  rbnz: { label: 'RBNZ', channel: 'UC1v0CeB83SX6Px9r5KT0NuQ', ccy: 'NZD' },
 };
 function isLiveWindow(e) {
   if (e.impact !== 'High' || !SPEAK_RE.test(e.title)) return false;
