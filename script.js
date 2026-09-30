@@ -660,7 +660,8 @@ function renderEcoCalendar() {
   const daysInMonth = new Date(calViewYear, calViewMonth + 1, 0).getDate();
   const firstDow = new Date(calViewYear, calViewMonth, 1).getDay();
   const startOffset = firstDow === 0 ? 6 : firstDow - 1;
-  const monthLabel = new Date(calViewYear, calViewMonth).toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
+  const monthLabelRaw = new Date(calViewYear, calViewMonth).toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
+  const monthLabel = monthLabelRaw.charAt(0).toUpperCase() + monthLabelRaw.slice(1);
   const todayStr = localDateStr(today);
 
   let cells = '';
@@ -687,9 +688,9 @@ function renderEcoCalendar() {
     <div class="cal-weekdays">${['Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa', 'Di'].map((d) => `<div>${d}</div>`).join('')}</div>
     <div class="cal-grid">${cells}</div>
     <div class="cal-footer">
-      ${calShowAll ? '<button class="cal-link" id="calThisWeek">This week</button>' : ''}
-      ${(calSelectedDate || !calShowAll) ? '<button class="cal-link" id="calShowAll">Show all</button>' : ''}
-      ${calSelectedDate !== todayStr ? '<button class="cal-link" id="calToday">Today</button>' : ''}
+      ${calShowAll ? '<button class="cal-link" id="calThisWeek">Cette semaine</button>' : ''}
+      ${(calSelectedDate || !calShowAll) ? '<button class="cal-link" id="calShowAll">Tout afficher</button>' : ''}
+      ${calSelectedDate !== todayStr ? '<button class="cal-link" id="calToday">Aujourd&rsquo;hui</button>' : ''}
     </div>`;
 }
 
@@ -757,6 +758,19 @@ function renderFocusViews() {
   renderEcoCalendar();
   renderEvents();
   renderNews();
+  renderFocusBar();
+}
+
+// Résumé d'une ligne sous le décompte : ce qui est filtré par le Focus.
+function renderFocusBar() {
+  const el = document.getElementById('focusBar');
+  if (!el) return;
+  if (!focusActive()) { el.innerHTML = ''; return; }
+  const inWeek = (e) => { const d = new Date(e.date); return !isNaN(d) && isThisWeek(d); };
+  const evCount = currentEvents.filter((e) => e.impact === 'High' && focusCcys.includes(e.country) && inWeek(e)).length;
+  const newsCount = currentNews.filter((n) => n.currencies.some((c) => focusCcys.includes(c))).length;
+  el.innerHTML = `<span class="fb-tag">Focus</span><span class="fb-ccy">${focusCcys.join(' / ')}</span>` +
+    `<span class="fb-stat"><b>${evCount}</b> High cette semaine</span><span class="fb-stat"><b>${newsCount}</b> news</span>`;
 }
 
 function renderCountdownStatic() {
@@ -794,6 +808,7 @@ function tickCountdown() {
     findNextHighEvent();
     renderCountdownStatic();
     renderFocusViews();
+    scheduleReleaseRefresh();
     return;
   }
   const totalSec = Math.floor(diff / 1000);
@@ -827,7 +842,7 @@ function renderEvents() {
   }
 
   if (!filtered.length) {
-    list.innerHTML = '<div class="empty-state">No events</div>';
+    list.innerHTML = '<div class="empty-state">Aucun événement</div>';
     return;
   }
 
@@ -976,7 +991,7 @@ function renderNews() {
       : currentNews.filter((n) => n.currencies.includes(currentNewsFilter));
 
   if (!filtered.length) {
-    list.innerHTML = '<div class="empty-state">No news</div>';
+    list.innerHTML = '<div class="empty-state">Aucune news</div>';
     return;
   }
 
@@ -995,6 +1010,25 @@ function renderNews() {
       </a>`;
   }).join('');
 }
+
+// Recharge seulement le calendrier (JSON statique, pas l'API BabyPips) puis ré-applique le Focus.
+async function refreshEco() {
+  const ecoData = await loadJSON('./data/eco-calendar.json').catch(() => null);
+  if (!ecoData) return;
+  currentEvents = (ecoData.events || []).slice().sort((a, b) => new Date(a.date) - new Date(b.date));
+  findNextHighEvent();
+  renderCountdownStatic();
+  renderFocusViews();
+}
+
+// Pas de polling : rafraîchissements ponctuels déclenchés par un événement précis
+// (sortie du High, retour sur l'app) pour voir l'actual dès qu'il est publié.
+let lastEcoRefresh = Date.now();
+function refreshEcoTracked() { lastEcoRefresh = Date.now(); return refreshEco(); }
+function scheduleReleaseRefresh() { [60000, 300000, 600000].forEach((ms) => setTimeout(refreshEcoTracked, ms)); }
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden && Date.now() - lastEcoRefresh > 120000) refreshEcoTracked();
+});
 
 async function loadAll() {
   try {
@@ -1489,4 +1523,16 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('./sw.js').catch((err) => console.error('SW registration failed', err));
   });
+  // Nouvelle version déployée : le SW (skipWaiting + clients.claim) prend la main → proposer de recharger.
+  if (navigator.serviceWorker.controller) {
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (document.getElementById('updateToast')) return;
+      const t = document.createElement('div');
+      t.id = 'updateToast';
+      t.className = 'update-toast';
+      t.innerHTML = '<span>Nouvelle version disponible</span><button type="button">Recharger</button>';
+      t.querySelector('button').addEventListener('click', () => location.reload());
+      document.body.appendChild(t);
+    });
+  }
 }
