@@ -797,7 +797,7 @@ function renderEvents() {
     const dateKey = isNaN(d) ? '' : d.toDateString();
     const dateLabel = isNaN(d)
       ? ''
-      : d.toLocaleDateString('en-GB', { weekday: 'long', day: '2-digit', month: 'long', year: 'numeric' });
+      : d.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
     const showDateHeader = dateKey && dateKey !== lastDateKey;
     lastDateKey = dateKey || lastDateKey;
 
@@ -806,7 +806,7 @@ function renderEvents() {
     const beatMiss = actualVsForecast(e.actual, e.forecast);
 
     return `
-      ${showDateHeader ? `<div class="eco-date-header">${dateLabel}</div>` : ''}
+      ${showDateHeader ? `<div class="eco-date-header ${calDayStatus(d.getFullYear(), d.getMonth(), d.getDate())}">${dateLabel}</div>` : ''}
       <div class="eco-event">
         <span class="eco-time ${timeClass}">${time}</span>
         <span class="eco-ccy">${e.country}</span>

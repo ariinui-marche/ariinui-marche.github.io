@@ -555,6 +555,10 @@ main {
   border-bottom: 1px solid var(--border);
 }
 .eco-date-header:first-child { margin-top: 0; }
+.eco-date-header.cal-past { color: #cbd5e1; }
+.eco-date-header.cal-today { color: var(--red); }
+.eco-date-header.cal-week { color: var(--orange); }
+.eco-date-header.cal-nextweek { color: var(--green); }
 
 .eco-time { color: var(--text); font-weight: 600; font-size: 13px; }
 .eco-time-gray { color: #9ca3af; }
