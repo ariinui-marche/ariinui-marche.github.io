@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-01T09:11:17.043Z",
+  "timestamp": "2026-10-01T16:23:55.976Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -7274,18 +7274,9 @@
       "actual": ""
     },
     {
-      "title": "Unemployment Rate",
-      "country": "EUR",
-      "date": "2026-10-01T05:00:00-04:00",
-      "impact": "Low",
-      "forecast": "6.4%",
-      "previous": "6.4%",
-      "actual": ""
-    },
-    {
       "title": "Spanish 10-y Bond Auction",
       "country": "EUR",
-      "date": "2026-10-01T05:03:00-04:00",
+      "date": "2026-10-01T04:42:00-04:00",
       "impact": "Low",
       "forecast": "",
       "previous": "3.96|1.7",
@@ -7294,10 +7285,19 @@
     {
       "title": "French 10-y Bond Auction",
       "country": "EUR",
-      "date": "2026-10-01T05:18:00-04:00",
+      "date": "2026-10-01T04:57:00-04:00",
       "impact": "Low",
       "forecast": "",
       "previous": "4.23|2.3",
+      "actual": ""
+    },
+    {
+      "title": "Unemployment Rate",
+      "country": "EUR",
+      "date": "2026-10-01T05:00:00-04:00",
+      "impact": "Low",
+      "forecast": "6.4%",
+      "previous": "6.4%",
       "actual": ""
     },
     {
