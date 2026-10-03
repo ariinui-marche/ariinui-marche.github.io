@@ -1,6 +1,97 @@
 {
-  "timestamp": "2026-10-02T21:53:27.912Z",
+  "timestamp": "2026-10-03T00:46:15.040Z",
   "items": [
+    {
+      "title": "2026-10-03 - Web-TV - Web TV: SNB events",
+      "link": "https://www.snb.ch/en/services-events/digital-services/webtv/webtv-2026-09-24",
+      "pubDate": "2026-10-03T00:43:01.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
+    },
+    {
+      "title": "Newegg chief legal officer Michael Chen sells $884 of stock",
+      "link": "https://www.investing.com/news/insider-trading-news/newegg-chief-legal-officer-michael-chen-sells-884-of-stock-93CH-4930590",
+      "pubDate": "2026-10-03T00:16:08.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Mara Holdings CEO Fred Thiel sells $308,606 in Mara shares",
+      "link": "https://www.investing.com/news/insider-trading-news/mara-holdings-ceo-fred-thiel-sells-308606-in-mara-shares-93CH-4930589",
+      "pubDate": "2026-10-03T00:16:06.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Cathie Wood’s ARK stock trades: Cerebras and BWX Technologies lead buys",
+      "link": "https://www.investing.com/news/company-news/cathie-woods-ark-stock-trades-cerebras-and-bwx-technologies-lead-buys-93CH-4930580",
+      "pubDate": "2026-10-03T00:08:53.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "EZ Newswire Launches Press Release Performance Reports With AI Visibility Tracking",
+      "link": "https://www.investing.com/news/company-news/ez-newswire-launches-press-release-performance-reports-with-ai-visibility-tracking-4930578",
+      "pubDate": "2026-10-03T00:00:49.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Azincourt Energy Completes Harrier Prospecting Program and Commences Drilling At Snegamook Uranium Deposit",
+      "link": "https://www.investing.com/news/company-news/azincourt-energy-completes-harrier-prospecting-program-and-commences-drilling-at-snegamook-uranium-deposit-4930579",
+      "pubDate": "2026-10-03T00:00:49.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Netflix Stock Lost Nearly 50% of Its Value in a Year. Will It Keep Falling?",
+      "link": "https://beincrypto.com/netflix-stock-price-drop-analysis/",
+      "pubDate": "2026-10-02T23:53:52.000Z",
+      "description": "Netflix stock tests its 2021 peak near $68 after Ted Sarandos admits growth is slowing ahead of October 20 earnings.\nThe post Netflix Stock Lost Nearly 50% of Its Value in a Year. Will It Keep Falling? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Disney licenses ’Ice Age,’ ’Percy Jackson’ and other titles to Netflix",
+      "link": "https://www.investing.com/news/company-news/disney-licenses-ice-age-percy-jackson-and-other-titles-to-netflix-4930564",
+      "pubDate": "2026-10-02T23:46:43.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Auburn National Bancorporation director buys $2,007 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/auburn-national-bancorporation-director-buys-2007-in-stock-93CH-4930563",
+      "pubDate": "2026-10-02T23:46:03.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Plato Gold closes initial $55,000 flow-through placement",
+      "link": "https://www.investing.com/news/company-news/plato-gold-closes-initial-55000-flowthrough-placement-93CH-4930553",
+      "pubDate": "2026-10-02T23:40:29.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Crowdstrike CEO George Kurtz sells $5.3m in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/crowdstrike-ceo-george-kurtz-sells-53m-in-shares-93CH-4930547",
+      "pubDate": "2026-10-02T23:31:08.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "TransUnion president Todd Skinner sells $62,290 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/transunion-president-todd-skinner-sells-62290-in-stock-93CH-4930545",
+      "pubDate": "2026-10-02T23:31:01.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "US Rallied Bitcoin and Iran Crashed It In a Dramatic 24 Hours for Crypto",
+      "link": "https://beincrypto.com/bitcoin-price-pullback-hormuz-tanker-attack/",
+      "pubDate": "2026-10-02T22:34:09.000Z",
+      "description": "Bitcoin fell from $87,000 as UKMTO reported a Hormuz tanker attack. Oil held steady. Here is what the data shows.\nThe post US Rallied Bitcoin and Iran Crashed It In a Dramatic 24 Hours for Crypto appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
     {
       "title": "Silver Price Forecast: Bears crowd $60 after six-percent weekly rout",
       "link": "https://www.fxstreet.com/news/silver-price-forecast-bears-crowd-60-after-six-percent-weekly-rout-202610022152",
@@ -9,81 +100,11 @@
       "source": "FXStreet"
     },
     {
-      "title": "2026-10-02 - Web-TV - Web TV: SNB events",
-      "link": "https://www.snb.ch/en/services-events/digital-services/webtv/webtv-2026-09-24",
-      "pubDate": "2026-10-02T21:44:01.000Z",
-      "description": "",
-      "source": "Swiss National Bank"
-    },
-    {
-      "title": "US appeals court blocks Minnesota’s AI ’nudification’ law for now in XAI lawsuit",
-      "link": "https://www.investing.com/news/stock-market-news/us-appeals-court-blocks-minnesotas-ainudification-law-for-now-in-xai-lawsuit-4930434",
-      "pubDate": "2026-10-02T21:31:21.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "US court trims Joby’s trade-secret case against Archer Aviation",
-      "link": "https://www.investing.com/news/stock-market-news/archer-says-us-court-narrows-joby-aero-lawsuit-claims-4930398",
-      "pubDate": "2026-10-02T21:31:07.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "WestJet first told Boeing about 737 MAX software glitch cleared by FAA, memo says",
-      "link": "https://www.investing.com/news/stock-market-news/westjet-first-told-boeing-about-737-max-software-glitch-cleared-by-faa-memo-says-4930353",
-      "pubDate": "2026-10-02T21:30:34.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Mexico stocks higher at close of trade; S&P/BMV IPC up 1.10%",
-      "link": "https://www.investing.com/news/stock-market-news/mexico-stocks-higher-at-close-of-trade-spbmv-ipc-up-110-4930439",
-      "pubDate": "2026-10-02T21:30:04.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Colombia stocks lower at close of trade; COLCAP down 0.59%",
-      "link": "https://www.investing.com/news/stock-market-news/colombia-stocks-lower-at-close-of-trade-colcap-down-059-4930438",
-      "pubDate": "2026-10-02T21:25:03.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Marfrig subsidiary terminates tender offer for senior notes",
-      "link": "https://www.investing.com/news/company-news/marfrig-subsidiary-terminates-tender-offer-for-senior-notes-93CH-4930437",
-      "pubDate": "2026-10-02T21:20:30.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "KinderCare announces board changes, Nuzzo resigns",
-      "link": "https://www.investing.com/news/company-news/kindercare-announces-board-changes-nuzzo-resigns-93CH-4930436",
-      "pubDate": "2026-10-02T21:20:28.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Russia stocks lower at close of trade; MOEX Russia Index down 0.15%",
-      "link": "https://www.investing.com/news/stock-market-news/russia-stocks-lower-at-close-of-trade-moex-russia-index-down-015-4930435",
-      "pubDate": "2026-10-02T21:20:04.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Copper Lake Resources closes first tranche of private placement",
-      "link": "https://www.investing.com/news/company-news/copper-lake-resources-closes-first-tranche-of-private-placement-93CH-4930430",
-      "pubDate": "2026-10-02T21:16:29.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "US FAA says Boeing 737 MAX software glitch poses no safety issue",
-      "link": "https://www.investing.com/news/stock-market-news/us-faa-finds-boeing-737-max-software-glitch-does-not-pose-safety-issue-4930307",
-      "pubDate": "2026-10-02T21:12:27.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "Dollar Falls as Traders Pare Fed-Hike Bets After Soft Jobs Data",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQa1RMakhNNkV1ai11aHZSMURRNmtES2pGX29KSUJkV3ZSM3p1X1ZoT1EtUFFVNEFHbTB5blRnWkJpV0sxR2F3RVlONG5qTnV3dUZGb2FrM1UxZ3BuWXpLenpKV1RDNGxkSm9NbDh0a3hBZ1FNX1d3bUw5YkFpbkd6WnlTZTZhLVZyZE9ZTXduY01XUkpQLW5oQW93MkxzczNlcklqcEpXNkhGTzdjV05VRDZTZjY?oc=5",
+      "pubDate": "2026-10-02T20:47:31.000Z",
+      "description": "Dollar Falls as Traders Pare Fed-Hike Bets After Soft Jobs Data&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
     },
     {
       "title": "Federal Reserve Board announces approval of application by Fleur Capital Corporation",
@@ -130,7 +151,7 @@
     {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-10-02T18:33:08.000Z",
+      "pubDate": "2026-10-02T18:30:07.000Z",
       "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
       "source": "Bank of Canada"
     },
@@ -247,13 +268,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Dollar Falls as Traders Pare Fed-Hike Bets After Soft Jobs Data",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQa1RMakhNNkV1ai11aHZSMURRNmtES2pGX29KSUJkV3ZSM3p1X1ZoT1EtUFFVNEFHbTB5blRnWkJpV0sxR2F3RVlONG5qTnV3dUZGb2FrM1UxZ3BuWXpLenpKV1RDNGxkSm9NbDh0a3hBZ1FNX1d3bUw5YkFpbkd6WnlTZTZhLVZyZE9ZTXduY01XUkpQLW5oQW93MkxzczNlcklqcEpXNkhGTzdjV05VRDZTZjY?oc=5",
-      "pubDate": "2026-10-02T14:00:58.000Z",
-      "description": "Dollar Falls as Traders Pare Fed-Hike Bets After Soft Jobs Data&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
       "title": "USDT Is Returning to Bitcoin After 10 Years. Should Users Care?",
       "link": "https://beincrypto.com/usdt-returning-bitcoin-rgb-utexo/",
       "pubDate": "2026-10-02T13:25:59.000Z",
@@ -366,13 +380,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Welcome to Uptober: ETH and XRP Sentiment Just Hit Multi-Month Lows",
-      "link": "https://beincrypto.com/ethereum-xrp-sentiment-bearish-october/",
-      "pubDate": "2026-10-02T10:35:28.000Z",
-      "description": "Crowd sentiment toward Ethereum (ETH) and XRP (XRP) has turned negative as October begins, according to Santiment. Bearish comments now outnumber bullish ones for both altcoins across major social platforms. The souring mood greets a month ",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "France: Budget strains weigh on outlook – BBH",
       "link": "https://www.fxstreet.com/news/france-budget-strains-weigh-on-outlook-bbh-202610021017",
       "pubDate": "2026-10-02T10:17:53.000Z",
@@ -406,13 +413,6 @@
       "pubDate": "2026-10-02T10:03:41.000Z",
       "description": "MUFG’s Derek Halpenny notes that rising rates volatility is driving a broader unwind of EM FX carry trades, with LatAm currencies under particular pressure. USD/MXN has surged and MXN long leveraged positions are being squeezed as implied v",
       "source": "FXStreet"
-    },
-    {
-      "title": "What Happens to Porsche NFT Holders Now That the Project Is Over?",
-      "link": "https://beincrypto.com/porsche-nft-web3-project-wind-down/",
-      "pubDate": "2026-10-02T10:01:35.000Z",
-      "description": "Porsche NFT holders keep their 911 tokens as the automaker winds down its Web3 project and PIONΞERS community.\nThe post What Happens to Porsche NFT Holders Now That the Project Is Over? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
     },
     {
       "title": "Euro zone inflation surges more than expected, keeping pressure on ECB to hike rates",
@@ -541,17 +541,17 @@
       "source": "Google News"
     },
     {
-      "title": "Soft September jobs report sends U.S. dollar lower",
+      "title": "Dollar heads for fourth straight weekly gain versus euro",
       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNa3hNbG9nZGVfM1dBZ0RWcVNuRTRQc1JXbmRUTzR3dEM5RDFib1BqVFFkLUpDN2s2R2ZmZG1BMVJIUmMxd3AzQVdCTy1RU013OWJXQXNFSXNEeWVoZjMyZ210Q2NUMmhzdW9ETW1zRXVvM2c4VjFWcW40UFJDLTUtZlZrUFh6VlVHRHRWXzV4YmtLM2N10gGaAUFVX3lxTE51b1BHMzNUVEVyMXI4Z1RzaU8tUUpqU2lBbW9vUGl0TUJhcEZoWmloS0VmOWxjWE15RHV1ajBnYi1iblB6dTFISTVxRG5uYS1qYnU2Y0FZVVAtRnVxbFVTeWVaOHpPRk9BWEtvaVNTdnMycWl3dmRYVTlfUVFDM3lacnRvdzZ2bmdyN0dPUU5Zc3JzU3dFRnl3NXc?oc=5",
       "pubDate": "2026-10-02T03:37:00.000Z",
-      "description": "Soft September jobs report sends U.S. dollar lower&nbsp;&nbsp;CNBC",
+      "description": "Dollar heads for fourth straight weekly gain versus euro&nbsp;&nbsp;CNBC",
       "source": "Google News"
     },
     {
-      "title": "Stocks gain, dollar falls after US jobs data; bond yields higher",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE0xaEpXc3pMdGRXalZlcHdvWThBeklWRlpfRDd4cUZLbXNGS2s0YVF4Sm42YUpqaFNTbVkyWmIyanN6WmxtSG5yME8zTml3Z1N3a0NabmktSy1YYWp0SFlOM2NQZEN6WmFnX096dUREY1pHTFJ0NzlrUW54cw?oc=5",
-      "pubDate": "2026-10-02T02:10:00.000Z",
-      "description": "Stocks gain, dollar falls after US jobs data; bond yields higher&nbsp;&nbsp;Reuters",
+      "title": "Dollar set for fourth weekly gain versus euro",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOcDJ0MVcydW5OMDJ6dmo1YlhfXzBFN3d2Z3RsV0x2TGdJanNiX2xmejRaRnRybkdNOXNqTkw0RlhrRkxmbXAzUS1wc3JfVENRRHViZHVYbnp3TU5OVFFVQU5NY1lBaU1aVHlfMXVlZTBsWmRuNDFpZVN0SGN3cXdwWDdCYVBuVXNnT2FzNEdKMC1JX2dORE5QQURlRGZ1T01tSkpQTA?oc=5",
+      "pubDate": "2026-10-02T01:46:00.000Z",
+      "description": "Dollar set for fourth weekly gain versus euro&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
