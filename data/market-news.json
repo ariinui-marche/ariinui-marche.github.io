@@ -1,12 +1,54 @@
 {
-  "timestamp": "2026-10-03T21:27:57.024Z",
+  "timestamp": "2026-10-03T23:58:05.992Z",
   "items": [
     {
-      "title": "2026-10-03 - Web-TV - Web TV: SNB events",
+      "title": "2026-10-04 - Web-TV - Web TV: SNB events",
       "link": "https://www.snb.ch/en/services-events/digital-services/webtv/webtv-2026-09-24",
-      "pubDate": "2026-10-03T21:21:07.000Z",
+      "pubDate": "2026-10-03T23:53:01.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "White House forms AI task force to assess technology risks - WSJ",
+      "link": "https://www.investing.com/news/economy-news/white-house-forms-ai-task-force-to-assess-technology-risks--wsj-4930893",
+      "pubDate": "2026-10-03T22:59:47.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "How Muse Stacks up Vs. OpenAI Dots",
+      "link": "https://www.investing.com/news/stock-market-news/how-muse-stacks-up-vs-openai-dots-4930890",
+      "pubDate": "2026-10-03T22:24:00.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Trump Doubles Down on His $5,000 Midterm Promise. Will Bitcoin Swing?",
+      "link": "https://beincrypto.com/trump-reiterates-5000-dollar-promise-bitcoin/",
+      "pubDate": "2026-10-03T21:54:50.000Z",
+      "description": "President Trump has once again reassured that every American will receive $5,000 as a &#8220;Trump Dividend&#8221; if Republicans win the November midterms.&#160; Past stimulus-style payments have notably benefited crypto markets and Bitcoi",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Nestle India product sample declared unsafe by food regulator",
+      "link": "https://www.investing.com/news/stock-market-news/nestle-india-product-sample-declared-unsafe-by-food-regulator-93CH-4930889",
+      "pubDate": "2026-10-03T21:52:01.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Community Bankers Sue OCC Over Crypto Firms&#039; National Trust Charters",
+      "link": "https://beincrypto.com/icba-sues-occ-crypto-trust-charters/",
+      "pubDate": "2026-10-03T21:27:17.000Z",
+      "description": "The Independent Community Bankers of America (ICBA) has sued the Office of the Comptroller of the Currency (OCC). The October 2 complaint alleges the OCC lacks the power to charter non-fiduciary crypto firms as national trust banks. The law",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Russia stocks lower at close of trade; MOEX Russia Index unchanged",
+      "link": "https://www.investing.com/news/stock-market-news/russia-stocks-lower-at-close-of-trade-moex-russia-index-unchanged-4930887",
+      "pubDate": "2026-10-03T21:20:04.000Z",
+      "description": "",
+      "source": "Investing.com"
     },
     {
       "title": "Iraq’s state tanker firm moves crude through Hormuz strait",
@@ -56,34 +98,6 @@
       "pubDate": "2026-10-03T19:43:44.000Z",
       "description": "Iranian rial at new low, as cenbank sells dollars to support currency&nbsp;&nbsp;Reuters",
       "source": "Reuters"
-    },
-    {
-      "title": "OpenAI safety employee quits, says ’time for trial and error is over’",
-      "link": "https://www.investing.com/news/economy-news/openai-safety-employee-quits-says-time-for-trial-and-error-is-over-4930874",
-      "pubDate": "2026-10-03T19:30:33.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Bitcoin stuck at $84,947 in tightening range: Live levels",
-      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-slips-to-83119-bears-eye-81194-live-levels-93CH-4919475",
-      "pubDate": "2026-10-03T19:02:33.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Bitcoin jumps above $85,000 as SEC custody proposal boosts institutional outlook",
-      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-holds-below-85000-as-sec-custody-proposal-boosts-institutional-outlook-4930676",
-      "pubDate": "2026-10-03T18:16:48.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Bessent says rising Treasury yields reflect global trend, not cause for alarm",
-      "link": "https://www.investing.com/news/economy-news/bessent-says-rising-treasury-yields-reflect-global-trend-not-cause-for-alarm-4930869",
-      "pubDate": "2026-10-03T16:49:38.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
@@ -205,13 +219,6 @@
       "source": "Federal Reserve"
     },
     {
-      "title": "Quantum Discussion at UN Headquarters: How are Financial Systems Preparing?",
-      "link": "https://beincrypto.com/un-quantum-risk-financial-system-q-day/",
-      "pubDate": "2026-10-02T20:28:02.000Z",
-      "description": "Are quantum computers still years away from breaking modern encryption at scale? Or is Q-Day almost here? Regardless of the answer, Governments are no longer waiting. On Friday, BeInCrypto led the regulatory discussion on Quantum risks at t",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Hedge Funds Are Rebuilding Short Bets Against Japan’s Yen",
       "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOb1o4WnNaT1kwdVlwQ0I2OWx6V05WZU5za1lxY3JSLVFTM0VyMmZ6UnZMaWhrWTZfRmlHM3lOZ3R3Nkg3YnlsYldMSGhjUDc3NE9hQzJjdDNVQ2FUTjBFMnlneVk0QlItX3h3dXc5dTdFNy03T2Q4QWk3SHFjaTl4LWhETVZNMFM5Rkk5N0k4TW0zT3FEWWN0S2VWY1FlTWVqdEZrSmtERVAwUHlf?oc=5",
       "pubDate": "2026-10-02T20:10:08.000Z",
@@ -231,13 +238,6 @@
       "pubDate": "2026-10-02T20:00:00.000Z",
       "description": "Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regulation O",
       "source": "Federal Reserve"
-    },
-    {
-      "title": "How Man City’s Premier League Verdict Could Damage the UK Economy",
-      "link": "https://beincrypto.com/man-city-verdict-uk-uae-investment/",
-      "pubDate": "2026-10-02T19:17:48.000Z",
-      "description": "UAE officials warn a harsh Man City penalty could cool UK investment, putting a £30 billion partnership in the spotlight.\nThe post How Man City’s Premier League Verdict Could Damage the UK Economy appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
     },
     {
       "title": "Colombia reports expansion of mostly illegal alluvial gold mining",
