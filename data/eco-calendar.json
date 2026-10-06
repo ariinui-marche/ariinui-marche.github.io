@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-06T20:05:26.216Z",
+  "timestamp": "2026-10-06T23:44:58.408Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -8070,7 +8070,7 @@
       "country": "USD",
       "date": "2026-10-07T10:30:00-04:00",
       "impact": "Low",
-      "forecast": "2.1M",
+      "forecast": "1.9M",
       "previous": "0.9M",
       "actual": ""
     },
@@ -8097,7 +8097,7 @@
       "country": "USD",
       "date": "2026-10-07T15:00:00-04:00",
       "impact": "Low",
-      "forecast": "14.4B",
+      "forecast": "14.5B",
       "previous": "18.1B",
       "actual": ""
     },
@@ -8115,7 +8115,7 @@
       "country": "JPY",
       "date": "2026-10-07T19:50:00-04:00",
       "impact": "Low",
-      "forecast": "2.13T",
+      "forecast": "2.14T",
       "previous": "2.52T",
       "actual": ""
     },
@@ -8151,7 +8151,7 @@
       "country": "EUR",
       "date": "2026-10-08T02:00:00-04:00",
       "impact": "Low",
-      "forecast": "18.9B",
+      "forecast": "19.0B",
       "previous": "21.3B",
       "actual": ""
     },
@@ -8259,7 +8259,7 @@
       "country": "USD",
       "date": "2026-10-08T10:30:00-04:00",
       "impact": "Low",
-      "forecast": "",
+      "forecast": "79B",
       "previous": "64B",
       "actual": ""
     },
@@ -8331,7 +8331,7 @@
       "country": "CAD",
       "date": "2026-10-09T08:30:00-04:00",
       "impact": "High",
-      "forecast": "6.2K",
+      "forecast": "6.3K",
       "previous": "-41.7K",
       "actual": ""
     },
@@ -8349,7 +8349,7 @@
       "country": "USD",
       "date": "2026-10-09T10:00:00-04:00",
       "impact": "Medium",
-      "forecast": "47.6",
+      "forecast": "47.5",
       "previous": "47.8",
       "actual": ""
     },
