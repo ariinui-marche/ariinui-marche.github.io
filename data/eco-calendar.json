@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-08T14:39:10.449Z",
+  "timestamp": "2026-10-08T20:05:56.089Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -8340,7 +8340,7 @@
       "country": "CAD",
       "date": "2026-10-09T08:30:00-04:00",
       "impact": "High",
-      "forecast": "6.3K",
+      "forecast": "6.1K",
       "previous": "-41.7K",
       "actual": ""
     },
