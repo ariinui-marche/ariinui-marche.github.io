@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-07T21:29:03.906Z",
+  "timestamp": "2026-10-08T01:10:46.366Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -8192,6 +8192,15 @@
       "actual": ""
     },
     {
+      "title": "MPC Member Pill Speaks",
+      "country": "GBP",
+      "date": "2026-10-08T05:00:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
       "title": "MPC Member Greene Speaks",
       "country": "GBP",
       "date": "2026-10-08T05:15:00-04:00",
@@ -8204,15 +8213,6 @@
       "title": "Eurogroup Meetings",
       "country": "EUR",
       "date": "2026-10-08T05:15:00-04:00",
-      "impact": "Low",
-      "forecast": "",
-      "previous": "",
-      "actual": ""
-    },
-    {
-      "title": "MPC Member Pill Speaks",
-      "country": "GBP",
-      "date": "2026-10-08T06:30:00-04:00",
       "impact": "Low",
       "forecast": "",
       "previous": "",
