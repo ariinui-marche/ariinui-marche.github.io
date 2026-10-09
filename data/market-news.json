@@ -1,82 +1,166 @@
 {
-  "timestamp": "2026-10-09T18:49:08.361Z",
+  "timestamp": "2026-10-09T22:55:45.416Z",
   "items": [
     {
-      "title": "2026-10-09 - Web-TV - Web TV: SNB events",
+      "title": "2026-10-10 - Web-TV - Web TV: SNB events",
       "link": "https://www.snb.ch/en/services-events/digital-services/webtv/webtv-2026-09-24",
-      "pubDate": "2026-10-09T18:47:59.000Z",
+      "pubDate": "2026-10-09T22:51:02.000Z",
       "description": "",
       "source": "Swiss National Bank"
     },
     {
-      "title": "Katie Zacharia reportedly named new White House press secretary",
-      "link": "https://www.investing.com/news/economy-news/katie-zacharia-reportedly-named-new-white-house-press-secretary-4941585",
-      "pubDate": "2026-10-09T18:32:57.000Z",
+      "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
+      "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
+      "pubDate": "2026-10-09T22:46:42.000Z",
+      "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
+      "source": "Bank of Canada"
+    },
+    {
+      "title": "Character.AI chatbots encouraged users to cut and starve themselves, Kentucky alleges",
+      "link": "https://www.investing.com/news/stock-market-news/characterai-chatbots-encouraged-users-to-cut-and-starve-themselves-kentucky-alleges-4939981",
+      "pubDate": "2026-10-09T22:30:41.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Trump to issue directive on diesel, sources say, after he promises ’big announcement’",
-      "link": "https://www.investing.com/news/commodities-news/trump-big-announcement-coming-up-on-diesel-4941467",
-      "pubDate": "2026-10-09T18:30:39.000Z",
+      "title": "Super Micro contractor pleads guilty in scheme to divert AI servers with Nvidia chips to China",
+      "link": "https://www.investing.com/news/stock-market-news/super-micro-contractor-pleads-guilty-in-scheme-to-divert-ai-servers-with-nvidia-chips-to-china-4941793",
+      "pubDate": "2026-10-09T22:30:25.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Magnitude 7.6 earthquake hits Panama’s southern coast",
-      "link": "https://www.investing.com/news/economy-news/magnitude-76-earthquake-hits-panamas-southern-coast-93CH-4941583",
-      "pubDate": "2026-10-09T18:28:48.000Z",
+      "title": "Clean Air Metals closes C$150,000 private placement",
+      "link": "https://www.investing.com/news/company-news/clean-air-metals-closes-c150000-private-placement-93CH-4941785",
+      "pubDate": "2026-10-09T22:16:40.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Northwest European gasoline margins jump on low inventories",
-      "link": "https://www.investing.com/news/commodities-news/northwest-european-gasoline-margins-jump-on-low-inventories-93CH-4941582",
-      "pubDate": "2026-10-09T18:26:25.000Z",
+      "title": "Kalshi probes suspicious trades tied to Trump press secretary pick, WSJ reports",
+      "link": "https://www.investing.com/news/stock-market-news/kalshi-probes-suspicious-trades-tied-to-trump-press-secretary-pick-wsj-reports-4941775",
+      "pubDate": "2026-10-09T22:06:24.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Snowflake options flow shows call buyers targeting $370 strike",
-      "link": "https://www.investing.com/news/stock-market-news/snowflake-options-flow-shows-call-buyers-targeting-370-strike-93CH-4941581",
-      "pubDate": "2026-10-09T18:24:48.000Z",
+      "title": "Mueller Water director Brian Healy buys $29,927 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/mueller-water-director-brian-healy-buys-29927-in-stock-93CH-4941772",
+      "pubDate": "2026-10-09T22:01:03.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "vVardis files for US IPO showing net loss, revenue growth",
-      "link": "https://www.investing.com/news/stock-market-news/vvardis-files-for-us-ipo-showing-net-loss-revenue-growth-4941580",
-      "pubDate": "2026-10-09T18:24:46.000Z",
+      "title": "PTC Therapeutics director Michael Schmertzler sells $158k in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/ptc-therapeutics-director-michael-schmertzler-sells-158k-in-shares-93CH-4941771",
+      "pubDate": "2026-10-09T22:01:02.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "HIMS jumps 7% on peptide tailwind — but Citi sees 17% downside from here",
-      "link": "https://www.investing.com/news/stock-market-news/hims-jumps-7-on-peptide-tailwind--but-citi-sees-17-downside-from-here-93CH-4941579",
-      "pubDate": "2026-10-09T18:21:42.000Z",
+      "title": "Hershey Trust Co sells $3.25 million in Hershey Co shares",
+      "link": "https://www.investing.com/news/insider-trading-news/hershey-trust-co-sells-325-million-in-hershey-co-shares-93CH-4941761",
+      "pubDate": "2026-10-09T21:46:07.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Top AI Semiconductor Stocks According to Stifel Analysis",
-      "link": "https://www.investing.com/news/stock-market-news/top-ai-semiconductor-stocks-according-to-stifel-analysis-4941578",
-      "pubDate": "2026-10-09T18:21:12.000Z",
+      "title": "Lockheed Martin unveils PAC-3 Edge interceptor designed to counter hypersonic threats",
+      "link": "https://www.investing.com/news/stock-market-news/lockheed-martin-unveils-pac3-edge-interceptor-designed-to-counter-hypersonic-threats-4941753",
+      "pubDate": "2026-10-09T21:42:52.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "FCC chief defers to Pentagon on airing US execution on TV networks",
-      "link": "https://www.investing.com/news/stock-market-news/fcc-chief-defers-to-pentagon-on-airing-us-execution-on-tv-networks-4941549",
-      "pubDate": "2026-10-09T18:18:57.000Z",
+      "title": "Amazon shuffles Alexa leadership following high-end tablet release",
+      "link": "https://www.investing.com/news/stock-market-news/amazon-shufflesalexa-leadership-following-highend-tablet-release-4941757",
+      "pubDate": "2026-10-09T21:42:41.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Palantir options flow: call spreads cluster near 52-week high",
-      "link": "https://www.investing.com/news/stock-market-news/palantir-options-flow-call-spreads-cluster-near-52week-high-93CH-4941577",
-      "pubDate": "2026-10-09T18:15:46.000Z",
+      "title": "Qualcomm and Arm jury to return next week after deliberations in contract dispute case",
+      "link": "https://www.investing.com/news/stock-market-news/qualcomm-and-arm-set-for-jury-verdict-in-contract-breach-feud-4941018",
+      "pubDate": "2026-10-09T21:42:28.000Z",
       "description": "",
       "source": "Investing.com"
+    },
+    {
+      "title": "Chinese Yuan: PBoC defends yuan narrative – Commerzbank",
+      "link": "https://www.fxstreet.com/news/chinese-yuan-pboc-defends-yuan-narrative-commerzbank-202610092121",
+      "pubDate": "2026-10-09T21:21:00.000Z",
+      "description": "Commerzbank’s FX team highlights that the People’s Bank of China rejected claims the yuan is undervalued, linking export strength to industrial competitiveness rather than currency manipulation.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Singapore Dollar: Range trading persists against US Dollar – UOB",
+      "link": "https://www.fxstreet.com/news/singapore-dollar-range-trading-persists-against-us-dollar-uob-202610092031",
+      "pubDate": "2026-10-09T20:31:00.000Z",
+      "description": "United Overseas Bank’s (UOB) Quek Ser Leang and Lee Sue Ann note that USD/SGD remains supported within the Monetary Authority of Singapore’s policy band, with SGD NEER likely between 1.50% and 1.80% above midpoint, implying a 1.279–1.283 ra",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Taiwan Dollar: Trade strength but losses capped against US Dollar – Commerzbank",
+      "link": "https://www.fxstreet.com/news/taiwan-dollar-trade-strength-but-losses-capped-against-us-dollar-commerzbank-202610091949",
+      "pubDate": "2026-10-09T19:49:00.000Z",
+      "description": "Commerzbank analysts note Taiwan’s September trade surplus hit a record USD23.6bn, with exports surging 60.9% year-on-year on strong AI-related demand. The Central Bank of the Republic of China may lean more hawkish if inflation’s uptrend p",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Crude Oil drops on Trump's Russian diesel plan",
+      "link": "https://www.fxstreet.com/news/crude-oil-drops-on-trumps-russian-diesel-plan-202610091923",
+      "pubDate": "2026-10-09T19:23:58.000Z",
+      "description": "After a call with Russian President Putin, President Donald Trump said on Friday Russia will immediately supply more than 300K tons of diesel to the US and global markets. He put the next shipments at 500K tons in November and 1 million ton",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Trump Says Putin Will Ship 4.8 Million Tons of Diesel: Will Prices Actually Fall?",
+      "link": "https://beincrypto.com/trump-putin-russian-diesel-deal-prices/",
+      "pubDate": "2026-10-09T19:14:46.000Z",
+      "description": "Trump says Russia will ship 4.8 million tons of diesel. See what stands between the pledge and lower pump prices.\nThe post Trump Says Putin Will Ship 4.8 Million Tons of Diesel: Will Prices Actually Fall? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "China: Robust trade and rising prices – DBS",
+      "link": "https://www.fxstreet.com/news/china-robust-trade-and-rising-prices-dbs-202610091912",
+      "pubDate": "2026-10-09T19:12:00.000Z",
+      "description": "DBS Group Research expects China’s exports to grow 25.7% year-on-year in September, supported by strong electronics demand and improving manufacturing PMIs.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Dollar Index stalls under its high as the Fed's hawks repeat themselves",
+      "link": "https://www.fxstreet.com/news/dollar-index-stalls-under-its-high-as-the-feds-hawks-repeat-themselves-202610091910",
+      "pubDate": "2026-10-09T19:10:33.000Z",
+      "description": "Four sessions after its highest level since April 2025, the Dollar Index hasn't got back to it. The index trades near 102.25 and has made a lower high in each session since Wednesday.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "US President Trump says Putin agrees to supply millions of tons of diesel",
+      "link": "https://www.fxstreet.com/news/us-president-trump-says-putin-agrees-to-supply-millions-of-tons-of-diesel-202610091908",
+      "pubDate": "2026-10-09T19:08:45.000Z",
+      "description": "On Friday, US President Donald Trump said he spoke with Russian President Vladimir Putin, who agreed to immediately supply over 300K tons of diesel fuel to the US and the global market, add 500K tons for November, and deliver 1 million tons",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Elon Musk Takes On the Tycoon Building a $10 Billion Rival to Starlink",
+      "link": "https://beincrypto.com/musk-ambani-jio-starlink-rival/",
+      "pubDate": "2026-10-09T18:55:02.000Z",
+      "description": "Musk says Ambani is blocking Starlink. Ambani's Jio is building a $10 billion rival. See who is ahead in India's race.\nThe post Elon Musk Takes On the Tycoon Building a $10 Billion Rival to Starlink appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Silver Price Forecast: Bullish engulfing pattern puts $64 in sight",
+      "link": "https://www.fxstreet.com/news/silver-price-forecast-bullish-engulfing-pattern-puts-64-in-sight-202610091840",
+      "pubDate": "2026-10-09T18:40:37.000Z",
+      "description": "Silver (XAG/USD) price rallies over 2.80% on Friday as buyers buy the dip at $59.17, pushing the white metal above $60.00 to hit a two-day high of $61.19. At the time of writing, XAG/USD trades at $60.86.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Singapore Dollar: MAS tightening but gains constrained – OCBC",
+      "link": "https://www.fxstreet.com/news/singapore-dollar-mas-tightening-but-gains-constrained-ocbc-202610091827",
+      "pubDate": "2026-10-09T18:27:00.000Z",
+      "description": "OCBC’s Christopher Wong notes that Singapore Dollar (SGD) has held relatively steady despite a firmer US Dollar (USD) and higher Oil prices, with MAS tightening expectations underpinning the S$NEER. USD/SGD trades near recent highs with int",
+      "source": "FXStreet"
     },
     {
       "title": "Justin Sun Shares AI and Quantum Vision at TOKEN2049 Singapore and Blockworks DAS Asia",
@@ -91,6 +175,13 @@
       "pubDate": "2026-10-09T18:04:49.000Z",
       "description": "Gold (XAU/USD) price advances more than 1.40% on Friday, capitaliszng on a dip in US Treasury yields and a softer Greenback, as recent US data suggests households are becoming pessimistic about the economy, while investors seem confident th",
       "source": "FXStreet"
+    },
+    {
+      "title": "WSJ Dollar Index Rises 0.05% to 97.31",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPUTF6QUtTdUpPM0ViZ1E3ellWU0xwTnk5WWJZeFRiMzRzaERvc3FHVEFGcUxINzNraWZSV3pjUUdPQTh5REVud25QYTFXRkJ3UU5MZnZDYVJTZ054Tno4WlZhZWdCTHNnazY0TEt5N01Gczk5d2xjdEVaQWdIejZTa1FOSUFxcENER19oUDBTLVZsVUE1LTYxS0RzdEFRQ3pNNHlUa211MzBLbU5OVEladTNEQllMbXpVMFh0djlmRkJXNzNZRkZF?oc=5",
+      "pubDate": "2026-10-09T18:04:36.000Z",
+      "description": "WSJ Dollar Index Rises 0.05% to 97.31&nbsp;&nbsp;WSJ",
+      "source": "Google News"
     },
     {
       "title": "Japanese Yen struggles as wide US-Japan yield gap weighs",
@@ -126,13 +217,6 @@
       "pubDate": "2026-10-09T16:36:57.000Z",
       "description": "DBS Group Research expects the Monetary Authority of Singapore to slightly increase the SGD NEER policy band slope at the October review, while keeping the width and centre unchanged. The team, led by Taimur Baig, anticipates calibrated tig",
       "source": "FXStreet"
-    },
-    {
-      "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
-      "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-10-09T16:33:15.000Z",
-      "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
-      "source": "Bank of Canada"
     },
     {
       "title": "Trader Loses $6.6 Million in Bitcoin After Buying New Ledger Wallet",
@@ -317,74 +401,11 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Norwegian Krone: Rate hike risks support currency – BBH",
-      "link": "https://www.fxstreet.com/news/norwegian-krone-rate-hike-risks-support-currency-bbh-202610091240",
-      "pubDate": "2026-10-09T12:40:15.000Z",
-      "description": "Brown Brothers Harriman notes that the Norwegian Krone (NOK) is softer against most peers following a modest pullback in Oil prices, but September CPI data keep further Norges Bank rate hikes in play, offering support to NOK. Sticky underly",
-      "source": "FXStreet"
-    },
-    {
       "title": "Gate Partners with Visa to Launch Crypto-linked Card Across 40+ Countries and Territories",
       "link": "https://beincrypto.com/gate-partners-with-visa-crypto-card/",
       "pubDate": "2026-10-09T12:36:56.000Z",
       "description": "Gate has announced a collaboration with Visa to launch a crypto-linked card, further expanding the use of digital assets in everyday spending and global commerce. The product is expected to launch across 40+ markets globally, allowing users",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "MEXC and Payward Highlight Collaboration as Crypto and TradFi Converge at TOKEN2049",
-      "link": "https://beincrypto.com/mexc-payward-collaboration-crypto-tradfi-token2049/",
-      "pubDate": "2026-10-09T12:31:13.000Z",
-      "description": "MEXC,a pioneer in 0-fee digital asset trading, and Payward, the parent company of Kraken, shared their perspectives on the convergence of crypto and traditional finance during a TOKEN2049 Singapore panel. MEXC CEO Vugar Usi Zade and Payward",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "3 Reasons Behind the Crypto Market&#039;s Aggressive Selloff: What to Expect Next?",
-      "link": "https://beincrypto.com/crypto-market-selloff-3-reasons-next/",
-      "pubDate": "2026-10-09T12:24:29.000Z",
-      "description": "The crypto market selloff has 3 drivers: cycle timing, 10/10 fears, and AI cryptography risks. Here's what may come next.\nThe post 3 Reasons Behind the Crypto Market&#039;s Aggressive Selloff: What to Expect Next? appeared first on BeInCryp",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "British Pound gains ground as Japanese Yen underperforms",
-      "link": "https://www.fxstreet.com/news/british-pound-gains-ground-as-japanese-yen-underperforms-202610091220",
-      "pubDate": "2026-10-09T12:20:52.000Z",
-      "description": "GBP/JPY trades with a mild positive bias on Friday as the Japanese Yen (JPY) underperforms across the board. A pause in the global bond sell-off has pushed government bond yields lower, with Japanese yields falling more sharply than their U",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Japanese Yen: Choppy trade inside defined range – UOB",
-      "link": "https://www.fxstreet.com/news/japanese-yen-choppy-trade-inside-defined-range-uob-202610091220",
-      "pubDate": "2026-10-09T12:20:01.000Z",
-      "description": "United Overseas Bank’s (UOB) Quek Ser Leang and Lee Sue Ann note that USD/JPY has been volatile around 157.86, with swings between 157.51 and 158.36 failing to establish a clear trend. For the coming sessions, the pair is expected to trade ",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Oil: Iran tensions keep crude prices elevated - Rabobank",
-      "link": "https://www.fxstreet.com/news/oil-iran-tensions-keep-crude-prices-elevated-rabobank-202610091201",
-      "pubDate": "2026-10-09T12:01:34.000Z",
-      "description": "Rabobank's Senior Economist Maartje Wijffelaars notes Oil prices climbed to around $105 per barrel as Iran struck tankers, before Brent eased after US comments on talks with Iran. Despite the pullback, Oil and diesel remain elevated, with G",
-      "source": "FXStreet"
-    },
-    {
-      "title": "EUR/USD Price Forecast: Rallies fail above 1.1200 amid high Oil prices, debt woes",
-      "link": "https://www.fxstreet.com/news/eur-usd-price-forecast-rallies-fail-above-11200-amid-high-oil-prices-debt-woes-202610091156",
-      "pubDate": "2026-10-09T11:56:52.000Z",
-      "description": "The Euro (EUR) is failing to capitalise on the moderate US Dollar (USD) weakness witnessed on Friday as the high Oil prices and the ongoing concerns about France’s public debt offset investors’ optimism about lower global yields.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Japanese Yen underperforms against its peers into the weekend",
-      "link": "https://www.fxstreet.com/news/japanese-yen-underperforms-against-its-peers-into-the-weekend-202610091149",
-      "pubDate": "2026-10-09T11:49:07.000Z",
-      "description": "The Japanese Yen (JPY) trades lower against its major currency peers on Friday. In the European trade, the USD/JPY pair is up 0.3% to near 158.25.",
-      "source": "FXStreet"
-    },
-    {
-      "title": "Canadian Dollar: Labor data may trigger dovish repricing – BBH",
-      "link": "https://www.fxstreet.com/news/canadian-dollar-labor-data-may-trigger-dovish-repricing-bbh-202610091146",
-      "pubDate": "2026-10-09T11:46:30.000Z",
-      "description": "Brown Brothers Harriman highlights that USD/CAD is consolidating just above 1.4200 after touching fresh cyclical highs near 1.4300. Canada’s September labor force survey is the key release, with modest job gains and a higher unemployment ra",
-      "source": "FXStreet"
     },
     {
       "title": "Sterling ticks higher as dollar dips on lower oil prices",
@@ -429,25 +450,11 @@
       "source": "Bank of Japan"
     },
     {
-      "title": "Breaking: Canada Unemployment Rate rises to 6.5% in September as expected",
-      "link": "https://www.fxstreet.com/news/canada-unemployment-rate-expected-to-rise-to-65-as-us-tariffs-test-labor-market-202610090830",
-      "pubDate": "2026-10-09T08:30:00.000Z",
-      "description": "The Unemployment Rate in Canada edged higher to 6.5% in September from 6.4% in August, Statistics Canada reported on Friday. This reading came in line with analysts' estimate.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Amendment to \"Prices of Eligible Collateral\"",
       "link": "http://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/mpr261009a.pdf",
       "pubDate": "2026-10-09T07:00:00.000Z",
       "description": "",
       "source": "Bank of Japan"
-    },
-    {
-      "title": "Indian Rupee attracts bids as US bond yields cool down",
-      "link": "https://www.fxstreet.com/news/indian-rupee-gets-relief-from-pullback-in-us-bond-yields-202610090538",
-      "pubDate": "2026-10-09T05:38:09.000Z",
-      "description": "The Indian Rupee (INR) trades slightly higher against the US Dollar (USD) on Friday. The USD/INR pair corrects to near 96.55, but is still close to its all-time high of 97.00. The Indian currency gets a much-needed reprieve from a correctiv",
-      "source": "FXStreet"
     },
     {
       "title": "India withdraws bank tax benefit on gold, silver, platinum imports",
@@ -492,10 +499,10 @@
       "source": "Reuters"
     },
     {
-      "title": "Euro steadies as oil retreats, but set for fifth straight weekly drop",
+      "title": "Euro falls, set for fifth straight weekly drop as oil prices rise",
       "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQeXdEVjljdXBVWmtDOUFnLWJiRVhYWHg1TVNmTEhLbXN1Q0RSeFN0UW5ES2pmYmV0aVA0Z3BuMkdLTFAydFJBNm1KeE5xUFNITlhIMzZMRHNTMkRSc3QwWTRfMVRPSkJGY1BlQUJ5R1NZN3NOOU9xUWNnOGk4bGxlYlh2emNhaXNwdjBXNXU1bWVjeUxXVHdpMUpsZ202M3JwVnIyc3J3?oc=5",
       "pubDate": "2026-10-09T01:04:00.000Z",
-      "description": "Euro steadies as oil retreats, but set for fifth straight weekly drop&nbsp;&nbsp;Reuters",
+      "description": "Euro falls, set for fifth straight weekly drop as oil prices rise&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -538,13 +545,6 @@
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOWnlDTXVSTWYwT1dxTEZwMDYzd1htc0FhOUtXQmo3THdFaG0zR1NHQ1ZIM1RzOGFERV95UW9adzRhekRBSHkzUDU1YlZwRzNnVk5tLUFkODRRc2N2eUQ3U3NmRlhwMEdtcDZJeGtzYjlqcmhYYi1HSU1wODNXOE5NZWZmdWxxT1JHeXBVbkY0ekY4RVI2STF0ZTZUdmxjZw?oc=5",
       "pubDate": "2026-10-08T11:53:43.000Z",
       "description": "AFRICA-FX-Uganda's currency expected to remain on the ropes&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Euro zone ministers tell France to pass 2027 budget to calm markets",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZ1JMSXB2aERESElBa2JCX0tZUDZJQ2NhWTFacEM3NTE5QmtjcjNlM2RoMHppNVpyc0VfYWFCQVQ2Qml2ZU9mS0RvVDRfY1BmSnEzbHotaXV6MFVBblVkTjVqQ0JIRC03UDgyd1RLd3BtdWZmODg5cTFVNWswQ3k5WnR1ZUR3TWY5VjJiem9memp6VXFpNFQzOHcyNjNTaE9nUERUSUZ1akh3WGZXQTRQN3RMTHA?oc=5",
-      "pubDate": "2026-10-08T11:36:00.000Z",
-      "description": "Euro zone ministers tell France to pass 2027 budget to calm markets&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
