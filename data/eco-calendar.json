@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-09T06:12:56.343Z",
+  "timestamp": "2026-10-09T13:14:28.082Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -8351,7 +8351,7 @@
       "impact": "High",
       "forecast": "6.5%",
       "previous": "6.4%",
-      "actual": ""
+      "actual": "6.5%"
     },
     {
       "title": "Prelim UoM Consumer Sentiment",
