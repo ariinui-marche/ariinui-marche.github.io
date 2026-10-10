@@ -1,89 +1,110 @@
 {
-  "timestamp": "2026-10-09T22:55:45.416Z",
+  "timestamp": "2026-10-10T01:59:07.845Z",
   "items": [
     {
       "title": "2026-10-10 - Web-TV - Web TV: SNB events",
       "link": "https://www.snb.ch/en/services-events/digital-services/webtv/webtv-2026-09-24",
-      "pubDate": "2026-10-09T22:51:02.000Z",
+      "pubDate": "2026-10-10T01:55:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
     },
     {
+      "title": "Eric L. Oliver, Cross Timbers director, buys $87,575 in units",
+      "link": "https://www.investing.com/news/insider-trading-news/eric-l-oliver-cross-timbers-director-buys-87575-in-units-93CH-4941917",
+      "pubDate": "2026-10-10T01:31:13.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Optimum communications director Neil Subin acquires $2.45m in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/optimum-communications-director-neil-subin-acquires-245m-in-stock-93CH-4941916",
+      "pubDate": "2026-10-10T01:31:06.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Ul solutions CEO Scanlon sells $876k of company stock",
+      "link": "https://www.investing.com/news/insider-trading-news/ul-solutions-ceo-scanlon-sells-876k-of-company-stock-93CH-4941910",
+      "pubDate": "2026-10-10T01:15:54.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Sequoia-backed Nuvacore seeks $2.5bn valuation in funding round - Reuters",
+      "link": "https://www.investing.com/news/stock-market-news/sequoiabacked-nuvacore-seeks-25bn-valuation-in-funding-round--reuters-4941907",
+      "pubDate": "2026-10-10T01:08:34.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Datadog CTO Alexis Le-Quoc sells $14.75m in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/datadog-cto-alexis-lequoc-sells-1475m-in-shares-93CH-4941905",
+      "pubDate": "2026-10-10T01:01:08.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Trump says Russia to supply diesel to US and global markets",
+      "link": "https://www.investing.com/news/commodities-news/trump-big-announcement-coming-up-on-diesel-4941467",
+      "pubDate": "2026-10-10T00:54:24.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Mediaalpha CEO Steven Yi sells $263k in company stock",
+      "link": "https://www.investing.com/news/insider-trading-news/mediaalpha-ceo-steven-yi-sells-263k-in-company-stock-93CH-4941900",
+      "pubDate": "2026-10-10T00:46:03.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "InnSuites Hospitality Trust CEO Wirth reports $2.17 billion share disposition",
+      "link": "https://www.investing.com/news/insider-trading-news/innsuites-hospitality-trust-ceo-wirth-reports-217-billion-share-disposition-93CH-4941899",
+      "pubDate": "2026-10-10T00:45:52.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Trump reaches Russian diesel supply deal as U.S. fuel prices surge",
+      "link": "https://www.investing.com/news/economy-news/trump-reaches-russian-diesel-supply-deal-as-us-fuel-prices-surge-4941896",
+      "pubDate": "2026-10-10T00:37:35.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Marvell Technology SVP Justin Scarpulla sells $300,949 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/marvell-technology-svp-justin-scarpulla-sells-300949-in-stock-93CH-4941893",
+      "pubDate": "2026-10-10T00:30:54.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "DOJ To Investigate Binance Again. Could More Fines Follow?",
+      "link": "https://beincrypto.com/doj-binance-investigation-compliance-settlement/",
+      "pubDate": "2026-10-10T00:09:51.000Z",
+      "description": "Binance agreed to pay $4.3 billion to settle a US criminal case in 2023. Less than three years later, federal prosecutors are checking whether the world&#8217;s largest crypto exchange broke the terms of that deal. Tysen Duva, head of the J",
+      "source": "BeInCrypto"
+    },
+    {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-10-09T22:46:42.000Z",
+      "pubDate": "2026-10-09T22:46:33.000Z",
       "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
       "source": "Bank of Canada"
     },
     {
-      "title": "Character.AI chatbots encouraged users to cut and starve themselves, Kentucky alleges",
-      "link": "https://www.investing.com/news/stock-market-news/characterai-chatbots-encouraged-users-to-cut-and-starve-themselves-kentucky-alleges-4939981",
-      "pubDate": "2026-10-09T22:30:41.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "Aussie extends weekly gains as Fed pause bets offset hawkish rhetoric",
+      "link": "https://www.fxstreet.com/news/aussie-extends-weekly-gains-as-fed-pause-bets-offset-hawkish-rhetoric-202610092218",
+      "pubDate": "2026-10-09T22:18:12.000Z",
+      "description": "The Aussie Dollar ended Friday’s session on a positive note, gaining 0.38% and 0.58% weekly as the US Dollar trimmed some of its weekly gains, while US data confirmed investors' expectations that the Federal Reserve would hold rates steady ",
+      "source": "FXStreet"
     },
     {
-      "title": "Super Micro contractor pleads guilty in scheme to divert AI servers with Nvidia chips to China",
-      "link": "https://www.investing.com/news/stock-market-news/super-micro-contractor-pleads-guilty-in-scheme-to-divert-ai-servers-with-nvidia-chips-to-china-4941793",
-      "pubDate": "2026-10-09T22:30:25.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Clean Air Metals closes C$150,000 private placement",
-      "link": "https://www.investing.com/news/company-news/clean-air-metals-closes-c150000-private-placement-93CH-4941785",
-      "pubDate": "2026-10-09T22:16:40.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Kalshi probes suspicious trades tied to Trump press secretary pick, WSJ reports",
-      "link": "https://www.investing.com/news/stock-market-news/kalshi-probes-suspicious-trades-tied-to-trump-press-secretary-pick-wsj-reports-4941775",
-      "pubDate": "2026-10-09T22:06:24.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Mueller Water director Brian Healy buys $29,927 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/mueller-water-director-brian-healy-buys-29927-in-stock-93CH-4941772",
-      "pubDate": "2026-10-09T22:01:03.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "PTC Therapeutics director Michael Schmertzler sells $158k in shares",
-      "link": "https://www.investing.com/news/insider-trading-news/ptc-therapeutics-director-michael-schmertzler-sells-158k-in-shares-93CH-4941771",
-      "pubDate": "2026-10-09T22:01:02.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Hershey Trust Co sells $3.25 million in Hershey Co shares",
-      "link": "https://www.investing.com/news/insider-trading-news/hershey-trust-co-sells-325-million-in-hershey-co-shares-93CH-4941761",
-      "pubDate": "2026-10-09T21:46:07.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Lockheed Martin unveils PAC-3 Edge interceptor designed to counter hypersonic threats",
-      "link": "https://www.investing.com/news/stock-market-news/lockheed-martin-unveils-pac3-edge-interceptor-designed-to-counter-hypersonic-threats-4941753",
-      "pubDate": "2026-10-09T21:42:52.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Amazon shuffles Alexa leadership following high-end tablet release",
-      "link": "https://www.investing.com/news/stock-market-news/amazon-shufflesalexa-leadership-following-highend-tablet-release-4941757",
-      "pubDate": "2026-10-09T21:42:41.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Qualcomm and Arm jury to return next week after deliberations in contract dispute case",
-      "link": "https://www.investing.com/news/stock-market-news/qualcomm-and-arm-set-for-jury-verdict-in-contract-breach-feud-4941018",
-      "pubDate": "2026-10-09T21:42:28.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "Dollar Finishes Fourth Straight Week of Gains",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPVmlUbXdnclNKN1VnOVp1ejkzbXBXZjJaaTF3YVVXNHBpU29ueXpsa3M2TGFCQ1V5N3VXOHlBYTJ0MjhlSlVubXROb0FBVC0wb0tfczA1blhZd1VlQ1M0bE1hOW9UUk1jTWF5WlRIb2cwUHFPQnotcEZJQW5IdXVEQnRsaXZ4LTdOX3pPVndmSjVqM3hEMlNuRUY4RFF2RV84R0RF?oc=5",
+      "pubDate": "2026-10-09T21:45:00.000Z",
+      "description": "Dollar Finishes Fourth Straight Week of Gains&nbsp;&nbsp;WSJ",
+      "source": "Google News"
     },
     {
       "title": "Chinese Yuan: PBoC defends yuan narrative – Commerzbank",
@@ -177,13 +198,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "WSJ Dollar Index Rises 0.05% to 97.31",
-      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPUTF6QUtTdUpPM0ViZ1E3ellWU0xwTnk5WWJZeFRiMzRzaERvc3FHVEFGcUxINzNraWZSV3pjUUdPQTh5REVud25QYTFXRkJ3UU5MZnZDYVJTZ054Tno4WlZhZWdCTHNnazY0TEt5N01Gczk5d2xjdEVaQWdIejZTa1FOSUFxcENER19oUDBTLVZsVUE1LTYxS0RzdEFRQ3pNNHlUa211MzBLbU5OVEladTNEQllMbXpVMFh0djlmRkJXNzNZRkZF?oc=5",
-      "pubDate": "2026-10-09T18:04:36.000Z",
-      "description": "WSJ Dollar Index Rises 0.05% to 97.31&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
       "title": "Japanese Yen struggles as wide US-Japan yield gap weighs",
       "link": "https://www.fxstreet.com/news/japanese-yen-struggles-as-wide-us-japan-yield-gap-weighs-202610091752",
       "pubDate": "2026-10-09T17:52:08.000Z",
@@ -247,6 +261,13 @@
       "source": "FXStreet"
     },
     {
+      "title": "Dunamu CEO Urges South Korea to Move Quickly on Won-Backed Stablecoins",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOeEt6bDVoWnkxOTJKNVZGUlpRZWRHN3Y1QzhLLXI3Vjl3cHFhQzJwZVZyXzZ1WnlnRzQ0M2xqdDZReFBKbmF6d1lza1VHdVRCbThjaGRZUlJCUnQyS2R4WHlTcGYxa2pmaDJ4WkN0eTdaeUZyX0M3eFhjZTlmM3pnMGR0S29HSElmSEVVTUhDUDJwOTZHcWVtcG13YzZYLTl6aWNuWVRxWlJsTGhZVUExbGYxNVhwQ0Jfanc?oc=5",
+      "pubDate": "2026-10-09T16:10:23.000Z",
+      "description": "Dunamu CEO Urges South Korea to Move Quickly on Won-Backed Stablecoins&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
       "title": "Jim Cramer&#039;s SpaceX Lockup Watch Flags 1.3 Billion Shares: Will the Stock Hold?",
       "link": "https://beincrypto.com/jim-cramer-spacex-lockup-billion-shares/",
       "pubDate": "2026-10-09T15:58:15.000Z",
@@ -258,13 +279,6 @@
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWW1saDRFbnlJWEpWdk1ZVlRBUzg1aE1qOHZEQ1JhbmxLelBJQlhrTkFrVkVfVXVLNVEtdl9UWDRJeEpMTHpYTTR6YUNmckd5VFl5eTVucHhxUDhhS2g0VHVMeHlLV295NEtZWFFibmpnWk5ial9UNzJyTnFLdTZTeE9VTlhrTDZNOHdoVlpyLUpka0twQlpQNDM3S3ZQTTBTb2t1OG51RjJURG5lYjREcw?oc=5",
       "pubDate": "2026-10-09T15:53:05.000Z",
       "description": "Dollar’s Longest Winning Streak Since Early 2025 Keeps Going&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
-      "title": "Gold Futures Fall on Stronger Dollar, High Yields",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQMHNrUWF6d0ZiUUhYUGszdUpmRnF3X1d3S0NaYXRIRENXVGJ0aXRnNjVVZ3lqYWVoTktzMUsxZ1NLeTBxcGg5eDlrcmJDcVdGd1U2Z0R0T3c4ZzhuSDRhM0VqZ2VTa3hqdXplNnBfdkkyRzRiOGVvZ3NvYUxWWWVtNXdJWFV6eVpRbzA3S0NZZTdGS1pqRVptbm44OWpYbnNQNmtVNHd5SGhITVlab2ktZzZ3?oc=5",
-      "pubDate": "2026-10-09T15:46:13.000Z",
-      "description": "Gold Futures Fall on Stronger Dollar, High Yields&nbsp;&nbsp;WSJ",
       "source": "Google News"
     },
     {
@@ -338,13 +352,6 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Dollar Heads for Fourth Straight Week of Gains",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPVmlUbXdnclNKN1VnOVp1ejkzbXBXZjJaaTF3YVVXNHBpU29ueXpsa3M2TGFCQ1V5N3VXOHlBYTJ0MjhlSlVubXROb0FBVC0wb0tfczA1blhZd1VlQ1M0bE1hOW9UUk1jTWF5WlRIb2cwUHFPQnotcEZJQW5IdXVEQnRsaXZ4LTdOX3pPVndmSjVqM3hEMlNuRUY4RFF2RV84R0RF?oc=5",
-      "pubDate": "2026-10-09T14:07:00.000Z",
-      "description": "Dollar Heads for Fourth Straight Week of Gains&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
       "title": "Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families",
       "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
       "pubDate": "2026-10-09T14:00:00.000Z",
@@ -387,24 +394,10 @@
       "source": "FXStreet"
     },
     {
-      "title": "United States: Core CPI trend seen moderating – TD Securities",
-      "link": "https://www.fxstreet.com/news/united-states-core-cpi-trend-seen-moderating-td-securities-202610091256",
-      "pubDate": "2026-10-09T12:56:18.000Z",
-      "description": "TD Securities’ US economics team led by Oscar Munoz, with Eli Nir, Gennadiy Goldberg and Molly Brooks, expects September Core CPI to slow to 0.20% month-on-month, driven by softer core services and supercore.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Dark Web Founder Loses $100 Million in Bitcoin After 40-Year Sentence: Where Does It Go?",
       "link": "https://beincrypto.com/dark-web-founder-forfeits-1230-bitcoin/",
       "pubDate": "2026-10-09T12:50:19.000Z",
       "description": "Empire Market co-creator Raheim Hamilton gets 40 years and forfeits 1,230 Bitcoin. See where seized BTC goes next.\nThe post Dark Web Founder Loses $100 Million in Bitcoin After 40-Year Sentence: Where Does It Go? appeared first on BeInCrypt",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Gate Partners with Visa to Launch Crypto-linked Card Across 40+ Countries and Territories",
-      "link": "https://beincrypto.com/gate-partners-with-visa-crypto-card/",
-      "pubDate": "2026-10-09T12:36:56.000Z",
-      "description": "Gate has announced a collaboration with Visa to launch a crypto-linked card, further expanding the use of digital assets in everyday spending and global commerce. The product is expected to launch across 40+ markets globally, allowing users",
       "source": "BeInCrypto"
     },
     {
@@ -545,6 +538,13 @@
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOWnlDTXVSTWYwT1dxTEZwMDYzd1htc0FhOUtXQmo3THdFaG0zR1NHQ1ZIM1RzOGFERV95UW9adzRhekRBSHkzUDU1YlZwRzNnVk5tLUFkODRRc2N2eUQ3U3NmRlhwMEdtcDZJeGtzYjlqcmhYYi1HSU1wODNXOE5NZWZmdWxxT1JHeXBVbkY0ekY4RVI2STF0ZTZUdmxjZw?oc=5",
       "pubDate": "2026-10-08T11:53:43.000Z",
       "description": "AFRICA-FX-Uganda's currency expected to remain on the ropes&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Euro zone ministers tell France to pass 2027 budget to calm markets",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZ1JMSXB2aERESElBa2JCX0tZUDZJQ2NhWTFacEM3NTE5QmtjcjNlM2RoMHppNVpyc0VfYWFCQVQ2Qml2ZU9mS0RvVDRfY1BmSnEzbHotaXV6MFVBblVkTjVqQ0JIRC03UDgyd1RLd3BtdWZmODg5cTFVNWswQ3k5WnR1ZUR3TWY5VjJiem9memp6VXFpNFQzOHcyNjNTaE9nUERUSUZ1akh3WGZXQTRQN3RMTHA?oc=5",
+      "pubDate": "2026-10-08T11:36:00.000Z",
+      "description": "Euro zone ministers tell France to pass 2027 budget to calm markets&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
