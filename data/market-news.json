@@ -1,40 +1,138 @@
 {
-  "timestamp": "2026-10-10T08:08:43.545Z",
+  "timestamp": "2026-10-10T14:26:16.435Z",
   "items": [
     {
       "title": "2026-10-10 - Web-TV - Web TV: SNB events",
       "link": "https://www.snb.ch/en/services-events/digital-services/webtv/webtv-2026-09-24",
-      "pubDate": "2026-10-10T08:06:59.000Z",
+      "pubDate": "2026-10-10T14:19:59.000Z",
       "description": "",
       "source": "Swiss National Bank"
     },
     {
-      "title": "Why are EU gas prices not higher already?",
-      "link": "https://www.investing.com/news/economy-news/why-are-eu-gas-prices-not-higher-already-4942043",
-      "pubDate": "2026-10-10T07:43:28.000Z",
+      "title": "China Is Building a National Blockchain Network: Will Bitcoin Benefit?",
+      "link": "https://beincrypto.com/china-national-blockchain-network-bitcoin/",
+      "pubDate": "2026-10-10T14:19:57.000Z",
+      "description": "China plans a national blockchain network in its new economic blueprint. Here is why Bitcoin is left out of it.\nThe post China Is Building a National Blockchain Network: Will Bitcoin Benefit? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Philips wins Dutch court battle with shareholders over sleep apnea recall",
+      "link": "https://www.investing.com/news/stock-market-news/philips-wins-dutch-court-battle-with-shareholders-over-sleep-apnea-recall-4942118",
+      "pubDate": "2026-10-10T14:05:05.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Nuveen portfolio manager Michael Hamilton buys $26,106 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/nuveen-portfolio-manager-michael-hamilton-buys-26106-in-stock-93CH-4942041",
-      "pubDate": "2026-10-10T07:31:10.000Z",
+      "title": "France’s bond stress may remain contained as wider European risks stay limited",
+      "link": "https://www.investing.com/news/stock-market-news/why-the-french-problem-is-a-french-problem-not-a-european-one-4942112",
+      "pubDate": "2026-10-10T13:31:27.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "China creates 10.52 million jobs, plans new AI and services employment measures",
-      "link": "https://www.investing.com/news/economy-news/china-creates-1052-million-jobs-plans-new-ai-and-services-employment-measures-4942031",
-      "pubDate": "2026-10-10T07:10:28.000Z",
+      "title": "Spanish lawyer Gonzalez Durantez launches centrist party for November election",
+      "link": "https://www.investing.com/news/economy-news/spanish-lawyer-gonzalezdurantez-launches-centrist-party-for-november-election-4942110",
+      "pubDate": "2026-10-10T13:30:19.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Bitcoin hovers at Fibonacci support near $82,700: Live levels",
-      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-tests-87363-resistance-with-fading-momentum-live-levels-93CH-4931135",
-      "pubDate": "2026-10-10T07:02:31.000Z",
+      "title": "One of Wall Street&#039;s Best Hedge Funds Just Blew a 44% Gain Because of AI Bets",
+      "link": "https://beincrypto.com/lone-pine-hedge-fund-ai-stocks-loss/",
+      "pubDate": "2026-10-10T13:25:06.000Z",
+      "description": "Lone Pine's hedge fund erased a 44% gain in one quarter as AI stocks like Nebius and ASML reversed. See which bets failed.\nThe post One of Wall Street&#039;s Best Hedge Funds Just Blew a 44% Gain Because of AI Bets appeared first on BeInCry",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Neither Putin nor Trump wanted to hang up first, Kremlin aide says after ’very friendly’ call",
+      "link": "https://www.investing.com/news/commodities-news/neither-putin-nor-trump-wanted-to-hang-up-first-kremlin-aide-says-after-very-friendly-call-4942108",
+      "pubDate": "2026-10-10T13:18:26.000Z",
       "description": "",
       "source": "Investing.com"
+    },
+    {
+      "title": "China drafts rules to ban hidden car handles, virtual controls",
+      "link": "https://www.investing.com/news/stock-market-news/china-drafts-rules-to-ban-hidden-car-handles-virtual-controls-4942097",
+      "pubDate": "2026-10-10T12:47:48.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Will rising French bond spreads disrupt the rally in European stocks?",
+      "link": "https://www.investing.com/news/stock-market-news/will-rising-french-bond-spreads-disrupt-the-rally-in-european-stocks-4942091",
+      "pubDate": "2026-10-10T12:18:32.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "LB Pharmaceuticals presents data on LB-102 at ECNP congress",
+      "link": "https://www.investing.com/news/company-news/lb-pharmaceuticals-presents-data-on-lb102-at-ecnp-congress-93CH-4942090",
+      "pubDate": "2026-10-10T12:04:41.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Bitcoin falls nearly 3% over past week as security fears weigh on sentiment",
+      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-slips-toward-82000-as-rising-oil-prices-fed-outlook-weigh-4941955",
+      "pubDate": "2026-10-10T11:41:25.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Major Saudi conferences to proceed, organisers say, despite deadly airport attack",
+      "link": "https://www.investing.com/news/commodities-news/major-saudi-conferences-to-proceed-organisers-say-despite-deadly-airport-attack-4942088",
+      "pubDate": "2026-10-10T11:36:21.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Claude AI Sent Police a Fake Murder Tip",
+      "link": "https://beincrypto.com/claude-ai-fake-murder-tip-police/",
+      "pubDate": "2026-10-10T11:31:15.000Z",
+      "description": "Claude AI sent Philadelphia police a fake murder tip during a test. Here's what made it happen and why police object.\nThe post Claude AI Sent Police a Fake Murder Tip appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Idt EVP and corporate secretary Joyce J. Mason reported selling $92,570 of IDT Corp (NYSE:IDT) Class B Common Stock on October 7, 2026.",
+      "link": "https://www.investing.com/news/insider-trading-news/idt-evp-and-corporate-secretary-joyce-j-mason-reported-selling-92570-of-idt-corp-nyseidt-class-b-common-stock-on-october-7-2026-93CH-4942086",
+      "pubDate": "2026-10-10T11:19:46.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "India unveils tough curbs on dollar demand to defend rupee",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPYzNGSVV4Mm52a2ppakRmRWJPNE5malNqWFotTktSQ1VGczFSRUFDRW95VmVMejBDd2RrUDlLTExzV1ZIUHlPVXlTSXd1VTJTV2lUUkxyQ0d4eld6YXE0Nm16QktmQkdWWXgtRl9WdzZBS0tuOGdldVFMOHNGX2Frb3pxdGRKdkIxMFA2M2VERWFHWjVxaHp4bWJQY9IBoAFBVV95cUxPS1NkcVh1N0ZGVER3MEtlTDcyTDJrZ2FBSGFnaVdEZTdfcWNzTFloenMyUkVTS0s4QmRyU04zZ1E5R29JT1dxTUszVEJla0o5RmV0ZVhfMVdYZGxZX291OVB6bVE2X2Zkc25QTFp5aDM4dXhkSXNkNEhSamk3VDc2WmNCdVhneU81VnRCSzRQRHZMRWdRV1NzcnhBTXRXUU9M?oc=5",
+      "pubDate": "2026-10-10T11:12:58.000Z",
+      "description": "India unveils tough curbs on dollar demand to defend rupee&nbsp;&nbsp;CNBC",
+      "source": "Google News"
+    },
+    {
+      "title": "Hidden Spy Chip Found Inside a Sealed Ledger Wallet",
+      "link": "https://beincrypto.com/ledger-wallet-spy-chip-reseller/",
+      "pubDate": "2026-10-10T10:55:20.000Z",
+      "description": "Mark Karpelès says a sealed Ledger wallet hid a spy chip that steals its secret words. Here is how it works and who is to blame.\nThe post Hidden Spy Chip Found Inside a Sealed Ledger Wallet appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "XT Exchange at Eight: Crypto’s Next Billion Will Be Won in the User Experience",
+      "link": "https://beincrypto.com/xt-exchange-at-eight-crypto-next-billion-users/",
+      "pubDate": "2026-10-10T09:00:00.000Z",
+      "description": "At XT8&#8217;s anniversary X Space, the COO argued that the next billion users will come for faster payments, broader access and simpler financial decisions&#8212;not for another lesson in blockchain. The crypto industry has spent years ask",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "RBI Announces Special Oil Window, Regulatory Steps for Rupee",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPcjNURXR0Z09rZS1RQXJSaXkxeVR1UkcwdGF6YmF5b0NvX2dXaWZaM0FtblhoMm1GWHlLQl9yU3NMd3d3NWp2WmphcVRMZk02Q1ZhMWRMdm01R2tMaWZPVFlGbVdZRlZLTnNFdWhPdWxxQXRoamdHWE9DUE1kWERFanIwZ1J3ckYybTdhWkt0bHlQbHNiTVNBRVdQdEVBR0lGWFNuS3g5SWpTT1A4RlM4?oc=5",
+      "pubDate": "2026-10-10T08:12:36.000Z",
+      "description": "RBI Announces Special Oil Window, Regulatory Steps for Rupee&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "Crypto’s 10/10 Trauma: Did Traders Really Deleverage Before the Anniversary?",
+      "link": "https://beincrypto.com/crypto-10-10-anniversary-traders-deleverage/",
+      "pubDate": "2026-10-10T07:51:56.000Z",
+      "description": "Bitcoin traders added leverage into the 10/10 crash anniversary. See what liquidations, funding, and sentiment data show.\nThe post Crypto’s 10/10 Trauma: Did Traders Really Deleverage Before the Anniversary? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
     },
     {
       "title": "100 Billion XRP Supply Was Nearly Broken by a 10-Year Bug",
@@ -44,67 +142,11 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "European bank stocks slide 8% as bond yields spark investor caution - Bloomberg",
-      "link": "https://www.investing.com/news/stock-market-news/european-bank-stocks-slide-8-as-bond-yields-spark-investor-caution--bloomberg-4942017",
-      "pubDate": "2026-10-10T06:33:42.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Duolingo president & CEO Luis von Ahn sells $16.7 million in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/duolingo-president--ceo-luis-von-ahn-sells-167-million-in-stock-93CH-4942016",
-      "pubDate": "2026-10-10T06:31:19.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "EOS Climbs 17% In a Green Day",
-      "link": "https://www.investing.com/news/cryptocurrency-news/eos-climbs-17-in-a-green-day-4942011",
-      "pubDate": "2026-10-10T06:16:02.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Bumble director Sissie Hsiao sells $6,956 in class A shares",
-      "link": "https://www.investing.com/news/insider-trading-news/bumble-director-sissie-hsiao-sells-6956-in-class-a-shares-93CH-4942010",
-      "pubDate": "2026-10-10T06:16:01.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Vivek Jain, Analog Devices officer, sells $2.16m in shares",
-      "link": "https://www.investing.com/news/insider-trading-news/vivek-jain-analog-devices-officer-sells-216m-in-shares-93CH-4942001",
-      "pubDate": "2026-10-10T06:01:04.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Why is the Chinese stock market missing the AI rally",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-the-chinese-stock-market-missing-the-ai-rally-4941998",
-      "pubDate": "2026-10-10T05:58:41.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Gate WCTC S9 Global Trading Competition Officially Live: Traders Worldwide Unite for the Ultimate Multi-Asset Showdown",
       "link": "https://beincrypto.com/gate-wctc-59-global-trading-competition/",
       "pubDate": "2026-10-10T05:19:16.000Z",
       "description": "Gate has officially announced the launch of the World Crypto Trading Competition Season 9 (WCTC S9), running from October 9, 2026, 08:00 (UTC). Centered around the theme &#8220;Trade Beyond Boundaries, Rise to the Top,&#8221; this flagship ",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "RBI Announces Special Oil Window, Regulatory Steps for Rupee",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPcjNURXR0Z09rZS1RQXJSaXkxeVR1UkcwdGF6YmF5b0NvX2dXaWZaM0FtblhoMm1GWHlLQl9yU3NMd3d3NWp2WmphcVRMZk02Q1ZhMWRMdm01R2tMaWZPVFlGbVdZRlZLTnNFdWhPdWxxQXRoamdHWE9DUE1kWERFanIwZ1J3ckYybTdhWkt0bHlQbHNiTVNBRVdQdEVBR0lGWFNuS3g5SWpTT1A4RlM4?oc=5",
-      "pubDate": "2026-10-10T05:08:00.000Z",
-      "description": "RBI Announces Special Oil Window, Regulatory Steps for Rupee&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
-      "title": "India unveils tough curbs on dollar demand to defend rupee",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQdllQdm5CdmlVZXN1TkRYcEd3akdFcFFiMU9xSXJNUnBzbk9HNWFqbTVsYVpXMG03bldVc29lZjVfMk9seFo4LXpadURFdWhmUEVYdWViNjBPNkFiVi1HTkx1clBCc1ZsSGNOdjlweHR3V0JRa0JiRFpEZWNCMHpnTF9GX2RUeWUyTE1oT1VRNjBTSUVZVDBaa0ZkVi0yTFBpRnQ0TlcwM1d2MTc4bVd6U2ZqcDRxUWJESWY4aWpfTmdNeVpB?oc=5",
-      "pubDate": "2026-10-10T03:34:00.000Z",
-      "description": "India unveils tough curbs on dollar demand to defend rupee&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "DOJ To Investigate Binance Again. Could More Fines Follow?",
@@ -140,6 +182,13 @@
       "pubDate": "2026-10-09T21:21:00.000Z",
       "description": "Commerzbank’s FX team highlights that the People’s Bank of China rejected claims the yuan is undervalued, linking export strength to industrial competitiveness rather than currency manipulation.",
       "source": "FXStreet"
+    },
+    {
+      "title": "Dollar’s Longest Winning Streak Since Early 2025 Keeps Going",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWW1saDRFbnlJWEpWdk1ZVlRBUzg1aE1qOHZEQ1JhbmxLelBJQlhrTkFrVkVfVXVLNVEtdl9UWDRJeEpMTHpYTTR6YUNmckd5VFl5eTVucHhxUDhhS2g0VHVMeHlLV295NEtZWFFibmpnWk5ial9UNzJyTnFLdTZTeE9VTlhrTDZNOHdoVlpyLUpka0twQlpQNDM3S3ZQTTBTb2t1OG51RjJURG5lYjREcw?oc=5",
+      "pubDate": "2026-10-09T20:43:57.000Z",
+      "description": "Dollar’s Longest Winning Streak Since Early 2025 Keeps Going&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
     },
     {
       "title": "Singapore Dollar: Range trading persists against US Dollar – UOB",
@@ -261,13 +310,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Trader Loses $6.6 Million in Bitcoin After Buying New Ledger Wallet",
-      "link": "https://beincrypto.com/trader-loses-80-bitcoin-ledger-wallet/",
-      "pubDate": "2026-10-09T16:29:56.000Z",
-      "description": "A trader lost 80 BTC from a new Ledger bought via CryptoBilis as theft estimates near $90 million.\nThe post Trader Loses $6.6 Million in Bitcoin After Buying New Ledger Wallet appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Canada loses 68.3K jobs and the Loonie falls to an 18-month low",
       "link": "https://www.fxstreet.com/news/canada-loses-683k-jobs-and-the-loonie-falls-to-an-18-month-low-202610091617",
       "pubDate": "2026-10-09T16:17:14.000Z",
@@ -296,13 +338,6 @@
       "source": "Google News"
     },
     {
-      "title": "Jim Cramer&#039;s SpaceX Lockup Watch Flags 1.3 Billion Shares: Will the Stock Hold?",
-      "link": "https://beincrypto.com/jim-cramer-spacex-lockup-billion-shares/",
-      "pubDate": "2026-10-09T15:58:15.000Z",
-      "description": "Jim Cramer called SpaceX's spectrum deal huge, then posted a lockup watch. See which SpaceX share unlock comes next.\nThe post Jim Cramer&#039;s SpaceX Lockup Watch Flags 1.3 Billion Shares: Will the Stock Hold? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Euro struggles as French fiscal concerns and firm US Dollar dominate",
       "link": "https://www.fxstreet.com/news/euro-struggles-as-french-fiscal-concerns-and-firm-us-dollar-dominate-202610091544",
       "pubDate": "2026-10-09T15:44:52.000Z",
@@ -324,13 +359,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "XRP ETF Buyers Are 13% Underwater, Yet Inflows Keep Coming",
-      "link": "https://beincrypto.com/xrp-price-etf-buyers-analysis/",
-      "pubDate": "2026-10-09T14:50:04.000Z",
-      "description": "XRP price trades near $1.40, down about 8% over the past week and 11% below its September 23 high. Yet XRP holders are not rushing to sell. Coins keep leaving exchanges, and ETF buyers sitting on losses keep adding. Exchange Outflows Are Ho",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Poland: Inflation outlook stabilises – ING",
       "link": "https://www.fxstreet.com/news/poland-inflation-outlook-stabilises-ing-202610091440",
       "pubDate": "2026-10-09T14:40:31.000Z",
@@ -338,25 +366,11 @@
       "source": "FXStreet"
     },
     {
-      "title": "3 Altcoins That Could Reach All-Time Highs This Weekend",
-      "link": "https://beincrypto.com/altcoins-all-time-highs-mid-october/",
-      "pubDate": "2026-10-09T14:34:33.000Z",
-      "description": "WBT, BTW, and HYPE trade 8.4% to 14.3% below record highs. See the levels that could trigger new all-time highs.\nThe post 3 Altcoins That Could Reach All-Time Highs This Weekend appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "WTI holds steady as traders weigh US-Iran tensions and supply risks",
       "link": "https://www.fxstreet.com/news/wti-holds-steady-as-traders-weigh-us-iran-tensions-and-supply-risks-202610091425",
       "pubDate": "2026-10-09T14:25:05.000Z",
       "description": "West Texas Intermediate (WTI) Oil trades little changed on Friday as traders weigh easing fears of an immediate US-Iran military escalation against persistent supply risks in the Strait of Hormuz. At the time of writing, WTI trades around $",
       "source": "FXStreet"
-    },
-    {
-      "title": "OpenAI and Anthropic Rehearse an AI Disaster: Will It Hit Your Bank?",
-      "link": "https://beincrypto.com/openai-anthropic-rehearse-ai-disaster-scenario/",
-      "pubDate": "2026-10-09T14:23:00.000Z",
-      "description": "OpenAI and Anthropic are rehearsing an AI disaster that could shut down banks and power. Here is what they fear next.\nThe post OpenAI and Anthropic Rehearse an AI Disaster: Will It Hit Your Bank? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
     },
     {
       "title": "Canada: Gradual improvement expected – RBC",
@@ -371,20 +385,6 @@
       "pubDate": "2026-10-09T14:15:35.000Z",
       "description": "Canadian Dollar Weakens as Soft Jobs Data Dims Higher Rate Bets&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
-    },
-    {
-      "title": "Best-Performing ETF of 2026 Is Up 5,000%: What Does It Track?",
-      "link": "https://beincrypto.com/best-performing-etf-2026-hormuz-tankers/",
-      "pubDate": "2026-10-09T14:13:16.000Z",
-      "description": "The best-performing ETF of 2026 is up 5,000% on record tanker rates. See what drives BWET and why the rally could reverse.\nThe post Best-Performing ETF of 2026 Is Up 5,000%: What Does It Track? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families",
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
-      "pubDate": "2026-10-09T14:00:00.000Z",
-      "description": "Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families",
-      "source": "Federal Reserve"
     },
     {
       "title": "Gold: Short covering signals renewed bullish momentum - TD Securities",
@@ -457,13 +457,6 @@
       "source": "Bank of Japan"
     },
     {
-      "title": "Dollar’s Longest Winning Streak Since Early 2025 Keeps Going",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWW1saDRFbnlJWEpWdk1ZVlRBUzg1aE1qOHZEQ1JhbmxLelBJQlhrTkFrVkVfVXVLNVEtdl9UWDRJeEpMTHpYTTR6YUNmckd5VFl5eTVucHhxUDhhS2g0VHVMeHlLV295NEtZWFFibmpnWk5ial9UNzJyTnFLdTZTeE9VTlhrTDZNOHdoVlpyLUpka0twQlpQNDM3S3ZQTTBTb2t1OG51RjJURG5lYjREcw?oc=5",
-      "pubDate": "2026-10-09T08:05:09.000Z",
-      "description": "Dollar’s Longest Winning Streak Since Early 2025 Keeps Going&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
       "title": "American Girl Built a Fortune by Taking 9-Year-Old Girls Seriously",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPakhaTElJaE16cExseDZfTll4TDFMUF91eVlHY3hOREdTT2ZmN2IwMUtsSXpyMXdOaVh4bjJrUmE3clRhQ0V0ZHlfZDFCd2FNMVNtNWFwLVVka09HclBLMllfYnVQMWxCcTJmblRsZzZsS3BmSGpGWmliYnFMbVY4Zkg1ZXRwQnNqOERCZFhOc2pvNmtIVU5QY0ZBNE1YQlByTGFpMUNZTkxjRXRFeVoydWd3?oc=5",
       "pubDate": "2026-10-09T08:00:31.000Z",
@@ -534,13 +527,6 @@
       "source": "Google News"
     },
     {
-      "title": "Federal Reserve Board announces enforcement action against American Express Company to address, among other things, the firm’s failure to sufficiently detect and report certain suspicious activity related to money laundering",
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261008a.htm",
-      "pubDate": "2026-10-08T20:30:00.000Z",
-      "description": "Federal Reserve Board announces enforcement action against American Express Company to address, among other things, the firm’s failure to sufficiently detect and report certain suspicious activity related to money laundering",
-      "source": "Federal Reserve"
-    },
-    {
       "title": "Financial resilience in an age of repeated shocks -  speech by Andrew Bailey",
       "link": "https://www.bankofengland.co.uk/speech/2026/october/andrew-bailey-speech-at-the-istanbul-economic-forum-central-bank-of-the-republic-of-turkey-istanbul",
       "pubDate": "2026-10-08T12:15:00.000Z",
@@ -595,13 +581,6 @@
       "pubDate": "2026-10-07T23:01:00.000Z",
       "description": "The Atlantic puffin, barn owl, buff-tailed bumblebee and European hedgehog will represent UK wildlife and feature as the central images on our next series of banknotes.",
       "source": "Bank of England"
-    },
-    {
-      "title": "Minutes of the Federal Open Market Committee, September 15-16, 2026",
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261007a.htm",
-      "pubDate": "2026-10-07T18:00:00.000Z",
-      "description": "Minutes of the Federal Open Market Committee, September 15-16, 2026",
-      "source": "Federal Reserve"
     },
     {
       "title": "Minutes of the London FXJSC Legal Sub Committee Meeting – 16 June 2026",
@@ -665,6 +644,27 @@
       "pubDate": "2026-10-06T13:00:00.000Z",
       "description": "",
       "source": "European Central Bank"
+    },
+    {
+      "title": "Bowman, Modernizing Financial Regulation: Initial Observations from eSLR",
+      "link": "https://www.federalreserve.gov/newsevents/speech/bowman20261001a.htm",
+      "pubDate": "2026-10-01T19:00:00.000Z",
+      "description": "Speech At the Atlantic Council 2026 CEO & Senior Management Summit, Washington, D.C.",
+      "source": "Federal Reserve"
+    },
+    {
+      "title": "Jefferson, The U.S. Economy and Monetary Policy",
+      "link": "https://www.federalreserve.gov/newsevents/speech/jefferson20261001a.htm",
+      "pubDate": "2026-10-01T17:30:00.000Z",
+      "description": "Speech At the Darden School of Business, University of Virginia, Charlottesville, Virginia",
+      "source": "Federal Reserve"
+    },
+    {
+      "title": "Waller, The Data Version of Godzilla versus Kong: FRED Takes on AI",
+      "link": "https://www.federalreserve.gov/newsevents/speech/waller20261001a.htm",
+      "pubDate": "2026-10-01T14:00:00.000Z",
+      "description": "Speech At \"Navigating Trust, AI and Storytelling in a World of Data,\" FRED Con 2026, Federal Reserve Bank of St. Louis, St. Louis, Missouri",
+      "source": "Federal Reserve"
     },
     {
       "title": "Release of Financial Stability Review – October 2026",
