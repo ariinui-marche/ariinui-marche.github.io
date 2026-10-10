@@ -1,82 +1,110 @@
 {
-  "timestamp": "2026-10-10T01:59:07.845Z",
+  "timestamp": "2026-10-10T08:08:43.545Z",
   "items": [
     {
       "title": "2026-10-10 - Web-TV - Web TV: SNB events",
       "link": "https://www.snb.ch/en/services-events/digital-services/webtv/webtv-2026-09-24",
-      "pubDate": "2026-10-10T01:55:00.000Z",
+      "pubDate": "2026-10-10T08:06:59.000Z",
       "description": "",
       "source": "Swiss National Bank"
     },
     {
-      "title": "Eric L. Oliver, Cross Timbers director, buys $87,575 in units",
-      "link": "https://www.investing.com/news/insider-trading-news/eric-l-oliver-cross-timbers-director-buys-87575-in-units-93CH-4941917",
-      "pubDate": "2026-10-10T01:31:13.000Z",
+      "title": "Why are EU gas prices not higher already?",
+      "link": "https://www.investing.com/news/economy-news/why-are-eu-gas-prices-not-higher-already-4942043",
+      "pubDate": "2026-10-10T07:43:28.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Optimum communications director Neil Subin acquires $2.45m in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/optimum-communications-director-neil-subin-acquires-245m-in-stock-93CH-4941916",
-      "pubDate": "2026-10-10T01:31:06.000Z",
+      "title": "Nuveen portfolio manager Michael Hamilton buys $26,106 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/nuveen-portfolio-manager-michael-hamilton-buys-26106-in-stock-93CH-4942041",
+      "pubDate": "2026-10-10T07:31:10.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Ul solutions CEO Scanlon sells $876k of company stock",
-      "link": "https://www.investing.com/news/insider-trading-news/ul-solutions-ceo-scanlon-sells-876k-of-company-stock-93CH-4941910",
-      "pubDate": "2026-10-10T01:15:54.000Z",
+      "title": "China creates 10.52 million jobs, plans new AI and services employment measures",
+      "link": "https://www.investing.com/news/economy-news/china-creates-1052-million-jobs-plans-new-ai-and-services-employment-measures-4942031",
+      "pubDate": "2026-10-10T07:10:28.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Sequoia-backed Nuvacore seeks $2.5bn valuation in funding round - Reuters",
-      "link": "https://www.investing.com/news/stock-market-news/sequoiabacked-nuvacore-seeks-25bn-valuation-in-funding-round--reuters-4941907",
-      "pubDate": "2026-10-10T01:08:34.000Z",
+      "title": "Bitcoin hovers at Fibonacci support near $82,700: Live levels",
+      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-tests-87363-resistance-with-fading-momentum-live-levels-93CH-4931135",
+      "pubDate": "2026-10-10T07:02:31.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Datadog CTO Alexis Le-Quoc sells $14.75m in shares",
-      "link": "https://www.investing.com/news/insider-trading-news/datadog-cto-alexis-lequoc-sells-1475m-in-shares-93CH-4941905",
-      "pubDate": "2026-10-10T01:01:08.000Z",
+      "title": "100 Billion XRP Supply Was Nearly Broken by a 10-Year Bug",
+      "link": "https://beincrypto.com/xrp-ledger-bug-create-xrp-fixed/",
+      "pubDate": "2026-10-10T06:33:43.000Z",
+      "description": "An XRP Ledger bug could have minted XRP from nothing. Ripple shipped an emergency fix that skipped the validator vote.\nThe post 100 Billion XRP Supply Was Nearly Broken by a 10-Year Bug appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "European bank stocks slide 8% as bond yields spark investor caution - Bloomberg",
+      "link": "https://www.investing.com/news/stock-market-news/european-bank-stocks-slide-8-as-bond-yields-spark-investor-caution--bloomberg-4942017",
+      "pubDate": "2026-10-10T06:33:42.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Trump says Russia to supply diesel to US and global markets",
-      "link": "https://www.investing.com/news/commodities-news/trump-big-announcement-coming-up-on-diesel-4941467",
-      "pubDate": "2026-10-10T00:54:24.000Z",
+      "title": "Duolingo president & CEO Luis von Ahn sells $16.7 million in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/duolingo-president--ceo-luis-von-ahn-sells-167-million-in-stock-93CH-4942016",
+      "pubDate": "2026-10-10T06:31:19.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Mediaalpha CEO Steven Yi sells $263k in company stock",
-      "link": "https://www.investing.com/news/insider-trading-news/mediaalpha-ceo-steven-yi-sells-263k-in-company-stock-93CH-4941900",
-      "pubDate": "2026-10-10T00:46:03.000Z",
+      "title": "EOS Climbs 17% In a Green Day",
+      "link": "https://www.investing.com/news/cryptocurrency-news/eos-climbs-17-in-a-green-day-4942011",
+      "pubDate": "2026-10-10T06:16:02.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "InnSuites Hospitality Trust CEO Wirth reports $2.17 billion share disposition",
-      "link": "https://www.investing.com/news/insider-trading-news/innsuites-hospitality-trust-ceo-wirth-reports-217-billion-share-disposition-93CH-4941899",
-      "pubDate": "2026-10-10T00:45:52.000Z",
+      "title": "Bumble director Sissie Hsiao sells $6,956 in class A shares",
+      "link": "https://www.investing.com/news/insider-trading-news/bumble-director-sissie-hsiao-sells-6956-in-class-a-shares-93CH-4942010",
+      "pubDate": "2026-10-10T06:16:01.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Trump reaches Russian diesel supply deal as U.S. fuel prices surge",
-      "link": "https://www.investing.com/news/economy-news/trump-reaches-russian-diesel-supply-deal-as-us-fuel-prices-surge-4941896",
-      "pubDate": "2026-10-10T00:37:35.000Z",
+      "title": "Vivek Jain, Analog Devices officer, sells $2.16m in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/vivek-jain-analog-devices-officer-sells-216m-in-shares-93CH-4942001",
+      "pubDate": "2026-10-10T06:01:04.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Marvell Technology SVP Justin Scarpulla sells $300,949 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/marvell-technology-svp-justin-scarpulla-sells-300949-in-stock-93CH-4941893",
-      "pubDate": "2026-10-10T00:30:54.000Z",
+      "title": "Why is the Chinese stock market missing the AI rally",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-the-chinese-stock-market-missing-the-ai-rally-4941998",
+      "pubDate": "2026-10-10T05:58:41.000Z",
       "description": "",
       "source": "Investing.com"
+    },
+    {
+      "title": "Gate WCTC S9 Global Trading Competition Officially Live: Traders Worldwide Unite for the Ultimate Multi-Asset Showdown",
+      "link": "https://beincrypto.com/gate-wctc-59-global-trading-competition/",
+      "pubDate": "2026-10-10T05:19:16.000Z",
+      "description": "Gate has officially announced the launch of the World Crypto Trading Competition Season 9 (WCTC S9), running from October 9, 2026, 08:00 (UTC). Centered around the theme &#8220;Trade Beyond Boundaries, Rise to the Top,&#8221; this flagship ",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "RBI Announces Special Oil Window, Regulatory Steps for Rupee",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPcjNURXR0Z09rZS1RQXJSaXkxeVR1UkcwdGF6YmF5b0NvX2dXaWZaM0FtblhoMm1GWHlLQl9yU3NMd3d3NWp2WmphcVRMZk02Q1ZhMWRMdm01R2tMaWZPVFlGbVdZRlZLTnNFdWhPdWxxQXRoamdHWE9DUE1kWERFanIwZ1J3ckYybTdhWkt0bHlQbHNiTVNBRVdQdEVBR0lGWFNuS3g5SWpTT1A4RlM4?oc=5",
+      "pubDate": "2026-10-10T05:08:00.000Z",
+      "description": "RBI Announces Special Oil Window, Regulatory Steps for Rupee&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "India unveils tough curbs on dollar demand to defend rupee",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQdllQdm5CdmlVZXN1TkRYcEd3akdFcFFiMU9xSXJNUnBzbk9HNWFqbTVsYVpXMG03bldVc29lZjVfMk9seFo4LXpadURFdWhmUEVYdWViNjBPNkFiVi1HTkx1clBCc1ZsSGNOdjlweHR3V0JRa0JiRFpEZWNCMHpnTF9GX2RUeWUyTE1oT1VRNjBTSUVZVDBaa0ZkVi0yTFBpRnQ0TlcwM1d2MTc4bVd6U2ZqcDRxUWJESWY4aWpfTmdNeVpB?oc=5",
+      "pubDate": "2026-10-10T03:34:00.000Z",
+      "description": "India unveils tough curbs on dollar demand to defend rupee&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "DOJ To Investigate Binance Again. Could More Fines Follow?",
@@ -275,13 +303,6 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Dollar’s Longest Winning Streak Since Early 2025 Keeps Going",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWW1saDRFbnlJWEpWdk1ZVlRBUzg1aE1qOHZEQ1JhbmxLelBJQlhrTkFrVkVfVXVLNVEtdl9UWDRJeEpMTHpYTTR6YUNmckd5VFl5eTVucHhxUDhhS2g0VHVMeHlLV295NEtZWFFibmpnWk5ial9UNzJyTnFLdTZTeE9VTlhrTDZNOHdoVlpyLUpka0twQlpQNDM3S3ZQTTBTb2t1OG51RjJURG5lYjREcw?oc=5",
-      "pubDate": "2026-10-09T15:53:05.000Z",
-      "description": "Dollar’s Longest Winning Streak Since Early 2025 Keeps Going&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
       "title": "Euro struggles as French fiscal concerns and firm US Dollar dominate",
       "link": "https://www.fxstreet.com/news/euro-struggles-as-french-fiscal-concerns-and-firm-us-dollar-dominate-202610091544",
       "pubDate": "2026-10-09T15:44:52.000Z",
@@ -345,6 +366,13 @@
       "source": "FXStreet"
     },
     {
+      "title": "Canadian Dollar Weakens as Soft Jobs Data Dims Higher Rate Bets",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOaUJsTkNzcDN5WVBSOEEyTURPS3Y5aGhJbUEtWTdBNDdmYVdPcEFLQi1VWVlWcGc5UjFnVV9pWjJGcEhvck9kbm9lVFdpSjFOZU1STXowZHdCNUlpZU1ITlJqYkxWTDI2LW40bnp6b1hMN0cxeV9OZ3VjbjZJbjBidEtrLVBmUGphM1p6V2xaNEpfTnFGQmtpWmlqajRGOFQyclNLamtTZlpndG9jaTlNNVQ1TTQ?oc=5",
+      "pubDate": "2026-10-09T14:15:35.000Z",
+      "description": "Canadian Dollar Weakens as Soft Jobs Data Dims Higher Rate Bets&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
       "title": "Best-Performing ETF of 2026 Is Up 5,000%: What Does It Track?",
       "link": "https://beincrypto.com/best-performing-etf-2026-hormuz-tankers/",
       "pubDate": "2026-10-09T14:13:16.000Z",
@@ -366,13 +394,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Ledger Pauses Reseller Sales After $86 Million Drain Claims: Were Devices Tampered?",
-      "link": "https://beincrypto.com/ledger-reseller-sales-paused-drain-claims/",
-      "pubDate": "2026-10-09T13:51:00.000Z",
-      "description": "Ledger halts CryptoBilis sales and warns recent buyers as an analyst claims $86 million in user losses.\nThe post Ledger Pauses Reseller Sales After $86 Million Drain Claims: Were Devices Tampered? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Indian Rupee: RBI seen keeping hike option open – DBS",
       "link": "https://www.fxstreet.com/news/indian-rupee-rbi-seen-keeping-hike-option-open-dbs-202610091336",
       "pubDate": "2026-10-09T13:36:10.000Z",
@@ -392,13 +413,6 @@
       "pubDate": "2026-10-09T13:16:32.000Z",
       "description": "USD/CAD climbs on Friday as the Canadian Dollar (CAD) weakens sharply following a disappointing domestic employment report. A firm US Dollar (USD) provides additional support to the pair. At the time of writing, USD/CAD trades around 1.4276",
       "source": "FXStreet"
-    },
-    {
-      "title": "Dark Web Founder Loses $100 Million in Bitcoin After 40-Year Sentence: Where Does It Go?",
-      "link": "https://beincrypto.com/dark-web-founder-forfeits-1230-bitcoin/",
-      "pubDate": "2026-10-09T12:50:19.000Z",
-      "description": "Empire Market co-creator Raheim Hamilton gets 40 years and forfeits 1,230 Bitcoin. See where seized BTC goes next.\nThe post Dark Web Founder Loses $100 Million in Bitcoin After 40-Year Sentence: Where Does It Go? appeared first on BeInCrypt",
-      "source": "BeInCrypto"
     },
     {
       "title": "Sterling ticks higher as dollar dips on lower oil prices",
@@ -441,6 +455,20 @@
       "pubDate": "2026-10-09T09:00:00.000Z",
       "description": "",
       "source": "Bank of Japan"
+    },
+    {
+      "title": "Dollar’s Longest Winning Streak Since Early 2025 Keeps Going",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQWW1saDRFbnlJWEpWdk1ZVlRBUzg1aE1qOHZEQ1JhbmxLelBJQlhrTkFrVkVfVXVLNVEtdl9UWDRJeEpMTHpYTTR6YUNmckd5VFl5eTVucHhxUDhhS2g0VHVMeHlLV295NEtZWFFibmpnWk5ial9UNzJyTnFLdTZTeE9VTlhrTDZNOHdoVlpyLUpka0twQlpQNDM3S3ZQTTBTb2t1OG51RjJURG5lYjREcw?oc=5",
+      "pubDate": "2026-10-09T08:05:09.000Z",
+      "description": "Dollar’s Longest Winning Streak Since Early 2025 Keeps Going&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "American Girl Built a Fortune by Taking 9-Year-Old Girls Seriously",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPakhaTElJaE16cExseDZfTll4TDFMUF91eVlHY3hOREdTT2ZmN2IwMUtsSXpyMXdOaVh4bjJrUmE3clRhQ0V0ZHlfZDFCd2FNMVNtNWFwLVVka09HclBLMllfYnVQMWxCcTJmblRsZzZsS3BmSGpGWmliYnFMbVY4Zkg1ZXRwQnNqOERCZFhOc2pvNmtIVU5QY0ZBNE1YQlByTGFpMUNZTkxjRXRFeVoydWd3?oc=5",
+      "pubDate": "2026-10-09T08:00:31.000Z",
+      "description": "American Girl Built a Fortune by Taking 9-Year-Old Girls Seriously&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
     },
     {
       "title": "Amendment to \"Prices of Eligible Collateral\"",
@@ -513,39 +541,11 @@
       "source": "Federal Reserve"
     },
     {
-      "title": "Canadian dollar tries to bounce as yield spreads compress",
-      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxONTk1TE9qNHJrYXIydl9waER1dEFmdmZIcWxvWDFiQ0tBaG5qczYxU3EzZXhhRmxQQnR6amtUaUhwRW5RV2d3czJMZmo1bU5UbjZpazVJZXo4NkxzNGFXX1pnZ3JaVW94SkVHMXFvZVB0R0JJOVdVeU5BZkNUMXNkbkNBanpZR1J0bFByanYxM3NTYlZxcDJTbENCUkk?oc=5",
-      "pubDate": "2026-10-08T17:28:54.000Z",
-      "description": "Canadian dollar tries to bounce as yield spreads compress&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Euro zone finance ministers start steps to replace ECB's Schnabel",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPekJZN1lhLW9ocnpXM09pa0FxeVd4X05yQXdoQmJYallwN1FDbmRaT01NN1ByOEYtNFpkbkY0ODlzXzBTQjV2SlZ5Zi1NdlA5R0dFWTlrWnY3Wk4wV0lBV0toOFRTR3NMZlZqQmV0LU9hNWJkRi02U0lsdHpoWENIN2NPaGxzZmE2WnJ4SnRhM01COWY1STFCUFhzSy02TG5neXJEdTR3d3QtZDFDT19sYkpFMng5QQ?oc=5",
-      "pubDate": "2026-10-08T17:17:36.000Z",
-      "description": "Euro zone finance ministers start steps to replace ECB's Schnabel&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "Financial resilience in an age of repeated shocks -  speech by Andrew Bailey",
       "link": "https://www.bankofengland.co.uk/speech/2026/october/andrew-bailey-speech-at-the-istanbul-economic-forum-central-bank-of-the-republic-of-turkey-istanbul",
       "pubDate": "2026-10-08T12:15:00.000Z",
       "description": "Given at the Central Bank of Turkey, İstanbul Economic Forum",
       "source": "Bank of England"
-    },
-    {
-      "title": "AFRICA-FX-Uganda's currency expected to remain on the ropes",
-      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOWnlDTXVSTWYwT1dxTEZwMDYzd1htc0FhOUtXQmo3THdFaG0zR1NHQ1ZIM1RzOGFERV95UW9adzRhekRBSHkzUDU1YlZwRzNnVk5tLUFkODRRc2N2eUQ3U3NmRlhwMEdtcDZJeGtzYjlqcmhYYi1HSU1wODNXOE5NZWZmdWxxT1JHeXBVbkY0ekY4RVI2STF0ZTZUdmxjZw?oc=5",
-      "pubDate": "2026-10-08T11:53:43.000Z",
-      "description": "AFRICA-FX-Uganda's currency expected to remain on the ropes&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Euro zone ministers tell France to pass 2027 budget to calm markets",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZ1JMSXB2aERESElBa2JCX0tZUDZJQ2NhWTFacEM3NTE5QmtjcjNlM2RoMHppNVpyc0VfYWFCQVQ2Qml2ZU9mS0RvVDRfY1BmSnEzbHotaXV6MFVBblVkTjVqQ0JIRC03UDgyd1RLd3BtdWZmODg5cTFVNWswQ3k5WnR1ZUR3TWY5VjJiem9memp6VXFpNFQzOHcyNjNTaE9nUERUSUZ1akh3WGZXQTRQN3RMTHA?oc=5",
-      "pubDate": "2026-10-08T11:36:00.000Z",
-      "description": "Euro zone ministers tell France to pass 2027 budget to calm markets&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "Meeting of 9-10 September 2026",
