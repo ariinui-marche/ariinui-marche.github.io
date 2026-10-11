@@ -1,54 +1,117 @@
 {
-  "timestamp": "2026-10-10T22:00:22.363Z",
+  "timestamp": "2026-10-11T00:43:59.898Z",
   "items": [
     {
-      "title": "2026-10-10 - Web-TV - Web TV: SNB events",
+      "title": "2026-10-11 - Web-TV - Web TV: SNB events",
       "link": "https://www.snb.ch/en/services-events/digital-services/webtv/webtv-2026-09-24",
-      "pubDate": "2026-10-10T21:56:59.000Z",
+      "pubDate": "2026-10-11T00:35:01.000Z",
       "description": "",
       "source": "Swiss National Bank"
     },
     {
-      "title": "Saba capital director sells $290,781 in PIMCO Dynamic Income shares",
-      "link": "https://www.investing.com/news/insider-trading-news/saba-capital-director-sells-290781-in-pimco-dynamic-income-shares-93CH-4942268",
-      "pubDate": "2026-10-10T21:48:27.000Z",
+      "title": "Global trust in science falls below pre-pandemic levels, survey finds",
+      "link": "https://www.investing.com/news/economy-news/global-trust-in-science-falls-below-prepandemic-levels-survey-finds-4942351",
+      "pubDate": "2026-10-11T00:23:49.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Arista Networks CEO Ullal sells $21.06m in shares",
-      "link": "https://www.investing.com/news/insider-trading-news/arista-networks-ceo-ullal-sells-2106m-in-shares-93CH-4942267",
-      "pubDate": "2026-10-10T21:46:14.000Z",
+      "title": "Twilio CEO Khozema Shipchandler sells $4.2 million in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/twilio-ceo-khozema-shipchandler-sells-42-million-in-stock-93CH-4942348",
+      "pubDate": "2026-10-11T00:16:28.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Russia stocks lower at close of trade; MOEX Russia Index unchanged",
-      "link": "https://www.investing.com/news/stock-market-news/russia-stocks-lower-at-close-of-trade-moex-russia-index-unchanged-4942259",
-      "pubDate": "2026-10-10T21:20:03.000Z",
+      "title": "Onemednet CEO Aaron Green sells $47,762 in company stock",
+      "link": "https://www.investing.com/news/insider-trading-news/onemednet-ceo-aaron-green-sells-47762-in-company-stock-93CH-4942347",
+      "pubDate": "2026-10-11T00:16:01.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Prosperity Bancshares director Ned Holmes sells $72,363 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/prosperity-bancshares-director-ned-holmes-sells-72363-in-stock-93CH-4942257",
-      "pubDate": "2026-10-10T21:16:05.000Z",
+      "title": "Justice Department probes TV networks over Trump pool coverage",
+      "link": "https://www.investing.com/news/stock-market-news/justice-department-probes-tv-networks-over-trump-pool-coverage-new-york-times-reports-4942303",
+      "pubDate": "2026-10-11T00:06:19.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "H B Fuller director R Jeffrey Bailly buys $500,000 in common stock",
-      "link": "https://www.investing.com/news/insider-trading-news/h-b-fuller-director-r-jeffrey-bailly-buys-500000-in-common-stock-93CH-4942250",
-      "pubDate": "2026-10-10T21:01:09.000Z",
+      "title": "Gap chief legal officer Julie Gruber sells $648,679 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/gap-chief-legal-officer-julie-gruber-sells-648679-in-stock-93CH-4942338",
+      "pubDate": "2026-10-11T00:01:10.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "SailPoint chief accounting officer Mitra Rezvan sells $23,360 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/sailpoint-chief-accounting-officer-mitra-rezvan-sells-23360-in-stock-93CH-4942244",
-      "pubDate": "2026-10-10T20:46:08.000Z",
+      "title": "Onemednet CFO Robert Golden sells $55,290 in company stock",
+      "link": "https://www.investing.com/news/insider-trading-news/onemednet-cfo-robert-golden-sells-55290-in-company-stock-93CH-4942337",
+      "pubDate": "2026-10-11T00:00:59.000Z",
       "description": "",
       "source": "Investing.com"
+    },
+    {
+      "title": "Verisign exec. chairman, pres, & ceo Bidzos sells $964k in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/verisign-exec-chairman-pres--ceo-bidzos-sells-964k-in-stock-93CH-4942328",
+      "pubDate": "2026-10-10T23:46:18.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "United Therapeutics CEO Martine Rothblatt sells $5.1m in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/united-therapeutics-ceo-martine-rothblatt-sells-51m-in-shares-93CH-4942327",
+      "pubDate": "2026-10-10T23:46:12.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Robinhood chief legal officer sells $1.14m in HOOD stock",
+      "link": "https://www.investing.com/news/insider-trading-news/robinhood-chief-legal-officer-sells-114m-in-hood-stock-93CH-4942326",
+      "pubDate": "2026-10-10T23:46:04.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Nvidia in talks to acquire Reflection AI or increase investment, FT reports",
+      "link": "https://www.investing.com/news/company-news/nvidia-in-talks-to-acquire-reflection-ai-or-increase-investment-ft-reports-4942324",
+      "pubDate": "2026-10-10T23:45:15.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "For Walmart, Replacing Humans With Robots Is a Multibillion-Dollar Struggle",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNUURaUDZFVEhOZnE2T0VuWUtycXYyMnZNaktoMlZ1bENJZ0dHOGkzUDFRUUFpOWsyRWVmamJibF91LVBOREtoTHV2R1JXV1Z6aEh2OHNEbmNXWTkwZzJGMHhTbmw5bEQ2Uk4yUllKMDhEMDNYNWJJSFozb3NzRzRYTW5jY0M3bHNEQ2FkUA?oc=5",
+      "pubDate": "2026-10-10T23:31:31.000Z",
+      "description": "For Walmart, Replacing Humans With Robots Is a Multibillion-Dollar Struggle&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "WSJ Dollar Index Rises 0.05% to 97.31",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPUTF6QUtTdUpPM0ViZ1E3ellWU0xwTnk5WWJZeFRiMzRzaERvc3FHVEFGcUxINzNraWZSV3pjUUdPQTh5REVud25QYTFXRkJ3UU5MZnZDYVJTZ054Tno4WlZhZWdCTHNnazY0TEt5N01Gczk5d2xjdEVaQWdIejZTa1FOSUFxcENER19oUDBTLVZsVUE1LTYxS0RzdEFRQ3pNNHlUa211MzBLbU5OVEladTNEQllMbXpVMFh0djlmRkJXNzNZRkZF?oc=5",
+      "pubDate": "2026-10-10T22:49:35.000Z",
+      "description": "WSJ Dollar Index Rises 0.05% to 97.31&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "Is XRP Ledger Vulnerable to AI? Avalanche Founder Warns of Hidden Flaws",
+      "link": "https://beincrypto.com/xrp-ledger-security-flaws-ai-threat/",
+      "pubDate": "2026-10-10T22:29:51.000Z",
+      "description": "Avalanche founder Emin G&#252;n Sirer argues that AI could uncover security flaws in the XRP Ledger. He says that threat deserves more attention than the fall of existing cryptography. His warning arrives as the ledger faces renewed scrutin",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "A COVID Vaccine Stock on the S&#038;P 500 Is Up 600% This Year",
+      "link": "https://beincrypto.com/moderna-stock-best-sp-500-2026/",
+      "pubDate": "2026-10-10T22:23:54.000Z",
+      "description": "Moderna stock is up 663% in 2026, beating AI names for the S&#038;P 500 lead. Full cancer vaccine data arrives October 24.\nThe post A COVID Vaccine Stock on the S&P 500 Is Up 600% This Year appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Mystery Bets on Trump’s New Press Secretary Could Turn $173 Into $9,600",
+      "link": "https://beincrypto.com/kalshi-probes-trump-press-secretary-bets/",
+      "pubDate": "2026-10-10T21:33:18.000Z",
+      "description": "Kalshi is probing bets on Trump's press secretary pick placed before the news. One $19 wager could pay $1,896.\nThe post Mystery Bets on Trump’s New Press Secretary Could Turn $173 Into $9,600 appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
     },
     {
       "title": "Gold Futures Regain Some Ground As U.S. Dollar, Yields Slip",
@@ -60,37 +123,9 @@
     {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-10-10T20:22:41.000Z",
+      "pubDate": "2026-10-10T20:22:53.000Z",
       "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
       "source": "Bank of Canada"
-    },
-    {
-      "title": "Neogen CEO Mikheal Nassif buys $6,034 in company stock",
-      "link": "https://www.investing.com/news/insider-trading-news/neogen-ceo-mikheal-nassif-buys-6034-in-company-stock-93CH-4942234",
-      "pubDate": "2026-10-10T20:15:57.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Infosys sees no material impact from U.S. PERM suspension",
-      "link": "https://www.investing.com/news/stock-market-news/infosys-sees-no-material-impact-from-us-perm-suspension-4942230",
-      "pubDate": "2026-10-10T20:14:06.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Caledonia Mining earnings beat by $0.10, revenue topped estimates",
-      "link": "https://www.investing.com/news/earnings/caledonia-mining-earnings-beat-by-010-revenue-topped-estimates-4942229",
-      "pubDate": "2026-10-10T20:09:28.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Nvidia in talks to invest further in Reflection AI or buy it, FT reports",
-      "link": "https://www.investing.com/news/stock-market-news/nvidia-in-talks-to-invest-further-in-reflection-ai-or-buy-it-ft-reports-4942221",
-      "pubDate": "2026-10-10T19:36:35.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "WSJ Dollar Index Falls 0.06% to 97.34",
@@ -179,23 +214,9 @@
     {
       "title": "India unveils tough curbs on dollar demand to defend rupee",
       "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQdllQdm5CdmlVZXN1TkRYcEd3akdFcFFiMU9xSXJNUnBzbk9HNWFqbTVsYVpXMG03bldVc29lZjVfMk9seFo4LXpadURFdWhmUEVYdWViNjBPNkFiVi1HTkx1clBCc1ZsSGNOdjlweHR3V0JRa0JiRFpEZWNCMHpnTF9GX2RUeWUyTE1oT1VRNjBTSUVZVDBaa0ZkVi0yTFBpRnQ0TlcwM1d2MTc4bVd6U2ZqcDRxUWJESWY4aWpfTmdNeVpB?oc=5",
-      "pubDate": "2026-10-10T06:12:42.000Z",
+      "pubDate": "2026-10-10T03:34:00.000Z",
       "description": "India unveils tough curbs on dollar demand to defend rupee&nbsp;&nbsp;Reuters",
       "source": "Reuters"
-    },
-    {
-      "title": "Gate WCTC S9 Global Trading Competition Officially Live: Traders Worldwide Unite for the Ultimate Multi-Asset Showdown",
-      "link": "https://beincrypto.com/gate-wctc-59-global-trading-competition/",
-      "pubDate": "2026-10-10T05:19:16.000Z",
-      "description": "Gate has officially announced the launch of the World Crypto Trading Competition Season 9 (WCTC S9), running from October 9, 2026, 08:00 (UTC). Centered around the theme &#8220;Trade Beyond Boundaries, Rise to the Top,&#8221; this flagship ",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "DOJ To Investigate Binance Again. Could More Fines Follow?",
-      "link": "https://beincrypto.com/doj-binance-investigation-compliance-settlement/",
-      "pubDate": "2026-10-10T00:09:51.000Z",
-      "description": "Binance agreed to pay $4.3 billion to settle a US criminal case in 2023. Less than three years later, federal prosecutors are checking whether the world&#8217;s largest crypto exchange broke the terms of that deal. Tysen Duva, head of the J",
-      "source": "BeInCrypto"
     },
     {
       "title": "Aussie extends weekly gains as Fed pause bets offset hawkish rhetoric",
@@ -245,13 +266,6 @@
       "pubDate": "2026-10-09T19:23:58.000Z",
       "description": "After a call with Russian President Putin, President Donald Trump said on Friday Russia will immediately supply more than 300K tons of diesel to the US and global markets. He put the next shipments at 500K tons in November and 1 million ton",
       "source": "FXStreet"
-    },
-    {
-      "title": "Trump Says Putin Will Ship 4.8 Million Tons of Diesel: Will Prices Actually Fall?",
-      "link": "https://beincrypto.com/trump-putin-russian-diesel-deal-prices/",
-      "pubDate": "2026-10-09T19:14:46.000Z",
-      "description": "Trump says Russia will ship 4.8 million tons of diesel. See what stands between the pledge and lower pump prices.\nThe post Trump Says Putin Will Ship 4.8 Million Tons of Diesel: Will Prices Actually Fall? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
     },
     {
       "title": "China: Robust trade and rising prices – DBS",
@@ -471,13 +485,6 @@
       "source": "Bank of Japan"
     },
     {
-      "title": "Gold hits one-week high, heads for weekly gain on bargain-hunting",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQVl80MTVLVXR1WWd1MGxyNFRNN1VaNlJ2WFNIeGlrLS1HTGwzc1pZZ3FqaFZyOFBZcDk0VGRnMzVvSUtiSGFyR3c2Z29Fa25XZk1xX0JlWGpJZVlNaEJhWXhoenc3enFGZGZ3QnVUaGg1U2ZTNE9GZGxfTDIyb3hoMl9ycTNsOHpHeWdKRXk1VmdZZ1VITnhMR29NQ3JYUmV4TXJpemVRaw?oc=5",
-      "pubDate": "2026-10-09T08:52:57.000Z",
-      "description": "Gold hits one-week high, heads for weekly gain on bargain-hunting&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "American Girl Built a Fortune by Taking 9-Year-Old Girls Seriously",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPakhaTElJaE16cExseDZfTll4TDFMUF91eVlHY3hOREdTT2ZmN2IwMUtsSXpyMXdOaVh4bjJrUmE3clRhQ0V0ZHlfZDFCd2FNMVNtNWFwLVVka09HclBLMllfYnVQMWxCcTJmblRsZzZsS3BmSGpGWmliYnFMbVY4Zkg1ZXRwQnNqOERCZFhOc2pvNmtIVU5QY0ZBNE1YQlByTGFpMUNZTkxjRXRFeVoydWd3?oc=5",
       "pubDate": "2026-10-09T08:00:31.000Z",
@@ -520,17 +527,10 @@
       "source": "Bank of Japan"
     },
     {
-      "title": "Gold rises on softer dollar, easing yields; Fed outlook in focus",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNeGNoLVpDYnBQaDAyMHhRWGgyWTB6VUs1Q3FzcXdjeE5ZaUF5WGZTeF95ajd0MEJpeEltTmhjOW84Q21kSkZZZTRZZFpXbXk2Q1NGSFJTWWgteGxDR1dDWjBxa29OZ1lmZExpZjIzZDY1NlhyT3VMTkhBck1laGF2Q3MxRmJxTmFJY3BJM29sRko2Z1A1RE93QktQMkZqQ0sxWGJLTUdCX2VwZTg?oc=5",
+      "title": "Gold hits one-week high, heads for weekly gain on bargain-hunting",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQVl80MTVLVXR1WWd1MGxyNFRNN1VaNlJ2WFNIeGlrLS1HTGwzc1pZZ3FqaFZyOFBZcDk0VGRnMzVvSUtiSGFyR3c2Z29Fa25XZk1xX0JlWGpJZVlNaEJhWXhoenc3enFGZGZ3QnVUaGg1U2ZTNE9GZGxfTDIyb3hoMl9ycTNsOHpHeWdKRXk1VmdZZ1VITnhMR29NQ3JYUmV4TXJpemVRaw?oc=5",
       "pubDate": "2026-10-09T01:58:00.000Z",
-      "description": "Gold rises on softer dollar, easing yields; Fed outlook in focus&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Euro falls, set for fifth straight weekly drop as oil prices rise",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQeXdEVjljdXBVWmtDOUFnLWJiRVhYWHg1TVNmTEhLbXN1Q0RSeFN0UW5ES2pmYmV0aVA0Z3BuMkdLTFAydFJBNm1KeE5xUFNITlhIMzZMRHNTMkRSc3QwWTRfMVRPSkJGY1BlQUJ5R1NZN3NOOU9xUWNnOGk4bGxlYlh2emNhaXNwdjBXNXU1bWVjeUxXVHdpMUpsZ202M3JwVnIyc3J3?oc=5",
-      "pubDate": "2026-10-09T01:04:00.000Z",
-      "description": "Euro falls, set for fifth straight weekly drop as oil prices rise&nbsp;&nbsp;Reuters",
+      "description": "Gold hits one-week high, heads for weekly gain on bargain-hunting&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
