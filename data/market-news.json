@@ -1,82 +1,117 @@
 {
-  "timestamp": "2026-10-11T13:16:16.296Z",
+  "timestamp": "2026-10-11T18:06:16.448Z",
   "items": [
+    {
+      "title": "Onemednet CFO Robert Golden sells $55,290 in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/onemednet-cfo-robert-golden-sells-55290-in-shares-93CH-4942798",
+      "pubDate": "2026-10-11T18:01:08.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Saudi Arabia reports injuries in new attack at Riyadh airport, day after strike kills 13",
+      "link": "https://www.investing.com/news/commodities-news/yemens-houthis-renew-warning-over-saudi-airports-after-deadly-riyadh-attack-4942575",
+      "pubDate": "2026-10-11T18:00:29.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
+      "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
+      "pubDate": "2026-10-11T17:59:42.000Z",
+      "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
+      "source": "Bank of Canada"
+    },
     {
       "title": "2026-10-11 - Web-TV - Web TV: SNB events",
       "link": "https://www.snb.ch/en/services-events/digital-services/webtv/webtv-2026-09-24",
-      "pubDate": "2026-10-11T13:10:00.000Z",
+      "pubDate": "2026-10-11T17:57:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
     },
     {
-      "title": "EOS Climbs 11% As Investors Gain Confidence",
-      "link": "https://www.investing.com/news/cryptocurrency-news/eos-climbs-11-as-investors-gain-confidence-4942660",
-      "pubDate": "2026-10-11T13:03:01.000Z",
+      "title": "Iran rejects U.S. stance on Hormuz as Trump weighs strikes over Riyadh attacks",
+      "link": "https://www.investing.com/news/economy-news/trump-weighs-renewed-iran-strikes-as-saudi-airport-attack-kills-12-4942483",
+      "pubDate": "2026-10-11T17:47:32.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Zymeworks EVP Adam Schayowitz sells $357,557 in shares",
-      "link": "https://www.investing.com/news/insider-trading-news/zymeworks-evp-adam-schayowitz-sells-357557-in-shares-93CH-4942659",
-      "pubDate": "2026-10-11T13:01:18.000Z",
+      "title": "Sonic Automotive director Paul Rusnak buys $1.29m in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/sonic-automotive-director-paul-rusnak-buys-129m-in-shares-93CH-4942789",
+      "pubDate": "2026-10-11T17:31:02.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Bank earnings, CPI headline busy markets week as S&P 500 hovers near records",
-      "link": "https://www.investing.com/news/economy-news/bank-earnings-cpi-headline-busy-markets-week-as-sp-500-hovers-near-records-4942657",
-      "pubDate": "2026-10-11T13:00:27.000Z",
+      "title": "Oil Traders Are About to Test Trump’s Russia-Ukraine Ceasefire Claim, But Bitcoin Reacted First",
+      "link": "https://beincrypto.com/trump-energy-ceasefire-oil-bitcoin-test/",
+      "pubDate": "2026-10-11T17:06:39.000Z",
+      "description": "Bitcoin rose on Trump’s Russia-Ukraine energy ceasefire claim. Oil futures reopen next to test a truce neither side confirmed.\nThe post Oil Traders Are About to Test Trump’s Russia-Ukraine Ceasefire Claim, But Bitcoin Reacted First appeared",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Stellantis bets on small affordable EVs for European comeback",
+      "link": "https://www.investing.com/news/stock-market-news/stellantis-bets-on-small-affordable-evs-for-european-comeback-4942779",
+      "pubDate": "2026-10-11T17:06:23.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Saudi Arabia stocks lower at close of trade; Tadawul All Share down 0.15%",
-      "link": "https://www.investing.com/news/stock-market-news/saudi-arabia-stocks-lower-at-close-of-trade-tadawul-all-share-down-015-4942645",
-      "pubDate": "2026-10-11T12:45:04.000Z",
+      "title": "UL Solutions president and CEO Jennifer Scanlon sells $876k in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/ul-solutions-president-and-ceo-jennifer-scanlon-sells-876k-in-stock-93CH-4942777",
+      "pubDate": "2026-10-11T17:01:06.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Why ’Net Stocks’ are down sharply this year despite Nasdaq’s gains",
-      "link": "https://www.investing.com/news/stock-market-news/why-net-stocks-are-down-sharply-this-year-despite-nasdaqs-gains-4942643",
-      "pubDate": "2026-10-11T12:33:27.000Z",
+      "title": "Elon Musk’s Starlink Faces a New Threat From Russia",
+      "link": "https://beincrypto.com/elon-musk-starlink-russia-satellite-threat/",
+      "pubDate": "2026-10-11T16:52:59.000Z",
+      "description": "Four Russian military satellites closed in on a Western spacecraft supplying intelligence to Ukraine. Germany&#8217;s space commander now warns that similar tactics could threaten Elon Musk&#8217;s Starlink, potentially affecting users far ",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "SentinelOne CFO Sonalee Parekh sells $413,291 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/sentinelone-cfo-sonalee-parekh-sells-413291-in-stock-93CH-4942770",
+      "pubDate": "2026-10-11T16:46:04.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Bastion trading, SkyAI 10% owner, buys $78,262 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/bastion-trading-skyai-10-owner-buys-78262-in-stock-93CH-4942642",
-      "pubDate": "2026-10-11T12:31:04.000Z",
+      "title": "Innsuites Hospitality Trust CEO Wirth sells $2.17 billion in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/innsuites-hospitality-trust-ceo-wirth-sells-217-billion-in-stock-93CH-4942769",
+      "pubDate": "2026-10-11T16:45:59.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Procter & Gamble CFO Andre Schulten sells $568,860 of stock",
-      "link": "https://www.investing.com/news/insider-trading-news/procter--gamble-cfo-andre-schulten-sells-568860-of-stock-93CH-4942633",
-      "pubDate": "2026-10-11T12:16:05.000Z",
+      "title": "Beta Technologies CEO Kyle Clark sells $612,234 in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/beta-technologies-ceo-kyle-clark-sells-612234-in-shares-93CH-4942763",
+      "pubDate": "2026-10-11T16:16:02.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "RingCentral director Amy Shenkan disposes of $99,710 in company stock",
-      "link": "https://www.investing.com/news/insider-trading-news/ringcentral-director-amy-shenkan-disposes-of-99710-in-company-stock-93CH-4942624",
-      "pubDate": "2026-10-11T12:01:10.000Z",
+      "title": "Palo Alto Networks director Bawa sells $103,070 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/palo-alto-networks-director-bawa-sells-103070-in-stock-93CH-4942762",
+      "pubDate": "2026-10-11T16:15:59.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Major Saudi conferences to proceed, organisers say, despite deadly airport attack",
-      "link": "https://www.investing.com/news/commodities-news/major-saudi-conferences-to-proceed-organisers-say-despite-deadly-airport-attack-4942618",
-      "pubDate": "2026-10-11T11:54:22.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "Meta Stock Warning? Zuckerberg Sells $21 Million as Insiders Exit",
+      "link": "https://beincrypto.com/meta-stock-warning-insiders-sell/",
+      "pubDate": "2026-10-11T14:13:51.000Z",
+      "description": "Meta insiders sold millions in stock over six months and bought none. Here is what the SEC filings behind the tally show.\nThe post Meta Stock Warning? Zuckerberg Sells $21 Million as Insiders Exit appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
     },
     {
-      "title": "IP fibre devices ltd sells $1.3m in IPG Photonics stock",
-      "link": "https://www.investing.com/news/insider-trading-news/ip-fibre-devices-ltd-sells-13m-in-ipg-photonics-stock-93CH-4942615",
-      "pubDate": "2026-10-11T11:46:48.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "Pokémon Cards Just Crushed Bitcoin, Gold and the S&#038;P 500 With 150% Returns",
+      "link": "https://beincrypto.com/pokemon-cards-outperform-bitcoin-gold-sp500/",
+      "pubDate": "2026-10-11T13:48:41.000Z",
+      "description": "Rare Pok&#233;mon cards continue to outperform traditional assets. The CardTrack 100 index has returned 150.7% since September 2021, beating Bitcoin, gold, and the S&#38;P 500 by wide margins. The numbers reveal why collectors now treat rar",
+      "source": "BeInCrypto"
     },
     {
       "title": "Who Really Owns Bitcoin? Wall Street vs. Ordinary People",
@@ -107,6 +142,13 @@
       "source": "BeInCrypto"
     },
     {
+      "title": "Gold Futures Regain Some Ground As U.S. Dollar, Yields Slip",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPSWlsbHNZenR1NVhsMjFaV19yUmNZWDZDNzR5RThJV3NEUG03aW5YYVVYaDVZTU92UnluX1BHTi02ZUxvZWxZU0p0eXpXZFNUTnZNVWFqYzVtT2o1Nmp6QlRuZXE1ekt4alF5MnREYlFwN0Y1T3NITEh6SU9rTWVES2RuQlljVmtMQXZPSW9lZm91UzhQcXB5Y2dJVWVtX2swM1hZZ0dqMDRmcFdFY0J1UjN1Y2V1a0ZQOUJyT3Fn?oc=5",
+      "pubDate": "2026-10-11T08:54:38.000Z",
+      "description": "Gold Futures Regain Some Ground As U.S. Dollar, Yields Slip&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
       "title": "WSJ Dollar Index Rises 0.05% to 97.31",
       "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPUTF6QUtTdUpPM0ViZ1E3ellWU0xwTnk5WWJZeFRiMzRzaERvc3FHVEFGcUxINzNraWZSV3pjUUdPQTh5REVud25QYTFXRkJ3UU5MZnZDYVJTZ054Tno4WlZhZWdCTHNnazY0TEt5N01Gczk5d2xjdEVaQWdIejZTa1FOSUFxcENER19oUDBTLVZsVUE1LTYxS0RzdEFRQ3pNNHlUa211MzBLbU5OVEladTNEQllMbXpVMFh0djlmRkJXNzNZRkZF?oc=5",
       "pubDate": "2026-10-10T22:49:35.000Z",
@@ -135,52 +177,10 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Gold Futures Regain Some Ground As U.S. Dollar, Yields Slip",
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPSWlsbHNZenR1NVhsMjFaV19yUmNZWDZDNzR5RThJV3NEUG03aW5YYVVYaDVZTU92UnluX1BHTi02ZUxvZWxZU0p0eXpXZFNUTnZNVWFqYzVtT2o1Nmp6QlRuZXE1ekt4alF5MnREYlFwN0Y1T3NITEh6SU9rTWVES2RuQlljVmtMQXZPSW9lZm91UzhQcXB5Y2dJVWVtX2swM1hZZ0dqMDRmcFdFY0J1UjN1Y2V1a0ZQOUJyT3Fn?oc=5",
-      "pubDate": "2026-10-10T20:39:42.000Z",
-      "description": "Gold Futures Regain Some Ground As U.S. Dollar, Yields Slip&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
-      "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
-      "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-10-10T20:22:53.000Z",
-      "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
-      "source": "Bank of Canada"
-    },
-    {
       "title": "Veteran Trader Gives Critical Warning for Gold Price",
       "link": "https://beincrypto.com/peter-brandt-gold-price-warning/",
       "pubDate": "2026-10-10T18:37:35.000Z",
       "description": "Veteran trader Peter Brandt has warned that gold price could face a sharp decline after spotting a bearish pattern on its weekly chart. The pattern, known as head-and-shoulders, often appears when an asset&#8217;s strong rally begins to los",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Wall Street Is Pulling Money From Ethereum as Traders Load Shorts",
-      "link": "https://beincrypto.com/ethereum-etf-outflows-nine-days-shorts/",
-      "pubDate": "2026-10-10T18:12:52.000Z",
-      "description": "Ethereum ETFs bled $56.1 million for a ninth straight day as $5 billion in ETH shorts stack up above the price.\nThe post Wall Street Is Pulling Money From Ethereum as Traders Load Shorts appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "China Is Building a National Blockchain Network: Will Bitcoin Benefit?",
-      "link": "https://beincrypto.com/china-national-blockchain-network-bitcoin/",
-      "pubDate": "2026-10-10T14:19:57.000Z",
-      "description": "China plans a national blockchain network in its new economic blueprint. Here is why Bitcoin is left out of it.\nThe post China Is Building a National Blockchain Network: Will Bitcoin Benefit? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "One of Wall Street&#039;s Best Hedge Funds Just Blew a 44% Gain Because of AI Bets",
-      "link": "https://beincrypto.com/lone-pine-hedge-fund-ai-stocks-loss/",
-      "pubDate": "2026-10-10T13:25:06.000Z",
-      "description": "Lone Pine's hedge fund erased a 44% gain in one quarter as AI stocks like Nebius and ASML reversed. See which bets failed.\nThe post One of Wall Street&#039;s Best Hedge Funds Just Blew a 44% Gain Because of AI Bets appeared first on BeInCry",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Claude AI Sent Police a Fake Murder Tip",
-      "link": "https://beincrypto.com/claude-ai-fake-murder-tip-police/",
-      "pubDate": "2026-10-10T11:31:15.000Z",
-      "description": "Claude AI sent Philadelphia police a fake murder tip during a test. Here's what made it happen and why police object.\nThe post Claude AI Sent Police a Fake Murder Tip appeared first on BeInCrypto.",
       "source": "BeInCrypto"
     },
     {
@@ -195,13 +195,6 @@
       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPcjNURXR0Z09rZS1RQXJSaXkxeVR1UkcwdGF6YmF5b0NvX2dXaWZaM0FtblhoMm1GWHlLQl9yU3NMd3d3NWp2WmphcVRMZk02Q1ZhMWRMdm01R2tMaWZPVFlGbVdZRlZLTnNFdWhPdWxxQXRoamdHWE9DUE1kWERFanIwZ1J3ckYybTdhWkt0bHlQbHNiTVNBRVdQdEVBR0lGWFNuS3g5SWpTT1A4RlM4?oc=5",
       "pubDate": "2026-10-10T08:12:36.000Z",
       "description": "RBI Announces Special Oil Window, Regulatory Steps for Rupee&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
-      "title": "For Walmart, Replacing Humans With Robots Is a Multibillion-Dollar Struggle",
-      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNUURaUDZFVEhOZnE2T0VuWUtycXYyMnZNaktoMlZ1bENJZ0dHOGkzUDFRUUFpOWsyRWVmamJibF91LVBOREtoTHV2R1JXV1Z6aEh2OHNEbmNXWTkwZzJGMHhTbmw5bEQ2Uk4yUllKMDhEMDNYNWJJSFozb3NzRzRYTW5jY0M3bHNEQ2FkUA?oc=5",
-      "pubDate": "2026-10-10T07:00:00.000Z",
-      "description": "For Walmart, Replacing Humans With Robots Is a Multibillion-Dollar Struggle&nbsp;&nbsp;WSJ",
       "source": "Google News"
     },
     {
@@ -317,13 +310,6 @@
       "source": "FXStreet"
     },
     {
-      "title": "Canadian dollar hits 18-month low as jobs data clips rate hike bets",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOQUhaVmM5cUV2SG80RDlHYnJRYnRGLU10aGtIdVQzcjEwb1JlTVREcWNlNjUxYndKVGJkbVhpYmZId3hoUk55YzJISS1sZXhzbFI5dER5dHNNdmZyOG1OMzBqOVYzcGpzNjRiRllrODVrX2p1M25OVmRKSjhlUXFhN1dzanQ4Y0ZKeU5oaGZtQU1xX2hFbkVfcFBuOVVyaVFGbE5FY1dsUi1HT2ZOS2c?oc=5",
-      "pubDate": "2026-10-09T17:25:44.000Z",
-      "description": "Canadian dollar hits 18-month low as jobs data clips rate hike bets&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "Asia FX: Trade negotiations and resilient macro backdrop – MUFG",
       "link": "https://www.fxstreet.com/news/asia-fx-trade-negotiations-and-resilient-macro-backdrop-mufg-202610091702",
       "pubDate": "2026-10-09T17:02:10.000Z",
@@ -406,6 +392,13 @@
       "pubDate": "2026-10-09T14:15:35.000Z",
       "description": "Canadian Dollar Weakens as Soft Jobs Data Dims Higher Rate Bets&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
+    },
+    {
+      "title": "Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families",
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
+      "pubDate": "2026-10-09T14:00:00.000Z",
+      "description": "Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families",
+      "source": "Federal Reserve"
     },
     {
       "title": "Gold: Short covering signals renewed bullish momentum - TD Securities",
@@ -492,11 +485,25 @@
       "source": "Bank of Japan"
     },
     {
+      "title": "For Walmart, Replacing Humans With Robots Is a Multibillion-Dollar Struggle",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNUURaUDZFVEhOZnE2T0VuWUtycXYyMnZNaktoMlZ1bENJZ0dHOGkzUDFRUUFpOWsyRWVmamJibF91LVBOREtoTHV2R1JXV1Z6aEh2OHNEbmNXWTkwZzJGMHhTbmw5bEQ2Uk4yUllKMDhEMDNYNWJJSFozb3NzRzRYTW5jY0M3bHNEQ2FkUA?oc=5",
+      "pubDate": "2026-10-09T01:00:00.000Z",
+      "description": "For Walmart, Replacing Humans With Robots Is a Multibillion-Dollar Struggle&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
       "title": "WSJ Dollar Index Falls 0.06% to 97.34",
       "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQOXU1U0xTYXlzemV1VldiSVM2eFBCQ2p5QjN4aTBpWVVzc2NxemdjOWdRWkIzNkZYQ25kTmU4dUtXY0VBN2JpNmNtc3dGZDFDNW1jbzE5SG92enBmeVY5d0dRd3gzcXhDRFVrVTJzeXhjRDFQQUhYRnRMUmVkVXRYcHdGRkk0Umt0RGtwVzBKYXRGd0VuVnQ2NW8yWU5UX1JPaE5sY1BYaHEtVlNlUm5RbktMRQ?oc=5",
       "pubDate": "2026-10-08T21:19:00.000Z",
       "description": "WSJ Dollar Index Falls 0.06% to 97.34&nbsp;&nbsp;WSJ",
       "source": "Google News"
+    },
+    {
+      "title": "Federal Reserve Board announces enforcement action against American Express Company to address, among other things, the firm’s failure to sufficiently detect and report certain suspicious activity related to money laundering",
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261008a.htm",
+      "pubDate": "2026-10-08T20:30:00.000Z",
+      "description": "Federal Reserve Board announces enforcement action against American Express Company to address, among other things, the firm’s failure to sufficiently detect and report certain suspicious activity related to money laundering",
+      "source": "Federal Reserve"
     },
     {
       "title": "Financial resilience in an age of repeated shocks -  speech by Andrew Bailey",
@@ -583,6 +590,20 @@
       "source": "Google News"
     },
     {
+      "title": "Fed Used Treasury Funds to Support Yen in Joint Intervention",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQVTJZdUNqaGpmYlEyNWtVNDR3cFc5ano2UHpFMWtlYkd1UEVZNGhLZGx6TUxvZHVEeDdaV2ZQc3J6LXU1aU5pTnhPRDlJZzJKdzBVZEM3aThUWjVTZ0prNVFUSnR6M1lxQ0tFanJzMmc5dDRxUDFld0MtMmpoRG1MX3hnZHM1X1JSczM2VTBFd1MtNHNwM2pYMmk4Y2dTWExoMHNpUzAwaGVodDBiRTVKRA?oc=5",
+      "pubDate": "2026-10-07T19:03:20.000Z",
+      "description": "Fed Used Treasury Funds to Support Yen in Joint Intervention&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "Minutes of the Federal Open Market Committee, September 15-16, 2026",
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261007a.htm",
+      "pubDate": "2026-10-07T18:00:00.000Z",
+      "description": "Minutes of the Federal Open Market Committee, September 15-16, 2026",
+      "source": "Federal Reserve"
+    },
+    {
       "title": "Minutes of the London FXJSC Legal Sub Committee Meeting – 16 June 2026",
       "link": "https://www.bankofengland.co.uk/minutes/2026/june/fxjsc-legal-sub-committee-meeting-16-june-26",
       "pubDate": "2026-10-07T13:36:25.000Z",
@@ -644,27 +665,6 @@
       "pubDate": "2026-10-06T13:00:00.000Z",
       "description": "",
       "source": "European Central Bank"
-    },
-    {
-      "title": "Bowman, Modernizing Financial Regulation: Initial Observations from eSLR",
-      "link": "https://www.federalreserve.gov/newsevents/speech/bowman20261001a.htm",
-      "pubDate": "2026-10-01T19:00:00.000Z",
-      "description": "Speech At the Atlantic Council 2026 CEO & Senior Management Summit, Washington, D.C.",
-      "source": "Federal Reserve"
-    },
-    {
-      "title": "Jefferson, The U.S. Economy and Monetary Policy",
-      "link": "https://www.federalreserve.gov/newsevents/speech/jefferson20261001a.htm",
-      "pubDate": "2026-10-01T17:30:00.000Z",
-      "description": "Speech At the Darden School of Business, University of Virginia, Charlottesville, Virginia",
-      "source": "Federal Reserve"
-    },
-    {
-      "title": "Waller, The Data Version of Godzilla versus Kong: FRED Takes on AI",
-      "link": "https://www.federalreserve.gov/newsevents/speech/waller20261001a.htm",
-      "pubDate": "2026-10-01T14:00:00.000Z",
-      "description": "Speech At \"Navigating Trust, AI and Storytelling in a World of Data,\" FRED Con 2026, Federal Reserve Bank of St. Louis, St. Louis, Missouri",
-      "source": "Federal Reserve"
     },
     {
       "title": "Release of Financial Stability Review – October 2026",
