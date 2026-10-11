@@ -1068,6 +1068,10 @@ body.focus-on main > section:has(#trendGrid) { order: 4; }
 .ct-wrap .ct-imp-High { background: var(--red); }
 .ct-wrap .ct-imp-Medium { background: var(--orange); }
 .ct-wrap .ct-imp-Low { background: #eab308; opacity: 0.7; }
+.ct-wrap .ct-row.ct-holiday .ct-title,
+.ct-wrap .ct-row.ct-holiday .ct-time,
+.ct-wrap .ct-row.ct-holiday .ct-ccy { color: #6b7280; }
+.ct-wrap .ct-row.ct-holiday .ct-imp { background: #6b7280; }
 .ct-wrap .ct-title { color: var(--text); overflow-wrap: anywhere; line-height: 1.25; }
 .ct-wrap .ct-ccy { color: var(--accent); font-weight: 700; margin-right: 6px; font-size: 10px; }
 .ct-wrap .ct-v {

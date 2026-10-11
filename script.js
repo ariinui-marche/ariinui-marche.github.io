@@ -644,7 +644,7 @@ function renderEcoCalendar() {
 
   const visibleEvents = currentImpactFilters.size === 0
     ? currentEvents
-    : currentEvents.filter((e) => currentImpactFilters.has(e.impact));
+    : currentEvents.filter((e) => e.impact === 'Holiday' || currentImpactFilters.has(e.impact));
 
   const dateMap = new Map();
   for (const e of visibleEvents.filter((ev) => inFocus(ev.country))) {
@@ -806,7 +806,7 @@ function ecoTableHtml(rows) {
     const impCls = ['High', 'Medium', 'Low'].includes(e.impact) ? e.impact : 'Other';
     const time = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
     return `${head}
-      <div class="ct-row${isNext ? ' ct-next' : ''}${past ? ' ct-past' : ''}">
+      <div class="ct-row${isNext ? ' ct-next' : ''}${past ? ' ct-past' : ''}${e.impact === 'Holiday' ? ' ct-holiday' : ''}">
         <span class="ct-time ${ecoTimeColorClass(d.getHours())}">${time}</span>
         <span class="ct-imp ct-imp-${impCls}" title="${e.impact}"></span>
         <span class="ct-title" title="${e.title}">${multi ? `<span class="ct-ccy">${e.country}</span>` : ''}${e.title}${isLiveWindow(e) ? `<button class="live-btn" data-date="${e.date}" data-title="${e.title.replace(/"/g, '&quot;')}">▶ Live</button>` : ''}</span>
@@ -970,10 +970,10 @@ function renderEvents() {
   const list = document.getElementById('ecoList');
   let filtered = currentImpactFilters.size === 0
     ? currentEvents
-    : currentEvents.filter((e) => currentImpactFilters.has(e.impact));
+    : currentEvents.filter((e) => e.impact === 'Holiday' || currentImpactFilters.has(e.impact));
   if (focusActive()) filtered = filtered.filter((e) => focusCcys.includes(e.country));
   // Événements déjà passés : seuls les High restent affichés
-  { const nowMs = Date.now(); filtered = filtered.filter((e) => e.impact === 'High' || new Date(e.date).getTime() >= nowMs); }
+  { const nowMs = Date.now(); const todayMs = new Date().setHours(0, 0, 0, 0); filtered = filtered.filter((e) => e.impact === 'High' || new Date(e.date).getTime() >= nowMs || (e.impact === 'Holiday' && new Date(e.date).getTime() >= todayMs)); }
   if (calSelectedDate) {
     filtered = filtered.filter((e) => {
       const d = new Date(e.date);
