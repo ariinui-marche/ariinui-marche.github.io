@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-13T21:57:53.377Z",
+  "timestamp": "2026-10-14T00:50:03.383Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -8834,6 +8834,15 @@
       "title": "Beige Book",
       "country": "USD",
       "date": "2026-10-14T14:00:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "FOMC Member Goolsbee Speaks",
+      "country": "USD",
+      "date": "2026-10-14T15:00:00-04:00",
       "impact": "Low",
       "forecast": "",
       "previous": "",

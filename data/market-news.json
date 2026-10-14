@@ -1,40 +1,145 @@
 {
-  "timestamp": "2026-10-13T21:57:53.377Z",
+  "timestamp": "2026-10-14T00:50:03.383Z",
   "items": [
     {
-      "title": "Colombia stocks higher at close of trade; COLCAP up 1.55%",
-      "link": "https://www.investing.com/news/stock-market-news/colombia-stocks-higher-at-close-of-trade-colcap-up-155-4947591",
-      "pubDate": "2026-10-13T21:25:03.000Z",
+      "title": "Euro edges higher above 1.1200 despite France fiscal risks, US CPI in focus",
+      "link": "https://www.fxstreet.com/news/euro-edges-higher-above-11200-despite-france-fiscal-risks-us-cpi-in-focus-202610140034",
+      "pubDate": "2026-10-14T00:34:34.000Z",
+      "description": "The EUR/USD pair 1.1205 holds positive ground near 1.1205 during the early Asian trading hours on Wednesday. The US Dollar (USD) softens against the Euro (EUR) following remarks from New York Federal Reserve (Fed) President John Williams.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Liquidia (NASDAQ:LQDA) CMO Rajeev Saggar disposes of $262,528 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/liquidia-nasdaqlqda-cmo-rajeev-saggar-disposes-of-262528-in-stock-93CH-4947784",
+      "pubDate": "2026-10-14T00:31:07.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Raymond James cuts Builders FirstSource stock price target on rates",
-      "link": "https://www.investing.com/news/analyst-ratings/raymond-james-cuts-builders-firstsource-stock-price-target-on-rates-93CH-4947590",
-      "pubDate": "2026-10-13T21:24:47.000Z",
+      "title": "Liquidia CCO Scott Moomaw sells $252,418 in company stock",
+      "link": "https://www.investing.com/news/insider-trading-news/liquidia-cco-scott-moomaw-sells-252418-in-company-stock-93CH-4947783",
+      "pubDate": "2026-10-14T00:31:05.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Apple’s HomeView brings personalized Siri to smart home, takes on Amazon and Google",
-      "link": "https://www.investing.com/news/stock-market-news/apples-homeview-brings-personalized-siri-to-smart-home-takes-on-amazon-and-google-4947587",
-      "pubDate": "2026-10-13T21:24:35.000Z",
+      "title": "Liquidia Corp general counsel Schundler sells $389,948 of stock",
+      "link": "https://www.investing.com/news/insider-trading-news/liquidia-corp-general-counsel-schundler-sells-389948-of-stock-93CH-4947782",
+      "pubDate": "2026-10-14T00:31:03.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Oracle urges FERC to expedite New Mexico gas pipeline for Project Jupiter",
-      "link": "https://www.investing.com/news/stock-market-news/oracle-urges-ferc-to-expedite-new-mexico-gas-pipeline-for-project-jupiter-4947589",
-      "pubDate": "2026-10-13T21:22:37.000Z",
+      "title": "Liquidia chief human resources officer Sarah Krepp sells $149,377 in company stock",
+      "link": "https://www.investing.com/news/insider-trading-news/liquidia-chief-human-resources-officer-sarah-krepp-sells-149377-in-company-stock-93CH-4947773",
+      "pubDate": "2026-10-14T00:25:09.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Russia stocks higher at close of trade; MOEX Russia Index up 1.07%",
-      "link": "https://www.investing.com/news/stock-market-news/russia-stocks-higher-at-close-of-trade-moex-russia-index-up-107-4947588",
-      "pubDate": "2026-10-13T21:20:03.000Z",
+      "title": "Galderma to buy Zo Skin from Blackstone for $1.5 bln, Reuters reports",
+      "link": "https://www.investing.com/news/stock-market-news/galderma-to-buy-zo-skin-from-blackstone-for-15-bln-reuters-reports-4947772",
+      "pubDate": "2026-10-14T00:25:06.000Z",
       "description": "",
       "source": "Investing.com"
+    },
+    {
+      "title": "Explainer-How Singapore’s unique monetary policy works",
+      "link": "https://www.investing.com/news/economy-news/explainerhow-singapores-unique-monetary-policy-works-4947768",
+      "pubDate": "2026-10-14T00:24:19.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Palantir director Lauren Stat sells over $1 million in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/palantir-director-lauren-stat-sells-over-1-million-in-stock-93CH-4947766",
+      "pubDate": "2026-10-14T00:21:26.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Liquidia Corp chief development officer sells $31,356 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/liquidia-corp-chief-development-officer-sells-31356-in-stock-93CH-4947765",
+      "pubDate": "2026-10-14T00:21:05.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Palantir CRO and CLO Ryan Taylor sells $3.62m in PLTR stock",
+      "link": "https://www.investing.com/news/insider-trading-news/palantir-cro-and-clo-ryan-taylor-sells-362m-in-pltr-stock-93CH-4947764",
+      "pubDate": "2026-10-14T00:21:03.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Liquidia CFO Michael Kaseta sells $539,354 in LQDA shares",
+      "link": "https://www.investing.com/news/insider-trading-news/liquidia-cfo-michael-kaseta-sells-539354-in-lqda-shares-93CH-4947763",
+      "pubDate": "2026-10-14T00:20:39.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Money Stock (Sept.)",
+      "link": "http://www.boj.or.jp/en/statistics/money/ms/ms2609.pdf",
+      "pubDate": "2026-10-13T23:50:00.000Z",
+      "description": "",
+      "source": "Bank of Japan"
+    },
+    {
+      "title": "Yemen's Houthis fire missiles at Saudi Arabia; Aramco facility catches fire",
+      "link": "https://www.fxstreet.com/news/yemens-houthis-fire-missiles-at-saudi-arabia-aramco-facility-catches-fire-202610132343",
+      "pubDate": "2026-10-13T23:43:03.000Z",
+      "description": "Yemen’s Houthi rebels launched a series of missile attacks targeting cities across Saudi Arabia as the military said projectiles are being intercepted. Falling shrapnel in Dhahran and Riyadh injured at least four people in the Saudi capital",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Australian Dollar climbs as Fed’s Williams push the brakes on rates",
+      "link": "https://www.fxstreet.com/news/australian-dollar-climbs-as-feds-williams-push-the-brakes-on-rates-202610132334",
+      "pubDate": "2026-10-13T23:34:13.000Z",
+      "description": "The Aussie Dollar registers a gain of over 0.34% against the US Dollar on Tuesday as news flows remain quiet, with US data coming mixed, while hostilities in the Middle East continue. The AUD/USD trades at 0.6983.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Gold declines to near $4,150 ahead of US CPI inflation data",
+      "link": "https://www.fxstreet.com/news/gold-declines-to-near-4-150-ahead-of-us-cpi-inflation-data-202610132321",
+      "pubDate": "2026-10-13T23:21:25.000Z",
+      "description": "Gold price (XAU/USD) drifts lower to near $4,155 during the early Asian session on Wednesday. The precious metal extends the decline as rising oil prices fuel inflation concerns and prompt major central banks to tighten monetary policy.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Could Tesla&#039;s Roadster Reveal Trigger Another Stock Crash?",
+      "link": "https://beincrypto.com/tesla-roadster-hover-demo-tsla-stock-impact/",
+      "pubDate": "2026-10-13T22:48:01.000Z",
+      "description": "TSLA stock faces a test as Tesla's Roadster tries a SpaceX thruster hover on Oct. 15. Here is what history suggests.\nThe post Could Tesla&#039;s Roadster Reveal Trigger Another Stock Crash? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Yen trails the majors as the BoJ is said to lean against a hike",
+      "link": "https://www.fxstreet.com/news/yen-trails-the-majors-as-the-boj-is-said-to-lean-against-a-hike-202610132241",
+      "pubDate": "2026-10-13T22:41:05.000Z",
+      "description": "The Dollar fell against every major currency on Tuesday and fell least against the Yen, on the day the Bank of Japan (BoJ) was reported to be leaning against an October rate hike.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "How AI Killed This $5 Billion Picture Company",
+      "link": "https://beincrypto.com/getty-images-bankruptcy-ai-debt-private/",
+      "pubDate": "2026-10-13T22:38:57.000Z",
+      "description": "Getty Images will file for bankruptcy and go private. See how AI pressure and $2.1 billion in debt wiped out its shareholders.\nThe post How AI Killed This $5 Billion Picture Company appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Mexican Peso buckles as Fed inflation fears overshadow dovish Williams",
+      "link": "https://www.fxstreet.com/news/mexican-peso-buckles-as-fed-inflation-fears-overshadow-dovish-williams-202610132217",
+      "pubDate": "2026-10-13T22:17:16.000Z",
+      "description": "The Mexican Peso depreciates against the US Dollar as traders await the release of the US Consumer Price Index (CPI) report, which could set the pace for interest rates towards the end of the year. The USD/MXN trades at 18.36, up 0.57%.",
+      "source": "FXStreet"
+    },
+    {
+      "title": "Pound gains as Fed's Williams sees no 2027 hike",
+      "link": "https://www.fxstreet.com/news/pound-gains-and-stays-inside-its-range-for-a-third-week-202610132134",
+      "pubDate": "2026-10-13T21:34:48.000Z",
+      "description": "Despite Tuesday's gain, GBP/USD is in its third straight week of trading between roughly 1.3200 and 1.3300, a range it has held since September 24. It climbed in steps from just above 1.3200 to a high just under 1.3260 and trades near 1.325",
+      "source": "FXStreet"
     },
     {
       "title": "Wall Street’s $110 Billion Bond Warning: What It Means for Stocks and Bitcoin",
@@ -44,39 +149,11 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Anthropic warns AI models may soon self-replicate and could wreak havoc on the web",
-      "link": "https://www.investing.com/news/economy-news/ai-models-may-soon-selfreplicate-without-access-to-data-centers-anthropic-warns-4945449",
-      "pubDate": "2026-10-13T21:18:39.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "AT&T sells Mexico unit to Televisa, Fintech for $2 billion",
-      "link": "https://www.investing.com/news/stock-market-news/att-to-sell-mexico-unit-for-2-billion-4947508",
-      "pubDate": "2026-10-13T21:13:32.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Dow Jones Industrial Average gives back a 500-point earnings jump",
       "link": "https://www.fxstreet.com/news/dow-jones-industrial-average-gives-back-a-500-point-earnings-jump-202610132112",
       "pubDate": "2026-10-13T21:12:57.000Z",
       "description": "Goldman Sachs (GS) earned $17.01 a share in the third quarter against a forecast near $13.00. JPMorgan Chase (JPM) missed on profit and revenue but raised its 2026 forecast for net interest income, what it earns on loans minus what it pays ",
       "source": "FXStreet"
-    },
-    {
-      "title": "Saudi OpenAI engineer arrested by FBI over hidden recording device, US DOJ says",
-      "link": "https://www.investing.com/news/stock-market-news/fbi-arrests-former-openai-employee-for-planting-listening-device-4947422",
-      "pubDate": "2026-10-13T21:12:42.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Endeavour Silver completes ball mill repairs at Guanacevi mine",
-      "link": "https://www.investing.com/news/company-news/endeavour-silver-completes-ball-mill-repairs-at-guanacevi-mine-93CH-4947583",
-      "pubDate": "2026-10-13T21:12:41.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Dollar Pulls Back as Global Bond Pressure Eases",
@@ -91,13 +168,6 @@
       "pubDate": "2026-10-13T21:12:00.000Z",
       "description": "DBS Group Research economist Ma Tieying assesses Taiwan’s macro outlook, highlighting a strong AI cycle, diversified energy imports and evolving tariff dynamics with the US.",
       "source": "FXStreet"
-    },
-    {
-      "title": "Trading Day: Earnings season debuts to mixed reviews",
-      "link": "https://www.investing.com/news/economy-news/trading-day-earnings-season-debuts-to-mixed-reviews-4947582",
-      "pubDate": "2026-10-13T21:06:22.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Chinese Yuan: Outlook stays mildly positive against US Dollar – UOB",
@@ -151,7 +221,7 @@
     {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-10-13T19:03:10.000Z",
+      "pubDate": "2026-10-13T19:03:00.000Z",
       "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
       "source": "Bank of Canada"
     },
@@ -205,18 +275,18 @@
       "source": "FXStreet"
     },
     {
-      "title": "Ethereum FOMO Returns as ETF Investors Sell for 10 Straight Days",
-      "link": "https://beincrypto.com/ethereum-fomo-etf-outflows-10-days/",
-      "pubDate": "2026-10-13T18:00:00.000Z",
-      "description": "Ethereum FOMO hits 2.05 on Santiment data as US Ethereum ETFs post 10 straight days of outflows topping $780 million.\nThe post Ethereum FOMO Returns as ETF Investors Sell for 10 Straight Days appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Minutes of the Board's discount rate meetings on August 17, September 9, and September 16, 2026",
       "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261013a.htm",
       "pubDate": "2026-10-13T18:00:00.000Z",
       "description": "Minutes of the Board's discount rate meetings on August 17, September 9, and September 16, 2026",
       "source": "Federal Reserve"
+    },
+    {
+      "title": "Ethereum FOMO Returns as ETF Investors Sell for 10 Straight Days",
+      "link": "https://beincrypto.com/ethereum-fomo-etf-outflows-10-days/",
+      "pubDate": "2026-10-13T18:00:00.000Z",
+      "description": "Ethereum FOMO hits 2.05 on Santiment data as US Ethereum ETFs post 10 straight days of outflows topping $780 million.\nThe post Ethereum FOMO Returns as ETF Investors Sell for 10 Straight Days appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
     },
     {
       "title": "Forex Today: US inflation comes to the fore",
@@ -303,13 +373,6 @@
       "source": "Bank of England"
     },
     {
-      "title": "British Pound: Upside momentum builds against Euro – Societe Generale",
-      "link": "https://www.fxstreet.com/news/british-pound-upside-momentum-builds-against-euro-societe-generale-202610131459",
-      "pubDate": "2026-10-13T14:59:20.000Z",
-      "description": "Societe Generale strategists note EUR/GBP has continued its pullback after failing at the 0.8610 graphical hurdle linked to the February and March troughs. The cross has slipped below the July lows, reinforcing prevailing downside momentum.",
-      "source": "FXStreet"
-    },
-    {
       "title": "Palantir CEO Drops Shocking Warning That Will Make You Rethink AI",
       "link": "https://beincrypto.com/palantir-ceo-predictive-ai-thoughts-warning/",
       "pubDate": "2026-10-13T14:30:00.000Z",
@@ -317,25 +380,11 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Canadian Dollar: Modest gains against US Dollar - Scotiabank",
-      "link": "https://www.fxstreet.com/news/canadian-dollar-modest-gains-against-us-dollar-scotiabank-202610131423",
-      "pubDate": "2026-10-13T14:23:57.000Z",
-      "description": "Scotiabank strategists Shaun Osborne and Eric Theoret reports the Canadian Dollar (CAD) up 0.2% versus the US Dollar (USD) but underperforming other G10 currencies, with markets still pricing Bank of Canada (BoC) tightening into year-end de",
-      "source": "FXStreet"
-    },
-    {
       "title": "Trezor Wallet Takes Drastic Supply-Chain Action To Increase Security",
       "link": "https://beincrypto.com/trezor-supply-chain-action-wallet-tampering/",
       "pubDate": "2026-10-13T14:11:33.000Z",
       "description": "Trezor tightens its supply chain and cuts resellers after the Ledger tampering scare. Here is what changes for buyers.\nThe post Trezor Wallet Takes Drastic Supply-Chain Action To Increase Security appeared first on BeInCrypto.",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Australian Dollar : Key support at 0.6935 in focus against US Dollar   – UOB",
-      "link": "https://www.fxstreet.com/news/australian-dollar-key-support-at-06935-in-focus-against-us-dollar-uob-202610131404",
-      "pubDate": "2026-10-13T14:04:33.000Z",
-      "description": "United Overseas Bank’s (UOB) Quek Ser Leang and Lee Sue Ann report AUD/USD slipping as the stronger US Dollar weighs on commodity currencies. Short‑term momentum has turned lower, with scope for a test of major support at 0.6935, though a s",
-      "source": "FXStreet"
     },
     {
       "title": "Goldman Crushes Estimates, JPMorgan Misses: What Do Bank Earnings Mean for Stocks?",
@@ -352,32 +401,11 @@
       "source": "Reuters"
     },
     {
-      "title": "Australian Dollar edges higher amid softer US Dollar, hawkish RBA",
-      "link": "https://www.fxstreet.com/news/australian-dollar-edges-higher-as-softer-us-dollar-hawkish-rba-offer-support-202610131336",
-      "pubDate": "2026-10-13T13:36:54.000Z",
-      "description": "AUD/USD edges higher on Tuesday as a pullback in US Treasury yields weighs on the US Dollar (USD), pulling it away from recent highs. Meanwhile, hawkish signals from the Reserve Bank of Australia (RBA) provide underlying support to the Aust",
-      "source": "FXStreet"
-    },
-    {
       "title": "Fortnite Maker Epic Games Tells Developers to Stop Writing Code by Hand",
       "link": "https://beincrypto.com/epic-games-ai-hand-written-code-disney/",
       "pubDate": "2026-10-13T13:31:26.000Z",
       "description": "Epic Games AI plan ends hand-written code on its delayed Marvel and Star Wars shooter. See what CEO Tim Sweeney expects the shift to deliver.\nThe post Fortnite Maker Epic Games Tells Developers to Stop Writing Code by Hand appeared first on",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Indian Rupee: RBI defense limits losses against US Dollar – Societe Generale",
-      "link": "https://www.fxstreet.com/news/indian-rupee-rbi-defense-limits-losses-against-us-dollar-societe-generale-202610131331",
-      "pubDate": "2026-10-13T13:31:02.000Z",
-      "description": "Societe Generale's strategists note that the INR has rallied further, with USD/INR looking to break below the 95 handle as the RBI intensifies its FX defense. The central bank extended FX curbs to GIFT City and broadened use of risk reserve",
-      "source": "FXStreet"
-    },
-    {
-      "title": "US Dollar: Supported but capped by CPI risks – OCBC",
-      "link": "https://www.fxstreet.com/news/us-dollar-supported-but-capped-by-cpi-risks-ocbc-202610131316",
-      "pubDate": "2026-10-13T13:16:33.000Z",
-      "description": "OCBC strategists Sim Moh Siong and Christopher Wong argue the US Dollar (USD) remains supported by higher Oil prices, firm US yields and resilient Federal Reserve (Fed) expectations, but not yet breaking out of its recent range. They note m",
-      "source": "FXStreet"
     },
     {
       "title": "Ledger’s Implant Update Left Out One Name. Users Noticed Within Minutes",
@@ -392,27 +420,6 @@
       "pubDate": "2026-10-13T12:00:24.000Z",
       "description": "WSJ Dollar Index Falls 0.06% to 97.34&nbsp;&nbsp;WSJ",
       "source": "Google News"
-    },
-    {
-      "title": "Is AI Taking Our Jobs? The IMF Says Young People Should Worry First",
-      "link": "https://beincrypto.com/ai-taking-jobs-young-workers-imf/",
-      "pubDate": "2026-10-13T11:49:48.000Z",
-      "description": "AI taking jobs? IMF chief Georgieva and Singapore's Tharman warn young workers are hit first. See what the data shows.\nThe post Is AI Taking Our Jobs? The IMF Says Young People Should Worry First appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Fridges Hacked, Food Ruined, Fires Sparked: France’s Strangest Hack Yet",
-      "link": "https://beincrypto.com/french-supermarket-fridges-hit-50-degrees/",
-      "pubDate": "2026-10-13T11:19:37.000Z",
-      "description": "Hackers just turned French supermarket freezers into ovens. This week, attackers took over the software that controls refrigeration at hundreds of stores across France. They pushed temperatures up to 50&#176;C, which is desert-heatwave terr",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Gold struggles to reclaim $4,200 as Fed interest rate hike risks persist, US CPI looms",
-      "link": "https://www.fxstreet.com/news/gold-struggles-below-4-200-despite-retreat-in-us-dollar-treasury-yields-202610131056",
-      "pubDate": "2026-10-13T10:56:48.000Z",
-      "description": "Gold (XAU/USD) reverses earlier gains on Tuesday as US Treasury yields recover after falling earlier in the day. With the US Dollar (USD) still under pressure, the metal trades little changed during American trading hours.",
-      "source": "FXStreet"
     },
     {
       "title": "TSX futures rise as yields ease, gold gains",
@@ -478,10 +485,10 @@
       "source": "Reuters"
     },
     {
-      "title": "Dollar slips from 18-month high as oil prices fall, inflation data in focus",
+      "title": "Dollar retreats from 18-month high as oil prices fall, inflation data in focus",
       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPZ2lxTVVOV3pTUEkySWJNak9DU3lNdXR5bmRWWmxicmY0UVlFTFl3SmlERjl4LVFmTG1pSFAteVRpU2lPaXFhTTNROFlTWUgtaVRFdlliT3VYSkc1Z3REVEctSEZkSV9Sc3dabEFDb0pIcmNXdDR0MDJJMXNtNy1IUUNKS1BVWnNYd0xfM24yUFJmMkRXNUlYTmFnV2g3Z0VJWEE5Zk5MZw?oc=5",
       "pubDate": "2026-10-13T01:44:00.000Z",
-      "description": "Dollar slips from 18-month high as oil prices fall, inflation data in focus&nbsp;&nbsp;Reuters",
+      "description": "Dollar retreats from 18-month high as oil prices fall, inflation data in focus&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -560,13 +567,6 @@
       "pubDate": "2026-10-09T09:00:00.000Z",
       "description": "The Cross-Market Operational Resilience Group (CMORG) yesterday (8 October 2026) completed its biennial simulation exercise, known as SIMEX26, focused this year on a global cloud services disruption.",
       "source": "Bank of England"
-    },
-    {
-      "title": "Twenty-fifth Meeting of the \"Council for Cooperation on Financial Stability\"",
-      "link": "http://www.boj.or.jp/en/finsys/macpru/mac261009a.pdf",
-      "pubDate": "2026-10-09T09:00:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
     },
     {
       "title": "Federal Reserve Board announces enforcement action against American Express Company to address, among other things, the firm’s failure to sufficiently detect and report certain suspicious activity related to money laundering",
