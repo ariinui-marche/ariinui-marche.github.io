@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-14T05:29:54.852Z",
+  "timestamp": "2026-10-14T10:28:01.377Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -8714,9 +8714,18 @@
       "actual": ""
     },
     {
+      "title": "ECB President Lagarde Speaks",
+      "country": "EUR",
+      "date": "2026-10-14T04:30:00-04:00",
+      "impact": "Medium",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
       "title": "M2 Money Supply y/y",
       "country": "CNY",
-      "date": "2026-10-14T04:03:00-04:00",
+      "date": "2026-10-14T05:00:00-04:00",
       "impact": "Low",
       "forecast": "7.4%",
       "previous": "7.5%",
@@ -8725,19 +8734,10 @@
     {
       "title": "New Loans",
       "country": "CNY",
-      "date": "2026-10-14T04:03:00-04:00",
+      "date": "2026-10-14T05:01:00-04:00",
       "impact": "Low",
       "forecast": "1025B",
       "previous": "60B",
-      "actual": ""
-    },
-    {
-      "title": "ECB President Lagarde Speaks",
-      "country": "EUR",
-      "date": "2026-10-14T04:30:00-04:00",
-      "impact": "Medium",
-      "forecast": "",
-      "previous": "",
       "actual": ""
     },
     {
