@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-14T10:28:01.377Z",
+  "timestamp": "2026-10-14T15:19:59.544Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -8743,7 +8743,7 @@
     {
       "title": "German 30-y Bond Auction",
       "country": "EUR",
-      "date": "2026-10-14T05:34:00-04:00",
+      "date": "2026-10-14T05:38:00-04:00",
       "impact": "Low",
       "forecast": "",
       "previous": "3.80|1.6",
@@ -8765,7 +8765,7 @@
       "impact": "High",
       "forecast": "0.2%",
       "previous": "0.3%",
-      "actual": ""
+      "actual": "0.3%"
     },
     {
       "title": "Core CPI y/y",
@@ -8774,7 +8774,7 @@
       "impact": "High",
       "forecast": "2.5%",
       "previous": "2.4%",
-      "actual": ""
+      "actual": "2.6%"
     },
     {
       "title": "CPI m/m",
@@ -8783,7 +8783,7 @@
       "impact": "High",
       "forecast": "0.6%",
       "previous": "0.4%",
-      "actual": ""
+      "actual": "0.6%"
     },
     {
       "title": "CPI y/y",
@@ -8792,7 +8792,7 @@
       "impact": "High",
       "forecast": "3.6%",
       "previous": "3.4%",
-      "actual": ""
+      "actual": "3.7%"
     },
     {
       "title": "Building Permits m/m",
@@ -9159,7 +9159,7 @@
       "country": "USD",
       "date": "2026-10-15T10:30:00-04:00",
       "impact": "Low",
-      "forecast": "",
+      "forecast": "76B",
       "previous": "85B",
       "actual": ""
     },
@@ -9168,7 +9168,7 @@
       "country": "USD",
       "date": "2026-10-15T12:00:00-04:00",
       "impact": "Low",
-      "forecast": "",
+      "forecast": "-0.2M",
       "previous": "-3.2M",
       "actual": ""
     },
