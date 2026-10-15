@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-15T09:53:29.293Z",
+  "timestamp": "2026-10-15T14:28:46.188Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -9062,7 +9062,7 @@
       "impact": "High",
       "forecast": "0.3%",
       "previous": "0.2%",
-      "actual": ""
+      "actual": "0.7%"
     },
     {
       "title": "Core Retail Sales m/m",
@@ -9089,7 +9089,7 @@
       "impact": "High",
       "forecast": "0.3%",
       "previous": "1.2%",
-      "actual": ""
+      "actual": "0.1%"
     },
     {
       "title": "Manufacturing Sales m/m",
