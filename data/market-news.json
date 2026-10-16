@@ -1,40 +1,96 @@
 {
-  "timestamp": "2026-10-15T23:49:08.589Z",
+  "timestamp": "2026-10-16T01:42:58.212Z",
   "items": [
     {
-      "title": "Zeff Capital sells $236k of Butler National stock in October",
-      "link": "https://www.investing.com/news/insider-trading-news/zeff-capital-sells-236k-of-butler-national-stock-in-october-93CH-4952840",
-      "pubDate": "2026-10-15T23:30:57.000Z",
+      "title": "Applied Digital director Nottenburg sells $682,500 in APLD shares",
+      "link": "https://www.investing.com/news/insider-trading-news/applied-digital-director-nottenburg-sells-682500-in-apld-shares-93CH-4952944",
+      "pubDate": "2026-10-16T01:31:05.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Investors temper Anthropic IPO valuation expectations over revenue growth slowdown, sources say",
-      "link": "https://www.investing.com/news/stock-market-news/exclusiveinvestors-temper-anthropic-ipo-valuation-expectations-over-revenue-growth-slowdown-sources-say-4952698",
-      "pubDate": "2026-10-15T23:30:21.000Z",
+      "title": "Gold steadies near $4,160 as stock selloff drives bond rally, Treasury yields fall",
+      "link": "https://www.investing.com/news/commodities-news/gold-steadies-near-4160-as-stock-selloff-drives-bond-rally-treasury-yields-fall-4952940",
+      "pubDate": "2026-10-16T01:26:11.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "BRC Inc. founder Evan Hafer sells $166,729 in common stock",
-      "link": "https://www.investing.com/news/insider-trading-news/brc-inc-founder-evan-hafer-sells-166729-in-common-stock-93CH-4952827",
-      "pubDate": "2026-10-15T23:16:28.000Z",
+      "title": "Euro gets much-needed reprieve as AI wobbles rock the dollar",
+      "link": "https://www.investing.com/news/economy-news/euro-gets-muchneeded-reprieve-as-ai-wobbles-rock-the-dollar-4952939",
+      "pubDate": "2026-10-16T01:24:21.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "StoneX CEO Philip Smith sells $2.6m in company stock",
-      "link": "https://www.investing.com/news/insider-trading-news/stonex-ceo-philip-smith-sells-26m-in-company-stock-93CH-4952826",
-      "pubDate": "2026-10-15T23:15:52.000Z",
+      "title": "Jim Cramer&#039;s Rate Test: Why He Backs Reddit but Passes on SiTime",
+      "link": "https://beincrypto.com/jim-cramer-reddit-rocket-lab-sitime/",
+      "pubDate": "2026-10-16T01:21:25.000Z",
+      "description": "Jim Cramer backs Reddit and Rocket Lab but passes on SiTime as Fed hike odds linger. Here is what he said and why.\nThe post Jim Cramer&#039;s Rate Test: Why He Backs Reddit but Passes on SiTime appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Brazil candidates focus fiscal plans on voter-friendly measures before runoff",
+      "link": "https://www.investing.com/news/economy-news/brazil-candidates-focus-fiscal-plans-on-voterfriendly-measures-before-runoff-4952519",
+      "pubDate": "2026-10-16T01:18:23.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Global EV sales fall 2% in September, ending six-month growth streak",
-      "link": "https://www.investing.com/news/economic-indicators/globalev-sales-fall-2-in-september-ending-sixmonth-growth-streak-4952814",
-      "pubDate": "2026-10-15T23:12:30.000Z",
+      "title": "Did Elon Musk Just Hint at Tesla x SpaceX Merger, or Will Cars Fly First?",
+      "link": "https://beincrypto.com/tesla-spacex-merger-hint-roadster-fly/",
+      "pubDate": "2026-10-16T01:16:58.000Z",
+      "description": "Musk teased a Tesla SpaceX merger before the Roadster demo. Polymarket gives the car a 60% flight chance as talk builds.\nThe post Did Elon Musk Just Hint at Tesla x SpaceX Merger, or Will Cars Fly First? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Nurix Therapeutics CSO Gwenn Hansen sells $36,300 in common stock",
+      "link": "https://www.investing.com/news/insider-trading-news/nurix-therapeutics-cso-gwenn-hansen-sells-36300-in-common-stock-93CH-4952936",
+      "pubDate": "2026-10-16T01:16:25.000Z",
       "description": "",
       "source": "Investing.com"
+    },
+    {
+      "title": "AJB Investment Fund II, LP buys $2,565 of Jewett Cameron Trading Co. shares",
+      "link": "https://www.investing.com/news/insider-trading-news/ajb-investment-fund-ii-lp-buys-2565-of-jewett-cameron-trading-co-shares-93CH-4952935",
+      "pubDate": "2026-10-16T01:16:01.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Oil edges down as investors weigh possible US sanctions on ’shadow fleet’",
+      "link": "https://www.investing.com/news/commodities-news/oil-edges-down-as-investors-weigh-possible-us-sanctions-on-shadow-fleet-4952926",
+      "pubDate": "2026-10-16T01:12:55.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Yemen’s Houthis hit palace in Aden, coalition details attacks on Saudi infrastructure",
+      "link": "https://www.investing.com/news/commodities-news/yemens-houthis-hit-palace-in-aden-coalition-details-attacks-on-saudi-infrastructure-4952575",
+      "pubDate": "2026-10-16T01:12:38.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Nasdaq futures edge lower as AI spending, Fed rate concerns weigh",
+      "link": "https://www.investing.com/news/stock-market-news/nasdaq-futures-edge-lower-as-ai-spending-fed-rate-concerns-weigh-4952930",
+      "pubDate": "2026-10-16T01:10:10.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Nikkei 225 bears dominate near ¥64,200 support: Live levels",
+      "link": "https://www.investing.com/news/stock-market-news/nikkei-225-coiled-in-ichimoku-cloud-live-levels-93CH-4942960",
+      "pubDate": "2026-10-16T01:06:25.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "India's rupee forecast to weaken toward 100-per-dollar level even as RBI pushes back",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9HcUxuY0hCWW8zeVdCNkl5S1pOSFJtTGV1Zkl1YUtmMllkVVE4Qnl4XzZzM25RRE9xNExFdFZaQmI2T1l4QVQ2NzhYay1TNGRVOVBVTy1UN3ZHaEJJTWVHWFNtakFtMFpLWnNKLWtqbnJtc3QtUVg40gF8QVVfeXFMUE02NGRjOW5NTDlaYTJUWHVTT2hxLWdQNmlDekpON2JTRi1jN29fYmpFQzA3cXVkRGk4OHVOVUdaSXQxVEdMVW1ZNXBiNGJRcVZTMU5ueHJUdk1ZQUxleVNnZ2J3UThsRENRYlptTHZ6MENmZ0FYOXBua09tbQ?oc=5",
+      "pubDate": "2026-10-16T00:54:00.000Z",
+      "description": "India's rupee forecast to weaken toward 100-per-dollar level even as RBI pushes back&nbsp;&nbsp;CNBC",
+      "source": "Google News"
     },
     {
       "title": "MicroStrategy Could Be Removed From Major Global Stock Indexes",
@@ -44,34 +100,6 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Hertz Energy announces investor participation in private placement",
-      "link": "https://www.investing.com/news/company-news/hertz-energy-announces-investor-participation-in-private-placement-93CH-4952815",
-      "pubDate": "2026-10-15T23:08:36.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Etsy executive chair Josh Silverman sells $91,629 in company stock",
-      "link": "https://www.investing.com/news/insider-trading-news/etsy-executive-chair-josh-silverman-sells-91629-in-company-stock-93CH-4952810",
-      "pubDate": "2026-10-15T23:01:35.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Apple SVP Newstead sells $827,655 in shares",
-      "link": "https://www.investing.com/news/insider-trading-news/apple-svp-newstead-sells-827655-in-shares-93CH-4952809",
-      "pubDate": "2026-10-15T23:01:02.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Tesla energy executive Snyder steps down, WSJ reports",
-      "link": "https://www.investing.com/news/stock-market-news/tesla-energy-executive-snyder-steps-down-wsj-reports-4952800",
-      "pubDate": "2026-10-15T23:00:42.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Grayscale Says Bitcoin’s Volatility Falls to 43%, Now Within S&#038;P 500 Range",
       "link": "https://beincrypto.com/bitcoin-volatility-falls-to-sp-500-levels-grayscale/",
       "pubDate": "2026-10-15T23:00:19.000Z",
@@ -79,11 +107,11 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Lula pledges free weekend transit nationwide as Brazil runoff nears",
-      "link": "https://www.investing.com/news/economy-news/lula-pledges-free-weekend-transit-nationwide-as-brazil-runoff-nears-4952797",
-      "pubDate": "2026-10-15T22:48:39.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "China’s Plan to Make Yuan a Global Currency Enters Faster Phase",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQOExUdVVpaHNnM3NXeFFjaHRxMnNwelAzVkRsNE9idFVTRTFGdGFNeVhsZmlUTUdBd0VWb01rTTc1NE9pYkw2ZUI3U3o0NHdZZi1fYzJZV042NGtXQzhBRHZweUJKbEVyVWU1cFd6WVNsM1NyVmtISXI4MjNjYVI3WFNlSzZIOW1RQXdZdkpyN2VVaHZud0VFZXdFSWNKTERiTHVQM0tpWndxbFpSZkNVNk13YTk?oc=5",
+      "pubDate": "2026-10-15T23:00:00.000Z",
+      "description": "China’s Plan to Make Yuan a Global Currency Enters Faster Phase&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
     },
     {
       "title": "Dollar Wraps Its Worst Day in Over a Month on AI Risk Concerns",
@@ -109,7 +137,7 @@
     {
       "title": "Indian mutual funds stop bulk subscriptions to gold ETFs ahead of festive season",
       "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNa1dJUmxWRVJFR2xLMFhiSTRENmk2eklvZndkX2dzUmZGLUtKc0o2YldJRF9WbTNoVnJPc3Jjdy1qMTgtRXdWNjR0c3pIaVZxQzVZSk9JazRsdXNkLWtsenMyZzBFbHNlOTlzN1FVcWxKWm10Q3VlQkF6ZXVvcHduQ00xbnlqaE1wek9HQXJhU20zWERTN1NFSlRlRmFSQnp3aUFjYVp6aFhJYUwyZTlZdjRDR2tobk1la1hLbVBqZw?oc=5",
-      "pubDate": "2026-10-15T19:01:11.000Z",
+      "pubDate": "2026-10-15T18:56:00.000Z",
       "description": "Indian mutual funds stop bulk subscriptions to gold ETFs ahead of festive season&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
@@ -118,6 +146,13 @@
       "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQZjlBVXEzZUh4cUI1WTktUW03SFRJM2ZRcG9iSTJZWDJyYjhlUTJWb29sUFh5SWdrUVh5a1BrSC1sTHpsTWpKNXdZZUNLRU9KUWo4eTFLdXJCYmtQYkI5SlN0RGF3SWpTVmY2cUhFLTZJQVRQZzBVYjNvR1pNOWx3Z1pXMmx6dlU?oc=5",
       "pubDate": "2026-10-15T16:10:00.000Z",
       "description": "Gold Futures Extend Gains As U.S. Yields, Dollar Decline&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "Aussie Dollar Falls to Lowest Since July as RBA Hike Bets Fade",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOSmNIdEp5TW1oenJHZzVHQ1JHMDRJM2pkeUc0LWJEcFQ3VkdfNjRCM3NQc3dvNmtyTXI5bHRkR2NmVGd3eXVkcUlENl80bTRRdUJjVGpYR1ZRZlZVQm1hUGxPVWtaWEplcjBtQUU5RS1lMHJsSFpWX3FEcE1TbVpIVGdZaFdyTnNOcEgyeV8wdDAza0FDeVZxanc1UGRtVTN4LXhxNmNXWWNGSXlFcG5VZ2lsQQ?oc=5",
+      "pubDate": "2026-10-15T15:38:05.000Z",
+      "description": "Aussie Dollar Falls to Lowest Since July as RBA Hike Bets Fade&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
     },
     {
@@ -130,7 +165,7 @@
     {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-10-15T14:41:43.000Z",
+      "pubDate": "2026-10-15T14:42:02.000Z",
       "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
       "source": "Bank of Canada"
     },
@@ -181,20 +216,6 @@
       "link": "https://beincrypto.com/trump-5000-check-us-economy-inflation/",
       "pubDate": "2026-10-15T12:00:09.000Z",
       "description": "Trump's $5,000 check could cost $1.3 trillion. See how it compares to pandemic stimulus and what it means for inflation.\nThe post Richer or Poorer? What Trump&#039;s $5,000 Check Would Mean for You and the US Economy appeared first on BeInC",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Bitcoin Wins in Every Economic Scenario, Says Bitwise CIO Matt Hougan",
-      "link": "https://beincrypto.com/bitwise-cio-bitcoin-wins-three-economic-scenarios/",
-      "pubDate": "2026-10-15T11:42:05.000Z",
-      "description": "Bitwise CIO Matt Hougan argues Bitcoin (BTC) will thrive regardless of economic direction. His latest CIO memo lays out three possible macro scenarios, with Bitcoin benefiting in each one meaningfully. Institutional ETF demand, sovereign ad",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Does Sydney Sweeney Own XRP? Cardano Boss Just Spilled the Tea",
-      "link": "https://beincrypto.com/sydney-sweeney-xrp-billboard-mix-up/",
-      "pubDate": "2026-10-15T11:27:39.000Z",
-      "description": "Crypto Twitter erupted on October 14 after Ripple&#8217;s David Schwartz posted a selfie with the wrong billboard, tying XRP to a Hollywood star. The joke spread fast and drew in two of crypto&#8217;s most recognizable voices. Behind the la",
       "source": "BeInCrypto"
     },
     {
@@ -443,13 +464,6 @@
       "source": "Reuters"
     },
     {
-      "title": "Dollar hits 18-month high, then cools as investors await patient Fed",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPRTlXdFl1T0lRV3lDTk1HeDB5eEoyUkhIUERBWi02S1ZRU2tGX0hyQk9GdThWZUNUUFBKcUxqNEd1WkU4WFpyUHV6ZmU4VXl3MWRBSjN5UWM2WjVmbDl6RGhYYzV3SF8yTGwtTGJWTTR2OHN4LVVvVzlpTGs0RkFPX2dQWmNZTUF2MVFRMU5fWXZjbjlxd2NISDgyckdMQ3lYYTZv?oc=5",
-      "pubDate": "2026-10-14T01:18:00.000Z",
-      "description": "Dollar hits 18-month high, then cools as investors await patient Fed&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "Bank of Japan Accounts (October 10)",
       "link": "http://www.boj.or.jp/en/statistics/boj/other/acmai/release/2026/ac261010.htm",
       "pubDate": "2026-10-14T01:00:00.000Z",
@@ -597,13 +611,6 @@
       "source": "Google News"
     },
     {
-      "title": "RBI Announces Special Oil Window, Regulatory Steps for Rupee",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPcjNURXR0Z09rZS1RQXJSaXkxeVR1UkcwdGF6YmF5b0NvX2dXaWZaM0FtblhoMm1GWHlLQl9yU3NMd3d3NWp2WmphcVRMZk02Q1ZhMWRMdm01R2tMaWZPVFlGbVdZRlZLTnNFdWhPdWxxQXRoamdHWE9DUE1kWERFanIwZ1J3ckYybTdhWkt0bHlQbHNiTVNBRVdQdEVBR0lGWFNuS3g5SWpTT1A4RlM4?oc=5",
-      "pubDate": "2026-10-10T08:12:36.000Z",
-      "description": "RBI Announces Special Oil Window, Regulatory Steps for Rupee&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
       "title": "Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families",
       "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm",
       "pubDate": "2026-10-09T14:00:00.000Z",
@@ -616,13 +623,6 @@
       "pubDate": "2026-10-09T09:00:00.000Z",
       "description": "The Cross-Market Operational Resilience Group (CMORG) yesterday (8 October 2026) completed its biennial simulation exercise, known as SIMEX26, focused this year on a global cloud services disruption.",
       "source": "Bank of England"
-    },
-    {
-      "title": "Twenty-fifth Meeting of the \"Council for Cooperation on Financial Stability\"",
-      "link": "http://www.boj.or.jp/en/finsys/macpru/mac261009a.pdf",
-      "pubDate": "2026-10-09T09:00:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
     },
     {
       "title": "Federal Reserve Board announces enforcement action against American Express Company to address, among other things, the firm’s failure to sufficiently detect and report certain suspicious activity related to money laundering",
