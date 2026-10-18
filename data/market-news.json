@@ -1,45 +1,87 @@
 {
-  "timestamp": "2026-10-18T01:12:18.028Z",
+  "timestamp": "2026-10-18T05:52:02.244Z",
   "items": [
+    {
+      "title": "Rubio heads to Central Asia while other US officials hit foreign policy hot spots",
+      "link": "https://www.investing.com/news/stock-market-news/rubio-heads-to-central-asia-while-other-us-officials-hit-foreign-policy-hot-spots-4955781",
+      "pubDate": "2026-10-18T05:12:36.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Rubio says Trump to take up to 60 days to weigh Russia sanctions",
+      "link": "https://www.investing.com/news/commodities-news/rubio-says-trump-to-take-up-to-60-days-to-weigh-russia-sanctions-4955750",
+      "pubDate": "2026-10-18T05:12:21.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Woodside halts work at Scarborough gas project after Greenpeace protest",
+      "link": "https://www.investing.com/news/company-news/woodside-halts-work-at-scarborough-gas-project-after-greenpeace-protest-4955780",
+      "pubDate": "2026-10-18T05:01:19.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Antofagasta’s Centinela strike ends after deal with unions",
+      "link": "https://www.investing.com/news/stock-market-news/antofagastas-centinela-strike-ends-after-deal-with-unions-4955771",
+      "pubDate": "2026-10-18T04:42:22.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Standex director Thomas Chorman sells $13,569 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/standex-director-thomas-chorman-sells-13569-in-stock-93CH-4955769",
+      "pubDate": "2026-10-18T04:31:13.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "NextTrip earnings missed by $0.11, revenue fell short of estimates",
+      "link": "https://www.investing.com/news/earnings/nexttrip-earnings-missed-by-011-revenue-fell-short-of-estimates-4955760",
+      "pubDate": "2026-10-18T04:10:56.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Iran war: Tankers hit near Hormuz as Tehran offers U.S. reopening plan",
+      "link": "https://www.investing.com/news/economy-news/iran-war-tankers-hit-near-hormuz-as-tehran-offers-us-reopening-plan-4955749",
+      "pubDate": "2026-10-18T03:33:56.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Ethereum Founder Vitalik Buterin Builds ‘Paranoid Mode’ to Hide Your AI Secrets",
+      "link": "https://beincrypto.com/vitalik-buterin-ai-paranoid-mode-hides-chats/",
+      "pubDate": "2026-10-18T03:00:00.000Z",
+      "description": "Vitalik Buterin AI 'paranoid mode' masks prompts with Tor, zkAPI, and local rewriting, but he admits it slows new chats and still has gaps.\nThe post Ethereum Founder Vitalik Buterin Builds ‘Paranoid Mode’ to Hide Your AI Secrets appeared fi",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Asian AI stocks fall as rising financing costs threaten spending boom - Bloomberg",
+      "link": "https://www.investing.com/news/stock-market-news/asian-ai-stocks-fall-as-rising-financing-costs-threaten-spending-boom--bloomberg-4955727",
+      "pubDate": "2026-10-18T02:00:03.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Venezuela expects $76 billion oil investment boost amid U.S. cooperation",
+      "link": "https://www.investing.com/news/economy-news/venezuela-expects-76-billion-oil-investment-boost-amid-us-cooperation-4955719",
+      "pubDate": "2026-10-18T01:25:16.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Anthropic&#039;s Junk Rating Sparks a Bigger Bitcoin Debate",
+      "link": "https://beincrypto.com/anthropic-junk-rating-bitcoin-question/",
+      "pubDate": "2026-10-18T01:11:15.000Z",
+      "description": "The Anthropic junk rating has Adam Back calling Bitcoin the hurdle rate. See what Anthropic's borrowing costs say about Treasuries and 60/40.\nThe post Anthropic&#039;s Junk Rating Sparks a Bigger Bitcoin Debate appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
     {
       "title": "SoftBank in early talks to acquire Allied Universal for up to $18 billion - WSJ",
       "link": "https://www.investing.com/news/company-news/softbank-in-early-talks-to-acquire-allied-universal-for-up-to-18-billion--wsj-4955709",
       "pubDate": "2026-10-18T00:39:03.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Edward Meyercord, Extreme Networks CEO, sells $1.09m in shares",
-      "link": "https://www.investing.com/news/insider-trading-news/edward-meyercord-extreme-networks-ceo-sells-109m-in-shares-93CH-4955704",
-      "pubDate": "2026-10-18T00:17:34.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Clover Health CEO Andrew Toy sells $1.3m in shares",
-      "link": "https://www.investing.com/news/insider-trading-news/clover-health-ceo-andrew-toy-sells-13m-in-shares-93CH-4955703",
-      "pubDate": "2026-10-18T00:16:05.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "U.S. urges Israel to curb settler violence in West Bank, Rubio says",
-      "link": "https://www.investing.com/news/economy-news/us-urges-israel-to-curb-settler-violence-in-west-bank-rubio-says-4955694",
-      "pubDate": "2026-10-18T00:01:57.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Maze Therapeutics CEO Jason Coloma sells $932,259 in Maze shares",
-      "link": "https://www.investing.com/news/insider-trading-news/maze-therapeutics-ceo-jason-coloma-sells-932259-in-maze-shares-93CH-4955685",
-      "pubDate": "2026-10-17T23:46:17.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "PagerDuty executive chair Jennifer Tejada sells $1.6 million in shares",
-      "link": "https://www.investing.com/news/insider-trading-news/pagerduty-executive-chair-jennifer-tejada-sells-16-million-in-shares-93CH-4955675",
-      "pubDate": "2026-10-17T23:31:09.000Z",
       "description": "",
       "source": "Investing.com"
     },
@@ -49,34 +91,6 @@
       "pubDate": "2026-10-17T23:17:31.000Z",
       "description": "Musk says Tesla's Optimus will one day build Optimus Prime after China showed a 13-foot humanoid robot that can lift over 1,100 pounds.\nThe post China Unveils 13-Foot Robot, Elon Musk Teases Real-Life Optimus Prime appeared first on BeInCry",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "First Guaranty Bancshares director Smith buys $822,013 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/first-guaranty-bancshares-director-smith-buys-822013-in-stock-93CH-4955666",
-      "pubDate": "2026-10-17T23:16:06.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Could another France downgrade put the EU’s credit rating at risk?",
-      "link": "https://www.investing.com/news/economy-news/could-another-france-downgrade-put-the-eus-credit-rating-at-risk-4955657",
-      "pubDate": "2026-10-17T23:10:55.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Venezuela expects nearly $76 billion in oil investment over five years, acting president says",
-      "link": "https://www.investing.com/news/commodities-news/venezuela-expects-nearly-76-billion-in-oil-investment-over-five-years-acting-president-says-4955647",
-      "pubDate": "2026-10-17T22:54:19.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Limoneira VP, CFO Hamm sells $11,905 of common stock",
-      "link": "https://www.investing.com/news/insider-trading-news/limoneira-vp-cfo-hamm-sells-11905-of-common-stock-93CH-4955645",
-      "pubDate": "2026-10-17T22:45:49.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Robert Kiyosaki’s Sixth Money Warning Could Save Your Financial Future",
@@ -102,7 +116,7 @@
     {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-10-17T12:44:08.000Z",
+      "pubDate": "2026-10-17T12:44:07.000Z",
       "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
       "source": "Bank of Canada"
     },
@@ -160,20 +174,6 @@
       "link": "https://beincrypto.com/ripple-xrp-ledger-tech-adoption-hurdle/",
       "pubDate": "2026-10-17T00:00:00.000Z",
       "description": "Former Ripple CBDC adviser Anthony Welfare told the AllinCrypto Podcast that the XRP Ledger (XRPL) has strong technical features. Those strengths alone will not guarantee adoption. Institutions are testing the network, and a new Nasdaq list",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Raoul Pal Holds Bitcoin, Solana and Ethereum, but Calls One Wildly Undervalued",
-      "link": "https://beincrypto.com/raoul-pal-ethereum-undervalued-stress-test/",
-      "pubDate": "2026-10-16T21:59:23.000Z",
-      "description": "Real Vision CEO Raoul Pal calls Ethereum wildly undervalued while still holding Bitcoin, Solana, and Sui, arguing that markets misprice blockchain networks during a podcast appearance. Still, the numbers behind his argument deserve a closer",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "JPMorgan Blocks Outside AI Agents From Customer Accounts",
-      "link": "https://beincrypto.com/jpmorgan-blocks-outside-ai-agents-customer-accounts/",
-      "pubDate": "2026-10-16T21:45:48.000Z",
-      "description": "JPMorgan Chase is blocking outside AI agents from logging in to or acting on customer accounts, CEO Jamie Dimon said Tuesday, citing security risks from &#8220;rogue agents.&#8221; The move puts banks and consumer AI assistants on a collisi",
       "source": "BeInCrypto"
     },
     {
@@ -256,29 +256,8 @@
     {
       "title": "Breakingviews - COMMENTARY: Gold Fields' $27 bln play may stay in M&A pit",
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQZVJMVkRFS2UySWpEbU96MVB3SEd0cGNKYWwwWlg1NXlfbnlIZWljOFcwYi1WcTlqbW9qR0ttVG42ak5INlExdWl5UkpoLXJiQUNHMnJEZ3FLQ2JHa29YeHZxYjBDc1JCVHB2b3lfOERDbm54ZWs4UDdkTkVocHh5RmRFVTQ5V19PMy0xTV80M1hoWWVaVlVHX0ZLYnlQc3BTLWc?oc=5",
-      "pubDate": "2026-10-16T04:17:00.000Z",
+      "pubDate": "2026-10-16T06:57:04.000Z",
       "description": "Breakingviews - COMMENTARY: Gold Fields' $27 bln play may stay in M&A pit&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "US Treasury says Japan no longer faces deflationary environment, yen level must change",
-      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOVnlFbzgwbXQ1Q3RjNk9wS2U2dHhqUzJLMENfa3Q1NU5pSUc2ZW96Mlg4Uk9sbDhic0N4YVhaNkpvbmphcTJSSnlJNjRUdFhXNWoxc3dzbUhRV054M0YyMjZBT3hRRFhSLWhYbFh0QUZjRThCUDFSRlptWVJ6YUN0OWkzYlJEQi14Z1ZMazE0WnJmU18yUHVmc2x4OXd4VU5DVlh3dUZ0cTV5UWRFQ2JrMnNEZXBSM0VjcjRxOHhabk1CY0oxaEF0SmF0ZUxJdw?oc=5",
-      "pubDate": "2026-10-16T04:11:00.000Z",
-      "description": "US Treasury says Japan no longer faces deflationary environment, yen level must change&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Stocks slip as dollar heads for weekly loss",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPMUpLRUNwWEpRNVpNVWJPOWQyQXdKRjkzdTU5RjFiOUxpUFZGU1ZBa1VaS3ctN0xlc0lSMkptbUVMRlprcFFtZ3B6Z2ZFTG5XX2FBUHBoSk4xRTdiQm1ucERORXE4ZzNFZ09ySlpvUDlzb0tGUjFQZ3c0UmotdEstMEZCUQ?oc=5",
-      "pubDate": "2026-10-16T02:52:00.000Z",
-      "description": "Stocks slip as dollar heads for weekly loss&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Dollar heads for weekly loss as Fed hike bets fade, AI jitters linger",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOVUNHeGZVcnQxblFnbDJNaGNUNHBQRGotcHVucUxBWDgtRjI3cFl0a2tVdTBpaGJaR1FUOTZGVm1sT0o1R0pqUjVTVHo3M1RnY1dKU1hFOFVKeVE0NlY0SnBTUFBjNFJMRU5rLWVtY0NhWnREUFpCLWI2MnQ0Y3h6ZllaTGk1LVNXNXRlSDlJcjJfRzZlN2J4cWFmT2prMDh4WFoxN0pSdGQ3Sy1G?oc=5",
-      "pubDate": "2026-10-16T01:20:00.000Z",
-      "description": "Dollar heads for weekly loss as Fed hike bets fade, AI jitters linger&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -321,13 +300,6 @@
       "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOSmNIdEp5TW1oenJHZzVHQ1JHMDRJM2pkeUc0LWJEcFQ3VkdfNjRCM3NQc3dvNmtyTXI5bHRkR2NmVGd3eXVkcUlENl80bTRRdUJjVGpYR1ZRZlZVQm1hUGxPVWtaWEplcjBtQUU5RS1lMHJsSFpWX3FEcE1TbVpIVGdZaFdyTnNOcEgyeV8wdDAza0FDeVZxanc1UGRtVTN4LXhxNmNXWWNGSXlFcG5VZ2lsQQ?oc=5",
       "pubDate": "2026-10-15T15:38:05.000Z",
       "description": "Aussie Dollar Falls to Lowest Since July as RBA Hike Bets Fade&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
-      "title": "India’s RBI Clarifies Scope of Forex Curbs After Market Swings",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNNWVJUmdjUERjTUwzOVNMZnVqRW9FZkEtUm4xNW41OGlZYzFVcnluenA5YW9OTjdRSEFhT0JBQjdtYkhyRXRiUWtoN0JCdTBSS0FvSW1UWTZrUHdxQ2pmVXVGMHQ5THpEaGw4Y2EzTzNPcWVRYUdOSlY1RlVGZG5sanJia3VPczdiaDlfeXlxWFVfSzVGLUNla1pFS0hSeGRkeENkU1R2Qmo3d01aUUtPOVB2Zw?oc=5",
-      "pubDate": "2026-10-15T13:27:16.000Z",
-      "description": "India’s RBI Clarifies Scope of Forex Curbs After Market Swings&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
     },
     {
@@ -646,11 +618,25 @@
       "source": "Federal Reserve"
     },
     {
+      "title": "Financial resilience in an age of repeated shocks -  speech by Andrew Bailey",
+      "link": "https://www.bankofengland.co.uk/speech/2026/october/andrew-bailey-speech-at-the-istanbul-economic-forum-central-bank-of-the-republic-of-turkey-istanbul",
+      "pubDate": "2026-10-08T12:15:00.000Z",
+      "description": "Given at the Central Bank of Turkey, İstanbul Economic Forum",
+      "source": "Bank of England"
+    },
+    {
       "title": "Meeting of 9-10 September 2026",
       "link": "https://www.ecb.europa.eu//press/accounts/2026/html/ecb.mg261008~a10153d090.en.html",
       "pubDate": "2026-10-08T11:30:00.000Z",
       "description": "",
       "source": "European Central Bank"
+    },
+    {
+      "title": "Waller, The Signaling Value of the Summary of Economic Projections",
+      "link": "https://www.federalreserve.gov/newsevents/speech/waller20261008a.htm",
+      "pubDate": "2026-10-08T08:30:00.000Z",
+      "description": "Speech At the Istanbul Economic Forum, Central Bank of the Republic of T&uuml;rkiye, Istanbul, T&uuml;rkiye",
+      "source": "Federal Reserve"
     },
     {
       "title": "2026-10-08 - Antoine Martin: Enjeux actuels de la politique monétaire",
@@ -660,11 +646,25 @@
       "source": "Swiss National Bank"
     },
     {
+      "title": "For Walmart, Replacing Humans With Robots Is a Multibillion-Dollar Struggle",
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNUURaUDZFVEhOZnE2T0VuWUtycXYyMnZNaktoMlZ1bENJZ0dHOGkzUDFRUUFpOWsyRWVmamJibF91LVBOREtoTHV2R1JXV1Z6aEh2OHNEbmNXWTkwZzJGMHhTbmw5bEQ2Uk4yUllKMDhEMDNYNWJJSFozb3NzRzRYTW5jY0M3bHNEQ2FkUA?oc=5",
+      "pubDate": "2026-10-08T07:00:00.000Z",
+      "description": "For Walmart, Replacing Humans With Robots Is a Multibillion-Dollar Struggle&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
       "title": "Piero Cipollone: Interview with Corriere della Sera",
       "link": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261008~3184e7d0d0.en.html",
       "pubDate": "2026-10-08T06:00:00.000Z",
       "description": "",
       "source": "European Central Bank"
+    },
+    {
+      "title": "Regional Economic Report (Summary) (Oct. 2026)",
+      "link": "http://www.boj.or.jp/en/research/brp/rer/rer261008.htm",
+      "pubDate": "2026-10-08T05:00:00.000Z",
+      "description": "",
+      "source": "Bank of Japan"
     },
     {
       "title": "2026-10-07 - Antoine Martin: The SNB and its monetary policy",
