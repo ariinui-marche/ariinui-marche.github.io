@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-19T06:24:31.957Z",
+  "timestamp": "2026-10-19T13:42:21.443Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -9521,7 +9521,7 @@
       "impact": "High",
       "forecast": "0.2%",
       "previous": "-0.1%",
-      "actual": ""
+      "actual": "0.1%"
     },
     {
       "title": "Median CPI y/y",
@@ -9539,7 +9539,7 @@
       "impact": "High",
       "forecast": "1.9%",
       "previous": "1.9%",
-      "actual": ""
+      "actual": "1.8%"
     },
     {
       "title": "Common CPI y/y",
@@ -9665,6 +9665,15 @@
       "impact": "Low",
       "forecast": "23.6",
       "previous": "25.8",
+      "actual": ""
+    },
+    {
+      "title": "Foreign Direct Investment ytd/y",
+      "country": "CNY",
+      "date": "2026-10-20T05:10:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "-5.3%",
       "actual": ""
     },
     {
