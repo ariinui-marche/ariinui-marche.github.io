@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-19T13:42:21.443Z",
+  "timestamp": "2026-10-19T19:28:40.559Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -9717,7 +9717,7 @@
       "country": "USD",
       "date": "2026-10-20T10:00:00-04:00",
       "impact": "Low",
-      "forecast": "-0.4%",
+      "forecast": "-0.7%",
       "previous": "0.3%",
       "actual": ""
     },
@@ -9762,7 +9762,7 @@
       "country": "JPY",
       "date": "2026-10-20T19:50:00-04:00",
       "impact": "Low",
-      "forecast": "-0.21T",
+      "forecast": "-0.26T",
       "previous": "-0.84T",
       "actual": ""
     },
