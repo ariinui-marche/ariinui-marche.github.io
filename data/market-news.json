@@ -1,82 +1,103 @@
 {
-  "timestamp": "2026-10-20T16:26:56.205Z",
+  "timestamp": "2026-10-20T20:03:14.671Z",
   "items": [
+    {
+      "title": "Food importer files new lawsuit to block Trump’s Canada tariffs",
+      "link": "https://www.investing.com/news/stock-market-news/small-businesses-file-new-lawsuit-to-block-trumps-canada-tariffs-4960660",
+      "pubDate": "2026-10-20T19:54:19.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "TD Cowen raises Halliburton stock price target on growth outlook",
+      "link": "https://www.investing.com/news/analyst-ratings/td-cowen-raises-halliburton-stock-price-target-on-growth-outlook-93CH-4960931",
+      "pubDate": "2026-10-20T19:50:48.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Baxter stock faces FDA warning letter over Illinois facility issues",
+      "link": "https://www.investing.com/news/analyst-ratings/baxter-stock-faces-fda-warning-letter-over-illinois-facility-issues-93CH-4960930",
+      "pubDate": "2026-10-20T19:50:44.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "US envoy Witkoff to meet Russians, Trump presses Kyiv to settle",
+      "link": "https://www.investing.com/news/stock-market-news/zelenskiy-to-meet-witkoff-as-trump-praises-russia-and-rebukes-ukraine-4959324",
+      "pubDate": "2026-10-20T19:48:39.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Anthropic revenue hits $16.3 billion as preliminary S-1 outlines IPO risks - WSJ",
+      "link": "https://www.investing.com/news/stock-market-news/anthropic-revenue-hits-163-billion-as-preliminary-s1-outlines-ipo-risks--wsj-4960928",
+      "pubDate": "2026-10-20T19:47:07.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Boeing’s 737 MAX receives FAA approval paving way for deliveries",
+      "link": "https://www.investing.com/news/stock-market-news/boeings-737-max-receives-faa-approval-paving-way-for-deliveries-4960927",
+      "pubDate": "2026-10-20T19:45:35.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "RTX options activity on earnings day: puts, calls, and volatility reset",
+      "link": "https://www.investing.com/news/stock-market-news/rtx-options-activity-on-earnings-day-puts-calls-and-volatility-reset-93CH-4960918",
+      "pubDate": "2026-10-20T19:43:47.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Kroger to invest $5 billion by 2029 as new CEO sharpens grocery focus",
+      "link": "https://www.investing.com/news/stock-market-news/kroger-to-focus-on-grocery-business-under-new-ceo-as-competition-heats-up-4959911",
+      "pubDate": "2026-10-20T19:42:51.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Anthropic recorded net loss of over $80 billion in first half of this year, WSJ reports",
+      "link": "https://www.investing.com/news/stock-market-news/anthropic-recorded-net-loss-of-over-80-billion-in-first-half-of-this-year-wsj-reports-4960917",
+      "pubDate": "2026-10-20T19:42:40.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "FAA certifies Boeing’s 737 MAX 10, clearing way for deliveries",
+      "link": "https://www.investing.com/news/stock-market-news/faa-certifies-boeings-737-max-10-clearing-way-for-deliveries-4960916",
+      "pubDate": "2026-10-20T19:42:25.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "JPMorgan Reveals 3 Bitcoin Price Scenarios for 2036",
+      "link": "https://beincrypto.com/jpmorgan-bitcoin-forecast-stocks-gold/",
+      "pubDate": "2026-10-20T18:24:06.000Z",
+      "description": "Bitcoin could outperform both US stocks and gold over the next decade, according to a striking new projection from JPMorgan Asset Management.&#160; The Wall Street giant estimates that Bitcoin (BTC) could deliver annual returns of 10% in it",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Learning about earnings: Can we rely on labour market slack to mitigate the latest supply shock? − speech by Megan Greene",
+      "link": "https://www.bankofengland.co.uk/speech/2026/october/megan-greene-speech-at-lse-economics-society-london",
+      "pubDate": "2026-10-20T17:00:00.000Z",
+      "description": "Given at London School of Economics",
+      "source": "Bank of England"
+    },
+    {
+      "title": "Canadian dollar hits four-week high as market cheers Alberta remain vote",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNX3VoTTJLT3JBLVlSWGFnOFgybWRlOU9HSnNTTVp3OFZlR3pvNElFZXRVUVl4VnhvcUFOVlR1cXkxVzB4STJwMmR5eEFJZHVRbnphc2E2ak9Pb1ZoblE0aWlhRXI0dW16MUE2Y2pZOFZYVXJqX2x1M2ptbUpmc1Q5YmZiY09FX1VWZFBYRW9EM0U1bDgtZDN1U0h0OWphU0Zka19Da3ZpWi1QT21kdC0ycWYyRko?oc=5",
+      "pubDate": "2026-10-20T16:29:43.000Z",
+      "description": "Canadian dollar hits four-week high as market cheers Alberta remain vote&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
     {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-10-20T16:05:19.000Z",
+      "pubDate": "2026-10-20T16:05:45.000Z",
       "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
       "source": "Bank of Canada"
-    },
-    {
-      "title": "Belgium stocks higher at close of trade; BEL 20 up 1.56%",
-      "link": "https://www.investing.com/news/stock-market-news/belgium-stocks-higher-at-close-of-trade-bel-20-up-156-4960672",
-      "pubDate": "2026-10-20T16:05:04.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Efinix appoints Kate Schuelke to board of directors",
-      "link": "https://www.investing.com/news/company-news/efinix-appoints-kate-schuelke-to-board-of-directors-93CH-4960671",
-      "pubDate": "2026-10-20T16:04:36.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Barclays shifts capital to boost hedge fund lending in Asia - Bloomberg",
-      "link": "https://www.investing.com/news/stock-market-news/barclays-shifts-capital-to-boost-hedge-fund-lending-in-asia--bloomberg-93CH-4960667",
-      "pubDate": "2026-10-20T16:00:47.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "French bond yields near 24-year high as new protests loom",
-      "link": "https://www.investing.com/news/economy-news/french-bond-yields-near-24year-high-as-new-protests-loom-4959545",
-      "pubDate": "2026-10-20T16:00:39.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Sweden stocks lower at close of trade; OMX Stockholm 30 down 0.89%",
-      "link": "https://www.investing.com/news/stock-market-news/sweden-stocks-lower-at-close-of-trade-omx-stockholm-30-down-089-4960666",
-      "pubDate": "2026-10-20T16:00:32.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Finland stocks lower at close of trade; OMX Helsinki 25 down 1.19%",
-      "link": "https://www.investing.com/news/stock-market-news/finland-stocks-lower-at-close-of-trade-omx-helsinki-25-down-119-4960663",
-      "pubDate": "2026-10-20T16:00:04.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Aprea at Pre-ESMO Virtual Panel Conference: wEE1 bet leans on safety",
-      "link": "https://www.investing.com/news/transcripts/aprea-at-preesmo-virtual-panel-conference-wee1-bet-leans-on-safety-93CH-4960661",
-      "pubDate": "2026-10-20T15:57:30.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Small businesses file new lawsuit to block Trump’s Canada tariffs",
-      "link": "https://www.investing.com/news/stock-market-news/small-businesses-file-new-lawsuit-to-block-trumps-canada-tariffs-4960660",
-      "pubDate": "2026-10-20T15:55:49.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Micron union in Taiwan to launch one-day strike as bonus dispute escalates",
-      "link": "https://www.investing.com/news/stock-market-news/micron-union-in-taiwan-to-launch-strike-as-bonus-dispute-escalates-4958678",
-      "pubDate": "2026-10-20T15:55:17.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Brent slips in choppy session as investors weigh attacks on ships, Saudi infrastructure",
-      "link": "https://www.investing.com/news/commodities-news/oil-eases-as-markets-assess-potential-waiver-on-russian-energy-middle-east-supply-risks-4958607",
-      "pubDate": "2026-10-20T15:55:02.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "TRON’s Justin Sun Turns Bearish on Bitcoin Over AI and Quantum Risks",
@@ -156,13 +177,6 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "MoneyGram Makes Another Big Blockchain Move With XDC Network",
-      "link": "https://beincrypto.com/moneygram-xdc-network-blockchain-validator/",
-      "pubDate": "2026-10-20T10:53:23.000Z",
-      "description": "The companies that moved money before blockchains existed have stopped testing them. MoneyGram is now helping to run one. The 85-year-old remittance company, which serves around 60 million customers, has joined XDC Network as an institution",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Sterling rises as strong labour market data reinforces rate hike bets",
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOeVc2VlJwWldpcmYtQ0FXa2JtemMzSXJtTTM4T01kRl9sTmNTUDk4Sldrc0xONWZEY0ZQcVlWYjhwWjg3Ql9KQWJxQ0psYXlhTXhiZEVvVmVyOE5sSVAyc19JY084LVhLWjNCN3dzV2pPd0RnN3paMTlxdEhYdGl1WmNoWW9BUlRoMTZRMlE3YnM5RkNfYVlULXZydkhFVUt1d1RTUjNwV0JxbHdTTVVkSQ?oc=5",
       "pubDate": "2026-10-20T10:31:31.000Z",
@@ -185,23 +199,30 @@
     },
     {
       "title": "Dollar and euro drift, yen slips as markets seek direction",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNdVh4TlpRWU1xbGMtWHBWYXNHWmtZVndNUjZUcllTR05va1RmcDlqSVpIWkM5TDR4dTlXLWlaaENpc19FOUpfUFBDUjVsMVFyM2R1a25qallrUWxzcWt1NzItWlo2VWYzMHpFUGdiSl95X3FkU3g2bjU0RjNqbnFQZDBPYlJldlJzbDVhZGg5eHpEVmZyX1FSQWtB0gGfAUFVX3lxTFBGelc0YUlicUJlUWtMOThKS04ycmRHM0hXMF9GWkkzZ1RELW9acXRIcVQyTjhLY2w0NGlaMG5aNjNIQ2VjbjFvUHcwS1I1TUpnWUllcVVFTnNiWVVzMW90aWZmbzRfOTQ0MkZZMGxXYl8zd0R4V2ZCMGdsMVVOM2k2NXVJbm5UODJLV3Itb1VYM1hKOGI0LXdqSkRnVGVQVQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQRnpXNGFJYnFCZVFrTDk4SktOMnJkRzNIVzBfRlpJM2dURC1vWnF0SHFUMk44S2NsNDRpWjBuWjYzSENlY24xb1B3MEtSNU1KZ1lJZXFVRU5zYllVczFvdGlmZm80Xzk0NDJGWTBsV2JfM3dEeFdmQjBnbDFVTjNpNjV1SW5uVDgyS1dyLW9VWDNYSjhiNC13akpEZ1RlUFXSAZ8BQVVfeXFMUEZ6VzRhSWJxQmVRa0w5OEpLTjJyZEczSFcwX0ZaSTNnVEQtb1pxdEhxVDJOOEtjbDQ0aVowblo2M0hDZWNuMW9QdzBLUjVNSmdZSWVxVUVOc2JZVXMxb3RpZmZvNF85NDQyRlkwbFdiXzN3RHhXZkIwZ2wxVU4zaTY1dUlublQ4MktXci1vVVgzWEo4YjQtd2pKRGdUZVBV?oc=5",
       "pubDate": "2026-10-20T04:55:25.000Z",
       "description": "Dollar and euro drift, yen slips as markets seek direction&nbsp;&nbsp;CNBC",
       "source": "Google News"
     },
     {
-      "title": "Gold eases as oil-driven inflation worries weigh",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOLVJCYm9CRFhWY01aUkRqYnVXb0RzRC1RUnhfOEFicHItalFBMnRMc0ZjcWRVcGNnZVg3ZXQ3WXNXeUZLN183enN0NFAtdmxuUHJhRU5jOHlQbTg1TldhNVdtbF9IWU1GZ1BfOEZvTnJpUEhGTE5xUkRSbl9FZVR4NlFJMEE2V1VYZ1hVRzk3SmpJMi1qelE?oc=5",
-      "pubDate": "2026-10-20T01:33:00.000Z",
-      "description": "Gold eases as oil-driven inflation worries weigh&nbsp;&nbsp;Reuters",
+      "title": "Stocks mostly rise as oil, US yields ease; euro edges up",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPaHdteV9meHVjc2dvbmd1WjNPa1FHR2lwTFlEcmJPWE5zZnhHSFNjQndCeHptVW1NaEpsbms3QS1oSHRiTmZyUVp2ZVR0SlMwT1kxVnM2UFdyenVSblJHVW4ySjA3aTFUcGxvbV9iaHZZMzJVZTRQV1ZtM3BZMVd4RHFsaw?oc=5",
+      "pubDate": "2026-10-20T02:09:00.000Z",
+      "description": "Stocks mostly rise as oil, US yields ease; euro edges up&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
-      "title": "Euro steadies as French protests ease; pound and yen firm",
+      "title": "Gold steady as investors await fed rate signals",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOLVJCYm9CRFhWY01aUkRqYnVXb0RzRC1RUnhfOEFicHItalFBMnRMc0ZjcWRVcGNnZVg3ZXQ3WXNXeUZLN183enN0NFAtdmxuUHJhRU5jOHlQbTg1TldhNVdtbF9IWU1GZ1BfOEZvTnJpUEhGTE5xUkRSbl9FZVR4NlFJMEE2V1VYZ1hVRzk3SmpJMi1qelE?oc=5",
+      "pubDate": "2026-10-20T01:33:00.000Z",
+      "description": "Gold steady as investors await fed rate signals&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Dollar dips as traders weigh Iran, AI risks",
       "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOazFGS3ZwNDhmME9ZUDdoZVQzMkV3UEJQUEJsTE1LdnFTcjNXRzI2emE2Z3VvZE1YNGRpam95VTF3UGgyTVFjRExnWkJ1TGxpenBQUHFhbmU1MUpEYVhDcURRS05xQ1BycHRUT3F3bExRQjZfaUFVeGlKcHpmaGFEMkVwQ0RxSk5iLU4zaDVaVDJzQzEyQ0R4OVFZeHZuVXJKZ3pESWtudFQ?oc=5",
       "pubDate": "2026-10-20T01:14:00.000Z",
-      "description": "Euro steadies as French protests ease; pound and yen firm&nbsp;&nbsp;Reuters",
+      "description": "Dollar dips as traders weigh Iran, AI risks&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -237,6 +258,13 @@
       "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxObUxGRUVjWUdwSVNNUGFIeXRUWVdadTNPQ2NFclNhZDluSzZ4dnFRUTdEUFVidUtlVDlVWXdCc2ZnaFNmTkQ2Yk9fc19WSEo2blI3aVRsN1dFbVBtVkxaSXlkZW02ZjJQaXNEX1Z6OGJPR3ZaRm04ekJPWV9wbFBDLUk4bmtDeWRkelF5NWRBV2xtWnlGSHNXZUpISGxSd3lTU3FVRGpxSERBcHZ3X0JxMkw4dTJyR1B1SVV4SUZBdS0yNHQ5UU9R?oc=5",
       "pubDate": "2026-10-19T16:06:30.000Z",
       "description": "How the gold boom is fuelling tree loss from Ghana to the Amazon&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Gold edges lower as firm dollar, elevated yields weigh",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcHBoaXFtRmhELVpxR3BOYzNDX3IzS1Y1UHZaZUlWRnBiY0Y3WWxwa19vSlVRUENyTGtpZVJFSEFSLW9hVWhEaktYRTVhVWpObTFOYThBVXNRX19VY0phaUJjSkdSMjFZQ19FUFZGMm44UnNpZkZGSnNCeUc2SFZ4c1ZZUU9lV2tiUk1odm44Wmc2WGVjSG5pYUU3QnE2NGYx?oc=5",
+      "pubDate": "2026-10-19T15:02:20.000Z",
+      "description": "Gold edges lower as firm dollar, elevated yields weigh&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -279,13 +307,6 @@
       "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1JVnBSTjI4Y21rVlR6Y1laVmg1VVJKQkNKTFh0ZXlrQWRrUUtBbWhUMmJlVUZXYVFmY1NEM3BaaU12ZHBVdWduajRlMVpFZTBiTDNDVnZxZTdJQ041V1J3clNKc1ZNRVJweC11MWpNWnhidHfSAXhBVV95cUxOUWgzZ3hhZUJVYXZRMWFFOWc0UjJrOGszMklNdzVidTBrb3ZkWG5PQW5nQUQxcVU1RS1sTkZDZmlHbnVwRUprN1UxZlhIendadzduQ0V6bXdBemdaYTdBd25rTURiNnl1RTlZdVM2ZFBybmFmZXVvWVA?oc=5",
       "pubDate": "2026-10-19T05:29:23.000Z",
       "description": "Japanese Prime Minister Takaichi rejects criticism around weak yen and high interest rates&nbsp;&nbsp;CNBC",
-      "source": "Google News"
-    },
-    {
-      "title": "Gold edges lower as firm dollar, elevated yields weigh",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNNXUxeVVHc0hZNU4zazIxT2JkM2Vxd3I3N0wyemRBd3M3dkVSY0hmSGhiS3JPTkhseEU5TlRqZWg4aXl5N0ZWRE01SjgwSXpBZXNyUFllbHdHNHd6SkYzNEMxTURyYkE5blNfLXU5V0N2RkRaS1B2cEtqMG03YWlqeDIyWlBhNHJPT2NpdTh0QXhGNl91UjgxZjhB0gGfAUFVX3lxTE1JMkc3czdPbDRmdlB2VENWaGU1SE5hVXY2WmM0QmNmNVlualhDQThsTnMwaEdhYVMtM2taemNfZmdWWEZXUjlTdTV2ZXlOWXQ5dTlyalBtc05SN0tHTlc4akpsY1psaHdvd0owMl81cXBJNUFRN0NheGoyTU54TVFkWDBXUkl0NHpTd3kzdlc3NnR0WlBqYi1LQ2hMVVlZWQ?oc=5",
-      "pubDate": "2026-10-19T04:23:04.000Z",
-      "description": "Gold edges lower as firm dollar, elevated yields weigh&nbsp;&nbsp;CNBC",
       "source": "Google News"
     },
     {
@@ -611,13 +632,6 @@
       "source": "Bank of Japan"
     },
     {
-      "title": "WSJ Dollar Index Falls 0.25% to 97.34",
-      "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOeWQzN2Vna3FUbDBZZHhxYzdJWFJfNFZzQ2Q0YkRuVGtqVEhfdjRqcTFERFlOMzI5azgyaDZfWTI3Q3ZBY0lJRTRCZFEwM1kwMlRmNkF0bkZieTllWEtpZVFWMlhzUHRibGk1QlJNaGxaSUl4T1kwSllxRk5vY0V5cjVjdUlic0ZuWWhjUTRodGxxM3lib1ZSLW5EU0d4RVlkd0lQQ0U0THZHRGcyN3JqSlB5WkNPY3lpbDJYQl9OT0JWUG9yVTNlUUpR?oc=5",
-      "pubDate": "2026-10-13T21:39:00.000Z",
-      "description": "WSJ Dollar Index Falls 0.25% to 97.34&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
       "title": "Philip R. Lane: The AI opportunity for Europe",
       "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261013~9db9bf4fd6.en.html",
       "pubDate": "2026-10-13T18:30:00.000Z",
@@ -630,20 +644,6 @@
       "pubDate": "2026-10-13T18:00:00.000Z",
       "description": "Minutes of the Board's discount rate meetings on August 17, September 9, and September 16, 2026",
       "source": "Federal Reserve"
-    },
-    {
-      "title": "Minutes of the Money Market Committee meeting – September 2026",
-      "link": "https://www.bankofengland.co.uk/minutes/2026/september/money-markets-committee-minutes-september-2026",
-      "pubDate": "2026-10-13T15:04:27.000Z",
-      "description": "The Money Markets Committee is a forum for market participants and authorities to discuss the UK unsecured deposits and funding market and securities lending and repo markets.",
-      "source": "Bank of England"
-    },
-    {
-      "title": "Basic Figures on Fails (Sept.)",
-      "link": "http://www.boj.or.jp/en/statistics/set/bffail/sjgb2609.pdf",
-      "pubDate": "2026-10-13T07:30:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
     },
     {
       "title": "2026-10-12 - Data portal - Important monetary policy data, 12 October 2026",
