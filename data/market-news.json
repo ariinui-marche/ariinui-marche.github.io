@@ -1,75 +1,110 @@
 {
-  "timestamp": "2026-10-21T17:03:32.318Z",
+  "timestamp": "2026-10-21T20:31:35.012Z",
   "items": [
     {
-      "title": "Europe risks startup exodus as regulation, funding and skill gaps hamper AI adoption, AWS EMEA head says",
-      "link": "https://www.investing.com/news/stock-market-news/europe-risks-startup-exodus-as-regulation-funding-and-skill-gaps-hamper-ai-adoption-aws-emea-head-says-4963748",
-      "pubDate": "2026-10-21T16:54:30.000Z",
+      "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
+      "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
+      "pubDate": "2026-10-21T20:14:35.000Z",
+      "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
+      "source": "Bank of Canada"
+    },
+    {
+      "title": "Meta beats Q3 estimates, approves new nonvoting share class as AI spending surges",
+      "link": "https://www.investing.com/news/stock-market-news/meta-beats-q3-estimates-approves-new-nonvoting-share-class-as-ai-spending-surges-4963949",
+      "pubDate": "2026-10-21T20:14:32.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Bridgepoint, Bain bid for UK wealth manager W1M - Bloomberg",
-      "link": "https://www.investing.com/news/stock-market-news/bridgepoint-bain-bid-for-uk-wealth-manager-w1m--bloomberg-93CH-4963747",
-      "pubDate": "2026-10-21T16:53:10.000Z",
+      "title": "Pathward Financial earnings beat by $0.26, revenue topped estimates",
+      "link": "https://www.investing.com/news/earnings/pathward-financial-earnings-beat-by-026-revenue-topped-estimates-4963951",
+      "pubDate": "2026-10-21T20:14:29.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Group 1 Automotive completes $1.3 billion acquisition of Hennessy dealerships",
-      "link": "https://www.investing.com/news/sec-filings/group-1-automotive-completes-13-billion-acquisition-of-hennessy-dealerships-93CH-4963745",
-      "pubDate": "2026-10-21T16:53:00.000Z",
+      "title": "Enterprise Financial earnings missed by $0.21, revenue fell short of estimates",
+      "link": "https://www.investing.com/news/earnings/enterprise-financial-earnings-missed-by-021-revenue-fell-short-of-estimates-4963950",
+      "pubDate": "2026-10-21T20:14:28.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Raymond James reiterates Strong Buy on AT&T stock, $33 target amid fiber strategy",
-      "link": "https://www.investing.com/news/analyst-ratings/raymond-james-reiterates-strong-buy-on-att-stock-33-target-amid-fiber-strategy-93CH-4963746",
-      "pubDate": "2026-10-21T16:53:00.000Z",
+      "title": "Lam Research earnings beat by $0.02, revenue topped estimates",
+      "link": "https://www.investing.com/news/earnings/lam-research-earnings-beat-by-002-revenue-topped-estimates-4963948",
+      "pubDate": "2026-10-21T20:13:27.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "SpaceX options activity: calls dominate as volume hits 2.17M contracts",
-      "link": "https://www.investing.com/news/stock-market-news/spacex-options-activity-calls-dominate-as-volume-hits-217m-contracts-93CH-4963744",
-      "pubDate": "2026-10-21T16:51:39.000Z",
+      "title": "Palantir announces AI deployments with defense, healthcare clients",
+      "link": "https://www.investing.com/news/company-news/palantir-announces-ai-deployments-with-defense-healthcare-clients-93CH-4963947",
+      "pubDate": "2026-10-21T20:13:23.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Capital One earnings analysis: questions answered and next catalysts",
-      "link": "https://www.investing.com/news/stock-market-news/capital-one-earnings-analysis-questions-answered-and-next-catalysts-93CH-4963736",
-      "pubDate": "2026-10-21T16:45:43.000Z",
+      "title": "Genenta Science receives Nasdaq bid price deficiency notice",
+      "link": "https://www.investing.com/news/company-news/genenta-science-receives-nasdaq-bid-price-deficiency-notice-93CH-4963946",
+      "pubDate": "2026-10-21T20:13:17.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "NextEra Energy earnings analysis: questions answered and next catalysts",
-      "link": "https://www.investing.com/news/stock-market-news/nextera-energy-earnings-analysis-questions-answered-and-next-catalysts-93CH-4963735",
-      "pubDate": "2026-10-21T16:45:12.000Z",
+      "title": "Las Vegas Sands earnings missed by $0.19, revenue fell short of estimates",
+      "link": "https://www.investing.com/news/earnings/las-vegas-sands-earnings-missed-by-019-revenue-fell-short-of-estimates-4963945",
+      "pubDate": "2026-10-21T20:13:11.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Goldman Sachs reiterates Nvidia stock rating on AI deployment outlook",
-      "link": "https://www.investing.com/news/analyst-ratings/goldman-sachs-reiterates-nvidia-stock-rating-on-ai-deployment-outlook-93CH-4963731",
-      "pubDate": "2026-10-21T16:45:07.000Z",
+      "title": "IBM earnings beat by $0.09, revenue topped estimates",
+      "link": "https://www.investing.com/news/earnings/ibm-earnings-beat-by-009-revenue-topped-estimates-4963943",
+      "pubDate": "2026-10-21T20:13:09.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Intuitive Surgical earnings analysis: questions answered and next catalysts",
-      "link": "https://www.investing.com/news/stock-market-news/intuitive-surgical-earnings-analysis-questions-answered-and-next-catalysts-93CH-4963730",
-      "pubDate": "2026-10-21T16:44:56.000Z",
+      "title": "SAP ADR earnings beat by $0.08, revenue topped estimates",
+      "link": "https://www.investing.com/news/earnings/sap-adr-earnings-beat-by-008-revenue-topped-estimates-4963942",
+      "pubDate": "2026-10-21T20:13:07.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Thermo Fisher earnings analysis: questions answered and next catalysts",
-      "link": "https://www.investing.com/news/stock-market-news/thermo-fisher-earnings-analysis-questions-answered-and-next-catalysts-93CH-4963729",
-      "pubDate": "2026-10-21T16:44:29.000Z",
+      "title": "Nasdaq surges 1% as tech lifted by SpaceX, Tesla on Musk’s hint at possible merger",
+      "link": "https://www.investing.com/news/stock-market-news/us-stock-futures-rise-as-spacex-surges-on-upbeat-earnings-4961479",
+      "pubDate": "2026-10-21T20:13:03.000Z",
       "description": "",
       "source": "Investing.com"
+    },
+    {
+      "title": "Facebook Ordered to Pay $25 Billion in Fines. Will Meta Stock Crash?",
+      "link": "https://beincrypto.com/meta-stock-25-billion-facebook-privacy-fine/",
+      "pubDate": "2026-10-21T19:33:48.000Z",
+      "description": "Meta has been hit with a record $25 billion penalty over Facebook&#8217;s handling of user data. Yet Wall Street appears remarkably calm. The company&#8217;s shares are rising, with investors focused on its booming AI business and a major e",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Canadian dollar holds near four-week high as investors stick to rate hike bets",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNTjdXLUZRZWYzNFRMX1BUMnNnUlJKVkJCVU5LVlFZbDdYblowYkx6Y1JDajVMWUlNZ01maFMzMFdqbVhpcmcxWTVUZWF5MThaZ085UzB4QnprTm02RGI2Z1I5WlJRamF5TjVjTlk2ZTFNcmUxSlAxVGxlamJuUThtTWJlOW1fc1FydElMR3hnSk01bE1xRzFpUnJMLXRWRk5GQXd6b2ItdFdMWmxRQUtiOTVoZElfNzhP?oc=5",
+      "pubDate": "2026-10-21T18:42:59.000Z",
+      "description": "Canadian dollar holds near four-week high as investors stick to rate hike bets&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Elon Musk’s Starlink Is Winning on Wall Street as Stocks Rally",
+      "link": "https://beincrypto.com/elon-musk-starlink-wall-street-stocks-rally/",
+      "pubDate": "2026-10-21T18:42:58.000Z",
+      "description": "Would you switch airlines for better Wi-Fi? United Airlines says passengers are already doing it. The airline says Starlink is drawing passengers away from competitors, while SpaceX is earning billions from satellite connectivity. Both shar",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Gold Futures Slip As U.S. Dollar Gains, Yields Edge Up",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZU5uN1haS1FQQW82aVdiWmxlbDJrMkszT091U2xWR3dGOTdBeVZ6Z0gzSGpqQ2ZNTE96MG1kckxxY2NVV0I0THpteE9lWGZTdHUxa01OTzJkUndWcVVRWDVZWHVYeFZPcm5VckhaZFBVRDRjcmgyRDg5OUJ1WFBlTlotVGlnekE3SVFDVkpFMHBQbTVPWmd4WTNSSTd1X0ZJNDFlUmVWcGxlSE5oWG1ENmZoYk1oVTdKZlE?oc=5",
+      "pubDate": "2026-10-21T18:03:54.000Z",
+      "description": "Gold Futures Slip As U.S. Dollar Gains, Yields Edge Up&nbsp;&nbsp;WSJ",
+      "source": "Google News"
     },
     {
       "title": "Birdeye Launches Institutional Terminal as Bots Dominate Crypto",
@@ -156,20 +191,6 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Is the AI Agent Economy Really Booming? 6.4M Payments Tell a Different Story",
-      "link": "https://beincrypto.com/ai-agent-economy-6-million-payments-reality-check/",
-      "pubDate": "2026-10-21T10:47:45.000Z",
-      "description": "Everywhere you look, financial media and conference panels are preaching the same gospel: autonomous AI agents are about to take over finance and spend serious capital on our behalf. A new BeInCrypto Intelligence report, published in collab",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Doctor Profit Warns of a Very Big Monero (XMR) Liquidation Event",
-      "link": "https://beincrypto.com/doctor-profit-monero-liquidation-event/",
-      "pubDate": "2026-10-21T10:11:38.000Z",
-      "description": "Monero (XMR) futures open interest stands near $287 million, according to CoinGlass, and trader Doctor Profit warns that this leverage could trigger a large XMR liquidation event. He ties the setup to January, when a similar build-up preced",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Sudan's currency tumbles to new low as war hammers economy",
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObWxDQTE0QkwwSENSbi1rVnNZX3M1TU5WN1FGS0drYmMyY1I2MldCcDdOVHE3a3VDbmhXckpia2k4MFVXbW9ZZHl4azhHRG5XTW90aXZWb29WYVNITHppMEhleVdORjAwUV8yblNTZUZpTmtrSHk1NkN6aGlVdV9VQkg5S2hhX3hobkFWSEdtaTdFSTVuLVMxMHZMckxrd1pYV3c?oc=5",
       "pubDate": "2026-10-21T10:00:09.000Z",
@@ -240,39 +261,25 @@
       "source": "European Central Bank"
     },
     {
-      "title": "Gold steadies near one-week low as oil-driven inflation fears grow",
+      "title": "Gold edges higher as yields retreat, Fed decision in focus",
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNY2dJZXdfdnptbDVvajUtNHBONy13T1Z5aEtVc3d2d2VDYUNpUEpTM1JxNGVZRFhiQmh1b1U2RWpOaW0zVndyQk9uSFZ6b0pQXzVvNUhRMFVXeEMzS3BrU1FkdE9tNEYxY21PdDFEWGplNkkwMkJ2Rkk5VVg2VUVDcXFIUmp4cUR4SnhqQ2h6b3hYTExtTkhCNGtqZWt6WUtUYURrc3owUUptdw?oc=5",
       "pubDate": "2026-10-21T03:45:00.000Z",
-      "description": "Gold steadies near one-week low as oil-driven inflation fears grow&nbsp;&nbsp;Reuters",
+      "description": "Gold edges higher as yields retreat, Fed decision in focus&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
-      "title": "Dollar drifts as Middle East tensions simmer, oil rises",
+      "title": "Dollar mixed as traders wait on Fed, Aussie gains",
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObjN5QnZoUjRaNHpZaXpRWnBpNExrcHRZVXk2U0ZRWVNfdXp5Q3pzU2hGeldGbHhheTE3OFUzYXQ3OEN1OHBBUnhybEN3anFzXzlwQzJkUnFWT1UyTWdETVFZOE1QYUpQMzNMTE5YcW9wN1JrajM1Ung5dWdkc29Wemx2VmZGZjNBUkd4azNYb0hSNUx1Ynlya00zbi1LS3ZQUHfSAacBQVVfeXFMUElITzFxczN4Z211cE1sSkpJYzd4VDdmajNIMEJMV053VEZraGNXd0tvNXI5YkRvNDVzVWg4ZzJRbGFUSHkxRFBSSmRrSWNHY3pIaUNxbVV4NE4wdkRsaEd3REMwd01zak16QkpxNU5IeVViYi1wTmNsTnpGSzF2Q3JMZFlhWmNHQXpKSE1fdVZPVjhiNE5XNVgzUnQ1MFlOY19IZmg0dHM?oc=5",
       "pubDate": "2026-10-21T01:43:00.000Z",
-      "description": "Dollar drifts as Middle East tensions simmer, oil rises&nbsp;&nbsp;CNBC",
+      "description": "Dollar mixed as traders wait on Fed, Aussie gains&nbsp;&nbsp;CNBC",
       "source": "Google News"
     },
     {
-      "title": "Dollar holds steady as Middle East tensions simmer, oil rises",
+      "title": "Dollar dips as traders wait on Fed; Aussie gains",
       "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQMmhtRnJCbDhIc08yUUUxQnBOU0tmczBNT3JOTjBKVy1LY0VCUW1pdk9hNW83QXdqM3pKOGthelR0NldvLUx6ZHdfUWpTTnpHOVhVeG9nR0tUWjVqNlUyT09jbVp3eUZDb1RLbjhLakZYUXZfcXNoVndFSG50cUw5alpFRHVpNWdUMWtxLWpXMUZsdFE1RVhtX0RWVkVLazFFNUlIZi1fcHRJUjZYY090OVBwaTZMUnJ4TmdtbWFR?oc=5",
       "pubDate": "2026-10-21T01:20:00.000Z",
-      "description": "Dollar holds steady as Middle East tensions simmer, oil rises&nbsp;&nbsp;Reuters",
+      "description": "Dollar dips as traders wait on Fed; Aussie gains&nbsp;&nbsp;Reuters",
       "source": "Reuters"
-    },
-    {
-      "title": "WSJ Dollar Index Falls 0.25% to 96.96",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQYVZmV1JBenRueFdua1VmcWxfbGN6ZFphZ3AtUEZQd2NBMkctWnRsZVZGTjltMUoyWGNubnZYVWE2d2NJTVJwQVNFV0hoWmVKcmxBUlFtVFpzYUUwVjB1NkVYaE9Qem5jblN2SUZILVhPTndMUjc0UVloZkhYNUZlbU1Sd1diN3FlTkFjZDBubEJUbmRBZEozS012Yw?oc=5",
-      "pubDate": "2026-10-20T21:29:00.000Z",
-      "description": "WSJ Dollar Index Falls 0.25% to 96.96&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
-      "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
-      "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-10-20T20:26:32.000Z",
-      "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
-      "source": "Bank of Canada"
     },
     {
       "title": "Learning about earnings: Can we rely on labour market slack to mitigate the latest supply shock? − speech by Megan Greene",
@@ -359,27 +366,6 @@
       "source": "Google News"
     },
     {
-      "title": "Euro dips on French turmoil, US dollar lifted as stocks rebound",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNUGwwZHd2R1h3Q1BiZkdpNVVzRFpXZTJEd19TT2tyelhtb21VX0ZOSzN2RVpURkdHMWl5REpraUVJTVRjeFlSQmU4T3V4XzhWV2g0bU1fd0Q0cmhRMFRFbVg5Snhld1owT2IwbmR2d0RwNGNpWEVGWHhYaDRzN3N1UWJwNjhuTXoyc3hsLXIybEt0VEl4VlJOS2JUZTB5TnV2OVFWU2NLYjRiWU5kYnA4?oc=5",
-      "pubDate": "2026-10-19T19:45:43.000Z",
-      "description": "Euro dips on French turmoil, US dollar lifted as stocks rebound&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Gold Futures Slip As U.S. Dollar Gains, Yields Edge Up",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZU5uN1haS1FQQW82aVdiWmxlbDJrMkszT091U2xWR3dGOTdBeVZ6Z0gzSGpqQ2ZNTE96MG1kckxxY2NVV0I0THpteE9lWGZTdHUxa01OTzJkUndWcVVRWDVZWHVYeFZPcm5VckhaZFBVRDRjcmgyRDg5OUJ1WFBlTlotVGlnekE3SVFDVkpFMHBQbTVPWmd4WTNSSTd1X0ZJNDFlUmVWcGxlSE5oWG1ENmZoYk1oVTdKZlE?oc=5",
-      "pubDate": "2026-10-19T18:14:00.000Z",
-      "description": "Gold Futures Slip As U.S. Dollar Gains, Yields Edge Up&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
-      "title": "Canadian dollar notches nearly four-week high on BoC rate hike bets",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQejFjMHFhbTY3RGNrb3ZLNnZvd2QtWjl4eDg5cG9vRmR3Qk9zbGNBWXM1VXE5Z0ZWamFZYUptd0RwTmdieTRjQXVjWE5YVEhlVzFOUEo3WnF4aVRqSmNvUUFTZnVwVHo2aHVuTXZybk5UT0ZqSmtGNHdfRXZhNWdzVnpDRWRja2ExdFFHNTYwUDg2bmxzWjdRekRHeUtKU3RuY1Z3M2FZSktjdXliQlpZZjBn?oc=5",
-      "pubDate": "2026-10-19T17:41:13.000Z",
-      "description": "Canadian dollar notches nearly four-week high on BoC rate hike bets&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "Trump’s Golf Empire Is A Billion-Dollar Tax Shelter",
       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWHl2enNZbVVMSnZKU25COUcxVm1VbVJvNmVYa24zVEZJcE92XzFpX0F0d0MzVzVDMS10cWlwdUVacDl4SWdzdWVMUUlpTkVpS0RVNlBBSURnVGEwcHV3MHJRYWZ3dmZiZ0tDMWJDQjRWb2xhZmxPbUhvaW1yY1JfY0JKZzRQa3YwWERhLTBxR0JCT3pEWUw0UEZ5UTZabkV0VFNxeXdMSQ?oc=5",
       "pubDate": "2026-10-19T10:30:06.000Z",
@@ -419,13 +405,6 @@
       "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNNXUxeVVHc0hZNU4zazIxT2JkM2Vxd3I3N0wyemRBd3M3dkVSY0hmSGhiS3JPTkhseEU5TlRqZWg4aXl5N0ZWRE01SjgwSXpBZXNyUFllbHdHNHd6SkYzNEMxTURyYkE5blNfLXU5V0N2RkRaS1B2cEtqMG03YWlqeDIyWlBhNHJPT2NpdTh0QXhGNl91UjgxZjhB0gGfAUFVX3lxTE1JMkc3czdPbDRmdlB2VENWaGU1SE5hVXY2WmM0QmNmNVlualhDQThsTnMwaEdhYVMtM2taemNfZmdWWEZXUjlTdTV2ZXlOWXQ5dTlyalBtc05SN0tHTlc4akpsY1psaHdvd0owMl81cXBJNUFRN0NheGoyTU54TVFkWDBXUkl0NHpTd3kzdlc3NnR0WlBqYi1LQ2hMVVlZWQ?oc=5",
       "pubDate": "2026-10-19T04:23:04.000Z",
       "description": "Gold edges lower as firm dollar, elevated yields weigh&nbsp;&nbsp;CNBC",
-      "source": "Google News"
-    },
-    {
-      "title": "Taiwan Dollar Bulls Look Past AI-Led Drop to Year-End Rally",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdllCaHBIdzY1OVhGakdCR1BtUFV1alFEb2pWZU14TUxpTE1zcHFqR2tvUXMyVzFRR1F0eUgta2Y0LS1sdFI1M1dsdWpJY3pKY0N4TndyTXNqNHhFb2tzSDdyRzE5dHVpaTROWW9LSm9RWnY3bWF6V0ljNVhHMm5OOVNraVowUnhQaEYwVHRVc2hCN2FjVjRZMUpaTFZLOWJ0bWtyOUhnbGJ3NHJIekRzeDFzcw?oc=5",
-      "pubDate": "2026-10-19T03:45:00.000Z",
-      "description": "Taiwan Dollar Bulls Look Past AI-Led Drop to Year-End Rally&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
     },
     {
@@ -625,6 +604,13 @@
       "source": "Google News"
     },
     {
+      "title": "How This Founder Is Using AI To Tackle The Trillion-Dollar Tax Gap",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZ05RdXhwdGk4d1NQcV9vRmp1d28wWlBXSTZJLUN4bGZMQm80eTJOTDAyY2hqWmJNQXhzTUhuMmdZRUpqaEdXMU8xSHczZTljNTc4TTF3bWI1Q1JWYjB0NXNCUkJRbC05TGRUWmdxbDBCbHFtT01UZnJZMXhUZXc1cVVZb3daX3phNW1OQm9MQ1RsNUN3RXYtQS05SnluR1V4NDVIZG1IOEh5aWpGVkFqUkVyODZ2Mko4T1dxVjFsRmE1TVVoWVlqMWtwLUc?oc=5",
+      "pubDate": "2026-10-14T14:10:00.000Z",
+      "description": "How This Founder Is Using AI To Tackle The Trillion-Dollar Tax Gap&nbsp;&nbsp;Forbes",
+      "source": "Google News"
+    },
+    {
       "title": "The Fifteenth Tripartite Governors' Meeting among PBOC, BOJ, and BOK",
       "link": "http://www.boj.or.jp/en/intl_finance/cooperate/coop261014a.pdf",
       "pubDate": "2026-10-14T11:00:00.000Z",
@@ -651,6 +637,20 @@
       "pubDate": "2026-10-14T03:00:00.000Z",
       "description": "Media release number 2026-29: Rachael Phelan has been appointed as Chief Risk Officer at the RBA, leading our Risk function and responsible for the delivery of the Bank's risk strategy.",
       "source": "Reserve Bank of Australia"
+    },
+    {
+      "title": "Bank of Japan Accounts (October 10)",
+      "link": "http://www.boj.or.jp/en/statistics/boj/other/acmai/release/2026/ac261010.htm",
+      "pubDate": "2026-10-14T01:00:00.000Z",
+      "description": "",
+      "source": "Bank of Japan"
+    },
+    {
+      "title": "Frank Elderson: Ensuring resilience in the face of uncertainty",
+      "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261014~e4ca33588e.en.html",
+      "pubDate": "2026-10-14T00:00:00.000Z",
+      "description": "",
+      "source": "European Central Bank"
     },
     {
       "title": "Minutes of the Board's discount rate meetings on August 17, September 9, and September 16, 2026",
