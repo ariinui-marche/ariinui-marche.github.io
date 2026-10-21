@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-21T06:21:15.729Z",
+  "timestamp": "2026-10-21T12:02:35.274Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -9899,6 +9899,15 @@
       "impact": "Low",
       "forecast": "",
       "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Foreign Direct Investment ytd/y",
+      "country": "CNY",
+      "date": "2026-10-22T05:10:00-04:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "-5.3%",
       "actual": ""
     },
     {
