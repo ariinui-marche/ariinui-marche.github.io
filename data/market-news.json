@@ -1,82 +1,110 @@
 {
-  "timestamp": "2026-10-21T20:31:35.012Z",
+  "timestamp": "2026-10-21T23:32:47.266Z",
   "items": [
+    {
+      "title": "Nasdaq leads Wall Street gains as SpaceX, Super Micro boost AI sentiment",
+      "link": "https://www.investing.com/news/economy-news/nasdaq-futures-lead-gains-as-spacex-super-micro-results-lift-ai-trade-4962357",
+      "pubDate": "2026-10-21T23:12:21.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Netflix Stock Hits 26-Month Low, But Revenue Tells a Different Story",
+      "link": "https://beincrypto.com/netflix-stock-26-month-low-earnings/",
+      "pubDate": "2026-10-21T23:10:03.000Z",
+      "description": "Netflix stock fell to a 26-month low after a weak Q4 outlook, even as revenue hit a record. See the key levels to watch.\nThe post Netflix Stock Hits 26-Month Low, But Revenue Tells a Different Story appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Adaptive Biotechnologies president and coo Julie Rubinstein sells $879,088 in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/adaptive-biotechnologies-president-and-coo-julie-rubinstein-sells-879088-in-shares-93CH-4964395",
+      "pubDate": "2026-10-21T23:00:58.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Kinder Morgan to invest $4.7 billion in two gas pipeline projects as demand surges",
+      "link": "https://www.investing.com/news/stock-market-news/kinder-morgan-to-invest-47-billion-in-two-gas-pipeline-projects-as-demand-surges-4964384",
+      "pubDate": "2026-10-21T22:54:38.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Australia’s Fortescue warns of operations hit as China state buyer talks rumble on",
+      "link": "https://www.investing.com/news/stock-market-news/australias-fortescue-posts-6-fall-in-quarterly-iron-ore-shipments-4964323",
+      "pubDate": "2026-10-21T22:54:21.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Tesla Q3 2026 slides: margins improve as capex doubles for AI push",
+      "link": "https://www.investing.com/news/company-news/tesla-q3-2026-slides-margins-improve-as-capex-doubles-for-ai-push-93CH-4964383",
+      "pubDate": "2026-10-21T22:53:38.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Knight-Swift Q3 2026 slides: pricing gains drive 255% profit surge",
+      "link": "https://www.investing.com/news/company-news/knightswift-q3-2026-slides-pricing-gains-drive-255-profit-surge-93CH-4964380",
+      "pubDate": "2026-10-21T22:49:47.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Stocks rise on AI-led earnings, France’s 10-year bond yield hits 5%",
+      "link": "https://www.investing.com/news/economy-news/asian-stocks-climb-as-strong-earnings-buoy-wall-street-4961492",
+      "pubDate": "2026-10-21T22:48:58.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "US Agriculture Dept confirms first detection of New World screwworm in US wildlife",
+      "link": "https://www.investing.com/news/commodities-news/us-agriculture-dept-confirms-first-detection-of-new-world-screwworm-in-us-wildlife-4964342",
+      "pubDate": "2026-10-21T22:48:40.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Cathay General Q3 2026 slides: record NII drives earnings growth",
+      "link": "https://www.investing.com/news/company-news/cathay-general-q3-2026-slides-record-nii-drives-earnings-growth-93CH-4964376",
+      "pubDate": "2026-10-21T22:48:00.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Hershey Trust Co., 10% owner, sells $5.04m in Hershey Co. stock",
+      "link": "https://www.investing.com/news/insider-trading-news/hershey-trust-co-10-owner-sells-504m-in-hershey-co-stock-93CH-4964375",
+      "pubDate": "2026-10-21T22:46:41.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Crypto Exchange Warning: Critical PHP Flaw Puts Payment Sites at Risk",
+      "link": "https://beincrypto.com/crypto-exchange-hack-alert-php2shell-risk/",
+      "pubDate": "2026-10-21T22:42:38.000Z",
+      "description": "A critical security threat affecting millions of websites has raised concerns for cryptocurrency users, particularly those using smaller exchanges and crypto payment services. On Wednesday, October 21, PHP developers released emergency patc",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Crypto Exchanges Want Your Next Stock Trade in 2027",
+      "link": "https://beincrypto.com/lbank-nvidia-stock-trading-crypto-exchange/",
+      "pubDate": "2026-10-21T21:39:43.000Z",
+      "description": "On LBank, traders can take a position on Nvidia without buying its shares. They can follow the chipmaker&#8217;s fortunes through a stock-linked instrument inside a platform they already use for crypto. It is one example of how exchanges ar",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Grayscale Opens 10 Crypto ETFs to Investors, But There&#039;s a Catch",
+      "link": "https://beincrypto.com/grayscale-opens-10-crypto-etfs-in-kind-investing/",
+      "pubDate": "2026-10-21T21:01:42.000Z",
+      "description": "Crypto investors holding substantial amounts of Bitcoin, Solana, or XRP now have another way to bring those holdings into traditional finance without selling their coins first. Grayscale announced that eligible investors can exchange crypto",
+      "source": "BeInCrypto"
+    },
     {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-10-21T20:14:35.000Z",
+      "pubDate": "2026-10-21T20:14:39.000Z",
       "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
       "source": "Bank of Canada"
-    },
-    {
-      "title": "Meta beats Q3 estimates, approves new nonvoting share class as AI spending surges",
-      "link": "https://www.investing.com/news/stock-market-news/meta-beats-q3-estimates-approves-new-nonvoting-share-class-as-ai-spending-surges-4963949",
-      "pubDate": "2026-10-21T20:14:32.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Pathward Financial earnings beat by $0.26, revenue topped estimates",
-      "link": "https://www.investing.com/news/earnings/pathward-financial-earnings-beat-by-026-revenue-topped-estimates-4963951",
-      "pubDate": "2026-10-21T20:14:29.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Enterprise Financial earnings missed by $0.21, revenue fell short of estimates",
-      "link": "https://www.investing.com/news/earnings/enterprise-financial-earnings-missed-by-021-revenue-fell-short-of-estimates-4963950",
-      "pubDate": "2026-10-21T20:14:28.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Lam Research earnings beat by $0.02, revenue topped estimates",
-      "link": "https://www.investing.com/news/earnings/lam-research-earnings-beat-by-002-revenue-topped-estimates-4963948",
-      "pubDate": "2026-10-21T20:13:27.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Palantir announces AI deployments with defense, healthcare clients",
-      "link": "https://www.investing.com/news/company-news/palantir-announces-ai-deployments-with-defense-healthcare-clients-93CH-4963947",
-      "pubDate": "2026-10-21T20:13:23.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Genenta Science receives Nasdaq bid price deficiency notice",
-      "link": "https://www.investing.com/news/company-news/genenta-science-receives-nasdaq-bid-price-deficiency-notice-93CH-4963946",
-      "pubDate": "2026-10-21T20:13:17.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Las Vegas Sands earnings missed by $0.19, revenue fell short of estimates",
-      "link": "https://www.investing.com/news/earnings/las-vegas-sands-earnings-missed-by-019-revenue-fell-short-of-estimates-4963945",
-      "pubDate": "2026-10-21T20:13:11.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "IBM earnings beat by $0.09, revenue topped estimates",
-      "link": "https://www.investing.com/news/earnings/ibm-earnings-beat-by-009-revenue-topped-estimates-4963943",
-      "pubDate": "2026-10-21T20:13:09.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "SAP ADR earnings beat by $0.08, revenue topped estimates",
-      "link": "https://www.investing.com/news/earnings/sap-adr-earnings-beat-by-008-revenue-topped-estimates-4963942",
-      "pubDate": "2026-10-21T20:13:07.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Nasdaq surges 1% as tech lifted by SpaceX, Tesla on Musk’s hint at possible merger",
-      "link": "https://www.investing.com/news/stock-market-news/us-stock-futures-rise-as-spacex-surges-on-upbeat-earnings-4961479",
-      "pubDate": "2026-10-21T20:13:03.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Facebook Ordered to Pay $25 Billion in Fines. Will Meta Stock Crash?",
@@ -98,13 +126,6 @@
       "pubDate": "2026-10-21T18:42:58.000Z",
       "description": "Would you switch airlines for better Wi-Fi? United Airlines says passengers are already doing it. The airline says Starlink is drawing passengers away from competitors, while SpaceX is earning billions from satellite connectivity. Both shar",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Gold Futures Slip As U.S. Dollar Gains, Yields Edge Up",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZU5uN1haS1FQQW82aVdiWmxlbDJrMkszT091U2xWR3dGOTdBeVZ6Z0gzSGpqQ2ZNTE96MG1kckxxY2NVV0I0THpteE9lWGZTdHUxa01OTzJkUndWcVVRWDVZWHVYeFZPcm5VckhaZFBVRDRjcmgyRDg5OUJ1WFBlTlotVGlnekE3SVFDVkpFMHBQbTVPWmd4WTNSSTd1X0ZJNDFlUmVWcGxlSE5oWG1ENmZoYk1oVTdKZlE?oc=5",
-      "pubDate": "2026-10-21T18:03:54.000Z",
-      "description": "Gold Futures Slip As U.S. Dollar Gains, Yields Edge Up&nbsp;&nbsp;WSJ",
-      "source": "Google News"
     },
     {
       "title": "Birdeye Launches Institutional Terminal as Bots Dominate Crypto",
@@ -156,39 +177,11 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Why Does Bitcoin Keep Losing Steam? On-Chain Data Has a Clue",
-      "link": "https://beincrypto.com/bitcoin-losing-steam-on-chain-data/",
-      "pubDate": "2026-10-21T13:22:16.000Z",
-      "description": "Binance&#8217;s stablecoin reserves have dropped to $41.6 billion, a one-year low, after $6.3 billion left the exchange since April. The drain is market-wide, and it is starving crypto rallies of fresh buying power. Prices have not collapse",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Is Bitcoin Undervalued? What Elon Musk’s Energy Money Idea and Hashrate Data Show",
-      "link": "https://beincrypto.com/elon-musk-bitcoin-wattage-energy-value/",
-      "pubDate": "2026-10-21T12:14:26.000Z",
-      "description": "Musk says future money will be measured in wattage. Charles Edwards says Bitcoin already is, trading 36% below energy value.\nThe post Is Bitcoin Undervalued? What Elon Musk’s Energy Money Idea and Hashrate Data Show appeared first on BeInCr",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "IMF Urges Currency Flexibility as RBI Mounts Rupee Defense",
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNTVQ4S3lKYXlEMzY0czRiYTZZR3ZDdkRSM280ckpGeGlCb3hNUGVfSThtelZEMFdZWVY1LWVSSGEtTFM2T1pEc1hISEZNdG5jVHR2YmhIc21ZZmFvaVBkNjNzWDFVUFp6cDJkdF9YYmwxYnUxWGx1dTdIX0k0TkNKOEg5T0RDbGVfUHJFMFVMQVR6OFJ2bHhtTnFGNzU2NVZyUEFDb2VkcVMydWdKeFE?oc=5",
       "pubDate": "2026-10-21T11:05:58.000Z",
       "description": "IMF Urges Currency Flexibility as RBI Mounts Rupee Defense&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
-    },
-    {
-      "title": "Switzerland Approves First Spot Bitcoin ETF for Retail Investors After Bending Its Rules",
-      "link": "https://beincrypto.com/switzerland-first-spot-bitcoin-etf-retail/",
-      "pubDate": "2026-10-21T11:00:00.000Z",
-      "description": "FINMA approves Switzerland's first spot Bitcoin ETF for retail investors, waiving diversification rules. BBIT lists in November.\nThe post Switzerland Approves First Spot Bitcoin ETF for Retail Investors After Bending Its Rules appeared firs",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Gate Releases Latest Proof of Reserves Report: Total Reserves Rise to $8.688B, Overall Reserve Ratio Reaches 118.49%",
-      "link": "https://beincrypto.com/gate-releases-latest-proof-of-reserves/",
-      "pubDate": "2026-10-21T10:59:25.000Z",
-      "description": "According to the official announcement, Gate has released its latest Proof of Reserves data. As of October 18, 2026, Gate&#8217;s total reserves increased to $8.688 billion, up 5.7% from the previous period. Customer net balance reached $7.",
-      "source": "BeInCrypto"
     },
     {
       "title": "Sudan's currency tumbles to new low as war hammers economy",
@@ -282,6 +275,13 @@
       "source": "Reuters"
     },
     {
+      "title": "WSJ Dollar Index Falls 0.25% to 96.96",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQYVZmV1JBenRueFdua1VmcWxfbGN6ZFphZ3AtUEZQd2NBMkctWnRsZVZGTjltMUoyWGNubnZYVWE2d2NJTVJwQVNFV0hoWmVKcmxBUlFtVFpzYUUwVjB1NkVYaE9Qem5jblN2SUZILVhPTndMUjc0UVloZkhYNUZlbU1Sd1diN3FlTkFjZDBubEJUbmRBZEozS012Yw?oc=5",
+      "pubDate": "2026-10-20T21:29:00.000Z",
+      "description": "WSJ Dollar Index Falls 0.25% to 96.96&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
       "title": "Learning about earnings: Can we rely on labour market slack to mitigate the latest supply shock? − speech by Megan Greene",
       "link": "https://www.bankofengland.co.uk/speech/2026/october/megan-greene-speech-at-lse-economics-society-london",
       "pubDate": "2026-10-20T17:00:00.000Z",
@@ -366,6 +366,13 @@
       "source": "Google News"
     },
     {
+      "title": "Gold Futures Slip As U.S. Dollar Gains, Yields Edge Up",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZU5uN1haS1FQQW82aVdiWmxlbDJrMkszT091U2xWR3dGOTdBeVZ6Z0gzSGpqQ2ZNTE96MG1kckxxY2NVV0I0THpteE9lWGZTdHUxa01OTzJkUndWcVVRWDVZWHVYeFZPcm5VckhaZFBVRDRjcmgyRDg5OUJ1WFBlTlotVGlnekE3SVFDVkpFMHBQbTVPWmd4WTNSSTd1X0ZJNDFlUmVWcGxlSE5oWG1ENmZoYk1oVTdKZlE?oc=5",
+      "pubDate": "2026-10-19T18:14:00.000Z",
+      "description": "Gold Futures Slip As U.S. Dollar Gains, Yields Edge Up&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
       "title": "Trump’s Golf Empire Is A Billion-Dollar Tax Shelter",
       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWHl2enNZbVVMSnZKU25COUcxVm1VbVJvNmVYa24zVEZJcE92XzFpX0F0d0MzVzVDMS10cWlwdUVacDl4SWdzdWVMUUlpTkVpS0RVNlBBSURnVGEwcHV3MHJRYWZ3dmZiZ0tDMWJDQjRWb2xhZmxPbUhvaW1yY1JfY0JKZzRQa3YwWERhLTBxR0JCT3pEWUw0UEZ5UTZabkV0VFNxeXdMSQ?oc=5",
       "pubDate": "2026-10-19T10:30:06.000Z",
@@ -408,6 +415,13 @@
       "source": "Google News"
     },
     {
+      "title": "Taiwan Dollar Bulls Look Past AI-Led Selloff to Year-End Rally",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdllCaHBIdzY1OVhGakdCR1BtUFV1alFEb2pWZU14TUxpTE1zcHFqR2tvUXMyVzFRR1F0eUgta2Y0LS1sdFI1M1dsdWpJY3pKY0N4TndyTXNqNHhFb2tzSDdyRzE5dHVpaTROWW9LSm9RWnY3bWF6V0ljNVhHMm5OOVNraVowUnhQaEYwVHRVc2hCN2FjVjRZMUpaTFZLOWJ0bWtyOUhnbGJ3NHJIekRzeDFzcw?oc=5",
+      "pubDate": "2026-10-19T03:45:00.000Z",
+      "description": "Taiwan Dollar Bulls Look Past AI-Led Selloff to Year-End Rally&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
       "title": "Japan PM Takaichi Denies She’s Driving Weak Yen, High Rates: JPY/USD",
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOaV92VVR5SUNFUy1TdGlCR1lpN2pUcDVyX0VMWDBjdVk5bFBKTXZQLVhVZlhUU2lWWlZKWmRDSUJsWHVORE5kMWUxM2ZKOUd4TXBwYVhxLUFBaFBtMmFkMThTRlhwOGJMVXVuMjhhOWhya2Zyanc2cFZHdjF5V2t4Q1EwSzJRTTNGa1VLWnJkUE91dVVkOG9zZ0dfbEkzT1NFUl83eER4SnUxbjVqZ3c?oc=5",
       "pubDate": "2026-10-19T02:15:00.000Z",
@@ -447,6 +461,13 @@
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVmxkcm5VeURLM1hlZXFIV2M0QzVZRFZrLWJEUWdPMjZ1QnNXVGFQbFhyZ1ZkRzVZeUFBVUZ5bjNIQ1BkMEJfbjVFb3ZBUV9uVUIyVEdaMlJGdGZwTThpNXhRUW5JenhhZVhJYm9VNGhDX3AxbHV1NVRHUkIwOFVoU2dvczE2eW0yOVFNNUJFOW05aVpQc0JRRjJXblNOS1ljQTh4OE9ybVFnMmxRTWh0QQ?oc=5",
       "pubDate": "2026-10-16T18:32:00.000Z",
       "description": "Major Cryptocurrencies Mostly Higher as Dollar Eases&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "Gold Futures Edge Up As U.S. Dollar Slips",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNVE1wbXpia1hJYU4xY3Y1UVU4eDRDY0MzWXEwRHpHR0c4SGMxNkJqRHdQR1ZqdE9UUWRrU3lxc3c3enhLY0dwUmJGR0x1ZC1DdGRmTkFMaS15Q3cwVEhialJ3RmZvZU5qeUIwSkRSZzVwWHNGOHUxU2JMVXVxd2EyQmN1Q2ZYU0VWdEgzMDA1ZzNBeXFxM0xESXhpQWRKVC1aV19ScHdzNWVXM0RJ?oc=5",
+      "pubDate": "2026-10-16T18:09:00.000Z",
+      "description": "Gold Futures Edge Up As U.S. Dollar Slips&nbsp;&nbsp;WSJ",
       "source": "Google News"
     },
     {
@@ -496,13 +517,6 @@
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQOExUdVVpaHNnM3NXeFFjaHRxMnNwelAzVkRsNE9idFVTRTFGdGFNeVhsZmlUTUdBd0VWb01rTTc1NE9pYkw2ZUI3U3o0NHdZZi1fYzJZV042NGtXQzhBRHZweUJKbEVyVWU1cFd6WVNsM1NyVmtISXI4MjNjYVI3WFNlSzZIOW1RQXdZdkpyN2VVaHZud0VFZXdFSWNKTERiTHVQM0tpWndxbFpSZkNVNk13YTk?oc=5",
       "pubDate": "2026-10-15T23:00:00.000Z",
       "description": "China’s Plan to Make Yuan a Global Currency Enters Faster Phase&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
-      "title": "WSJ Dollar Index Falls 0.32% to 97.26",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxObHRUb1A2YkVRQUxWcmFJaVg3SWswNkxLcG05Z0tCUDE0TTFKQWpYblRLRXFSajZNTWZaNU95MmU5M1VZTUNIMEwwSnpmWU1zQU9JX2UxRFJWQUxseVhWX28xSDZFTEZFXy1tV25venpCY3kwT0pzX0MyNnowMkxwdDZncFcySE9OU2FzYzRsbVBTeFIzQnJtV19BNExkSUtCZmFzUGFwQ282S1JzWTljQmZkQU9USWZnNENzOTJtRmtScXlwaHc?oc=5",
-      "pubDate": "2026-10-15T21:47:00.000Z",
-      "description": "WSJ Dollar Index Falls 0.32% to 97.26&nbsp;&nbsp;WSJ",
       "source": "Google News"
     },
     {
@@ -637,20 +651,6 @@
       "pubDate": "2026-10-14T03:00:00.000Z",
       "description": "Media release number 2026-29: Rachael Phelan has been appointed as Chief Risk Officer at the RBA, leading our Risk function and responsible for the delivery of the Bank's risk strategy.",
       "source": "Reserve Bank of Australia"
-    },
-    {
-      "title": "Bank of Japan Accounts (October 10)",
-      "link": "http://www.boj.or.jp/en/statistics/boj/other/acmai/release/2026/ac261010.htm",
-      "pubDate": "2026-10-14T01:00:00.000Z",
-      "description": "",
-      "source": "Bank of Japan"
-    },
-    {
-      "title": "Frank Elderson: Ensuring resilience in the face of uncertainty",
-      "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261014~e4ca33588e.en.html",
-      "pubDate": "2026-10-14T00:00:00.000Z",
-      "description": "",
-      "source": "European Central Bank"
     },
     {
       "title": "Minutes of the Board's discount rate meetings on August 17, September 9, and September 16, 2026",
