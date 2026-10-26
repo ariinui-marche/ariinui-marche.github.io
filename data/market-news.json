@@ -1,33 +1,96 @@
 {
-  "timestamp": "2026-10-25T23:19:39.786Z",
+  "timestamp": "2026-10-26T01:18:16.452Z",
   "items": [
     {
-      "title": "Anthropic’s Claude accessed public US state of Georgia voter information, Axios reports",
+      "title": "Five economic challenges facing Brazil’s re-elected President Lula",
+      "link": "https://www.investing.com/news/economy-news/five-economic-challenges-facing-brazils-reelected-president-lula-4971326",
+      "pubDate": "2026-10-26T00:54:29.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Oil slips from near six-months highs despite supply concerns",
+      "link": "https://www.investing.com/news/commodities-news/oil-prices-down-almost-1-in-early-trading-4971306",
+      "pubDate": "2026-10-26T00:54:19.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Asian shares make cautious start, Brent eases from six-month high",
+      "link": "https://www.investing.com/news/stock-market-news/asian-shares-make-cautious-start-brent-eases-from-sixmonth-high-4971334",
+      "pubDate": "2026-10-26T00:48:40.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Ramelius Q1 FY27 slides: cash surges to A$768M as growth ramps",
+      "link": "https://www.investing.com/news/company-news/ramelius-q1-fy27-slides-cash-surges-to-a768m-as-growth-ramps-93CH-4971333",
+      "pubDate": "2026-10-26T00:47:08.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Earnings call transcript: Artrya lifts outlook in Q1 2026 as stock falls",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-artrya-lifts-outlook-in-q1-2026-as-stock-falls-93CH-4971332",
+      "pubDate": "2026-10-26T00:46:41.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "6K Additive Q3 2026 slides: record backlog drives expansion plans",
+      "link": "https://www.investing.com/news/company-news/6k-additive-q3-2026-slides-record-backlog-drives-expansion-plans-93CH-4971330",
+      "pubDate": "2026-10-26T00:45:14.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Greatland Q1 FY27 slides: production beats, Havieron underway",
+      "link": "https://www.investing.com/news/company-news/greatland-q1-fy27-slides-production-beats-havieron-underway-93CH-4971327",
+      "pubDate": "2026-10-26T00:44:29.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "U.S. stock futures edge higher after bruising tech losses; Fed, earnings on tap",
+      "link": "https://www.investing.com/news/stock-market-news/us-stock-futures-edge-higher-after-bruising-tech-losses-fed-earnings-on-tap-4971325",
+      "pubDate": "2026-10-26T00:41:51.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Earnings call transcript: RMS posts solid Q1 2026 cash flow as growth ramps",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-rms-posts-solid-q1-2026-cash-flow-as-growth-ramps-93CH-4971324",
+      "pubDate": "2026-10-26T00:36:53.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Anthropic’s Claude accessed Georgia state vote count data behind paywall",
       "link": "https://www.investing.com/news/stock-market-news/anthropics-claude-accessed-public-us-state-of-georgia-voter-information-axios-reports-4971291",
-      "pubDate": "2026-10-25T22:54:37.000Z",
+      "pubDate": "2026-10-26T00:36:23.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Musk says SpaceX raised $40 billion in debt deal, predicts neocloud shakeout",
-      "link": "https://www.investing.com/news/stock-market-news/musk-says-spacex-raised-40-billion-in-debt-for-gpus-4971248",
-      "pubDate": "2026-10-25T22:42:27.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "Trump Calls Off Iran Strike But Will Oil Hold Above $100?",
+      "link": "https://beincrypto.com/will-oil-hold-above-100-iran/",
+      "pubDate": "2026-10-25T23:44:55.000Z",
+      "description": "Trump ruled out an Iran strike, yet war risk keeps oil above $100. See what could decide whether WTI and Brent hold.\nThe post Trump Calls Off Iran Strike But Will Oil Hold Above $100? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
     },
     {
-      "title": "Australia’s NEXTDC CEO to forgo fiscal 2027 bonuses after forecast cut, project delay",
-      "link": "https://www.investing.com/news/stock-market-news/australias-nextdc-ceo-to-forgo-fiscal-2027-bonuses-after-forecast-cut-project-delay-4971278",
-      "pubDate": "2026-10-25T22:31:01.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "Cramer Beat the S&#038;P At His Hedge Fund But Advises Retail to Join The Index",
+      "link": "https://beincrypto.com/cramer-index-fund-advice-retail-investors/",
+      "pubDate": "2026-10-25T23:40:53.000Z",
+      "description": "Jim Cramer says his old hedge fund returned 24% a year, yet he tells a retiree to put two-thirds in an S&#038;P 500 index fund.\nThe post Cramer Beat the S&P At His Hedge Fund But Advises Retail to Join The Index appeared first on BeInCrypto",
+      "source": "BeInCrypto"
     },
     {
-      "title": "Trump says Iran war won’t end until nuclear threat gone; no strike today",
-      "link": "https://www.investing.com/news/economy-news/yemens-houthis-renew-threat-against-riyadh-airport-as-flights-set-to-resume-4971006",
-      "pubDate": "2026-10-25T22:12:40.000Z",
-      "description": "",
-      "source": "Investing.com"
+      "title": "Bitcoin and Gold Hit a Historic First in 2026. The Two “Safe Havens” Are Now the Worst Assets",
+      "link": "https://beincrypto.com/bitcoin-gold-worst-assets-2026/",
+      "pubDate": "2026-10-25T23:40:00.000Z",
+      "description": "Bitcoin and gold rank as the worst major assets of 2026, a first in Charlie Bilello's data. See why oil and the Fed hurt both.\nThe post Bitcoin and Gold Hit a Historic First in 2026. The Two “Safe Havens” Are Now the Worst Assets appeared f",
+      "source": "BeInCrypto"
     },
     {
       "title": "Elon Musk Says 200+ AI Cloud Firms Face Wipeout: Will CoreWeave Survive?",
@@ -37,34 +100,6 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Goldman lists 3 factors that support long commodities positions",
-      "link": "https://www.investing.com/news/commodities-news/goldman-lists-3-factors-that-support-long-commodities-positions-4971269",
-      "pubDate": "2026-10-25T21:53:28.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Canada, UK to develop separate defense financing institutions",
-      "link": "https://www.investing.com/news/economy-news/canada-uk-to-develop-separate-defense-financing-institutions-4971268",
-      "pubDate": "2026-10-25T21:50:13.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Proxy advisory firm Glass Lewis backs Bergeron in Ethan Allen fight",
-      "link": "https://www.investing.com/news/stock-market-news/proxy-advisory-firm-glass-lewis-backs-bergeron-in-ethan-allen-fight-4971264",
-      "pubDate": "2026-10-25T21:18:19.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Zelenskiy says US warnings on ballistic strikes have fully resumed",
-      "link": "https://www.investing.com/news/stock-market-news/zelenskiy-says-us-warnings-on-ballistic-strikes-have-fully-resumed-4971254",
-      "pubDate": "2026-10-25T20:42:24.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "AI Just Put a $5 Million-a-Day Price Tag on Its Biggest Bottleneck",
       "link": "https://beincrypto.com/ai-data-center-delay-penalties/",
       "pubDate": "2026-10-25T20:00:00.000Z",
@@ -72,25 +107,11 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Britain will not join Canada’s defence bank, source says",
-      "link": "https://www.investing.com/news/economy-news/britain-will-not-join-canadas-defence-bank-source-says-4971243",
-      "pubDate": "2026-10-25T19:24:28.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Goldman Sachs Cuts Its Price Target for South Korea’s KOSPI",
       "link": "https://beincrypto.com/goldman-sachs-cuts-kospi-target/",
       "pubDate": "2026-10-25T19:08:08.000Z",
       "description": "Goldman Sachs has cut its 12-month KOSPI target by 25%, to 9,000 from 12,000. The new figure returns the bank to where it stood before its June 3 upgrade. The bank estimates chip valuations now imply a 65% fall in 2027 sector earnings. It c",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "U.S, Canada “very close” to trade deal, White House’s Hassett says",
-      "link": "https://www.investing.com/news/economy-news/us-canada-very-close-to-trade-deal-white-houses-hassett-says-4971239",
-      "pubDate": "2026-10-25T18:59:15.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Fed Week Puts Stocks, Bitcoin, and DXY on Collision Course Before $11 Billion Expiry",
@@ -102,7 +123,7 @@
     {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",
       "link": "https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/",
-      "pubDate": "2026-10-25T14:05:35.000Z",
+      "pubDate": "2026-10-25T14:06:16.000Z",
       "description": "The Board of Directors of the Bank of Canada has initiated a recruitment process to fill the external Deputy Governor position left vacant by the appointment of Nicolas Vincent as a full-time Deputy Governor.",
       "source": "Bank of Canada"
     },
@@ -142,32 +163,18 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Trump Says Iran Strikes Could Come Today. Can Bitcoin Hold $80,000?",
-      "link": "https://beincrypto.com/bitcoin-80000-trump-iran-strike/",
-      "pubDate": "2026-10-25T06:38:26.000Z",
-      "description": "President Donald Trump said the US could strike Iran as soon as Sunday, or reach a deal instead. This comes as Bitcoin (BTC) trades at $80,546 after briefly dipping below $80,000 on Saturday. So what happens to Bitcoin if a strike does come",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Grayscale Names 3 Cryptocurrencies That Could Benefit From AI Growth",
-      "link": "https://beincrypto.com/grayscale-3-crypto-benefit-ai-boom/",
-      "pubDate": "2026-10-24T22:50:26.000Z",
-      "description": "The AI boom is creating huge demand for training data and the expensive computers that power it. Grayscale has identified three cryptocurrencies targeting these growing needs. Their prices, however, tell very different stories. In an Octobe",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Ethereum Flashes Same Signal That Triggered June’s Rebound",
-      "link": "https://beincrypto.com/ethereum-outflow-signal-june-rebound/",
-      "pubDate": "2026-10-24T19:40:56.000Z",
-      "description": "Ethereum (ETH) saw roughly 169,770 coins leave exchanges on net, per Santiment. That marked its largest outflow day in over 4 months, a pattern last seen just before June&#8217;s rebound. Fewer coins on exchanges usually means less supply r",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Piero Cipollone: Interview with Milano Finanza",
       "link": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261024~ee2ba73cf3.en.html",
       "pubDate": "2026-10-24T06:00:00.000Z",
       "description": "",
       "source": "European Central Bank"
+    },
+    {
+      "title": "WSJ Dollar Index Falls 0.25% This Week to 96.84",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQWUJkYXlHTlpFSFVCaV9UaWNDYXg4ZzB1emNxcHpaeElsWE5xYklhSlk0cDhUVnVUMUhvdnM4RFRuV0Jwa0pqU2R5XzhJeXVJZndPQ3ZaaU9FbzNVa3lvX0NveWdlbGlRejc1M0ZwU1BleURzSlNvUEpZdUNUOHFGRnVmbjdvVXlCOHo4WXd4a1pOZ0hBS1U2bUUxbVUwTmh3OWUxVGs2Zks?oc=5",
+      "pubDate": "2026-10-23T21:24:00.000Z",
+      "description": "WSJ Dollar Index Falls 0.25% This Week to 96.84&nbsp;&nbsp;WSJ",
+      "source": "Google News"
     },
     {
       "title": "Physical shocks and economic resilience: a central bank perspective − speech by James Talbot",
@@ -189,13 +196,6 @@
       "pubDate": "2026-10-23T06:00:00.000Z",
       "description": "",
       "source": "Bank of Japan"
-    },
-    {
-      "title": "Euro sinks on French debt worries; yen gains on AI rout",
-      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNTlBfY045MXlBOHlOVWJSTkFJQWYwSHJsUWU1S3BUOUt0bm1WRFRZT2RhS0dpUTBMaFBmcXV5WndGTlFsRjV6UF9mTWx5ZGRrSEZKU0FNTEJ6Qmx3Y1BtLTlyZXR3bm5MbmlmeVZtNVI0ekdHNWxWQU9ndTlXSEhhOUpYSjY3YnphbHfSAY8BQVVfeXFMTmJLV21qNEx5QUszTDM5NWFGZXBOZjl6cXN5NVd1dnRlYXNzRlRlR05na1NYXzEwQ0paWE53aGU5a3czNEV3bDdqWVptSkZLaTlheXJIOVI3d1BkdmV3TkZmaDRSYk5ELXpOWXc2b0VJaDhJa0QtM2NLZGtPU3JLQVIxdmYzamZ3RVRPb01xRVU?oc=5",
-      "pubDate": "2026-10-23T03:46:00.000Z",
-      "description": "Euro sinks on French debt worries; yen gains on AI rout&nbsp;&nbsp;CNBC",
-      "source": "Google News"
     },
     {
       "title": "Yen Strengthens on French Debt Woes, Hits One-Year High Against Euro",
@@ -261,6 +261,13 @@
       "source": "Bank of England"
     },
     {
+      "title": "Dollar Falls, Swiss Franc Rallies on AI Jitters, French Debt Worries",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQS3FYam5tYzY4WDUxQXJSTGNqeG9DcEo4TnowdzZqeERpaVAzSklzMERBenYwQm0wTnlPUWhLcmZ2OVV4TWh1ZlhoTFZFNkNKMWx6SVJVWDJZcWtPUTRUYzJJS05heTJpZF8tVS1mSHVsNVAxYlV0S0ZBR05uSGlzQ0djVE1qdlBSaUdKdF8zTGxnWHZhaXVYcGJ5RDV6STA5SGRMdjNLUWlVSlQ2bmc?oc=5",
+      "pubDate": "2026-10-22T09:29:00.000Z",
+      "description": "Dollar Falls, Swiss Franc Rallies on AI Jitters, French Debt Worries&nbsp;&nbsp;MarketWatch",
+      "source": "Google News"
+    },
+    {
       "title": "Japanese Government Bonds Held by the Bank of Japan",
       "link": "http://www.boj.or.jp/en/statistics/boj/other/mei/release/2026/mei261020.xlsx",
       "pubDate": "2026-10-22T08:00:00.000Z",
@@ -280,13 +287,6 @@
       "pubDate": "2026-10-22T07:00:00.000Z",
       "description": "",
       "source": "Bank of Japan"
-    },
-    {
-      "title": "Singapore Dollar Gains on Yen as Carry Funder, Analysts Say",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPQktUelFYbk5qWWE1YmlCelJfcHFnZlJzX01JZEJ6YWhCYWlNRjYxMUJQa3pkTDBiNUItbDRnSEROREE5NEhTcHFHV0ZhQkRsRHpqZElGd1Z6ZG9HNGhaWmlEYm9lc1VIMDBOOGZqa0I1VFg3ZTBFNWg0bHRyRmNYV0l4cS0wMUtEemVOSGJQbm5uZVJWZEJNd3d2UFBhYjl1VUNORjR4NDN4Wl9uTFE?oc=5",
-      "pubDate": "2026-10-22T06:14:00.000Z",
-      "description": "Singapore Dollar Gains on Yen as Carry Funder, Analysts Say&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
     },
     {
       "title": "Yen jumps as oil, AI and France worries rattle markets",
@@ -361,7 +361,7 @@
     {
       "title": "Exclusive | Democrats Make a Million-Dollar Bet on Florida Governor’s Race",
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNNkZzdWhVQTFJYlpnYzVlNE1qeGlyTjZFeWVYTjlUUlplU29uaVh1UzNQZGp5c0FNMnZQQkRwQlVSMFdIc2tYbm1obXNqWk8waERpbHQxY0dUOEZFZ19fRE8taDVmeTBPUmtQUFhLVXVfaWxzSkF0V0gteHJhUTFxZnZyRnZuOGhQNExncTdlSmpZQ2NtQXA1SHQzcGIzdGJfMWUyQlc4amw1UGd5YWc?oc=5",
-      "pubDate": "2026-10-20T21:57:33.000Z",
+      "pubDate": "2026-10-20T21:57:00.000Z",
       "description": "Exclusive | Democrats Make a Million-Dollar Bet on Florida Governor’s Race&nbsp;&nbsp;WSJ",
       "source": "Google News"
     },
@@ -485,13 +485,6 @@
       "source": "Google News"
     },
     {
-      "title": "CPI Test Set to Make or Break New Zealand Dollar’s Losing Run",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPUWlhMUFEMVNoaFBPV2kydXB0Smd6THFDMFpSUG85eWlhcVhwQ3RYTFVsMjdoZkxCVGtoUzY4Z28wWTk4ZFNpRmkzUGZvVXNJOUwyTF9reG5HcXoyYm53Z0xBRlVKNWdnd3FDLUhwbVFNdllYbDZyZkE2OWRwa2ktVGtPVjVsSlRSZHFweEJVTG51SGJDSFJvU1dES0s3ZGxkejJicXUwbW0xd0ZBN2lyWnBR?oc=5",
-      "pubDate": "2026-10-18T19:00:00.000Z",
-      "description": "CPI Test Set to Make or Break New Zealand Dollar’s Losing Run&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
       "title": "Christine Lagarde: IMFC Statement",
       "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html",
       "pubDate": "2026-10-17T05:00:00.000Z",
@@ -531,6 +524,13 @@
       "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQb2wtUmNJUTlWOUVaMnZxLW9lRTJnOWwzWDNGVkx5bHUxWnBUMHdTX05vZVFOX3VhV284UndTcGF5eXNmbGVWT1NBQndfdEJoMEFsOWxsdmZSNVUtRm0wRXBScjVfUEZPRXo1RGhTSnhkY1luNkhmcHRyRnZEbC1LUERpaVExTEtGclHSAY8BQVVfeXFMUGJHS1hTUllYNlh0cDkxYVZBR1dkVzhzUGtxQ3hhWjRXWm5DNzBmMjViN09TanN6WW1kUkRrYkpwUEhNaWwwM2pabHBxdGZfMUxDVXducFRJX1hyeHB0ZG9ZV25iWGx4bWJ0UlJhbUJPZlJRNTJVZjVud2ZodjAxNjJ5Qk80bnFhUWlzYkFxTVU?oc=5",
       "pubDate": "2026-10-16T07:00:00.000Z",
       "description": "Why Trump and the GOP's billion-dollar midterm blitz isn’t working&nbsp;&nbsp;CNBC",
+      "source": "Google News"
+    },
+    {
+      "title": "FX Moment: Structural Yuan Bull Run vs. Unsolved Yen Bull Puzzle",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNcE1zelNDVDJldTl0U2JKRENhMExvY1VXOXhReDViemZQSVpmN1VLcUJqWVFfQVltZDZ3LVJPNV9CNHpVSVhHNHdmcGpDTC1UTEQtdjd5bi0wTFhhMExUS1NWRGFDelBlbHlfUUhZd1JzbnY2TG5hSjlGdEVVTWE0MHRDRXk4MlBFVWtRSXU5b0NzeUlaQVg1MTdQNi1ZNXdlRlpOdDA2U3FLRGJ6bUdr?oc=5",
+      "pubDate": "2026-10-16T07:00:00.000Z",
+      "description": "FX Moment: Structural Yuan Bull Run vs. Unsolved Yen Bull Puzzle&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
     },
     {
