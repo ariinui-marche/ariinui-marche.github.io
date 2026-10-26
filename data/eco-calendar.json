@@ -11340,6 +11340,24 @@
       "forecast": "",
       "previous": "",
       "actual": ""
+    },
+    {
+      "title": "GDP m/m",
+      "country": "CAD",
+      "date": "2026-11-30T07:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "GDP q/q",
+      "country": "AUD",
+      "date": "2026-12-01T18:30:00-04:00",
+      "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
     }
   ]
 }
