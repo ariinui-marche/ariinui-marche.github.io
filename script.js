@@ -1205,7 +1205,8 @@ function tvFormatLike(ev, v) {
 const FSA_RELAY_URL = 'http://127.0.0.1:8787/calendar';
 async function applyRelayActuals() {
   try {
-    const res = await fetch(FSA_RELAY_URL, { cache: 'no-store' });
+    // Timeout court : sans relais (ou si Chrome attend l'autorisation réseau local), ne jamais bloquer l'affichage.
+    const res = await fetch(FSA_RELAY_URL, { cache: 'no-store', signal: AbortSignal.timeout(1500) });
     if (!res.ok) return false;
     const src = ((await res.json()).result || []).filter((t) => t.actual);
     let changed = false;
