@@ -1075,17 +1075,16 @@ function detectSentiment(text) {
   return 'neutral';
 }
 
-// Tags thématiques des news (forex / XAU / BTC) — heuristique par mots-clés sur le titre,
-// plusieurs tags possibles par titre. Même limite que detectSentiment : pas d'analyse sémantique.
+// Tags des news — regex reprises telles quelles de KEYWORDS (trader-news/news.py) du repo MIT
+// https://github.com/Jakeschincariol/day-trader-skill (commit 3d0f4ef, © Jake Schincariol).
+// Seules les catégories utiles au forex / XAU / BTC sont gardées (earnings, analyst, deal,
+// capital, halt = actions, écartées). Appliquées en insensible à la casse, comme dans le repo.
 const NEWS_TAGS = [
-  ['rates', /\b(rate (?:decision|hike|hikes|cut|cuts)|(?:raises?|cuts?|holds?|keeps?|maintains?) (?:the )?(?:policy |key |interest )?rates?|interest rates?|hawkish|dovish|policy rate|monetary policy|rate path|pivot)\b/i],
-  ['inflation', /\b(CPI|PCE|PPI|inflation|deflation|consumer prices?|producer prices?)\b/i],
-  ['jobs', /\b(NFP|non-?farm|payrolls?|jobs report|unemployment|jobless|employment change|labou?r market|ADP|claimant count)\b/i],
-  ['central bank', /\b(Fed|FOMC|Powell|ECB|Lagarde|BoE|Bank of England|Bailey|BoJ|Bank of Japan|Ueda|RBA|RBNZ|BoC|Bank of Canada|SNB|central bank|Federal Reserve)\b/],
-  ['intervention', /\b(interven(?:e|es|ed|tion)|currency intervention|MoF|Ministry of Finance|yen-buying|FX intervention)\b/i],
-  ['geopolitics', /\b(tariffs?|trade war|sanctions?|war|ceasefire|missile|conflict|election|Trump|shutdown|debt ceiling)\b/i],
-  ['gold', /\b(gold|bullion|XAU|safe[- ]haven|precious metals?)\b/i],
-  ['crypto', /\b(bitcoin|BTC|crypto(?:currency)?|ETF flows?|halving|stablecoin|SEC (?:approves?|sues|charges)|Ethereum|ETH)\b/i],
+  ['legal', /\blawsuit\b|\bsued\b|\bprobe\b|\binvestigation\b|\bSEC charges\b|\bantitrust\b|\bjudge\b|\bcourt\b/i],
+  ['people', /\bCEO\b|\bCFO\b|\bresign|\bsteps down\b|\bappoint/i],
+  ['risk', /\brecall\b|\bbankrupt|\bdefault\b|\bdelist|\bhack|\bbreach\b|\boutage\b/i],
+  ['regulatory', /\bFDA\b|\bapproval\b|\bapproves\b|\bclinical\b|\bFTC\b|\bDOJ\b/i],
+  ['macro', /\bFed\b|\bFOMC\b|\bCPI\b|\binflation\b|\bjobs report\b|\bpayrolls\b|\btariffs?\b|\bfutures\b/i],
 ];
 
 function detectNewsTags(text) {
