@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-28T14:08:48.048Z",
+  "timestamp": "2026-10-28T19:30:05.321Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -10547,7 +10547,7 @@
       "impact": "Low",
       "forecast": "0.1M",
       "previous": "-3.1M",
-      "actual": ""
+      "actual": "-1.9M"
     },
     {
       "title": "Federal Funds Rate",
@@ -10556,7 +10556,7 @@
       "impact": "High",
       "forecast": "4.00%",
       "previous": "4.00%",
-      "actual": ""
+      "actual": "4.00%"
     },
     {
       "title": "FOMC Statement",
