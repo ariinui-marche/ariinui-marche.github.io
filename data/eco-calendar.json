@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-28T07:23:04.130Z",
+  "timestamp": "2026-10-28T08:21:48.374Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -10223,7 +10223,7 @@
       "impact": "Low",
       "forecast": "90.0",
       "previous": "89.9",
-      "actual": ""
+      "actual": "90.2"
     },
     {
       "title": "CBI Realized Sales",
@@ -10232,7 +10232,7 @@
       "impact": "Low",
       "forecast": "-47",
       "previous": "-55",
-      "actual": ""
+      "actual": "-10"
     },
     {
       "title": "SPPI y/y",
@@ -10241,7 +10241,7 @@
       "impact": "Low",
       "forecast": "3.7%",
       "previous": "3.7%",
-      "actual": ""
+      "actual": "3.7%"
     },
     {
       "title": "BRC Shop Price Index y/y",
@@ -10250,7 +10250,7 @@
       "impact": "Low",
       "forecast": "1.6%",
       "previous": "1.4%",
-      "actual": ""
+      "actual": "2.1%"
     },
     {
       "title": "BOJ Core CPI y/y",
@@ -10259,7 +10259,7 @@
       "impact": "Low",
       "forecast": "1.9%",
       "previous": "1.8%",
-      "actual": ""
+      "actual": "2.4%"
     },
     {
       "title": "Spanish Unemployment Rate",
@@ -10268,7 +10268,7 @@
       "impact": "Low",
       "forecast": "9.9%",
       "previous": "9.9%",
-      "actual": ""
+      "actual": "10.2%"
     },
     {
       "title": "M3 Money Supply y/y",
@@ -10277,7 +10277,7 @@
       "impact": "Low",
       "forecast": "3.5%",
       "previous": "3.5%",
-      "actual": ""
+      "actual": "3.5%"
     },
     {
       "title": "Private Loans y/y",
@@ -10286,7 +10286,7 @@
       "impact": "Low",
       "forecast": "3.1%",
       "previous": "3.1%",
-      "actual": ""
+      "actual": "3.1%"
     },
     {
       "title": "ADP Weekly Employment Change",
@@ -10295,7 +10295,7 @@
       "impact": "Low",
       "forecast": "",
       "previous": "18.5K",
-      "actual": ""
+      "actual": "16.8K"
     },
     {
       "title": "Core Durable Goods Orders m/m",
@@ -10304,7 +10304,7 @@
       "impact": "Low",
       "forecast": "0.6%",
       "previous": "0.3%",
-      "actual": ""
+      "actual": "0.5%"
     },
     {
       "title": "Durable Goods Orders m/m",
@@ -10313,7 +10313,7 @@
       "impact": "Low",
       "forecast": "2.0%",
       "previous": "0.0%",
-      "actual": ""
+      "actual": "1.8%"
     },
     {
       "title": "HPI m/m",
@@ -10322,7 +10322,7 @@
       "impact": "Low",
       "forecast": "0.2%",
       "previous": "0.3%",
-      "actual": ""
+      "actual": "0.3%"
     },
     {
       "title": "S&P/CS Composite-20 HPI y/y",
@@ -10331,7 +10331,7 @@
       "impact": "Low",
       "forecast": "2.6%",
       "previous": "2.5%",
-      "actual": ""
+      "actual": "2.7%"
     },
     {
       "title": "CB Consumer Confidence",
@@ -10340,7 +10340,7 @@
       "impact": "Medium",
       "forecast": "81.2",
       "previous": "81.9",
-      "actual": ""
+      "actual": "91.7"
     },
     {
       "title": "New Home Sales",
@@ -10349,7 +10349,7 @@
       "impact": "Low",
       "forecast": "651K",
       "previous": "684K",
-      "actual": ""
+      "actual": "676K"
     },
     {
       "title": "Richmond Manufacturing Index",
@@ -10358,7 +10358,7 @@
       "impact": "Low",
       "forecast": "0",
       "previous": "-2",
-      "actual": ""
+      "actual": "-2"
     },
     {
       "title": "API Weekly Statistical Bulletin",
@@ -10439,7 +10439,7 @@
       "impact": "Low",
       "forecast": "-30.1",
       "previous": "-30.6",
-      "actual": ""
+      "actual": "-30.8"
     },
     {
       "title": "UBS Economic Expectations",
