@@ -1200,13 +1200,13 @@ function tvFormatLike(ev, v) {
   const m = String(ref).match(/-?\d+(?:\.(\d+))?\s*([A-Za-z%]*)/);
   return m ? `${v.toFixed(m[1] ? m[1].length : 0)}${m[2]}` : String(v);
 }
-// ── Actual privé : relais local (PC de l'utilisateur uniquement, local/fsa-relay.mjs) ──
-// Absent chez les autres visiteurs (fetch échoue en silence) : TradingView prend alors le relais.
-const FSA_RELAY_URL = 'http://127.0.0.1:8787/calendar';
+// ── Actual Forex Smart Alert en direct : proxy Vercel (api/fsa-calendar), fonctionne sur mobile ──
+// En cas d'échec (fetch silencieux) : TradingView prend le relais.
+const FSA_RELAY_URL = 'https://ariinuiirgina.vercel.app/api/fsa-calendar';
 async function applyRelayActuals() {
   try {
     // Timeout court : sans relais (ou si Chrome attend l'autorisation réseau local), ne jamais bloquer l'affichage.
-    const res = await fetch(FSA_RELAY_URL, { cache: 'no-store', signal: AbortSignal.timeout(1500) });
+    const res = await fetch(FSA_RELAY_URL, { cache: 'no-store', signal: AbortSignal.timeout(4000) });
     if (!res.ok) return false;
     const src = ((await res.json()).result || []).filter((t) => t.actual);
     let changed = false;
