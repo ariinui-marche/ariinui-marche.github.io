@@ -1075,7 +1075,25 @@ function detectSentiment(text) {
   return 'neutral';
 }
 
+// Tags thématiques des news (forex / XAU / BTC) — heuristique par mots-clés sur le titre,
+// plusieurs tags possibles par titre. Même limite que detectSentiment : pas d'analyse sémantique.
+const NEWS_TAGS = [
+  ['rates', /\b(rate (?:decision|hike|hikes|cut|cuts)|(?:raises?|cuts?|holds?|keeps?|maintains?) (?:the )?(?:policy |key |interest )?rates?|interest rates?|hawkish|dovish|policy rate|monetary policy|rate path|pivot)\b/i],
+  ['inflation', /\b(CPI|PCE|PPI|inflation|deflation|consumer prices?|producer prices?)\b/i],
+  ['jobs', /\b(NFP|non-?farm|payrolls?|jobs report|unemployment|jobless|employment change|labou?r market|ADP|claimant count)\b/i],
+  ['central bank', /\b(Fed|FOMC|Powell|ECB|Lagarde|BoE|Bank of England|Bailey|BoJ|Bank of Japan|Ueda|RBA|RBNZ|BoC|Bank of Canada|SNB|central bank|Federal Reserve)\b/],
+  ['intervention', /\b(interven(?:e|es|ed|tion)|currency intervention|MoF|Ministry of Finance|yen-buying|FX intervention)\b/i],
+  ['geopolitics', /\b(tariffs?|trade war|sanctions?|war|ceasefire|missile|conflict|election|Trump|shutdown|debt ceiling)\b/i],
+  ['gold', /\b(gold|bullion|XAU|safe[- ]haven|precious metals?)\b/i],
+  ['crypto', /\b(bitcoin|BTC|crypto(?:currency)?|ETF flows?|halving|stablecoin|SEC (?:approves?|sues|charges)|Ethereum|ETH)\b/i],
+];
+
+function detectNewsTags(text) {
+  return NEWS_TAGS.filter(([, re]) => re.test(text)).map(([tag]) => tag);
+}
+
 let currentNews = [];
+let currentNewsTag = 'all';
 
 function loadStoredNewsFilter() {
   try {
@@ -1097,11 +1115,12 @@ let currentNewsFilter = loadStoredNewsFilter();
 
 function renderNews() {
   const list = document.getElementById('newsList');
-  const filtered = focusActive()
+  const byCcy = focusActive()
     ? currentNews.filter((n) => n.currencies.some((c) => focusCcys.includes(c)))
     : currentNewsFilter === 'all'
       ? currentNews
       : currentNews.filter((n) => n.currencies.includes(currentNewsFilter));
+  const filtered = currentNewsTag === 'all' ? byCcy : byCcy.filter((n) => n.tags.includes(currentNewsTag));
 
   if (!filtered.length) {
     list.innerHTML = '<div class="empty-state">Aucune news</div>';
@@ -1120,6 +1139,7 @@ function renderNews() {
           <span class="news-time">${dateLabel} ${time}</span>
         </div>
         <div class="news-title news-title-${sentiment}">${n.title}</div>
+        ${n.tags.length ? `<div class="news-tags">${n.tags.map((t) => `<span class="ntag-badge">${t}</span>`).join('')}</div>` : ''}
       </a>`;
   }).join('');
 }
@@ -1248,7 +1268,7 @@ async function loadAll() {
         // qui ne mentionne jamais littéralement "USD"/"dollar")
         const forcedCcy = SOURCE_CURRENCY[n.source];
         if (forcedCcy && !currencies.includes(forcedCcy)) currencies.push(forcedCcy);
-        return { ...n, currencies };
+        return { ...n, currencies, tags: detectNewsTags(n.title) };
       })
       .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
     renderNews();
@@ -1340,6 +1360,15 @@ document.getElementById('newsFilters').addEventListener('click', (e) => {
   btn.classList.add('active');
   currentNewsFilter = btn.dataset.ccy;
   saveNewsFilter(currentNewsFilter);
+  renderNews();
+});
+
+document.getElementById('newsTagFilters').addEventListener('click', (e) => {
+  const btn = e.target.closest('.filter-btn');
+  if (!btn) return;
+  e.currentTarget.querySelectorAll('.filter-btn').forEach((b) => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentNewsTag = btn.dataset.tag;
   renderNews();
 });
 
