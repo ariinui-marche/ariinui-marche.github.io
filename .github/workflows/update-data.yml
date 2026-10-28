@@ -27,6 +27,9 @@ jobs:
       # Actual quasi temps réel depuis le calendrier TradingView ; non bloquant (Apify reste le filet)
       - run: node scripts/fetch-tv-actuals.mjs || true
 
+      # Actual Forex Smart Alert (même source que le relais local), visible sur mobile ; non bloquant
+      - run: node scripts/fetch-fsa-actuals.mjs || true
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
