@@ -1200,11 +1200,40 @@ function tvFormatLike(ev, v) {
   const m = String(ref).match(/-?\d+(?:\.(\d+))?\s*([A-Za-z%]*)/);
   return m ? `${v.toFixed(m[1] ? m[1].length : 0)}${m[2]}` : String(v);
 }
+// ── Actual privé : relais local (PC de l'utilisateur uniquement, local/fsa-relay.mjs) ──
+// Absent chez les autres visiteurs (fetch échoue en silence) : TradingView prend alors le relais.
+const FSA_RELAY_URL = 'http://127.0.0.1:8787/calendar';
+async function applyRelayActuals() {
+  try {
+    const res = await fetch(FSA_RELAY_URL, { cache: 'no-store' });
+    if (!res.ok) return false;
+    const src = ((await res.json()).result || []).filter((t) => t.actual);
+    let changed = false;
+    for (const ev of currentEvents) {
+      if (ev.actual) continue;
+      const evT = new Date(ev.date).getTime();
+      const evTok = tvTokens(ev.title);
+      let best = null;
+      for (const t of src) {
+        if (t.currency !== ev.country || Math.abs(new Date(t.date).getTime() - evT) > 10 * 60000) continue;
+        const f = tvSame(ev.forecast, tvNum(t.forecast)), p = tvSame(ev.previous, tvNum(t.previous));
+        const tt = tvTokens(t.title);
+        const score = (f ? 2 : 0) + (p ? 2 : 0) + [...evTok].filter((w) => tt.has(w)).length;
+        if (score < 3) continue;
+        if (!best || score > best.score) best = { t, score };
+      }
+      if (best) { ev.actual = best.t.actual; changed = true; }
+    }
+    return changed;
+  } catch (e) { return false; }
+}
+
 // Renvoie true si au moins un actual a été ajouté.
 async function applyLiveActuals() {
+  const relayChanged = await applyRelayActuals();
   try {
     const res = await fetch(`${TV_ACTUALS_URL}?hours=12`, { cache: 'no-store' });
-    if (!res.ok) return false;
+    if (!res.ok) return relayChanged;
     const tv = ((await res.json()).result || []).filter((t) => t.actual != null);
     let changed = false;
     for (const ev of currentEvents) {
@@ -1224,8 +1253,8 @@ async function applyLiveActuals() {
       }
       if (best) { ev.actual = tvFormatLike(ev, best.t.actual); changed = true; }
     }
-    return changed;
-  } catch (e) { return false; }
+    return changed || relayChanged;
+  } catch (e) { return relayChanged; }
 }
 
 // Pendant le maintien post-sortie : interroge le proxy toutes les 15 s tant qu'il manque un actual
