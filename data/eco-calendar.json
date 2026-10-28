@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-27T22:40:13.582Z",
+  "timestamp": "2026-10-28T01:40:42.228Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -10385,7 +10385,7 @@
       "impact": "High",
       "forecast": "0.7%",
       "previous": "0.4%",
-      "actual": ""
+      "actual": "0.8%"
     },
     {
       "title": "CPI y/y",
@@ -10394,7 +10394,7 @@
       "impact": "High",
       "forecast": "4.2%",
       "previous": "4.0%",
-      "actual": ""
+      "actual": "4.3%"
     },
     {
       "title": "Trimmed Mean CPI m/m",
@@ -10403,7 +10403,7 @@
       "impact": "High",
       "forecast": "0.3%",
       "previous": "0.2%",
-      "actual": ""
+      "actual": "0.3%"
     },
     {
       "title": "Official Cash Rate",
@@ -10412,7 +10412,7 @@
       "impact": "High",
       "forecast": "3.00%",
       "previous": "2.75%",
-      "actual": ""
+      "actual": "2.75%"
     },
     {
       "title": "RBNZ Rate Statement",
