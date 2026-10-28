@@ -1087,8 +1087,19 @@ const NEWS_TAGS = [
   ['macro', /\bFed\b|\bFOMC\b|\bCPI\b|\binflation\b|\bjobs report\b|\bpayrolls\b|\btariffs?\b|\bfutures\b/i],
 ];
 
+// AJOUTS ARII (pas dans le repo) : vocabulaire forex / XAU / BTC, car les regex du repo
+// ci-dessus sont écrites pour les actions et ne matchent presque aucune news forex.
+// Fusionnés avec la regex du repo de la même catégorie (OU logique).
+const NEWS_TAGS_FOREX = {
+  macro: /\brates?\b|\brate (?:decision|hike|cut)s?\b|\bhike[sd]?\b|\bhawkish\b|\bdovish\b|\bcentral bank\b|\bBoE\b|\bBank of England\b|\bECB\b|\bBoJ\b|\bBank of Japan\b|\bRBA\b|\bRBNZ\b|\bBoC\b|\bBank of Canada\b|\bSNB\b|\bFederal Reserve\b|\bPowell\b|\bLagarde\b|\bBailey\b|\bUeda\b|\bGDP\b|\bPCE\b|\bPPI\b|\bNFP\b|\bunemployment\b|\bemployment\b|\bjobless\b|\bretail sales\b|\bPMI\b|\bmonetary policy\b|\bgilts?\b|\bTreasur(?:y|ies)\b|\bintervention\b/i,
+  regulatory: /\bSEC\b|\bCFTC\b|\bETF\b|\bspot ETF\b|\bregulat(?:ion|ors?|ory)\b|\bMiCA\b|\bstablecoin\b|\bFCA\b|\bsanctions?\b|\bbill\b|\blegislation\b/i,
+  risk: /\bwar\b|\bconflict\b|\bcrash\b|\bsell-?off\b|\bturmoil\b|\bcrisis\b|\bexploit\b|\bliquidation[s]?\b|\bshutdown\b|\bgeopolitical\b|\bsafe[- ]haven\b|\bvolatil(?:e|ity)\b/i,
+  legal: /\bruling\b|\bsentenc(?:e|ed|ing)\b|\btrial\b|\bcharged\b|\bsettlement\b|\blegal\b|\bappeal\b/i,
+  people: /\bgovernor\b|\bchair(?:man|woman)?\b|\bpresident\b|\bnominat(?:e|es|ed|ion)\b|\bsuccessor\b|\bdeputy\b|\bTrump\b|\bspeaks?\b|\bspeech\b/i,
+};
+
 function detectNewsTags(text) {
-  return NEWS_TAGS.filter(([, re]) => re.test(text)).map(([tag]) => tag);
+  return NEWS_TAGS.filter(([tag, re]) => re.test(text) || NEWS_TAGS_FOREX[tag].test(text)).map(([tag]) => tag);
 }
 
 let currentNews = [];
