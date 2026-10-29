@@ -1,82 +1,243 @@
 {
-  "timestamp": "2026-10-29T08:50:57.919Z",
+  "timestamp": "2026-10-29T15:38:06.896Z",
   "items": [
     {
-      "title": "Earnings call transcript: Oriola posts solid Q3 2026 sales growth, stock flat",
-      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-oriola-posts-solid-q3-2026-sales-growth-stock-flat-93CH-4981878",
-      "pubDate": "2026-10-29T08:45:52.000Z",
+      "title": "Bank of Canada raises the policy rate by 25 basis points to 2½%",
+      "link": "https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/",
+      "pubDate": "2026-10-29T15:26:26.000Z",
+      "description": "The Bank of Canada today increased its target for the overnight rate by 25 basis points to 2.5%, with the Bank Rate at 2.75% and the deposit rate at 2.45%.",
+      "source": "Bank of Canada"
+    },
+    {
+      "title": "Robust consumer spending, AI-related investment power US economy in third quarter",
+      "link": "https://www.investing.com/news/economy-news/us-economic-growth-accelerates-in-third-quarter-4983581",
+      "pubDate": "2026-10-29T15:24:34.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "DBV Technologies shares slide 8% on going-concern warning, wider Q3 loss",
-      "link": "https://www.investing.com/news/earnings/dbv-technologies-shares-slide-8-on-goingconcern-warning-wider-q3-loss-4981875",
-      "pubDate": "2026-10-29T08:45:03.000Z",
+      "title": "SanDisk faces earnings test as NAND pricing cycle looms",
+      "link": "https://www.investing.com/news/earnings/sandisk-faces-earnings-test-as-nand-pricing-cycle-looms-93CH-4984604",
+      "pubDate": "2026-10-29T15:24:24.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Why is Teladoc Health stock surging today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-teladoc-health-stock-surging-today-93CH-4981874",
-      "pubDate": "2026-10-29T08:44:43.000Z",
+      "title": "Colony Bankcorp Q3 2026 slides: margin expansion, merger ahead",
+      "link": "https://www.investing.com/news/company-news/colony-bankcorp-q3-2026-slides-margin-expansion-merger-ahead-93CH-4984603",
+      "pubDate": "2026-10-29T15:24:18.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Why is Chipotle Mexican Grill stock surging today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-chipotle-mexican-grill-stock-surging-today-93CH-4981873",
-      "pubDate": "2026-10-29T08:44:21.000Z",
+      "title": "Earnings call transcript: ATI tops Q3 2026 estimates and lifts outlook",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-ati-tops-q3-2026-estimates-and-lifts-outlook-93CH-4984602",
+      "pubDate": "2026-10-29T15:23:49.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Raymond James downgrades Peapack-Gladstone stock rating on valuation",
-      "link": "https://www.investing.com/news/analyst-ratings/raymond-james-downgrades-peapackgladstone-stock-rating-on-valuation-93CH-4981865",
-      "pubDate": "2026-10-29T08:42:52.000Z",
+      "title": "AstraZeneca earnings up next: Can oncology sustain momentum?",
+      "link": "https://www.investing.com/news/earnings/astrazeneca-earnings-up-next-can-oncology-sustain-momentum-93CH-4984601",
+      "pubDate": "2026-10-29T15:23:30.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Jefferies downgrades GlaxoSmithKline stock rating on limited momentum",
-      "link": "https://www.investing.com/news/analyst-ratings/jefferies-downgrades-glaxosmithkline-stock-rating-on-limited-momentum-93CH-4981866",
-      "pubDate": "2026-10-29T08:42:52.000Z",
+      "title": "VICI Properties Q3 2026 slides: AFFO growth drives guidance raise",
+      "link": "https://www.investing.com/news/company-news/vici-properties-q3-2026-slides-affo-growth-drives-guidance-raise-93CH-4984600",
+      "pubDate": "2026-10-29T15:23:06.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Nasdaq futures slide as mixed Big Tech results test AI trade",
-      "link": "https://www.investing.com/news/economy-news/nasdaq-futures-slide-as-mixed-big-tech-results-test-ai-trade-4981842",
-      "pubDate": "2026-10-29T08:42:37.000Z",
+      "title": "Gilead earnings on deck: Can pipeline wins offset acquisition costs?",
+      "link": "https://www.investing.com/news/earnings/gilead-earnings-on-deck-can-pipeline-wins-offset-acquisition-costs-93CH-4984599",
+      "pubDate": "2026-10-29T15:22:37.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Lloyds shares drop on muted third quarter results as higher taxes loom",
-      "link": "https://www.investing.com/news/stock-market-news/lloyds-reports-thirdquarter-profit-rise-as-britains-banks-face-higher-taxes-4981641",
-      "pubDate": "2026-10-29T08:42:22.000Z",
+      "title": "Trane Q3 2026 slides: bookings surge 20% as margins face pressure",
+      "link": "https://www.investing.com/news/company-news/trane-q3-2026-slides-bookings-surge-20-as-margins-face-pressure-93CH-4984598",
+      "pubDate": "2026-10-29T15:21:50.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Haleon shares hit three-week low after growth downgrade, £500 million buyback",
-      "link": "https://www.investing.com/news/earnings/haleon-trims-2026-growth-outlook-as-weaker-cold-and-flu-demand-prompts-500-mln-4981655",
-      "pubDate": "2026-10-29T08:42:17.000Z",
+      "title": "Imperial Oil earnings on deck: Can refining offset estimate cuts?",
+      "link": "https://www.investing.com/news/earnings/imperial-oil-earnings-on-deck-can-refining-offset-estimate-cuts-93CH-4984597",
+      "pubDate": "2026-10-29T15:21:43.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Campari sales beat estimates but stock slips 5% on US outlook",
-      "link": "https://www.investing.com/news/stock-market-news/campari-sales-beat-estimates-but-stock-slips-on-us-outlook-4980495",
-      "pubDate": "2026-10-29T08:42:16.000Z",
+      "title": "Enerpac Q4 FY26 slides: record revenue, SFE deal boosts growth outlook",
+      "link": "https://www.investing.com/news/company-news/enerpac-q4-fy26-slides-record-revenue-sfe-deal-boosts-growth-outlook-93CH-4984596",
+      "pubDate": "2026-10-29T15:21:36.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Ethereum Heads for Worst October Since 2018 as Early Whales Wake Up",
-      "link": "https://beincrypto.com/ethereum-worst-october-dormant-whales/",
-      "pubDate": "2026-10-29T08:07:41.000Z",
-      "description": "Ethereum (ETH) is losing support from new money and old money at the same time this October. US spot ETFs have shed about $1.35 billion, while wallets dormant for years moved over $140 million in ETH. The price has dropped 13.6% this month ",
+      "title": "LBMA members back tokenised gold but seek legal certainty and safeguards",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOWGsySVpZX2g0a0R0ZndGOUhvdWQyVzRpY1pUMC1YUHRfa3V0aG80MGRId2U1TWN6bDZJdEV2QXpnYWhJX0VVVWZtTzRNaFdWT29UWVN5OEc1eFN6LWtqZkluVU9rd1htQkZGWG14VW1VUlB5RGFhWmIyRnNJUVdOVHBUcXNKdFUxWC1oeTZGcFhrYnpULTI4VXFaUGlOcVY0XzFzVFRvV2ZFYjNDM2c?oc=5",
+      "pubDate": "2026-10-29T14:49:43.000Z",
+      "description": "LBMA members back tokenised gold but seek legal certainty and safeguards&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "KuCoin Exits Russia and Belarus as EU Crypto Sanctions Tighten",
+      "link": "https://beincrypto.com/kucoin-russia-belarus-exit-compliance/",
+      "pubDate": "2026-10-29T14:37:41.000Z",
+      "description": "KuCoin has stopped serving customers in Russia and Belarus, becoming the third major crypto exchange to announce restrictions in the region within two weeks. KuCoin said the decision took effect immediately and covered every product. Affect",
       "source": "BeInCrypto"
+    },
+    {
+      "title": "VIEW ECB keeps rates unchanged; euro and bond yields fall",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNRS1GTl9NNk5PZHlwa1lfREJ1SlVlb0w0YnVJVHVldVJta1ROanY3MXdQSVZ4NHVjajBINE44VV93cGFtWngtVGxjMV8zaHFPbG8weVEzUE1KUWVDZDRFeXZpckZlTk55d1ZkOVZ1dlBhbFdreWY3ZHUzQmtrc2FmajZmRVlZLWVsTEZ6YmJOaHYxbmI1?oc=5",
+      "pubDate": "2026-10-29T14:21:50.000Z",
+      "description": "VIEW ECB keeps rates unchanged; euro and bond yields fall&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Minutes of the Meeting of the Court of Directors held on 17 September 2026",
+      "link": "https://www.bankofengland.co.uk/minutes/2026/september/court-minutes-17-september-2026",
+      "pubDate": "2026-10-29T14:00:00.000Z",
+      "description": "The Bank's Court of Directors acts as a unitary board, setting the organisation's strategy and budget and taking key decisions on resourcing and appointments. Required to meet a minimum seven times per year, it has five executive members fr",
+      "source": "Bank of England"
+    },
+    {
+      "title": "Christine Lagarde, Boris Vujčić: Monetary policy statement",
+      "link": "https://www.ecb.europa.eu//press/press_conference/monetary-policy-statement/2026/html/ecb.is261029~5c5ffe99e5.en.html",
+      "pubDate": "2026-10-29T14:00:00.000Z",
+      "description": "",
+      "source": "European Central Bank"
+    },
+    {
+      "title": "Blockchain: Beyond Digital Currency",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPUEw5cXFlNlhVVm1UeWxEWmtMMklVRmhPR0RQSWloZ0lBd3kwLUp4QS1FajB1dVdQRS12UjRkY0VSSjI0UmtUakVzdVhJOFFMYmVmUG10cnliVmZYbVFSbnF6ZVZOTU5CaTloblBNejRsaHluUzFhSFR5ZGs1SFl1Nmc1ZFF5RFBWZlp4cnhDYVRxUU9WUFNFNGYtSFc?oc=5",
+      "pubDate": "2026-10-29T14:00:00.000Z",
+      "description": "Blockchain: Beyond Digital Currency&nbsp;&nbsp;Forbes",
+      "source": "Google News"
+    },
+    {
+      "title": "Euro Hits 17-Month Low Vs Dollar After ECB Holds Rates Steady",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPRnZ2LVlaS0NsT0ZjNlRGR0k5djAzMnNkaEtCcXc4YkdCb1lhd19sRjhSLUgtSE83MWV2ZkpPSGstdnlwNzM1YTNsMFpkRFJSdExZZTd1TnluanAzUHBSNkRQZE5qeGw1aUhaQzk1ZUNfaVJ3QVdKVmNBcDBzNXdLdnJ2dUdrR3hrZHVEcTF1Q2xnQQ?oc=5",
+      "pubDate": "2026-10-29T13:37:00.000Z",
+      "description": "Euro Hits 17-Month Low Vs Dollar After ECB Holds Rates Steady&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "US Sanctions Two Russians Accused of Converting $5.5M in Crypto for North Korea",
+      "link": "https://beincrypto.com/north-korea-crypto-cashout-mainstream-exchanges/",
+      "pubDate": "2026-10-29T13:27:48.000Z",
+      "description": "\\The US Treasury sanctioned 10 individuals and one entity on October 28 over North Korea&#8217;s IT worker schemes. Two of those named are Russians who allegedly converted millions in crypto for the regime&#8217;s networks. Chainalysis&#821",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Bitrue Gives New Futures Traders A 100 USDT Voucher In Halloween Campaign",
+      "link": "https://beincrypto.com/bitrue-gives-new-futures-traders-100-usdt/",
+      "pubDate": "2026-10-29T13:26:45.000Z",
+      "description": "Bitrue, a global cryptocurrency exchange, has launched its Halloween Trading Frenzy, a futures trading campaign running from Oct. 28 to Nov. 12, 2026 (UTC). The campaign features a $33,333 prize pool, a $1,000 daily airdrop and a 100 USDT p",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "XRP Buying Pressure on Binance Hits Three-Month High: What to Expect in November?",
+      "link": "https://beincrypto.com/xrp-binance-buy-pressure-november/",
+      "pubDate": "2026-10-29T13:15:29.000Z",
+      "description": "XRP buying pressure on Binance has climbed to a three-month high, according to CryptoQuant. The shift arrives just before November, historically one of XRP&#8217;s most polarized months. Meanwhile, whales keep accumulating, and chart analys",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Monetary policy decisions",
+      "link": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.mp261029~9a493adf17.en.html",
+      "pubDate": "2026-10-29T13:15:00.000Z",
+      "description": "",
+      "source": "European Central Bank"
+    },
+    {
+      "title": "Wheat Posts Longest Losing Streak Since 1997: What It Means for Portfolios",
+      "link": "https://beincrypto.com/wheat-longest-losing-streak-since-1997/",
+      "pubDate": "2026-10-29T12:57:37.000Z",
+      "description": "Wheat heads for a ninth weekly loss, its longest losing streak since 1997. See how it ties to inflation, the Fed, and crypto.\nThe post Wheat Posts Longest Losing Streak Since 1997: What It Means for Portfolios appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Justin Sun&#039;s HTX Quits UK in Court Deal: What Happens to Users&#039; Money?",
+      "link": "https://beincrypto.com/htx-quits-uk-fca-court-deal/",
+      "pubDate": "2026-10-29T12:41:39.000Z",
+      "description": "HTX leaves Britain under an FCA court deal. UK users face a harder question, getting money out of a sanctioned exchange.\nThe post Justin Sun&#039;s HTX Quits UK in Court Deal: What Happens to Users&#039; Money? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "HYPE Token Rallies As NYSE Owner Brings Hyperliquid to America",
+      "link": "https://beincrypto.com/hype-token-surges-nyse-owner-hyperliquid/",
+      "pubDate": "2026-10-29T12:26:23.000Z",
+      "description": "HYPE token surges as NYSE owner ICE plans 24/7 US futures on Hyperliquid. The token's share of the deal is unclear.\nThe post HYPE Token Rallies As NYSE Owner Brings Hyperliquid to America appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "A Memory Shortage Until 2030? Why Semiconductor Stocks Are Rallying Again",
+      "link": "https://beincrypto.com/memory-shortage-2030-semiconductor-stocks-rally/",
+      "pubDate": "2026-10-29T12:08:06.000Z",
+      "description": "Semiconductor stocks Micron and SanDisk jumped as SK Hynix forecast a memory shortage until 2030. See key levels.\nThe post A Memory Shortage Until 2030? Why Semiconductor Stocks Are Rallying Again appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "What 1,932 US Crypto Investors Revealed About Money, Respect and Secrecy",
+      "link": "https://beincrypto.com/us-investors-crypto-respect-okx-survey/",
+      "pubDate": "2026-10-29T12:00:00.000Z",
+      "description": "More than half of American crypto investors plan to raise their crypto allocation over the next 5 years. Yet, 42% say crypto wealth earns less social respect than an equal stock portfolio, an OKX survey shows. Pollfish ran the survey for OK",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "HK Dollar Peg Architect Says Narrower Band May Ease Speculation",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOaUpTblh0cFRFdUNucjgyN0JQaDBQV2tNanN3d19BTF9EUU9NOTNSY3ZhZkVtcUw4Rml0Mm1SNmM4dHZ6aXJMdFdNbGp0UGhmZjRzTUtNdV9ta016MmlEUk83UGlHVFVVQkZoaE5xYXhsakpvZWtyV3BJV2VDdmVFUHI0Tk1OaTNVM0U1enFkeFpVcHp2dG5VeFl1cGtUc0ZWRWFtX2tMdDRudjZOb05TLUs0alU?oc=5",
+      "pubDate": "2026-10-29T11:54:39.000Z",
+      "description": "HK Dollar Peg Architect Says Narrower Band May Ease Speculation&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "What Is Fed Chair Kevin Warsh Sensitive To? BlackRock Executive Has an Answer",
+      "link": "https://beincrypto.com/blackrock-rosenberg-warsh-ai-trade-crypto/",
+      "pubDate": "2026-10-29T11:39:22.000Z",
+      "description": "Fed Chair Kevin Warsh is sensitive to AI, according to Jeffrey Rosenberg, a managing director at BlackRock. Rosenberg said Warsh linked tightening financial conditions to AI after the Fed held rates at 3.75% to 4% on Wednesday. Minutes from",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Stablecoin Transfers Jump 80% as Banks Rethink Their Role at MERGE Madrid",
+      "link": "https://beincrypto.com/stablecoin-transfers-jump-80-as-banks-rethink-their-role-at-merge-madrid/",
+      "pubDate": "2026-10-29T10:56:20.000Z",
+      "description": "Banks are moving beyond crypto trading to build the infrastructure behind stablecoins and tokenized assets, executives said on Wednesday at MERGE Madrid 2026, held at the Palacio de Cibeles. Chainalysis data helped explain why. Cryptocurren",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Could Binance Have a Future in Europe After Lagarde&#039;s ECB Exit?",
+      "link": "https://beincrypto.com/binance-europe-future-lagarde-ecb-exit/",
+      "pubDate": "2026-10-29T10:46:06.000Z",
+      "description": "Lagarde leaves the ECB early. Binance's EU license hopes improve, but national regulators and a new EU watchdog still decide.\nThe post Could Binance Have a Future in Europe After Lagarde&#039;s ECB Exit? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "The Billion-Dollar Reason MLB Team Owners Are Willing To Risk A Lockout",
+      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQMmxhNnFUTS1hdmVLNE1aS1FPSWFRZGR3S3F0YklrYWp6RWw3VW9vNm9HckdRY2tZZzB3UmlHM2dQTFpiVFVCR0V0TTgzeTZlWGRyS3hsZ2RUNGJuRHRtbkV1MzNNOU5TYXA1VXUxaXBwMzNCWk9Ic2hHOHJDN3ZJVlk1SUI3QnU2cmRKM3RVS2RIcDA4YzI5N011aHVTR2w1Vm9sLWItWjFPNF9keTYzRVVCWGNtbWctNkpicGtmZFY?oc=5",
+      "pubDate": "2026-10-29T10:30:00.000Z",
+      "description": "The Billion-Dollar Reason MLB Team Owners Are Willing To Risk A Lockout&nbsp;&nbsp;Forbes",
+      "source": "Google News"
+    },
+    {
+      "title": "Bank of England sets out approach to tokenised collateral in central clearing",
+      "link": "https://www.bankofengland.co.uk/news/2026/october/bank-of-england-sets-out-approach-to-tokenised-collateral-in-central-clearing",
+      "pubDate": "2026-10-29T10:00:00.000Z",
+      "description": "The Bank of England has today launched a consultation supporting central counterparties (CCPs) acceptance of tokenised forms of eligible collateral.",
+      "source": "Bank of England"
+    },
+    {
+      "title": "ECB President Lagarde to step down on 7 February 2027",
+      "link": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261029~abbb6dc64b.en.html",
+      "pubDate": "2026-10-29T10:00:00.000Z",
+      "description": "",
+      "source": "European Central Bank"
     },
     {
       "title": "2026-10-29 - Data portal - Swiss Financial Accounts, Q2 2026",
@@ -86,101 +247,31 @@
       "source": "Swiss National Bank"
     },
     {
-      "title": "Vitalik Buterin Says AI Is Knowledgeable but Not Very Wise",
-      "link": "https://beincrypto.com/vitalik-buterin-ai-knowledgeable-not-wise/",
-      "pubDate": "2026-10-29T07:37:04.000Z",
-      "description": "Vitalik Buterin says AI is extremely knowledgeable but not very wise, and that chatbots judge brand-new writing only at the surface level.\nThe post Vitalik Buterin Says AI Is Knowledgeable but Not Very Wise appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
+      "title": "South African rand slips as weaker gold and platinum add pressure",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQQ21tOHY5RUhPVllpMFYtRWQ5VjRGUjhmOEtmdHBLdl9jMXJndVFSZXJTcV9oTUVMX2NtbVl3TklEQ0h0X2pDbWFhMllxUll1Tnkxc3VtZnhZOVRMdUk1dlNaM0lielNVR194S3ZKcHc3bkxJaDJIVjJPM1pGMDRaT21NMjdOcWNqTzRiOXQ5TmZiZ1d6UTMyUTRnTEo2V2FubFMwTkVEM2c?oc=5",
+      "pubDate": "2026-10-29T06:36:00.000Z",
+      "description": "South African rand slips as weaker gold and platinum add pressure&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
-      "title": "Chainlink Loses 21% in October Even as Tokens Keep Leaving Exchanges",
-      "link": "https://beincrypto.com/chainlink-price-exchange-outflows-binance/",
-      "pubDate": "2026-10-29T06:51:25.000Z",
-      "description": "Chainlink (LINK) has drained from Binance for 18 days running, the kind of exit bulls tend to cheer. Its price has refused to join in, shedding 20.8% so far in October.&#160; Up close, the streak looks less festive, since a large deposit ca",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "UNI’s 6-Year Wallet Spike May Not Mean What It Looks Like",
-      "link": "https://beincrypto.com/uniswap-new-addresses-2020-high/",
-      "pubDate": "2026-10-29T06:16:46.000Z",
-      "description": "Uniswap (UNI) has slipped back below $7 after briefly recovering above it this week. The token now sits under the level Santiment called key, just as new UNI addresses reached a 6-year high. UNI trades at $6.98, down 2.35% over the past 24 ",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Bitwise Projects $1.6 Million Bitcoin by 2036. Does Gold Hold the Key?",
-      "link": "https://beincrypto.com/bitwise-bitcoin-target-gold-market-share/",
-      "pubDate": "2026-10-29T05:42:09.000Z",
-      "description": "Bitwise projects Bitcoin (BTC) will hit $1.6 million by 2036, about 19 times its $83,557 starting price. Most of that value depends on Bitcoin winning a quarter of the store-of-value market it shares with gold. The store-of-value slot suppl",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Singapore Dollar Strengthens as Investors Turn to U.S. Econ Data",
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPRnZ2LVlaS0NsT0ZjNlRGR0k5djAzMnNkaEtCcXc4YkdCb1lhd19sRjhSLUgtSE83MWV2ZkpPSGstdnlwNzM1YTNsMFpkRFJSdExZZTd1TnluanAzUHBSNkRQZE5qeGw1aUhaQzk1ZUNfaVJ3QVdKVmNBcDBzNXdLdnJ2dUdrR3hrZHVEcTF1Q2xnQQ?oc=5",
-      "pubDate": "2026-10-29T04:47:00.000Z",
-      "description": "Singapore Dollar Strengthens as Investors Turn to U.S. Econ Data&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
-      "title": "Gold drops 1% as markets assess Fed signals, await US inflation data",
+      "title": "Gold slides as higher US inflation reinforces Fed tightening bets",
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQYlhrT3hjaWJ0VXJlcHYxRUdvdVJsVEpGN2lzQXA4a1pLNW5SdklwTFpMYmRNTGRNQ2w2MTRTR2g0UUJfMkx0c21Ja1Fqbzd4eVk1U1gySHF5cnYwQ0FqUzFWWVVMVXpWaUMtQ3d2VGs1TERHQ0dtbFpMWWgxbVpoVS13bGRORTByVkZaS0piSjNxYTk0eUtoZ0ItV2wxbzNnOXhCM2R1bW1Sa1laZUE?oc=5",
       "pubDate": "2026-10-29T04:25:00.000Z",
-      "description": "Gold drops 1% as markets assess Fed signals, await US inflation data&nbsp;&nbsp;Reuters",
+      "description": "Gold slides as higher US inflation reinforces Fed tightening bets&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
-      "title": "Visa&#039;s Stablecoin Volume Grew 10x in a Year: Which Stablecoins Benefit?",
-      "link": "https://beincrypto.com/visa-stablecoin-settlement-volume-10x/",
-      "pubDate": "2026-10-29T04:01:00.000Z",
-      "description": "Visa stablecoin settlement passed a $25 billion run rate, up 10x. See which tokens and blockchains stand to benefit.\nThe post Visa&#039;s Stablecoin Volume Grew 10x in a Year: Which Stablecoins Benefit? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "HK Dollar Peg Architect Says Narrower Band May Ease Speculation",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOaUpTblh0cFRFdUNucjgyN0JQaDBQV2tNanN3d19BTF9EUU9NOTNSY3ZhZkVtcUw4Rml0Mm1SNmM4dHZ6aXJMdFdNbGp0UGhmZjRzTUtNdV9ta016MmlEUk83UGlHVFVVQkZoaE5xYXhsakpvZWtyV3BJV2VDdmVFUHI0Tk1OaTNVM0U1enFkeFpVcHp2dG5VeFl1cGtUc0ZWRWFtX2tMdDRudjZOb05TLUs0alU?oc=5",
-      "pubDate": "2026-10-29T03:15:00.000Z",
-      "description": "HK Dollar Peg Architect Says Narrower Band May Ease Speculation&nbsp;&nbsp;Bloomberg.com",
+      "title": "Dollar steady after Fed hold leaves rate path murky",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQMjFtTHRrYVM2bUw4cHZIX05qXy1OTWNHQjdnNEozWGFaVGVaRU83T1pYVUNHaXF3RS02WWdOZ2JZVkRIY1o0aW1GaERDV1FCX2dPTzZoeW1QM21EZVctMEJDdzhFQ1JuTDQzR1p1UmpzZF9RTmNqTkpoSmUwZW1YUnNsOExfLTdURUwydm1MNTFad9IBlwFBVV95cUxPYVprbWlJUXR1ZW5hS3kwZnBwQ3dTNFBqVXp0dVVJUkN6T1M2eWVBT2tSVkx5aTFwaURvU1ZDVHpfMW9XY2hjYlNqaHhsOUM2aUh4RGNkbzNTb2VBVmVTcE5JSHlURWRWLVdCdEN1cjctUHpJalM1NmcwZVkyZEdheF9JS09vYlVTeDFOYTdlVlltZm1rRFVZ?oc=5",
+      "pubDate": "2026-10-29T03:05:00.000Z",
+      "description": "Dollar steady after Fed hold leaves rate path murky&nbsp;&nbsp;CNBC",
       "source": "Google News"
     },
     {
-      "title": "Rupee hits two-week low on 'sticky' dollar bids, modest intervention cushions",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPWDNJT2VhWGRQRm5IZnpXYzYtenpNODlEWm1JWnpFYzRIYjNQejcxaVJOTGxDVnA5M3pUbDB1QWU3MTg5bFhhT2NGLUtUeUZnNVlfVU5KTEtNOVI3ck1nNTcyMktQNUtZLVBRWWw4WkxUQVpDWFc0Zkp5QS1CQmpINlpyTzNOVU43S05NOVBrYmdHNjZuZ2JWb1pMdEFxZzUwYkhBV2lTdS1PLUE1NVJERGlMRkxIcmYy?oc=5",
-      "pubDate": "2026-10-29T02:55:00.000Z",
-      "description": "Rupee hits two-week low on 'sticky' dollar bids, modest intervention cushions&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Stealth Bear Market Hits Crypto Stocks as Coinbase, Circle, Robinhood Fall 40-56%",
-      "link": "https://beincrypto.com/stealth-bear-market-crypto-stocks-coinbase/",
-      "pubDate": "2026-10-29T02:54:21.000Z",
-      "description": "A stealth bear market hits Coinbase, Circle, and Robinhood as Bitcoin keeps dipping below $80,000 and the S&#038;P 500 holds.\nThe post Stealth Bear Market Hits Crypto Stocks as Coinbase, Circle, Robinhood Fall 40-56% appeared first on BeInC",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Treasury Buyback Fills $6 Billion Again: So Why Is Bitcoin Below $80K?",
-      "link": "https://beincrypto.com/treasury-buyback-bitcoin-no-rally/",
-      "pubDate": "2026-10-29T02:37:44.000Z",
-      "description": "Treasury filled its $6 billion buyback again, but Bitcoin did not rally. Here is what changed since August's jump.\nThe post Treasury Buyback Fills $6 Billion Again: So Why Is Bitcoin Below $80K? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Bloomberg Among Firms Paying Up to $100K a Month for Donald Trump&#039;s Posts",
-      "link": "https://beincrypto.com/bloomberg-trading-firms-truth-social-access/",
-      "pubDate": "2026-10-29T02:13:47.000Z",
-      "description": "Bloomberg, Susquehanna, and Jump Trading reportedly pay Truth Social for faster access to Donald Trump's posts.\nThe post Bloomberg Among Firms Paying Up to $100K a Month for Donald Trump&#039;s Posts appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Samsung Stock Falls 3% Even as Profit Tops $80 Billion: Is a Record Quarter Not Enough?",
-      "link": "https://beincrypto.com/samsung-stock-falls-record-quarter/",
-      "pubDate": "2026-10-29T02:03:00.000Z",
-      "description": "Samsung shares fell 2.69% to 235,500 won by 10:11 a.m. Korea time on Thursday, shortly after the company reported a record quarterly operating profit of KRW 107.4 trillion, about $80 billion. The stock had traded higher before the release, ",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Euro steady before ECB decision, dollar holds ground as Fed stands pat",
+      "title": "Euro stable ahead of ECB decision; investors adjust Fed view",
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNYmVmOE5mU3JyckhjNGlWelQ5QVdhNzkwU0h1Zkd4bjJ6UGszY2lYem1BRmxjWW95VDBrYzg5NXNIWFhFWmNjNmFlUHZleE01YnNOWjRWVV9LWU1SYS1lRlVoRm15U1FrNjdvbkhtVzA4UWNzREJFWjBmUS1vU1FmcEN5a2loa1VsaHRRN190UHZNRmtvTVR1a0RmUlZwTlBPTmtoVFpURGpudw?oc=5",
       "pubDate": "2026-10-29T01:55:00.000Z",
-      "description": "Euro steady before ECB decision, dollar holds ground as Fed stands pat&nbsp;&nbsp;Reuters",
+      "description": "Euro stable ahead of ECB decision; investors adjust Fed view&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -191,25 +282,18 @@
       "source": "Google News"
     },
     {
-      "title": "Raoul Pal Says AI Spending Has No Ceiling. Are Tech Stocks in Danger?",
-      "link": "https://beincrypto.com/raoul-pal-ai-capex-debt-stock-market-fears/",
-      "pubDate": "2026-10-29T00:56:43.000Z",
-      "description": "Raoul Pal says AI capex by hyperscalers has no ceiling and calls Big Tech debt fears overblown, even as bond sales jump sharply in 2026.\nThe post Raoul Pal Says AI Spending Has No Ceiling. Are Tech Stocks in Danger? appeared first on BeInCr",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Oil&#039;s War Premium Could Vanish Fast Once a Hormuz Deal Lands, Analysts Warn",
-      "link": "https://beincrypto.com/oil-war-premium-hormuz-deal-analysts/",
-      "pubDate": "2026-10-29T00:40:13.000Z",
-      "description": "The war premium leaves Brent $20 above JPMorgan's fair value, and BMI expects a steep sell-off after a Hormuz deal.\nThe post Oil&#039;s War Premium Could Vanish Fast Once a Hormuz Deal Lands, Analysts Warn appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "ES - 2026-10-29 - Damien Klossner, Igor Mlikota and Sabrina Stadelmann: What collateral is used in the Swiss interbank repo market?",
       "link": "https://www.snb.ch/en/publications/research/economic-notes/2026/economic_note_2026_08",
       "pubDate": "2026-10-28T23:00:00.000Z",
       "description": "Collateral is a key component of repurchase agreement transactions. We document collateral usage in the Swiss interbank repo market using an extensive transaction-level dataset. We find that a substantial share of securities eligible for th",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "WSJ Dollar Index Falls 0.12% to 97.18",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNTldaVURJT2Rwd2d0WEZoTHZIWTMyYWt4OUx3VjBRVHdjdlR1Y0taSExYbG5BRDdGb2lyOHVEYmVmWjBtMUNwakZUUmJwWV9nWU1DbnBJTVd6RDNhM2tJOVM0VnVCUVpCYjE1RnlxcTBwWmcwc0lXQ1hoT3RtMUdUN3FWMUhVU19qTUpEejQtbGFjTm9yU0pWS09fUlRtNWs?oc=5",
+      "pubDate": "2026-10-28T21:46:00.000Z",
+      "description": "WSJ Dollar Index Falls 0.12% to 97.18&nbsp;&nbsp;WSJ",
+      "source": "Google News"
     },
     {
       "title": "Argentina's YPF swings to billion-dollar profit as shale boom gathers pace",
@@ -224,13 +308,6 @@
       "pubDate": "2026-10-28T20:44:49.000Z",
       "description": "Canadian dollar strengthens, bond yields rise after BoC's rate hike&nbsp;&nbsp;Reuters",
       "source": "Reuters"
-    },
-    {
-      "title": "Bank of Canada raises the policy rate by 25 basis points to 2½%",
-      "link": "https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/",
-      "pubDate": "2026-10-28T20:21:15.000Z",
-      "description": "The Bank of Canada today increased its target for the overnight rate by 25 basis points to 2.5%, with the Bank Rate at 2.75% and the deposit rate at 2.45%.",
-      "source": "Bank of Canada"
     },
     {
       "title": "WSJ Dollar Index Falls 0.12% to 96.80",
@@ -261,13 +338,6 @@
       "source": "Bank of England"
     },
     {
-      "title": "New Zealand dollar tanks after central bank defies markets' near-certainty it would hike rates",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5YMzdkaWRXTFZ5U05JNi1rSVBUWkp3cS1hc0pIRzVzaFlHc2pRTzE4bzZ1WmNOcHJMM0R6dzNKWmZMTTZRandJMllBYjlQREtTTHFpVHJ3bkwzenpiRzRNay1Gbjd2SXVIWHVQMmE1OVZTcHRZ0gF6QVVfeXFMTWhNWmpvQmJ4dktiSGVHV2l1N3FuRjRXRjU4dGlxeWRTcWVjSC1QWlRyQTdFQ2F0WW1CLUpmSUcxbTAtLTJjc2VqUERQcDVKN0g1V2RuUkJKT2JXNDlpLUtFS0RsV0JUVmV0QjhhOC1rRkQwZHUxSlFxRUE?oc=5",
-      "pubDate": "2026-10-28T12:32:57.000Z",
-      "description": "New Zealand dollar tanks after central bank defies markets' near-certainty it would hike rates&nbsp;&nbsp;CNBC",
-      "source": "Google News"
-    },
-    {
       "title": "Sterling inches lower ahead of highly anticipated UK budget",
       "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNbXBZWmk4dHBraFhyUWZRTnB5UERDREc5OEpwbkJ2c1JCTkl0NDF4X2F4NExrUXcyQ1hwY2N0dGhuSnBhc2txaG9GRExmLXlUeXFNLUwtSGRfT2JXSkNTS0xVa2trZkptUlNteUpaQkc5N095cTRudGxhMXVKX05WQ2hOOGgyUTJsN0Y1d1htV3hzUmFqVENEaUg5cC1RYWVxU2xV?oc=5",
       "pubDate": "2026-10-28T09:14:38.000Z",
@@ -296,6 +366,13 @@
       "source": "Reuters"
     },
     {
+      "title": "Dollar falls after Fed holds rates steady",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOd1Bmb3hwMXBlY196NUl2TU1lMURBZWZGMUJjNG50SXVMQzRTa3NtUnJINDRvWUt2OHc1UVRqWEJuUEdmcXVTVUozd0s4T21BaG5XQkIyd3ZhQlYtX1dXaW5Yckp1VGdtMlFWNUJvRjA2UkZScTZyb1VOOVQ5UjktUkpwYXV0Y1FjWk0xelRiRS1jOThBd0w4dUt4QkcteElzYmRB0gGoAUFVX3lxTE1kd01VX0poRkdFblJ4Y1FCYXVOSV9PcmpnSVJZR1FSSllmMHlBRTVWOVM5ZkxDOS1sMVIwajBtTERXb0MzMGlnZEtPeENHNkw0bHVwX0tTUllEeVh6M1hHdi14YVVJZFFhU2cycE9yTExKRTlSQ3JiYndCbHROWk9pNGwwYjdjZ3BhckppMHAyWUdINTRQaXR3VlNYZ2wzalVOZV8weTg1Rg?oc=5",
+      "pubDate": "2026-10-28T02:50:00.000Z",
+      "description": "Dollar falls after Fed holds rates steady&nbsp;&nbsp;CNBC",
+      "source": "Google News"
+    },
+    {
       "title": "Stocks get AI lift, dollar holds steady ahead of Fed decision",
       "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQZl9HX1lrU1RCazV4ZHJxc1o3YkwyUXcyWmtXUVZwUjE1X2ZWQ0tCY3hkckptWlRUbVJ5RVB4ZUd3bUtxdktMVXpsSnU2MDlzVmQ0TDhWU0ZyeE1FN1dDSzBFckpNbm1OZVJjWHRZeE1mN1RPOUJXME1UcFNpQVhmSkVRbw?oc=5",
       "pubDate": "2026-10-28T01:40:00.000Z",
@@ -303,11 +380,11 @@
       "source": "Reuters"
     },
     {
-      "title": "Dollar falls after Fed holds rates steady",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQRE96SkVILWZEWGsxdTRORUJsWlJ4YmNlclNadUxmdGpHRlNONHllVDY5eTBiZHBsbndwSEtBeDI0STFqdDhsNUxLVVhhVmZrWFdGUVFCaDNGd25VVENDcDdmT1ZUMHFFRWN2enRXeXk1ZUNfNHp5OE8wam94MktvQlNzazVNRG1Ed2lXYTFMVjNCY2JPckJRWlIyQ2ZvVzVqOEsw?oc=5",
-      "pubDate": "2026-10-28T00:22:00.000Z",
-      "description": "Dollar falls after Fed holds rates steady&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
+      "title": "WSJ Dollar Index Rises 0.19% to 97.30",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNRzVWR1BnSkR6TXdyQ3hqNERmZnhYX28zT2JGSm4wcjFvMkd0dnVTdGItYlZTZXpVZEdXTUV6N0oyTGFKN1JfdzN5ZDNaYmNBMnFTZlNyd0lpSmpFaHppRGZ0MGsxQmVhbHVISGhBYWhDRDJvWGJKY2IwazZGcUg0X1BmU1ZoMWhwWFRtbnNvSXgtbzJHR0dXcHI0WVYxVHRlOWFBU2tsOVdUTUU?oc=5",
+      "pubDate": "2026-10-27T21:45:00.000Z",
+      "description": "WSJ Dollar Index Rises 0.19% to 97.30&nbsp;&nbsp;WSJ",
+      "source": "Google News"
     },
     {
       "title": "Dollar rises as markets eye central bank meetings",
@@ -324,67 +401,11 @@
       "source": "Reuters"
     },
     {
-      "title": "Indian lenders defer dollar debt sale plan as rates turn expensive",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPNkUzLUJyemVRc210QnRiclNlc2ZuMFJNLUZ2WmxjTWZiY19rdDNSd25xdW1NUE1zUmdIYnhoQ19pQ2thT0J4RktZaWc2UDRqRUhCQ2w2cjZYRzFFOEZmWF93X19zNm9wMlNnYmQydlE1Qlc1WjNDbkRIV2FHRDk3WEJOM2dHS1pfOFB0MXl4NXJhZExJVWJDRFM1QmNhVVJNZGZRajlOU3ctWFRnZ3lLcg?oc=5",
-      "pubDate": "2026-10-27T14:55:45.000Z",
-      "description": "Indian lenders defer dollar debt sale plan as rates turn expensive&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Gold smuggling funds Islamic State-linked insurgency in eastern Congo, report says",
-      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNMnhvbmdWV1pFaFhQNzVCM0JidlBvYTVSd2ppOENPdjVxT2tYcFA2c1ZjR2FIQ0I5VGtVUmo1SHBXWGJtRFhSXzdWd0Q0bjFLU0ZhdUxzb0pGSWRINFZYWUxmWFhERV9GMHA5SXN5WDQ5WVhPTHVVNmVfU2U3RDJJTC1WYVBFRGx3ZHVHMW41SnpsR0hkVGhUYkF0UGdfV0JsSVFBYUpsMDR5ZnNRV29Lb0h6bEthakZXSHpULURjZk1VNllvRWc?oc=5",
-      "pubDate": "2026-10-27T13:51:45.000Z",
-      "description": "Gold smuggling funds Islamic State-linked insurgency in eastern Congo, report says&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "POLL Strong dollar, high yields drag on gold outlook, but central-bank demand lends support",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNY2N0dGg4Q1VsMUJXaTJYb1J4cjJiQjRGYS16djR0Nnh5VGVsQmFRZXctU0w3UUpfclljaFp4ZW5DVFZTLVYzTUlSWDY5Q0JsQ0JLYjF5aFJoVDBpOGhrWnkxdEZKdUtpQzNPc1kxRGdGRkdTZENtM25LLUNYNTdlMjNnMHdUcU52VVlFTkNXRUJKMDFhWEhFalptcGZvQ0FZeUl1UHF5T3Z2UmpWOUR6ekJmMnlHblRWQU1MUzFUaXZiUzA?oc=5",
-      "pubDate": "2026-10-27T13:30:00.000Z",
-      "description": "POLL Strong dollar, high yields drag on gold outlook, but central-bank demand lends support&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "Ripple strikes deal with Robinhood to expand its RLUSD digital dollar",
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQUlfcU81TlRraU5RM1FpVW9ySkZFN2pQREsxRkJQUkJYbmg1dU5NOUVMLWkxNE1KTzlvRjFuakhvSEQ4Vllzc3IxYmZmWm9wN0Ezb0Jva0lKVWpqTk5SUTNUbmpVWl9zTWZnbmxtRjhacGVEODlaenluQ1lJdUpNQWw0cVh5MEVaQWFMMU5tUVRlbnRhakFiWXhFcHptbk9IX2NfSXhNZTlsd9IBrwFBVV95cUxNOHZVNlJUaVJXeEtXR1E1NEhHNUNFQ09xdEFzNFFoVi15WkdLVHFQVnpMZzBTQ0txcGljQk1US0FFQTNOWEN4WDBWZlN6eWE0M013clpXOTZXMnN0UXhFMzVRODR5UEEwdkgwYXgzY3R4ODBkWkppQ2VrS1hzTGlHd2Y5YnlkcVNTTkhZYk5BSUw1Sngwd3RZNVlHU0ttRk9CYm1tVEV1X01HMmo4ODhZ?oc=5",
       "pubDate": "2026-10-27T13:15:03.000Z",
       "description": "Ripple strikes deal with Robinhood to expand its RLUSD digital dollar&nbsp;&nbsp;CNBC",
       "source": "Google News"
-    },
-    {
-      "title": "Pound near 17-month high on euro a day ahead of British budget",
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNbmxNV194R2tBS0VVOXpUdVNmUExKMVgyejF4V1M3ZXZxRWsxX2VaVVY2eXpoeU1CZ1JDOFpES2xMXzRObVlvS3VwZnR0TGNIeTJkYUFQWnEtczJuZTk4X3FVZ0ZFaW40REM1b0M4LW5VVEVEb2tGd2kzYmpTRDd1bzhqbzM5a0lTYlg0TXZaTnM1WWNWOHgwcXV2RFFQbmdJ?oc=5",
-      "pubDate": "2026-10-27T12:17:46.000Z",
-      "description": "Pound near 17-month high on euro a day ahead of British budget&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Euro zone extends deadline for bids to replace ECB's Schnabel",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQd1UyT2gwRzU2UWNMcWZHVTFCcXdjMmNsRU1uVVlUbXVBWk5sZldQbWoyaktzdW9xajg4dDZORFE2NjFmVklxSU5fbGV4anl6dEJzR0dHQllDa0VTWk5TT3o4U0dYOE4tM1E3RlJlTEhxQmxsd2E4bVA3NF9tNjNoeEVDR09zR2Z6ek9vMU96SDl3Qml3XzNORnZYWW91WVB4ZEVjcXBYNm9xUQ?oc=5",
-      "pubDate": "2026-10-27T11:21:46.000Z",
-      "description": "Euro zone extends deadline for bids to replace ECB's Schnabel&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "TSX futures muted as gold weakness offsets oil gains",
-      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNUzZJNFkxOG5qbnV3cmp6eHhXQmlCNkgzakNXUzBBT1RxczN6T3NnN2UwMlBUcjRGWVFHcUVYMTFPUjdWRkdDd2xWNjRIVDNnWFNLeFlUc0FlYUJOU0RHdmZYb2pPTXNKUTdTSkVOa2Y3ZGlQcmwwTl8zd2gyUzJ2bXQ1YlFQTGpxc1RleEJDZlpYbnYwVVNrQkVn?oc=5",
-      "pubDate": "2026-10-27T10:48:12.000Z",
-      "description": "TSX futures muted as gold weakness offsets oil gains&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Euro zone lending holds up even as banks tighten access",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOSTVRX3RFXzBXNURmRTI5VjlMOGVEM3VZaW5sM3RKeGtvcXNONWVzMjBiWG1NdldLdmpMalVyTjNOUmlkWnhXZEprVE9zRnIwUkRSbHo3bTRXb3B6WHQ1WDJwLU9QYWVjcVJmWHZIUjJ1dnZpeDdfQWttZVo1QnZ4djhDakE3dHBsLUhKZTlDOWpaTUNvMDVuX1pFMU1xd2JubGh3YlM1a2huQQ?oc=5",
-      "pubDate": "2026-10-27T10:09:30.000Z",
-      "description": "Euro zone lending holds up even as banks tighten access&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Euro zone mortgage demand falls as rates rise, ECB survey shows",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNeDN5b2ZWSHU5c0ZoTHhWNXR4ekdKZDJVeXdYZjlDcDRzVDYyakRURVVPRTlHU3Z0MFBfc0E5RWNTME1HRmhvSHA5X0ZoVHExbVNhLUFIY3VJazctT2FPdVdrQThUd3ZETnpYQ05kbzViX3h1MFpjR25rOVhPOEJlODVzZXBvSW9MT3hoem9VYWZHQjFyNENVSUEwakxZV0JJZGtNM2tidG8weFZ5Sm1XbHRB?oc=5",
-      "pubDate": "2026-10-27T09:06:09.000Z",
-      "description": "Euro zone mortgage demand falls as rates rise, ECB survey shows&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "Japan Vows to Fortify Cyber Defenses as GMO Hack Hits Forex Brokers",
@@ -443,17 +464,24 @@
       "source": "Google News"
     },
     {
-      "title": "Soybeans Hit 2-Month Low as Lula’s Win Lifts China Trade Outlook - Bloomberg",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOZ0dXZW51Tlp0SEJNc0ZJaEpHX3JWcE9tbUVhOHQ3Y2xlNko1X0RDVkxVc2xMc2RjYVc5NUt0OHJQeXBOeF9NT1J3V2N2RXFvcG5Mb3RTNzRxVDhvWHhibUVJUG9RdDFselg4emFuNVcwcUNOc2tJNldZMXcxLXFPY3RGbUx2Y3FFT2tEOHcxR1hJVFdtMl9kNl9mVk5yVl9LWUNWel95bkFDMXR2aUYxcDhBQnJjQQ?oc=5",
-      "pubDate": "2026-10-26T15:30:57.000Z",
-      "description": "Soybeans Hit 2-Month Low as Lula’s Win Lifts China Trade Outlook&nbsp;&nbsp;Bloomberg",
+      "title": "WSJ Dollar Index Rises 0.29% to 97.12",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNNW9ucE1Dc3psWlMzeHhkWVJLb215blhzQWt1c295S1hhSWhVOE4xMGZUalJXSEFFR0VNMnBIRmRRdjliLUhJbWVWc1VaTXEwVlRZVU5xaGRiaGZyTjFlVFBob1dJbFBMRV9CY043Y2lRaHBSZEpqOUtBRWZLZEU1U2tBXzBBcHhnMHJzd0VJd0Z5UklxZEhjZU9R?oc=5",
+      "pubDate": "2026-10-26T21:25:00.000Z",
+      "description": "WSJ Dollar Index Rises 0.29% to 97.12&nbsp;&nbsp;WSJ",
       "source": "Google News"
     },
     {
-      "title": "Asia Pays Top Dollar For Canadian Oil Amid Slump in US Prices - Bloomberg",
+      "title": "Soybeans Hit 2-Month Low as Lula’s Win Lifts China Trade Outlook",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOZ0dXZW51Tlp0SEJNc0ZJaEpHX3JWcE9tbUVhOHQ3Y2xlNko1X0RDVkxVc2xMc2RjYVc5NUt0OHJQeXBOeF9NT1J3V2N2RXFvcG5Mb3RTNzRxVDhvWHhibUVJUG9RdDFselg4emFuNVcwcUNOc2tJNldZMXcxLXFPY3RGbUx2Y3FFT2tEOHcxR1hJVFdtMl9kNl9mVk5yVl9LWUNWel95bkFDMXR2aUYxcDhBQnJjQQ?oc=5",
+      "pubDate": "2026-10-26T15:30:57.000Z",
+      "description": "Soybeans Hit 2-Month Low as Lula’s Win Lifts China Trade Outlook&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "Asia Pays Top Dollar For Canadian Oil Amid Slump in US Prices",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNMmJEa3dfZmpEQ01INTFaRGpmLS00bVZ5NHZ0RTBucWZadGVFbWlJVUE2YmRNUm5nQ082SkZaUllQSUpzUDF4OUFnUXhuV1RJRHl4QXhYZW5jb3NrRUQzMEpFbFF4T2o0WFVkc2Y0eEoyQXFZZlVLeXNlc0h3TlJyWVUxSjhxVm05MG9xUXQtakVVMW5PcHZLNkhrWjRmeWVnUHlnQlJnMmdhNWUyU01NYjVR?oc=5",
       "pubDate": "2026-10-26T10:30:00.000Z",
-      "description": "Asia Pays Top Dollar For Canadian Oil Amid Slump in US Prices&nbsp;&nbsp;Bloomberg",
+      "description": "Asia Pays Top Dollar For Canadian Oil Amid Slump in US Prices&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
     },
     {
@@ -469,13 +497,6 @@
       "pubDate": "2026-10-26T09:00:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
-    },
-    {
-      "title": "Yen Haven Revived as Euro-Yen Bears Eye Move Below 175, BI Says",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNQTZXdDVleEhfRGJhdllReVo0UTJyQk1nMUlSNE5wRHV1aGs5cTN3LVJJY1NMOHRROGtSQmYtbUVGY2VOUWs5SnpzS0pBdUtiMWdXWXFoak9EeG14THRVc3Rrb1RUYU1GMERVUVBscHlLZ1ExRmp1X0dWbm15VC0xaG1fM09TMWp1ZFQxM0NCSUczUVVFaHBOTk0xRzNrX3otaHlFaldyUXl5U0dscWxKT2RyQQ?oc=5",
-      "pubDate": "2026-10-26T07:28:18.000Z",
-      "description": "Yen Haven Revived as Euro-Yen Bears Eye Move Below 175, BI Says&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
     },
     {
       "title": "Frank Elderson: Taking action for nature – investing in economic resilience and prosperity",
@@ -534,17 +555,10 @@
       "source": "Google News"
     },
     {
-      "title": "Rupee Rally Faces Limits From India’s Oil and Dollar Problem: INR/USD",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQOXlMbjVyOEE3WDZqc0ZqcE9hek4xWTRmTWRzZmFZbGZVX2g2bHV6dUpub1owS0FFS29FUElzeURodE9VN0gxNHVPc3c5bWFhaTNycTlNZmhIRnVKNzZwTkd0LTNXZGFrbkZRdFhIQThDTU1ycUJLcXNidEpZeXRZYzNweVF1bHZ6WWtrNVFySXV6MElYT3FveC05allSQTFjVjJHMFdxWHdSdG0wUHpERg?oc=5",
-      "pubDate": "2026-10-23T03:23:00.000Z",
-      "description": "Rupee Rally Faces Limits From India’s Oil and Dollar Problem: INR/USD&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
-      "title": "Yen Jumps as Traders Seek Safety Amid Global Flight From Risk",
+      "title": "Yen Jumps as Traders Seek Safety Amid Global Flight From Risk - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNNzhiRVUtTkNvb0FhSnFXZkF4NUhicFRqQU91UGhuS21xVXA5SDBjWFZybVpOVUFvX3pwQjJPeVJIanNBTlg5RWw4d1JoeDhjcEZWRjdJVldPWWt4UWQzVURJczQxdWg5RHNpU0JYd2QwNHhZYkVQNXRXcWRQY0ZKakc5ZGh6NmNwck53NzNWbm00eGtMMl9LX0lPV3haVUFwV1ZNb0dTQ2ZWcE0?oc=5",
       "pubDate": "2026-10-22T23:35:44.000Z",
-      "description": "Yen Jumps as Traders Seek Safety Amid Global Flight From Risk&nbsp;&nbsp;Bloomberg.com",
+      "description": "Yen Jumps as Traders Seek Safety Amid Global Flight From Risk&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
     },
     {
@@ -623,20 +637,6 @@
       "pubDate": "2026-10-21T23:50:00.000Z",
       "description": "",
       "source": "Bank of Japan"
-    },
-    {
-      "title": "Piero Cipollone: Pontes and Appia: unlocking opportunities for banks",
-      "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261021_1~d190f2c349.en.pdf",
-      "pubDate": "2026-10-21T08:00:00.000Z",
-      "description": "",
-      "source": "European Central Bank"
-    },
-    {
-      "title": "2026-10-21 - Data portal - Economic data, October 2026",
-      "link": "https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/10/statpub_news_20261021_b",
-      "pubDate": "2026-10-21T07:00:00.000Z",
-      "description": "",
-      "source": "Swiss National Bank"
     },
     {
       "title": "Federal Reserve Board announces termination of enforcement actions with Gardner Bancshares, Inc. and Small Business Bank",

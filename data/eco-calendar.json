@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-29T08:50:57.919Z",
+  "timestamp": "2026-10-29T15:38:06.896Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -10610,7 +10610,7 @@
       "impact": "Low",
       "forecast": "6.2%",
       "previous": "6.2%",
-      "actual": ""
+      "actual": "6.3%"
     },
     {
       "title": "M4 Money Supply m/m",
@@ -10619,7 +10619,7 @@
       "impact": "Low",
       "forecast": "0.3%",
       "previous": "0.4%",
-      "actual": ""
+      "actual": "0.1%"
     },
     {
       "title": "Mortgage Approvals",
@@ -10628,7 +10628,7 @@
       "impact": "Low",
       "forecast": "54K",
       "previous": "55K",
-      "actual": ""
+      "actual": "53K"
     },
     {
       "title": "Net Lending to Individuals m/m",
@@ -10637,16 +10637,16 @@
       "impact": "Low",
       "forecast": "6.2B",
       "previous": "6.9B",
-      "actual": ""
+      "actual": "5.8B"
     },
     {
       "title": "Italian 10-y Bond Auction",
       "country": "EUR",
-      "date": "2026-10-29T05:33:00-04:00",
+      "date": "2026-10-29T06:08:00-04:00",
       "impact": "Low",
       "forecast": "",
       "previous": "4.58|1.6",
-      "actual": ""
+      "actual": "4.49|1.6"
     },
     {
       "title": "Advance GDP q/q",
@@ -10655,7 +10655,7 @@
       "impact": "High",
       "forecast": "3.2%",
       "previous": "1.5%",
-      "actual": ""
+      "actual": "3.4%"
     },
     {
       "title": "Core PCE Price Index m/m",
@@ -10664,7 +10664,7 @@
       "impact": "High",
       "forecast": "0.3%",
       "previous": "0.2%",
-      "actual": ""
+      "actual": "0.3%"
     },
     {
       "title": "Advance GDP Price Index q/q",
@@ -10673,7 +10673,7 @@
       "impact": "Medium",
       "forecast": "3.2%",
       "previous": "6.2%",
-      "actual": ""
+      "actual": "2.3%"
     },
     {
       "title": "Unemployment Claims",
@@ -10682,7 +10682,7 @@
       "impact": "Medium",
       "forecast": "198K",
       "previous": "194K",
-      "actual": ""
+      "actual": "194K"
     },
     {
       "title": "Personal Income m/m",
@@ -10691,7 +10691,7 @@
       "impact": "Low",
       "forecast": "0.3%",
       "previous": "0.2%",
-      "actual": ""
+      "actual": "0.2%"
     },
     {
       "title": "Personal Spending m/m",
@@ -10700,7 +10700,7 @@
       "impact": "Low",
       "forecast": "0.6%",
       "previous": "0.9%",
-      "actual": ""
+      "actual": "0.5%"
     },
     {
       "title": "Gov Council Member Gravelle Speaks",
@@ -10718,7 +10718,7 @@
       "impact": "High",
       "forecast": "2.65%",
       "previous": "2.65%",
-      "actual": ""
+      "actual": "2.65%"
     },
     {
       "title": "Monetary Policy Statement",
@@ -10745,7 +10745,7 @@
       "impact": "Low",
       "forecast": "75B",
       "previous": "77B",
-      "actual": ""
+      "actual": "80B"
     },
     {
       "title": "Gov Council Member Vincent Speaks",
