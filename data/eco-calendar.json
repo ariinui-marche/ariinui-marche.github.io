@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-30T11:37:47.661Z",
+  "timestamp": "2026-10-30T17:09:08.485Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -10907,7 +10907,7 @@
       "impact": "Medium",
       "forecast": "0.1%",
       "previous": "0.6%",
-      "actual": ""
+      "actual": "-0.2%"
     },
     {
       "title": "French Prelim CPI m/m",
@@ -11015,7 +11015,7 @@
       "impact": "Medium",
       "forecast": "0.2%",
       "previous": "0.0%",
-      "actual": ""
+      "actual": "0.0%"
     },
     {
       "title": "Employment Cost Index q/q",
@@ -11024,7 +11024,7 @@
       "impact": "Medium",
       "forecast": "0.8%",
       "previous": "0.9%",
-      "actual": ""
+      "actual": "0.8%"
     },
     {
       "title": "Chicago PMI",
@@ -11033,7 +11033,7 @@
       "impact": "Low",
       "forecast": "55.8",
       "previous": "58.8",
-      "actual": ""
+      "actual": "55.3"
     },
     {
       "title": "FOMC Member Daly Speaks",
