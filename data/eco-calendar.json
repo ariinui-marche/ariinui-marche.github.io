@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-30T00:11:45.886Z",
+  "timestamp": "2026-10-30T05:42:07.747Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -10808,7 +10808,7 @@
       "impact": "Low",
       "forecast": "1.0%",
       "previous": "1.3%",
-      "actual": ""
+      "actual": "1.1%"
     },
     {
       "title": "Private Sector Credit m/m",
@@ -10817,21 +10817,21 @@
       "impact": "Low",
       "forecast": "0.5%",
       "previous": "0.6%",
-      "actual": ""
+      "actual": "0.6%"
     },
     {
       "title": "BOJ Policy Rate",
       "country": "JPY",
-      "date": "2026-10-29T22:30:00-04:00",
+      "date": "2026-10-29T23:02:00-04:00",
       "impact": "High",
       "forecast": "<1.25%",
       "previous": "<1.25%",
-      "actual": ""
+      "actual": "1.25%"
     },
     {
       "title": "Monetary Policy Statement",
       "country": "JPY",
-      "date": "2026-10-29T22:30:00-04:00",
+      "date": "2026-10-29T23:02:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -10840,7 +10840,7 @@
     {
       "title": "BOJ Outlook Report",
       "country": "JPY",
-      "date": "2026-10-29T22:31:00-04:00",
+      "date": "2026-10-29T23:02:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -10853,7 +10853,7 @@
       "impact": "Low",
       "forecast": "2.7%",
       "previous": "6.1%",
-      "actual": ""
+      "actual": "-2.7%"
     },
     {
       "title": "BOJ Press Conference",
