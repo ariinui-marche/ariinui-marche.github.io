@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-30T05:42:07.747Z",
+  "timestamp": "2026-10-30T11:37:47.661Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -10858,7 +10858,7 @@
     {
       "title": "BOJ Press Conference",
       "country": "JPY",
-      "date": "2026-10-30T01:30:00-04:00",
+      "date": "2026-10-30T02:30:00-04:00",
       "impact": "High",
       "forecast": "",
       "previous": "",
@@ -10871,7 +10871,7 @@
       "impact": "Low",
       "forecast": "0.1%",
       "previous": "-0.5%",
-      "actual": ""
+      "actual": "-0.5%"
     },
     {
       "title": "French Flash GDP q/q",
@@ -10880,7 +10880,7 @@
       "impact": "Low",
       "forecast": "0.1%",
       "previous": "0.2%",
-      "actual": ""
+      "actual": "-0.1%"
     },
     {
       "title": "German Import Prices m/m",
@@ -10889,7 +10889,7 @@
       "impact": "Low",
       "forecast": "1.9%",
       "previous": "1.0%",
-      "actual": ""
+      "actual": "2.1%"
     },
     {
       "title": "Nationwide HPI m/m",
@@ -10898,7 +10898,7 @@
       "impact": "Low",
       "forecast": "-0.2%",
       "previous": "-0.2%",
-      "actual": ""
+      "actual": "0.0%"
     },
     {
       "title": "German Prelim CPI m/m",
@@ -10916,7 +10916,7 @@
       "impact": "Low",
       "forecast": "0.2%",
       "previous": "-0.3%",
-      "actual": ""
+      "actual": "0.4%"
     },
     {
       "title": "French Prelim Private Payrolls q/q",
@@ -10925,7 +10925,7 @@
       "impact": "Low",
       "forecast": "-0.1%",
       "previous": "-0.1%",
-      "actual": ""
+      "actual": "-0.1%"
     },
     {
       "title": "KOF Economic Barometer",
@@ -10934,7 +10934,7 @@
       "impact": "Low",
       "forecast": "108.1",
       "previous": "109.1",
-      "actual": ""
+      "actual": "107.6"
     },
     {
       "title": "Spanish Flash CPI y/y",
@@ -10943,7 +10943,7 @@
       "impact": "Low",
       "forecast": "4.9%",
       "previous": "4.9%",
-      "actual": ""
+      "actual": "4.9%"
     },
     {
       "title": "Spanish Flash GDP q/q",
@@ -10952,7 +10952,7 @@
       "impact": "Low",
       "forecast": "0.6%",
       "previous": "0.7%",
-      "actual": ""
+      "actual": "0.6%"
     },
     {
       "title": "German Unemployment Change",
@@ -10961,7 +10961,7 @@
       "impact": "Low",
       "forecast": "5K",
       "previous": "12K",
-      "actual": ""
+      "actual": "4K"
     },
     {
       "title": "German Prelim GDP q/q",
@@ -10970,7 +10970,7 @@
       "impact": "Medium",
       "forecast": "0.1%",
       "previous": "0.2%",
-      "actual": ""
+      "actual": "0.2%"
     },
     {
       "title": "Italian Prelim GDP q/q",
@@ -10979,7 +10979,7 @@
       "impact": "Low",
       "forecast": "0.1%",
       "previous": "0.2%",
-      "actual": ""
+      "actual": "0.0%"
     },
     {
       "title": "Italian Prelim CPI m/m",
@@ -10988,7 +10988,7 @@
       "impact": "Low",
       "forecast": "0.1%",
       "previous": "0.7%",
-      "actual": ""
+      "actual": "0.9%"
     },
     {
       "title": "Prelim Flash GDP q/q",
@@ -10997,7 +10997,7 @@
       "impact": "Low",
       "forecast": "0.2%",
       "previous": "0.4%",
-      "actual": ""
+      "actual": "0.4%"
     },
     {
       "title": "Unemployment Rate",
@@ -11006,7 +11006,7 @@
       "impact": "Low",
       "forecast": "6.4%",
       "previous": "6.4%",
-      "actual": ""
+      "actual": "6.5%"
     },
     {
       "title": "GDP m/m",
