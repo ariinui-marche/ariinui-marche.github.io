@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-31T00:55:56.006Z",
+  "timestamp": "2026-10-31T06:28:21.182Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -11069,7 +11069,7 @@
       "impact": "Low",
       "forecast": "49.9",
       "previous": "50.1",
-      "actual": ""
+      "actual": "49.3"
     },
     {
       "title": "Non-Manufacturing PMI",
@@ -11078,7 +11078,7 @@
       "impact": "Low",
       "forecast": "50.0",
       "previous": "50.2",
-      "actual": ""
+      "actual": "49.7"
     },
     {
       "title": "ISM Manufacturing PMI",
