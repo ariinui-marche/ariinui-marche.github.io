@@ -13,7 +13,41 @@ function yahooSymbol(id) {
   return `${id}=X`;
 }
 
+// Forex : les bougies Daily Yahoo ont un corps quasi nul. On reconstruit de vraies
+// bougies Daily depuis les barres 1h, avec la coupure FX standard 17h New York.
+const NY = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hourCycle: 'h23',
+  year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit' });
+function fxDayKey(tsSec) {
+  const p = Object.fromEntries(NY.formatToParts(new Date(tsSec * 1000)).map((x) => [x.type, x.value]));
+  // heure NY + 7h -> la journée FX bascule à 17h NY
+  return Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour + 7) / 1000;
+}
+
+async function fetchForex(id) {
+  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(yahooSymbol(id))}?range=3mo&interval=1h`;
+  const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const r = (await res.json()).chart.result[0];
+  const q = r.indicators.quote[0];
+  const days = new Map();
+  r.timestamp.forEach((t, i) => {
+    const o = q.open[i], h = q.high[i], l = q.low[i], c = q.close[i];
+    if ([o, h, l, c].some((v) => v == null)) return;
+    const k = Math.floor(fxDayKey(t) / 86400) * 86400;
+    const d = days.get(k);
+    if (!d) days.set(k, [k, o, h, l, c]);
+    else { d[2] = Math.max(d[2], h); d[3] = Math.min(d[3], l); d[4] = c; }
+  });
+  const all = [...days.values()].sort((a, b) => a[0] - b[0]);
+  // Écarte les micro-bougies de week-end (quelques ticks, amplitude quasi nulle)
+  const ranges = all.map((d) => d[2] - d[3]).sort((a, b) => a - b);
+  const med = ranges[Math.floor(ranges.length / 2)] || 0;
+  return all.filter((d) => d[2] - d[3] >= med * 0.1)
+    .map((d) => d.map((v, i) => (i ? +v.toPrecision(7) : v))).slice(-40);
+}
+
 async function fetchOne(id) {
+  if (!['XAUUSD', 'BTCUSD', 'ETHUSD'].includes(id)) return fetchForex(id);
   const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(yahooSymbol(id))}?range=3mo&interval=1d`;
   const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
