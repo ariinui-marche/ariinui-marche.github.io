@@ -148,6 +148,10 @@ main {
    64px hors du cadre, l'échelle de droite est rognée (overflow hidden) */
 .cd-detail .chart-block:first-child .tv-chart-widget { overflow: hidden; }
 .cd-detail .chart-block:first-child .tradingview-widget-container { width: calc(100% + 64px) !important; }
+/* Bas du graphique (axe du temps + logo intégré) rogné de 30px ; la mention
+   « by TradingView » reste visible sous le graphique */
+.cd-detail .chart-block:first-child .tradingview-widget-container__widget { overflow: hidden; }
+.cd-detail .chart-block:first-child .tradingview-widget-container__widget iframe { height: calc(100% + 30px) !important; }
 @media (max-width: 480px) { .cd-svg { height: 200px; } .cd-detail .chart-block:first-child .tv-chart-widget { height: 232px; } }
 
 
