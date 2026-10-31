@@ -144,6 +144,10 @@ main {
 /* Daily TradingView = même dimension que le graphique SVG de la liste */
 .cd-detail .chart-block:first-child .tv-chart-widget { height: 272px; margin: 0 -16px; } /* 240 + 32px de mention TradingView */
 .cd-detail .chart-block:first-child .chart-block-label { display: none; }
+/* Pas d'option « masquer l'échelle de prix » dans le widget : on pousse le widget
+   64px hors du cadre, l'échelle de droite est rognée (overflow hidden) */
+.cd-detail .chart-block:first-child .tv-chart-widget { overflow: hidden; }
+.cd-detail .chart-block:first-child .tradingview-widget-container { width: calc(100% + 64px) !important; }
 @media (max-width: 480px) { .cd-svg { height: 200px; } .cd-detail .chart-block:first-child .tv-chart-widget { height: 232px; } }
 
 
