@@ -543,7 +543,11 @@ function chartsSvg(series) {
   const y = (v) => (PAD + (1 - (v - lo) / rng) * (H - 2 * PAD)).toFixed(1);
   const step = (W - 2 * PAD) / closed.length;
   const bw = Math.max(2, step * 0.72);
-  return `<svg class="cd-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">` +
+  // 50 % de la bougie d'hier (milieu haut/bas de la dernière bougie clôturée)
+  const last = closed[closed.length - 1];
+  const yMid = y((last[2] + last[3]) / 2);
+  const mid = `<line x1="0" x2="${W}" y1="${yMid}" y2="${yMid}" stroke="#ffd600" stroke-width="1.5" stroke-dasharray="2 5" stroke-linecap="round" vector-effect="non-scaling-stroke"/>`;
+  return `<svg class="cd-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">` + mid +
     closed.map((c, i) => {
       const x = PAD + step * (i + 0.5);
       const up = c[4] >= c[1];
