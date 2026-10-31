@@ -596,7 +596,9 @@ function chartsOpenDetail(id) {
     script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
     script.text = JSON.stringify({
       allow_symbol_change: false, calendar: false, details: false, hide_side_toolbar: true,
-      hide_top_toolbar: false, hide_legend: false, hide_volume: true, hotlist: false,
+      hide_top_toolbar: i === 0, hide_legend: i === 0, hide_volume: true, hotlist: false,
+      // Daily : graphique nu (ni barre du haut, ni légende, ni volume), comme la miniature SVG
+      disabled_features: ['volume_force_overlay', 'create_volume_indicator_by_default'],
       interval: CHART_TIMEFRAMES[i].interval, locale: 'en', save_image: false, style: '1',
       symbol, theme: 'dark', timezone: 'Etc/UTC', backgroundColor: '#0F0F0F',
       gridColor: 'rgba(242, 242, 242, 0.2)', watchlist: [], withdateranges: false,
