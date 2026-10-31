@@ -490,8 +490,6 @@ function tvSymbolFor(id) {
 
 const CHART_TIMEFRAMES = [
   { interval: 'D', label: 'Daily' },
-  { interval: '240', label: '4H' },
-  { interval: '60', label: '1H' },
 ];
 
 function chartBlockHtml(symbol, label) {
