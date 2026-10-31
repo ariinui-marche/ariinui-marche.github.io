@@ -494,31 +494,6 @@ const CHART_TIMEFRAMES = [
   { interval: '60', label: '1H' },
 ];
 
-let chartsSelectedPair = null;
-let chartsShowAllPairs = false;
-
-function chartsPickerHtml() {
-  const visible = chartsShowAllPairs ? CORR_ALL_PAIRS : CORR_ALL_PAIRS.slice(0, CORR_DEFAULT_COUNT);
-  const chips = visible.map((p) => {
-    const isSel = chartsSelectedPair === p.id;
-    const cls = ['corr-chip', isSel ? 'corr-chip-selected' : ''].filter(Boolean).join(' ');
-    return `<button type="button" class="${cls}" data-pair="${p.id}">
-      <span class="corr-chip-label">${p.label}</span>
-      <span class="corr-chip-cat">${p.category}</span>
-    </button>`;
-  }).join('');
-
-  return `
-    <div class="corr-picker-grid">${chips}</div>
-    <button type="button" id="chartsShowMoreBtn" class="corr-showmore">
-      ${chartsShowAllPairs ? '▲ Hide extra pairs' : `▼ Show ${CORR_ALL_PAIRS.length - CORR_DEFAULT_COUNT} more pairs (crosses & minors)`}
-    </button>`;
-}
-
-function chartsRenderPicker() {
-  document.getElementById('chartsPicker').innerHTML = chartsPickerHtml();
-}
-
 function chartBlockHtml(symbol, label) {
   const symbolPath = symbol.replace(':', '-');
   return `
@@ -533,72 +508,131 @@ function chartBlockHtml(symbol, label) {
     </div>`;
 }
 
-function renderCharts() {
-  const grid = document.getElementById('chartsGrid');
-  if (!chartsSelectedPair) {
-    grid.innerHTML = '';
+// Liste unique, une colonne : nom du symbole + bougies Daily dessinées en SVG
+// (données data/daily-candles.json, mises à jour par GitHub Actions). Triées à
+// l'ouverture du panneau : 2 dernières bougies clôturées (hier + avant-hier)
+// haussières → baissières → autres. Un clic ouvre les graphiques TradingView.
+
+let chartsSelectedPair = null;
+let chartsCandles = null;
+
+function chartsClosed(series) {
+  // Bougies clôturées = date UTC strictement avant aujourd'hui (la bougie du jour est en formation)
+  const todayStart = Math.floor(Date.now() / 86400000) * 86400;
+  return series.filter((c) => c[0] < todayStart);
+}
+
+function chartsScore(id) {
+  const closed = chartsClosed(chartsCandles[id] || []);
+  if (closed.length < 2) return { group: 2, move: 0 };
+  const a = closed[closed.length - 2];
+  const b = closed[closed.length - 1];
+  const bull = (c) => c[4] > c[1];
+  const bear = (c) => c[4] < c[1];
+  const group = bull(a) && bull(b) ? 0 : bear(a) && bear(b) ? 1 : 2;
+  return { group, move: Math.abs((b[4] - a[1]) / a[1]) };
+}
+
+function chartsSvg(series) {
+  const closed = chartsClosed(series).slice(-30);
+  if (!closed.length) return '';
+  const W = 600, H = 240, PAD = 8;
+  const hi = Math.max(...closed.map((c) => c[2]));
+  const lo = Math.min(...closed.map((c) => c[3]));
+  const rng = hi - lo || 1;
+  const y = (v) => (PAD + (1 - (v - lo) / rng) * (H - 2 * PAD)).toFixed(1);
+  const step = (W - 2 * PAD) / closed.length;
+  const bw = Math.max(2, step * 0.72);
+  return `<svg class="cd-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">` +
+    closed.map((c, i) => {
+      const x = PAD + step * (i + 0.5);
+      const up = c[4] >= c[1];
+      const col = up ? '#26a69a' : '#ef5350';
+      const top = y(Math.max(c[1], c[4]));
+      const h = Math.max(1, Math.abs(y(c[1]) - y(c[4])));
+      return `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${y(c[2])}" y2="${y(c[3])}" stroke="${col}" stroke-width="1.4"/>` +
+        `<rect x="${(x - bw / 2).toFixed(1)}" y="${top}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" fill="${col}"/>`;
+    }).join('') + '</svg>';
+}
+
+function chartsRenderList() {
+  const list = document.getElementById('chartsList');
+  if (!chartsCandles) {
+    list.innerHTML = '<div class="charts-intro">Daily candles unavailable right now.</div>';
     return;
   }
-  const symbol = tvSymbolFor(chartsSelectedPair);
-  grid.innerHTML = CHART_TIMEFRAMES.map((tf) => chartBlockHtml(symbol, tf.label)).join('');
+  const rows = CORR_ALL_PAIRS
+    .filter((p) => chartsCandles[p.id])
+    .map((p) => ({ p, s: chartsScore(p.id) }))
+    .sort((x, y) => x.s.group - y.s.group || y.s.move - x.s.move);
+  list.innerHTML = rows.map(({ p, s }) => {
+    const open = chartsSelectedPair === p.id;
+    const cls = s.group === 0 ? 'cd-bull' : s.group === 1 ? 'cd-bear' : '';
+    return `<div class="cd-row ${cls}">
+      <button type="button" class="cd-head" data-pair="${p.id}" aria-expanded="${open}">
+        <span class="cd-name">${p.label}</span>
+      </button>
+      <button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} detail">${chartsSvg(chartsCandles[p.id])}</button>
+      <div class="cd-detail" id="cd-detail-${p.id}"></div>
+    </div>`;
+  }).join('');
+  if (chartsSelectedPair) chartsOpenDetail(chartsSelectedPair);
+}
 
-  // <script> tags inserted via innerHTML never execute — each one has to be
-  // created and appended manually so TradingView's embed script actually runs.
-  grid.querySelectorAll('.tradingview-widget-container').forEach((container, i) => {
+function chartsOpenDetail(id) {
+  const box = document.getElementById(`cd-detail-${id}`);
+  if (!box) return;
+  const symbol = tvSymbolFor(id);
+  box.innerHTML = CHART_TIMEFRAMES.map((tf) => chartBlockHtml(symbol, tf.label)).join('');
+  // <script> inséré via innerHTML ne s'exécute jamais : créer chaque script à la main.
+  box.querySelectorAll('.tradingview-widget-container').forEach((container, i) => {
     const script = document.createElement('script');
     script.type = 'text/javascript';
     script.async = true;
     script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
     script.text = JSON.stringify({
-      allow_symbol_change: false,
-      calendar: false,
-      details: false,
-      hide_side_toolbar: true,
-      hide_top_toolbar: false,
-      hide_legend: false,
-      hide_volume: true,
-      hotlist: false,
-      interval: CHART_TIMEFRAMES[i].interval,
-      locale: 'en',
-      save_image: false,
-      style: '1',
-      symbol,
-      theme: 'dark',
-      timezone: 'Etc/UTC',
-      backgroundColor: '#0F0F0F',
-      gridColor: 'rgba(242, 242, 242, 0.2)',
-      watchlist: [],
-      withdateranges: false,
-      compareSymbols: [],
-      support_host: 'https://www.tradingview.com',
-      studies: [],
-      autosize: true,
+      allow_symbol_change: false, calendar: false, details: false, hide_side_toolbar: true,
+      hide_top_toolbar: false, hide_legend: false, hide_volume: true, hotlist: false,
+      interval: CHART_TIMEFRAMES[i].interval, locale: 'en', save_image: false, style: '1',
+      symbol, theme: 'dark', timezone: 'Etc/UTC', backgroundColor: '#0F0F0F',
+      gridColor: 'rgba(242, 242, 242, 0.2)', watchlist: [], withdateranges: false,
+      compareSymbols: [], support_host: 'https://www.tradingview.com', studies: [], autosize: true,
     });
     container.appendChild(script);
   });
 }
 
-document.getElementById('chartsPicker').addEventListener('click', (e) => {
-  if (e.target.closest('#chartsShowMoreBtn')) {
-    chartsShowAllPairs = !chartsShowAllPairs;
-    chartsRenderPicker();
-    return;
+async function chartsLoad() {
+  try {
+    const res = await fetch('./data/daily-candles.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error(res.status);
+    chartsCandles = (await res.json()).pairs;
+  } catch (e) {
+    if (!chartsCandles) chartsCandles = null;
   }
+  chartsRenderList();
+}
+
+document.getElementById('chartsList').addEventListener('click', (e) => {
   const btn = e.target.closest('[data-pair]');
   if (!btn) return;
-  // Clicking the already-selected pair again closes its charts instead of no-op.
-  chartsSelectedPair = chartsSelectedPair === btn.dataset.pair ? null : btn.dataset.pair;
-  chartsRenderPicker();
-  renderCharts();
+  const id = btn.dataset.pair;
+  const wasOpen = chartsSelectedPair === id;
+  if (chartsSelectedPair) {
+    const prev = document.getElementById(`cd-detail-${chartsSelectedPair}`);
+    if (prev) prev.innerHTML = '';
+  }
+  chartsSelectedPair = wasOpen ? null : id;
+  if (!wasOpen) chartsOpenDetail(id);
 });
-
-chartsRenderPicker();
 
 document.getElementById('chartsToggle')?.addEventListener('click', (e) => {
   const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
   e.currentTarget.setAttribute('aria-expanded', String(!expanded));
   document.getElementById('chartsBody').classList.toggle('collapsed', expanded);
+  if (!expanded) chartsLoad(); // à chaque ouverture : tri recalculé
 });
+
 
 let currentEvents = [];
 const currentImpactFilters = new Set(); // vide = All
