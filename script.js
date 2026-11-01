@@ -534,41 +534,18 @@ function chartsScore(id) {
 function chartsSvg(series) {
   const closed = chartsClosed(series).slice(-30);
   if (!closed.length) return '';
-  const W = 600, H = 240, PAD = 8, LBL = 90; // LBL = zone droite : lignes du jour + libellés
+  const W = 600, H = 240, PAD = 8;
   const hi = Math.max(...closed.map((c) => c[2]));
   const lo = Math.min(...closed.map((c) => c[3]));
   const rng = hi - lo || 1;
   const y = (v) => (PAD + (1 - (v - lo) / rng) * (H - 2 * PAD)).toFixed(1);
-  // n bougies clôturées + 1 emplacement pour la bougie du jour (vide, en formation)
-  const step = (W - PAD - LBL) / (closed.length + 1);
+  const step = (W - 2 * PAD) / closed.length;
   const bw = Math.max(2, step * 0.72);
-  // Niveaux de la bougie d'hier, tracés dès l'ouverture de la bougie du jour (comme Arii SNIPER) :
-  // PDH / PDL (orange), 61 / 50 / 38 % mesurés depuis le bas (vert)
+  // 50 % de la bougie d'hier (milieu haut/bas de la dernière bougie clôturée)
   const last = closed[closed.length - 1];
-  const pdh = last[2], pdl = last[3], r = pdh - pdl;
-  const levels = [
-    { t: 'PDH', v: pdh, c: '#e0a030' },
-    { t: '61%', v: pdl + r * 0.61, c: '#4caf50' },
-    { t: '50%', v: pdl + r * 0.5, c: '#4caf50' },
-    { t: '38%', v: pdl + r * 0.38, c: '#4caf50' },
-    { t: 'PDL', v: pdl, c: '#e0a030' },
-  ];
-  const todayX = PAD + step * (closed.length + 0.5);
-  const xEnd = W - LBL / 2 + 6;
-  const lines = levels.map((l) =>
-    `<line x1="${todayX.toFixed(1)}" x2="${xEnd}" y1="${y(l.v)}" y2="${y(l.v)}" stroke="${l.c}" stroke-width="1.2" stroke-dasharray="5 4" vector-effect="non-scaling-stroke"/>`).join('');
-  // Libellés en HTML (un texte SVG serait déformé par preserveAspectRatio="none")
-  // Les niveaux proches se chevauchent : on écarte les libellés (pas les lignes) d'au moins GAP unités
-  const GAP = 14;
-  const ly = levels.map((l) => +y(l.v)); // déjà triés du haut (PDH) vers le bas (PDL)
-  for (let i = 1; i < ly.length; i++) if (ly[i] < ly[i - 1] + GAP) ly[i] = ly[i - 1] + GAP;
-  for (let i = ly.length - 1; i >= 0; i--) {
-    const maxY = i === ly.length - 1 ? H - 6 : ly[i + 1] - GAP;
-    if (ly[i] > maxY) ly[i] = maxY;
-  }
-  const labels = levels.map((l, i) =>
-    `<span class="cd-lvl" style="top:${(ly[i] / H * 100).toFixed(2)}%;left:${((xEnd + 4) / W * 100).toFixed(2)}%;color:${l.c}">${l.t}</span>`).join('');
-  return `<span class="cd-svgwrap"><svg class="cd-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">` + lines +
+  const yMid = y((last[2] + last[3]) / 2);
+  const mid = `<line x1="0" x2="${W}" y1="${yMid}" y2="${yMid}" stroke="#ffd600" stroke-width="1.5" stroke-dasharray="2 5" stroke-linecap="round" vector-effect="non-scaling-stroke"/>`;
+  return `<svg class="cd-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">` + mid +
     closed.map((c, i) => {
       const x = PAD + step * (i + 0.5);
       const up = c[4] >= c[1];
@@ -577,7 +554,7 @@ function chartsSvg(series) {
       const h = Math.max(1, Math.abs(y(c[1]) - y(c[4])));
       return `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${y(c[2])}" y2="${y(c[3])}" stroke="${col}" stroke-width="1.4"/>` +
         `<rect x="${(x - bw / 2).toFixed(1)}" y="${top}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" fill="${col}"/>`;
-    }).join('') + '</svg>' + labels + '</span>';
+    }).join('') + '</svg>';
 }
 
 function chartsRenderList() {
