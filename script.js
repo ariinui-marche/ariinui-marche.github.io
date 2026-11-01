@@ -513,6 +513,27 @@ function chartBlockHtml(symbol, label) {
 
 let chartsSelectedPair = null;
 let chartsCandles = null;
+let chartsEco = []; // événements High du calendrier éco (pour les lignes verticales)
+
+// Clé de jour FX (identique à scripts/fetch-candles.mjs) : la journée bascule à 17h New York,
+// la bougie est étiquetée par minuit UTC de sa date.
+const CHARTS_NY = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hourCycle: 'h23',
+  year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit' });
+function chartsDayKey(tsSec) {
+  const p = Object.fromEntries(CHARTS_NY.formatToParts(new Date(tsSec * 1000)).map((x) => [x.type, x.value]));
+  return Math.floor(Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour + 7) / 86400000) * 86400;
+}
+
+// Jours (clés de bougie) où une annonce High d'une des deux devises de la paire a eu lieu.
+// XAU / BTC / ETH : seule la devise USD compte.
+function chartsEcoDays(pairId) {
+  const ccy = new Set([pairId.slice(0, 3), pairId.slice(3, 6)]);
+  const days = new Set();
+  for (const e of chartsEco) {
+    if (ccy.has(e.country)) days.add(chartsDayKey(new Date(e.date).getTime() / 1000));
+  }
+  return days;
+}
 
 function chartsClosed(series) {
   // Bougie clôturée = son heure de fin réelle (c[5], 17h New York) est passée.
@@ -533,7 +554,7 @@ function chartsScore(id) {
   return { group, move: Math.abs((b[4] - a[1]) / a[1]) };
 }
 
-function chartsSvg(series) {
+function chartsSvg(series, pairId) {
   const closed = chartsClosed(series).slice(-30);
   if (!closed.length) return '';
   const W = 600, H = 240, PAD = 8;
@@ -543,7 +564,14 @@ function chartsSvg(series) {
   const y = (v) => (PAD + (1 - (v - lo) / rng) * (H - 2 * PAD)).toFixed(1);
   const step = (W - 2 * PAD) / closed.length;
   const bw = Math.max(2, step * 0.72);
-  return `<svg class="cd-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">` +
+  // Lignes verticales pointillées : jours d'annonces économiques High (derrière les bougies)
+  const ecoDays = chartsEcoDays(pairId);
+  const ecoLines = closed.map((c, i) => {
+    if (!ecoDays.has(c[0])) return '';
+    const x = (PAD + step * (i + 0.5)).toFixed(1);
+    return `<line x1="${x}" x2="${x}" y1="0" y2="${H}" stroke="#9aa0a6" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 4" stroke-linecap="round" vector-effect="non-scaling-stroke"/>`;
+  }).join('');
+  return `<svg class="cd-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">` + ecoLines +
     closed.map((c, i) => {
       const x = PAD + step * (i + 0.5);
       const up = c[4] >= c[1];
@@ -572,7 +600,7 @@ function chartsRenderList() {
       <button type="button" class="cd-head" data-pair="${p.id}" aria-expanded="${open}">
         <span class="cd-name">${p.label}</span>
       </button>
-      <button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} detail">${chartsSvg(chartsCandles[p.id])}</button>
+      <button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} detail">${chartsSvg(chartsCandles[p.id], p.id)}</button>
       <div class="cd-detail" id="cd-detail-${p.id}"></div>
     </div>`;
   }).join('');
@@ -612,6 +640,11 @@ async function chartsLoad() {
   } catch (e) {
     if (!chartsCandles) chartsCandles = null;
   }
+  try {
+    const r = await fetch('./data/eco-calendar.json', { cache: 'no-store' });
+    const d = r.ok ? await r.json() : null;
+    chartsEco = ((d && d.events) || []).filter((e) => e.impact === 'High' && e.date);
+  } catch (e) { /* lignes éco facultatives */ }
   chartsRenderList();
 }
 
