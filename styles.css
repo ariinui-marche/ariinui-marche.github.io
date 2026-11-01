@@ -139,6 +139,9 @@ main {
 .cd-bull .cd-name { color: #26a69a; }
 .cd-bear .cd-name { color: #ef5350; }
 .cd-svg { display: block; width: 100%; height: 240px; }
+.cd-svgwrap { display: block; position: relative; }
+.cd-lvl { position: absolute; transform: translateY(-50%); font: 600 10px/1 ui-monospace, Consolas, monospace; pointer-events: none; white-space: nowrap; opacity: .9; }
+@media (max-width: 480px) { .cd-lvl { font-size: 9px; } }
 .cd-detail:not(:empty) { border-top: 1px solid var(--border, #2a2a2a); padding: 12px 16px 0; }
 .cd-detail .chart-block:last-child .tv-chart-widget { margin-bottom: 0; }
 /* Daily TradingView = même dimension que le graphique SVG de la liste */
