@@ -23,6 +23,18 @@ function fxDayKey(tsSec) {
   return Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour + 7) / 1000;
 }
 
+// Fin réelle (secondes UTC) de la bougie étiquetée k (minuit UTC de sa date) : 17h New York ce jour-là,
+// 21h ou 22h UTC selon l'heure d'été américaine.
+function fxDayEnd(k) {
+  const d = new Date(k * 1000);
+  for (const h of [21, 22]) {
+    const t = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), h);
+    const hourNY = +NY.formatToParts(new Date(t)).find((x) => x.type === 'hour').value;
+    if (hourNY === 17) return t / 1000;
+  }
+  return k + 22 * 3600;
+}
+
 async function fetchForex(id) {
   const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(yahooSymbol(id))}?range=3mo&interval=1h`;
   const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
@@ -43,11 +55,12 @@ async function fetchForex(id) {
   const ranges = all.map((d) => d[2] - d[3]).sort((a, b) => a - b);
   const med = ranges[Math.floor(ranges.length / 2)] || 0;
   return all.filter((d) => d[2] - d[3] >= med * 0.1)
-    .map((d) => d.map((v, i) => (i ? +v.toPrecision(7) : v))).slice(-40);
+    .map((d) => [...d.map((v, i) => (i ? +v.toPrecision(7) : v)), fxDayEnd(d[0])]).slice(-40);
 }
 
 async function fetchOne(id) {
-  if (!['XAUUSD', 'BTCUSD', 'ETHUSD'].includes(id)) return fetchForex(id);
+  try { return await fetchForex(id); } catch (e) { if (!['XAUUSD', 'BTCUSD', 'ETHUSD'].includes(id)) throw e; }
+  // repli (or/crypto) : Daily Yahoo brutes si les barres 1h échouent
   const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(yahooSymbol(id))}?range=3mo&interval=1d`;
   const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);

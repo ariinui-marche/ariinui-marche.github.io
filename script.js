@@ -515,9 +515,11 @@ let chartsSelectedPair = null;
 let chartsCandles = null;
 
 function chartsClosed(series) {
-  // Bougies clôturées = date UTC strictement avant aujourd'hui (la bougie du jour est en formation)
-  const todayStart = Math.floor(Date.now() / 86400000) * 86400;
-  return series.filter((c) => c[0] < todayStart);
+  // Bougie clôturée = son heure de fin réelle (c[5], 17h New York) est passée.
+  // Anciennes données sans c[5] : repli sur « date UTC avant aujourd'hui ».
+  const now = Date.now() / 1000;
+  const todayStart = Math.floor(now / 86400) * 86400;
+  return series.filter((c) => (c[5] ? c[5] <= now : c[0] < todayStart));
 }
 
 function chartsScore(id) {

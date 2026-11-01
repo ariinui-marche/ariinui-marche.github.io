@@ -2,6 +2,7 @@ name: Fetch Daily Candles
 
 on:
   schedule:
+    - cron: '10 21,22 * * *'   # juste après la clôture 17h New York (21h ou 22h UTC selon l'heure d'été)
     - cron: '30 0,6 * * *'
   workflow_dispatch:
 
