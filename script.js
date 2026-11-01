@@ -548,6 +548,25 @@ function chartsEcoDays(pairId) {
   return days;
 }
 
+// Lignes verticales pointillées des jours d'annonces (derrière les bougies, jusqu'aux bulles).
+// Un seul élément par jour ; sa position est calée sur un pixel entier (chartsSnapLines) pour un trait net.
+function chartsLinesHtml(series, pairId) {
+  const closed = chartsClosed(series).slice(-30);
+  const days = chartsEcoDays(pairId);
+  const W = 600, PAD = 8, step = (W - 2 * PAD) / closed.length;
+  const spans = closed.map((c, i) => days.has(c[0])
+    ? `<span class="cd-evline" data-pct="${((PAD + step * (i + 0.5)) / W * 100).toFixed(3)}"></span>` : '').join('');
+  return `<div class="cd-lines">${spans}</div>`;
+}
+function chartsSnapLines() {
+  document.querySelectorAll('.cd-lines').forEach((box) => {
+    const w = box.clientWidth;
+    box.querySelectorAll('.cd-evline').forEach((l) => { l.style.left = Math.round(+l.dataset.pct / 100 * w) + 'px'; });
+  });
+}
+let chartsSnapTimer = null;
+window.addEventListener('resize', () => { clearTimeout(chartsSnapTimer); chartsSnapTimer = setTimeout(chartsSnapLines, 120); });
+
 // Bandeau de bulles drapeau sous le graphique (style TradingView) : une rangée par devise,
 // bulle rouge = High, orange = Medium. Clic / toucher = infobulle avec les annonces du jour.
 function chartsEvStrip(series, pairId) {
@@ -628,14 +647,7 @@ function chartsSvg(series, pairId) {
   const y = (v) => (PAD + (1 - (v - lo) / rng) * (H - 2 * PAD)).toFixed(1);
   const step = (W - 2 * PAD) / closed.length;
   const bw = Math.max(2, step * 0.72);
-  // Lignes verticales pointillées : jours d'annonces économiques High (derrière les bougies)
-  const ecoDays = chartsEcoDays(pairId);
-  const ecoLines = closed.map((c, i) => {
-    if (!ecoDays.has(c[0])) return '';
-    const x = (PAD + step * (i + 0.5)).toFixed(1);
-    return `<line x1="${x}" x2="${x}" y1="0" y2="${H}" stroke="#9aa0a6" stroke-opacity=".6" stroke-width="1" stroke-dasharray="1 4" stroke-linecap="round" vector-effect="non-scaling-stroke"/>`;
-  }).join('');
-  return `<svg class="cd-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">` + ecoLines +
+  return `<svg class="cd-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">` +
     closed.map((c, i) => {
       const x = PAD + step * (i + 0.5);
       const up = c[4] >= c[1];
@@ -664,12 +676,16 @@ function chartsRenderList() {
       <button type="button" class="cd-head" data-pair="${p.id}" aria-expanded="${open}">
         <span class="cd-name">${p.label}</span>
       </button>
-      <button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} detail">${chartsSvg(chartsCandles[p.id], p.id)}</button>
-      ${chartsEvStrip(chartsCandles[p.id], p.id)}
+      <div class="cd-plot">
+        ${chartsLinesHtml(chartsCandles[p.id], p.id)}
+        <button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} detail">${chartsSvg(chartsCandles[p.id], p.id)}</button>
+        ${chartsEvStrip(chartsCandles[p.id], p.id)}
+      </div>
       <div class="cd-detail" id="cd-detail-${p.id}"></div>
     </div>`;
   }).join('');
   if (window.twemoji) twemoji.parse(list, { folder: 'svg', ext: '.svg' });
+  chartsSnapLines();
   if (chartsSelectedPair) chartsOpenDetail(chartsSelectedPair);
 }
 

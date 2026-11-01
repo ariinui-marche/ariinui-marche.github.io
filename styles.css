@@ -142,6 +142,11 @@ main {
 
 /* Bulles drapeau des annonces éco (style TradingView) sous le graphique */
 .cd-evstrip { --b: 17px; position: relative; height: calc(var(--rows) * (var(--b) + 3px) + 4px); margin: 0 0 4px; }
+.cd-plot { position: relative; }
+.cd-lines { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.cd-evline { position: absolute; top: 0; bottom: 0; width: 1px; background: repeating-linear-gradient(to bottom, #5a5e68 0 2px, transparent 2px 4px); }
+.cd-plot .cd-chart { position: relative; z-index: 1; }
+.cd-plot .cd-evstrip { z-index: 2; }
 .cd-bub { position: absolute; top: calc(var(--row) * (var(--b) + 3px) + 2px); transform: translateX(-50%); width: var(--b); height: var(--b); padding: 0; border-radius: 50%; background: #1a1a1a; border: 1.5px solid #ef5350; display: flex; align-items: center; justify-content: center; font-size: calc(var(--b) * .78); line-height: 1; cursor: pointer; overflow: hidden; }
 .cd-bub.cd-bub-med { border-color: #f0a030; }
 .cd-bub.cd-bub-on { background: #2a2a2a; box-shadow: 0 0 0 2px rgba(255,255,255,.25); }
