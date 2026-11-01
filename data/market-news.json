@@ -1,6 +1,62 @@
 {
-  "timestamp": "2026-11-01T16:16:29.668Z",
+  "timestamp": "2026-11-01T20:31:47.997Z",
   "items": [
+    {
+      "title": "Russian strikes cut power to thousands in Ukraine as drones damage Russian facility",
+      "link": "https://www.investing.com/news/commodities-news/russian-strikes-cut-power-to-thousands-in-ukraine-as-drones-damage-russian-facility-4989707",
+      "pubDate": "2026-11-01T20:12:04.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Wall Street Says One Election Result Gives Bitcoin Its Best Chance at $100,000",
+      "link": "https://beincrypto.com/bitcoin-100000-midterms-bloomberg-survey/",
+      "pubDate": "2026-11-01T19:58:27.000Z",
+      "description": "A Bloomberg survey shows investors tie Bitcoin's $100,000 chances to a Republican Congress after the US midterms.\nThe post Wall Street Says One Election Result Gives Bitcoin Its Best Chance at $100,000 appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Bitcoin faces further downside risks as fear surges, Binance hack rattles markets",
+      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-faces-further-downside-risks-as-fear-surges-binance-hack-rattles-markets-4989389",
+      "pubDate": "2026-11-01T19:04:09.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Binance sees spike in withdrawals as exchange returns online after $6.3 billion heist",
+      "link": "https://www.investing.com/news/stock-market-news/binance-to-resume-withdrawals-after-recovering-bulk-of-6-billion-in-stolen-funds-4989388",
+      "pubDate": "2026-11-01T18:24:42.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Is Coinbase Safe After the $6 Billion Binance Hack?",
+      "link": "https://beincrypto.com/binance-hack-coinbase-security-assessment/",
+      "pubDate": "2026-11-01T17:54:09.000Z",
+      "description": "Hackers took over $8B from Binance, Bybit, and Bitget. See how Coinbase custody differs, and where it is still exposed.\nThe post Is Coinbase Safe After the $6 Billion Binance Hack? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Serbians mark railway disaster that led to rise of victorious student movement",
+      "link": "https://www.investing.com/news/commodities-news/serbians-mark-railway-disaster-that-led-to-rise-of-victorious-student-movement-4989758",
+      "pubDate": "2026-11-01T17:36:19.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Oil, Inflation, and Fed Risk. Why MicroStrategy Still Wants More Bitcoin Now?",
+      "link": "https://beincrypto.com/microstrategy-bitcoin-buy-oil-fed-risk/",
+      "pubDate": "2026-11-01T17:23:23.000Z",
+      "description": "MicroStrategy hints at a new Bitcoin buy as oil tops $100 and Fed hike risk rises. Here is what Saylor is betting on.\nThe post Oil, Inflation, and Fed Risk. Why MicroStrategy Still Wants More Bitcoin Now? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "New Zealand’s two-speed economy poses election dilemma for ruling National party",
+      "link": "https://www.investing.com/news/economic-indicators/new-zealands-twospeed-economy-poses-election-dilemma-for-ruling-national-party-4989769",
+      "pubDate": "2026-11-01T17:12:19.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
     {
       "title": "Raymond James cuts Oil States stock price target on guidance outlook",
       "link": "https://www.investing.com/news/analyst-ratings/raymond-james-cuts-oil-states-stock-price-target-on-guidance-outlook-93CH-4989767",
@@ -11,16 +67,9 @@
     {
       "title": "Bank of Canada raises the policy rate by 25 basis points to 2½%",
       "link": "https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/",
-      "pubDate": "2026-11-01T15:26:16.000Z",
+      "pubDate": "2026-11-01T15:27:09.000Z",
       "description": "The Bank of Canada today increased its target for the overnight rate by 25 basis points to 2.5%, with the Bank Rate at 2.75% and the deposit rate at 2.45%.",
       "source": "Bank of Canada"
-    },
-    {
-      "title": "Serbians mark railway disaster that led to rise of victorious student movement",
-      "link": "https://www.investing.com/news/commodities-news/serbians-mark-railway-disaster-that-led-to-rise-of-victorious-student-movement-4989758",
-      "pubDate": "2026-11-01T14:42:16.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Hornbeck earnings up next: First test for Helix merger",
@@ -58,34 +107,6 @@
       "source": "Investing.com"
     },
     {
-      "title": "Midterm US elections, earnings, jobs data loom for AI-wary stock market",
-      "link": "https://www.investing.com/news/economy-news/midterm-us-elections-earnings-jobs-data-loom-for-aiwary-stock-market-4989748",
-      "pubDate": "2026-11-01T14:00:26.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "OPEC+ keeps December oil output targets steady ahead of tougher call for 2027",
-      "link": "https://www.investing.com/news/commodities-news/opec-set-to-keep-oil-output-targets-steady-sources-say-4989496",
-      "pubDate": "2026-11-01T13:36:20.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Saudi Arabia stocks lower at close of trade; Tadawul All Share down 0.84%",
-      "link": "https://www.investing.com/news/stock-market-news/saudi-arabia-stocks-lower-at-close-of-trade-tadawul-all-share-down-084-4989744",
-      "pubDate": "2026-11-01T12:45:04.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "OPEC+ holds December oil output target",
-      "link": "https://www.investing.com/news/commodities-news/opec-set-to-hold-december-oil-output-steady-4989332",
-      "pubDate": "2026-11-01T12:41:40.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
       "title": "Millionaire Says GTA 6 Could Save You $5,000. How?",
       "link": "https://beincrypto.com/gta-6-could-save-you-5000-millionaire/",
       "pubDate": "2026-11-01T12:40:38.000Z",
@@ -112,13 +133,6 @@
       "pubDate": "2026-11-01T09:46:27.000Z",
       "description": "Binance withdrawals reopened and $2 billion moved within hours. Was it customers, and will Bitcoin rally?\nThe post $2 Billion Moves in the First 3 Hours After Binance Reopens Withdrawals appeared first on BeInCrypto.",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Binance resumes bitcoin, ether withdrawals after covering bulk of stolen $6.3 billion",
-      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOQ042d3hwbUp6LXNrZ2JEY2RSVEgzX0xJbGZ0QTFsVnM1X0tYUFBONzljRXRIbFJCRlRWeUkyeEJwaElZZnN6Tnluc1h3ZURja0tMTHhjSDkyb2FnUHRPejdmUjZmaU10ZlBuTW82bVZmV0hKNFJMbmZ2VjFyS2h2NUVZRnVtZVdIQVo3VnRPVFhsX1ptRzJQaklyXzZIU0hxN1lyQ3lTNjYtMGZvQ1Q1T0laQzBHU1dHdEk1RXJXMGhRSVJT?oc=5",
-      "pubDate": "2026-11-01T05:49:00.000Z",
-      "description": "Binance resumes bitcoin, ether withdrawals after covering bulk of stolen $6.3 billion&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "WSJ Dollar Index Rises 0.04% This Month to 97.08",
@@ -156,25 +170,11 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Chainalysis, the Firm That Hunts Crypto Hackers, Got Hacked With AI Agents",
-      "link": "https://beincrypto.com/chainalysis-hacked-ai-agents-client-data/",
-      "pubDate": "2026-10-31T12:25:56.000Z",
-      "description": "Chainalysis, the firm that tracks crypto thieves, says AI agents helped an attacker take client names, emails, and job roles.\nThe post Chainalysis, the Firm That Hunts Crypto Hackers, Got Hacked With AI Agents appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Trump Talks About His Family’s Crypto Money – “A Little Bit Dangerous”",
-      "link": "https://beincrypto.com/trump-talks-about-crypto-money/",
-      "pubDate": "2026-10-31T11:41:54.000Z",
-      "description": "Trump calls digital money dangerous, yet his disclosure shows over $1.4 billion in crypto income in 2025.\nThe post Trump Talks About His Family’s Crypto Money – “A Little Bit Dangerous” appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Investors Pull $643 Million From Bitcoin ETFs After the Biggest Crypto Hack in History",
-      "link": "https://beincrypto.com/investors-pull-643-million-bitcoin-etfs/",
-      "pubDate": "2026-10-31T11:29:43.000Z",
-      "description": "Investors pulled $643 million from Bitcoin ETFs a day after the record Binance hack. Here is what it means for the funds.\nThe post Investors Pull $643 Million From Bitcoin ETFs After the Biggest Crypto Hack in History appeared first on BeIn",
-      "source": "BeInCrypto"
+      "title": "The women breaking ground at a Burkina Faso gold mine",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA5c3NtQUtjRzgtbEtVTzB6TENnSU1jMjc3WE54QUFNYWVjWUg2R1liZWNMSHRuUTJWdlhTUk9EUE5ZV3ByT05TSFRTNHZOdm04RmVSWXlpNHpjSTh1?oc=5",
+      "pubDate": "2026-10-31T07:00:00.000Z",
+      "description": "The women breaking ground at a Burkina Faso gold mine&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "Yen set for third straight daily gain against dollar after BOJ holds rates",
@@ -182,13 +182,6 @@
       "pubDate": "2026-10-30T21:11:47.000Z",
       "description": "Yen set for third straight daily gain against dollar after BOJ holds rates&nbsp;&nbsp;Reuters",
       "source": "Reuters"
-    },
-    {
-      "title": "USDJPY | Japanese Yen Overview",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9hRnhKeDQzdWRHLWtBUEpTSThRcFBoN0NGSHEyYk04RjlrWmNWRGRNdXJhNi13cVd3X3JfRUNDTnVMM0hNRVo1WERrcDM3OU9tUk9odnlXNEdPWXVuSGxKb2dNUQ?oc=5",
-      "pubDate": "2026-10-30T20:59:00.000Z",
-      "description": "USDJPY | Japanese Yen Overview&nbsp;&nbsp;MarketWatch",
-      "source": "Google News"
     },
     {
       "title": "TSX posts steepest daily decline since June as gold slides",
@@ -205,39 +198,11 @@
       "source": "Google News"
     },
     {
-      "title": "Tech rout drives gold to one-year low, white metals sink deep into oversold zone",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOMFY2WEZOWHhyVDVPMkM2ZVUxM01TR09lcUZ0RlBWNF96QkJzWXhUZWpIbmlRSUlxN3FiZ0pEYWVXOW1YcVBQcHQ4cjU1NFpCQVlnS3pneWlKeTZIRjJzWkJuek9OeDhNSGxTU1ozV1g0czltbldNNkJORWRWS0ZBU25WdURjNWNpREdpdmZoV1c2ZzBnUmM5cm5HTG16OFpEdVhLWC13RkxHM3IxX1E?oc=5",
-      "pubDate": "2026-10-30T19:03:39.000Z",
-      "description": "Tech rout drives gold to one-year low, white metals sink deep into oversold zone&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Canadian dollar extends monthly gain as higher oil prices raise inflation risk",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOX1pUUGVTZUNPbllLVm9EbGdSbkxsUUpYZUo4bXFvYjRnaDlMNnJiYzNsZkRERnJjc0JhWGt2WTYtY2JzeEZxY1MwdEVTbXJEaFhlSERnaUhabXVCTWpSaE9PSkRwdVVMT0NkWE96ZDdLNV9TbU5KVGlqQ0JrRWNXWXAzUl85WHVuMEFQb2JiWnE3aHp0aDhPdkwzeDZleGg1d2VKc3h2d1h6LTEyckdoMURhaU4zSV82TE1YVw?oc=5",
-      "pubDate": "2026-10-30T18:55:43.000Z",
-      "description": "Canadian dollar extends monthly gain as higher oil prices raise inflation risk&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "BRICS+ payments system feasible, common currency faces hurdles, report says",
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNQTIzMFliU29saHlKNTlPWlozYXFoRlNkWHdmckJ6cXhQcDNZSGp2WkxyTjVzTVdWd0FJOUpiY0hSalk4QS13X0kydWVTOUxfbExoNEUtVVlvOEhvbm83dHU0ZkY3SVlfSmhRYU1EVVd5WUxzb01scjR2U0pJWGFoOW80b196Smp2NnhqVFVSNGF1c1VJeDZjUzRFdXFPeGtBNTZyeWR5dVZRZVd2V1RWeUJSUDRUTjZKM01UV1ZR?oc=5",
-      "pubDate": "2026-10-30T18:46:53.000Z",
-      "description": "BRICS+ payments system feasible, common currency faces hurdles, report says&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "Philip R. Lane: AI adoption in Europe",
       "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261030~08d9d540f0.en.html",
       "pubDate": "2026-10-30T16:10:00.000Z",
       "description": "",
       "source": "European Central Bank"
-    },
-    {
-      "title": "Uganda's inflation rises to 3-year high after currency slump",
-      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOWW5EWF9SS2oyYnhSVzl3VTN1OGRSbDZ0ZWFZQ3JSbHNkYmlsZExxdllwT3JYcG5sTGVjUUczaUZyZF9yN1BWdktUZDA3WTZOVUp4eGVrRDdINDViSWl2Z0k5c2ZQZ0ZxWnRqcGw0eGRINTJWMUU0ejZObnFJZmY5MEtHNEJZWlZZODZUZ2haVDltQUIyUFdCbjZVZWVmR2lrRmtLSVIwaVc?oc=5",
-      "pubDate": "2026-10-30T15:32:06.000Z",
-      "description": "Uganda's inflation rises to 3-year high after currency slump&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates)",
@@ -283,14 +248,14 @@
     },
     {
       "title": "Quarterly Schedule of Outright Purchases of Japanese Government Bonds (Competitive Auction Method) (October-December 2026) (Schedule Updates)",
-      "link": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/mpr261030c.pdf",
+      "link": "http://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/mpr261030c.pdf",
       "pubDate": "2026-10-30T08:00:00.000Z",
       "description": "",
       "source": "Bank of Japan"
     },
     {
       "title": "Timetable and Schedule of U.S. Dollar Funds-Supplying Operations  (November 2026-March 2027)",
-      "link": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/mpr261030b.pdf",
+      "link": "http://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/mpr261030b.pdf",
       "pubDate": "2026-10-30T08:00:00.000Z",
       "description": "",
       "source": "Bank of Japan"
@@ -332,21 +297,21 @@
     },
     {
       "title": "Amendment to \"Basic Principles for Disposal of ETFs and J-REITs\"",
-      "link": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/mpr261030a.pdf",
+      "link": "http://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/mpr261030a.pdf",
       "pubDate": "2026-10-30T05:00:00.000Z",
       "description": "",
       "source": "Bank of Japan"
     },
     {
       "title": "Outlook for Economic Activity and Prices (October 2026, The Bank's View)",
-      "link": "https://www.boj.or.jp/en/mopo/outlook/gor2610a.pdf",
+      "link": "http://www.boj.or.jp/en/mopo/outlook/gor2610a.pdf",
       "pubDate": "2026-10-30T04:00:00.000Z",
       "description": "",
       "source": "Bank of Japan"
     },
     {
       "title": "Statement on Monetary Policy",
-      "link": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030a.pdf",
+      "link": "http://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030a.pdf",
       "pubDate": "2026-10-30T04:00:00.000Z",
       "description": "",
       "source": "Bank of Japan"
@@ -367,14 +332,14 @@
     },
     {
       "title": "(Reference) Decisions regarding a Change in the Pace of Sales of ETFs (October 2026)",
-      "link": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030c.pdf",
+      "link": "http://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030c.pdf",
       "pubDate": "2026-10-30T03:02:00.000Z",
       "description": "",
       "source": "Bank of Japan"
     },
     {
       "title": "(Reference) Outlook Report and Indicators Related to Underlying Inflation",
-      "link": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030b.pdf",
+      "link": "http://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030b.pdf",
       "pubDate": "2026-10-30T03:02:00.000Z",
       "description": "",
       "source": "Bank of Japan"
@@ -388,7 +353,7 @@
     },
     {
       "title": "Payment and Settlement Statistics (Sept.)",
-      "link": "https://www.boj.or.jp/en/statistics/set/kess/release/2026/kess2609.pdf",
+      "link": "http://www.boj.or.jp/en/statistics/set/kess/release/2026/kess2609.pdf",
       "pubDate": "2026-10-30T02:00:00.000Z",
       "description": "",
       "source": "Bank of Japan"
@@ -521,7 +486,7 @@
     },
     {
       "title": "Dollar falls after Fed holds rates steady",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOd1Bmb3hwMXBlY196NUl2TU1lMURBZWZGMUJjNG50SXVMQzRTa3NtUnJINDRvWUt2OHc1UVRqWEJuUEdmcXVTVUozd0s4T21BaG5XQkIyd3ZhQlYtX1dXaW5Yckp1VGdtMlFWNUJvRjA2UkZScTZyb1VOOVQ5UjktUkpwYXV0Y1FjWk0xelRiRS1jOThBd0w4dUt4QkcteElzYmRB?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOd1Bmb3hwMXBlY196NUl2TU1lMURBZWZGMUJjNG50SXVMQzRTa3NtUnJINDRvWUt2OHc1UVRqWEJuUEdmcXVTVUozd0s4T21BaG5XQkIyd3ZhQlYtX1dXaW5Yckp1VGdtMlFWNUJvRjA2UkZScTZyb1VOOVQ5UjktUkpwYXV0Y1FjWk0xelRiRS1jOThBd0w4dUt4QkcteElzYmRB0gGoAUFVX3lxTE1kd01VX0poRkdFblJ4Y1FCYXVOSV9PcmpnSVJZR1FSSllmMHlBRTVWOVM5ZkxDOS1sMVIwajBtTERXb0MzMGlnZEtPeENHNkw0bHVwX0tTUllEeVh6M1hHdi14YVVJZFFhU2cycE9yTExKRTlSQ3JiYndCbHROWk9pNGwwYjdjZ3BhckppMHAyWUdINTRQaXR3VlNYZ2wzalVOZV8weTg1Rg?oc=5",
       "pubDate": "2026-10-28T02:50:00.000Z",
       "description": "Dollar falls after Fed holds rates steady&nbsp;&nbsp;CNBC",
       "source": "Google News"
@@ -542,7 +507,7 @@
     },
     {
       "title": "Indicators for Core CPI",
-      "link": "https://www.boj.or.jp/en/research/research_data/cpi/index.htm",
+      "link": "http://www.boj.or.jp/en/research/research_data/cpi/index.htm",
       "pubDate": "2026-10-27T05:00:00.000Z",
       "description": "",
       "source": "Bank of Japan"
@@ -577,7 +542,7 @@
     },
     {
       "title": "Services Producer Price Index (Sept.)",
-      "link": "https://www.boj.or.jp/en/statistics/pi/cspi_release/sppi2609.pdf",
+      "link": "http://www.boj.or.jp/en/statistics/pi/cspi_release/sppi2609.pdf",
       "pubDate": "2026-10-26T23:50:00.000Z",
       "description": "",
       "source": "Bank of Japan"
@@ -639,10 +604,45 @@
       "source": "Bank of England"
     },
     {
+      "title": "ECB Consumer Expectations Survey results – September 2026",
+      "link": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261023~a3d201c97c.en.html",
+      "pubDate": "2026-10-23T08:00:00.000Z",
+      "description": "",
+      "source": "European Central Bank"
+    },
+    {
+      "title": "Financial System Report (October 2026)",
+      "link": "http://www.boj.or.jp/en/research/brp/fsr/fsr261023.htm",
+      "pubDate": "2026-10-23T06:00:00.000Z",
+      "description": "",
+      "source": "Bank of Japan"
+    },
+    {
+      "title": "WP - 2026-10-23 - Severin Joho and Enzo Rossi: The evolution of frequency, language complexity and policy narrative: benchmarking Python-based NLP and ChatGPT on a century of SNB rhetoric",
+      "link": "https://www.snb.ch/en/publications/research/working-papers/2026/working_paper_2026_13",
+      "pubDate": "2026-10-22T22:00:00.000Z",
+      "description": "We compiled and processed a novel, comprehensive dataset of 1,063 speeches delivered by high-ranking Swiss National Bank officials between 1928 and 2024. Beyond tracking their quantitative evolution, we conducted an in-depth analysis of the",
+      "source": "Swiss National Bank"
+    },
+    {
       "title": "Regulators unveil plans to simplify Senior Manager and Certification Regime",
       "link": "https://www.bankofengland.co.uk/news/2026/october/regulators-unveil-plans-to-simplify-senior-manager-and-certification-regime",
       "pubDate": "2026-10-22T20:00:00.000Z",
       "description": "The number of financial services roles required to face enhanced checks from regulators will fall significantly under proposals that will support growth.",
+      "source": "Bank of England"
+    },
+    {
+      "title": "The PRA’s second decade − speech by Katharine Braddick",
+      "link": "https://www.bankofengland.co.uk/speech/2026/october/katharine-braddick-mansion-house-city-regulators-dinner-london",
+      "pubDate": "2026-10-22T20:00:00.000Z",
+      "description": "Given at Mansion House",
+      "source": "Bank of England"
+    },
+    {
+      "title": "Minutes of the Securities Lending Committee meeting – September 2026",
+      "link": "https://www.bankofengland.co.uk/minutes/2026/september/securities-lending-committee-meeting-september-2026",
+      "pubDate": "2026-10-22T15:35:53.000Z",
+      "description": "The Securities Lending Committee is a forum for market participants and authorities to discuss the UK securities lending market.",
       "source": "Bank of England"
     },
     {
