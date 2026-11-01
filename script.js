@@ -513,7 +513,7 @@ function chartBlockHtml(symbol, label) {
 
 let chartsSelectedPair = null;
 let chartsCandles = null;
-let chartsEco = []; // événements High du calendrier éco (pour les lignes verticales)
+let chartsEco = []; // événements High + Medium du calendrier éco (lignes verticales + bulles)
 
 // Clé de jour FX (identique à scripts/fetch-candles.mjs) : la journée bascule à 17h New York,
 // la bougie est étiquetée par minuit UTC de sa date.
@@ -524,15 +524,79 @@ function chartsDayKey(tsSec) {
   return Math.floor(Date.UTC(+p.year, +p.month - 1, +p.day, +p.hour + 7) / 86400000) * 86400;
 }
 
-// Jours (clés de bougie) où une annonce High d'une des deux devises de la paire a eu lieu.
-// XAU / BTC / ETH : seule la devise USD compte.
-function chartsEcoDays(pairId) {
-  const ccy = new Set([pairId.slice(0, 3), pairId.slice(3, 6)]);
-  const days = new Set();
+// Index des annonces High + Medium par « devise|jour FX » (lignes verticales + bulles drapeau).
+const CHARTS_MAJORS = ['USD', 'EUR', 'GBP', 'JPY', 'AUD', 'NZD', 'CAD', 'CHF'];
+let chartsEcoIndex = new Map();
+function chartsBuildEcoIndex() {
+  chartsEcoIndex = new Map();
   for (const e of chartsEco) {
-    if (ccy.has(e.country)) days.add(chartsDayKey(new Date(e.date).getTime() / 1000));
+    const k = `${e.country}|${chartsDayKey(new Date(e.date).getTime() / 1000)}`;
+    if (!chartsEcoIndex.has(k)) chartsEcoIndex.set(k, []);
+    chartsEcoIndex.get(k).push(e);
+  }
+}
+// Devises d'une paire qui comptent (XAU / BTC / ETH : seulement USD)
+function chartsPairCcys(pairId) {
+  return [pairId.slice(0, 3), pairId.slice(3, 6)].filter((c) => CHARTS_MAJORS.includes(c));
+}
+// Jours (clés de bougie) où une annonce High/Medium d'une des devises de la paire a eu lieu
+function chartsEcoDays(pairId) {
+  const days = new Set();
+  for (const c of chartsPairCcys(pairId)) {
+    for (const k of chartsEcoIndex.keys()) if (k.startsWith(c + '|')) days.add(+k.slice(4));
   }
   return days;
+}
+
+// Bandeau de bulles drapeau sous le graphique (style TradingView) : une rangée par devise,
+// bulle rouge = High, orange = Medium. Clic / toucher = infobulle avec les annonces du jour.
+function chartsEvStrip(series, pairId) {
+  const closed = chartsClosed(series).slice(-30);
+  const ccys = chartsPairCcys(pairId);
+  if (!closed.length || !ccys.length) return '';
+  const W = 600, PAD = 8, step = (W - 2 * PAD) / closed.length;
+  let bubbles = '';
+  ccys.forEach((ccy, row) => {
+    closed.forEach((c, i) => {
+      const evs = chartsEcoIndex.get(`${ccy}|${c[0]}`);
+      if (!evs) return;
+      const high = evs.some((e) => e.impact === 'High');
+      const left = ((PAD + step * (i + 0.5)) / W * 100).toFixed(2);
+      bubbles += `<button type="button" class="cd-bub ${high ? 'cd-bub-high' : 'cd-bub-med'}" style="left:${left}%;--row:${row}" data-ccy="${ccy}" data-key="${c[0]}" aria-label="${ccy} announcements">${COUNTRY_FLAGS[ccy] || ''}</button>`;
+    });
+  });
+  return `<div class="cd-evstrip" style="--rows:${ccys.length}">${bubbles}</div>`;
+}
+
+const chartsEsc = (t) => String(t).replace(/[&<>"]/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]));
+
+function chartsShowEvCard(bub) {
+  const strip = bub.closest('.cd-evstrip');
+  const had = strip.querySelector('.cd-evcard');
+  strip.parentElement.parentElement.querySelectorAll('.cd-evcard').forEach((c) => c.remove());
+  document.querySelectorAll('.cd-bub-on').forEach((b) => b.classList.remove('cd-bub-on'));
+  if (had && had.dataset.for === bub.dataset.ccy + bub.dataset.key) return; // 2e clic = fermer
+  const evs = (chartsEcoIndex.get(`${bub.dataset.ccy}|${bub.dataset.key}`) || []).slice()
+    .sort((a, b) => (b.impact === 'High') - (a.impact === 'High') || new Date(a.date) - new Date(b.date));
+  const day = new Date(+bub.dataset.key * 1000).toLocaleDateString('en-GB', { weekday: 'short', day: '2-digit', month: 'short', timeZone: 'UTC' });
+  const val = (l, v) => (v ? `<span>${l} <b>${chartsEsc(v)}</b></span>` : '');
+  const rows = evs.slice(0, 8).map((e) => {
+    const t = new Date(e.date).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+    const nums = val('A', e.actual) + val('F', e.forecast) + val('P', e.previous);
+    return `<div class="cd-evrow"><span class="cd-evdot ${e.impact === 'High' ? 'cd-bub-high' : 'cd-bub-med'}"></span><span class="cd-evtime">${t}</span><span class="cd-evtitle">${chartsEsc(e.title)}</span>${nums ? `<div class="cd-evnums">${nums}</div>` : ''}</div>`;
+  }).join('');
+  const more = evs.length > 8 ? `<div class="cd-evmore">+${evs.length - 8} more</div>` : '';
+  const card = document.createElement('div');
+  card.className = 'cd-evcard';
+  card.dataset.for = bub.dataset.ccy + bub.dataset.key;
+  card.innerHTML = `<div class="cd-evhead">${COUNTRY_FLAGS[bub.dataset.ccy] || ''} ${bub.dataset.ccy} · ${day}</div>${rows}${more}`;
+  strip.appendChild(card);
+  if (window.twemoji) twemoji.parse(card, { folder: 'svg', ext: '.svg' });
+  const w = strip.clientWidth, cw = Math.min(260, w - 16);
+  card.style.width = cw + 'px';
+  const center = bub.offsetLeft;
+  card.style.left = Math.max(8, Math.min(center - cw / 2, w - cw - 8)) + 'px';
+  bub.classList.add('cd-bub-on');
 }
 
 function chartsClosed(series) {
@@ -601,9 +665,11 @@ function chartsRenderList() {
         <span class="cd-name">${p.label}</span>
       </button>
       <button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} detail">${chartsSvg(chartsCandles[p.id], p.id)}</button>
+      ${chartsEvStrip(chartsCandles[p.id], p.id)}
       <div class="cd-detail" id="cd-detail-${p.id}"></div>
     </div>`;
   }).join('');
+  if (window.twemoji) twemoji.parse(list, { folder: 'svg', ext: '.svg' });
   if (chartsSelectedPair) chartsOpenDetail(chartsSelectedPair);
 }
 
@@ -643,12 +709,19 @@ async function chartsLoad() {
   try {
     const r = await fetch('./data/eco-calendar.json', { cache: 'no-store' });
     const d = r.ok ? await r.json() : null;
-    chartsEco = ((d && d.events) || []).filter((e) => e.impact === 'High' && e.date);
+    chartsEco = ((d && d.events) || []).filter((e) => (e.impact === 'High' || e.impact === 'Medium') && e.date);
+    chartsBuildEcoIndex();
   } catch (e) { /* lignes éco facultatives */ }
   chartsRenderList();
 }
 
 document.getElementById('chartsList').addEventListener('click', (e) => {
+  const bub = e.target.closest('.cd-bub');
+  if (bub) { e.stopPropagation(); chartsShowEvCard(bub); return; }
+  if (!e.target.closest('.cd-evcard')) {
+    document.querySelectorAll('.cd-evcard').forEach((c) => c.remove());
+    document.querySelectorAll('.cd-bub-on').forEach((b) => b.classList.remove('cd-bub-on'));
+  }
   const btn = e.target.closest('[data-pair]');
   if (!btn) return;
   const id = btn.dataset.pair;

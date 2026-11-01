@@ -139,6 +139,24 @@ main {
 .cd-bull .cd-name { color: #26a69a; }
 .cd-bear .cd-name { color: #ef5350; }
 .cd-svg { display: block; width: 100%; height: 240px; }
+
+/* Bulles drapeau des annonces éco (style TradingView) sous le graphique */
+.cd-evstrip { --b: 17px; position: relative; height: calc(var(--rows) * (var(--b) + 3px) + 4px); margin: 0 0 4px; }
+.cd-bub { position: absolute; top: calc(var(--row) * (var(--b) + 3px) + 2px); transform: translateX(-50%); width: var(--b); height: var(--b); padding: 0; border-radius: 50%; background: #1a1a1a; border: 1.5px solid #ef5350; display: flex; align-items: center; justify-content: center; font-size: calc(var(--b) * .78); line-height: 1; cursor: pointer; overflow: hidden; }
+.cd-bub.cd-bub-med { border-color: #f0a030; }
+.cd-bub.cd-bub-on { background: #2a2a2a; box-shadow: 0 0 0 2px rgba(255,255,255,.25); }
+.cd-bub img.emoji { height: 1em; width: 1em; vertical-align: 0; margin: 0; }
+.cd-evcard { position: absolute; bottom: calc(100% + 6px); z-index: 5; background: #17181c; border: 1px solid #343741; border-radius: 8px; padding: 8px 10px; box-shadow: 0 6px 18px rgba(0,0,0,.55); font-size: 12px; line-height: 1.35; color: var(--text, #e5e5e5); }
+.cd-evhead { font-weight: 700; margin-bottom: 6px; }
+.cd-evhead img.emoji { height: 1.1em; width: 1.1em; }
+.cd-evrow { display: grid; grid-template-columns: 8px 38px 1fr; column-gap: 6px; align-items: baseline; padding: 3px 0; border-top: 1px solid #262830; }
+.cd-evdot { width: 8px; height: 8px; border-radius: 50%; background: #ef5350; align-self: center; }
+.cd-evdot.cd-bub-med { background: #f0a030; }
+.cd-evtime { color: #9aa0a6; font-variant-numeric: tabular-nums; }
+.cd-evnums { grid-column: 3; display: flex; gap: 10px; color: #9aa0a6; font-size: 11px; }
+.cd-evnums b { color: var(--text, #e5e5e5); font-weight: 600; }
+.cd-evmore { color: #9aa0a6; padding-top: 4px; border-top: 1px solid #262830; }
+@media (max-width: 480px) { .cd-evstrip { --b: 13px; } .cd-evcard { font-size: 11.5px; } }
 .cd-detail:not(:empty) { border-top: 1px solid var(--border, #2a2a2a); padding: 12px 16px 0; }
 .cd-detail .chart-block:last-child .tv-chart-widget { margin-bottom: 0; }
 /* Daily TradingView = même dimension que le graphique SVG de la liste */
