@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-02T10:00:24.004Z",
+  "timestamp": "2026-11-02T20:03:54.097Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -11249,7 +11249,7 @@
       "impact": "Low",
       "forecast": "",
       "previous": "51.5",
-      "actual": ""
+      "actual": "49.6"
     },
     {
       "title": "Final Manufacturing PMI",
@@ -11258,7 +11258,7 @@
       "impact": "Low",
       "forecast": "56.0",
       "previous": "56.0",
-      "actual": ""
+      "actual": "54.9"
     },
     {
       "title": "ISM Manufacturing PMI",
@@ -11267,7 +11267,7 @@
       "impact": "Medium",
       "forecast": "54.5",
       "previous": "54.5",
-      "actual": ""
+      "actual": "55.5"
     },
     {
       "title": "Construction Spending m/m",
@@ -11276,7 +11276,7 @@
       "impact": "Low",
       "forecast": "0.4%",
       "previous": "0.9%",
-      "actual": ""
+      "actual": "-1.9%"
     },
     {
       "title": "ISM Manufacturing Prices",
@@ -11285,12 +11285,12 @@
       "impact": "Low",
       "forecast": "77.2",
       "previous": "77.9",
-      "actual": ""
+      "actual": "75.2"
     },
     {
       "title": "Loan Officer Survey",
       "country": "USD",
-      "date": "2026-11-02T14:03:00-05:00",
+      "date": "2026-11-02T14:00:00-05:00",
       "impact": "Low",
       "forecast": "",
       "previous": "",
