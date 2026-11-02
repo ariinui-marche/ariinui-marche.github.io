@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-01T23:48:54.865Z",
+  "timestamp": "2026-11-02T02:46:24.433Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -11105,7 +11105,7 @@
       "impact": "Low",
       "forecast": "",
       "previous": "0.3%",
-      "actual": ""
+      "actual": "0.5%"
     },
     {
       "title": "Building Approvals m/m",
@@ -11114,7 +11114,7 @@
       "impact": "Low",
       "forecast": "1.8%",
       "previous": "-6.1%",
-      "actual": ""
+      "actual": "5.1%"
     },
     {
       "title": "Final Manufacturing PMI",
@@ -11123,7 +11123,7 @@
       "impact": "Low",
       "forecast": "53.3",
       "previous": "53.3",
-      "actual": ""
+      "actual": "53.3"
     },
     {
       "title": "ANZ Job Advertisements m/m",
@@ -11141,7 +11141,7 @@
       "impact": "Low",
       "forecast": "52.0",
       "previous": "52.1",
-      "actual": ""
+      "actual": "52.0"
     },
     {
       "title": "Commodity Prices y/y",
