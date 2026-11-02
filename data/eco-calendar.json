@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-02T02:46:24.433Z",
+  "timestamp": "2026-11-02T10:00:24.004Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -11150,7 +11150,7 @@
       "impact": "Low",
       "forecast": "",
       "previous": "15.5%",
-      "actual": ""
+      "actual": "12.5%"
     },
     {
       "title": "German Retail Sales m/m",
@@ -11159,16 +11159,16 @@
       "impact": "Low",
       "forecast": "0.4%",
       "previous": "1.3%",
-      "actual": ""
+      "actual": "-2.0%"
     },
     {
       "title": "Retail Sales y/y",
       "country": "CHF",
-      "date": "2026-11-02T02:30:00-05:00",
+      "date": "2026-11-02T02:33:00-05:00",
       "impact": "Low",
       "forecast": "3.0%",
       "previous": "3.2%",
-      "actual": ""
+      "actual": "1.6%"
     },
     {
       "title": "Spanish Manufacturing PMI",
@@ -11177,7 +11177,7 @@
       "impact": "Low",
       "forecast": "50.4",
       "previous": "51.0",
-      "actual": ""
+      "actual": "52.2"
     },
     {
       "title": "Manufacturing PMI",
@@ -11186,7 +11186,7 @@
       "impact": "Low",
       "forecast": "55.3",
       "previous": "55.3",
-      "actual": ""
+      "actual": "56.7"
     },
     {
       "title": "Italian Manufacturing PMI",
@@ -11195,7 +11195,7 @@
       "impact": "Low",
       "forecast": "49.9",
       "previous": "50.4",
-      "actual": ""
+      "actual": "49.4"
     },
     {
       "title": "French Final Manufacturing PMI",
@@ -11204,7 +11204,7 @@
       "impact": "Low",
       "forecast": "49.3",
       "previous": "49.3",
-      "actual": ""
+      "actual": "49.5"
     },
     {
       "title": "German Final Manufacturing PMI",
@@ -11213,7 +11213,7 @@
       "impact": "Low",
       "forecast": "54.2",
       "previous": "54.2",
-      "actual": ""
+      "actual": "54.2"
     },
     {
       "title": "Final Manufacturing PMI",
@@ -11222,7 +11222,7 @@
       "impact": "Low",
       "forecast": "52.4",
       "previous": "52.4",
-      "actual": ""
+      "actual": "52.7"
     },
     {
       "title": "Final Manufacturing PMI",
@@ -11231,7 +11231,7 @@
       "impact": "Low",
       "forecast": "52.8",
       "previous": "52.8",
-      "actual": ""
+      "actual": "52.8"
     },
     {
       "title": "German Buba President Nagel Speaks",
