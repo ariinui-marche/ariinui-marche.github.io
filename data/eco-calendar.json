@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-03T02:11:04.939Z",
+  "timestamp": "2026-11-03T09:28:19.127Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -11321,7 +11321,7 @@
       "impact": "High",
       "forecast": "4.85%",
       "previous": "4.60%",
-      "actual": ""
+      "actual": "4.85%"
     },
     {
       "title": "RBA Monetary Policy Statement",
@@ -11357,7 +11357,7 @@
       "impact": "Medium",
       "forecast": "0.0%",
       "previous": "0.0%",
-      "actual": ""
+      "actual": "0.2%"
     },
     {
       "title": "French Gov Budget Balance",
@@ -11366,7 +11366,7 @@
       "impact": "Low",
       "forecast": "",
       "previous": "-159.6B",
-      "actual": ""
+      "actual": "-159.2B"
     },
     {
       "title": "10-y Bond Auction",
