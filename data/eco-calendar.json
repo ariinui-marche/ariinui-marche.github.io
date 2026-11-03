@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-03T17:12:59.395Z",
+  "timestamp": "2026-11-03T22:17:55.013Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -11411,7 +11411,7 @@
       "impact": "Low",
       "forecast": "15.8M",
       "previous": "16.0M",
-      "actual": ""
+      "actual": "15.5M"
     },
     {
       "title": "Congressional Elections",
@@ -11443,7 +11443,7 @@
     {
       "title": "German Buba President Nagel Speaks",
       "country": "EUR",
-      "date": "2026-11-03T12:00:00-05:00",
+      "date": "2026-11-03T13:00:00-05:00",
       "impact": "Low",
       "forecast": "",
       "previous": "",
@@ -11465,7 +11465,7 @@
       "impact": "High",
       "forecast": "0.4%",
       "previous": "0.5%",
-      "actual": ""
+      "actual": "-0.1%"
     },
     {
       "title": "Unemployment Rate",
@@ -11474,7 +11474,7 @@
       "impact": "High",
       "forecast": "5.5%",
       "previous": "5.6%",
-      "actual": ""
+      "actual": "5.7%"
     },
     {
       "title": "Labor Cost Index q/q",
@@ -11483,7 +11483,7 @@
       "impact": "Low",
       "forecast": "0.5%",
       "previous": "0.7%",
-      "actual": ""
+      "actual": "0.4%"
     },
     {
       "title": "Monetary Base y/y",
