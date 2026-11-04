@@ -23,6 +23,7 @@ jobs:
         with:
           node-version: 20
       - run: node scripts/fetch-candles.mjs
+      - run: npm install --no-save --no-package-lock ws
       - run: node scripts/fetch-poh-candles.mjs
       - name: Commit and push if changed
         run: |
