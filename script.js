@@ -689,8 +689,8 @@ function chartsRenderList() {
   if (chartsSelectedPair) chartsOpenDetail(chartsSelectedPair);
 }
 
-function chartsOpenDetail(id) {
-  const box = document.getElementById(`cd-detail-${id}`);
+function chartsOpenDetail(id, interval = 'D', boxPrefix = 'cd-detail-') {
+  const box = document.getElementById(`${boxPrefix}${id}`);
   if (!box) return;
   const symbol = tvSymbolFor(id);
   box.innerHTML = CHART_TIMEFRAMES.map((tf) => chartBlockHtml(symbol, tf.label)).join('');
@@ -705,7 +705,7 @@ function chartsOpenDetail(id) {
       hide_top_toolbar: i === 0, hide_legend: i === 0, hide_volume: true, hotlist: false,
       // Daily : graphique nu (ni barre du haut, ni légende, ni volume), comme la miniature SVG
       disabled_features: ['volume_force_overlay', 'create_volume_indicator_by_default'],
-      interval: CHART_TIMEFRAMES[i].interval, locale: 'en', save_image: false, style: '1',
+      interval, locale: 'en', save_image: false, style: '1',
       symbol, theme: 'dark', timezone: 'Etc/UTC', backgroundColor: '#0F0F0F',
       gridColor: 'rgba(242, 242, 242, 0.2)', watchlist: [], withdateranges: false,
       compareSymbols: [], support_host: 'https://www.tradingview.com', studies: [], autosize: true,
@@ -1957,6 +1957,7 @@ if ('serviceWorker' in navigator) {
 
 // ===== CANDLE : bougies POH (14h / 15h-17h / 22h / 02h, heure UTC-10) des symboles de Charts =====
 let candlePoh = null;
+let candleSelected = null;
 const CANDLE_SLOTS = [['14', '14h'], ['1517', '15-17h'], ['22', '22h'], ['02', '02h']];
 
 function candleSvg(day) {
@@ -1996,8 +1997,9 @@ function candleRender() {
     if (!day) return '';
     date = day.d;
     const cls = s.group === 0 ? 'cd-bull' : s.group === 1 ? 'cd-bear' : '';
-    return `<div class="cd-row ${cls}"><div class="cd-head"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span></div>${candleSvg(day)}</div>`;
+    return `<div class="cd-row ${cls}"><button type="button" class="cd-head" data-pair="${p.id}" aria-expanded="${candleSelected === p.id}"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span></button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day)}</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
   }).join('');
+  if (candleSelected) chartsOpenDetail(candleSelected, '60', 'pc-detail-');
 }
 
 async function candleLoad() {
@@ -2020,4 +2022,17 @@ document.getElementById('candleToggle')?.addEventListener('click', (e) => {
   e.currentTarget.setAttribute('aria-expanded', String(!expanded));
   document.getElementById('candleBody').classList.toggle('collapsed', expanded);
   if (!expanded) candleLoad();
+});
+
+document.getElementById('candleList').addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-pair]');
+  if (!btn) return;
+  const id = btn.dataset.pair;
+  const wasOpen = candleSelected === id;
+  if (candleSelected) {
+    const prev = document.getElementById(`pc-detail-${candleSelected}`);
+    if (prev) prev.innerHTML = '';
+  }
+  candleSelected = wasOpen ? null : id;
+  if (!wasOpen) chartsOpenDetail(id, '60', 'pc-detail-');
 });
