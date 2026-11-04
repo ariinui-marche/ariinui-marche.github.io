@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-03T22:17:55.013Z",
+  "timestamp": "2026-11-04T02:23:16.914Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -11492,7 +11492,7 @@
       "impact": "Low",
       "forecast": "-14.0%",
       "previous": "-15.2%",
-      "actual": ""
+      "actual": "-13.6%"
     },
     {
       "title": "ANZ Commodity Prices m/m",
@@ -11501,7 +11501,7 @@
       "impact": "Low",
       "forecast": "",
       "previous": "0.6%",
-      "actual": ""
+      "actual": "0.6%"
     },
     {
       "title": "Household Spending m/m",
@@ -11510,7 +11510,7 @@
       "impact": "Low",
       "forecast": "0.2%",
       "previous": "0.0%",
-      "actual": ""
+      "actual": "0.6%"
     },
     {
       "title": "RatingDog Services PMI",
@@ -11519,7 +11519,7 @@
       "impact": "Low",
       "forecast": "51.7",
       "previous": "51.6",
-      "actual": ""
+      "actual": "50.8"
     },
     {
       "title": "Spanish Unemployment Change",
@@ -11652,7 +11652,7 @@
       "country": "USD",
       "date": "2026-11-04T10:30:00-05:00",
       "impact": "Low",
-      "forecast": "-0.1M",
+      "forecast": "-1.7M",
       "previous": "-1.9M",
       "actual": ""
     },
@@ -11886,7 +11886,7 @@
       "country": "USD",
       "date": "2026-11-05T10:30:00-05:00",
       "impact": "Low",
-      "forecast": "",
+      "forecast": "81B",
       "previous": "80B",
       "actual": ""
     },
