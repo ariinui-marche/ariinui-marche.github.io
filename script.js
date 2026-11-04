@@ -1954,3 +1954,70 @@ if ('serviceWorker' in navigator) {
     });
   }
 }
+
+// ===== CANDLE : bougies POH (14h / 15h-17h / 22h / 02h, heure UTC-10) des symboles de Charts =====
+let candlePoh = null;
+const CANDLE_SLOTS = [['14', '14h'], ['1517', '15-17h'], ['22', '22h'], ['02', '02h']];
+
+function candleSvg(day) {
+  const cs = CANDLE_SLOTS.map(([k, lbl]) => ({ lbl, c: day.c[k] }));
+  const vals = cs.filter((x) => x.c);
+  if (!vals.length) return '';
+  const W = 400, H = 120, PAD = 10, LBL = 16;
+  const hi = Math.max(...vals.map((x) => x.c[1]));
+  const lo = Math.min(...vals.map((x) => x.c[2]));
+  const rng = hi - lo || 1;
+  const y = (v) => PAD + (1 - (v - lo) / rng) * (H - LBL - 2 * PAD);
+  const step = (W - 2 * PAD) / 4, bw = step * 0.4;
+  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">` +
+    cs.map((x, i) => {
+      const cx = PAD + step * (i + 0.5);
+      let g = `<text x="${cx.toFixed(1)}" y="${H - 3}" text-anchor="middle" class="pc-lbl">${x.lbl}</text>`;
+      if (x.c) {
+        const [o, h, l, c] = x.c;
+        const col = c >= o ? '#26a69a' : '#ef5350';
+        g += `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="1.4"/>` +
+          `<rect x="${(cx - bw / 2).toFixed(1)}" y="${y(Math.max(o, c)).toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(1, Math.abs(y(o) - y(c))).toFixed(1)}" fill="${col}"/>`;
+      }
+      return g;
+    }).join('') + '</svg>';
+}
+
+function candleRender() {
+  const list = document.getElementById('candleList');
+  if (!candlePoh) { list.innerHTML = '<div class="charts-intro">POH candles unavailable right now.</div>'; return; }
+  const rows = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id])
+    .map((p) => ({ p, s: chartsCandles ? chartsScore(p.id) : { group: 2, move: 0 } }))
+    .sort((x, y) => x.s.group - y.s.group || y.s.move - x.s.move);
+  let date = '';
+  list.innerHTML = rows.map(({ p, s }) => {
+    const days = candlePoh[p.id].filter((d) => Object.keys(d.c).length);
+    const day = days[days.length - 1];
+    if (!day) return '';
+    date = day.d;
+    const cls = s.group === 0 ? 'cd-bull' : s.group === 1 ? 'cd-bear' : '';
+    return `<div class="cd-row ${cls}"><div class="cd-head"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span></div>${candleSvg(day)}</div>`;
+  }).join('');
+}
+
+async function candleLoad() {
+  try {
+    const res = await fetch('./data/poh-candles.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error(res.status);
+    candlePoh = (await res.json()).pairs;
+  } catch (e) { if (!candlePoh) candlePoh = null; }
+  if (!chartsCandles) {
+    try {
+      const r = await fetch('./data/daily-candles.json', { cache: 'no-store' });
+      if (r.ok) chartsCandles = (await r.json()).pairs;
+    } catch (e) { /* tri facultatif */ }
+  }
+  candleRender();
+}
+
+document.getElementById('candleToggle')?.addEventListener('click', (e) => {
+  const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
+  e.currentTarget.setAttribute('aria-expanded', String(!expanded));
+  document.getElementById('candleBody').classList.toggle('collapsed', expanded);
+  if (!expanded) candleLoad();
+});
