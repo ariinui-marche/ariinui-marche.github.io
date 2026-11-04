@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-04T09:30:28.306Z",
+  "timestamp": "2026-11-04T17:25:19.839Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -11582,7 +11582,7 @@
       "impact": "Low",
       "forecast": "53.1",
       "previous": "53.1",
-      "actual": ""
+      "actual": "52.8"
     },
     {
       "title": "Core CPI Flash Estimate y/y",
@@ -11591,7 +11591,7 @@
       "impact": "Medium",
       "forecast": "2.5%",
       "previous": "2.5%",
-      "actual": ""
+      "actual": "2.5%"
     },
     {
       "title": "CPI Flash Estimate y/y",
@@ -11600,7 +11600,7 @@
       "impact": "Medium",
       "forecast": "4.0%",
       "previous": "3.8%",
-      "actual": ""
+      "actual": "4.0%"
     },
     {
       "title": "ADP Non-Farm Employment Change",
@@ -11609,7 +11609,7 @@
       "impact": "Low",
       "forecast": "67K",
       "previous": "90K",
-      "actual": ""
+      "actual": "86K"
     },
     {
       "title": "Trade Balance",
@@ -11618,7 +11618,7 @@
       "impact": "Low",
       "forecast": "4.8B",
       "previous": "4.2B",
-      "actual": ""
+      "actual": "5.4B"
     },
     {
       "title": "Trade Balance",
@@ -11627,7 +11627,7 @@
       "impact": "Low",
       "forecast": "-107.9B",
       "previous": "-105.6B",
-      "actual": ""
+      "actual": "-105.0B"
     },
     {
       "title": "Final Services PMI",
@@ -11636,7 +11636,7 @@
       "impact": "Low",
       "forecast": "57.9",
       "previous": "57.9",
-      "actual": ""
+      "actual": "56.1"
     },
     {
       "title": "ISM Services PMI",
@@ -11645,7 +11645,7 @@
       "impact": "Medium",
       "forecast": "54.8",
       "previous": "54.9",
-      "actual": ""
+      "actual": "54.5"
     },
     {
       "title": "Crude Oil Inventories",
@@ -11654,7 +11654,7 @@
       "impact": "Low",
       "forecast": "-1.7M",
       "previous": "-1.9M",
-      "actual": ""
+      "actual": "-0.9M"
     },
     {
       "title": "Monetary Policy Meeting Minutes",
