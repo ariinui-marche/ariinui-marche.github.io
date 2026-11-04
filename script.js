@@ -2003,11 +2003,18 @@ function candleRender() {
 }
 
 async function candleLoad() {
-  try {
-    const res = await fetch('./data/poh-candles.json', { cache: 'no-store' });
-    if (!res.ok) throw new Error(res.status);
-    candlePoh = (await res.json()).pairs;
-  } catch (e) { if (!candlePoh) candlePoh = null; }
+  try { // en direct via le proxy Vercel (instantané), repli sur le JSON du cron
+    const res = await fetch('https://ariinuiirgina.vercel.app/api/poh-candles', { cache: 'no-store', signal: AbortSignal.timeout(8000) });
+    const j = res.ok ? await res.json() : null;
+    if (!j || !j.pairs || Object.keys(j.pairs).length < 20) throw new Error('proxy');
+    candlePoh = j.pairs;
+  } catch (e) {
+    try {
+      const res = await fetch('./data/poh-candles.json', { cache: 'no-store' });
+      if (!res.ok) throw new Error(res.status);
+      candlePoh = (await res.json()).pairs;
+    } catch (e2) { if (!candlePoh) candlePoh = null; }
+  }
   if (!chartsCandles) {
     try {
       const r = await fetch('./data/daily-candles.json', { cache: 'no-store' });
