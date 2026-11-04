@@ -5,6 +5,7 @@ on:
     - cron: '10 21,22 * * *'   # juste après la clôture 17h New York (21h ou 22h UTC selon l'heure d'été)
     - cron: '30 0,6 * * *'
     - cron: '10 13 * * *'   # apr�s la bougie POH 02h (12h-13h UTC)
+    - cron: '10 3,9 * * *'   # apres la bougie 15-17h (01-03 UTC) et la bougie 22h (08-09 UTC)
   workflow_dispatch:
 
 permissions:
