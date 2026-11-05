@@ -2188,6 +2188,10 @@ async function candleLoad() {
 document.getElementById('candleToggle')?.addEventListener('click', (e) => {
   const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
   document.body.classList.toggle('cc-lock', !expanded);
+  try { // plein écran réel (masque aussi la barre du navigateur / d'état), geste utilisateur requis
+    if (!expanded) document.documentElement.requestFullscreen?.({ navigationUI: 'hide' })?.catch(() => {});
+    else if (document.fullscreenElement) document.exitFullscreen?.()?.catch(() => {});
+  } catch (e) { /* non supporté */ }
   e.currentTarget.setAttribute('aria-expanded', String(!expanded));
   document.getElementById('candleBody').classList.toggle('collapsed', expanded);
   if (!expanded) candleLoad();
