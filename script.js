@@ -2004,19 +2004,35 @@ function candleRender() {
   if (candleSelected) chartsOpenDetail(candleSelected, '60', 'pc-detail-');
 }
 
+const CANDLE_LS = 'candlePohCache';
+async function candleFetchProxy() {
+  const res = await fetch('https://ariinuiirgina.vercel.app/api/poh-candles', { cache: 'no-store', signal: AbortSignal.timeout(15000) });
+  const j = res.ok ? await res.json() : null;
+  if (!j || !j.pairs || !Object.keys(j.pairs).length) throw new Error('proxy');
+  return j;
+}
+function candleMerge(j) { // par paire : on garde l'ancienne série si la nouvelle manque (jamais de bougie qui disparaît)
+  candlePoh = Object.assign({}, candlePoh || {}, j.pairs);
+  candleDaily = Object.assign({}, candleDaily || {}, j.daily || {});
+}
 async function candleLoad() {
-  try { // en direct via le proxy Vercel (instantané), repli sur le JSON du cron
-    const res = await fetch('https://ariinuiirgina.vercel.app/api/poh-candles', { cache: 'no-store', signal: AbortSignal.timeout(8000) });
-    const j = res.ok ? await res.json() : null;
-    if (!j || !j.pairs || Object.keys(j.pairs).length < 20) throw new Error('proxy');
-    candlePoh = j.pairs;
-    candleDaily = j.daily || null;
-  } catch (e) {
+  if (!candlePoh) { // affichage instantané : dernière série connue (localStorage), puis rafraîchie en direct
+    try {
+      const c = JSON.parse(localStorage.getItem(CANDLE_LS) || 'null');
+      if (c && c.pairs) { candleMerge(c); candleRender(); }
+    } catch (e) { /* pas de cache */ }
+  }
+  let j = null;
+  for (let t = 0; t < 2 && !j; t++) { try { j = await candleFetchProxy(); } catch (e) { /* 2e essai */ } }
+  if (j) {
+    candleMerge(j);
+    try { localStorage.setItem(CANDLE_LS, JSON.stringify({ pairs: candlePoh, daily: candleDaily })); } catch (e) { /* quota */ }
+  } else if (!candlePoh) {
     try {
       const res = await fetch('./data/poh-candles.json', { cache: 'no-store' });
       if (!res.ok) throw new Error(res.status);
       candlePoh = (await res.json()).pairs;
-    } catch (e2) { if (!candlePoh) candlePoh = null; }
+    } catch (e2) { candlePoh = null; }
   }
   if (!chartsCandles) {
     try {
@@ -2024,7 +2040,7 @@ async function candleLoad() {
       if (r.ok) chartsCandles = (await r.json()).pairs;
     } catch (e) { /* tri facultatif */ }
   }
-  if (!candleDaily && chartsCandles) { // repli : Daily du cron (D0 peut être en retard)
+  if ((!candleDaily || !Object.keys(candleDaily).length) && chartsCandles) { // repli : Daily du cron (D0 peut être en retard)
     candleDaily = {};
     for (const id of Object.keys(chartsCandles)) candleDaily[id] = chartsCandles[id].slice(-4);
   }
