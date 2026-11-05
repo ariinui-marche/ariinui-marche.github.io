@@ -1959,7 +1959,8 @@ if ('serviceWorker' in navigator) {
 // ===== CANDLE : bougies POH (14h / 15h-17h / 22h / 02h, heure UTC-10) des symboles de Charts =====
 let candlePoh = null;
 let candleSelected = null;
-let candleSel = new Set(); // paires choisies (vide = toutes)
+let candleSel = new Set(); // paires validées (vide = toutes)
+let candleDraft = new Set(); // choix en cours, appliqué au clic sur « OK »
 try { candleSel = new Set(JSON.parse(localStorage.getItem('candleSel') || '[]')); } catch (e) { /* aucune sélection */ }
 const CANDLE_SLOTS = [['12', '12h'], ['14', '14h'], ['15', '15h'], ['17', '17h'], ['22', '22h'], ['23', '23h'], ['02', '02h'], ['03', '03h'], ['07', '07h']];
 let candleDaily = null; // { PAIR: [[t,o,h,l,c], ...4 derniers jours D3..D0] }
@@ -2014,7 +2015,7 @@ function candleSvg(day, dly) {
 function candleRender() {
   const list = document.getElementById('candleList');
   if (!candlePoh) { list.innerHTML = '<div class="charts-intro">POH candles unavailable right now.</div>'; return; }
-  const rows = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id] && (!candleSel.size || candleSel.has(p.id)))
+  const rows = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id] && (candleDiff() || !candleSel.size || candleSel.has(p.id)))
     .map((p) => ({ p, s: chartsCandles ? chartsScore(p.id) : { group: 2, move: 0 } }))
     .sort((x, y) => x.s.group - y.s.group || y.s.move - x.s.move);
   let date = '';
@@ -2044,6 +2045,15 @@ function candleGo(i) {
   if (!n) return;
   l.scrollTo({ left: Math.max(0, Math.min(n - 1, i)) * l.clientWidth, behavior: 'smooth' });
 }
+// Choix en cours différent de la sélection validée : le carrousel montre alors toutes les paires pour pouvoir naviguer vers chaque symbole touché
+function candleDiff() {
+  return candleDraft.size !== candleSel.size || [...candleDraft].some((x) => !candleSel.has(x));
+}
+function candleJumpTo(id) {
+  const l = document.getElementById('candleList');
+  const i = [...candleSlides()].findIndex((r) => r.querySelector('[data-pair]')?.dataset.pair === id);
+  if (i >= 0) { l.scrollTo({ left: i * l.clientWidth, behavior: 'smooth' }); }
+}
 function candleSelSave() {
   try { localStorage.setItem('candleSel', JSON.stringify([...candleSel])); } catch (e) { /* quota */ }
 }
@@ -2052,12 +2062,18 @@ function candleStripRender() {
   const g = document.getElementById('candleStrip');
   if (!g) return;
   const sc = g.scrollLeft;
-  g.innerHTML = `<button type="button" class="cc-chip${candleSel.size ? '' : ' on'}" data-id="">ALL</button>` +
-    CORR_ALL_PAIRS.map((p) => `<button type="button" class="cc-chip${candleSel.has(p.id) ? ' on' : ''}" data-id="${p.id}">${p.label}</button>`).join('');
+  g.innerHTML = `<button type="button" class="cc-chip${candleSel.size || candleDraft.size ? '' : ' on'}" data-id="">ALL</button>` +
+    CORR_ALL_PAIRS.map((p) => `<button type="button" class="cc-chip${candleDraft.has(p.id) ? ' on' : ''}" data-id="${p.id}">${p.label}</button>`).join('');
   g.scrollLeft = sc;
+  const v = document.getElementById('candleValidate');
+  if (v) {
+    v.hidden = !candleDiff();
+    v.textContent = candleDraft.size ? `✓ OK (${candleDraft.size})` : '✓ ALL';
+  }
 }
 function candleSelChanged() {
   candleSelSave();
+  candleDraft = new Set(candleSel);
   candleStripRender();
   candleSelected = null;
   if (candlePoh) candleRender();
@@ -2068,10 +2084,19 @@ document.getElementById('candleStrip')?.addEventListener('click', (e) => {
   const b = e.target.closest('.cc-chip');
   if (!b) return;
   const id = b.dataset.id;
-  if (!id) candleSel.clear();
-  else if (candleSel.has(id)) candleSel.delete(id); else candleSel.add(id);
+  if (!id) { candleDraft.clear(); candleSel = new Set(); candleSelChanged(); return; } // ALL : retour immédiat à toutes les paires
+  const was = candleDiff();
+  if (candleDraft.has(id)) candleDraft.delete(id); else candleDraft.add(id);
+  candleStripRender(); // choix en cours : le filtre ne s'applique qu'au clic sur « OK »
+  if (candlePoh && candleDiff() !== was) candleRender(); // liste complète pendant le choix, filtrée sinon
+  candleJumpTo(id);
+  candleNavUpdate();
+});
+document.getElementById('candleValidate')?.addEventListener('click', () => {
+  candleSel = new Set(candleDraft);
   candleSelChanged();
 });
+candleDraft = new Set(candleSel);
 candleStripRender();
 
 function candleNavUpdate() {
