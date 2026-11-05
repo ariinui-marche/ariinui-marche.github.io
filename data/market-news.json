@@ -1,82 +1,208 @@
 {
-  "timestamp": "2026-11-05T09:53:06.095Z",
+  "timestamp": "2026-11-05T17:41:37.111Z",
   "items": [
+    {
+      "title": "Advanced Flower Capital earnings missed by $0.01, revenue topped estimates",
+      "link": "https://www.investing.com/news/earnings/advanced-flower-capital-earnings-missed-by-001-revenue-topped-estimates-5005275",
+      "pubDate": "2026-11-05T17:35:23.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Why is Microsoft stock sliding today?",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-microsoft-stock-sliding-today-93CH-5005274",
+      "pubDate": "2026-11-05T17:33:55.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Why is Meta Platforms stock sliding today?",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-meta-platforms-stock-sliding-today-93CH-5005272",
+      "pubDate": "2026-11-05T17:33:25.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Why is Propel Holdings stock sliding today?",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-propel-holdings-stock-sliding-today-93CH-5005271",
+      "pubDate": "2026-11-05T17:31:56.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Choice Hotels CFO Scott Oaksmith sells $240,701 in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/choice-hotels-cfo-scott-oaksmith-sells-240701-in-shares-93CH-5005270",
+      "pubDate": "2026-11-05T17:30:53.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Google faces claims student used AI chat on US school laptop to plan suicide attempt",
+      "link": "https://www.investing.com/news/stock-market-news/google-faces-claims-student-used-aichat-on-us-school-laptop-to-plan-suicide-attempt-5005261",
+      "pubDate": "2026-11-05T17:30:38.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Elong Power secures $3.26M from warrant exercise agreement",
+      "link": "https://www.investing.com/news/company-news/elong-power-secures-326m-from-warrant-exercise-agreement-93CH-5005265",
+      "pubDate": "2026-11-05T17:28:30.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Gyrodyne discloses CEO remarks at annual shareholders meeting",
+      "link": "https://www.investing.com/news/sec-filings/gyrodyne-discloses-ceo-remarks-at-annual-shareholders-meeting-93CH-5005264",
+      "pubDate": "2026-11-05T17:27:47.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Albertsons must pay $900 million for fueling opioid epidemic in Washington state, judge rules",
+      "link": "https://www.investing.com/news/stock-market-news/albertsons-must-pay-900-million-for-fueling-opioid-epidemic-in-washington-state-judge-rules-5005252",
+      "pubDate": "2026-11-05T17:27:11.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Banks brace for tighter oversight from US Congress after Democrats sweep",
+      "link": "https://www.investing.com/news/economy-news/banks-brace-for-tighter-oversight-from-us-congress-after-democrats-sweep-5002830",
+      "pubDate": "2026-11-05T17:26:56.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "China’s Central Bank Tweaks Forex Reserve Rules to Steady Yuan",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNaUVpai1RSG9LWk82anFJT1hrZlgtM0t3LTQ5ZDBHLXFOLVpyOFhiR0xZa3pLMkluNnpOdzBHWDdwbnZESzk2bWhybUhmdGZUSFFVd0owXzV1ZXJlcXliazhtclhMTV9vQzlSOGlZd0VlNUFLM2V2RUFwNG9SUjFWSG5aeXNUdzBlcmlvRl9RR3JvNUJwZFluUGVrVGduVXpNUEdCcjFTVFI5RktrU1JyMnd0R2E?oc=5",
+      "pubDate": "2026-11-05T16:37:11.000Z",
+      "description": "China’s Central Bank Tweaks Forex Reserve Rules to Steady Yuan&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "Why Is the US Stock Market Crashing? 3 Reasons Behind the $2 Trillion Wipeout",
+      "link": "https://beincrypto.com/why-us-stock-market-crashing-3-reasons/",
+      "pubDate": "2026-11-05T16:17:28.000Z",
+      "description": "US stocks lost $2 trillion in an hour. Here are the 3 reasons chip and AI stocks are crashing, and what comes next.\nThe post Why Is the US Stock Market Crashing? 3 Reasons Behind the $2 Trillion Wipeout appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc",
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261105a.htm",
+      "pubDate": "2026-11-05T16:00:00.000Z",
+      "description": "Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc",
+      "source": "Federal Reserve"
+    },
+    {
+      "title": "Gold Holds Above $4,000 as Dollar, Yields Fall on Midterm Result",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNVVJrRWVPZ19DM1pLb3UzNEtBc0hseHNtMUY4RTRTRDdMb3Fnb19MM200Q05YNG8yN1VFYURtNjdqTE1EQUgxZG41R3ZQa0t3Z2JpQjFYUEY4VVlhLVk2dzR0dmhaaWdlUmdINE9Cb1cwRVdpbHJNTGZsejlmYkluVmdOSEZEVEpudmFZNENkZzFWSnFELUViV2NNTGUzUHBuMU9Wa3dpclhyZ2hPVUJTVGV4cw?oc=5",
+      "pubDate": "2026-11-05T15:59:32.000Z",
+      "description": "Gold Holds Above $4,000 as Dollar, Yields Fall on Midterm Result&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "Bank of Canada raises the policy rate by 25 basis points to 2½%",
+      "link": "https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/",
+      "pubDate": "2026-11-05T15:40:46.000Z",
+      "description": "The Bank of Canada today increased its target for the overnight rate by 25 basis points to 2.5%, with the Bank Rate at 2.75% and the deposit rate at 2.45%.",
+      "source": "Bank of Canada"
+    },
+    {
+      "title": "BeInCrypto at MERGE Madrid 2026: Banks Turn to Stablecoin Infrastructure",
+      "link": "https://beincrypto.com/beincrypto-at-merge-madrid-2026-banks-turn-to-stablecoin-infrastructure/",
+      "pubDate": "2026-11-05T15:35:21.000Z",
+      "description": "MERGE Madrid ran from October 27 to 29, opening at Bolsa de Madrid, the city&#8217;s stock exchange, before the main program moved to Palacio de Cibeles. Lu&#237;s De Magalh&#227;es, our Head of Latin America, and Martin Coxall, our VP of I",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Cardano Bulls Predict a 2,000% Rally, But Analysts Are Not Convinced",
+      "link": "https://beincrypto.com/cardano-ada-2000-percent-rally-analysts/",
+      "pubDate": "2026-11-05T15:15:13.000Z",
+      "description": "An analyst says Cardano (ADA) could repeat the explosive 2,000% rally of previous cycles. However, key technical conditions remain unconfirmed, and several skeptics strongly disagree. The debate highlights the price levels that could decide",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Nasdaq-Listed Bitfarms Sold All Its BTC: Is It Still a Bitcoin Stock?",
+      "link": "https://beincrypto.com/bitfarms-sold-all-bitcoin-stock/",
+      "pubDate": "2026-11-05T14:59:45.000Z",
+      "description": "Bitfarms, now Keel, sold all its Bitcoin and will sell mined coins daily. Here is what still ties its stock to BTC.\nThe post Nasdaq-Listed Bitfarms Sold All Its BTC: Is It Still a Bitcoin Stock? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Zuri-Invest Tokenizes Uranium Holdings for Launch of New Physical Uranium Tracker Certificate",
+      "link": "https://beincrypto.com/zuri-invest-tokenized-uranium-tracker-tezos/",
+      "pubDate": "2026-11-05T14:00:00.000Z",
+      "description": "Zurich, Switzerland &#8211; 5th November 2026 &#8212; Zuri-Invest AG, an independent asset manager regulated by the Swiss Financial Market Supervisory Authority (FINMA) that services private, professional, and institutional clients, has ann",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "US Inflation Runs Hotter, So Why Did BoE Hike Rates and Not the Fed?",
+      "link": "https://beincrypto.com/us-inflation-hotter-britain-hikes-rates/",
+      "pubDate": "2026-11-05T13:45:13.000Z",
+      "description": "Why did Britain hike rates to 4% while the Fed held, despite hotter US inflation? Its reliance on imported gas is one factor.\nThe post US Inflation Runs Hotter, So Why Did BoE Hike Rates and Not the Fed? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "2026-11-05 - Martin Schlegel: Transmission and conduct of monetary policy in Switzerland",
+      "link": "https://www.snb.ch/en/publications/communication/speeches/2026/ref_20261105_msl",
+      "pubDate": "2026-11-05T12:40:00.000Z",
+      "description": "To achieve its mandate, a central bank needs to understand how its actions affect the financial system and the economy. Switzerland is a small open economy with a stable political and institutional environment. This creates a special settin",
+      "source": "Swiss National Bank"
+    },
+    {
+      "title": "James Wynn Doubles Down on Bitcoin Crash Call Despite Fresh ETF Inflows",
+      "link": "https://beincrypto.com/bitcoin-etfs-us-midterms-james-wynn/",
+      "pubDate": "2026-11-05T12:25:29.000Z",
+      "description": "Bitcoin ETFs drew $74.57 million after the US midterms, while James Wynn bet on a deeper Bitcoin fall.\nThe post James Wynn Doubles Down on Bitcoin Crash Call Despite Fresh ETF Inflows appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Bank rate increased to 4% - November 2026 Monetary Policy Summary and Minutes",
+      "link": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026",
+      "pubDate": "2026-11-05T12:00:00.000Z",
+      "description": "The Bank of England’s Monetary Policy Committee is responsible for making decisions about Bank Rate.",
+      "source": "Bank of England"
+    },
+    {
+      "title": "AFRICA-FX-Ugandan and Nigerian currencies on front foot",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVWVCZ1huVUF2bDZRV1ZibXpPdS1OdW5qWHBNVGt2WmttUnlNbmVJazFjQm52aUVRSTZCZ0k0ZmlIUU4xT3g0UXIwTURnTHVaX3ZQa0M4eXBtNFl5NUx4RUhFX2hWSHp6ak9xcUhGdk42RmtRTzVnTzJNMVJ4akRKd3cxTDhic3FxdXVhNXFTYWhnQzdpNVZhbGtrbFV5Zw?oc=5",
+      "pubDate": "2026-11-05T11:43:21.000Z",
+      "description": "AFRICA-FX-Ugandan and Nigerian currencies on front foot&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "TRM Labs: KYC for AI Agents Must Start With the Human Behind Them",
+      "link": "https://beincrypto.com/ai-agents-money-liability-trm-labs/",
+      "pubDate": "2026-11-05T11:40:57.000Z",
+      "description": "North Korean hackers stole around $6.3 billion from Binance last week after tricking employees through a fake job interview. They even exploited an internal AI tool. Most of the money was gone within 20 minutes. The Binance hack exposed how",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Mapping the Market: After hot run, Dollar Tree shares could rally further",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNdDY0SjVZTzRWNG42NWxUaEJZaFVtLXpvTU9kaFVqeVFzdmkyOHhNazFXYVEzb0RUQ2xDaC1QZDVLOG1HX1lOYXpKeWpxRkgtMHZKcldjaU9DZ1NQZjk3ekdkMzdqcEVicWZ1VndjNkNqYnhOUUZwc3IwTzg0WmZiT2EyX0dmbHc?oc=5",
+      "pubDate": "2026-11-05T11:21:18.000Z",
+      "description": "Mapping the Market: After hot run, Dollar Tree shares could rally further&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Western Union Reveals the Real Business Behind Its USDPT Stablecoin",
+      "link": "https://beincrypto.com/western-union-usdpt-stablecoin-business-strategy/",
+      "pubDate": "2026-11-05T11:13:07.000Z",
+      "description": "Western Union has a costly problem. Billions of dollars can move through its global payment network, but some of its capital must sit idle in bank accounts, waiting for customers to send money. The 175-year-old remittance giant believes sta",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "KuCoin TradFi Review: Can Crypto Traders Access Global Markets 24/7?",
+      "link": "https://beincrypto.com/kucoin-tradfi-review-stocks-commodities-trading/",
+      "pubDate": "2026-11-05T10:36:00.000Z",
+      "description": "Traditional markets are becoming a major business for crypto exchanges. Trading in perpetual contracts linked to stocks, commodities and other real-world assets reached $347 billion in May 2026, according to CoinGecko. During the first five",
+      "source": "BeInCrypto"
+    },
     {
       "title": "The £221 Million Scam Epidemic Hiding on Social Media",
       "link": "https://beincrypto.com/uk-investment-scams-banks-wirex-fraud/",
       "pubDate": "2026-11-05T09:48:11.000Z",
       "description": "A scammer no longer needs to break into your bank account to steal your money. An investment advert on Instagram or a convincing WhatsApp message can be enough to persuade you to send it yourself. That shift is showing up in the UK&#8217;s ",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Citizens raises Progyny stock price target on guidance increase",
-      "link": "https://www.investing.com/news/analyst-ratings/citizens-raises-progyny-stock-price-target-on-guidance-increase-93CH-5002758",
-      "pubDate": "2026-11-05T09:34:42.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Air France-KLM shares jump 13% as Q3 operating profit beats forecasts",
-      "link": "https://www.investing.com/news/earnings/air-franceklm-beats-q3-profit-estimates-but-raises-fuel-cost-forecast-5002456",
-      "pubDate": "2026-11-05T09:34:40.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Tenaris posts Q3 revenue beat on North American demand growth; shares up 3%",
-      "link": "https://www.investing.com/news/stock-market-news/tenaris-posts-q3-revenue-beat-on-north-american-demand-growth-shares-up-3-93CH-5002756",
-      "pubDate": "2026-11-05T09:30:25.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Oil rises as investors weigh uncertainties around Iran war",
-      "link": "https://www.investing.com/news/commodities-news/oil-falls-for-a-fourth-day-on-expectations-for-lower-risk-of-iran-war-escalation-5002042",
-      "pubDate": "2026-11-05T09:30:24.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Goldman Sachs lowers Timken stock price target to $126 on valuation",
-      "link": "https://www.investing.com/news/analyst-ratings/goldman-sachs-lowers-timken-stock-price-target-to-126-on-valuation-93CH-5002746",
-      "pubDate": "2026-11-05T09:28:55.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Citizens raises Procore stock price target to $91 on strong results",
-      "link": "https://www.investing.com/news/analyst-ratings/citizens-raises-procore-stock-price-target-to-91-on-strong-results-93CH-5002745",
-      "pubDate": "2026-11-05T09:28:53.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Raymond James raises e.l.f. Beauty stock price target on strong results",
-      "link": "https://www.investing.com/news/analyst-ratings/raymond-james-raises-elf-beauty-stock-price-target-on-strong-results-93CH-5002744",
-      "pubDate": "2026-11-05T09:28:52.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Citizens raises Precigen stock price target to $12 on strong sales",
-      "link": "https://www.investing.com/news/analyst-ratings/citizens-raises-precigen-stock-price-target-to-12-on-strong-sales-93CH-5002743",
-      "pubDate": "2026-11-05T09:28:49.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Citizens cuts NICE Systems stock price target on slowing growth",
-      "link": "https://www.investing.com/news/analyst-ratings/citizens-cuts-nice-systems-stock-price-target-on-slowing-growth-93CH-5002742",
-      "pubDate": "2026-11-05T09:28:44.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Why is Morgan Advanced Materials stock surging today?",
-      "link": "https://www.investing.com/news/stock-market-news/why-is-morgan-advanced-materials-stock-surging-today-93CH-5002741",
-      "pubDate": "2026-11-05T09:27:39.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "South Korea Delays Its Crypto Tax Again, Now Until 2029",
@@ -107,13 +233,6 @@
       "source": "Reuters"
     },
     {
-      "title": "Dollar Stays Weaker After Democratic Sweep",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPQTZ0S2dmWVlFQllSWjVpYi1PN1d2ZnV5amExZlRJTVhwMWMycjgxZk1BUkNMbF90QW5kaS1WalktOUdVVXhZOGkwbUhEVDh1OEc1Y3dIUlZzZjNTbE45V1ZmRnJTeG4wd3JRekxPeEhyalBENzVLUHVpdER2NkdMMGdjOGZDbk9JOVJ3Y0RpQzB0Qmczd1JDRk5nS3EtMGJGaEV3NGdjT2JCN21kc1hHZl9LQQ?oc=5",
-      "pubDate": "2026-11-05T07:57:00.000Z",
-      "description": "Dollar Stays Weaker After Democratic Sweep&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
       "title": "Piero Cipollone: Shaping the future of money",
       "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261105~6495a0df6f.en.html",
       "pubDate": "2026-11-05T07:30:00.000Z",
@@ -128,32 +247,11 @@
       "source": "Bank of Japan"
     },
     {
-      "title": "CERT-In Warns AI-Powered Hacker Group Is Hitting India&#039;s Crypto and Fintech Firms",
-      "link": "https://beincrypto.com/cert-in-crafty-falcon-crypto-exchanges/",
-      "pubDate": "2026-11-05T06:27:09.000Z",
-      "description": "India&#8217;s cyber agency CERT-In says an AI-assisted hacker group has stolen wallet keys from crypto exchanges. The same group is triggering unauthorized transfers through fintech payment systems. CERT-In rated its November 4 warning Crit",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Microsoft rejects multibillion-dollar AI deal with UK's Nscale, FT reports",
-      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNb3YxSi01QlpvU2xqQVk1TUZQVTdjQnlqOUZwaFUzZ2txZHBJaHZ5bTVNOXpRZGV0czNzQkRCamNqNXZ2cUFoZ1JsV1l0cGFKazh4SXpjSlJ0Q1pMR0IyVWhfQkZlbTAtWFJ1ZERpbDdfNzZqaVlZUjg2a2RKNlRfS0N4OFMwSmpERG9EWng5MC1XXy1ENURJMUNWTTEyR3Q0UkE3WnRSMVJmVDAwdlJoVDhXa0h1YXpyYjBR?oc=5",
-      "pubDate": "2026-11-05T06:12:31.000Z",
-      "description": "Microsoft rejects multibillion-dollar AI deal with UK's Nscale, FT reports&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "China Mulls Dollar, Offshore Yuan Sovereign Bond Sale This Month",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNemphYmpSVmkwMGFHMExqMlU3dHJUelRBZld3TGpBTnNaZGotenRXeV95VHRRSm4xRWxKVHhNdmJfM3A5RmRjVUY3RHNpQkFUUE9NZVhyczZZQ0VBY0dsbFZ1Um41bkNuLWtXZXM4YkhxUFVwYlpuY3RVMmY0UFBXVHBJb2JaSUFFRS00dkZ0VnhUd2dtRDFFNExRYnVkM21iLUxRalJWckF2TnlGdi1VeENBUm0?oc=5",
       "pubDate": "2026-11-05T06:02:00.000Z",
       "description": "China Mulls Dollar, Offshore Yuan Sovereign Bond Sale This Month&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
-    },
-    {
-      "title": "Wall Street’s Midterm Rally Faces Its Real Test on Friday, Jim Cramer Warns",
-      "link": "https://beincrypto.com/jim-cramer-jobs-report-midterm-rally/",
-      "pubDate": "2026-11-05T06:00:00.000Z",
-      "description": "Stocks and crypto markets rallied after Democrats won control of Congress. But can the gains hold? Jim Cramer warns of a key test on Friday. The CNBC Mad Money host warned that the October jobs report could undo much of the gains. Crypto tr",
-      "source": "BeInCrypto"
     },
     {
       "title": "Indonesia Kicks Off First Dollar Bond Sale Since MSCI Fallout",
@@ -163,87 +261,31 @@
       "source": "Google News"
     },
     {
-      "title": "Arthur Hayes: Can AI IPO Dilution Choke Bank Liquidity and Hit Bitcoin?",
-      "link": "https://beincrypto.com/arthur-hayes-ai-ipo-dilution-liquidity/",
-      "pubDate": "2026-11-05T05:51:00.000Z",
-      "description": "Arthur Hayes says AI IPO dilution could shrink bank balance sheets and drain the dollar liquidity behind crypto's rally.\nThe post Arthur Hayes: Can AI IPO Dilution Choke Bank Liquidity and Hit Bitcoin? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Gold hits a two-week high as dollar, Treasury yields ease after U.S. midterm elections",
+      "title": "Gold hits 2-week high as dollar, oil, yields fall after U.S. midterms",
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNT0lNbWJsNm9BQkZObjdwTWNBbTQwd093S1c1dV9PTjZmNEQxVmtwNTZwQUROOXJTRFJndXVzVUJJMGloUGdsTjhfN3ctWTdrWFFvME1RbU10OU9MRjFsVElxd0djQTh6YzVKRVhURjA2U1haNEE3ZlVsSXo0VUxNS2F6cnNvQ2RVc0psX3dLck1iNklSLTdRLVE1ZWNSZ2x3MVHSAacBQVVfeXFMTUQta0lIa2tjODZlMzc5Y1hWN3Jpb2YzUVByM3dTNWFsNkdSVmVMT0tVck96cER4VW1jckVUX3VKTG9kVllod0VnTy1Vcy13MVoydnU3NWp1aVBEZjVSY3BVQTNOMUw0V0JmX3p0ZWFSVUNGZ3FZWC1ydW9uakQ4S3dUYTVCUkRPZ2pmWWJISzRZbmxRWEI1UXR1LVZtWVVTNVd2R0U5ZjQ?oc=5",
       "pubDate": "2026-11-05T05:03:03.000Z",
-      "description": "Gold hits a two-week high as dollar, Treasury yields ease after U.S. midterm elections&nbsp;&nbsp;CNBC",
+      "description": "Gold hits 2-week high as dollar, oil, yields fall after U.S. midterms&nbsp;&nbsp;CNBC",
       "source": "Google News"
     },
     {
-      "title": "Silver Could Be Near Its Final Low, Peter Brandt Says, But There’s a Catch",
-      "link": "https://beincrypto.com/peter-brandt-silver-price-falling-wedge/",
-      "pubDate": "2026-11-05T04:55:17.000Z",
-      "description": "Silver prices could be approaching their final low, according to veteran trader Peter Brandt. However, he expects any subsequent recovery to be gradual rather than explosive. The precious metal traded at $53.18 per ounce on Thursday, up 1.7",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Trump Media Bitcoin Transfer of 4,259 BTC Nearly Matches Pledged Loan Collateral",
-      "link": "https://beincrypto.com/trump-media-bitcoin-loan-collateral-transfer/",
-      "pubDate": "2026-11-05T04:37:39.000Z",
-      "description": "A Trump Media Bitcoin transfer of 4,259 BTC nearly matches the collateral pledged against $1B in convertible notes.\nThe post Trump Media Bitcoin Transfer of 4,259 BTC Nearly Matches Pledged Loan Collateral appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Gold Holds Above $4,000 as Dollar, Yields Fall on Midterm Result",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNVVJrRWVPZ19DM1pLb3UzNEtBc0hseHNtMUY4RTRTRDdMb3Fnb19MM200Q05YNG8yN1VFYURtNjdqTE1EQUgxZG41R3ZQa0t3Z2JpQjFYUEY4VVlhLVk2dzR0dmhaaWdlUmdINE9Cb1cwRVdpbHJNTGZsejlmYkluVmdOSEZEVEpudmFZNENkZzFWSnFELUViV2NNTGUzUHBuMU9Wa3dpclhyZ2hPVUJTVGV4cw?oc=5",
-      "pubDate": "2026-11-05T04:27:00.000Z",
-      "description": "Gold Holds Above $4,000 as Dollar, Yields Fall on Midterm Result&nbsp;&nbsp;Bloomberg.com",
+      "title": "Dollar edges lower as U.S. election outcome cheers global markets",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOandhVVlYVDZHTm5ReWlsb2JtUDlNekFjUlpuMHQ1VXl0bUduNHdXTTdjekVtUVZ4aEsxaGpqb2ZHZHBOQVR6dG0wMnBRdUd2eUxxdlZTdjBzbjFrTFRCQzVXYkhRWnMwVWx3bjQ2RTFVeWJCQ0dqclhWbHpNMzRNUEJ5Q1UteGdhMXh1QThqa3hEdzE4dXRmMml3b2FHTzM1WEHSAacBQVVfeXFMTmdWdDQ3R244SnpVRDF3N29UcHY1MGN0bW16V19XSmk2ZENoQXBTYy1vWU9HSTZKd2tURkF4TUpqbWpoeWUzTkZfVFc4U2FGakJSUW82OGI3a250SmZONnZTeDczWWRKZWRiaC11ZWNzVmNIQllheDh2QWphTHZwTHh5WGZfZjNWZmc0UkpkU0M1SzhHUjNndmM5T3c4RVFYWGhRU2JPSEk?oc=5",
+      "pubDate": "2026-11-05T05:03:00.000Z",
+      "description": "Dollar edges lower as U.S. election outcome cheers global markets&nbsp;&nbsp;CNBC",
       "source": "Google News"
     },
     {
-      "title": "Gold rallies as dollar, Treasury yields soften after US midterm results",
+      "title": "Gold at over two-week high as dollar, yields weaken; US payrolls data awaited",
       "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPRGw2bTVBSnBUN1BZcDhwQ0dVSmFIUVhDdGZLazVPNnV2NG5iYkVxXzg5QmRyY21IOWZOcFVRVXJBSU5PT1pXQWh3UHVmVWxhSm15bVh2NTVQZzJGVHpPT2dSSHc2NXlaLUYyQmVGX24xdW84cVN2NXpGcUhGZ0xrNDZSODR1NDNtNW9vc2JJSUVRcGZIMkprZHNONm4wN2VxUzdBX3B1NWxxcDBsWjNnZ05tUzdMRHJNaEJja2oxNC1QLWQt?oc=5",
       "pubDate": "2026-11-05T03:46:00.000Z",
-      "description": "Gold rallies as dollar, Treasury yields soften after US midterm results&nbsp;&nbsp;Reuters",
+      "description": "Gold at over two-week high as dollar, yields weaken; US payrolls data awaited&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
-      "title": "American Bitcoin’s $126 Million Profit Rode Bitcoin’s Rally. Q4 Is Testing It",
-      "link": "https://beincrypto.com/american-bitcoin-q3-earnings-profit/",
-      "pubDate": "2026-11-05T03:06:30.000Z",
-      "description": "American Bitcoin (ABTC) earned $126 million in the third quarter (Q3), powered by a $197.3 million Bitcoin (BTC) gain. Without it, the miner&#8217;s operations posted a small loss.&#160; The company, co-founded by Eric Trump, released its e",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Snap Stock Wipes Out Its Earnings-Day Rally After a Revenue Miss",
-      "link": "https://beincrypto.com/snap-stock-falls-after-q3-earnings/",
-      "pubDate": "2026-11-05T02:30:12.000Z",
-      "description": "Snap Inc. (SNAP) stock fell 11.46% after hours on Wednesday, dropping to $5.24 from its $5.92 close. The Snapchat parent posted a profit and guided above estimates, but missed on revenue and daily users. The after-hours slide erased a 5.81%",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Circle CEO Says Freeze-and-Seize Tools Give Stablecoins an Edge Over Correspondent Banking",
-      "link": "https://beincrypto.com/circle-ceo-stablecoin-freeze-tools-banks/",
-      "pubDate": "2026-11-05T02:30:00.000Z",
-      "description": "Circle CEO Jeremy Allaire says stablecoin freeze tools outdo banks after the $6.3 billion Binance hack, but gaps remain.\nThe post Circle CEO Says Freeze-and-Seize Tools Give Stablecoins an Edge Over Correspondent Banking appeared first on B",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Nearly $1 Billion in Crypto Liquidations Hit as Bitcoin Jumps 4.6%",
-      "link": "https://beincrypto.com/crypto-liquidations-bitcoin-shorts-80000/",
-      "pubDate": "2026-11-05T01:55:27.000Z",
-      "description": "Crypto liquidations reached $974.80 million in 24 hours as the market climbed. Most of the losses fell on traders who had bet on further declines, Coinglass data shows. Bitcoin&#8217;s (BTC) price rose 4.64% over 24 hours to $80,480, accord",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Fidelity&#039;s Timmer Doubts 60/40 Revival as Stock-Bond Correlation Slips",
-      "link": "https://beincrypto.com/timmer-stock-bond-correlation-60-40/",
-      "pubDate": "2026-11-05T01:45:00.000Z",
-      "description": "Fidelity's Jurrien Timmer says higher yields keep the stock-bond correlation positive, casting doubt on a 60/40 revival.\nThe post Fidelity&#039;s Timmer Doubts 60/40 Revival as Stock-Bond Correlation Slips appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Dollar slides as US election drives oil and Treasury yields lower; sterling gains",
+      "title": "Euro edges lower as oil prices rise",
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOS3ZvRzF1aTlTZE9WT0NxYkU4TWFHTi04YnhEVXd1VTJRTXdibGtPdGZtTWkwZEVBLU0xNmtZaEc4R2lWZWVSdGJtY1FSdzhIazR5a2YwdDJoRzFFTHN1Z2FNb2l5b2x5SllyTE9sTTZTNkxFODFJVkhxOGhlblRTXzNiLTZpc3FKcXBqRzZUMjYtY3VXOHlnR0hPOFFYTldZaXpzSGNTbzlPNlhUdHF1amJTcFp1dw?oc=5",
       "pubDate": "2026-11-05T01:06:00.000Z",
-      "description": "Dollar slides as US election drives oil and Treasury yields lower; sterling gains&nbsp;&nbsp;Reuters",
+      "description": "Euro edges lower as oil prices rise&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -275,13 +317,6 @@
       "source": "Google News"
     },
     {
-      "title": "Bank of Canada raises the policy rate by 25 basis points to 2½%",
-      "link": "https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/",
-      "pubDate": "2026-11-04T19:54:29.000Z",
-      "description": "The Bank of Canada today increased its target for the overnight rate by 25 basis points to 2.5%, with the Bank Rate at 2.75% and the deposit rate at 2.45%.",
-      "source": "Bank of Canada"
-    },
-    {
       "title": "A 13.5% Monthly Dividend Trading At 90 Cents On The Dollar",
       "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxON3BSU0xKdGN6aXpMaGczZzVENm5EWkdheUU0UGdmUkhyM2hkb3NQQkZFWFNtQnZoX1psdGNUTWlvTW5raGd5T3R4VjhwMExpVVI3SkF0dGJXRlcxTTdBNVRuZUdHeDFIZVlPdXdkdC1xUDNzbTVCZTB1MmlncmQ1YVhKSTRnbmNhMGY0aVIwNUp2d0hsem0wQmZZMXFhM1lRYklTRWFJVGNEajZv?oc=5",
       "pubDate": "2026-11-04T19:04:00.000Z",
@@ -300,13 +335,6 @@
       "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOVGV3ZUNhcnNROERzUDdtMWNGVTJGd21tQURpVUxrRXE3VFFfSE42RWJCMmhjV2c3ZEtMNHNPeFlhZk0tVXV3NUNtRVFzQ0Mtenl5dUJoblpoTFQ1TVhmRkpXQ2VtaXJPRFpHQVNIYTluWDd3S0tOdm5HYlNYNllKaFViVTd3VkYzUE9la19FNzllN2VKYWpneGR1Q2ptTG9SRTln?oc=5",
       "pubDate": "2026-11-04T17:53:43.000Z",
       "description": "Canadian dollar hits seven-week high on US elections result&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Porsche to pay 535 mln euro fine over diesel cheating",
-      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5STzdjZ29aLUJpcFAzWXEwN0Y4M1NNLWdkY25pM2YyWTVJR0ExcWdpcTA5dTV4dnNvQWlfYmFWeEdZWmZZWWZWRGx4Y25kcmJ1SEc1alBlUXNIeHY3?oc=5",
-      "pubDate": "2026-11-04T16:37:03.000Z",
-      "description": "Porsche to pay 535 mln euro fine over diesel cheating&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -356,6 +384,13 @@
       "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWW1NSkhkZFFvMkx3V0h6eFZ0b3c1d0V3bV9vdFVKeEQ3dE1QX0dWWWNwWTNMdUZFQWNheVFoYVZXNlVyd0RiLXM0ZEwtdEV2MzRaT2IwS0Vyb25ZRjE1TVFFQmxCUENVM2pSOXk3TklmazFBREU0aXEwQlFHRVc2YTBJMjFlTVdTbVlEYWJiQkczT0JLLUVQcXM4T09jOUotc2FRag?oc=5",
       "pubDate": "2026-11-04T10:32:32.000Z",
       "description": "British pound hits seven-week high against wilting dollar&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
+    },
+    {
+      "title": "Rupee ends a tad higher as dollar slips after US midterms",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPVjliVmdJaGt5bnFrYVFoSTNmaDl4SU81bnJoeTBreHh3Q3hzM2VrU1A3empJMDMwbTlqaU9TNkFVWFA3S1lob1lPQzdsSzh4ZEFadG01NDhvRWNqczVmTURrLWM0MlM1VWtEUGUwNTNTenBCU0RrMDdQcDZSTmx6bER1dVI2TEkxdG0xUl9tbmlpNW1ZMHJienVGdXRHa3hBaEllUWVka09qdmZHdkhTNGFJSGdtTnpLWmc?oc=5",
+      "pubDate": "2026-11-04T10:02:35.000Z",
+      "description": "Rupee ends a tad higher as dollar slips after US midterms&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -413,13 +448,6 @@
       "pubDate": "2026-11-04T03:49:00.000Z",
       "description": "Dollar falls after Democrats take Congress in midterm elections&nbsp;&nbsp;CNBC",
       "source": "Google News"
-    },
-    {
-      "title": "Rupee ends a tad higher as dollar slips after US midterms",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPVjliVmdJaGt5bnFrYVFoSTNmaDl4SU81bnJoeTBreHh3Q3hzM2VrU1A3empJMDMwbTlqaU9TNkFVWFA3S1lob1lPQzdsSzh4ZEFadG01NDhvRWNqczVmTURrLWM0MlM1VWtEUGUwNTNTenBCU0RrMDdQcDZSTmx6bER1dVI2TEkxdG0xUl9tbmlpNW1ZMHJienVGdXRHa3hBaEllUWVka09qdmZHdkhTNGFJSGdtTnpLWmc?oc=5",
-      "pubDate": "2026-11-04T02:36:00.000Z",
-      "description": "Rupee ends a tad higher as dollar slips after US midterms&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "Dollar declines after Democrats take US Congress in midterm elections",
@@ -520,53 +548,11 @@
       "source": "Google News"
     },
     {
-      "title": "Sterling steady as traders await BoE, nervously watch midterms",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNTFIwMDZEbEZUUkxKX1pCSkdHSHRtSFRsOTc2NldkMnhENU0wcG9EbmlRdFhMQlZZdlUwbGRIR3Z3OVZwUVg4VnlSeE0zeU1sU2RXWTA0X3lOTEpLWEhma0x3SnR2SUhOb2ZQZjFCSEEzMHpmVEhFS0JZWHVKSG9HdWhjSnplNE4yd3ljN1hEa3JBaEJDbl9zT3p4cjBfWjZCd2tKVnV3?oc=5",
-      "pubDate": "2026-11-03T13:56:34.000Z",
-      "description": "Sterling steady as traders await BoE, nervously watch midterms&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Sterling drifts as BoE rate decision comes into focus",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNRUVzQXNVSXVuNmlYMGV0Q1Nuc2pPM0o1UzZJR203eVFfalkwMF9jQ0pGUlA5U0Y4YmV0bUhiRnlSN2hiTnJqekozUDQ1aXNsX1g0WjNqY0ZXMGRwMGZmMVlpdFR0Nl9IUjBxcmh2Sl9NcUVzMmJDcVgwM0lOUjJJdXk2c0NVTUZFOEJ0SEFxb1ZpYlQzM1Q2dGRfYw?oc=5",
-      "pubDate": "2026-11-03T12:54:42.000Z",
-      "description": "Sterling drifts as BoE rate decision comes into focus&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Weaker dollar views stick running into US midterms, but strategists brace for resilience: Reuters poll",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdTBpTVB0clpHYmlFakphMlpEQVN4QVl1ZjlTODdpc0UzYWt6dW9EZmxCbG9VMkVmTlpJanBubE9MaDMwNVZKX3Y0RUxhejVaSi1SQy1faEdFby0wc3JOR192MkQ5LXNRbkxhNDRqcnptSVRZTTRwVTVnbjVCRkg0c3ZKTkY0NlNiUU1Hbno0Q2ZxMDBJU2wxSjRqQnhUTm15NkZJbU14NjU0WWljeVdLOEUtS2VFMm8wYXlwSmtKZEJEUQ?oc=5",
-      "pubDate": "2026-11-03T11:58:00.000Z",
-      "description": "Weaker dollar views stick running into US midterms, but strategists brace for resilience: Reuters poll&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Dollar choppy but little changed as Mideast, US midterms weighed",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPNE1RdnJYYmVzdzBUWE9zZW5SdkhKVG0wVFlSTmFzUkpOanNhVWc0Nk5DZzJNaUN4azRHUVFnVTFWSEJpT1ByOUJ6Ny1zdlVqanJ5SUpHY1dMWDJ3M0pLWk1ZcUN0MmlLMUlGT01xSkN5VHZzc1NMUVZvaG42Rm9wTV9zejhTeUktb2d0dWpDb1B3dW5oNHJKaHVtLVAzem9qOUFCM05jT2lzQ0ZJSDl5QXVQQnZfT3JwblRZZWpfWnhmRlE?oc=5",
-      "pubDate": "2026-11-03T11:10:06.000Z",
-      "description": "Dollar choppy but little changed as Mideast, US midterms weighed&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Mapping the Market: The dollar could deepen its losses",
-      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOVkRPX3A4QlJBM1I2YnFkaUp0WFI5ZndRamlRa18xakpVRzdlWml1bHZ2dHpXc2Z3M1RuamExdzM4bzM1bDA1OXZHc2VQc3czSFVhTkxnM2FNMGd0NkpzbXZVZlk5azQxel9xMElhaV9PTU1QMmN4Zm5hYlJ5N25YdHJHZWZ0ZnR6VE1sVzdlV0tJZw?oc=5",
-      "pubDate": "2026-11-03T11:05:13.000Z",
-      "description": "Mapping the Market: The dollar could deepen its losses&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "2026-11-03 - Martin Schlegel: Die Schweizer Wirtschaft im globalen Umfeld",
       "link": "https://www.snb.ch/en/publications/communication/speeches/2026/ref_20261103_msl",
       "pubDate": "2026-11-03T10:30:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
-    },
-    {
-      "title": "India eases forex reporting rules for small value service exports, imports",
-      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPU2xvX2xxNlUyTG1CaDJVZW96S2c0N2dQaW9MOFJfcENDOEJQS1FKa00zN2JCbWo2RnVJMjlDRy0yOWJ2Rkd3dUNueUVZZFAxY2RPR2pBUFVtQkdLbkNtaXhOMUhsZEs2cHJmd3Zqb0RFZkNYVjlRcjB6TnlPbHNVRDVYTDd6d3N5bVluTmNwcUkxMDlSdGhVR0ZQY1lMYmZXczA5bG1CQ0ZobkVUeDYxUHlRVkJWVWlF?oc=5",
-      "pubDate": "2026-11-03T10:23:56.000Z",
-      "description": "India eases forex reporting rules for small value service exports, imports&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "The Dollar Is Reasserting Itself as the King of Global Finance",
@@ -590,6 +576,34 @@
       "source": "Reserve Bank of Australia"
     },
     {
+      "title": "Dollar edges higher as Mideast, U.S. midterms eyed",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZUVpcXBPVVJkOHNzTFJSM2x2MXlzY3ltejFRMmFJSVNtNzBpVTNzYXAtQWllMWoyWXFISk5qVmxuZDdna1pXN2RZeUFmZG1ieEJYNXJHZWNNb0IxaE1DN2JxMmdFeHhFR3J6TXNhbnZRWUloUk40czhheW9BUTFlVktRWWtaaFF4RWZDTm4ybXIzWUYzb1hYNEZldjZmVmZsWjRHYmNZa2dxM3Bya1Qw0gG0AUFVX3lxTFBEdlNlS1RiLTRCbDBrSHpCcGRzV3FWNlliRzBkYnNrNm54ZnZrU3lYbmlPZ25hSktma0k0amlNRS1xdTBLOElaQ0dodkN2WFVPVGIyamxuY3NUWFdkdXd5ZjRZSU1iWkNVM0FYQzR5MW02UHVXN3F1RElHOGdIenBuY1dZb21sZFB5MFZVT2F2UHNWUzgyNVRITFFJTlNjQ085MkJabUN1RFlsaTJoU19FYWVSQw?oc=5",
+      "pubDate": "2026-11-03T01:47:00.000Z",
+      "description": "Dollar edges higher as Mideast, U.S. midterms eyed&nbsp;&nbsp;CNBC",
+      "source": "Google News"
+    },
+    {
+      "title": "WSJ Dollar Index Falls 0.08% to 97.00",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOTnhMSHFSb295REZyWXJBNGt4cG8zRDlOQnRGZ3F3LUdRQlYzODJXYzdlUklzd085UGtlOTl1ak0zRlY2WVdXRzZnOWpPN0UzTE9tY3BHTlpzUTJHS3FfV2FRNnJIN0FEaWdBQ0VPc1FJYkFDazBhV1R5aU5OTXZqbGE1cDd1SkJLeUhtTWdCNlltSks5SXRhOExzZEJDNno5X3dxZEZfMUduZEE?oc=5",
+      "pubDate": "2026-11-02T22:35:00.000Z",
+      "description": "WSJ Dollar Index Falls 0.08% to 97.00&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "America’s Multi-Trillion-Dollar AI Buildout Is on the Ballot—and Wall Street Is Watching",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNMGRBeXJhcngwMjFaRi1WQXd4VnpvYUctLTVvY01ERTJibUdjeTJITl9XMFJncFRuTXJ1eUxYbnF6U2xybHpyd0R3NjBFem9jTmZHdVJwTFBDdjlDUG1QdWtTR1VXSVBpUFZSdVhoSlRoLXdZdUgtSjZiNzc2bnB0bTE4OVdkLU5Qejl1cXhsYmREN0t1QlMtbVFtLVRRU2FsVXh2UjZ1bGVXTG9oMVZQaTcwZ0NoNWJJ?oc=5",
+      "pubDate": "2026-11-02T22:24:00.000Z",
+      "description": "America’s Multi-Trillion-Dollar AI Buildout Is on the Ballot—and Wall Street Is Watching&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "Chilean, Mexican Pesos Lead EM Currencies Higher as Oil Sinks",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQbzdVUUk4V3BvUE13d0hDakkwM1ZnakZ0N0pZeDBiOTdhMzVLRU9QaE1oQ0NSVjdpQlc2VGlLVTFsWl8ySWFCWFFyRzVTU2FybUNzckpoVGJwQnRFNDh5UkF5a3lTdTEtZzZvNGE2dGpvVDZoTUlZb0YyVHZNRjhWVE9BVXgzTXJOMWJvNkxfeXlyX3U5UEhnNDhiN1VxdjZiYlF0RUJ1MEVObE40V0lsOV96ak8?oc=5",
+      "pubDate": "2026-11-02T21:47:45.000Z",
+      "description": "Chilean, Mexican Pesos Lead EM Currencies Higher as Oil Sinks&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
       "title": "2026-11-02 - Data portal - Interest rates and exchange rates, November 2026",
       "link": "https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/11/statpub_news_20261102_a",
       "pubDate": "2026-11-02T13:30:00.000Z",
@@ -611,18 +625,18 @@
       "source": "Swiss National Bank"
     },
     {
+      "title": "Is Dollar General Charging Too Much?",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNQXZMeXNGSUV0VThJN0daX3dQQXBya3RyN0hsMHo2emdtT0tWNXJXSXltMGVpQU9LT1JTYjE5RjVsWENUaUxaa0NWQ1dUcGdnMFFxZDdlanA5Q2xJS3JVZHRyT0k4SkhtUl9tNExBek1HRjZqZC05TUEtUnNOaXZldUFfYTlFZGs?oc=5",
+      "pubDate": "2026-11-02T08:00:00.000Z",
+      "description": "Is Dollar General Charging Too Much?&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
       "title": "Philip R. Lane: AI adoption in Europe",
       "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261030~08d9d540f0.en.html",
       "pubDate": "2026-10-30T16:10:00.000Z",
       "description": "",
       "source": "European Central Bank"
-    },
-    {
-      "title": "2026-10-30 - Data portal - SNB balance sheet items end of September 2026",
-      "link": "https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/10/statpub_news_20261030_c",
-      "pubDate": "2026-10-30T08:00:00.000Z",
-      "description": "",
-      "source": "Swiss National Bank"
     },
     {
       "title": "Federal Reserve Board announces approval of application by The Bank of Nova Scotia",
@@ -639,24 +653,10 @@
       "source": "Bank of England"
     },
     {
-      "title": "Bank of England sets out approach to tokenised collateral in central clearing",
-      "link": "https://www.bankofengland.co.uk/news/2026/october/bank-of-england-sets-out-approach-to-tokenised-collateral-in-central-clearing",
-      "pubDate": "2026-10-29T10:00:00.000Z",
-      "description": "The Bank of England has today launched a consultation supporting central counterparties (CCPs) acceptance of tokenised forms of eligible collateral.",
-      "source": "Bank of England"
-    },
-    {
       "title": "Federal Reserve issues FOMC statement",
       "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
       "pubDate": "2026-10-28T18:00:00.000Z",
       "description": "Federal Reserve issues FOMC statement",
-      "source": "Federal Reserve"
-    },
-    {
-      "title": "Federal Reserve Board announces termination of enforcement actions with Gardner Bancshares, Inc. and Small Business Bank",
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261016a.htm",
-      "pubDate": "2026-10-16T15:00:00.000Z",
-      "description": "Federal Reserve Board announces termination of enforcement actions with Gardner Bancshares, Inc. and Small Business Bank",
       "source": "Federal Reserve"
     },
     {
