@@ -1959,6 +1959,8 @@ if ('serviceWorker' in navigator) {
 // ===== CANDLE : bougies POH (14h / 15h-17h / 22h / 02h, heure UTC-10) des symboles de Charts =====
 let candlePoh = null;
 let candleSelected = null;
+let candleSel = new Set(); // paires choisies (vide = toutes)
+try { candleSel = new Set(JSON.parse(localStorage.getItem('candleSel') || '[]')); } catch (e) { /* aucune sélection */ }
 const CANDLE_SLOTS = [['12', '12h'], ['14', '14h'], ['15', '15h'], ['17', '17h'], ['22', '22h'], ['23', '23h'], ['02', '02h'], ['03', '03h'], ['07', '07h']];
 let candleDaily = null; // { PAIR: [[t,o,h,l,c], ...4 derniers jours D3..D0] }
 
@@ -2012,7 +2014,7 @@ function candleSvg(day, dly) {
 function candleRender() {
   const list = document.getElementById('candleList');
   if (!candlePoh) { list.innerHTML = '<div class="charts-intro">POH candles unavailable right now.</div>'; return; }
-  const rows = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id])
+  const rows = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id] && (!candleSel.size || candleSel.has(p.id)))
     .map((p) => ({ p, s: chartsCandles ? chartsScore(p.id) : { group: 2, move: 0 } }))
     .sort((x, y) => x.s.group - y.s.group || y.s.move - x.s.move);
   let date = '';
@@ -2042,6 +2044,41 @@ function candleGo(i) {
   if (!n) return;
   l.scrollTo({ left: Math.max(0, Math.min(n - 1, i)) * l.clientWidth, behavior: 'smooth' });
 }
+function candleSelSave() {
+  try { localStorage.setItem('candleSel', JSON.stringify([...candleSel])); } catch (e) { /* quota */ }
+  const n = document.getElementById('candleFilterN');
+  if (n) n.textContent = candleSel.size ? candleSel.size : '';
+  document.getElementById('candleFilter')?.classList.toggle('on', candleSel.size > 0);
+}
+function candlePickRender() {
+  const g = document.getElementById('candlePickGrid');
+  if (!g) return;
+  g.innerHTML = CORR_ALL_PAIRS.map((p) => `<button type="button" class="cc-chip${candleSel.has(p.id) ? ' on' : ''}" data-id="${p.id}">${p.label}</button>`).join('');
+}
+function candleSelChanged() {
+  candleSelSave();
+  candlePickRender();
+  candleSelected = null;
+  if (candlePoh) candleRender();
+  document.getElementById('candleList').scrollLeft = 0;
+  candleNavUpdate();
+}
+document.getElementById('candleFilter')?.addEventListener('click', () => {
+  const pk = document.getElementById('candlePicker');
+  pk.hidden = !pk.hidden;
+  if (!pk.hidden) candlePickRender();
+});
+document.getElementById('candlePickOk')?.addEventListener('click', () => { document.getElementById('candlePicker').hidden = true; });
+document.getElementById('candlePickClear')?.addEventListener('click', () => { candleSel.clear(); candleSelChanged(); });
+document.getElementById('candlePickGrid')?.addEventListener('click', (e) => {
+  const b = e.target.closest('.cc-chip');
+  if (!b) return;
+  const id = b.dataset.id;
+  if (candleSel.has(id)) candleSel.delete(id); else candleSel.add(id);
+  candleSelChanged();
+});
+candleSelSave();
+
 function candleNavUpdate() {
   const n = candleSlides().length, i = Math.min(candleIndex(), Math.max(0, n - 1));
   const c = document.getElementById('candleCount');
