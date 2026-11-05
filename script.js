@@ -2019,16 +2019,17 @@ function candleRender() {
     .map((p) => ({ p, s: chartsCandles ? chartsScore(p.id) : { group: 2, move: 0 } }))
     .sort((x, y) => x.s.group - y.s.group || y.s.move - x.s.move);
   let date = '';
-  const keep = candleIndex();
+  const keep = candleIndex(), keepId = candleCurId();
   list.innerHTML = rows.map(({ p, s }) => {
     const days = candlePoh[p.id].filter((d) => Object.keys(d.c).length);
     const day = days[days.length - 1];
     if (!day) return '';
     date = day.d;
     const cls = s.group === 0 ? 'cd-bull' : s.group === 1 ? 'cd-bear' : '';
-    return `<div class="cd-row ${cls}"><button type="button" class="cd-head" data-pair="${p.id}" aria-expanded="${candleSelected === p.id}"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span></button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id])}</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
+    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head${candleDraft.has(p.id) ? ' sel' : ''}" data-sel="${p.id}"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span><span class="cd-star">${candleDraft.has(p.id) ? '★ Selected' : '☆ Tap to select'}</span></button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id])}</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
   }).join('');
-  list.scrollLeft = keep * list.clientWidth;
+  const ki = keepId ? [...candleSlides()].findIndex((r) => r.dataset.id === keepId) : -1;
+  list.scrollLeft = (ki >= 0 ? ki : keep) * list.clientWidth;
   candleNavUpdate();
   if (candleSelected) chartsOpenDetail(candleSelected, '60', 'pc-detail-');
 }
@@ -2085,12 +2086,7 @@ document.getElementById('candleStrip')?.addEventListener('click', (e) => {
   if (!b) return;
   const id = b.dataset.id;
   if (!id) { candleDraft.clear(); candleSel = new Set(); candleSelChanged(); return; } // ALL : retour immédiat à toutes les paires
-  const was = candleDiff();
-  if (candleDraft.has(id)) candleDraft.delete(id); else candleDraft.add(id);
-  candleStripRender(); // choix en cours : le filtre ne s'applique qu'au clic sur « OK »
-  if (candlePoh && candleDiff() !== was) candleRender(); // liste complète pendant le choix, filtrée sinon
-  candleJumpTo(id);
-  candleNavUpdate();
+  candleToggleDraft(id, true);
 });
 document.getElementById('candleValidate')?.addEventListener('click', () => {
   candleSel = new Set(candleDraft);
@@ -2099,10 +2095,31 @@ document.getElementById('candleValidate')?.addEventListener('click', () => {
 candleDraft = new Set(candleSel);
 candleStripRender();
 
+function candleCurId() { return candleSlides()[candleIndex()]?.dataset.id || null; }
 function candleNavUpdate() {
   const n = candleSlides().length, i = Math.min(candleIndex(), Math.max(0, n - 1));
   const c = document.getElementById('candleCount');
   if (c) c.textContent = n ? `${i + 1} / ${n}` : '';
+  const cur = candleCurId(), strip = document.getElementById('candleStrip');
+  if (strip) { // le bandeau suit le graphique affiché
+    strip.querySelectorAll('.cc-chip').forEach((b) => b.classList.toggle('cur', !!cur && b.dataset.id === cur));
+    const cb = strip.querySelector('.cc-chip.cur');
+    if (cb) strip.scrollLeft = cb.offsetLeft - (strip.clientWidth - cb.offsetWidth) / 2;
+  }
+}
+// Coche / décoche une paire dans le choix en cours (sans changer le carrousel ; le filtre ne s'applique qu'à « OK »)
+function candleToggleDraft(id, jump) {
+  const was = candleDiff();
+  if (candleDraft.has(id)) candleDraft.delete(id); else candleDraft.add(id);
+  candleStripRender();
+  if (candlePoh && candleDiff() !== was) candleRender(); // liste complète pendant le choix, filtrée sinon
+  else document.querySelectorAll('#candleList > .cd-row').forEach((r) => {
+    const on = candleDraft.has(r.dataset.id), h = r.querySelector('.cd-head');
+    h.classList.toggle('sel', on);
+    h.querySelector('.cd-star').textContent = on ? '★ Selected' : '☆ Tap to select';
+  });
+  if (jump) candleJumpTo(id);
+  candleNavUpdate();
 }
 document.getElementById('candleClose')?.addEventListener('click', () => document.getElementById('candleToggle').click());
 let candleRz = 0;
@@ -2163,6 +2180,8 @@ document.getElementById('candleToggle')?.addEventListener('click', (e) => {
 });
 
 document.getElementById('candleList').addEventListener('click', (e) => {
+  const sb = e.target.closest('[data-sel]');
+  if (sb) { candleToggleDraft(sb.dataset.sel, false); return; }
   const btn = e.target.closest('[data-pair]');
   if (!btn) return;
   const id = btn.dataset.pair;
