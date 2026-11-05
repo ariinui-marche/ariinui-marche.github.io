@@ -654,7 +654,7 @@ function chartsSvg(series, pairId) {
       const col = up ? '#26a69a' : '#ef5350';
       const top = y(Math.max(c[1], c[4]));
       const h = Math.max(1, Math.abs(y(c[1]) - y(c[4])));
-      return `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${y(c[2])}" y2="${y(c[3])}" stroke="${col}" stroke-width="1.4"/>` +
+      return `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${y(c[2])}" y2="${y(c[3])}" stroke="${col}" stroke-width="1.6"/>` +
         `<rect x="${(x - bw / 2).toFixed(1)}" y="${top}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" fill="${col}"/>`;
     }).join('') + '</svg>';
 }
@@ -669,6 +669,7 @@ function chartsRenderList() {
     .filter((p) => chartsCandles[p.id])
     .map((p) => ({ p, s: chartsScore(p.id) }))
     .sort((x, y) => x.s.group - y.s.group || y.s.move - x.s.move);
+  const keep = candleIndex();
   list.innerHTML = rows.map(({ p, s }) => {
     const open = chartsSelectedPair === p.id;
     const cls = s.group === 0 ? 'cd-bull' : s.group === 1 ? 'cd-bear' : '';
@@ -1966,12 +1967,12 @@ function candleSvg(day, dly) {
   const cs = dd.concat([{ lbl: '', c: null }], CANDLE_SLOTS.map(([k, lbl]) => ({ lbl, c: day.c[k] })));
   const vals = cs.filter((x) => x.c);
   if (!vals.length) return '';
-  const W = 420, H = 150, PAD = 10, LBL = 16;
+  const W = 420, H = 340, PAD = 12, LBL = 20;
   const hi = Math.max(...vals.map((x) => x.c[1]));
   const lo = Math.min(...vals.map((x) => x.c[2]));
   const rng = hi - lo || 1;
   const y = (v) => PAD + (1 - (v - lo) / rng) * (H - LBL - 2 * PAD);
-  const step = (W - 2 * PAD) / cs.length, bw = step * 0.5;
+  const step = (W - 2 * PAD) / cs.length, bw = step * 0.62;
   return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">` +
     cs.map((x, i) => {
       const cx = PAD + step * (i + 0.5);
@@ -1979,7 +1980,7 @@ function candleSvg(day, dly) {
       if (x.c) {
         const [o, h, l, c] = x.c;
         const col = c >= o ? '#26a69a' : '#ef5350';
-        g += `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="1.4"/>` +
+        g += `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="1.6"/>` +
           `<rect x="${(cx - bw / 2).toFixed(1)}" y="${y(Math.max(o, c)).toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(1, Math.abs(y(o) - y(c))).toFixed(1)}" fill="${col}"/>`;
       }
       return g;
@@ -1993,6 +1994,7 @@ function candleRender() {
     .map((p) => ({ p, s: chartsCandles ? chartsScore(p.id) : { group: 2, move: 0 } }))
     .sort((x, y) => x.s.group - y.s.group || y.s.move - x.s.move);
   let date = '';
+  const keep = candleIndex();
   list.innerHTML = rows.map(({ p, s }) => {
     const days = candlePoh[p.id].filter((d) => Object.keys(d.c).length);
     const day = days[days.length - 1];
@@ -2001,8 +2003,31 @@ function candleRender() {
     const cls = s.group === 0 ? 'cd-bull' : s.group === 1 ? 'cd-bear' : '';
     return `<div class="cd-row ${cls}"><button type="button" class="cd-head" data-pair="${p.id}" aria-expanded="${candleSelected === p.id}"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span></button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id])}</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
   }).join('');
+  list.scrollLeft = keep * list.clientWidth;
+  candleNavUpdate();
   if (candleSelected) chartsOpenDetail(candleSelected, '60', 'pc-detail-');
 }
+
+// Carrousel : une paire par diapo (défilement par glissement), flèches + compteur
+function candleSlides() { return document.querySelectorAll('#candleList > .cd-row'); }
+function candleIndex() {
+  const l = document.getElementById('candleList');
+  return l.clientWidth ? Math.round(l.scrollLeft / l.clientWidth) : 0;
+}
+function candleGo(i) {
+  const l = document.getElementById('candleList');
+  const n = candleSlides().length;
+  if (!n) return;
+  l.scrollTo({ left: Math.max(0, Math.min(n - 1, i)) * l.clientWidth, behavior: 'smooth' });
+}
+function candleNavUpdate() {
+  const n = candleSlides().length, i = Math.min(candleIndex(), Math.max(0, n - 1));
+  const c = document.getElementById('candleCount');
+  if (c) c.textContent = n ? `${i + 1} / ${n}` : '';
+}
+document.getElementById('candlePrev')?.addEventListener('click', () => candleGo(candleIndex() - 1));
+document.getElementById('candleNext')?.addEventListener('click', () => candleGo(candleIndex() + 1));
+document.getElementById('candleList')?.addEventListener('scroll', () => candleNavUpdate(), { passive: true });
 
 const CANDLE_LS = 'candlePohCache';
 async function candleFetchProxy() {
