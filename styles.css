@@ -29,8 +29,7 @@ body {
 }
 
 .topbar {
-  display: none; /* barre « Market » + Focus/⟳ masquée (demande utilisateur) */
-  flex-direction: row;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px 20px;
