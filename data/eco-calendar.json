@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-05T02:47:50.012Z",
+  "timestamp": "2026-11-05T09:53:06.095Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -11681,7 +11681,7 @@
       "impact": "Low",
       "forecast": "",
       "previous": "3.10|3.8",
-      "actual": ""
+      "actual": "2.77|3.2"
     },
     {
       "title": "RBA Deputy Gov Hauser Speaks",
@@ -11699,7 +11699,7 @@
       "impact": "Low",
       "forecast": "4.6%",
       "previous": "-10.6%",
-      "actual": ""
+      "actual": "4.4%"
     },
     {
       "title": "French Industrial Production m/m",
@@ -11708,7 +11708,7 @@
       "impact": "Low",
       "forecast": "0.3%",
       "previous": "-0.3%",
-      "actual": ""
+      "actual": "-0.5%"
     },
     {
       "title": "Unemployment Rate",
@@ -11717,7 +11717,7 @@
       "impact": "Low",
       "forecast": "3.1%",
       "previous": "3.1%",
-      "actual": ""
+      "actual": "3.1%"
     },
     {
       "title": "Italian Retail Sales m/m",
@@ -11726,7 +11726,7 @@
       "impact": "Low",
       "forecast": "0.0%",
       "previous": "0.3%",
-      "actual": ""
+      "actual": "0.1%"
     },
     {
       "title": "Construction PMI",
@@ -11735,7 +11735,7 @@
       "impact": "Low",
       "forecast": "46.4",
       "previous": "46.1",
-      "actual": ""
+      "actual": "43.6"
     },
     {
       "title": "PPI m/m",
