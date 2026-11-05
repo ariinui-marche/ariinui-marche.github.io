@@ -7,7 +7,7 @@ import WebSocket from 'ws';
 const PAIRS = ('EURUSD GBPUSD USDJPY AUDUSD USDCAD USDCHF NZDUSD XAUUSD BTCUSD ETHUSD ' +
   'EURJPY GBPJPY EURGBP EURAUD EURCAD EURCHF EURNZD GBPAUD GBPCAD GBPCHF GBPNZD ' +
   'AUDJPY CADJPY CHFJPY NZDJPY AUDCAD AUDCHF AUDNZD CADCHF NZDCAD NZDCHF').split(' ');
-const SLOTS = { '14': [0, 1], '1517': [1, 3], '22': [8, 9], '02': [12, 13] }; // heures UTC [début, fin[
+const SLOTS = { '12': [22, 23], '14': [0, 1], '15': [1, 2], '17': [3, 4], '22': [8, 9], '23': [9, 10], '02': [12, 13], '03': [13, 14], '07': [17, 18] }; // heures UTC [début, fin[
 const KEEP_DAYS = 5;
 
 function tvSymbol(id) { // mêmes symboles que les graphiques TradingView du site (script.js tvSymbolFor)
@@ -52,7 +52,7 @@ async function fetchOne(id) {
     const hr = dt.getUTCHours();
     for (const [slot, [a, b]] of Object.entries(SLOTS)) {
       if (hr < a || hr >= b) continue;
-      const d = dt.toISOString().slice(0, 10);
+      const d = new Date((t + (slot === '12' ? 7200 : 0)) * 1000).toISOString().slice(0, 10);
       if (!days.has(d)) days.set(d, {});
       const s = days.get(d);
       if (!s[slot]) s[slot] = [o, h, l, c, 1];

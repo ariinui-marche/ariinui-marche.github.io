@@ -1200,6 +1200,6 @@ body.focus-on main > section:has(#trendGrid) { order: 4; }
 
 /* CANDLE (bougies POH) */
 .pc-list { display: flex; flex-direction: column; gap: 14px; }
-.pc-svg { display: block; width: 100%; height: 120px; }
-.pc-lbl { fill: #9aa0a6; font-size: 11px; }
+.pc-svg { display: block; width: 100%; height: 150px; }
+.pc-lbl { fill: #9aa0a6; font-size: 9px; }
 .pc-date { font-size: 11px; color: #9aa0a6; margin-left: 6px; }

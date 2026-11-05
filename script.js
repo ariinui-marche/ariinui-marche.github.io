@@ -1958,18 +1958,20 @@ if ('serviceWorker' in navigator) {
 // ===== CANDLE : bougies POH (14h / 15h-17h / 22h / 02h, heure UTC-10) des symboles de Charts =====
 let candlePoh = null;
 let candleSelected = null;
-const CANDLE_SLOTS = [['14', '14h'], ['1517', '15-17h'], ['22', '22h'], ['02', '02h']];
+const CANDLE_SLOTS = [['12', '12h'], ['14', '14h'], ['15', '15h'], ['17', '17h'], ['22', '22h'], ['23', '23h'], ['02', '02h'], ['03', '03h'], ['07', '07h']];
+let candleDaily = null; // { PAIR: [[t,o,h,l,c], ...4 derniers jours D3..D0] }
 
-function candleSvg(day) {
-  const cs = CANDLE_SLOTS.map(([k, lbl]) => ({ lbl, c: day.c[k] }));
+function candleSvg(day, dly) {
+  const dd = (dly || []).slice(-4).map((b, i, a) => ({ lbl: 'D' + (a.length - 1 - i), c: b.slice(1, 5) }));
+  const cs = dd.concat([{ lbl: '', c: null }], CANDLE_SLOTS.map(([k, lbl]) => ({ lbl, c: day.c[k] })));
   const vals = cs.filter((x) => x.c);
   if (!vals.length) return '';
-  const W = 400, H = 120, PAD = 10, LBL = 16;
+  const W = 420, H = 150, PAD = 10, LBL = 16;
   const hi = Math.max(...vals.map((x) => x.c[1]));
   const lo = Math.min(...vals.map((x) => x.c[2]));
   const rng = hi - lo || 1;
   const y = (v) => PAD + (1 - (v - lo) / rng) * (H - LBL - 2 * PAD);
-  const step = (W - 2 * PAD) / 4, bw = step * 0.4;
+  const step = (W - 2 * PAD) / cs.length, bw = step * 0.5;
   return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">` +
     cs.map((x, i) => {
       const cx = PAD + step * (i + 0.5);
@@ -1997,7 +1999,7 @@ function candleRender() {
     if (!day) return '';
     date = day.d;
     const cls = s.group === 0 ? 'cd-bull' : s.group === 1 ? 'cd-bear' : '';
-    return `<div class="cd-row ${cls}"><button type="button" class="cd-head" data-pair="${p.id}" aria-expanded="${candleSelected === p.id}"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span></button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day)}</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
+    return `<div class="cd-row ${cls}"><button type="button" class="cd-head" data-pair="${p.id}" aria-expanded="${candleSelected === p.id}"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span></button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id])}</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
   }).join('');
   if (candleSelected) chartsOpenDetail(candleSelected, '60', 'pc-detail-');
 }
@@ -2008,6 +2010,7 @@ async function candleLoad() {
     const j = res.ok ? await res.json() : null;
     if (!j || !j.pairs || Object.keys(j.pairs).length < 20) throw new Error('proxy');
     candlePoh = j.pairs;
+    candleDaily = j.daily || null;
   } catch (e) {
     try {
       const res = await fetch('./data/poh-candles.json', { cache: 'no-store' });
@@ -2020,6 +2023,10 @@ async function candleLoad() {
       const r = await fetch('./data/daily-candles.json', { cache: 'no-store' });
       if (r.ok) chartsCandles = (await r.json()).pairs;
     } catch (e) { /* tri facultatif */ }
+  }
+  if (!candleDaily && chartsCandles) { // repli : Daily du cron (D0 peut être en retard)
+    candleDaily = {};
+    for (const id of Object.keys(chartsCandles)) candleDaily[id] = chartsCandles[id].slice(-4);
   }
   candleRender();
 }
