@@ -1966,7 +1966,7 @@ let candleDaily = null; // { PAIR: [[t,o,h,l,c], ...4 derniers jours D3..D0] }
 
 // Dimensions réelles de la zone graphique (plein écran) : le SVG est dessiné à l'échelle 1:1, sans déformation
 function candleDims() {
-  return { W: Math.max(300, Math.round(window.innerWidth)), H: Math.max(300, Math.round(window.innerHeight) - 88) };
+  return { W: Math.max(300, Math.round(window.innerWidth)), H: Math.max(300, Math.round(window.innerHeight) - 132) };
 }
 function candleNiceStep(rng, n) {
   const raw = rng / n, p = Math.pow(10, Math.floor(Math.log10(raw))), m = raw / p;
@@ -2046,38 +2046,33 @@ function candleGo(i) {
 }
 function candleSelSave() {
   try { localStorage.setItem('candleSel', JSON.stringify([...candleSel])); } catch (e) { /* quota */ }
-  const n = document.getElementById('candleFilterN');
-  if (n) n.textContent = candleSel.size ? candleSel.size : '';
-  document.getElementById('candleFilter')?.classList.toggle('on', candleSel.size > 0);
 }
-function candlePickRender() {
-  const g = document.getElementById('candlePickGrid');
+// Bandeau horizontal de symboles : toucher = sélectionner / désélectionner (aucune sélection = toutes les paires)
+function candleStripRender() {
+  const g = document.getElementById('candleStrip');
   if (!g) return;
-  g.innerHTML = CORR_ALL_PAIRS.map((p) => `<button type="button" class="cc-chip${candleSel.has(p.id) ? ' on' : ''}" data-id="${p.id}">${p.label}</button>`).join('');
+  const sc = g.scrollLeft;
+  g.innerHTML = `<button type="button" class="cc-chip${candleSel.size ? '' : ' on'}" data-id="">ALL</button>` +
+    CORR_ALL_PAIRS.map((p) => `<button type="button" class="cc-chip${candleSel.has(p.id) ? ' on' : ''}" data-id="${p.id}">${p.label}</button>`).join('');
+  g.scrollLeft = sc;
 }
 function candleSelChanged() {
   candleSelSave();
-  candlePickRender();
+  candleStripRender();
   candleSelected = null;
   if (candlePoh) candleRender();
   document.getElementById('candleList').scrollLeft = 0;
   candleNavUpdate();
 }
-document.getElementById('candleFilter')?.addEventListener('click', () => {
-  const pk = document.getElementById('candlePicker');
-  pk.hidden = !pk.hidden;
-  if (!pk.hidden) candlePickRender();
-});
-document.getElementById('candlePickOk')?.addEventListener('click', () => { document.getElementById('candlePicker').hidden = true; });
-document.getElementById('candlePickClear')?.addEventListener('click', () => { candleSel.clear(); candleSelChanged(); });
-document.getElementById('candlePickGrid')?.addEventListener('click', (e) => {
+document.getElementById('candleStrip')?.addEventListener('click', (e) => {
   const b = e.target.closest('.cc-chip');
   if (!b) return;
   const id = b.dataset.id;
-  if (candleSel.has(id)) candleSel.delete(id); else candleSel.add(id);
+  if (!id) candleSel.clear();
+  else if (candleSel.has(id)) candleSel.delete(id); else candleSel.add(id);
   candleSelChanged();
 });
-candleSelSave();
+candleStripRender();
 
 function candleNavUpdate() {
   const n = candleSlides().length, i = Math.min(candleIndex(), Math.max(0, n - 1));
