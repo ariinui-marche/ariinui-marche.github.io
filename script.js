@@ -1962,29 +1962,51 @@ let candleSelected = null;
 const CANDLE_SLOTS = [['12', '12h'], ['14', '14h'], ['15', '15h'], ['17', '17h'], ['22', '22h'], ['23', '23h'], ['02', '02h'], ['03', '03h'], ['07', '07h']];
 let candleDaily = null; // { PAIR: [[t,o,h,l,c], ...4 derniers jours D3..D0] }
 
+// Dimensions réelles de la zone graphique (plein écran) : le SVG est dessiné à l'échelle 1:1, sans déformation
+function candleDims() {
+  return { W: Math.max(300, Math.round(window.innerWidth)), H: Math.max(300, Math.round(window.innerHeight) - 88) };
+}
+function candleNiceStep(rng, n) {
+  const raw = rng / n, p = Math.pow(10, Math.floor(Math.log10(raw))), m = raw / p;
+  return (m < 1.5 ? 1 : m < 3 ? 2 : m < 7 ? 5 : 10) * p;
+}
 function candleSvg(day, dly) {
   const dd = (dly || []).slice(-4).map((b, i, a) => ({ lbl: 'D' + (a.length - 1 - i), c: b.slice(1, 5) }));
   const cs = dd.concat([{ lbl: '', c: null }], CANDLE_SLOTS.map(([k, lbl]) => ({ lbl, c: day.c[k] })));
   const vals = cs.filter((x) => x.c);
   if (!vals.length) return '';
-  const W = 420, H = 340, PAD = 12, LBL = 20;
-  const hi = Math.max(...vals.map((x) => x.c[1]));
-  const lo = Math.min(...vals.map((x) => x.c[2]));
-  const rng = hi - lo || 1;
-  const y = (v) => PAD + (1 - (v - lo) / rng) * (H - LBL - 2 * PAD);
-  const step = (W - 2 * PAD) / cs.length, bw = step * 0.62;
-  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">` +
-    cs.map((x, i) => {
-      const cx = PAD + step * (i + 0.5);
-      let g = `<text x="${cx.toFixed(1)}" y="${H - 3}" text-anchor="middle" class="pc-lbl">${x.lbl}</text>`;
-      if (x.c) {
-        const [o, h, l, c] = x.c;
-        const col = c >= o ? '#26a69a' : '#ef5350';
-        g += `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="1.6"/>` +
-          `<rect x="${(cx - bw / 2).toFixed(1)}" y="${y(Math.max(o, c)).toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(1, Math.abs(y(o) - y(c))).toFixed(1)}" fill="${col}"/>`;
-      }
-      return g;
-    }).join('') + '</svg>';
+  const { W, H } = candleDims();
+  const AX = 60, TOP = 34, BOT = 14, LEFT = 4;
+  let hi = Math.max(...vals.map((x) => x.c[1]));
+  let lo = Math.min(...vals.map((x) => x.c[2]));
+  const m = (hi - lo || hi * 0.001) * 0.04; hi += m; lo -= m;
+  const rng = hi - lo;
+  const y = (v) => TOP + (1 - (v - lo) / rng) * (H - TOP - BOT);
+  const dec = hi >= 1000 ? 2 : hi >= 100 ? 3 : 5;
+  const fmt = (v) => v.toFixed(dec);
+  const stepP = candleNiceStep(rng, 8);
+  let grid = '';
+  for (let v = Math.ceil(lo / stepP) * stepP; v <= hi; v += stepP) {
+    grid += `<line x1="0" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="#1d1f24" stroke-width="1"/>` +
+      `<text x="${W - AX + 6}" y="${(y(v) + 4).toFixed(1)}" class="pc-ax">${fmt(v)}</text>`;
+  }
+  const step = (W - AX - LEFT) / cs.length, bw = Math.min(step * 0.74, 34);
+  const last = [...cs].reverse().find((x) => x.c);
+  const lastC = last.c[3], lastCol = last.c[3] >= last.c[0] ? '#26a69a' : '#ef5350';
+  const body = cs.map((x, i) => {
+    const cx = LEFT + step * (i + 0.5);
+    if (!x.c) return '';
+    const [o, h, l, c] = x.c;
+    const col = c >= o ? '#26a69a' : '#ef5350';
+    const top = y(Math.max(o, c)), ht = Math.max(1, Math.abs(y(o) - y(c)));
+    return `<text x="${cx.toFixed(1)}" y="${(y(h) - 6).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:${col}">${x.lbl}</text>` +
+      `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="1.3"/>` +
+      `<rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}" stroke-width="1.3"/>`;
+  }).join('');
+  const tag = `<line x1="0" x2="${W - AX}" y1="${y(lastC).toFixed(1)}" y2="${y(lastC).toFixed(1)}" stroke="${lastCol}" stroke-width="1" stroke-dasharray="2 3"/>` +
+    `<rect x="${W - AX + 1}" y="${(y(lastC) - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
+    `<text x="${W - AX + 6}" y="${(y(lastC) + 4).toFixed(1)}" class="pc-ax" style="fill:#fff">${fmt(lastC)}</text>`;
+  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true">${grid}${body}${tag}</svg>`;
 }
 
 function candleRender() {
@@ -2025,6 +2047,9 @@ function candleNavUpdate() {
   const c = document.getElementById('candleCount');
   if (c) c.textContent = n ? `${i + 1} / ${n}` : '';
 }
+document.getElementById('candleClose')?.addEventListener('click', () => document.getElementById('candleToggle').click());
+let candleRz = 0;
+window.addEventListener('resize', () => { clearTimeout(candleRz); candleRz = setTimeout(() => { if (candlePoh && !document.getElementById('candleBody').classList.contains('collapsed')) candleRender(); }, 200); });
 document.getElementById('candlePrev')?.addEventListener('click', () => candleGo(candleIndex() - 1));
 document.getElementById('candleNext')?.addEventListener('click', () => candleGo(candleIndex() + 1));
 document.getElementById('candleList')?.addEventListener('scroll', () => candleNavUpdate(), { passive: true });
@@ -2074,6 +2099,7 @@ async function candleLoad() {
 
 document.getElementById('candleToggle')?.addEventListener('click', (e) => {
   const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
+  document.body.classList.toggle('cc-lock', !expanded);
   e.currentTarget.setAttribute('aria-expanded', String(!expanded));
   document.getElementById('candleBody').classList.toggle('collapsed', expanded);
   if (!expanded) candleLoad();

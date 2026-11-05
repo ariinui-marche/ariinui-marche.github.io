@@ -1200,7 +1200,15 @@ body.focus-on main > section:has(#trendGrid) { order: 4; }
 
 /* CANDLE (bougies POH) */
 .pc-list { display: flex; flex-direction: column; gap: 14px; }
-.pc-svg { display: block; width: 100%; height: 340px; }
+.pc-svg { display: block; }
+.pc-ax { fill: #9aa0a6; font-size: 11px; }
+body.cc-lock { overflow: hidden; }
+#candleBody:not(.collapsed) { position: fixed; inset: 0; z-index: 1000; background: #0b0b0b; display: flex; flex-direction: column; }
+#candleBody:not(.collapsed) .cc-nav { flex: 0 0 48px; padding: 0; background: #0b0b0b; border-bottom: 1px solid #1d1f24; }
+#candleBody:not(.collapsed) #candleList { flex: 1; min-height: 0; }
+#candleBody:not(.collapsed) .cd-row { border: 0; border-radius: 0; background: #0b0b0b; }
+#candleBody:not(.collapsed) .cd-head { height: 40px; padding: 8px 12px 0; }
+#candleBody:not(.collapsed) .cd-chart { height: auto; }
 .cc-nav { display: flex; align-items: center; justify-content: center; gap: 18px; padding: 4px 0 8px; }
 .cc-nav button { background: #1a1a1a; color: #e5e5e5; border: 1px solid #333; border-radius: 8px; width: 44px; height: 34px; font-size: 22px; line-height: 1; cursor: pointer; }
 .cc-nav span { font-size: 13px; color: #9aa0a6; min-width: 56px; text-align: center; }
@@ -1208,5 +1216,5 @@ body.focus-on main > section:has(#trendGrid) { order: 4; }
 #candleList.cc-track::-webkit-scrollbar { display: none; }
 #candleList.cc-track > .cd-row { flex: 0 0 100%; min-width: 0; scroll-snap-align: start; scroll-snap-stop: always; overflow-y: auto; max-height: none; }
 #candleList.cc-track .cd-name { font-size: 18px; }
-.pc-lbl { fill: #9aa0a6; font-size: 10px; }
+.pc-lbl { font-size: 11px; }
 .pc-date { font-size: 11px; color: #9aa0a6; margin-left: 6px; }
