@@ -2006,10 +2006,24 @@ function candleSvg(day, dly) {
       `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="1.3"/>` +
       `<rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}" stroke-width="1.3"/>`;
   }).join('');
+  // Fibonacci 38 / 50 / 61 % sur D1 quand D2 et D1 vont dans le même sens (mesuré depuis le plus bas si haussières, depuis le plus haut si baissières)
+  let fib = '';
+  const d1i = cs.findIndex((x) => x.lbl === 'D1'), d2 = cs.find((x) => x.lbl === 'D2'), d1 = cs[d1i];
+  if (d1 && d1.c && d2 && d2.c) {
+    const bu1 = d1.c[3] > d1.c[0], be1 = d1.c[3] < d1.c[0], bu2 = d2.c[3] > d2.c[0], be2 = d2.c[3] < d2.c[0];
+    if ((bu1 && bu2) || (be1 && be2)) {
+      const fh = d1.c[1], fl = d1.c[2], fr = fh - fl, x0 = LEFT + step * (d1i + 0.5);
+      fib = [[0.382, '38'], [0.5, '50'], [0.618, '61']].map(([p, t]) => {
+        const v = bu1 ? fl + p * fr : fh - p * fr;
+        return `<line x1="${x0.toFixed(1)}" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="#f5b642" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="1 4" stroke-linecap="round"/>` +
+          `<text x="${W - AX - 4}" y="${(y(v) - 4).toFixed(1)}" text-anchor="end" style="fill:#f5b642;fill-opacity:.6;font-size:10px">${t}% · ${fmt(v)}</text>`;
+      }).join('');
+    }
+  }
   const tag = `<line x1="0" x2="${W - AX}" y1="${y(lastC).toFixed(1)}" y2="${y(lastC).toFixed(1)}" stroke="${lastCol}" stroke-width="1" stroke-dasharray="2 3"/>` +
     `<rect x="${W - AX + 1}" y="${(y(lastC) - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
     `<text x="${W - AX + 6}" y="${(y(lastC) + 4).toFixed(1)}" class="pc-ax" style="fill:#fff">${fmt(lastC)}</text>`;
-  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true">${grid}${body}${tag}</svg>`;
+  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true">${grid}${fib}${body}${tag}</svg>`;
 }
 
 function candleRender() {
