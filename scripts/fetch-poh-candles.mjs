@@ -1,5 +1,5 @@
 // Bougies POH (heure UTC-10, comme Arii SNIPER) des 31 symboles de Charts -> data/poh-candles.json
-// 14h = 00:00-01:00 UTC, 15h-17h = 01:00-03:00 UTC, 22h = 08:00-09:00 UTC, 02h = 12:00-13:00 UTC.
+
 // Source : TradingView (WebSocket public, mêmes symboles que le widget du site), barres 1h ; la bougie 15h-17h agrège 2 barres 1h.
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import WebSocket from 'ws';
@@ -7,14 +7,12 @@ import WebSocket from 'ws';
 const PAIRS = ('EURUSD GBPUSD USDJPY AUDUSD USDCAD USDCHF NZDUSD XAUUSD BTCUSD ETHUSD ' +
   'EURJPY GBPJPY EURGBP EURAUD EURCAD EURCHF EURNZD GBPAUD GBPCAD GBPCHF GBPNZD ' +
   'AUDJPY CADJPY CHFJPY NZDJPY AUDCAD AUDCHF AUDNZD CADCHF NZDCAD NZDCHF').split(' ');
-const SLOTS = { '12': [22, 23], '14': [0, 1], '15': [1, 2], '17': [3, 4], '22': [8, 9], '23': [9, 10], '02': [12, 13], '03': [13, 14], '07': [17, 18] }; // heures UTC [début, fin[
-const KEEP_DAYS = 5;
+// Périodes POH d'Arii SNIPER (poh_periods) : heures UTC+2 [début, fin[ — durées variables
+const SLOTS = { '12': [0, 2], '14': [2, 3], '15': [3, 5], '17': [5, 10], '22': [10, 11], '23': [11, 14], '02': [14, 15], '03': [15, 19], '07': [19, 24] };
+const KEEP_DAYS = 3;
 
-function tvSymbol(id) { // mêmes symboles que les graphiques TradingView du site (script.js tvSymbolFor)
-  if (id === 'XAUUSD') return 'OANDA:XAUUSD';
-  if (id === 'BTCUSD') return 'COINBASE:BTCUSD';
-  if (id === 'ETHUSD') return 'COINBASE:ETHUSD';
-  return `FX:${id}`;
+function tvSymbol(id) { // flux IC (celui du graphique de l'utilisateur et d'Arii SNIPER)
+  return `IC:${id}`;
 }
 
 // Barres 1h via le WebSocket public de TradingView (même flux que le widget affiché dans le site).
@@ -30,7 +28,7 @@ function fetchBars(sym) {
       send('set_auth_token', ['unauthorized_user_token']);
       send('chart_create_session', ['cs_x', '']);
       send('resolve_symbol', ['cs_x', 'sds_sym_1', `={"symbol":"${sym}","adjustment":"splits"}`]);
-      send('create_series', ['cs_x', 'sds_1', 's1', 'sds_sym_1', '60', 300, '']);
+      send('create_series', ['cs_x', 'sds_1', 's1', 'sds_sym_1', '1', 3000, '']);
     });
     ws.on('message', (d) => {
       const m = d.toString();
@@ -48,23 +46,20 @@ async function fetchOne(id) {
   const days = new Map(); // 'YYYY-MM-DD' -> { slot -> [o,h,l,c,nbBarres] }
   for (const [t, o, h, l, c] of bars) {
     if ([o, h, l, c].some((v) => v == null)) continue;
-    const dt = new Date(t * 1000);
+    const dt = new Date((t + 7200) * 1000); // heure UTC+2
     const hr = dt.getUTCHours();
     for (const [slot, [a, b]] of Object.entries(SLOTS)) {
       if (hr < a || hr >= b) continue;
-      const d = new Date((t + (slot === '12' ? 7200 : 0)) * 1000).toISOString().slice(0, 10);
+      const d = dt.toISOString().slice(0, 10);
       if (!days.has(d)) days.set(d, {});
       const s = days.get(d);
-      if (!s[slot]) s[slot] = [o, h, l, c, 1];
-      else { s[slot][1] = Math.max(s[slot][1], h); s[slot][2] = Math.min(s[slot][2], l); s[slot][3] = c; s[slot][4]++; }
+      if (!s[slot]) s[slot] = [o, h, l, c];
+      else { s[slot][1] = Math.max(s[slot][1], h); s[slot][2] = Math.min(s[slot][2], l); s[slot][3] = c; }
     }
   }
   return [...days.entries()].sort((x, y) => (x[0] < y[0] ? -1 : 1)).slice(-KEEP_DAYS).map(([d, s]) => {
     const c = {};
-    for (const [slot, [a, b]] of Object.entries(SLOTS)) {
-      const v = s[slot];
-      if (v && v[4] === b - a) c[slot] = v.slice(0, 4).map((x) => +x.toPrecision(7));
-    }
+    for (const slot of Object.keys(SLOTS)) if (s[slot]) c[slot] = s[slot].map((x) => +x.toPrecision(7));
     return { d, c };
   });
 }

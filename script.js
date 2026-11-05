@@ -2029,7 +2029,7 @@ document.getElementById('candlePrev')?.addEventListener('click', () => candleGo(
 document.getElementById('candleNext')?.addEventListener('click', () => candleGo(candleIndex() + 1));
 document.getElementById('candleList')?.addEventListener('scroll', () => candleNavUpdate(), { passive: true });
 
-const CANDLE_LS = 'candlePohCache';
+const CANDLE_LS = 'candlePohCache2';
 async function candleFetchProxy() {
   const res = await fetch('https://ariinuiirgina.vercel.app/api/poh-candles', { cache: 'no-store', signal: AbortSignal.timeout(15000) });
   const j = res.ok ? await res.json() : null;
