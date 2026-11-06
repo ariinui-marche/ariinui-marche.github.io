@@ -1482,39 +1482,6 @@ document.getElementById('focusBtn')?.addEventListener('click', () => {
   if (!focusMode) setFocusPanelsOpen(false);
   renderFocusViews();
 });
-// Actualisation en tirant la page vers le bas (remplace l'ancien bouton ⟳)
-(function pullToRefresh() {
-  const ind = document.createElement('div');
-  ind.id = 'ptr';
-  ind.textContent = '⟳';
-  document.body.appendChild(ind);
-  const TH = 80;
-  let y0 = null, dist = 0, busy = false;
-  const setPos = (d) => { ind.style.transform = `translate(-50%, ${d}px) rotate(${d * 4}deg)`; };
-  window.addEventListener('touchstart', (e) => {
-    y0 = (e.touches.length === 1 && window.scrollY <= 0 && !busy && !document.body.classList.contains('cc-lock')) ? e.touches[0].clientY : null;
-    dist = 0;
-  }, { passive: true });
-  window.addEventListener('touchmove', (e) => {
-    if (y0 === null) return;
-    const d = e.touches[0].clientY - y0;
-    if (d <= 0) { dist = 0; setPos(0); return; }
-    if (window.scrollY > 0) { y0 = null; setPos(0); return; }
-    dist = Math.min(d * 0.5, TH + 20);
-    ind.classList.toggle('ready', dist >= TH * 0.5 + 10);
-    setPos(dist + 8);
-    if (e.cancelable) e.preventDefault();
-  }, { passive: false });
-  window.addEventListener('touchend', async () => {
-    if (y0 === null) return;
-    const go = dist >= TH * 0.5 + 10;
-    y0 = null;
-    if (!go) { setPos(0); ind.classList.remove('ready'); return; }
-    busy = true; ind.classList.add('spin'); setPos(56);
-    try { await loadAll(); } catch (e) { /* ignoré */ }
-    busy = false; ind.classList.remove('spin', 'ready'); setPos(0);
-  });
-})();
 document.getElementById('currencyToggle').addEventListener('click', (e) => {
   const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
   e.currentTarget.setAttribute('aria-expanded', String(!expanded));
