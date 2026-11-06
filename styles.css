@@ -1249,3 +1249,10 @@ body.cc-lock { overflow: hidden; }
 #candleBody:not(.collapsed) .cc-bottom { flex: 0 0 44px; box-sizing: content-box; padding: 0 0 env(safe-area-inset-bottom); border-bottom: 0; border-top: 1px solid #1d1f24; background: #0b0b0b; }
 #candleBody:not(.collapsed) .cd-head { position: absolute; top: 4px; left: 0; right: 0; width: auto; height: auto; padding: 4px 12px; pointer-events: none; z-index: 2; }
 #candleBody:not(.collapsed) .cd-reset { top: 50px; }
+
+/* 3 boutons Fibo / Sweep / F+S : textes compacts pour tenir sur une seule rangée, même sur petit écran */
+.cc-top .cc-strip { gap: 5px; padding: 6px 6px; }
+.cc-top .cc-grp .cc-chip { padding: 0 2px; font-size: 12px; letter-spacing: -0.1px; }
+.cc-top .cc-drop { flex: 0 0 26px; font-size: 12px; }
+.cc-top #candleClose { flex: 0 0 36px; }
+.cc-top { gap: 4px; padding-right: 6px; }
