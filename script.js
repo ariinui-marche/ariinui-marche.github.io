@@ -2280,6 +2280,38 @@ async function candleLoad() {
   candleRender();
 }
 
+// Actualisation automatique (toutes les 20 s tant que CANDLE est ouvert) : met à jour bougies, sweep et compteurs EN PLACE,
+// sans toucher au carrousel, au zoom, au graphique TradingView ouvert ni à un geste en cours
+let candleAutoBusy = false;
+function candleRefreshInPlace() {
+  document.querySelectorAll('#candleList > .cd-row').forEach((r) => {
+    const id = r.dataset.id;
+    if (cg.pts.size && cg.id === id) return; // geste en cours sur ce graphique
+    const days = ((candlePoh || {})[id] || []).filter((d) => Object.keys(d.c).length), day = days[days.length - 1];
+    if (!day) return;
+    candleDays[id] = day;
+    const ch = r.querySelector('.cd-chart');
+    if (ch) ch.innerHTML = candleSvg(day, (candleDaily || {})[id], candleViewOf(id));
+    const hd = r.querySelector('.cd-head');
+    if (hd) { hd.querySelectorAll('.cd-sweep').forEach((x) => x.remove()); hd.insertAdjacentHTML('beforeend', candleSweep((candleDaily || {})[id], day)); }
+  });
+  candleFilterUpdate();
+}
+async function candleAutoRefresh() {
+  const body = document.getElementById('candleBody');
+  if (candleAutoBusy || !candlePoh || document.hidden || !body || body.classList.contains('collapsed')) return;
+  candleAutoBusy = true;
+  try {
+    const j = await candleFetchProxy();
+    candleMerge(j);
+    try { localStorage.setItem(CANDLE_LS, JSON.stringify({ pairs: candlePoh, daily: candleDaily })); } catch (e) { /* quota */ }
+    candleRefreshInPlace();
+  } catch (e) { /* on réessaiera au prochain tour */ }
+  candleAutoBusy = false;
+}
+setInterval(candleAutoRefresh, 20000);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) candleAutoRefresh(); });
+
 document.getElementById('candleToggle')?.addEventListener('click', (e) => {
   const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
   document.body.classList.toggle('cc-lock', !expanded);
