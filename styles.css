@@ -1269,3 +1269,6 @@ body.cc-lock { overflow: hidden; }
 .al-sens.oco { color: #b388ff; }
 .al-type.buy { color: #089981; }
 .al-type.sell { color: #f23645; }
+.al-notif { display: block; width: 100%; margin: 0 0 10px; padding: 9px 12px; background: #14161a; color: #cfd2d6; border: 1px solid #2a2d33; border-radius: 8px; font-size: 14px; cursor: pointer; text-align: left; }
+.al-notif.on { color: #089981; border-color: #089981; }
+.al-notif[hidden] { display: none; }

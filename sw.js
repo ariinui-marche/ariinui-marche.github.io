@@ -1,4 +1,4 @@
-const CACHE = 'ariinui-marche-shell-v98';
+const CACHE = 'ariinui-marche-shell-v99';
 const SHELL_PATHS = [
   '/',
   '/index.html',
@@ -44,4 +44,25 @@ self.addEventListener('fetch', (event) => {
       })
       .catch(() => caches.match(event.request)),
   );
+});
+
+// Notifications push du module Alerte (envoyées par le serveur même application fermée / téléphone éteint puis rallumé)
+self.addEventListener('push', (event) => {
+  let d = {};
+  try { d = event.data ? event.data.json() : {}; } catch (e) { d = { body: event.data ? event.data.text() : '' }; }
+  event.waitUntil(self.registration.showNotification(d.title || 'Alerte', {
+    body: d.body || '',
+    tag: d.tag,
+    icon: '/icons/icon-192.png',
+    badge: '/icons/icon-192.png',
+    vibrate: [200, 100, 200],
+    data: { url: d.url || '/' },
+  }));
+});
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  event.waitUntil(self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((list) => {
+    for (const c of list) if ('focus' in c) return c.focus();
+    return self.clients.openWindow((event.notification.data && event.notification.data.url) || '/');
+  }));
 });

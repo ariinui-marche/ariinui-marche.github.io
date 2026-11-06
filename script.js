@@ -2033,10 +2033,21 @@ function candleSvg(day, dly, view) {
       `<text x="${W - AX - 4}" y="${(y(f.v) - 4).toFixed(1)}" text-anchor="end" style="fill:#f5b642;fill-opacity:.6;font-size:10px">${f.t}% · ${fmt(f.v)}</text>`).join('');
   }
   const yl = Math.min(H - BOT, Math.max(TOP - 20, y(lastC))); // l'étiquette du dernier prix reste visible sur le bord
+  // PDH / PDL : plus haut / plus bas de D1, comme Arii SNIPER (jaune #F5B700 opacité 0,85, pointillé 1 px, étiquette à droite), depuis le début de D0
+  let pd = '';
+  const pdD1 = cs.find((x) => x.lbl === 'D1' && x.c), pdD0i = cs.findIndex((x) => x.lbl === 'D0' && x.c);
+  if (pdD1) {
+    const xs = LEFT + xOff + step * (pdD0i >= 0 ? pdD0i : cs.findIndex((x) => x.lbl === 'D1') + 1);
+    for (const [v, t] of [[pdD1.c[1], 'PDH'], [pdD1.c[2], 'PDL']]) {
+      if (v < lo || v > hi) continue;
+      pd += `<line x1="${xs.toFixed(1)}" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="#F5B700" stroke-opacity="0.85" stroke-width="1" stroke-dasharray="1 3"/>` +
+        `<text x="${W - AX - 4}" y="${(y(v) - 4).toFixed(1)}" text-anchor="end" style="fill:#F5B700;font-size:10px">${t}</text>`;
+    }
+  }
   const tag = `<line x1="0" x2="${W - AX}" y1="${yl.toFixed(1)}" y2="${yl.toFixed(1)}" stroke="${lastCol}" stroke-width="1" stroke-dasharray="2 3"/>` +
     `<rect x="${W - AX + 1}" y="${(yl - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
     `<text x="${W - AX + 6}" y="${(yl + 4).toFixed(1)}" class="pc-ax" style="fill:#fff">${fmt(lastC)}</text>`;
-  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${grid}<g clip-path="url(#pcClip)">${fib}${body}</g>${tag}</svg>`;
+  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${grid}<g clip-path="url(#pcClip)">${fib}${pd}${body}</g>${tag}</svg>`;
 }
 
 // Sweep de la bougie daily précédente (même règle qu'Arii SNIPER) : D0 dépasse le haut de D1 et clôture dessous, ou casse son bas et clôture dessus
@@ -2448,3 +2459,45 @@ document.addEventListener('visibilitychange', () => {
   const b = document.getElementById('alerteBody');
   if (!document.hidden && b && !b.classList.contains('collapsed')) alerteLoad();
 });
+
+// Notifications téléphone éteint : abonnement Web Push, envoyé au serveur qui surveille les niveaux 50 % chaque minute
+const ALERTE_API = 'https://ariinuiirgina.vercel.app/api';
+const ALERTE_VAPID = 'BCAWXRdwHQlq6NfTln3Okhnvv5vYeqWh1wvPFQgjukp5tCbwkktOt4ckCk21ny1ijHnKJ8-952Fgu8NRo2yOxww';
+function alerteKey(b64) {
+  const p = '='.repeat((4 - (b64.length % 4)) % 4), raw = atob((b64 + p).replace(/-/g, '+').replace(/_/g, '/'));
+  return Uint8Array.from(raw, (c) => c.charCodeAt(0));
+}
+async function alerteNotifState() {
+  const btn = document.getElementById('alerteNotif');
+  if (!btn) return;
+  if (!('serviceWorker' in navigator) || !('PushManager' in window) || !('Notification' in window)) { btn.hidden = true; return; }
+  btn.hidden = false;
+  let on = false;
+  try {
+    const reg = await navigator.serviceWorker.ready, sub = await reg.pushManager.getSubscription();
+    on = !!sub && Notification.permission === 'granted';
+    if (on) fetch(`${ALERTE_API}/alerte-subscribe`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ subscription: sub }) }).catch(() => {}); // garde l'abonnement à jour
+  } catch (e) { /* état inconnu */ }
+  btn.classList.toggle('on', on);
+  btn.textContent = on ? '\ud83d\udd14 Notifications on' : (Notification.permission === 'denied' ? '\ud83d\udd15 Notifications blocked (allow them in the browser settings)' : '\ud83d\udd14 Enable notifications');
+}
+document.getElementById('alerteNotif')?.addEventListener('click', async () => {
+  const btn = document.getElementById('alerteNotif');
+  btn.disabled = true;
+  try {
+    const reg = await navigator.serviceWorker.ready;
+    const cur = await reg.pushManager.getSubscription();
+    if (cur) { // déjà abonné : le bouton désactive
+      await fetch(`${ALERTE_API}/alerte-subscribe`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ unsubscribe: true, endpoint: cur.endpoint }) }).catch(() => {});
+      await cur.unsubscribe();
+    } else {
+      if (Notification.permission !== 'granted') { const r = await Notification.requestPermission(); if (r !== 'granted') throw new Error('permission'); }
+      const sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: alerteKey(ALERTE_VAPID) });
+      const res = await fetch(`${ALERTE_API}/alerte-subscribe`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ subscription: sub }) });
+      if (!res.ok) throw new Error('server');
+    }
+  } catch (e) { /* refus ou serveur indisponible : l'état affiché reflète la situation réelle */ }
+  btn.disabled = false;
+  alerteNotifState();
+});
+alerteNotifState();
