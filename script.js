@@ -2033,6 +2033,13 @@ function candleSvg(day, dly) {
   return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${grid}<g clip-path="url(#pcClip)">${fib}${body}</g>${tag}</svg>`;
 }
 
+// Sweep de la bougie daily précédente (même règle qu'Arii SNIPER) : D0 dépasse le haut de D1 et clôture dessous, ou casse son bas et clôture dessus
+function candleSweep(dly) {
+  const a = (dly || []).slice(-4);
+  if (a.length < 2) return false;
+  const d1 = a[a.length - 2], d0 = a[a.length - 1]; // [t, o, h, l, c]
+  return (d0[2] > d1[2] && d0[4] < d1[2]) || (d0[3] < d1[3] && d0[4] > d1[3]);
+}
 function candleRender() {
   const list = document.getElementById('candleList');
   if (!candlePoh) { list.innerHTML = '<div class="charts-intro">POH candles unavailable right now.</div>'; return; }
@@ -2047,7 +2054,7 @@ function candleRender() {
     if (!day) return '';
     date = day.d;
     const cls = s.group === 0 ? 'cd-bull' : s.group === 1 ? 'cd-bear' : '';
-    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head${candleDraft.has(p.id) ? ' sel' : ''}" data-sel="${p.id}"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span><span class="cd-star">${candleDraft.has(p.id) ? '★ Selected' : '☆ Tap to select'}</span></button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id])}</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
+    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head${candleDraft.has(p.id) ? ' sel' : ''}" data-sel="${p.id}"><span class="cd-name">${candleDraft.has(p.id) ? '★ ' : ''}${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id]) ? '<span class="cd-sweep">Sweep</span>' : ''}</button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id])}</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
   }).join('');
   const ki = keepId ? [...candleSlides()].findIndex((r) => r.dataset.id === keepId) : -1;
   list.scrollLeft = (ki >= 0 ? ki : keep) * list.clientWidth;
@@ -2137,7 +2144,8 @@ function candleToggleDraft(id, jump) {
   else document.querySelectorAll('#candleList > .cd-row').forEach((r) => {
     const on = candleDraft.has(r.dataset.id), h = r.querySelector('.cd-head');
     h.classList.toggle('sel', on);
-    h.querySelector('.cd-star').textContent = on ? '★ Selected' : '☆ Tap to select';
+    const nm = h.querySelector('.cd-name');
+    nm.textContent = (on ? '★ ' : '') + nm.textContent.replace(/^★ /, '');
   });
   if (jump) candleJumpTo(id);
   candleNavUpdate();
