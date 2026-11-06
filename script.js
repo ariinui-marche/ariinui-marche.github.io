@@ -2072,6 +2072,7 @@ function candleFilterUpdate() {
 }
 // ===== Zoom / déplacement façon TradingView (pincer à deux doigts, glisser), enregistré par paire =====
 const CANDLE_DEF = { yz: 1, yp: 0, xz: 1, xp: 0 }; // zoom prix, décalage prix (fraction de l'échelle de base), zoom bougies, décalage horizontal (fraction de la largeur)
+try { localStorage.removeItem('candleAlertsV1'); } catch (e) { /* nettoyage des anciennes alertes (fonction retirée) */ }
 const CANDLE_VIEW_LS = 'candleViewV1';
 let candleViews = {};
 try { candleViews = JSON.parse(localStorage.getItem(CANDLE_VIEW_LS) || '{}') || {}; } catch (e) { candleViews = {}; }
