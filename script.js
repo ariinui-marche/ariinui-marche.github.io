@@ -2466,40 +2466,41 @@ function alerteKey(b64) {
   const p = '='.repeat((4 - (b64.length % 4)) % 4), raw = atob((b64 + p).replace(/-/g, '+').replace(/_/g, '/'));
   return Uint8Array.from(raw, (c) => c.charCodeAt(0));
 }
+// Abonnement automatique : dès que les notifications sont autorisées, le téléphone s'abonne (ou se réabonne) tout seul. Rien ne désabonne.
+async function alerteSubscribe(reg) {
+  let sub = await reg.pushManager.getSubscription();
+  if (!sub) {
+    const kr = await fetch(`${ALERTE_API}/alerte?vapid=1`); // la clé publique est créée et servie par le serveur
+    const kj = kr.ok ? await kr.json() : null;
+    if (!kj || !kj.publicKey) throw new Error('vapid');
+    sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: alerteKey(kj.publicKey) });
+  }
+  const res = await fetch(`${ALERTE_API}/alerte`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ subscription: sub }) });
+  if (!res.ok) throw new Error('server');
+}
 async function alerteNotifState() {
   const btn = document.getElementById('alerteNotif');
   if (!btn) return;
   if (!('serviceWorker' in navigator) || !('PushManager' in window) || !('Notification' in window)) { btn.hidden = true; return; }
   btn.hidden = false;
-  let on = false;
+  btn.classList.remove('on');
   try {
-    const reg = await navigator.serviceWorker.ready, sub = await reg.pushManager.getSubscription();
-    on = !!sub && Notification.permission === 'granted';
-    if (on) fetch(`${ALERTE_API}/alerte`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ subscription: sub }) }).catch(() => {}); // garde l'abonnement à jour
-  } catch (e) { /* état inconnu */ }
-  btn.classList.toggle('on', on);
-  btn.textContent = on ? '\ud83d\udd14 Notifications on' : (Notification.permission === 'denied' ? '\ud83d\udd15 Notifications blocked (allow them in the browser settings)' : '\ud83d\udd14 Enable notifications');
-}
-document.getElementById('alerteNotif')?.addEventListener('click', async () => {
-  const btn = document.getElementById('alerteNotif');
-  btn.disabled = true;
-  try {
-    const reg = await navigator.serviceWorker.ready;
-    const cur = await reg.pushManager.getSubscription();
-    if (cur) { // déjà abonné : le bouton désactive
-      await fetch(`${ALERTE_API}/alerte`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ unsubscribe: true, endpoint: cur.endpoint }) }).catch(() => {});
-      await cur.unsubscribe();
-    } else {
-      if (Notification.permission !== 'granted') { const r = await Notification.requestPermission(); if (r !== 'granted') throw new Error('permission'); }
-      const kr = await fetch(`${ALERTE_API}/alerte?vapid=1`); // la clé publique est créée et servie par le serveur
-      const kj = kr.ok ? await kr.json() : null;
-      if (!kj || !kj.publicKey) throw new Error('vapid');
-      const sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: alerteKey(kj.publicKey) });
-      const res = await fetch(`${ALERTE_API}/alerte`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ subscription: sub }) });
-      if (!res.ok) throw new Error('server');
+    if (Notification.permission === 'granted') {
+      await alerteSubscribe(await navigator.serviceWorker.ready); // déjà autorisé : abonnement silencieux, sans clic
+      btn.classList.add('on');
+      btn.textContent = '\ud83d\udd14 Notifications on';
+      btn.disabled = true;
+      return;
     }
-  } catch (e) { /* refus ou serveur indisponible : l'état affiché reflète la situation réelle */ }
+  } catch (e) { /* on retombe sur l'état affiché ci-dessous */ }
   btn.disabled = false;
+  btn.textContent = Notification.permission === 'denied'
+    ? '\ud83d\udd15 Notifications blocked \u2014 allow them in Chrome > Settings > Site settings > Notifications'
+    : '\ud83d\udd14 Enable notifications';
+}
+document.getElementById('alerteNotif')?.addEventListener('click', async () => { // sert seulement à AUTORISER ; jamais à désabonner
+  if (Notification.permission === 'denied') return;
+  try { if (Notification.permission !== 'granted') await Notification.requestPermission(); } catch (e) { /* refus */ }
   alerteNotifState();
 });
 alerteNotifState();
