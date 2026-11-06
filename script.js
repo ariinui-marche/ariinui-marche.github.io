@@ -2036,9 +2036,11 @@ function candleSvg(day, dly) {
 // Sweep de la bougie daily précédente (même règle qu'Arii SNIPER) : D0 dépasse le haut de D1 et clôture dessous, ou casse son bas et clôture dessus
 function candleSweep(dly) {
   const a = (dly || []).slice(-4);
-  if (a.length < 2) return false;
+  if (a.length < 2) return '';
   const d1 = a[a.length - 2], d0 = a[a.length - 1]; // [t, o, h, l, c]
-  return (d0[2] > d1[2] && d0[4] < d1[2]) || (d0[3] < d1[3] && d0[4] > d1[3]);
+  const hi = d0[2] > d1[2] && d0[4] < d1[2], lo = d0[3] < d1[3] && d0[4] > d1[3];
+  // bas = bleu, haut = rouge (les deux si D0 a pris les deux côtés)
+  return (lo ? '<span class="cd-sweep cd-sweep-lo">Sweep</span>' : '') + (hi ? '<span class="cd-sweep cd-sweep-hi">Sweep</span>' : '');
 }
 function candleRender() {
   const list = document.getElementById('candleList');
@@ -2054,7 +2056,7 @@ function candleRender() {
     if (!day) return '';
     date = day.d;
     const cls = s.group === 0 ? 'cd-bull' : s.group === 1 ? 'cd-bear' : '';
-    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head${candleDraft.has(p.id) ? ' sel' : ''}" data-sel="${p.id}"><span class="cd-name">${candleDraft.has(p.id) ? '★ ' : ''}${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id]) ? '<span class="cd-sweep">Sweep</span>' : ''}</button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id])}</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
+    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head${candleDraft.has(p.id) ? ' sel' : ''}" data-sel="${p.id}"><span class="cd-name">${candleDraft.has(p.id) ? '★ ' : ''}${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id])}</button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id])}</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
   }).join('');
   const ki = keepId ? [...candleSlides()].findIndex((r) => r.dataset.id === keepId) : -1;
   list.scrollLeft = (ki >= 0 ? ki : keep) * list.clientWidth;
