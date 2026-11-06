@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-06T09:57:22.355Z",
+  "timestamp": "2026-11-06T17:06:14.313Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -11987,7 +11987,7 @@
       "impact": "Low",
       "forecast": "-0.1%",
       "previous": "0.1%",
-      "actual": ""
+      "actual": "-0.7%"
     },
     {
       "title": "Gov Board Member Tschudin Speaks",
@@ -12014,7 +12014,7 @@
       "impact": "High",
       "forecast": "14.6K",
       "previous": "-68.3K",
-      "actual": ""
+      "actual": "-4.7K"
     },
     {
       "title": "Unemployment Rate",
@@ -12023,7 +12023,7 @@
       "impact": "High",
       "forecast": "6.5%",
       "previous": "6.5%",
-      "actual": ""
+      "actual": "6.7%"
     },
     {
       "title": "Average Hourly Earnings m/m",
@@ -12032,7 +12032,7 @@
       "impact": "High",
       "forecast": "0.3%",
       "previous": "0.1%",
-      "actual": ""
+      "actual": "0.4%"
     },
     {
       "title": "Non-Farm Employment Change",
@@ -12041,7 +12041,7 @@
       "impact": "High",
       "forecast": "65K",
       "previous": "29K",
-      "actual": ""
+      "actual": "165K"
     },
     {
       "title": "Unemployment Rate",
@@ -12050,7 +12050,7 @@
       "impact": "High",
       "forecast": "4.2%",
       "previous": "4.2%",
-      "actual": ""
+      "actual": "4.1%"
     },
     {
       "title": "FOMC Member Musalem Speaks",
@@ -12068,7 +12068,7 @@
       "impact": "Medium",
       "forecast": "57.7",
       "previous": "58.2",
-      "actual": ""
+      "actual": "58.3"
     },
     {
       "title": "Prelim UoM Consumer Sentiment",
@@ -12077,7 +12077,7 @@
       "impact": "Medium",
       "forecast": "48.1",
       "previous": "46.3",
-      "actual": ""
+      "actual": "51.0"
     },
     {
       "title": "Prelim UoM Inflation Expectations",
@@ -12086,7 +12086,7 @@
       "impact": "Medium",
       "forecast": "",
       "previous": "4.7%",
-      "actual": ""
+      "actual": "4.3%"
     },
     {
       "title": "BOJ Gov Ueda Speaks",
@@ -12101,6 +12101,15 @@
       "title": "FOMC Member Bowman Speaks",
       "country": "USD",
       "date": "2026-11-06T12:15:00-05:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "FOMC Member Daly Speaks",
+      "country": "USD",
+      "date": "2026-11-06T13:00:00-05:00",
       "impact": "Low",
       "forecast": "",
       "previous": "",
