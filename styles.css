@@ -1213,6 +1213,18 @@ body.cc-lock { overflow: hidden; }
 .cc-nav button { background: #1a1a1a; color: #e5e5e5; border: 1px solid #333; border-radius: 8px; width: 44px; height: 34px; font-size: 22px; line-height: 1; cursor: pointer; }
 .cc-strip { display: flex; gap: 6px; overflow-x: auto; padding: 6px 8px; flex: 0 0 44px; box-sizing: border-box; scrollbar-width: none; background: #0b0b0b; border-bottom: 1px solid #1d1f24; }
 .cc-strip::-webkit-scrollbar { display: none; }
+.cc-grp { flex: 1 1 0; display: flex; min-width: 0; }
+.cc-grp .cc-chip { flex: 1 1 auto; border-radius: 8px 0 0 8px; border-right-width: 0; min-width: 0; }
+.cc-drop { flex: 0 0 36px; height: 30px; background: #14161a; color: #cfd2d6; border: 1px solid #2a2d33; border-radius: 0 8px 8px 0; font-size: 14px; cursor: pointer; padding: 0; }
+.cc-drop[aria-expanded="true"] { background: #2a2d33; color: #f5b642; }
+.cc-names { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px; background: #101216; border-bottom: 1px solid #1d1f24; max-height: 38vh; overflow-y: auto; }
+.cc-names[hidden] { display: none; }
+#candleBody:not(.collapsed) .cc-names { position: absolute; top: 92px; left: 0; right: 0; z-index: 6; box-shadow: 0 10px 24px rgba(0,0,0,.6); }
+.cc-name { background: #14161a; color: #e5e5e5; border: 1px solid #2a2d33; border-radius: 8px; padding: 0 10px; height: 32px; font-size: 13px; cursor: pointer; }
+.cc-name.lo { border-color: #4aa3ff; color: #4aa3ff; }
+.cc-name.hi { border-color: #ef5350; color: #ef5350; }
+.cc-name.lo.hi { border-color: #4aa3ff; color: #ef5350; }
+.cc-none { color: #9aa0a6; font-size: 13px; padding: 6px; }
 .cc-chip { flex: 1 1 0; text-align: center; background: #14161a; color: #cfd2d6; border: 1px solid #2a2d33; border-radius: 8px; padding: 0 12px; height: 30px; font-size: 13px; cursor: pointer; white-space: nowrap; }
 .cd-sweep { float: right; font-size: 13px; font-weight: 700; letter-spacing: .5px; padding-top: 3px; margin-left: 8px; }
 .cd-sweep-hi { color: #ef5350; }

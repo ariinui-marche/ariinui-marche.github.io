@@ -86,7 +86,8 @@
       </h2>
       <div id="candleBody" class="charts-body collapsed">
         <div class="cc-nav"><button type="button" id="candlePrev" aria-label="Previous">&#8249;</button><span id="candleCount"></span><button type="button" id="candleNext" aria-label="Next">&#8250;</button><button type="button" id="candleClose" aria-label="Close">&#10005;</button></div>
-        <div id="candleStrip" class="cc-strip"><button type="button" class="cc-chip" data-f="fibo">Fibo</button><button type="button" class="cc-chip" data-f="sweep">Sweep</button></div>
+        <div id="candleStrip" class="cc-strip"><div class="cc-grp"><button type="button" class="cc-chip" data-f="fibo">Fibo</button><button type="button" class="cc-drop" data-d="fibo" aria-label="Show Fibo pairs" aria-expanded="false">&#9662;</button></div><div class="cc-grp"><button type="button" class="cc-chip" data-f="sweep">Sweep</button><button type="button" class="cc-drop" data-d="sweep" aria-label="Show Sweep pairs" aria-expanded="false">&#9662;</button></div></div>
+        <div id="candleNames" class="cc-names" hidden></div>
         <div id="candleList" class="pc-list cc-track"></div>
       </div>
     </section>

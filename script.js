@@ -2221,6 +2221,47 @@ function candleNavUpdate() {
   const c = document.getElementById('candleCount');
   if (c) c.textContent = n ? `${i + 1} / ${n}` : '';
 }
+// Petit bouton ▾ de Fibo / Sweep : liste des noms des paires concernées ; un clic sur un nom la ferme et amène le carrousel à cette paire
+let candleNamesOpen = null; // 'fibo' | 'sweep' | null
+function candleNamesRender() {
+  const box = document.getElementById('candleNames');
+  if (!box) return;
+  document.querySelectorAll('#candleStrip [data-d]').forEach((b) => b.setAttribute('aria-expanded', String(candleNamesOpen === b.dataset.d)));
+  if (!candleNamesOpen) { box.hidden = true; return; }
+  const ids = CORR_ALL_PAIRS.filter((p) => candlePoh && candlePoh[p.id])
+    .map((p) => ({ p, s: chartsCandles ? chartsScore(p.id) : { group: 2, move: 0 } }))
+    .sort((x, y) => x.s.group - y.s.group || y.s.move - x.s.move)
+    .map((x) => x.p).filter((p) => candleInfo(p.id)[candleNamesOpen]);
+  box.innerHTML = ids.length ? ids.map((p) => {
+    let cls = '';
+    if (candleNamesOpen === 'sweep') { const h = candleSweep((candleDaily || {})[p.id], ((candlePoh[p.id] || []).filter((d) => Object.keys(d.c).length).slice(-1)[0])); cls = (h.includes('cd-sweep-lo') ? ' lo' : '') + (h.includes('cd-sweep-hi') ? ' hi' : ''); }
+    return `<button type="button" class="cc-name${cls}" data-go="${p.id}">${p.label}</button>`;
+  }).join('') : '<span class="cc-none">No pair</span>';
+  box.hidden = false;
+}
+function candleGoTo(id) {
+  let i = [...candleSlides()].findIndex((r) => r.dataset.id === id);
+  if (i < 0) { candleF.fibo = false; candleF.sweep = false; candleSelected = null; candleRender(); i = [...candleSlides()].findIndex((r) => r.dataset.id === id); } // la paire est masquée par un filtre : on l'enlève
+  const l = document.getElementById('candleList');
+  if (i >= 0) l.scrollTo({ left: i * l.clientWidth, behavior: 'smooth' });
+}
+document.getElementById('candleStrip')?.addEventListener('click', (e) => {
+  const d = e.target.closest('[data-d]');
+  if (!d) return;
+  e.stopPropagation();
+  candleNamesOpen = candleNamesOpen === d.dataset.d ? null : d.dataset.d;
+  candleNamesRender();
+});
+document.getElementById('candleNames')?.addEventListener('click', (e) => {
+  const g = e.target.closest('[data-go]');
+  if (!g) return;
+  candleNamesOpen = null;
+  candleNamesRender();
+  candleGoTo(g.dataset.go);
+});
+document.addEventListener('click', (e) => { // un clic ailleurs referme la liste
+  if (candleNamesOpen && !e.target.closest('#candleNames') && !e.target.closest('#candleStrip [data-d]')) { candleNamesOpen = null; candleNamesRender(); }
+});
 document.getElementById('candleStrip')?.addEventListener('click', (e) => {
   const b = e.target.closest('[data-f]');
   if (!b) return;
@@ -2296,6 +2337,7 @@ function candleRefreshInPlace() {
     if (hd) { hd.querySelectorAll('.cd-sweep').forEach((x) => x.remove()); hd.insertAdjacentHTML('beforeend', candleSweep((candleDaily || {})[id], day)); }
   });
   candleFilterUpdate();
+  if (candleNamesOpen) candleNamesRender();
 }
 async function candleAutoRefresh() {
   const body = document.getElementById('candleBody');
