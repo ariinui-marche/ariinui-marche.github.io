@@ -1980,9 +1980,15 @@ function candleSvg(day, dly) {
   if (!vals.length) return '';
   const { W, H } = candleDims();
   const AX = 60, TOP = 34, BOT = 14, LEFT = 4;
-  let hi = Math.max(...vals.map((x) => x.c[1]));
-  let lo = Math.min(...vals.map((x) => x.c[2]));
-  const m = (hi - lo || hi * 0.001) * 0.04; hi += m; lo -= m;
+  // Priorité d'affichage aux 9 POH : l'échelle se cale sur eux, les journalières trop grandes sont coupées sur les bords
+  const poh = cs.filter((x) => x.c && !/^D\d$/.test(x.lbl));
+  const base = poh.length ? poh : vals;
+  let hi = Math.max(...base.map((x) => x.c[1]));
+  let lo = Math.min(...base.map((x) => x.c[2]));
+  const d0 = cs.find((x) => x.lbl === 'D0' && x.c);
+  const minSpan = d0 ? (d0.c[1] - d0.c[2]) * 0.35 : 0; // évite un zoom extrême quand il n'y a encore qu'une ou deux bougies POH
+  if (hi - lo < minSpan) { const mid = (hi + lo) / 2; hi = mid + minSpan / 2; lo = mid - minSpan / 2; }
+  const m = (hi - lo || hi * 0.001) * 0.08; hi += m; lo -= m;
   const rng = hi - lo;
   const y = (v) => TOP + (1 - (v - lo) / rng) * (H - TOP - BOT);
   const dec = hi >= 1000 ? 2 : hi >= 100 ? 3 : 5;
@@ -2002,7 +2008,8 @@ function candleSvg(day, dly) {
     const [o, h, l, c] = x.c;
     const col = c >= o ? '#26a69a' : '#ef5350';
     const top = y(Math.max(o, c)), ht = Math.max(1, Math.abs(y(o) - y(c)));
-    return `<text x="${cx.toFixed(1)}" y="${(y(h) - 6).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:${col}">${x.lbl}</text>` +
+    const vis = h >= lo && l <= hi; // la bougie touche la zone affichée
+    return (vis ? `<text x="${cx.toFixed(1)}" y="${Math.min(H - 6, Math.max(14, y(h) - 6)).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:${col}">${x.lbl}</text>` : '') +
       `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="1.3"/>` +
       `<rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}" stroke-width="1.3"/>`;
   }).join('');
@@ -2023,7 +2030,7 @@ function candleSvg(day, dly) {
   const tag = `<line x1="0" x2="${W - AX}" y1="${y(lastC).toFixed(1)}" y2="${y(lastC).toFixed(1)}" stroke="${lastCol}" stroke-width="1" stroke-dasharray="2 3"/>` +
     `<rect x="${W - AX + 1}" y="${(y(lastC) - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
     `<text x="${W - AX + 6}" y="${(y(lastC) + 4).toFixed(1)}" class="pc-ax" style="fill:#fff">${fmt(lastC)}</text>`;
-  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true">${grid}${fib}${body}${tag}</svg>`;
+  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${grid}<g clip-path="url(#pcClip)">${fib}${body}</g>${tag}</svg>`;
 }
 
 function candleRender() {
