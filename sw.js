@@ -1,4 +1,4 @@
-const CACHE = 'ariinui-marche-shell-v86';
+const CACHE = 'ariinui-marche-shell-v87';
 const SHELL_PATHS = [
   '/',
   '/index.html',

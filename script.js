@@ -1959,9 +1959,6 @@ if ('serviceWorker' in navigator) {
 // ===== CANDLE : bougies POH (14h / 15h-17h / 22h / 02h, heure UTC-10) des symboles de Charts =====
 let candlePoh = null;
 let candleSelected = null;
-let candleSel = new Set(); // paires validées (vide = toutes)
-let candleDraft = new Set(); // choix en cours, appliqué au clic sur « OK »
-try { candleSel = new Set(JSON.parse(localStorage.getItem('candleSel') || '[]')); } catch (e) { /* aucune sélection */ }
 const CANDLE_SLOTS = [['12', '12h'], ['14', '14h'], ['15', '15h'], ['17', '17h'], ['22', '22h'], ['23', '23h'], ['02', '02h'], ['03', '03h'], ['07', '07h']];
 let candleDaily = null; // { PAIR: [[t,o,h,l,c], ...4 derniers jours D3..D0] }
 
@@ -2044,10 +2041,28 @@ function candleSweep(dly, day) {
   // bas = bleu, haut = rouge (les deux si D0 a pris les deux côtés)
   return (lo ? '<span class="cd-sweep cd-sweep-lo">Sweep</span>' : '') + (hi ? '<span class="cd-sweep cd-sweep-hi">Sweep</span>' : '');
 }
+// Boutons Fibo / Sweep : affichent immédiatement les paires concernées (les deux actifs = les deux conditions)
+const candleF = { fibo: false, sweep: false };
+function candleInfo(id) {
+  const dly = (candleDaily || {})[id], a = (dly || []).slice(-4);
+  const days = ((candlePoh || {})[id] || []).filter((d) => Object.keys(d.c).length), day = days[days.length - 1];
+  let fibo = false; // D2 et D1 dans le même sens (lignes Fibonacci tracées sur D1)
+  if (a.length >= 3) { const d1 = a[a.length - 2], d2 = a[a.length - 3]; fibo = (d1[4] > d1[1] && d2[4] > d2[1]) || (d1[4] < d1[1] && d2[4] < d2[1]); }
+  return { fibo, sweep: !!(day && candleSweep(dly, day)) };
+}
+function candleFilterUpdate() {
+  const ids = CORR_ALL_PAIRS.filter((p) => candlePoh && candlePoh[p.id]).map((p) => p.id);
+  const n = { fibo: 0, sweep: 0 };
+  for (const id of ids) { const i = candleInfo(id); if (i.fibo) n.fibo++; if (i.sweep) n.sweep++; }
+  document.querySelectorAll('#candleStrip [data-f]').forEach((b) => {
+    b.classList.toggle('on', candleF[b.dataset.f]);
+    b.textContent = `${b.dataset.f === 'fibo' ? 'Fibo' : 'Sweep'} (${n[b.dataset.f]})`;
+  });
+}
 function candleRender() {
   const list = document.getElementById('candleList');
   if (!candlePoh) { list.innerHTML = '<div class="charts-intro">POH candles unavailable right now.</div>'; return; }
-  const rows = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id] && (candleDiff() || !candleSel.size || candleSel.has(p.id)))
+  const rows = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id] && (!candleF.fibo || candleInfo(p.id).fibo) && (!candleF.sweep || candleInfo(p.id).sweep))
     .map((p) => ({ p, s: chartsCandles ? chartsScore(p.id) : { group: 2, move: 0 } }))
     .sort((x, y) => x.s.group - y.s.group || y.s.move - x.s.move);
   let date = '';
@@ -2058,10 +2073,12 @@ function candleRender() {
     if (!day) return '';
     date = day.d;
     const cls = s.group === 0 ? 'cd-bull' : s.group === 1 ? 'cd-bear' : '';
-    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head${candleDraft.has(p.id) ? ' sel' : ''}" data-sel="${p.id}"><span class="cd-name">${candleDraft.has(p.id) ? '★ ' : ''}${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id], day)}</button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id])}</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
+    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id], day)}</button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id])}</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
   }).join('');
   const ki = keepId ? [...candleSlides()].findIndex((r) => r.dataset.id === keepId) : -1;
   list.scrollLeft = (ki >= 0 ? ki : keep) * list.clientWidth;
+  if (!rows.length) list.innerHTML = '<div class="charts-intro">No pair matches.</div>';
+  candleFilterUpdate();
   candleNavUpdate();
   if (candleSelected) chartsOpenDetail(candleSelected, '60', 'pc-detail-');
 }
@@ -2078,82 +2095,21 @@ function candleGo(i) {
   if (!n) return;
   l.scrollTo({ left: Math.max(0, Math.min(n - 1, i)) * l.clientWidth, behavior: 'smooth' });
 }
-// Choix en cours différent de la sélection validée : le carrousel montre alors toutes les paires pour pouvoir naviguer vers chaque symbole touché
-function candleDiff() {
-  return candleDraft.size !== candleSel.size || [...candleDraft].some((x) => !candleSel.has(x));
-}
-function candleJumpTo(id) {
-  const l = document.getElementById('candleList');
-  const i = [...candleSlides()].findIndex((r) => r.querySelector('[data-pair]')?.dataset.pair === id);
-  if (i >= 0) { l.scrollTo({ left: i * l.clientWidth, behavior: 'smooth' }); }
-}
-function candleSelSave() {
-  try { localStorage.setItem('candleSel', JSON.stringify([...candleSel])); } catch (e) { /* quota */ }
-}
-// Bandeau horizontal de symboles : toucher = sélectionner / désélectionner (aucune sélection = toutes les paires)
-function candleStripRender() {
-  const g = document.getElementById('candleStrip');
-  if (!g) return;
-  const sc = g.scrollLeft;
-  g.innerHTML = `<button type="button" class="cc-chip${candleSel.size || candleDraft.size ? '' : ' on'}" data-id="">ALL</button>` +
-    CORR_ALL_PAIRS.map((p) => `<button type="button" class="cc-chip${candleDraft.has(p.id) ? ' on' : ''}" data-id="${p.id}">${p.label}</button>`).join('');
-  g.scrollLeft = sc;
-  const v = document.getElementById('candleValidate');
-  if (v) {
-    v.hidden = !candleDiff();
-    v.textContent = candleDraft.size ? `✓ OK (${candleDraft.size})` : '✓ ALL';
-  }
-}
-function candleSelChanged() {
-  candleSelSave();
-  candleDraft = new Set(candleSel);
-  candleStripRender();
-  candleSelected = null;
-  if (candlePoh) candleRender();
-  document.getElementById('candleList').scrollLeft = 0;
-  candleNavUpdate();
-}
-document.getElementById('candleStrip')?.addEventListener('click', (e) => {
-  const b = e.target.closest('.cc-chip');
-  if (!b) return;
-  const id = b.dataset.id;
-  if (!id) { candleDraft.clear(); candleSel = new Set(); candleSelChanged(); return; } // ALL : retour immédiat à toutes les paires
-  candleToggleDraft(id, true);
-});
-document.getElementById('candleValidate')?.addEventListener('click', () => {
-  candleSel = new Set(candleDraft);
-  candleSelChanged();
-});
-candleDraft = new Set(candleSel);
-candleStripRender();
-
 function candleCurId() { return candleSlides()[candleIndex()]?.dataset.id || null; }
 function candleNavUpdate() {
   const n = candleSlides().length, i = Math.min(candleIndex(), Math.max(0, n - 1));
   const c = document.getElementById('candleCount');
   if (c) c.textContent = n ? `${i + 1} / ${n}` : '';
-  const cur = candleCurId(), strip = document.getElementById('candleStrip');
-  if (strip) { // le bandeau suit le graphique affiché
-    strip.querySelectorAll('.cc-chip').forEach((b) => b.classList.toggle('cur', !!cur && b.dataset.id === cur));
-    const cb = strip.querySelector('.cc-chip.cur');
-    if (cb) strip.scrollLeft = cb.offsetLeft - (strip.clientWidth - cb.offsetWidth) / 2;
-  }
 }
-// Coche / décoche une paire dans le choix en cours (sans changer le carrousel ; le filtre ne s'applique qu'à « OK »)
-function candleToggleDraft(id, jump) {
-  const was = candleDiff();
-  if (candleDraft.has(id)) candleDraft.delete(id); else candleDraft.add(id);
-  candleStripRender();
-  if (candlePoh && candleDiff() !== was) candleRender(); // liste complète pendant le choix, filtrée sinon
-  else document.querySelectorAll('#candleList > .cd-row').forEach((r) => {
-    const on = candleDraft.has(r.dataset.id), h = r.querySelector('.cd-head');
-    h.classList.toggle('sel', on);
-    const nm = h.querySelector('.cd-name');
-    nm.textContent = (on ? '★ ' : '') + nm.textContent.replace(/^★ /, '');
-  });
-  if (jump) candleJumpTo(id);
+document.getElementById('candleStrip')?.addEventListener('click', (e) => {
+  const b = e.target.closest('[data-f]');
+  if (!b) return;
+  candleF[b.dataset.f] = !candleF[b.dataset.f];
+  candleSelected = null;
+  if (candlePoh) candleRender();
+  document.getElementById('candleList').scrollLeft = 0;
   candleNavUpdate();
-}
+});
 document.getElementById('candleClose')?.addEventListener('click', () => document.getElementById('candleToggle').click());
 let candleRz = 0;
 window.addEventListener('resize', () => { clearTimeout(candleRz); candleRz = setTimeout(() => { if (candlePoh && !document.getElementById('candleBody').classList.contains('collapsed')) candleRender(); }, 200); });
@@ -2213,8 +2169,6 @@ document.getElementById('candleToggle')?.addEventListener('click', (e) => {
 });
 
 document.getElementById('candleList').addEventListener('click', (e) => {
-  const sb = e.target.closest('[data-sel]');
-  if (sb) { candleToggleDraft(sb.dataset.sel, false); return; }
   const btn = e.target.closest('[data-pair]');
   if (!btn) return;
   const id = btn.dataset.pair;
