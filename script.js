@@ -2462,7 +2462,6 @@ document.addEventListener('visibilitychange', () => {
 
 // Notifications téléphone éteint : abonnement Web Push, envoyé au serveur qui surveille les niveaux 50 % chaque minute
 const ALERTE_API = 'https://ariinuiirgina.vercel.app/api';
-const ALERTE_VAPID = 'BCAWXRdwHQlq6NfTln3Okhnvv5vYeqWh1wvPFQgjukp5tCbwkktOt4ckCk21ny1ijHnKJ8-952Fgu8NRo2yOxww';
 function alerteKey(b64) {
   const p = '='.repeat((4 - (b64.length % 4)) % 4), raw = atob((b64 + p).replace(/-/g, '+').replace(/_/g, '/'));
   return Uint8Array.from(raw, (c) => c.charCodeAt(0));
@@ -2492,7 +2491,10 @@ document.getElementById('alerteNotif')?.addEventListener('click', async () => {
       await cur.unsubscribe();
     } else {
       if (Notification.permission !== 'granted') { const r = await Notification.requestPermission(); if (r !== 'granted') throw new Error('permission'); }
-      const sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: alerteKey(ALERTE_VAPID) });
+      const kr = await fetch(`${ALERTE_API}/alerte?vapid=1`); // la clé publique est créée et servie par le serveur
+      const kj = kr.ok ? await kr.json() : null;
+      if (!kj || !kj.publicKey) throw new Error('vapid');
+      const sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: alerteKey(kj.publicKey) });
       const res = await fetch(`${ALERTE_API}/alerte`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ subscription: sub }) });
       if (!res.ok) throw new Error('server');
     }
