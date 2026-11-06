@@ -2476,7 +2476,7 @@ async function alerteNotifState() {
   try {
     const reg = await navigator.serviceWorker.ready, sub = await reg.pushManager.getSubscription();
     on = !!sub && Notification.permission === 'granted';
-    if (on) fetch(`${ALERTE_API}/alerte-subscribe`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ subscription: sub }) }).catch(() => {}); // garde l'abonnement à jour
+    if (on) fetch(`${ALERTE_API}/alerte`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ subscription: sub }) }).catch(() => {}); // garde l'abonnement à jour
   } catch (e) { /* état inconnu */ }
   btn.classList.toggle('on', on);
   btn.textContent = on ? '\ud83d\udd14 Notifications on' : (Notification.permission === 'denied' ? '\ud83d\udd15 Notifications blocked (allow them in the browser settings)' : '\ud83d\udd14 Enable notifications');
@@ -2488,12 +2488,12 @@ document.getElementById('alerteNotif')?.addEventListener('click', async () => {
     const reg = await navigator.serviceWorker.ready;
     const cur = await reg.pushManager.getSubscription();
     if (cur) { // déjà abonné : le bouton désactive
-      await fetch(`${ALERTE_API}/alerte-subscribe`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ unsubscribe: true, endpoint: cur.endpoint }) }).catch(() => {});
+      await fetch(`${ALERTE_API}/alerte`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ unsubscribe: true, endpoint: cur.endpoint }) }).catch(() => {});
       await cur.unsubscribe();
     } else {
       if (Notification.permission !== 'granted') { const r = await Notification.requestPermission(); if (r !== 'granted') throw new Error('permission'); }
       const sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: alerteKey(ALERTE_VAPID) });
-      const res = await fetch(`${ALERTE_API}/alerte-subscribe`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ subscription: sub }) });
+      const res = await fetch(`${ALERTE_API}/alerte`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ subscription: sub }) });
       if (!res.ok) throw new Error('server');
     }
   } catch (e) { /* refus ou serveur indisponible : l'état affiché reflète la situation réelle */ }
