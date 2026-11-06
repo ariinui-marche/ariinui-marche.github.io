@@ -1,4 +1,4 @@
-const CACHE = 'ariinui-marche-shell-v101';
+const CACHE = 'ariinui-marche-shell-v102';
 const SHELL_PATHS = [
   '/',
   '/index.html',
@@ -55,7 +55,11 @@ self.addEventListener('push', (event) => {
     tag: d.tag,
     icon: '/icons/icon-192.png',
     badge: '/icons/icon-192.png',
-    vibrate: [200, 100, 200],
+    vibrate: [300, 150, 300, 150, 600],
+    requireInteraction: true, // reste affichée tant qu'on ne la ferme pas
+    renotify: true, // une alerte de même étiquette re-sonne / re-vibre
+    silent: false,
+    timestamp: Date.now(),
     data: { url: d.url || '/' },
   }));
 });
