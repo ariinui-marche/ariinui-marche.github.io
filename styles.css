@@ -1256,3 +1256,16 @@ body.cc-lock { overflow: hidden; }
 .cc-top .cc-drop { flex: 0 0 26px; font-size: 12px; }
 .cc-top #candleClose { flex: 0 0 36px; }
 .cc-top { gap: 4px; padding-right: 6px; }
+
+/* ALERTE : tableau Symbol | 50 % (style PAPER TRADING) */
+.al-grid { display: grid; grid-template-columns: 1.3fr 1fr .8fr .8fr; font-size: 15px; border-radius: 8px; overflow: hidden; }
+.al-h { background: rgba(128,128,128,.3); color: #fff; padding: 8px 12px; font-weight: 600; }
+.al-c { padding: 9px 12px; font-weight: 600; }
+.al-c.a { background: rgba(128,128,128,.15); }
+.al-c.b { background: rgba(128,128,128,.08); }
+.al-c.al-t { text-align: center; font-variant-numeric: tabular-nums; }
+.al-empty { grid-column: 1 / -1; padding: 14px 12px; color: #9aa0a6; background: rgba(128,128,128,.08); }
+.al-sens.ptp { color: #e5e5e5; }
+.al-sens.oco { color: #b388ff; }
+.al-type.buy { color: #089981; }
+.al-type.sell { color: #f23645; }

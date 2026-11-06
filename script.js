@@ -2382,3 +2382,69 @@ document.getElementById('candleList').addEventListener('click', (e) => {
     setTimeout(() => document.getElementById(`pc-detail-${id}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
   }
 });
+
+// ===== ALERTE : tableau Symbol | 50 % façon PAPER TRADING =====
+// 50 % = milieu entre l'entrée (bord de la boîte 14H) et le TP1 (bord ± R) : haut + R/2 ou bas - R/2. L'heure affichée (UTC-10) est celle de la 1re touche.
+const ALERTE_LS = 'alerteCacheV1';
+let alerteData = null; // { PAIR: { d, hi, lo, up, dn } }
+const ALERTE_CCY = { EUR: '#4aa3ff', USD: '#ffd400', GBP: '#ff5ca8', JPY: '#ff4d4d', AUD: '#2ecc71', CAD: '#ff9f1c', CHF: '#b36bff', NZD: '#1de9d0', XAU: '#d4af37', BTC: '#f7931a' };
+function alerteHour(t) { return new Date((t - 36000) * 1000).getUTCHours(); } // heure UTC-10
+function alerteTime(t) { return new Date((t - 36000) * 1000).toISOString().slice(11, 16); }
+function alerteZone(t) { // couleurs de session de PAPER TRADING : 14-17 bleu, 22-02 rouge, 02-03 vert, 03-07 jaune, sinon gris
+  const h = alerteHour(t);
+  return (h >= 14 && h < 17) ? '#2962ff' : (h >= 22 || h < 2) ? '#f23645' : (h >= 2 && h < 3) ? '#089981' : (h >= 3 && h < 7) ? '#fdd835' : '#787b86';
+}
+function alerteRender() {
+  const box = document.getElementById('alerteTable');
+  if (!box) return;
+  if (!alerteData) { box.innerHTML = '<div class="charts-intro">Alert data unavailable right now.</div>'; return; }
+  // Une ligne par niveau touché : le 1er touché = PTP, le côté opposé touché ensuite = OCO. Type : BUY côté haut, SELL côté bas.
+  const rows = [];
+  for (const p of CORR_ALL_PAIRS) {
+    const f = alerteData[p.id];
+    if (!f) continue;
+    const ev = [];
+    if (f.up) ev.push({ t: f.up, side: 'up' });
+    if (f.dn) ev.push({ t: f.dn, side: 'dn' });
+    ev.sort((x, y) => x.t - y.t);
+    ev.forEach((e, k) => rows.push({ id: p.id, f, t: e.t, side: e.side, sens: k === 0 ? 'PTP' : 'OCO' }));
+  }
+  rows.sort((a, b) => a.t - b.t);
+  const dec = (v) => v.toFixed(v >= 1000 ? 2 : v >= 100 ? 3 : 5);
+  box.innerHTML = `<div class="al-grid"><div class="al-h">Symbol</div><div class="al-h">50%</div><div class="al-h">Sens</div><div class="al-h">Type</div>` +
+    (rows.length ? rows.map((r, i) => {
+      const b = r.id.slice(0, 3), q = r.id.slice(3), col = alerteZone(r.t), alt = i % 2 === 0 ? 'a' : 'b';
+      const R = r.f.hi - r.f.lo;
+      const tip = `Box 14H: ${dec(r.f.hi)} / ${dec(r.f.lo)} · 50% up ${dec(r.f.hi + R / 2)} · 50% down ${dec(r.f.lo - R / 2)}`;
+      return `<div class="al-c ${alt}" title="${tip}"><span style="color:${ALERTE_CCY[b] || '#e5e5e5'}">${b}</span> <span style="color:${ALERTE_CCY[q] || '#e5e5e5'}">${q}</span></div>` +
+        `<div class="al-c al-t" style="color:${col};background:${col}1f" title="${tip}">${alerteTime(r.t)}</div>` +
+        `<div class="al-c ${alt} al-sens ${r.sens === 'OCO' ? 'oco' : 'ptp'}">${r.sens}</div>` +
+        `<div class="al-c ${alt} al-type ${r.side === 'up' ? 'buy' : 'sell'}">${r.side === 'up' ? 'BUY' : 'SELL'}</div>`;
+    }).join('') : '<div class="al-empty">—</div>') +
+    `</div>`;
+}
+async function alerteLoad() {
+  if (!alerteData) {
+    try { const c = JSON.parse(localStorage.getItem(ALERTE_LS) || 'null'); if (c && c.f50) { alerteData = c.f50; alerteRender(); } } catch (e) { /* pas de cache */ }
+  }
+  try {
+    const j = await candleFetchProxy();
+    alerteData = j.f50 || {};
+    try { localStorage.setItem(ALERTE_LS, JSON.stringify({ f50: alerteData })); } catch (e) { /* quota */ }
+  } catch (e) { /* on garde la dernière version */ }
+  alerteRender();
+}
+document.getElementById('alerteToggle')?.addEventListener('click', (e) => {
+  const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
+  e.currentTarget.setAttribute('aria-expanded', String(!expanded));
+  document.getElementById('alerteBody').classList.toggle('collapsed', expanded);
+  if (!expanded) alerteLoad();
+});
+setInterval(() => { // actualisation tant que le panneau est ouvert et visible
+  const b = document.getElementById('alerteBody');
+  if (b && !b.classList.contains('collapsed') && !document.hidden) alerteLoad();
+}, 20000);
+document.addEventListener('visibilitychange', () => {
+  const b = document.getElementById('alerteBody');
+  if (!document.hidden && b && !b.classList.contains('collapsed')) alerteLoad();
+});
