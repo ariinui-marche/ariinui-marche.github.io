@@ -1960,6 +1960,31 @@ let candlePoh = null;
 let candleSelected = null;
 const CANDLE_SLOTS = [['12', '12h'], ['14', '14h'], ['15', '15h'], ['17', '17h'], ['22', '22h'], ['23', '23h'], ['02', '02h'], ['03', '03h'], ['07', '07h']];
 let candleDaily = null; // { PAIR: [[t,o,h,l,c], ...4 derniers jours D3..D0] }
+// Historique 1 min / 5 min à gauche des POH (flèches ‹ › dans l'en-tête) : '0' = POH seuls (vue habituelle), '1' / '5' = bougies 1 min / 5 min
+let candleHistTf = '0';
+try { candleHistTf = localStorage.getItem('candleHistTf') || '0'; } catch (e) { /* pas de stockage */ }
+if (!['0', '1', '5'].includes(candleHistTf)) candleHistTf = '0';
+const candleHistData = {}; // 'PAIR|tf' -> { bars: [[t,o,h,l,c]...], at, busy }
+let candleF50 = {}; // { PAIR: { hi, lo, ... } } boîte 14H (niveaux Entry / 50 % / TP)
+function candleHistBars(id) {
+  if (candleHistTf === '0') return null;
+  const h = candleHistData[id + '|' + candleHistTf];
+  return h && h.bars.length ? h.bars : null;
+}
+function candleHistEnsure(id) { // charge (au plus toutes les 25 s) les bougies de la paire affichée, puis redessine EN PLACE
+  if (!id || candleHistTf === '0') return;
+  const tf = candleHistTf, key = id + '|' + tf, h = candleHistData[key] || (candleHistData[key] = { bars: [], at: 0, busy: false });
+  if (h.busy || Date.now() - h.at < 25000) return;
+  h.busy = true;
+  fetch(`https://ariinuiirgina.vercel.app/api/poh-candles?pair=${id}&tf=${tf}`, { cache: 'no-store', signal: AbortSignal.timeout(15000) })
+    .then((r) => (r.ok ? r.json() : null))
+    .then((j) => {
+      if (j && j.bars && j.bars.length) h.bars = j.bars;
+      if (tf === candleHistTf && !(cg.mode)) candleRedraw(id, candleViewOf(id));
+    })
+    .catch(() => { /* on garde ce qui est affiché */ })
+    .finally(() => { h.busy = false; h.at = Date.now(); });
+}
 
 // Dimensions réelles de la zone graphique (plein écran) : le SVG est dessiné à l'échelle 1:1, sans déformation
 function candleDims() {
@@ -1970,11 +1995,12 @@ function candleNiceStep(rng, n) {
   return (m < 1.5 ? 1 : m < 3 ? 2 : m < 7 ? 5 : 10) * p;
 }
 // Échelle de prix : calée sur les 9 POH (priorité d'affichage), journalières coupées sur les bords
-function candleScale(dly, day) {
+function candleScale(dly, day, hist) {
   const dd = (dly || []).slice(-4), poh = Object.values((day && day.c) || {}); // POH : [o, h, l, c] ; daily : [t, o, h, l, c]
   const base = poh.length ? poh : dd.map((b) => b.slice(1, 5));
   if (!base.length) return null;
   let hi = Math.max(...base.map((c) => c[1])), lo = Math.min(...base.map((c) => c[2]));
+  if (hist && hist.length) for (const b of hist.slice(-50)) { hi = Math.max(hi, b[2]); lo = Math.min(lo, b[3]); }
   const d0 = dd.length ? dd[dd.length - 1] : null;
   const minSpan = d0 ? (d0[2] - d0[3]) * 0.35 : 0; // évite un zoom extrême quand il n'y a encore qu'une ou deux bougies POH
   if (hi - lo < minSpan) { const mid = (hi + lo) / 2; hi = mid + minSpan / 2; lo = mid - minSpan / 2; }
@@ -1992,14 +2018,15 @@ function candleFibLevels(dly) {
   return [[0.382, '38'], [0.5, '50'], [0.618, '61']].map(([p, t]) => ({ t, v: bu1 ? d1[3] + p * r : d1[2] - p * r }));
 }
 const CANDLE_G = { AX: 60, TOP: 44, BOT: 14, LEFT: 4 }; // géométrie du graphique (aussi utilisée par les gestes)
-function candleSvg(day, dly, view) {
+function candleSvg(day, dly, view, id) {
   const dd = (dly || []).slice(-4).map((b, i, a) => ({ lbl: 'D' + (a.length - 1 - i), c: b.slice(1, 5) }));
   const cs = dd.concat([{ lbl: '', c: null }], CANDLE_SLOTS.map(([k, lbl]) => ({ lbl, c: day.c[k] })));
   const vals = cs.filter((x) => x.c);
   if (!vals.length) return '';
   const { W, H } = candleDims();
   const { AX, TOP, BOT, LEFT } = CANDLE_G;
-  const sc = candleScale(dly, day), vw = view || CANDLE_DEF;
+  const hist = id ? candleHistBars(id) : null;
+  const sc = candleScale(dly, day, hist), vw = view || CANDLE_DEF;
   const baseRng = sc.hi - sc.lo, cenV = (sc.hi + sc.lo) / 2 + vw.yp * baseRng, rng = baseRng / vw.yz;
   const lo = cenV - rng / 2, hi = cenV + rng / 2; // fenêtre de prix affichée (zoom vertical + décalage)
   const y = (v) => TOP + (1 - (v - lo) / rng) * (H - TOP - BOT);
@@ -2011,7 +2038,9 @@ function candleSvg(day, dly, view) {
     grid += `<line x1="0" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="#1d1f24" stroke-width="1"/>` +
       `<text x="${W - AX + 6}" y="${(y(v) + 4).toFixed(1)}" class="pc-ax">${fmt(v)}</text>`;
   }
-  const step = (W - AX - LEFT) / cs.length * vw.xz, xOff = vw.xp * (W - AX), bw = Math.min(step * 0.74, 120); // zoom horizontal + décalage
+  // avec l'historique : les POH occupent la moitié droite, l'historique la moitié gauche ; zoom/déplacement s'appliquent à l'ensemble
+  const split = hist ? 0.5 : 0, plotW0 = W - AX - LEFT, stepB = plotW0 * (1 - split) / cs.length;
+  const step = stepB * vw.xz, xOff = vw.xp * (W - AX) + split * plotW0 * vw.xz, bw = Math.min(step * 0.74, 120); // zoom horizontal + décalage
   const last = [...cs].reverse().find((x) => x.c);
   const lastC = last.c[3], lastCol = last.c[3] >= last.c[0] ? '#26a69a' : '#ef5350';
   const body = cs.map((x, i) => {
@@ -2032,6 +2061,26 @@ function candleSvg(day, dly, view) {
     fib = fl.filter((f) => f.v >= lo && f.v <= hi).map((f) => `<line x1="${x0.toFixed(1)}" x2="${W - AX}" y1="${y(f.v).toFixed(1)}" y2="${y(f.v).toFixed(1)}" stroke="#f5b642" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="1 4" stroke-linecap="round"/>` +
       `<text x="${W - AX - 4}" y="${(y(f.v) - 4).toFixed(1)}" text-anchor="end" style="fill:#f5b642;fill-opacity:.6;font-size:10px">${f.t}% · ${fmt(f.v)}</text>`).join('');
   }
+  let hb = '';
+  if (hist) {
+    const hs = stepB / 3 * vw.xz, edge = LEFT + xOff - stepB * 0.5 * vw.xz, hw = Math.max(1, hs * 0.7);
+    const jMin = Math.max(0, Math.floor((edge - (W - AX)) / hs) - 1), jMax = Math.min(hist.length - 1, Math.ceil((edge + hs) / hs));
+    const kLbl = Math.max(1, Math.round(70 / hs));
+    for (let j = jMin; j <= jMax; j++) {
+      const b = hist[hist.length - 1 - j], x = edge - (j + 0.5) * hs, col = b[4] >= b[1] ? '#26a69a' : '#ef5350';
+      hb += `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${y(b[2]).toFixed(1)}" y2="${y(b[3]).toFixed(1)}" stroke="${col}"/>` +
+        `<rect x="${(x - hw / 2).toFixed(1)}" y="${y(Math.max(b[1], b[4])).toFixed(1)}" width="${hw.toFixed(1)}" height="${Math.max(1, Math.abs(y(b[1]) - y(b[4]))).toFixed(1)}" fill="${col}"/>`;
+      if (j % kLbl === 0) hb += `<text x="${x.toFixed(1)}" y="${H - 3}" text-anchor="middle" class="pc-ax" style="font-size:9px">${alerteTime(b[0])}</text>`;
+    }
+    const f = (candleF50 || {})[id];
+    if (f) { // niveaux de la boîte 14H : Entry = bords, 50 % = bord ± R/2, TP = bord ± R (seulement s'ils sont dans l'échelle)
+      const R = f.hi - f.lo;
+      hb += [[f.hi + R, 'TP 14H', '#5cc8ff'], [f.hi + R / 2, 'H50% 14H', '#ff9f43'], [f.hi, 'Entry 14H', '#5cc8ff'], [f.lo, 'Entry 14H', '#5cc8ff'], [f.lo - R / 2, 'L50% 14H', '#ff9f43'], [f.lo - R, 'TP 14H', '#5cc8ff']]
+        .filter(([v]) => v >= lo && v <= hi)
+        .map(([v, t, c]) => `<line x1="0" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="${c}" stroke-opacity=".7" stroke-dasharray="1 4" stroke-linecap="round"/>` +
+          `<text x="4" y="${(y(v) - 3).toFixed(1)}" style="fill:${c};font-size:10px">${t}</text>`).join('');
+    }
+  }
   const yl = Math.min(H - BOT, Math.max(TOP - 20, y(lastC))); // l'étiquette du dernier prix reste visible sur le bord
   // PDH / PDL : plus haut / plus bas de D1, comme Arii SNIPER (jaune #F5B700 opacité 0,85, pointillé 1 px, étiquette à droite), depuis le début de D0
   let pd = '';
@@ -2047,7 +2096,7 @@ function candleSvg(day, dly, view) {
   const tag = `<line x1="0" x2="${W - AX}" y1="${yl.toFixed(1)}" y2="${yl.toFixed(1)}" stroke="${lastCol}" stroke-width="1" stroke-dasharray="2 3"/>` +
     `<rect x="${W - AX + 1}" y="${(yl - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
     `<text x="${W - AX + 6}" y="${(yl + 4).toFixed(1)}" class="pc-ax" style="fill:#fff">${fmt(lastC)}</text>`;
-  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${grid}<g clip-path="url(#pcClip)">${fib}${pd}${body}</g>${tag}</svg>`;
+  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${grid}<g clip-path="url(#pcClip)">${hb}${fib}${pd}${body}</g>${tag}</svg>`;
 }
 
 // Sweep de la bougie daily précédente (même règle qu'Arii SNIPER) : D0 dépasse le haut de D1 et clôture dessous, ou casse son bas et clôture dessus
@@ -2098,12 +2147,12 @@ function candleViewSave(id, v) {
 }
 function candleRedraw(id, v) {
   const ch = document.querySelector(`.cd-chart[data-pair="${id}"]`);
-  if (ch && candleDays[id]) ch.innerHTML = candleSvg(candleDays[id], (candleDaily || {})[id], v);
+  if (ch && candleDays[id]) ch.innerHTML = candleSvg(candleDays[id], (candleDaily || {})[id], v, id);
 }
 const cg = { pts: new Map(), id: null, mode: null, v0: null, start: null, cur: null, dx: 0, swallow: 0, moved: false, rect: null };
 function candleGeo(id) {
   const { W, H } = candleDims(), { AX, TOP, BOT } = CANDLE_G;
-  const sc = candleScale((candleDaily || {})[id], candleDays[id]);
+  const sc = candleScale((candleDaily || {})[id], candleDays[id], candleHistBars(id));
   return { plotW: W - AX, plotH: H - TOP - BOT, baseRng: sc.hi - sc.lo, cenB: (sc.hi + sc.lo) / 2 };
 }
 function candleBeginGesture(rect) {
@@ -2205,7 +2254,7 @@ function candleRender() {
     date = day.d;
     candleDays[p.id] = day;
     const cls = s.group === 0 ? 'cd-bull' : s.group === 1 ? 'cd-bear' : '';
-    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id], day)}</button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id], candleViewOf(p.id))}</button><button type="button" class="cd-reset" data-reset="${p.id}" aria-label="Reset zoom"${candleViewIsDef(candleViewOf(p.id)) ? ' hidden' : ''}>\u27f2</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
+    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id], day)}</button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id], candleViewOf(p.id), p.id)}</button><button type="button" class="cd-reset" data-reset="${p.id}" aria-label="Reset zoom"${candleViewIsDef(candleViewOf(p.id)) ? ' hidden' : ''}>\u27f2</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
   }).join('');
   const ki = keepId ? [...candleSlides()].findIndex((r) => r.dataset.id === keepId) : -1;
   list.scrollLeft = (ki >= 0 ? ki : keep) * list.clientWidth;
@@ -2229,6 +2278,7 @@ function candleGo(i) {
 }
 function candleCurId() { return candleSlides()[candleIndex()]?.dataset.id || null; }
 function candleNavUpdate() {
+  candleHistEnsure(candleCurId());
   const n = candleSlides().length, i = Math.min(candleIndex(), Math.max(0, n - 1));
   const c = document.getElementById('candleCount');
   if (c) c.textContent = n ? `${i + 1} / ${n}` : '';
@@ -2301,6 +2351,7 @@ async function candleFetchProxy() {
 function candleMerge(j) { // par paire : on garde l'ancienne série si la nouvelle manque (jamais de bougie qui disparaît)
   candlePoh = Object.assign({}, candlePoh || {}, j.pairs);
   candleDaily = Object.assign({}, candleDaily || {}, j.daily || {});
+  candleF50 = Object.assign({}, candleF50 || {}, j.f50 || {});
 }
 async function candleLoad() {
   if (!candlePoh) { // affichage instantané : dernière série connue (localStorage), puis rafraîchie en direct
@@ -2345,7 +2396,7 @@ function candleRefreshInPlace() {
     if (!day) return;
     candleDays[id] = day;
     const ch = r.querySelector('.cd-chart');
-    if (ch) ch.innerHTML = candleSvg(day, (candleDaily || {})[id], candleViewOf(id));
+    if (ch) ch.innerHTML = candleSvg(day, (candleDaily || {})[id], candleViewOf(id), id);
     const hd = r.querySelector('.cd-head');
     if (hd) { hd.querySelectorAll('.cd-sweep').forEach((x) => x.remove()); hd.insertAdjacentHTML('beforeend', candleSweep((candleDaily || {})[id], day)); }
   });
@@ -2520,3 +2571,25 @@ async function alerteNtfyInit() {
   } catch (e) { /* le panneau reste sans ntfy tant que le serveur ne répond pas */ }
 }
 document.getElementById('alerteToggle')?.addEventListener('click', () => { alerteNtfyInit(); });
+
+// Flèches ‹ › : POH seuls (—) / historique 1 min (1m) / historique 5 min (5m), sans molette
+(function candleHistCtl() {
+  const modes = ['0', '1', '5'], lbl = document.getElementById('candleHistLbl'), prev = document.getElementById('candleHistPrev'), next = document.getElementById('candleHistNext');
+  if (!lbl || !prev || !next) return;
+  const sync = () => {
+    const i = modes.indexOf(candleHistTf);
+    lbl.textContent = candleHistTf === '0' ? '\u2014' : candleHistTf + 'm';
+    prev.disabled = i <= 0; next.disabled = i >= modes.length - 1;
+  };
+  const go = (d) => {
+    const i = Math.min(modes.length - 1, Math.max(0, modes.indexOf(candleHistTf) + d));
+    candleHistTf = modes[i];
+    try { localStorage.setItem('candleHistTf', candleHistTf); } catch (e) { /* pas de stockage */ }
+    sync();
+    candleRender();
+    candleHistEnsure(candleCurId());
+  };
+  prev.addEventListener('click', () => go(-1));
+  next.addEventListener('click', () => go(1));
+  sync();
+})();
