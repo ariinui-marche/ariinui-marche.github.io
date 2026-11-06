@@ -1970,6 +1970,28 @@ function candleNiceStep(rng, n) {
   const raw = rng / n, p = Math.pow(10, Math.floor(Math.log10(raw))), m = raw / p;
   return (m < 1.5 ? 1 : m < 3 ? 2 : m < 7 ? 5 : 10) * p;
 }
+// Échelle de prix : calée sur les 9 POH (priorité d'affichage), journalières coupées sur les bords
+function candleScale(dly, day) {
+  const dd = (dly || []).slice(-4), poh = Object.values((day && day.c) || {}); // POH : [o, h, l, c] ; daily : [t, o, h, l, c]
+  const base = poh.length ? poh : dd.map((b) => b.slice(1, 5));
+  if (!base.length) return null;
+  let hi = Math.max(...base.map((c) => c[1])), lo = Math.min(...base.map((c) => c[2]));
+  const d0 = dd.length ? dd[dd.length - 1] : null;
+  const minSpan = d0 ? (d0[2] - d0[3]) * 0.35 : 0; // évite un zoom extrême quand il n'y a encore qu'une ou deux bougies POH
+  if (hi - lo < minSpan) { const mid = (hi + lo) / 2; hi = mid + minSpan / 2; lo = mid - minSpan / 2; }
+  const m = (hi - lo || hi * 0.001) * 0.08;
+  return { hi: hi + m, lo: lo - m };
+}
+// Fibonacci 38/50/61 sur D1 si D2 et D1 vont dans le même sens (mesuré depuis le plus bas si haussières, depuis le plus haut si baissières)
+function candleFibLevels(dly) {
+  const a = (dly || []).slice(-4);
+  if (a.length < 3) return null;
+  const d1 = a[a.length - 2], d2 = a[a.length - 3]; // [t, o, h, l, c]
+  const bu1 = d1[4] > d1[1], be1 = d1[4] < d1[1], bu2 = d2[4] > d2[1], be2 = d2[4] < d2[1];
+  if (!((bu1 && bu2) || (be1 && be2))) return null;
+  const r = d1[2] - d1[3];
+  return [[0.382, '38'], [0.5, '50'], [0.618, '61']].map(([p, t]) => ({ t, v: bu1 ? d1[3] + p * r : d1[2] - p * r }));
+}
 function candleSvg(day, dly) {
   const dd = (dly || []).slice(-4).map((b, i, a) => ({ lbl: 'D' + (a.length - 1 - i), c: b.slice(1, 5) }));
   const cs = dd.concat([{ lbl: '', c: null }], CANDLE_SLOTS.map(([k, lbl]) => ({ lbl, c: day.c[k] })));
@@ -1977,15 +1999,8 @@ function candleSvg(day, dly) {
   if (!vals.length) return '';
   const { W, H } = candleDims();
   const AX = 60, TOP = 34, BOT = 14, LEFT = 4;
-  // Priorité d'affichage aux 9 POH : l'échelle se cale sur eux, les journalières trop grandes sont coupées sur les bords
-  const poh = cs.filter((x) => x.c && !/^D\d$/.test(x.lbl));
-  const base = poh.length ? poh : vals;
-  let hi = Math.max(...base.map((x) => x.c[1]));
-  let lo = Math.min(...base.map((x) => x.c[2]));
-  const d0 = cs.find((x) => x.lbl === 'D0' && x.c);
-  const minSpan = d0 ? (d0.c[1] - d0.c[2]) * 0.35 : 0; // évite un zoom extrême quand il n'y a encore qu'une ou deux bougies POH
-  if (hi - lo < minSpan) { const mid = (hi + lo) / 2; hi = mid + minSpan / 2; lo = mid - minSpan / 2; }
-  const m = (hi - lo || hi * 0.001) * 0.08; hi += m; lo -= m;
+  const sc = candleScale(dly, day);
+  const hi = sc.hi, lo = sc.lo;
   const rng = hi - lo;
   const y = (v) => TOP + (1 - (v - lo) / rng) * (H - TOP - BOT);
   const dec = hi >= 1000 ? 2 : hi >= 100 ? 3 : 5;
@@ -2010,19 +2025,12 @@ function candleSvg(day, dly) {
       `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="1.3"/>` +
       `<rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}" stroke-width="1.3"/>`;
   }).join('');
-  // Fibonacci 38 / 50 / 61 % sur D1 quand D2 et D1 vont dans le même sens (mesuré depuis le plus bas si haussières, depuis le plus haut si baissières)
   let fib = '';
-  const d1i = cs.findIndex((x) => x.lbl === 'D1'), d2 = cs.find((x) => x.lbl === 'D2'), d1 = cs[d1i];
-  if (d1 && d1.c && d2 && d2.c) {
-    const bu1 = d1.c[3] > d1.c[0], be1 = d1.c[3] < d1.c[0], bu2 = d2.c[3] > d2.c[0], be2 = d2.c[3] < d2.c[0];
-    if ((bu1 && bu2) || (be1 && be2)) {
-      const fh = d1.c[1], fl = d1.c[2], fr = fh - fl, x0 = LEFT + step * (d1i + 0.5);
-      fib = [[0.382, '38'], [0.5, '50'], [0.618, '61']].map(([p, t]) => {
-        const v = bu1 ? fl + p * fr : fh - p * fr;
-        return `<line x1="${x0.toFixed(1)}" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="#f5b642" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="1 4" stroke-linecap="round"/>` +
-          `<text x="${W - AX - 4}" y="${(y(v) - 4).toFixed(1)}" text-anchor="end" style="fill:#f5b642;fill-opacity:.6;font-size:10px">${t}% · ${fmt(v)}</text>`;
-      }).join('');
-    }
+  const fl = candleFibLevels(dly), d1i = cs.findIndex((x) => x.lbl === 'D1');
+  if (fl && d1i >= 0) {
+    const x0 = LEFT + step * (d1i + 0.5);
+    fib = fl.filter((f) => f.v >= lo && f.v <= hi).map((f) => `<line x1="${x0.toFixed(1)}" x2="${W - AX}" y1="${y(f.v).toFixed(1)}" y2="${y(f.v).toFixed(1)}" stroke="#f5b642" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="1 4" stroke-linecap="round"/>` +
+      `<text x="${W - AX - 4}" y="${(y(f.v) - 4).toFixed(1)}" text-anchor="end" style="fill:#f5b642;fill-opacity:.6;font-size:10px">${f.t}% · ${fmt(f.v)}</text>`).join('');
   }
   const tag = `<line x1="0" x2="${W - AX}" y1="${y(lastC).toFixed(1)}" y2="${y(lastC).toFixed(1)}" stroke="${lastCol}" stroke-width="1" stroke-dasharray="2 3"/>` +
     `<rect x="${W - AX + 1}" y="${(y(lastC) - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
@@ -2046,8 +2054,9 @@ const candleF = { fibo: false, sweep: false };
 function candleInfo(id) {
   const dly = (candleDaily || {})[id], a = (dly || []).slice(-4);
   const days = ((candlePoh || {})[id] || []).filter((d) => Object.keys(d.c).length), day = days[days.length - 1];
-  let fibo = false; // D2 et D1 dans le même sens (lignes Fibonacci tracées sur D1)
-  if (a.length >= 3) { const d1 = a[a.length - 2], d2 = a[a.length - 3]; fibo = (d1[4] > d1[1] && d2[4] > d2[1]) || (d1[4] < d1[1] && d2[4] < d2[1]); }
+  // Fibo = les lignes sont réellement affichées à l'écran (D2 et D1 même sens ET au moins un niveau dans la zone des POH)
+  const fl = candleFibLevels(dly), sc = day ? candleScale(dly, day) : null;
+  const fibo = !!(fl && sc && fl.some((f) => f.v >= sc.lo && f.v <= sc.hi));
   return { fibo, sweep: !!(day && candleSweep(dly, day)) };
 }
 function candleFilterUpdate() {
