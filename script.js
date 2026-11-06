@@ -2425,12 +2425,12 @@ function alerteRender() {
   box.innerHTML = `<div class="al-grid"><div class="al-h">Symbol</div><div class="al-h">50%</div><div class="al-h">Sens</div><div class="al-h">Type</div>` +
     (rows.length ? rows.map((r, i) => {
       const b = r.id.slice(0, 3), q = r.id.slice(3), col = alerteZone(r.t), alt = i % 2 === 0 ? 'a' : 'b';
-      const R = r.f.hi - r.f.lo, da = `data-id="${r.id}" data-t="${r.t}"`;
+      const R = r.f.hi - r.f.lo;
       const tip = `Box 14H: ${dec(r.f.hi)} / ${dec(r.f.lo)} · 50% up ${dec(r.f.hi + R / 2)} · 50% down ${dec(r.f.lo - R / 2)}`;
-      return `<div class="al-c ${alt}" ${da} title="${tip}"><span style="color:${ALERTE_CCY[b] || '#e5e5e5'}">${b}</span> <span style="color:${ALERTE_CCY[q] || '#e5e5e5'}">${q}</span></div>` +
-        `<div class="al-c al-t" ${da} style="color:${col};background:${col}1f" title="${tip}">${alerteTime(r.t)}</div>` +
-        `<div ${da} class="al-c ${alt} al-sens ${r.sens === 'OCO' ? 'oco' : 'ptp'}">${r.sens}</div>` +
-        `<div ${da} class="al-c ${alt} al-type ${r.side === 'up' ? 'buy' : 'sell'}">${r.side === 'up' ? 'BUY' : 'SELL'}</div>`;
+      return `<div class="al-c ${alt}" title="${tip}"><span style="color:${ALERTE_CCY[b] || '#e5e5e5'}">${b}</span> <span style="color:${ALERTE_CCY[q] || '#e5e5e5'}">${q}</span></div>` +
+        `<div class="al-c al-t" style="color:${col};background:${col}1f" title="${tip}">${alerteTime(r.t)}</div>` +
+        `<div class="al-c ${alt} al-sens ${r.sens === 'OCO' ? 'oco' : 'ptp'}">${r.sens}</div>` +
+        `<div class="al-c ${alt} al-type ${r.side === 'up' ? 'buy' : 'sell'}">${r.side === 'up' ? 'BUY' : 'SELL'}</div>`;
     }).join('') : '<div class="al-empty">—</div>') +
     `</div>`;
 }
@@ -2458,120 +2458,6 @@ setInterval(() => { // actualisation tant que le panneau est ouvert et visible
 document.addEventListener('visibilitychange', () => {
   const b = document.getElementById('alerteBody');
   if (!document.hidden && b && !b.classList.contains('collapsed')) alerteLoad();
-});
-
-
-// ===== Graphique de l'alerte : bougies 1 min / 5 min (flèches ‹ ›) + niveaux 14H à gauche, POH à droite — dessin pur, sans stockage =====
-const ALG = { AX: 60, TOP: 44, BOT: 22 };
-const alg = { id: null, t: null, tf: '1', bars: [], off: 0, n: 110, cache: {} };
-function algDec(v) { return v.toFixed(v >= 1000 ? 2 : v >= 100 ? 3 : 5); }
-function algDraw() {
-  const box = document.getElementById('algPlot');
-  if (!box) return;
-  const W = Math.max(300, Math.round(window.innerWidth)), H = Math.max(300, Math.round(window.innerHeight) - ALG.TOP);
-  const { AX, BOT } = ALG, top = 8;
-  const bars = alg.bars, f = (alerteData || {})[alg.id];
-  if (!bars.length) { box.innerHTML = '<div class="charts-intro" style="padding:20px">Loading…</div>'; return; }
-  const n = Math.min(alg.n, bars.length);
-  alg.off = Math.max(0, Math.min(bars.length - n, alg.off));
-  const vis = bars.slice(bars.length - n - alg.off, bars.length - alg.off);
-  // bougies de droite : D3..D0 puis les 9 POH du jour (comme CANDLE)
-  const dly = ((candleDaily || {})[alg.id] || []).slice(-4);
-  const days = ((candlePoh || {})[alg.id] || []).filter((d) => Object.keys(d.c).length), day = days[days.length - 1];
-  const right = dly.map((b, i, a) => ({ lbl: 'D' + (a.length - 1 - i), c: b.slice(1, 5) }))
-    .concat(day ? CANDLE_SLOTS.filter(([k]) => day.c[k]).map(([k, lbl]) => ({ lbl, c: day.c[k] })) : []);
-  const rw = right.length ? Math.min(Math.round(W * 0.42), right.length * 26) : 0, lw = W - AX - rw;
-  // niveaux de la boîte 14H : Entry = bords, 50 % = bord ± R/2, TP = bord ± R
-  const lv = [];
-  if (f) {
-    const R = f.hi - f.lo;
-    lv.push([f.hi + R, 'TP 14H', '#5cc8ff'], [f.hi + R / 2, 'H50% 14H', '#ff9f43'], [f.hi, 'Entry 14H', '#5cc8ff'],
-      [f.lo, 'Entry 14H', '#5cc8ff'], [f.lo - R / 2, 'L50% 14H', '#ff9f43'], [f.lo - R, 'TP 14H', '#5cc8ff']);
-  }
-  let hi = Math.max(...vis.map((b) => b[2])), lo = Math.min(...vis.map((b) => b[3]));
-  right.forEach((x) => { hi = Math.max(hi, x.c[1]); lo = Math.min(lo, x.c[2]); });
-  const lvIn = lv.filter(([v]) => v <= hi + (hi - lo) * 0.25 && v >= lo - (hi - lo) * 0.25); // un niveau trop lointain n'écrase pas l'échelle
-  lvIn.forEach(([v]) => { hi = Math.max(hi, v); lo = Math.min(lo, v); });
-  const m = (hi - lo || hi * 0.001) * 0.06; hi += m; lo -= m;
-  const y = (v) => top + (1 - (v - lo) / (hi - lo)) * (H - top - BOT);
-  const stp = candleNiceStep(hi - lo, 8);
-  let grid = '';
-  for (let v = Math.ceil(lo / stp) * stp; v <= hi; v += stp) grid += `<line x1="0" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="#1d1f24"/><text x="${W - AX + 6}" y="${(y(v) + 4).toFixed(1)}" class="pc-ax">${algDec(v)}</text>`;
-  const st = lw / n, bw = Math.max(1, st * 0.7);
-  alg.step = st;
-  let body = '', tx = '';
-  vis.forEach((b, i) => {
-    const [t, o, h, l, c] = b, cx = st * (i + 0.5), col = c >= o ? '#26a69a' : '#ef5350';
-    body += `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}"/>` +
-      `<rect x="${(cx - bw / 2).toFixed(1)}" y="${y(Math.max(o, c)).toFixed(1)}" width="${bw.toFixed(1)}" height="${Math.max(1, Math.abs(y(o) - y(c))).toFixed(1)}" fill="${col}"/>`;
-    if (i % Math.max(1, Math.round(n / 5)) === 0) tx += `<text x="${cx.toFixed(1)}" y="${H - 6}" text-anchor="middle" class="pc-ax">${alerteTime(t)}</text>`;
-  });
-  // repère de l'heure de l'alerte (barre qui la contient)
-  let mark = '';
-  if (alg.t) {
-    const k = vis.findIndex((b, i) => alg.t >= b[0] && (i + 1 >= vis.length || alg.t < vis[i + 1][0]));
-    if (k >= 0 && alg.t < vis[vis.length - 1][0] + 60 * Number(alg.tf)) {
-      const cx = st * (k + 0.5), col = alerteZone(alg.t);
-      mark = `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${top}" y2="${H - BOT}" stroke="${col}" stroke-dasharray="3 3"/><text x="${cx.toFixed(1)}" y="${top + 11}" text-anchor="middle" style="fill:${col};font-size:11px">${alerteTime(alg.t)}</text>`;
-    }
-  }
-  const lines = lvIn.map(([v, t, c]) => `<line x1="0" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="${c}" stroke-opacity=".75" stroke-dasharray="1 4" stroke-linecap="round"/>` +
-    `<text x="${lw - 4}" y="${(y(v) - 3).toFixed(1)}" text-anchor="end" style="fill:${c};font-size:10px">${t}</text>`).join('');
-  const rs = right.length ? rw / right.length : 0, rbw = Math.min(rs * 0.7, 22);
-  const rbody = right.map((x, i) => {
-    const [o, h, l, c] = x.c, cx = lw + rs * (i + 0.5), col = c >= o ? '#26a69a' : '#ef5350';
-    return `<text x="${cx.toFixed(1)}" y="${Math.min(H - BOT - 2, Math.max(12, y(h) - 5)).toFixed(1)}" text-anchor="middle" style="fill:${col};font-size:9px">${x.lbl}</text>` +
-      `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}"/>` +
-      `<rect x="${(cx - rbw / 2).toFixed(1)}" y="${y(Math.max(o, c)).toFixed(1)}" width="${rbw.toFixed(1)}" height="${Math.max(1, Math.abs(y(o) - y(c))).toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}"/>`;
-  }).join('');
-  const lb = bars[bars.length - 1], lastC = lb[4], lc = lastC >= lb[1] ? '#26a69a' : '#ef5350', yl = Math.min(H - BOT, Math.max(top, y(lastC)));
-  const tag = `<line x1="0" x2="${W - AX}" y1="${yl.toFixed(1)}" y2="${yl.toFixed(1)}" stroke="${lc}" stroke-dasharray="2 3"/><rect x="${W - AX + 1}" y="${(yl - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lc}"/><text x="${W - AX + 6}" y="${(yl + 4).toFixed(1)}" class="pc-ax" style="fill:#fff">${algDec(lastC)}</text>`;
-  box.innerHTML = `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}"><defs><clipPath id="algClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${grid}<g clip-path="url(#algClip)">${lines}${body}${mark}${rbody}</g>${tx}${tag}</svg>`;
-}
-async function algLoad() {
-  const key = alg.id + '|' + alg.tf;
-  document.getElementById('algTf').textContent = alg.tf + 'm';
-  document.getElementById('algPrev').disabled = alg.tf === '1';
-  document.getElementById('algNext').disabled = alg.tf === '5';
-  alg.n = alg.tf === '5' ? 90 : 110; alg.off = 0;
-  alg.bars = alg.cache[key] || [];
-  algDraw();
-  try {
-    const r = await fetch(`https://ariinuiirgina.vercel.app/api/poh-candles?pair=${alg.id}&tf=${alg.tf}`, { cache: 'no-store', signal: AbortSignal.timeout(15000) });
-    const j = r.ok ? await r.json() : null;
-    if (j && j.bars && j.bars.length) { alg.cache[key] = j.bars; if (key === alg.id + '|' + alg.tf) { alg.bars = j.bars; algDraw(); } }
-  } catch (e) { /* on garde ce qui est affiché */ }
-}
-function algOpen(id, t) {
-  alg.id = id; alg.t = t; alg.tf = '1'; alg.cache = {};
-  let ov = document.getElementById('algOverlay');
-  if (!ov) {
-    ov = document.createElement('div');
-    ov.id = 'algOverlay';
-    ov.innerHTML = '<div class="alg-top"><button type="button" id="algClose" aria-label="Close">✕</button><span id="algName"></span><span class="alg-nav"><button type="button" id="algPrev" aria-label="1 minute">&#8249;</button><b id="algTf">1m</b><button type="button" id="algNext" aria-label="5 minutes">&#8250;</button></span></div><div id="algPlot"></div>';
-    document.body.appendChild(ov);
-    document.getElementById('algClose').addEventListener('click', () => { ov.hidden = true; document.body.classList.remove('alg-open'); });
-    document.getElementById('algPrev').addEventListener('click', () => { alg.tf = '1'; algLoad(); });
-    document.getElementById('algNext').addEventListener('click', () => { alg.tf = '5'; algLoad(); });
-    const plot = document.getElementById('algPlot');
-    let px = null;
-    plot.addEventListener('pointerdown', (e) => { px = e.clientX; plot.setPointerCapture(e.pointerId); });
-    plot.addEventListener('pointermove', (e) => {
-      if (px === null) return;
-      const d = Math.round((e.clientX - px) / Math.max(1.5, alg.step || 4)); // glisser = remonter dans l'historique
-      if (d) { px = e.clientX; alg.off += d; algDraw(); }
-    });
-    ['pointerup', 'pointercancel'].forEach((ev) => plot.addEventListener(ev, () => { px = null; }));
-    window.addEventListener('resize', () => { if (!ov.hidden) algDraw(); });
-  }
-  ov.hidden = false;
-  document.body.classList.add('alg-open');
-  document.getElementById('algName').textContent = id.slice(0, 3) + '/' + id.slice(3);
-  algLoad();
-}
-document.getElementById('alerteTable')?.addEventListener('click', (e) => {
-  const c = e.target.closest('[data-id]');
-  if (c) algOpen(c.dataset.id, Number(c.dataset.t) || null);
 });
 
 // Notifications téléphone éteint : abonnement Web Push, envoyé au serveur qui surveille les niveaux 50 % chaque minute

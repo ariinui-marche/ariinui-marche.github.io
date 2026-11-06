@@ -1277,16 +1277,3 @@ body.cc-lock { overflow: hidden; }
 .al-ntfy-t { font-size: 14px; color: #e5e5e5; margin-bottom: 8px; }
 .al-btn { display: block; margin: 6px 0; padding: 10px 12px; background: #1a1c20; color: #f5b642; border: 1px solid #333; border-radius: 8px; font-size: 14px; text-decoration: none; }
 .al-ntfy-topic { margin-top: 6px; font-size: 11px; color: #6b7280; word-break: break-all; }
-
-/* Graphique de l'alerte (1 min / 5 min) */
-.al-c[data-id] { cursor: pointer; }
-#algOverlay { position: fixed; inset: 0; z-index: 9999; background: #0b0b0b; display: flex; flex-direction: column; }
-#algOverlay[hidden] { display: none; }
-body.alg-open { overflow: hidden; }
-.alg-top { flex: 0 0 44px; box-sizing: border-box; display: flex; align-items: center; gap: 10px; padding: 0 8px; border-bottom: 1px solid #1d1f24; color: #e5e5e5; }
-.alg-top button { width: 36px; height: 32px; background: #1a1a1a; color: #e5e5e5; border: 1px solid #333; border-radius: 8px; font-size: 18px; line-height: 1; cursor: pointer; padding: 0; }
-.alg-top button:disabled { opacity: .3; cursor: default; }
-#algName { font-weight: 700; flex: 1 1 auto; }
-.alg-nav { display: flex; align-items: center; gap: 8px; }
-#algTf { min-width: 28px; text-align: center; }
-#algPlot { flex: 1 1 auto; touch-action: none; user-select: none; -webkit-user-select: none; overflow: hidden; }
