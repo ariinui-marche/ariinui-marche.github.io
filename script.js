@@ -1992,16 +1992,17 @@ function candleFibLevels(dly) {
   const r = d1[2] - d1[3];
   return [[0.382, '38'], [0.5, '50'], [0.618, '61']].map(([p, t]) => ({ t, v: bu1 ? d1[3] + p * r : d1[2] - p * r }));
 }
-function candleSvg(day, dly) {
+const CANDLE_G = { AX: 60, TOP: 34, BOT: 14, LEFT: 4 }; // géométrie du graphique (aussi utilisée par les gestes)
+function candleSvg(day, dly, view) {
   const dd = (dly || []).slice(-4).map((b, i, a) => ({ lbl: 'D' + (a.length - 1 - i), c: b.slice(1, 5) }));
   const cs = dd.concat([{ lbl: '', c: null }], CANDLE_SLOTS.map(([k, lbl]) => ({ lbl, c: day.c[k] })));
   const vals = cs.filter((x) => x.c);
   if (!vals.length) return '';
   const { W, H } = candleDims();
-  const AX = 60, TOP = 34, BOT = 14, LEFT = 4;
-  const sc = candleScale(dly, day);
-  const hi = sc.hi, lo = sc.lo;
-  const rng = hi - lo;
+  const { AX, TOP, BOT, LEFT } = CANDLE_G;
+  const sc = candleScale(dly, day), vw = view || CANDLE_DEF;
+  const baseRng = sc.hi - sc.lo, cenV = (sc.hi + sc.lo) / 2 + vw.yp * baseRng, rng = baseRng / vw.yz;
+  const lo = cenV - rng / 2, hi = cenV + rng / 2; // fenêtre de prix affichée (zoom vertical + décalage)
   const y = (v) => TOP + (1 - (v - lo) / rng) * (H - TOP - BOT);
   const dec = hi >= 1000 ? 2 : hi >= 100 ? 3 : 5;
   const fmt = (v) => v.toFixed(dec);
@@ -2011,11 +2012,11 @@ function candleSvg(day, dly) {
     grid += `<line x1="0" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="#1d1f24" stroke-width="1"/>` +
       `<text x="${W - AX + 6}" y="${(y(v) + 4).toFixed(1)}" class="pc-ax">${fmt(v)}</text>`;
   }
-  const step = (W - AX - LEFT) / cs.length, bw = Math.min(step * 0.74, 34);
+  const step = (W - AX - LEFT) / cs.length * vw.xz, xOff = vw.xp * (W - AX), bw = Math.min(step * 0.74, 120); // zoom horizontal + décalage
   const last = [...cs].reverse().find((x) => x.c);
   const lastC = last.c[3], lastCol = last.c[3] >= last.c[0] ? '#26a69a' : '#ef5350';
   const body = cs.map((x, i) => {
-    const cx = LEFT + step * (i + 0.5);
+    const cx = LEFT + xOff + step * (i + 0.5);
     if (!x.c) return '';
     const [o, h, l, c] = x.c;
     const col = c >= o ? '#26a69a' : '#ef5350';
@@ -2028,13 +2029,14 @@ function candleSvg(day, dly) {
   let fib = '';
   const fl = candleFibLevels(dly), d1i = cs.findIndex((x) => x.lbl === 'D1');
   if (fl && d1i >= 0) {
-    const x0 = LEFT + step * (d1i + 0.5);
+    const x0 = LEFT + xOff + step * (d1i + 0.5);
     fib = fl.filter((f) => f.v >= lo && f.v <= hi).map((f) => `<line x1="${x0.toFixed(1)}" x2="${W - AX}" y1="${y(f.v).toFixed(1)}" y2="${y(f.v).toFixed(1)}" stroke="#f5b642" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="1 4" stroke-linecap="round"/>` +
       `<text x="${W - AX - 4}" y="${(y(f.v) - 4).toFixed(1)}" text-anchor="end" style="fill:#f5b642;fill-opacity:.6;font-size:10px">${f.t}% · ${fmt(f.v)}</text>`).join('');
   }
-  const tag = `<line x1="0" x2="${W - AX}" y1="${y(lastC).toFixed(1)}" y2="${y(lastC).toFixed(1)}" stroke="${lastCol}" stroke-width="1" stroke-dasharray="2 3"/>` +
-    `<rect x="${W - AX + 1}" y="${(y(lastC) - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
-    `<text x="${W - AX + 6}" y="${(y(lastC) + 4).toFixed(1)}" class="pc-ax" style="fill:#fff">${fmt(lastC)}</text>`;
+  const yl = Math.min(H - BOT, Math.max(TOP - 20, y(lastC))); // l'étiquette du dernier prix reste visible sur le bord
+  const tag = `<line x1="0" x2="${W - AX}" y1="${yl.toFixed(1)}" y2="${yl.toFixed(1)}" stroke="${lastCol}" stroke-width="1" stroke-dasharray="2 3"/>` +
+    `<rect x="${W - AX + 1}" y="${(yl - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
+    `<text x="${W - AX + 6}" y="${(yl + 4).toFixed(1)}" class="pc-ax" style="fill:#fff">${fmt(lastC)}</text>`;
   return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${grid}<g clip-path="url(#pcClip)">${fib}${body}</g>${tag}</svg>`;
 }
 
@@ -2068,6 +2070,114 @@ function candleFilterUpdate() {
     b.textContent = `${b.dataset.f === 'fibo' ? 'Fibo' : 'Sweep'} (${n[b.dataset.f]})`;
   });
 }
+// ===== Zoom / déplacement façon TradingView (pincer à deux doigts, glisser), enregistré par paire =====
+const CANDLE_DEF = { yz: 1, yp: 0, xz: 1, xp: 0 }; // zoom prix, décalage prix (fraction de l'échelle de base), zoom bougies, décalage horizontal (fraction de la largeur)
+const CANDLE_VIEW_LS = 'candleViewV1';
+let candleViews = {};
+try { candleViews = JSON.parse(localStorage.getItem(CANDLE_VIEW_LS) || '{}') || {}; } catch (e) { candleViews = {}; }
+const candleDays = {};
+function candleViewOf(id) { return Object.assign({}, CANDLE_DEF, candleViews[id] || {}); }
+function candleViewIsDef(v) { return Math.abs(v.yz - 1) < 1e-3 && Math.abs(v.yp) < 1e-3 && Math.abs(v.xz - 1) < 1e-3 && Math.abs(v.xp) < 1e-3; }
+function candleViewSave(id, v) {
+  if (candleViewIsDef(v)) delete candleViews[id]; else candleViews[id] = v;
+  try { localStorage.setItem(CANDLE_VIEW_LS, JSON.stringify(candleViews)); } catch (e) { /* quota */ }
+  const rb = document.querySelector(`.cd-reset[data-reset="${id}"]`);
+  if (rb) rb.hidden = candleViewIsDef(v);
+}
+function candleRedraw(id, v) {
+  const ch = document.querySelector(`.cd-chart[data-pair="${id}"]`);
+  if (ch && candleDays[id]) ch.innerHTML = candleSvg(candleDays[id], (candleDaily || {})[id], v);
+}
+const cg = { pts: new Map(), id: null, mode: null, v0: null, start: null, cur: null, dx: 0, swallow: 0, moved: false, rect: null };
+function candleGeo(id) {
+  const { W, H } = candleDims(), { AX, TOP, BOT } = CANDLE_G;
+  const sc = candleScale((candleDaily || {})[id], candleDays[id]);
+  return { plotW: W - AX, plotH: H - TOP - BOT, baseRng: sc.hi - sc.lo, cenB: (sc.hi + sc.lo) / 2 };
+}
+function candleBeginGesture(rect) {
+  cg.v0 = candleViewOf(cg.id);
+  cg.cur = Object.assign({}, cg.v0);
+  cg.start = [...cg.pts.values()].map((p) => ({ x: p.x, y: p.y }));
+  cg.rect = rect;
+}
+const candleClamp = (v, a, b) => Math.min(b, Math.max(a, v));
+function candleOnMove() {
+  const g = candleGeo(cg.id), r = cg.rect, T = CANDLE_G.TOP, pts = [...cg.pts.values()];
+  const priceAt = (v, yPx) => {
+    const rngV = g.baseRng / v.yz, lo = g.cenB + v.yp * g.baseRng - rngV / 2;
+    return lo + (1 - (yPx - T) / g.plotH) * rngV;
+  };
+  if (pts.length >= 2 && cg.start.length >= 2) { // pincement : horizontal = bougies, vertical = prix, le centre suit les doigts
+    cg.mode = 'pinch';
+    const [a, b] = pts, [a0, b0] = cg.start;
+    const cx0 = (a0.x + b0.x) / 2 - r.left, cy0 = (a0.y + b0.y) / 2 - r.top, cx = (a.x + b.x) / 2 - r.left, cy = (a.y + b.y) / 2 - r.top;
+    const sx = Math.max(Math.abs(a.x - b.x), 40) / Math.max(Math.abs(a0.x - b0.x), 40);
+    const sy = Math.max(Math.abs(a.y - b.y), 40) / Math.max(Math.abs(a0.y - b0.y), 40);
+    const v = cg.cur, v0 = cg.v0;
+    v.xz = candleClamp(v0.xz * sx, 0.3, 10);
+    v.xp = (cx - (cx0 - v0.xp * g.plotW) * (v.xz / v0.xz)) / g.plotW;
+    v.yz = candleClamp(v0.yz * sy, 0.15, 12);
+    const rng2 = g.baseRng / v.yz, lo2 = priceAt(v0, cy0) - (1 - (cy - T) / g.plotH) * rng2;
+    v.yp = (lo2 + rng2 / 2 - g.cenB) / g.baseRng;
+    cg.moved = true;
+  } else if (pts.length === 1 && cg.start.length === 1 && cg.mode !== 'done') {
+    const dx = pts[0].x - cg.start[0].x, dy = pts[0].y - cg.start[0].y;
+    if (!cg.mode) {
+      if (Math.hypot(dx, dy) < 8) return;
+      cg.mode = candleViewIsDef(cg.v0) && Math.abs(dx) > Math.abs(dy) * 1.2 ? 'swipe' : 'pan'; // vue standard : glisser à l'horizontale = changer de paire
+      cg.moved = true;
+    }
+    cg.dx = dx;
+    if (cg.mode === 'pan') {
+      const v = cg.cur, v0 = cg.v0, rngV = g.baseRng / v0.yz;
+      v.xp = v0.xp + dx / g.plotW;
+      v.yp = v0.yp + dy * (rngV / g.plotH) / g.baseRng;
+    }
+  }
+  if (cg.mode === 'pan' || cg.mode === 'pinch') candleRedraw(cg.id, cg.cur);
+}
+(function candleGestures() {
+  const list = document.getElementById('candleList');
+  list.addEventListener('pointerdown', (e) => {
+    const ch = e.target.closest('.cd-chart');
+    if (!ch || (e.pointerType === 'mouse' && e.button !== 0)) return;
+    if (cg.id !== ch.dataset.pair) { cg.pts.clear(); cg.mode = null; }
+    cg.id = ch.dataset.pair;
+    cg.pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    try { ch.setPointerCapture(e.pointerId); } catch (err) { /* ignoré */ }
+    if (cg.pts.size === 1) { cg.mode = null; cg.moved = false; cg.dx = 0; }
+    candleBeginGesture(ch.getBoundingClientRect()); // repart de la vue actuelle à chaque doigt ajouté
+  });
+  list.addEventListener('pointermove', (e) => {
+    if (!cg.pts.has(e.pointerId) || !cg.id) return;
+    cg.pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    candleOnMove();
+  });
+  const end = (e) => {
+    if (!cg.pts.has(e.pointerId)) return;
+    const wasMode = cg.mode, wasSingle = cg.pts.size === 1;
+    cg.pts.delete(e.pointerId);
+    if (cg.pts.size > 0) { cg.mode = 'done'; return; } // un doigt levé pendant un pincement : on attend la fin du geste
+    if ((wasMode === 'pan' || wasMode === 'pinch' || wasMode === 'done') && cg.cur) candleViewSave(cg.id, cg.cur);
+    if (wasMode === 'swipe' && wasSingle && e.type === 'pointerup' && Math.abs(cg.dx) > 50) candleGo(candleIndex() + (cg.dx < 0 ? 1 : -1));
+    if (cg.moved) cg.swallow = Date.now() + 350; // un geste n'ouvre pas le graphique TradingView
+    cg.mode = null;
+  };
+  list.addEventListener('pointerup', end);
+  list.addEventListener('pointercancel', end);
+  list.addEventListener('wheel', (e) => { // souris : molette = zoom prix autour du curseur
+    const ch = e.target.closest('.cd-chart');
+    if (!ch) return;
+    e.preventDefault();
+    const id = ch.dataset.pair, g = candleGeo(id), v = candleViewOf(id), T = CANDLE_G.TOP, yPx = e.clientY - ch.getBoundingClientRect().top;
+    const rngV = g.baseRng / v.yz, lo = g.cenB + v.yp * g.baseRng - rngV / 2, p0 = lo + (1 - (yPx - T) / g.plotH) * rngV;
+    v.yz = candleClamp(v.yz * (e.deltaY < 0 ? 1.15 : 1 / 1.15), 0.15, 12);
+    const rng2 = g.baseRng / v.yz, lo2 = p0 - (1 - (yPx - T) / g.plotH) * rng2;
+    v.yp = (lo2 + rng2 / 2 - g.cenB) / g.baseRng;
+    candleRedraw(id, v); candleViewSave(id, v);
+  }, { passive: false });
+})();
+
 function candleRender() {
   const list = document.getElementById('candleList');
   if (!candlePoh) { list.innerHTML = '<div class="charts-intro">POH candles unavailable right now.</div>'; return; }
@@ -2081,8 +2191,9 @@ function candleRender() {
     const day = days[days.length - 1];
     if (!day) return '';
     date = day.d;
+    candleDays[p.id] = day;
     const cls = s.group === 0 ? 'cd-bull' : s.group === 1 ? 'cd-bear' : '';
-    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id], day)}</button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id])}</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
+    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id], day)}</button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id], candleViewOf(p.id))}</button><button type="button" class="cd-reset" data-reset="${p.id}" aria-label="Reset zoom"${candleViewIsDef(candleViewOf(p.id)) ? ' hidden' : ''}>\u27f2</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
   }).join('');
   const ki = keepId ? [...candleSlides()].findIndex((r) => r.dataset.id === keepId) : -1;
   list.scrollLeft = (ki >= 0 ? ki : keep) * list.clientWidth;
@@ -2178,6 +2289,9 @@ document.getElementById('candleToggle')?.addEventListener('click', (e) => {
 });
 
 document.getElementById('candleList').addEventListener('click', (e) => {
+  const rs = e.target.closest('[data-reset]');
+  if (rs) { const id = rs.dataset.reset; candleRedraw(id, CANDLE_DEF); candleViewSave(id, Object.assign({}, CANDLE_DEF)); return; }
+  if (Date.now() < cg.swallow) return; // clic issu d'un geste de zoom / déplacement
   const btn = e.target.closest('[data-pair]');
   if (!btn) return;
   const id = btn.dataset.pair;
@@ -2187,5 +2301,8 @@ document.getElementById('candleList').addEventListener('click', (e) => {
     if (prev) prev.innerHTML = '';
   }
   candleSelected = wasOpen ? null : id;
-  if (!wasOpen) chartsOpenDetail(id, '60', 'pc-detail-');
+  if (!wasOpen) {
+    chartsOpenDetail(id, '60', 'pc-detail-');
+    setTimeout(() => document.getElementById(`pc-detail-${id}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
+  }
 });

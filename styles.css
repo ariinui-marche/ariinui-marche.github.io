@@ -1225,3 +1225,8 @@ body.cc-lock { overflow: hidden; }
 #candleList.cc-track .cd-name { font-size: 18px; }
 .pc-lbl { font-size: 11px; }
 .pc-date { font-size: 11px; color: #9aa0a6; margin-left: 6px; }
+
+#candleBody:not(.collapsed) .cd-chart { touch-action: none; user-select: none; -webkit-user-select: none; }
+#candleBody:not(.collapsed) .cd-row { position: relative; }
+.cd-reset { position: absolute; top: 52px; left: 10px; z-index: 3; width: 36px; height: 36px; border-radius: 50%; background: #1a1c20; color: #e5e5e5; border: 1px solid #333; font-size: 18px; line-height: 1; cursor: pointer; opacity: .9; }
+.cd-reset[hidden] { display: none; }
