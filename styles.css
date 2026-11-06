@@ -1272,3 +1272,8 @@ body.cc-lock { overflow: hidden; }
 .al-notif { display: block; width: 100%; margin: 0 0 10px; padding: 9px 12px; background: #14161a; color: #cfd2d6; border: 1px solid #2a2d33; border-radius: 8px; font-size: 14px; cursor: pointer; text-align: left; }
 .al-notif.on { color: #089981; border-color: #089981; }
 .al-notif[hidden] { display: none; }
+.al-ntfy { margin: 0 0 12px; padding: 10px 12px; background: #14161a; border: 1px solid #2a2d33; border-radius: 8px; }
+.al-ntfy[hidden] { display: none; }
+.al-ntfy-t { font-size: 14px; color: #e5e5e5; margin-bottom: 8px; }
+.al-btn { display: block; margin: 6px 0; padding: 10px 12px; background: #1a1c20; color: #f5b642; border: 1px solid #333; border-radius: 8px; font-size: 14px; text-decoration: none; }
+.al-ntfy-topic { margin-top: 6px; font-size: 11px; color: #6b7280; word-break: break-all; }
