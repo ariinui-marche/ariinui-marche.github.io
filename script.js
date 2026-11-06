@@ -1992,7 +1992,7 @@ function candleFibLevels(dly) {
   return [[0.382, '38'], [0.5, '50'], [0.618, '61']].map(([p, t]) => ({ t, v: bu1 ? d1[3] + p * r : d1[2] - p * r }));
 }
 const CANDLE_G = { AX: 60, TOP: 44, BOT: 14, LEFT: 4 }; // géométrie du graphique (aussi utilisée par les gestes)
-function candleSvg(day, dly, view, id) {
+function candleSvg(day, dly, view) {
   const dd = (dly || []).slice(-4).map((b, i, a) => ({ lbl: 'D' + (a.length - 1 - i), c: b.slice(1, 5) }));
   const cs = dd.concat([{ lbl: '', c: null }], CANDLE_SLOTS.map(([k, lbl]) => ({ lbl, c: day.c[k] })));
   const vals = cs.filter((x) => x.c);
@@ -2032,22 +2032,11 @@ function candleSvg(day, dly, view, id) {
     fib = fl.filter((f) => f.v >= lo && f.v <= hi).map((f) => `<line x1="${x0.toFixed(1)}" x2="${W - AX}" y1="${y(f.v).toFixed(1)}" y2="${y(f.v).toFixed(1)}" stroke="#f5b642" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="1 4" stroke-linecap="round"/>` +
       `<text x="${W - AX - 4}" y="${(y(f.v) - 4).toFixed(1)}" text-anchor="end" style="fill:#f5b642;fill-opacity:.6;font-size:10px">${f.t}% · ${fmt(f.v)}</text>`).join('');
   }
-  // Alertes de prix (lignes violettes ; grisées une fois déclenchées) : ligne dans la zone du graphique, étiquette sur l'échelle
-  let alLines = '', alTags = '';
-  for (const a of (id ? (candleAlerts[id] || []) : [])) {
-    const ya = y(a.p);
-    if (ya < TOP - 14 || ya > H - BOT + 8) continue;
-    const col = a.tr ? '#6b7280' : '#b388ff';
-    alLines += `<line x1="0" x2="${W - AX}" y1="${ya.toFixed(1)}" y2="${ya.toFixed(1)}" stroke="${col}" stroke-width="1.2"${a.tr ? ' stroke-dasharray="5 4"' : ''}/>`;
-    alTags += `<rect x="${W - AX + 1}" y="${(ya - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${col}"/>` +
-      `<text x="${W - AX + 4}" y="${(ya + 4).toFixed(1)}" style="fill:#fff;font-size:9px">\ud83d\udd14</text>` +
-      `<text x="${W - AX + 17}" y="${(ya + 4).toFixed(1)}" style="fill:#fff;font-size:10px">${fmt(a.p)}</text>`;
-  }
   const yl = Math.min(H - BOT, Math.max(TOP - 20, y(lastC))); // l'étiquette du dernier prix reste visible sur le bord
   const tag = `<line x1="0" x2="${W - AX}" y1="${yl.toFixed(1)}" y2="${yl.toFixed(1)}" stroke="${lastCol}" stroke-width="1" stroke-dasharray="2 3"/>` +
     `<rect x="${W - AX + 1}" y="${(yl - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
     `<text x="${W - AX + 6}" y="${(yl + 4).toFixed(1)}" class="pc-ax" style="fill:#fff">${fmt(lastC)}</text>`;
-  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${grid}<g clip-path="url(#pcClip)">${fib}${body}${alLines}</g>${tag}${alTags}</svg>`;
+  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${grid}<g clip-path="url(#pcClip)">${fib}${body}</g>${tag}</svg>`;
 }
 
 // Sweep de la bougie daily précédente (même règle qu'Arii SNIPER) : D0 dépasse le haut de D1 et clôture dessous, ou casse son bas et clôture dessus
@@ -2097,98 +2086,9 @@ function candleViewSave(id, v) {
 }
 function candleRedraw(id, v) {
   const ch = document.querySelector(`.cd-chart[data-pair="${id}"]`);
-  if (ch && candleDays[id]) ch.innerHTML = candleSvg(candleDays[id], (candleDaily || {})[id], v, id);
+  if (ch && candleDays[id]) ch.innerHTML = candleSvg(candleDays[id], (candleDaily || {})[id], v);
 }
-// ===== Alertes de prix façon TradingView : appui long = poser une ligne, glisser = déplacer, toucher son étiquette = supprimer =====
-const CANDLE_AL_LS = 'candleAlertsV1';
-let candleAlerts = {};
-try { candleAlerts = JSON.parse(localStorage.getItem(CANDLE_AL_LS) || '{}') || {}; } catch (e) { candleAlerts = {}; }
-function candleAlSave() {
-  for (const k of Object.keys(candleAlerts)) if (!candleAlerts[k].length) delete candleAlerts[k];
-  try { localStorage.setItem(CANDLE_AL_LS, JSON.stringify(candleAlerts)); } catch (e) { /* quota */ }
-}
-function candleRoundP(p) { return +p.toFixed(p >= 1000 ? 2 : p >= 100 ? 3 : 5); } // même précision que l'échelle de prix
-function candleAlertsOf(id) { return (candleAlerts[id] = candleAlerts[id] || []); }
-function candleAlertsActive() { return Object.values(candleAlerts).some((l) => l.some((a) => !a.tr)); }
-function candleD0(id) { const a = (candleDaily || {})[id]; return a && a.length ? a[a.length - 1] : null; } // [t, o, h, l, c] du jour en cours
-function candleAlRearm(id, a) { // (ré)arme l'alerte à partir de l'état du jour : sens, plus haut / plus bas déjà vus
-  const d0 = candleD0(id);
-  a.tr = 0;
-  a.dayT = d0 ? d0[0] : 0;
-  a.armHi = d0 ? d0[2] : 0;
-  a.armLo = d0 ? d0[3] : 0;
-  a.dir = d0 && a.p < d0[4] ? 'down' : 'up';
-}
-function candleToast(msg) {
-  let t = document.getElementById('candleToast');
-  if (!t) { t = document.createElement('div'); t.id = 'candleToast'; document.body.appendChild(t); }
-  t.textContent = msg;
-  t.classList.add('show');
-  clearTimeout(candleToast.t);
-  candleToast.t = setTimeout(() => t.classList.remove('show'), 7000);
-}
-function candleBeep() {
-  try {
-    const AC = window.AudioContext || window.webkitAudioContext;
-    if (!AC) return;
-    candleBeep.ctx = candleBeep.ctx || new AC();
-    const c = candleBeep.ctx, o = c.createOscillator(), g = c.createGain();
-    o.type = 'sine'; o.frequency.value = 880; g.gain.value = 0.15;
-    o.connect(g); g.connect(c.destination); o.start(); o.stop(c.currentTime + 0.25);
-  } catch (e) { /* son indisponible */ }
-}
-function candleNotify(id, a) {
-  const label = ((typeof CORR_ALL_PAIRS !== 'undefined' && CORR_ALL_PAIRS.find((p) => p.id === id)) || { label: id }).label;
-  const msg = `\ud83d\udd14 ${label} \u2192 ${candleRoundP(a.p)}`;
-  candleToast(msg);
-  try { navigator.vibrate && navigator.vibrate([200, 100, 200]); } catch (e) { /* ignoré */ }
-  candleBeep();
-  try {
-    if (document.hidden && 'Notification' in window && Notification.permission === 'granted' && navigator.serviceWorker) {
-      navigator.serviceWorker.ready.then((r) => r.showNotification('Ariinui Market', { body: msg, tag: `al-${id}-${a.p}`, vibrate: [200, 100, 200] }));
-    }
-  } catch (e) { /* ignoré */ }
-}
-// Franchissement : plus haut / plus bas du jour (mèches incluses) depuis l'armement, ou dernier prix de l'autre côté
-function candleCheckAlerts() {
-  let changed = false;
-  for (const id of Object.keys(candleAlerts)) {
-    const d0 = candleD0(id);
-    if (!d0) continue;
-    for (const a of candleAlerts[id]) {
-      if (a.tr) continue;
-      if (a.dayT !== d0[0]) { a.dayT = d0[0]; a.armHi = d0[2]; a.armLo = d0[3]; changed = true; } // nouveau jour : on réarme
-      const hit = a.dir === 'up'
-        ? (a.armHi < a.p && d0[2] >= a.p) || d0[4] >= a.p
-        : (a.armLo > a.p && d0[3] <= a.p) || d0[4] <= a.p;
-      if (hit) { a.tr = Date.now(); changed = true; candleNotify(id, a); }
-    }
-  }
-  if (changed) {
-    candleAlSave();
-    for (const id of Object.keys(candleAlerts)) if (candleAlerts[id].some((a) => a.tr)) candleRedraw(id, candleViewOf(id));
-  }
-}
-function candleYP(id, v) { // prix <-> position verticale du graphique avec le zoom actuel
-  const g = candleGeo(id), T = CANDLE_G.TOP, rngV = g.baseRng / v.yz, lo = g.cenB + v.yp * g.baseRng - rngV / 2;
-  return { toY: (p) => T + (1 - (p - lo) / rngV) * g.plotH, toP: (y) => lo + (1 - (y - T) / g.plotH) * rngV, plotW: g.plotW };
-}
-function candleLongPress(id, ch, cx, cy) {
-  if (cg.pts.size !== 1 || cg.mode !== null || cg.moved || cg.id !== id) return;
-  const m = candleYP(id, candleViewOf(id)), r = ch.getBoundingClientRect();
-  if (cx - r.left >= m.plotW) return;
-  const a = { p: candleRoundP(m.toP(cy - r.top)) };
-  candleAlRearm(id, a);
-  candleAlertsOf(id).push(a);
-  candleAlSave();
-  cg.mode = 'alertmade'; cg.moved = true;
-  try { navigator.vibrate && navigator.vibrate(25); } catch (e) { /* ignoré */ }
-  candleRedraw(id, candleViewOf(id));
-  candleToast(`\ud83d\udd14 Alert set at ${a.p} \u00b7 drag to move \u00b7 tap its tag to delete`);
-  try { if ('Notification' in window && Notification.permission === 'default') Notification.requestPermission(); } catch (e) { /* ignoré */ }
-}
-
-const cg = { lp: 0, al: -1, pts: new Map(), id: null, mode: null, v0: null, start: null, cur: null, dx: 0, swallow: 0, moved: false, rect: null };
+const cg = { pts: new Map(), id: null, mode: null, v0: null, start: null, cur: null, dx: 0, swallow: 0, moved: false, rect: null };
 function candleGeo(id) {
   const { W, H } = candleDims(), { AX, TOP, BOT } = CANDLE_G;
   const sc = candleScale((candleDaily || {})[id], candleDays[id]);
@@ -2203,19 +2103,6 @@ function candleBeginGesture(rect) {
 const candleClamp = (v, a, b) => Math.min(b, Math.max(a, v));
 function candleOnMove() {
   const g = candleGeo(cg.id), r = cg.rect, T = CANDLE_G.TOP, pts = [...cg.pts.values()];
-  if (pts.length >= 2) clearTimeout(cg.lp);
-  if (pts.length === 1 && cg.start && cg.start.length === 1 && Math.hypot(pts[0].x - cg.start[0].x, pts[0].y - cg.start[0].y) > 8) clearTimeout(cg.lp); // bouge = pas un appui long
-  if (cg.mode === 'alertmade') return;
-  if (cg.mode === 'alertdrag' && pts.length === 1) { // déplacer la ligne d'alerte
-    const a = candleAlertsOf(cg.id)[cg.al];
-    if (a && (cg.moved || Math.abs(pts[0].y - cg.start[0].y) > 6)) {
-      cg.moved = true;
-      a.p = candleRoundP(candleYP(cg.id, candleViewOf(cg.id)).toP(pts[0].y - r.top));
-      candleRedraw(cg.id, candleViewOf(cg.id));
-    }
-    return;
-  }
-  if (cg.mode === 'alerttag') { if (pts.length === 1 && Math.hypot(pts[0].x - cg.start[0].x, pts[0].y - cg.start[0].y) > 8) { cg.mode = 'done'; cg.moved = true; } return; }
   const priceAt = (v, yPx) => {
     const rngV = g.baseRng / v.yz, lo = g.cenB + v.yp * g.baseRng - rngV / 2;
     return lo + (1 - (yPx - T) / g.plotH) * rngV;
@@ -2258,14 +2145,7 @@ function candleOnMove() {
     cg.id = ch.dataset.pair;
     cg.pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
     try { ch.setPointerCapture(e.pointerId); } catch (err) { /* ignoré */ }
-    if (cg.pts.size === 1) {
-      cg.mode = null; cg.moved = false; cg.dx = 0; cg.al = -1;
-      clearTimeout(cg.lp);
-      const id = cg.id, rc = ch.getBoundingClientRect(), xPx = e.clientX - rc.left, yPx = e.clientY - rc.top, m = candleYP(id, candleViewOf(id));
-      candleAlertsOf(id).forEach((a, i) => { if (Math.abs(m.toY(a.p) - yPx) <= 18) cg.al = i; });
-      if (cg.al >= 0) cg.mode = xPx >= m.plotW ? 'alerttag' : 'alertdrag';
-      else cg.lp = setTimeout(() => candleLongPress(id, ch, e.clientX, e.clientY), 550);
-    } else clearTimeout(cg.lp);
+    if (cg.pts.size === 1) { cg.mode = null; cg.moved = false; cg.dx = 0; }
     candleBeginGesture(ch.getBoundingClientRect()); // repart de la vue actuelle à chaque doigt ajouté
   });
   list.addEventListener('pointermove', (e) => {
@@ -2277,15 +2157,6 @@ function candleOnMove() {
     if (!cg.pts.has(e.pointerId)) return;
     const wasMode = cg.mode, wasSingle = cg.pts.size === 1;
     cg.pts.delete(e.pointerId);
-    clearTimeout(cg.lp);
-    if (wasMode === 'alertdrag' || wasMode === 'alerttag' || wasMode === 'alertmade') {
-      const aid = cg.id;
-      if (wasMode === 'alerttag' && !cg.moved && e.type === 'pointerup') { candleAlertsOf(aid).splice(cg.al, 1); candleAlSave(); candleRedraw(aid, candleViewOf(aid)); }
-      else if (wasMode === 'alertdrag' && cg.moved) { const a = candleAlertsOf(aid)[cg.al]; if (a) candleAlRearm(aid, a); candleAlSave(); candleRedraw(aid, candleViewOf(aid)); }
-      cg.swallow = Date.now() + 350; // un geste sur une alerte n'ouvre pas le graphique TradingView
-      cg.mode = null;
-      return;
-    }
     if (cg.pts.size > 0) { cg.mode = 'done'; return; } // un doigt levé pendant un pincement : on attend la fin du geste
     if ((wasMode === 'pan' || wasMode === 'pinch' || wasMode === 'done') && cg.cur) candleViewSave(cg.id, cg.cur);
     if (wasMode === 'swipe' && wasSingle && e.type === 'pointerup' && Math.abs(cg.dx) > 50) candleGo(candleIndex() + (cg.dx < 0 ? 1 : -1));
@@ -2322,7 +2193,7 @@ function candleRender() {
     date = day.d;
     candleDays[p.id] = day;
     const cls = s.group === 0 ? 'cd-bull' : s.group === 1 ? 'cd-bear' : '';
-    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id], day)}</button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id], candleViewOf(p.id), p.id)}</button><button type="button" class="cd-reset" data-reset="${p.id}" aria-label="Reset zoom"${candleViewIsDef(candleViewOf(p.id)) ? ' hidden' : ''}>\u27f2</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
+    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id], day)}</button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id], candleViewOf(p.id))}</button><button type="button" class="cd-reset" data-reset="${p.id}" aria-label="Reset zoom"${candleViewIsDef(candleViewOf(p.id)) ? ' hidden' : ''}>\u27f2</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
   }).join('');
   const ki = keepId ? [...candleSlides()].findIndex((r) => r.dataset.id === keepId) : -1;
   list.scrollLeft = (ki >= 0 ? ki : keep) * list.clientWidth;
@@ -2449,7 +2320,6 @@ async function candleLoad() {
     for (const id of Object.keys(chartsCandles)) candleDaily[id] = chartsCandles[id].slice(-4);
   }
   candleRender();
-  candleCheckAlerts();
 }
 
 // Actualisation automatique (toutes les 20 s tant que CANDLE est ouvert) : met à jour bougies, sweep et compteurs EN PLACE,
@@ -2463,7 +2333,7 @@ function candleRefreshInPlace() {
     if (!day) return;
     candleDays[id] = day;
     const ch = r.querySelector('.cd-chart');
-    if (ch) ch.innerHTML = candleSvg(day, (candleDaily || {})[id], candleViewOf(id), id);
+    if (ch) ch.innerHTML = candleSvg(day, (candleDaily || {})[id], candleViewOf(id));
     const hd = r.querySelector('.cd-head');
     if (hd) { hd.querySelectorAll('.cd-sweep').forEach((x) => x.remove()); hd.insertAdjacentHTML('beforeend', candleSweep((candleDaily || {})[id], day)); }
   });
@@ -2472,20 +2342,17 @@ function candleRefreshInPlace() {
 }
 async function candleAutoRefresh() {
   const body = document.getElementById('candleBody');
-  if (candleAutoBusy || !candlePoh || document.hidden || !body) return;
-  if (body.classList.contains('collapsed') && !candleAlertsActive()) return; // CANDLE fermé : on surveille seulement s'il y a des alertes armées
+  if (candleAutoBusy || !candlePoh || document.hidden || !body || body.classList.contains('collapsed')) return;
   candleAutoBusy = true;
   try {
     const j = await candleFetchProxy();
     candleMerge(j);
     try { localStorage.setItem(CANDLE_LS, JSON.stringify({ pairs: candlePoh, daily: candleDaily })); } catch (e) { /* quota */ }
-    candleCheckAlerts();
     candleRefreshInPlace();
   } catch (e) { /* on réessaiera au prochain tour */ }
   candleAutoBusy = false;
 }
-setInterval(candleAutoRefresh, 10000);
-if (candleAlertsActive()) candleLoad(); // alertes armées : on charge les prix dès l'ouverture de l'application
+setInterval(candleAutoRefresh, 20000);
 document.addEventListener('visibilitychange', () => { if (!document.hidden) candleAutoRefresh(); });
 
 document.getElementById('candleToggle')?.addEventListener('click', (e) => {
