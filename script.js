@@ -2070,6 +2070,7 @@ function candleSvg(day, dly, view, id) {
     const hs = stepB / 3 * vw.xz, edge = LEFT + xOff - stepB * 0.5 * vw.xz, hw = Math.max(1, hs * 0.7);
     const jMin = Math.max(0, Math.floor((edge - (W - AX)) / hs) - 1), jMax = Math.min(hist.length - 1, Math.ceil((edge + hs) / hs));
     const kLbl = Math.max(1, Math.round((candleHistTf === '1D' ? 80 : 70) / hs));
+    let sepX = 1e9, sepLbl = 1e9;
     for (let j = jMin; j <= jMax; j++) {
       const b = hist[hist.length - 1 - j], x = edge - (j + 0.5) * hs, col = b[4] >= b[1] ? '#26a69a' : '#ef5350';
       hb += `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${y(b[2]).toFixed(1)}" y2="${y(b[3]).toFixed(1)}" stroke="${col}" stroke-width="0.7"/>` +
@@ -2077,8 +2078,11 @@ function candleSvg(day, dly, view, id) {
       const older = hist[hist.length - 2 - j]; // barre précédente : si elle est d'un autre jour (coupure 12:00 UTC-10), séparateur vertical
       if (older && candleHistTf !== '1D' && Math.floor((b[0] - 79200) / 86400) !== Math.floor((older[0] - 79200) / 86400)) {
         const xs = x + hs / 2;
-        hb += `<line x1="${xs.toFixed(1)}" x2="${xs.toFixed(1)}" y1="0" y2="${H}" stroke="#5a5e68" stroke-width="0.7" stroke-dasharray="2 3"/>` +
-          `<text x="${(xs + 3).toFixed(1)}" y="${TOP - 6}" style="fill:#7d818c;font-size:9px">${new Date((b[0] - 36000) * 1000).toISOString().slice(5, 10)}</text>`;
+        if (Math.abs(xs - sepX) >= 5) { // trop dézoomé : on n'empile pas les traits ni les dates
+          hb += `<line x1="${xs.toFixed(1)}" x2="${xs.toFixed(1)}" y1="0" y2="${H}" stroke="#5a5e68" stroke-width="0.7" stroke-dasharray="2 3"/>`;
+          if (Math.abs(xs - sepLbl) >= 38) { hb += `<text x="${(xs + 3).toFixed(1)}" y="${TOP - 6}" style="fill:#7d818c;font-size:9px">${new Date((b[0] - 36000) * 1000).toISOString().slice(5, 10)}</text>`; sepLbl = xs; }
+          sepX = xs;
+        }
       }
       if (j % kLbl === 0) hb += `<text x="${x.toFixed(1)}" y="${H - 3}" text-anchor="middle" class="pc-ax" style="font-size:9px">${candleHistTf === '1D' ? new Date((b[0] - 36000) * 1000).toISOString().slice(2, 10) : alerteTime(b[0])}</text>`;
     }
