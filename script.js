@@ -1974,9 +1974,9 @@ let candleEcoEv = []; // news à fort impact (calendrier éco) : { country, titl
 const candleEvHits = {}; // paire -> [{ x, y, r, list }] zones cliquables des pastilles (repère du graphique)
 let candleF50 = {}; // { PAIR: { hi, lo, ... } } boîte 14H (niveaux Entry / 50 % / TP)
 // REPLAY (façon TradingView) : on rejoue les bougies du graphique affiché. rp.t = heure d'ouverture de la dernière barre visible ; tout ce qui est après est masqué
-const rp = { on: false, id: null, t: 0, pick: false, playing: false, timer: 0, spd: 2, view: null, vkey: '', pos: null, done: [], msg: '' };
-const RP_SPEEDS = [[100, '10x'], [300, '3x'], [1000, '1x'], [3000, '0.3x'], [10000, '0.1x']]; // délai entre 2 bougies
-try { const s = parseInt(localStorage.getItem('candleRpSpd'), 10); if (s >= 0 && s < RP_SPEEDS.length) rp.spd = s; } catch (e) { /* pas de stockage */ }
+const rp = { on: false, id: null, t: 0, pick: false, playing: false, timer: 0, spd: 0, qty: 1, slp: 0, tpp: 0, tw: true, wm: true, view: null, vkey: '', pos: null, done: [], msg: '' };
+const RP_SPEEDS = [[100, '10x'], [143, '7x'], [200, '5x'], [333, '3x'], [1000, '1x'], [2000, '0.5x'], [3333, '0.3x'], [10000, '0.1x']]; // délai entre 2 bougies (mêmes vitesses que TradingView)
+try { const s = parseInt(localStorage.getItem('candleRpSpd2'), 10); if (s >= 0 && s < RP_SPEEDS.length) rp.spd = s; } catch (e) { /* pas de stockage */ }
 let candleXh = null; // réticule (croix pointillée) façon TradingView : { id, x, y } en pixels du graphique ; le ⊕ de l'étiquette de prix crée une alerte
 const XH_DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], XH_MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 function candleXhTime(t) { // secondes UTC -> « Sat 07 Nov '26  16:39 » en UTC-10 (fuseau de l'utilisateur)
@@ -2022,8 +2022,8 @@ function candleHistEnsure(id) { // charge (au plus toutes les 25 s) les bougies 
 
 // Dimensions réelles de la zone graphique (plein écran) : le SVG est dessiné à l'échelle 1:1, sans déformation
 function candleDims() {
-  const rpp = rp.on ? document.getElementById('candleRp') : null; // replay : barres du haut et du bas masquées, le panneau de contrôle occupe le bas
-  return { W: Math.max(300, Math.round(window.innerWidth)), H: Math.max(300, Math.round(window.innerHeight) - (rpp && !rpp.hidden ? (rpp.offsetHeight || 112) : 90)) };
+  const rpp = rp.on ? document.getElementById('rpBar') : null; // replay : barres du haut et du bas masquées, seule la barre d'icônes du replay occupe le bas
+  return { W: Math.max(300, Math.round(window.innerWidth)), H: Math.max(300, Math.round(window.innerHeight) - (rpp && rpp.offsetHeight ? rpp.offsetHeight : rp.on ? 58 : 90)) };
 }
 function candleNiceStep(rng, n) {
   const raw = rng / n, p = Math.pow(10, Math.floor(Math.log10(raw))), m = raw / p;
@@ -2819,15 +2819,19 @@ function candleRpUi() { // texte d'état + boutons
     if (rp.pick) m = full ? `Tap a candle to start · data ${new Date((full[0][0] - 36000) * 1000).toISOString().slice(0, 10)} → ${new Date((full[full.length - 1][0] - 36000) * 1000).toISOString().slice(0, 10)}` : 'Loading history…';
     else if (last) {
       m = new Date((last[0] - 36000) * 1000).toISOString().slice(0, 16).replace('T', ' ') + ' · ' + last[4].toFixed(rpDec());
-      if (rp.pos) { const pn = (last[4] - rp.pos.px) * rp.pos.side / rpPip(rp.id); m += ` · ${rp.pos.side > 0 ? 'BUY' : 'SELL'} ${pn >= 0 ? '+' : ''}${pn.toFixed(1)}p`; }
+      if (rp.pos) { const pn = (last[4] - rp.pos.px) * rp.pos.side / rpPip(rp.id) * (rp.pos.qty || 1); m += ` · ${rp.pos.side > 0 ? 'BUY' : 'SELL'} ${pn >= 0 ? '+' : ''}${pn.toFixed(1)}p`; }
       if (rp.done.length) m += ` · ${rp.done.length} trades ${w}W ${tot >= 0 ? '+' : ''}${tot.toFixed(1)}p`;
     }
   }
   rpEl('rpMsg').textContent = m;
-  rpEl('rpPlay').innerHTML = rp.playing ? '<svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>' : '<svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>';
+  rpEl('rpPlay').innerHTML = rp.playing ? '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5v14M16 5v14"/></svg>' : '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4.5v15l12-7.5z"/></svg>';
   rpEl('rpSpd').textContent = RP_SPEEDS[rp.spd][1];
-  rpEl('rpSel').classList.toggle('on', rp.pick);
-  rpEl('rpClose').hidden = !rp.pos;
+  rpEl('rpTf').textContent = CANDLE_HIST_LBL[candleHistTf];
+  rpEl('rpQty').textContent = rp.qty;
+  rpEl('rpClose').disabled = !rp.pos;
+  rpEl('rpTw').hidden = !rp.tw;
+  document.querySelector('.rp-wm').style.display = rp.wm ? '' : 'none';
+  rpEl('rpDice').classList.toggle('on', rp.pick);
 }
 function candleRpMode(on) { // replay plein écran façon TradingView : plus de barre du haut (Fibo/Sweep/F+S), ni de barre du bas (périodes), ni d'échelle de prix à droite
   const body = document.getElementById('candleBody');
@@ -2893,7 +2897,7 @@ function candleRpCheck(b) { // SL / TP touchés par la nouvelle barre (si les de
 function candleRpClosePos(px, why) {
   const p = rp.pos;
   if (!p) return;
-  const pips = (px - p.px) * p.side / rpPip(rp.id);
+  const pips = (px - p.px) * p.side / rpPip(rp.id) * (p.qty || 1);
   rp.done.push({ side: p.side, px: p.px, exit: px, pips, why });
   rp.pos = null;
   rp.msg = `${why} · ${pips >= 0 ? '+' : ''}${pips.toFixed(1)}p`;
@@ -2928,32 +2932,61 @@ function candleRpOpen(side) { // achat / vente au prix de la dernière barre
   if (!full || rp.pick) return;
   const px = full[candleRpCount(full) - 1][4];
   if (rp.pos) { const same = rp.pos.side === side; candleRpClosePos(px, 'Closed'); if (same) { candleRpUi(); candleRpRedraw(); return; } } // sens opposé : ferme (comme TradingView, position nette)
-  const pip = rpPip(rp.id), sl = parseFloat(rpEl('rpSl').value), tp = parseFloat(rpEl('rpTp').value);
-  rp.pos = { side, px, sl: sl > 0 ? px - side * sl * pip : 0, tp: tp > 0 ? px + side * tp * pip : 0 };
+  const pip = rpPip(rp.id), sl = rp.slp, tp = rp.tpp;
+  rp.pos = { side, qty: rp.qty, px, sl: sl > 0 ? px - side * sl * pip : 0, tp: tp > 0 ? px + side * tp * pip : 0 };
   candleRpUi(); candleRpRedraw();
+}
+function rpMenuClose() { const m = rpEl('rpMenu'); if (m) { m.hidden = true; m.innerHTML = ''; } }
+function rpMenu(title, rows) { // petit menu au-dessus de la barre : rows = [{ t, on, fn }]
+  const m = rpEl('rpMenu');
+  m.innerHTML = title ? `<div class="rp-mt">${title}</div>` : '';
+  for (const r of rows) {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'rp-mi' + (r.on ? ' on' : ''); b.textContent = r.t;
+    b.addEventListener('click', () => { rpMenuClose(); r.fn(); });
+    m.appendChild(b);
+  }
+  m.hidden = false;
+  return m;
+}
+function rpMenuRow(m, label, input) { const d = document.createElement('div'); d.className = 'rp-mr'; const l = document.createElement('span'); l.textContent = label; d.append(l, input); m.appendChild(d); }
+function rpSetTf(tf) { // période du replay : mêmes boutons cachés ‹ › que le graphique (la position du replay est conservée)
+  const modes = CANDLE_HIST_MODES, i = modes.indexOf(candleHistTf), j = modes.indexOf(tf);
+  if (j < 1 || j === i) return;
+  for (let k = 0; k < Math.abs(j - i); k++) rpEl(j > i ? 'candleHistNext' : 'candleHistPrev').click();
+  candleRpUi();
 }
 (function candleRpInit() {
   const panel = rpEl('candleRp'), list = rpEl('candleList');
   if (!panel || !list) return;
+  const flash = (t) => { rp.msg = t; candleRpUi(); setTimeout(() => { rp.msg = ''; candleRpUi(); }, 2000); };
   rpEl('candleRpBtn').addEventListener('click', candleRpEnter);
   rpEl('rpExit').addEventListener('click', candleRpExit);
-  rpEl('rpSel').addEventListener('click', () => { candleRpPlay(false); rp.pick = true; rp.msg = ''; rp.pos = null; candleRpUi(); candleRpRedraw(); });
-  rpEl('rpPlay').addEventListener('click', () => { if (!rp.pick) candleRpPlay(!rp.playing); });
-  rpEl('rpFwd').addEventListener('click', () => { candleRpPlay(false); candleRpStep(1); });
-  rpEl('rpBack').addEventListener('click', () => { candleRpPlay(false); candleRpStep(-1); });
-  rpEl('rpSpd').addEventListener('click', () => {
-    rp.spd = (rp.spd + 1) % RP_SPEEDS.length;
-    try { localStorage.setItem('candleRpSpd', String(rp.spd)); } catch (e) { /* pas de stockage */ }
-    candleRpUi();
-  });
-  rpEl('rpRand').addEventListener('click', () => {
-    const full = rpFull();
-    if (!full) return;
-    candleRpPlay(false);
-    candleRpSet(full.length > 400 ? 100 + Math.floor(Math.random() * (full.length - 300)) : Math.floor(full.length / 2));
-  });
+  rpEl('rpPlay').addEventListener('click', () => { rpMenuClose(); if (!rp.pick) candleRpPlay(!rp.playing); });
+  rpEl('rpFwd').addEventListener('click', () => { rpMenuClose(); candleRpPlay(false); candleRpStep(1); });
+  rpEl('rpEnd').addEventListener('click', () => { rpMenuClose(); const full = rpFull(); if (!full) return; candleRpPlay(false); candleRpSet(full.length - 1); });
   const dt = rpEl('rpDate');
-  rpEl('rpDay').addEventListener('click', () => { try { dt.showPicker(); } catch (e) { dt.click(); } });
+  rpEl('rpDice').addEventListener('click', () => rpMenu('Start the replay from…', [
+    { t: 'Select bar', fn: () => { candleRpPlay(false); rp.pick = true; rp.msg = ''; rp.pos = null; candleRpUi(); candleRpRedraw(); } },
+    { t: 'Select date', fn: () => { try { dt.showPicker(); } catch (e) { dt.click(); } } },
+    { t: 'Random bar', fn: () => { const full = rpFull(); if (!full) return; candleRpPlay(false); candleRpSet(full.length > 400 ? 100 + Math.floor(Math.random() * (full.length - 300)) : Math.floor(full.length / 2)); } },
+    { t: 'First bar', fn: () => { candleRpPlay(false); candleRpSet(0); } },
+  ]));
+  rpEl('rpSpd').addEventListener('click', () => rpMenu('Replay speed', RP_SPEEDS.map(([, l], i) => ({ t: l, on: i === rp.spd, fn: () => { rp.spd = i; try { localStorage.setItem('candleRpSpd2', String(i)); } catch (e) { /* pas de stockage */ } candleRpUi(); } }))));
+  rpEl('rpTf').addEventListener('click', () => rpMenu('Timeframe', CANDLE_HIST_MODES.filter((m) => m !== '0').map((m) => ({ t: CANDLE_HIST_LBL[m], on: m === candleHistTf, fn: () => rpSetTf(m) }))));
+  rpEl('rpQty').addEventListener('click', () => rpMenu('Quantity (lots)', [0.1, 0.5, 1, 2, 5, 10].map((q) => ({ t: String(q), on: q === rp.qty, fn: () => { rp.qty = q; candleRpUi(); } }))));
+  rpEl('rpSet').addEventListener('click', () => {
+    const m = rpMenu('Replay settings', [
+      { t: 'Trading widget', on: rp.tw, fn: () => { rp.tw = !rp.tw; candleRpUi(); } },
+      { t: 'Replay watermark', on: rp.wm, fn: () => { rp.wm = !rp.wm; candleRpUi(); } },
+    ]);
+    for (const [lbl, key] of [['Stop loss (pips)', 'slp'], ['Take profit (pips)', 'tpp']]) {
+      const i = document.createElement('input'); i.type = 'number'; i.min = '0'; i.inputMode = 'decimal'; i.placeholder = 'none'; i.value = rp[key] || '';
+      i.addEventListener('input', () => { rp[key] = Math.max(0, parseFloat(i.value) || 0); });
+      rpMenuRow(m, lbl, i);
+    }
+  });
+  document.addEventListener('pointerdown', (e) => { const m = rpEl('rpMenu'); if (m && !m.hidden && !m.contains(e.target) && !e.target.closest('.rp-bar, .rp-tw')) rpMenuClose(); }, true);
   dt.addEventListener('change', () => {
     const full = rpFull(), m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(dt.value);
     if (!full || !m) return;
@@ -2961,12 +2994,20 @@ function candleRpOpen(side) { // achat / vente au prix de la dernière barre
     let a = 0, b = full.length;
     while (a < b) { const mid = (a + b) >> 1; if (full[mid][0] < t0) a = mid + 1; else b = mid; }
     candleRpPlay(false);
-    if (a >= full.length) { rp.msg = 'No data after that date'; candleRpUi(); setTimeout(() => { rp.msg = ''; candleRpUi(); }, 2000); return; }
+    if (a >= full.length) { flash('No data after that date'); return; }
     candleRpSet(a);
   });
   rpEl('rpBuy').addEventListener('click', () => candleRpOpen(1));
   rpEl('rpSell').addEventListener('click', () => candleRpOpen(-1));
   rpEl('rpClose').addEventListener('click', () => { const full = rpFull(); if (full && rp.pos) { candleRpClosePos(full[candleRpCount(full) - 1][4], 'Closed'); candleRpUi(); candleRpRedraw(); } });
+  // widget Sell / quantité / Buy : déplaçable par la poignée
+  const tw = rpEl('rpTw'), grip = rpEl('rpGrip');
+  try { const q = JSON.parse(localStorage.getItem('candleRpTw') || 'null'); if (q) { tw.style.left = q.x + 'px'; tw.style.top = q.y + 'px'; tw.style.bottom = 'auto'; } } catch (e) { /* pas de stockage */ }
+  let gd = null;
+  grip.addEventListener('pointerdown', (e) => { const r = tw.getBoundingClientRect(); gd = { dx: e.clientX - r.left, dy: e.clientY - r.top, w: r.width, h: r.height }; try { grip.setPointerCapture(e.pointerId); } catch (err) { /* ignoré */ } e.preventDefault(); });
+  grip.addEventListener('pointermove', (e) => { if (!gd) return; const x = Math.min(innerWidth - gd.w, Math.max(0, e.clientX - gd.dx)), y = Math.min(innerHeight - gd.h - 60, Math.max(40, e.clientY - gd.dy)); tw.style.left = x + 'px'; tw.style.top = y + 'px'; tw.style.bottom = 'auto'; });
+  const gEnd = () => { if (!gd) return; gd = null; try { localStorage.setItem('candleRpTw', JSON.stringify({ x: parseFloat(tw.style.left), y: parseFloat(tw.style.top) })); } catch (e) { /* pas de stockage */ } };
+  grip.addEventListener('pointerup', gEnd); grip.addEventListener('pointercancel', gEnd);
   list.addEventListener('click', (e) => { // choix de la barre de départ (capture : avant le clic des pastilles de news)
     if (!rp.on || !rp.pick || Date.now() < cg.swallow) return;
     const ch = e.target.closest('.cd-chart');

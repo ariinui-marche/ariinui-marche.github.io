@@ -1314,18 +1314,6 @@ body.cc-lock { overflow: hidden; }
 /* CANDLE : REPLAY (façon TradingView) */
 .cc-bottom .cc-rpbtn { position: absolute; right: 48px; top: 50%; transform: translateY(-50%); width: 34px; height: 34px; padding: 0; display: flex; align-items: center; justify-content: center; background: #1a1a1a; color: #e5e5e5; border: 1px solid #333; border-radius: 8px; cursor: pointer; }
 .cc-bottom .cc-rpbtn.on { color: #00a3e0; border-color: #00a3e0; }
-.rp { position: absolute; left: 0; right: 0; bottom: calc(44px + env(safe-area-inset-bottom)); z-index: 5; padding: 6px 6px 8px; background: rgba(11, 11, 11, .95); border-top: 1px solid #1d1f24; display: flex; flex-direction: column; gap: 6px; }
-.rp[hidden] { display: none; }
-.rp-msg { font-size: 12px; color: #9aa0a6; text-align: center; min-height: 16px; font-variant-numeric: tabular-nums; }
-.rp-row { display: flex; gap: 4px; }
-.rp-row button, .rp-row input { flex: 1 1 0; min-width: 0; height: 34px; padding: 0 2px; background: #1a1a1a; color: #e5e5e5; border: 1px solid #333; border-radius: 8px; font-size: 12px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; text-align: center; }
-.rp-row input { cursor: text; font-weight: 400; }
-.rp-row button.on { color: #00a3e0; border-color: #00a3e0; }
-.rp-row button[hidden] { display: none; }
-.rp-trade .buy { color: #2ebd85; border-color: #2ebd85; }
-.rp-trade .sell { color: #f6465d; border-color: #f6465d; }
-.rp-trade input { flex: 1.2 1 0; }
-.rp-date { position: absolute; left: 0; bottom: 0; width: 1px; height: 1px; opacity: 0; pointer-events: none; padding: 0; border: 0; }
 
 
 /* CANDLE : fiche des alertes de prix (appui long sur le graphique) */
@@ -1343,6 +1331,36 @@ body.cc-lock { overflow: hidden; }
 .ca-b .ok { background: #2f7bff; border-color: #2f7bff; color: #fff; }
 .ca-b button:disabled { opacity: .5; }
 
-/* replay plein écran : barres du haut et du bas masquées, panneau collé en bas */
 #candleBody.rp-mode .cc-top, #candleBody.rp-mode .cc-bottom { display: none; }
-#candleBody.rp-mode .rp { bottom: 0; padding-bottom: calc(8px + env(safe-area-inset-bottom)); }
+
+/* REPLAY façon TradingView : barre d'icônes en bas, widget Sell / quantité / Buy flottant et déplaçable, filigrane « Replay », pastille bleue à côté du nom */
+.rp { position: absolute; inset: 0; z-index: 5; pointer-events: none; }
+.rp[hidden] { display: none; }
+.rp > * { pointer-events: auto; }
+.rp-msg { position: absolute; top: 34px; left: 12px; font-size: 12px; color: #9aa0a6; font-variant-numeric: tabular-nums; pointer-events: none; }
+.rp-wm { position: absolute; top: 42%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 14px; color: rgba(255, 255, 255, .06); font-size: 64px; font-weight: 500; pointer-events: none; }
+.rp-bar { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: space-between; padding: 6px 10px calc(6px + env(safe-area-inset-bottom)); background: #0b0b0b; border-top: 1px solid #1d1f24; }
+.rp-bar button { flex: 1 1 0; min-width: 0; height: 44px; background: none; border: 0; color: #e5e5e5; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; -webkit-tap-highlight-color: transparent; }
+.rp-bar button:active { background: #1a1a1a; border-radius: 8px; }
+.rp-bar button.on { color: #2962ff; }
+.rp-bar button.txt { font-size: 19px; font-weight: 500; }
+.rp-tw { position: fixed; left: 12px; bottom: calc(76px + env(safe-area-inset-bottom)); display: flex; align-items: center; gap: 8px; padding: 8px; background: #1c1c1e; border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 0, 0, .5); }
+.rp-tw[hidden] { display: none; }
+.rp-grip { color: #787b86; display: flex; align-items: center; touch-action: none; cursor: grab; padding: 0 2px; }
+.rp-tw button { height: 40px; border: 0; border-radius: 20px; font-size: 18px; font-weight: 700; color: #fff; padding: 0 20px; cursor: pointer; }
+.rp-tw .sell { background: #f23645; }
+.rp-tw .buy { background: #2962ff; }
+.rp-tw .qty { background: #2a2a2e; font-weight: 500; padding: 0 20px; min-width: 70px; }
+.rp-tw .flat { background: #2a2a2e; color: #787b86; font-weight: 500; font-size: 17px; }
+.rp-tw .flat:not(:disabled) { color: #fff; }
+.rp-menu { position: absolute; left: 8px; right: 8px; bottom: calc(66px + env(safe-area-inset-bottom)); max-height: 60vh; overflow: auto; background: #1c1c1e; border: 1px solid #2a2a2e; border-radius: 12px; padding: 6px; box-shadow: 0 -8px 30px rgba(0, 0, 0, .6); }
+.rp-menu[hidden] { display: none; }
+.rp-mt { padding: 8px 12px 4px; font-size: 12px; color: #787b86; }
+.rp-mi { display: flex; width: 100%; align-items: center; justify-content: space-between; height: 44px; padding: 0 12px; background: none; border: 0; border-radius: 8px; color: #e5e5e5; font-size: 16px; cursor: pointer; text-align: left; }
+.rp-mi:active, .rp-mi.on { background: #2a2a2e; }
+.rp-mi.on::after { content: "✓"; color: #2962ff; }
+.rp-mr { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 4px 12px; color: #e5e5e5; font-size: 15px; }
+.rp-mr input[type=number] { width: 110px; height: 38px; padding: 0 10px; background: #0b0b0b; color: #fff; border: 1px solid #333; border-radius: 8px; font-size: 16px; }
+.rp-date { position: absolute; left: 0; bottom: 0; width: 1px; height: 1px; opacity: 0; pointer-events: none; padding: 0; border: 0; }
+#candleBody.rp-mode .cc-top, #candleBody.rp-mode .cc-bottom { display: none; }
+#candleBody.rp-mode .cd-head .cd-name::after { content: ""; display: inline-block; width: 24px; height: 24px; margin-left: 8px; vertical-align: middle; border-radius: 50%; background: #2962ff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11 7 5.5 12l5.5 5zM18 7l-5.5 5 5.5 5z' fill='%23fff'/%3E%3C/svg%3E") center / 16px no-repeat; }
