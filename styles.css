@@ -1288,3 +1288,15 @@ body.cc-lock { overflow: hidden; }
 .cc-bottom { position: relative; }
 .cc-bottom .cc-hist { position: absolute; left: 8px; top: 50%; transform: translateY(-50%); }
 .cc-bottom .cc-hist button { width: 24px; height: 34px; border-radius: 8px; font-size: 18px; }
+
+/* CANDLE : panneau du bas des news (façon TradingView) */
+#candleEvSheet { position: fixed; inset: 0; z-index: 60; }
+#candleEvSheet .ce-scrim { position: absolute; inset: 0; background: rgba(0, 0, 0, .55); }
+#candleEvSheet .ce-sheet { position: absolute; left: 0; right: 0; bottom: 0; max-height: 62vh; overflow-y: auto; background: #1b1c20; border-radius: 14px 14px 0 0; box-shadow: 0 -8px 30px rgba(0, 0, 0, .6); padding: 6px 0 calc(14px + env(safe-area-inset-bottom)); transition: transform .15s; animation: ceUp .18s ease-out; }
+@keyframes ceUp { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+#candleEvSheet .ce-ev { padding: 16px 24px 14px; border-top: 1px solid #32343b; }
+#candleEvSheet .ce-ev:first-child { border-top: 0; }
+#candleEvSheet .ce-t { font-size: 21px; font-weight: 700; color: #b2b5be; margin-bottom: 18px; }
+#candleEvSheet .ce-d { font-size: 17px; color: #b2b5be; margin-bottom: 20px; }
+#candleEvSheet .ce-r { display: grid; grid-template-columns: 50% 50%; font-size: 18px; color: #d1d4dc; line-height: 1.75; }
+#candleEvSheet .ce-r b { font-weight: 400; }
