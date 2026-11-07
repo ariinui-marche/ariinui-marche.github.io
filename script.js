@@ -1977,6 +1977,12 @@ let candleF50 = {}; // { PAIR: { hi, lo, ... } } boîte 14H (niveaux Entry / 50 
 const rp = { on: false, id: null, t: 0, pick: false, playing: false, timer: 0, spd: 2, view: null, vkey: '', pos: null, done: [], msg: '' };
 const RP_SPEEDS = [[100, '10x'], [300, '3x'], [1000, '1x'], [3000, '0.3x'], [10000, '0.1x']]; // délai entre 2 bougies
 try { const s = parseInt(localStorage.getItem('candleRpSpd'), 10); if (s >= 0 && s < RP_SPEEDS.length) rp.spd = s; } catch (e) { /* pas de stockage */ }
+let candleXh = null; // réticule (croix pointillée) façon TradingView : { id, x, y } en pixels du graphique ; le ⊕ de l'étiquette de prix crée une alerte
+const XH_DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], XH_MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+function candleXhTime(t) { // secondes UTC -> « Sat 07 Nov '26  16:39 » en UTC-10 (fuseau de l'utilisateur)
+  const d = new Date((t - 36000) * 1000), p = (n) => String(n).padStart(2, '0');
+  return `${XH_DAYS[d.getUTCDay()]} ${p(d.getUTCDate())} ${XH_MON[d.getUTCMonth()]} '${p(d.getUTCFullYear() % 100)}  ${p(d.getUTCHours())}:${p(d.getUTCMinutes())}`;
+}
 let candleAl = [], candleAlAt = 0; // alertes de prix en attente (serveur) : { id, pair, price, dir, created }
 const candleAlHits = {};
 let candleAlDrag = null; // alerte en cours de déplacement : { aid, price, moved }
@@ -2093,11 +2099,12 @@ function candleSvg(day, dly, view, id) {
     fib = fl.filter((f) => f.v >= lo && f.v <= hi).map((f) => `<line x1="${x0.toFixed(1)}" x2="${W - AX}" y1="${y(f.v).toFixed(1)}" y2="${y(f.v).toFixed(1)}" stroke="#f5b642" stroke-opacity="0.5" stroke-width="0.7" stroke-dasharray="1 4" stroke-linecap="round"/>` +
       `<text x="${W - AX - 4}" y="${(y(f.v) - 4).toFixed(1)}" text-anchor="end" style="fill:#f5b642;fill-opacity:.6;font-size:10px">${f.t}% · ${fmt(f.v)}</text>`).join('');
   }
-  let hb = '', evb = '', sepSvg = '';
+  let hb = '', evb = '', sepSvg = '', xhT = '';
   if (hist) {
     const hs0 = stepB / 3 * vw.xz, edge = LEFT + xOff - stepB * 0.5 * vw.xz; // hs0 = largeur d'une barre
     const sg = Math.max(1, Math.floor(1.2 / hs0)); // très dézoomé : bougies regroupées (comme TradingView), le graphique reste fluide quel que soit le zoom
     const hs = hs0 * sg, hw = Math.max(1, hs * 0.7);
+    if (candleXh && candleXh.id === id) { const j = Math.floor((edge - candleXh.x) / hs), i = hist.length - 1 - j * sg; if (candleXh.x <= edge && j >= 0 && i >= 0) xhT = candleXhTime(hist[i][0]); } // les barres vont vers la gauche depuis `edge` (dernière barre) ; pas d'heure au-dessus des POH ni du futur
     const jMin = Math.max(0, Math.floor((edge - (W - AX)) / hs) - 1), jMax = Math.min(Math.ceil(hist.length / sg) - 1, Math.ceil((edge + hs) / hs));
     const is1D = candleHistTf === '1D', tfMin = is1D ? 1440 : +candleHistTf, tfSec = tfMin * 60, kLbl = Math.max(1, Math.round(80 / hs));
     const tLast = hist[hist.length - 1][0], noClose = /^(BTC|ETH)/.test(id), xMax = W - AX, R = 12;
@@ -2234,7 +2241,7 @@ function candleSvg(day, dly, view, id) {
   const tag = `<line x1="0" x2="${W - AX}" y1="${yl.toFixed(1)}" y2="${yl.toFixed(1)}" stroke="${lastCol}" stroke-width="0.7" stroke-dasharray="2 3"/>` +
     `<rect x="${W - AX + 1}" y="${(yl - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
     `<text x="${W - AX + 6}" y="${(yl + 4).toFixed(1)}" class="pc-ax" style="fill:${lastC >= last.c[0] ? '#fff' : '#000'}">${fmt(lastC)}</text>`;
-  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${grid}<g clip-path="url(#pcClip)">${sepSvg}${hb}${fib}${pd}${body}${evb}${RP ? candleRpOverlay(y, W - AX, fmt, lo, hi, lastC) : candleAlSvg(id, y, W - AX, lo, hi, fmt)}</g>${tag}</svg>`;
+  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${grid}<g clip-path="url(#pcClip)">${sepSvg}${hb}${fib}${pd}${body}${evb}${RP ? candleRpOverlay(y, W - AX, fmt, lo, hi, lastC) : candleAlSvg(id, y, W - AX, lo, hi, fmt)}</g>${tag}${!RP && candleXh && candleXh.id === id ? candleXhSvg(candleXh, W, H, AX, TOP, BOT, lo, rng, fmt, xhT) : ''}</svg>`;
 }
 
 // Sweep de la bougie daily précédente (même règle qu'Arii SNIPER) : D0 dépasse le haut de D1 et clôture dessous, ou casse son bas et clôture dessus
@@ -2965,6 +2972,15 @@ function candleRpOpen(side) { // achat / vente au prix de la dernière barre
 })();
 
 // ===== LIGNES D'ALERTE DE PRIX sur CANDLE : appui long sur le graphique = créer, toucher l'étiquette bleue = supprimer ; surveillées par le serveur (api/alerte), notification téléphone =====
+function candleXhSvg(c, W, H, AX, TOP, BOT, lo, rng, fmt, tm) { // croix en pointillé blanc + étiquette de prix avec ⊕ (axe de droite) + date/heure (axe du bas)
+  const xr = W - AX, x = Math.min(xr, Math.max(0, c.x)), yy = Math.min(H - BOT, Math.max(TOP, c.y)), px = lo + (1 - (yy - TOP) / (H - TOP - BOT)) * rng, ln = 'stroke="#d1d4dc" stroke-opacity=".75" stroke-width="1" stroke-dasharray="4 4"';
+  let o = `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="0" y2="${H - BOT}" ${ln}/><line x1="0" x2="${xr}" y1="${yy.toFixed(1)}" y2="${yy.toFixed(1)}" ${ln}/>` +
+    `<rect x="${xr - 28}" y="${(yy - 11).toFixed(1)}" width="${AX + 27}" height="22" rx="3" fill="#2a2e39"/>` +
+    `<circle cx="${xr - 15}" cy="${yy.toFixed(1)}" r="9.5" fill="none" stroke="#fff" stroke-width="1.4"/><path d="M${xr - 20} ${yy.toFixed(1)}h10M${xr - 15} ${(yy - 5).toFixed(1)}v10" stroke="#fff" stroke-width="1.4"/>` +
+    `<text x="${xr + 6}" y="${(yy + 4).toFixed(1)}" class="pc-ax" style="fill:#fff;font-size:11px">${fmt(px)}</text>`;
+  if (tm) { const w = tm.length * 6.4 + 14, tx = Math.min(xr - w, Math.max(0, x - w / 2)); o += `<rect x="${tx.toFixed(1)}" y="${H - 21}" width="${w.toFixed(1)}" height="19" rx="3" fill="#2a2e39"/><text x="${(tx + w / 2).toFixed(1)}" y="${H - 8}" text-anchor="middle" style="fill:#fff;font-size:11px;pointer-events:none">${tm}</text>`; }
+  return o;
+}
 function candleAlSvg(id, y, xr, lo, hi, fmt) { // lignes bleues pointillées + étiquette (sens et prix) ; zones cliquables gardées pour la suppression
   candleAlHits[id] = [];
   if (!id) return '';
@@ -3043,7 +3059,7 @@ function candleAlCreate(id, price) {
 (function candleAlInit() {
   const list = document.getElementById('candleList');
   if (!list) return;
-  let lp = null;
+  let lp = null, xhDown = null; // xhDown : doigt posé alors que le réticule est affiché
   const cancel = () => { if (lp) { clearTimeout(lp.timer); lp = null; } };
   list.addEventListener('pointerdown', (e) => {
     cancel();
@@ -3055,7 +3071,10 @@ function candleAlCreate(id, price) {
       if (cg.pts.size !== 1 || Math.hypot(cg.pts.values().next().value.x - x0, cg.pts.values().next().value.y - y0) > 10) return;
       cg.swallow = Date.now() + 900;
       if (navigator.vibrate) { try { navigator.vibrate(20); } catch (err) { /* ignoré */ } }
-      candleAlCreate(id, candlePriceAt(id, y0 - rc.top));
+      candleXh = { id, x: x0 - rc.left, y: y0 - rc.top };
+      xhDown = { pid: cg.pts.keys().next().value, moved: true, x: x0, y: y0, rc, id };
+      cg.mode = 'cross';
+      candleRedraw(id, candleViewOf(id));
     }, 520) };
   });
   const near = (id, px, py) => (candleAlHits[id] || []).find((h) => py >= h.yc - 14 && py <= h.yc + 14 && px >= 0 && px <= h.xr && !(px >= h.x + h.w - 26 - 6 && py >= h.y - 4 && py <= h.y + h.h + 4)); // ligne ou étiquette (hors bouton ✕)
@@ -3069,7 +3088,24 @@ function candleAlCreate(id, price) {
     cg.mode = 'alert';
     candleAlDrag = { aid: a.id, price: a.price, moved: false, y0: e.clientY, id: ch.dataset.pair, rc };
   });
+  list.addEventListener('pointerdown', (e) => { // réticule déjà affiché : toucher le ⊕ = créer l'alerte ; glisser = déplacer le réticule ; simple tap ailleurs = le masquer
+    const ch = e.target.closest('.cd-chart');
+    if (!candleXh || !ch || candleAlDrag || (e.pointerType === 'mouse' && e.button !== 0)) return;
+    if (cg.pts.size > 1 || candleXh.id !== ch.dataset.pair) { candleXh = null; xhDown = null; candleRedraw(ch.dataset.pair, candleViewOf(ch.dataset.pair)); return; } // 2 doigts (zoom) ou autre paire : réticule retiré
+    cancel();
+    const rc = ch.getBoundingClientRect();
+    cg.mode = 'cross';
+    cg.swallow = Date.now() + 700;
+    xhDown = { pid: e.pointerId, moved: false, x: e.clientX, y: e.clientY, rc, id: ch.dataset.pair };
+  });
   list.addEventListener('pointermove', (e) => {
+    if (xhDown && candleXh && e.pointerId === xhDown.pid && !candleAlDrag) {
+      if (!xhDown.moved && Math.hypot(e.clientX - xhDown.x, e.clientY - xhDown.y) < 8) return;
+      xhDown.moved = true;
+      candleXh.x = e.clientX - xhDown.rc.left; candleXh.y = e.clientY - xhDown.rc.top;
+      candleRedraw(xhDown.id, candleViewOf(xhDown.id));
+      return;
+    }
     if (candleAlDrag) {
       const d = candleAlDrag;
       if (!d.moved && Math.abs(e.clientY - d.y0) < 4) return;
@@ -3090,6 +3126,20 @@ function candleAlCreate(id, price) {
     const last = candleLastPx(d.id), dec = d.price >= 1000 ? 2 : d.price >= 100 ? 3 : 5, price = +d.price.toFixed(dec);
     try { await candleAlPost({ lineMove: { id: d.aid, price, dir: last === null || price >= last ? 'above' : 'below' } }); } catch (err) { candleRedraw(d.id, candleViewOf(d.id)); candleAlFetch(); }
   };
+  const xhEnd = (e) => {
+    const d = xhDown;
+    if (!d || e.pointerId !== d.pid) return;
+    xhDown = null;
+    if (e.type === 'pointercancel' || !candleXh || d.moved) return; // glissé : le réticule reste où il est
+    const xr = candleDims().W - CANDLE_G.AX, rx = d.x - d.rc.left, ry = d.y - d.rc.top;
+    if (rx >= xr - 32 && Math.abs(ry - candleXh.y) <= 16) { // ⊕ : alerte au prix du réticule
+      const id = d.id, price = candlePriceAt(id, candleXh.y);
+      candleXh = null; candleRedraw(id, candleViewOf(id));
+      candleAlCreate(id, price);
+    } else { candleXh = null; candleRedraw(d.id, candleViewOf(d.id)); }
+  };
+  list.addEventListener('pointerup', xhEnd);
+  list.addEventListener('pointercancel', xhEnd);
   list.addEventListener('pointerup', dragEnd);
   list.addEventListener('pointercancel', dragEnd);
   window.addEventListener('pointerup', dragEnd); // filet : si le graphique est redessiné pendant le geste, le relâchement est quand même pris en compte
