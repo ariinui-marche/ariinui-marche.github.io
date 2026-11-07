@@ -1967,6 +1967,8 @@ const CANDLE_HIST_MODES = ['0', '1', '5', '60', '240', '1D'], CANDLE_HIST_LBL = 
 const CANDLE_HIST_N = { 1: 50, 5: 50, 60: 24, 240: 12, '1D': 8 }; // bougies récentes prises pour caler l'échelle de prix (1 jour environ)
 if (!CANDLE_HIST_MODES.includes(candleHistTf)) candleHistTf = '0';
 const candleHistData = {}; // 'PAIR|tf' -> { bars: [[t,o,h,l,c]...], at, busy }
+const CANDLE_FLAG = { USD: 'us', EUR: 'eu', GBP: 'gb', JPY: 'jp', AUD: 'au', NZD: 'nz', CAD: 'ca', CHF: 'ch' }; // drapeaux ronds des pastilles de news (comme TradingView)
+const CANDLE_DAYS = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'], CANDLE_DAYS_S = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
 const CANDLE_MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 let candleEcoEv = []; // news à fort impact (calendrier éco) : { country, title, _t, actual, forecast, previous }
 const candleEvHits = {}; // paire -> [{ x, y, r, list }] zones cliquables des pastilles (repère du graphique)
@@ -2069,16 +2071,14 @@ function candleSvg(day, dly, view, id) {
     fib = fl.filter((f) => f.v >= lo && f.v <= hi).map((f) => `<line x1="${x0.toFixed(1)}" x2="${W - AX}" y1="${y(f.v).toFixed(1)}" y2="${y(f.v).toFixed(1)}" stroke="#f5b642" stroke-opacity="0.5" stroke-width="0.7" stroke-dasharray="1 4" stroke-linecap="round"/>` +
       `<text x="${W - AX - 4}" y="${(y(f.v) - 4).toFixed(1)}" text-anchor="end" style="fill:#f5b642;fill-opacity:.6;font-size:10px">${f.t}% · ${fmt(f.v)}</text>`).join('');
   }
-  let hb = '', evb = '';
+  let hb = '', evb = '', sepSvg = '';
   if (hist) {
-    const hs0 = stepB / 3 * vw.xz, edge = LEFT + xOff - stepB * 0.5 * vw.xz;
+    const hs0 = stepB / 3 * vw.xz, edge = LEFT + xOff - stepB * 0.5 * vw.xz; // hs0 = largeur d'une barre
     const sg = Math.max(1, Math.floor(1.2 / hs0)); // très dézoomé : bougies regroupées (comme TradingView), le graphique reste fluide quel que soit le zoom
     const hs = hs0 * sg, hw = Math.max(1, hs * 0.7);
     const jMin = Math.max(0, Math.floor((edge - (W - AX)) / hs) - 1), jMax = Math.min(Math.ceil(hist.length / sg) - 1, Math.ceil((edge + hs) / hs));
-    const kLbl = Math.max(1, Math.round((candleHistTf === '1D' ? 80 : 70) / hs));
-    let sepX = 1e9, sepLbl = 1e9;
-    const lblXs = [], tfMin = candleHistTf === '1D' ? 1440 : +candleHistTf, dayOnly = candleHistTf !== '1D' && hs0 * (1440 / tfMin) < 70; // très dézoomé : seulement les numéros de jour
-    const tfSec = tfMin * 60, tLast = hist[hist.length - 1][0], noClose = /^(BTC|ETH)/.test(id);
+    const is1D = candleHistTf === '1D', tfMin = is1D ? 1440 : +candleHistTf, tfSec = tfMin * 60, kLbl = Math.max(1, Math.round(80 / hs));
+    const tLast = hist[hist.length - 1][0], noClose = /^(BTC|ETH)/.test(id), xMax = W - AX, R = 12;
     const futStart = LEFT + xOff + step * cs.length; // le futur commence à droite du bloc des POH et se prolonge à l'infini
     const phase = (t) => ((t % 604800) + 604800) % 604800;
     const closedAt = (t) => !noClose && phase(t) >= 165600 && phase(t) < 338400; // marché fermé du vendredi 22:00 UTC au dimanche 22:00 UTC (pas de barres le week-end ; crypto : jamais)
@@ -2087,38 +2087,41 @@ function candleSvg(day, dly, view, id) {
       if (!noClose) for (let w = Math.floor((a - 338400) / 604800); w * 604800 + 165600 < b; w++) tot -= Math.max(0, Math.min(b, w * 604800 + 338400) - Math.max(a, w * 604800 + 165600));
       return tot;
     };
-    const fx = (t) => futStart + openSecs(tLast, t) / tfSec * hs0;
+    const fxBar = (k) => futStart + (k - 0.5) * hs0; // centre de la k-ième barre future (k >= 1)
+    const barShift = tfMin >= 60 ? 60 : 0; // les barres 1h / 4h sont datées hh:01 (comme TradingView), les barres 1 et 5 min hh:mm
+    const hourStep = is1D ? 0 : ([60, 300, 900, 1800, 3600, 7200, 10800, 14400, 21600, 43200].find((s) => s >= tfSec && s / tfSec * hs0 >= 80) || 0); // pas des étiquettes d'heure ; 0 = jours seulement
+    const ticks = [], wdays = [];
     candleEvHits[id] = [];
-    if (candleHistTf !== '1D' && candleEcoEv.length && id) { // news à fort impact (passé ET futur) : pastille drapeau (anneau = couleur de la devise) sur l'axe du temps + trait vertical gris très discret
-      const ccys = chartsPairCcys(id), groups = new Map(), R = 10;
+    if (!is1D && candleEcoEv.length && id) { // news à fort impact (passé ET futur) : pastille drapeau rond à anneau rouge sur l'axe du temps, sur UNE seule rangée comme TradingView, + trait vertical gris très discret
+      const ccys = chartsPairCcys(id), groups = new Map(), cy = H - BOT - R - 4;
       for (const e of candleEcoEv) {
-        const ri = ccys.indexOf(e.country);
-        if (ri < 0 || e._t + 60 < hist[0][0]) continue;
-        let g, x;
-        if (e._t + 60 <= tLast) {
-          let lo2 = 0, hi2 = hist.length - 1; // dernière barre dont l'heure <= heure de la news (barres datées hh:01)
-          while (lo2 < hi2) { const m = (lo2 + hi2 + 1) >> 1; if (hist[m][0] <= e._t + 60) lo2 = m; else hi2 = m - 1; }
+        if (ccys.indexOf(e.country) < 0 || e._t < hist[0][0]) continue;
+        let key, x;
+        if (e._t < tLast + tfSec) { // la pastille est posée sur la barre qui contient l'heure de la news (dernière barre dont l'heure d'ouverture <= heure de la news)
+          let lo2 = 0, hi2 = hist.length - 1;
+          while (lo2 < hi2) { const m = (lo2 + hi2 + 1) >> 1; if (hist[m][0] <= e._t) lo2 = m; else hi2 = m - 1; }
           const jg = Math.floor((hist.length - 1 - lo2) / sg);
-          x = edge - (jg + 0.5) * hs; g = ri + '|p|' + jg;
+          x = edge - (jg + 0.5) * hs; key = e.country + '|p|' + jg;
         } else {
-          x = fx(e._t); g = ri + '|f|' + Math.round(openSecs(tLast, e._t) / tfSec);
+          const k = Math.floor(openSecs(tLast, e._t) / tfSec);
+          x = fxBar(k); key = e.country + '|f|' + k;
         }
-        if (!groups.has(g)) groups.set(g, { ri, x, ccy: e.country, list: [] });
-        groups.get(g).list.push(e);
+        if (!groups.has(key)) groups.set(key, { x, ccy: e.country, list: [] });
+        groups.get(key).list.push(e);
       }
-      const lastX = {};
+      const seen = {};
       [...groups.values()].sort((a, b) => a.x - b.x).forEach((g) => {
-        const x = g.x, cy = H - BOT - R - 4 - g.ri * (2 * R + 3);
-        if (x < -R || x > W - AX + R || (lastX[g.ri] !== undefined && x - lastX[g.ri] < R * 1.8)) return;
-        lastX[g.ri] = x;
-        const col = ALERTE_CCY[g.ccy] || '#ef5350', fl = CURRENCY_FLAGS[g.ccy] || '';
+        const kx = Math.round(g.x), n = seen[kx] || 0; seen[kx] = n + 1;
+        const x = g.x + n * R * 1.1; // deux devises sur la même barre : pastilles côte à côte
+        if (x < -R || x > xMax + R) return;
         g.list.sort((a, b) => a._t - b._t);
-        hb += `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="0" y2="${(cy - R).toFixed(1)}" stroke="#8a8e99" stroke-opacity=".3" stroke-width=".6" stroke-dasharray="2 3"/>`;
-        evb += `<circle cx="${x.toFixed(1)}" cy="${cy}" r="${R}" fill="#14151a" stroke="${col}" stroke-width="2"/>` +
-          (fl ? `<image href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/${[...fl].map((c) => c.codePointAt(0).toString(16)).join('-')}.svg" x="${(x - R + 3).toFixed(1)}" y="${cy - R + 3}" width="${2 * R - 6}" height="${2 * R - 6}"/>` : '');
+        sepSvg += `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="0" y2="${(cy - R).toFixed(1)}" stroke="#232323" stroke-width="1" stroke-dasharray="5 6"/>`;
+        evb += `<circle cx="${x.toFixed(1)}" cy="${cy}" r="${R - 1}" fill="#000" stroke="#ef5350" stroke-width="2"/>` +
+          `<image href="https://hatscripts.github.io/circle-flags/flags/${CANDLE_FLAG[g.ccy] || 'un'}.svg" x="${(x - R + 4).toFixed(1)}" y="${cy - R + 4}" width="${2 * R - 8}" height="${2 * R - 8}"/>`;
         candleEvHits[id].push({ x, y: cy, r: R, list: g.list });
       });
     }
+    let sepX = -1e9;
     for (let j = jMin; j <= jMax; j++) { // j = rang du groupe (1 bougie par groupe quand le zoom est normal)
       const i0 = hist.length - 1 - j * sg, iLo = Math.max(0, i0 - sg + 1);
       let b = hist[i0];
@@ -2126,58 +2129,65 @@ function candleSvg(day, dly, view, id) {
       const x = edge - (j + 0.5) * hs, col = b[4] >= b[1] ? CANDLE_UP : CANDLE_DN;
       hb += `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${y(b[2]).toFixed(1)}" y2="${y(b[3]).toFixed(1)}" stroke="${col}" stroke-width="0.7"/>` +
         `<rect x="${(x - hw / 2).toFixed(1)}" y="${y(Math.max(b[1], b[4])).toFixed(1)}" width="${hw.toFixed(1)}" height="${Math.max(1, Math.abs(y(b[1]) - y(b[4]))).toFixed(1)}" fill="${col}"/>`;
-      const older = hist[iLo - 1]; // barre précédente : si elle est d'un autre jour (coupure 12:00 UTC-10), séparateur vertical
-      if (older && candleHistTf !== '1D' && Math.floor((b[0] - 79200) / 86400) !== Math.floor((older[0] - 79200) / 86400)) {
-        const xs = x + hs / 2;
-        if (Math.abs(xs - sepX) >= 5) { // trop dézoomé : on n'empile pas les traits ni les dates
-          hb += `<line x1="${xs.toFixed(1)}" x2="${xs.toFixed(1)}" y1="0" y2="${H}" stroke="#5a5e68" stroke-width="0.7" stroke-dasharray="2 3"/>`;
-          if (Math.abs(xs - sepLbl) >= 38) { hb += `<text x="${(xs + 3).toFixed(1)}" y="${TOP - 6}" style="fill:#7d818c;font-size:9px">${new Date((b[0] - 36000) * 1000).toISOString().slice(5, 10)}</text>`; sepLbl = xs; }
-          sepX = xs;
-        }
-      }
-      if (candleHistTf === '1D') {
+      const older = hist[iLo - 1]; // barre précédente
+      if (is1D) {
         if (j % kLbl === 0) hb += `<text x="${x.toFixed(1)}" y="${H - 3}" text-anchor="middle" class="pc-ax" style="font-size:9px">${new Date((b[0] - 36000) * 1000).toISOString().slice(2, 10)}</text>`;
-      } else { // axe façon TradingView : heure HH:MM ; au changement de jour (minuit UTC-10) le numéro du jour en gras ; au changement de mois le nom du mois
-        const dB = Math.floor((b[0] - 36000) / 86400), dO = older ? Math.floor((older[0] - 36000) / 86400) : dB;
-        if (older && dB !== dO) {
-          if (lblXs.every((lx) => Math.abs(lx - x) >= 22)) {
-            const dt = new Date((b[0] - 36000) * 1000), mo = new Date((older[0] - 36000) * 1000).getUTCMonth() !== dt.getUTCMonth();
-            hb += `<text x="${x.toFixed(1)}" y="${H - 3}" text-anchor="middle" class="pc-ax" style="font-size:10px;font-weight:700;fill:#d1d4dc">${mo ? CANDLE_MON[dt.getUTCMonth()] : dt.getUTCDate()}</text>`;
-            lblXs.push(x);
-          }
-        } else if (!dayOnly && j % kLbl === 0 && lblXs.every((lx) => Math.abs(lx - x) >= 34)) {
-          hb += `<text x="${x.toFixed(1)}" y="${H - 3}" text-anchor="middle" class="pc-ax" style="font-size:9px">${alerteTime(b[0])}</text>`;
-          lblXs.push(x);
-        }
+        continue;
+      }
+      if (!older) continue;
+      const dB = Math.floor((b[0] - 36000) / 86400), dO = Math.floor((older[0] - 36000) / 86400);
+      const sess = Math.floor((b[0] - 79200) / 86400) !== Math.floor((older[0] - 79200) / 86400); // 1re barre de la séance (12:01 UTC-10) : trait pointillé pile sur cette barre
+      if (sess && Math.abs(x - sepX) >= 20) { sepSvg += `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="0" y2="${H}" stroke="#4a4a4a" stroke-width="1" stroke-dasharray="1 2.75"/>`; sepX = x; }
+      if (dB !== dO) { // minuit UTC-10 : numéro du jour (gras), ou nom du mois au changement de mois ; le nom du jour est posé au même endroit
+        const dt = new Date((b[0] - 36000) * 1000), mo = new Date((older[0] - 36000) * 1000).getUTCMonth() !== dt.getUTCMonth();
+        ticks.push({ x, w: mo ? 4 : 3, t: mo ? CANDLE_MON[dt.getUTCMonth()] : dt.getUTCDate() });
+        if ((b[0] - 36000) % 86400 <= 60) wdays.push({ x, d: dt.getUTCDay() });
+      } else if (hourStep) {
+        if (sess) ticks.push({ x, w: 2, t: alerteTime(b[0]) }); // « 12:01 » : début de séance
+        else { const r = (b[0] - 36000) % hourStep; if (r === 0 || (r === 60 && !((older[0] - 36000) % hourStep === 0))) ticks.push({ x, w: 1, t: alerteTime(b[0]) }); }
       }
     }
-    if (candleHistTf !== '1D') { // axe du temps du FUTUR (à droite des POH) : même règles que l'historique, jours ouvrés seulement
-      const xMax = W - AX;
-      if (futStart < xMax + 60) {
-        for (let d = 0, tt = (Math.floor((tLast - 36000) / 86400) + 1) * 86400 + 36000; d < 400; d++, tt += 86400) { // minuits UTC-10 suivants
-          let to = tt;
-          if (closedAt(to)) to += 338400 - phase(to); // week-end : le numéro du jour va sur la réouverture du dimanche
-          if (to >= tt + 86400) continue;
-          const x = fx(to);
+    if (!is1D && futStart < xMax + 60) { // axe du temps du FUTUR (à droite des POH) : mêmes règles que l'historique, jours ouvrés seulement
+      const nBar = (t) => Math.round(openSecs(tLast, t + barShift) / tfSec);
+      for (let d = 0, tt = (Math.floor((tLast - 36000) / 86400) + 1) * 86400 + 36000; d < 400; d++, tt += 86400) { // minuits UTC-10 suivants
+        const ts = tt + 43200; // début de séance (12:00 UTC-10 = 22:00 UTC)
+        if (!closedAt(ts)) {
+          const ks = nBar(ts), xs = fxBar(ks);
+          if (xs <= xMax && xs >= 0 && ks >= 1) { sepSvg += `<line x1="${xs.toFixed(1)}" x2="${xs.toFixed(1)}" y1="0" y2="${H}" stroke="#4a4a4a" stroke-width="1" stroke-dasharray="1 2.75"/>`; if (hourStep) ticks.push({ x: xs, w: 2, t: alerteTime(ts + barShift) }); }
+        }
+        let to = tt;
+        if (closedAt(to)) to += 338400 - phase(to); // week-end : le numéro du jour va sur la réouverture du dimanche
+        if (to >= tt + 86400) continue;
+        const k = nBar(to), x = fxBar(k);
+        if (k < 1) continue;
+        if (x > xMax) break;
+        if (x < 0) continue;
+        const dt = new Date((tt - 36000) * 1000);
+        ticks.push({ x, w: dt.getUTCDate() === 1 ? 4 : 3, t: dt.getUTCDate() === 1 ? CANDLE_MON[dt.getUTCMonth()] : dt.getUTCDate() });
+        if (to === tt) wdays.push({ x, d: dt.getUTCDay() });
+      }
+      if (hourStep) {
+        for (let k = 0, t = (Math.floor((tLast - 36000) / hourStep) + 1) * hourStep + 36000; k < 4000; k++, t += hourStep) {
+          const r = (t - 36000) % 86400;
+          if (closedAt(t) || r === 0 || r === 43200) continue; // minuit et début de séance : déjà posés ci-dessus
+          const n = nBar(t), x = fxBar(n);
+          if (n < 1) continue;
           if (x > xMax) break;
-          if (x < 0 || !lblXs.every((lx) => Math.abs(lx - x) >= 22)) continue;
-          const dt = new Date((tt - 36000) * 1000);
-          hb += `<text x="${x.toFixed(1)}" y="${H - 3}" text-anchor="middle" class="pc-ax" style="font-size:10px;font-weight:700;fill:#d1d4dc">${dt.getUTCDate() === 1 ? CANDLE_MON[dt.getUTCMonth()] : dt.getUTCDate()}</text>`;
-          lblXs.push(x);
-        }
-        if (!dayOnly) {
-          const labelSec = [60, 300, 900, 1800, 3600, 7200, 10800, 14400, 21600, 43200].find((s) => s >= tfSec && s / tfSec * hs0 >= 70) || 43200;
-          for (let k = 0, t = (Math.floor((tLast - 36000) / labelSec) + 1) * labelSec + 36000; k < 4000; k++, t += labelSec) {
-            if (closedAt(t) || (t - 36000) % 86400 === 0) continue;
-            const x = fx(t);
-            if (x > xMax) break;
-            if (x < 0 || !lblXs.every((lx) => Math.abs(lx - x) >= 34)) continue;
-            hb += `<text x="${x.toFixed(1)}" y="${H - 3}" text-anchor="middle" class="pc-ax" style="font-size:9px">${alerteTime(t)}</text>`;
-            lblXs.push(x);
-          }
+          if (x >= 0) ticks.push({ x, w: 1, t: alerteTime(t + barShift) });
         }
       }
     }
+    if (ticks.length) { // étiquettes de l'axe : par priorité (mois > jour > début de séance > heure), sans jamais se chevaucher
+      const placed = [];
+      for (const tk of ticks.sort((a, b) => b.w - a.w || b.x - a.x)) {
+        if (placed.some((p) => Math.abs(p.x - tk.x) < (p.w >= 3 && tk.w >= 3 ? 24 : 40))) continue;
+        placed.push(tk);
+        hb += tk.w >= 3 ? `<text x="${tk.x.toFixed(1)}" y="${H - 3}" text-anchor="middle" class="pc-ax" style="font-size:10px;font-weight:700;fill:#d1d4dc">${tk.t}</text>`
+          : `<text x="${tk.x.toFixed(1)}" y="${H - 3}" text-anchor="middle" class="pc-ax" style="font-size:9px">${tk.t}</text>`;
+      }
+    }
+    const dayPx = hs0 * 1440 / (tfMin || 1440), names = dayPx >= 70 ? CANDLE_DAYS : dayPx >= 34 ? CANDLE_DAYS_S : null; // noms des jours : discrets, au-dessus des pastilles, abrégés puis masqués quand on dézoome
+    if (names && !is1D) for (const w of wdays) hb += `<text x="${w.x.toFixed(1)}" y="${H - BOT - 2 * R - 26}" text-anchor="middle" style="fill:#4a4a4a;font-size:11px;letter-spacing:1px;pointer-events:none">${names[w.d]}</text>`;
     const f = (candleF50 || {})[id];
     if (f) { // niveaux de la boîte 14H : Entry = bords, 50 % = bord ± R/2, TP = bord ± R (seulement s'ils sont dans l'échelle)
       const R = f.hi - f.lo;
@@ -2202,7 +2212,7 @@ function candleSvg(day, dly, view, id) {
   const tag = `<line x1="0" x2="${W - AX}" y1="${yl.toFixed(1)}" y2="${yl.toFixed(1)}" stroke="${lastCol}" stroke-width="0.7" stroke-dasharray="2 3"/>` +
     `<rect x="${W - AX + 1}" y="${(yl - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
     `<text x="${W - AX + 6}" y="${(yl + 4).toFixed(1)}" class="pc-ax" style="fill:${lastC >= last.c[0] ? '#fff' : '#000'}">${fmt(lastC)}</text>`;
-  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${grid}<g clip-path="url(#pcClip)">${hb}${fib}${pd}${body}${evb}</g>${tag}</svg>`;
+  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${grid}<g clip-path="url(#pcClip)">${sepSvg}${hb}${fib}${pd}${body}${evb}</g>${tag}</svg>`;
 }
 
 // Sweep de la bougie daily précédente (même règle qu'Arii SNIPER) : D0 dépasse le haut de D1 et clôture dessous, ou casse son bas et clôture dessus
@@ -2556,7 +2566,7 @@ document.getElementById('candleList').addEventListener('click', (e) => {
   const ch = e.target.closest('.cd-chart');
   if (!ch || candleHistTf === '0' || candleHistTf === '1D') return;
   const rc = ch.getBoundingClientRect(), px = e.clientX - rc.left, py = e.clientY - rc.top;
-  const hit = (candleEvHits[ch.dataset.pair] || []).find((h) => Math.hypot(h.x - px, h.y - py) <= h.r + 6);
+  const hit = (candleEvHits[ch.dataset.pair] || []).slice().reverse().find((h) => Math.hypot(h.x - px, h.y - py) <= h.r + 6); // la pastille du dessus d'abord
   if (hit) candleEvOpen(hit.list);
 });
 // Panneau du bas façon TradingView : toutes les news de la pastille (nom, date/heure UTC-10, Actual / Forecast / Previous)
