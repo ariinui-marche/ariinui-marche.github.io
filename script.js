@@ -2022,7 +2022,8 @@ function candleHistEnsure(id) { // charge (au plus toutes les 25 s) les bougies 
 
 // Dimensions réelles de la zone graphique (plein écran) : le SVG est dessiné à l'échelle 1:1, sans déformation
 function candleDims() {
-  return { W: Math.max(300, Math.round(window.innerWidth)), H: Math.max(300, Math.round(window.innerHeight) - 90) };
+  const rpp = rp.on ? document.getElementById('candleRp') : null; // replay : barres du haut et du bas masquées, le panneau de contrôle occupe le bas
+  return { W: Math.max(300, Math.round(window.innerWidth)), H: Math.max(300, Math.round(window.innerHeight) - (rpp && !rpp.hidden ? (rpp.offsetHeight || 112) : 90)) };
 }
 function candleNiceStep(rng, n) {
   const raw = rng / n, p = Math.pow(10, Math.floor(Math.log10(raw))), m = raw / p;
@@ -2828,12 +2829,18 @@ function candleRpUi() { // texte d'état + boutons
   rpEl('rpSel').classList.toggle('on', rp.pick);
   rpEl('rpClose').hidden = !rp.pos;
 }
+function candleRpMode(on) { // replay plein écran façon TradingView : plus de barre du haut (Fibo/Sweep/F+S), ni de barre du bas (périodes), ni d'échelle de prix à droite
+  const body = document.getElementById('candleBody');
+  if (body) body.classList.toggle('rp-mode', !!on);
+  CANDLE_G.AX = on ? 0 : 60;
+}
 function candleRpSync() { // le panneau n'apparaît que sur la paire en replay ; en changeant de paire, la lecture se met en pause
   const p = rpEl('candleRp');
   if (!p) return;
   const here = rp.on && candleCurId() === rp.id;
   if (rp.on && !here) candleRpPlay(false);
   p.hidden = !here;
+  candleRpMode(here);
   const b = rpEl('candleRpBtn');
   if (b) b.classList.toggle('on', rp.on);
   if (here) candleRpUi();
@@ -2844,6 +2851,7 @@ function candleRpExit() {
   rp.on = false; rp.pick = false; rp.pos = null; rp.done = []; rp.msg = ''; rp.view = null; rp.vkey = '';
   const p = rpEl('candleRp');
   if (p) p.hidden = true;
+  candleRpMode(false);
   const b = rpEl('candleRpBtn');
   if (b) b.classList.remove('on');
   if (id) candleRedraw(id, candleViewOf(id));
