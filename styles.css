@@ -1344,14 +1344,14 @@ body.cc-lock { overflow: hidden; }
 .rp-bar button:active { background: #1a1a1a; border-radius: 8px; }
 .rp-bar button.on { color: #2962ff; }
 .rp-bar button.txt { font-size: 19px; font-weight: 500; }
-.rp-tw { position: fixed; left: 12px; bottom: calc(76px + env(safe-area-inset-bottom)); display: flex; align-items: center; gap: 8px; padding: 8px; background: #1c1c1e; border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 0, 0, .5); }
+.rp-tw { position: fixed; left: 12px; bottom: calc(76px + env(safe-area-inset-bottom)); display: flex; align-items: center; gap: 5px; padding: 5px; background: #1c1c1e; border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 0, 0, .5); }
 .rp-tw[hidden] { display: none; }
 .rp-grip { color: #787b86; display: flex; align-items: center; touch-action: none; cursor: grab; padding: 0 2px; }
-.rp-tw button { height: 40px; border: 0; border-radius: 20px; font-size: 18px; font-weight: 700; color: #fff; padding: 0 20px; cursor: pointer; }
+.rp-tw button { height: 28px; border: 0; border-radius: 14px; font-size: 13px; font-weight: 700; color: #fff; padding: 0 12px; cursor: pointer; }
 .rp-tw .sell { background: #f23645; }
 .rp-tw .buy { background: #2962ff; }
-.rp-tw .qty { background: #2a2a2e; font-weight: 500; padding: 0 20px; min-width: 70px; }
-.rp-tw .flat { background: #2a2a2e; color: #787b86; font-weight: 500; font-size: 17px; }
+.rp-tw .qty { background: #2a2a2e; font-weight: 500; padding: 0 10px; min-width: 40px; }
+.rp-tw .flat { background: #2a2a2e; color: #787b86; font-weight: 500; font-size: 12px; }
 .rp-tw .flat:not(:disabled) { color: #fff; }
 .rp-menu { position: absolute; left: 8px; right: 8px; bottom: calc(66px + env(safe-area-inset-bottom)); max-height: 60vh; overflow: auto; background: #1c1c1e; border: 1px solid #2a2a2e; border-radius: 12px; padding: 6px; box-shadow: 0 -8px 30px rgba(0, 0, 0, .6); }
 .rp-menu[hidden] { display: none; }
