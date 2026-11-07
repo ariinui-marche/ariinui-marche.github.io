@@ -1309,3 +1309,20 @@ body.cc-lock { overflow: hidden; }
 .cc-bottom .cc-vreset { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 34px; height: 34px; padding: 0; display: flex; align-items: center; justify-content: center; background: #1a1a1a; color: #e5e5e5; border: 1px solid #333; border-radius: 8px; cursor: pointer; -webkit-tap-highlight-color: transparent; outline: none; }
 .cc-bottom .cc-vreset[hidden] { display: none; }
 .cc-bottom .cc-vreset:active { background: #26282d; }
+
+
+/* CANDLE : REPLAY (façon TradingView) */
+.cc-bottom .cc-rpbtn { position: absolute; right: 48px; top: 50%; transform: translateY(-50%); width: 34px; height: 34px; padding: 0; display: flex; align-items: center; justify-content: center; background: #1a1a1a; color: #e5e5e5; border: 1px solid #333; border-radius: 8px; cursor: pointer; }
+.cc-bottom .cc-rpbtn.on { color: #00a3e0; border-color: #00a3e0; }
+.rp { position: absolute; left: 0; right: 0; bottom: calc(44px + env(safe-area-inset-bottom)); z-index: 5; padding: 6px 6px 8px; background: rgba(11, 11, 11, .95); border-top: 1px solid #1d1f24; display: flex; flex-direction: column; gap: 6px; }
+.rp[hidden] { display: none; }
+.rp-msg { font-size: 12px; color: #9aa0a6; text-align: center; min-height: 16px; font-variant-numeric: tabular-nums; }
+.rp-row { display: flex; gap: 4px; }
+.rp-row button, .rp-row input { flex: 1 1 0; min-width: 0; height: 34px; padding: 0 2px; background: #1a1a1a; color: #e5e5e5; border: 1px solid #333; border-radius: 8px; font-size: 12px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; text-align: center; }
+.rp-row input { cursor: text; font-weight: 400; }
+.rp-row button.on { color: #00a3e0; border-color: #00a3e0; }
+.rp-row button[hidden] { display: none; }
+.rp-trade .buy { color: #2ebd85; border-color: #2ebd85; }
+.rp-trade .sell { color: #f6465d; border-color: #f6465d; }
+.rp-trade input { flex: 1.2 1 0; }
+.rp-date { position: absolute; left: 0; bottom: 0; width: 1px; height: 1px; opacity: 0; pointer-events: none; padding: 0; border: 0; }

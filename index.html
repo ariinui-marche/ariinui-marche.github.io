@@ -87,7 +87,28 @@
         <div class="cc-top"><div id="candleStrip" class="cc-strip"><div class="cc-grp"><button type="button" class="cc-chip" data-f="fibo">Fibo</button><button type="button" class="cc-drop" data-d="fibo" aria-label="Show Fibo pairs" aria-expanded="false">&#9662;</button></div><div class="cc-grp"><button type="button" class="cc-chip" data-f="sweep">Sweep</button><button type="button" class="cc-drop" data-d="sweep" aria-label="Show Sweep pairs" aria-expanded="false">&#9662;</button></div><div class="cc-grp"><button type="button" class="cc-chip" data-f="both" aria-label="Fibo and Sweep">F+S</button><button type="button" class="cc-drop" data-d="both" aria-label="Show Fibo and Sweep pairs" aria-expanded="false">&#9662;</button></div></div><button type="button" id="candleClose" aria-label="Close">&#10005;</button></div>
         <div id="candleNames" class="cc-names" hidden></div>
         <div id="candleList" class="pc-list cc-track"></div>
-        <div class="cc-nav cc-bottom"><div class="cc-hist"><button type="button" id="candleHistPrev" aria-label="Previous timeframe">&#8249;</button><b id="candleHistLbl">&#8212;</b><button type="button" id="candleHistNext" aria-label="Next timeframe">&#8250;</button></div><button type="button" id="candlePrev" aria-label="Previous">&#8249;</button><span id="candleCount"></span><button type="button" id="candleNext" aria-label="Next">&#8250;</button><button type="button" id="candleViewReset" class="cc-vreset" aria-label="Reset zoom and position" title="Reset view" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/><path d="M12 2.5v4M12 17.5v4M2.5 12h4M17.5 12h4"/></svg></button></div>
+        <div class="cc-nav cc-bottom"><div class="cc-hist"><button type="button" id="candleHistPrev" aria-label="Previous timeframe">&#8249;</button><b id="candleHistLbl">&#8212;</b><button type="button" id="candleHistNext" aria-label="Next timeframe">&#8250;</button></div><button type="button" id="candlePrev" aria-label="Previous">&#8249;</button><span id="candleCount"></span><button type="button" id="candleNext" aria-label="Next">&#8250;</button><button type="button" id="candleRpBtn" class="cc-rpbtn" aria-label="Replay" title="Replay"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 6 4 12l7 6zM20 6l-7 6 7 6z"/></svg></button><button type="button" id="candleViewReset" class="cc-vreset" aria-label="Reset zoom and position" title="Reset view" hidden><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/><path d="M12 2.5v4M12 17.5v4M2.5 12h4M17.5 12h4"/></svg></button></div>
+        <div id="candleRp" class="rp" hidden>
+          <div id="rpMsg" class="rp-msg"></div>
+          <div class="rp-row">
+            <button type="button" id="rpSel" title="Select bar">Bar</button>
+            <button type="button" id="rpDay" title="Jump to date">Date</button>
+            <button type="button" id="rpRand" title="Random bar">Rand</button>
+            <button type="button" id="rpBack" title="Step back"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M6 5h2v14H6zM9 12l10-7v14z"/></svg></button>
+            <button type="button" id="rpPlay" title="Play / pause"></button>
+            <button type="button" id="rpFwd" title="Step forward"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M16 5h2v14h-2zM15 12 5 5v14z"/></svg></button>
+            <button type="button" id="rpSpd" title="Speed">1x</button>
+            <button type="button" id="rpExit" title="Exit replay">&#10005;</button>
+          </div>
+          <div class="rp-row rp-trade">
+            <button type="button" id="rpBuy" class="buy">BUY</button>
+            <button type="button" id="rpSell" class="sell">SELL</button>
+            <input id="rpSl" type="number" inputmode="decimal" min="0" placeholder="SL pips" aria-label="Stop loss in pips">
+            <input id="rpTp" type="number" inputmode="decimal" min="0" placeholder="TP pips" aria-label="Take profit in pips">
+            <button type="button" id="rpClose" hidden>Close</button>
+          </div>
+          <input id="rpDate" type="date" class="rp-date" tabindex="-1" aria-hidden="true">
+        </div>
       </div>
     </section>
 
