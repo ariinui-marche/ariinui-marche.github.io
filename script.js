@@ -1963,7 +1963,9 @@ let candleDaily = null; // { PAIR: [[t,o,h,l,c], ...4 derniers jours D3..D0] }
 // Historique 1 min / 5 min à gauche des POH (flèches ‹ › dans l'en-tête) : '0' = POH seuls (vue habituelle), '1' / '5' = bougies 1 min / 5 min
 let candleHistTf = '0';
 try { candleHistTf = localStorage.getItem('candleHistTf') || '0'; } catch (e) { /* pas de stockage */ }
-if (!['0', '1', '5'].includes(candleHistTf)) candleHistTf = '0';
+const CANDLE_HIST_MODES = ['0', '1', '5', '60', '240', '1D'], CANDLE_HIST_LBL = { 0: '\u2014', 1: '1m', 5: '5m', 60: '1h', 240: '4h', '1D': '1D' };
+const CANDLE_HIST_N = { 1: 50, 5: 50, 60: 24, 240: 12, '1D': 8 }; // bougies récentes prises pour caler l'échelle de prix (1 jour environ)
+if (!CANDLE_HIST_MODES.includes(candleHistTf)) candleHistTf = '0';
 const candleHistData = {}; // 'PAIR|tf' -> { bars: [[t,o,h,l,c]...], at, busy }
 let candleF50 = {}; // { PAIR: { hi, lo, ... } } boîte 14H (niveaux Entry / 50 % / TP)
 function candleHistBars(id) {
@@ -2000,7 +2002,7 @@ function candleScale(dly, day, hist) {
   const base = poh.length ? poh : dd.map((b) => b.slice(1, 5));
   if (!base.length) return null;
   let hi = Math.max(...base.map((c) => c[1])), lo = Math.min(...base.map((c) => c[2]));
-  if (hist && hist.length) for (const b of hist.slice(-50)) { hi = Math.max(hi, b[2]); lo = Math.min(lo, b[3]); }
+  if (hist && hist.length) for (const b of hist.slice(-(CANDLE_HIST_N[candleHistTf] || 50))) { hi = Math.max(hi, b[2]); lo = Math.min(lo, b[3]); }
   const d0 = dd.length ? dd[dd.length - 1] : null;
   const minSpan = d0 ? (d0[2] - d0[3]) * 0.35 : 0; // évite un zoom extrême quand il n'y a encore qu'une ou deux bougies POH
   if (hi - lo < minSpan) { const mid = (hi + lo) / 2; hi = mid + minSpan / 2; lo = mid - minSpan / 2; }
@@ -2065,18 +2067,18 @@ function candleSvg(day, dly, view, id) {
   if (hist) {
     const hs = stepB / 3 * vw.xz, edge = LEFT + xOff - stepB * 0.5 * vw.xz, hw = Math.max(1, hs * 0.7);
     const jMin = Math.max(0, Math.floor((edge - (W - AX)) / hs) - 1), jMax = Math.min(hist.length - 1, Math.ceil((edge + hs) / hs));
-    const kLbl = Math.max(1, Math.round(70 / hs));
+    const kLbl = Math.max(1, Math.round((candleHistTf === '1D' ? 80 : 70) / hs));
     for (let j = jMin; j <= jMax; j++) {
       const b = hist[hist.length - 1 - j], x = edge - (j + 0.5) * hs, col = b[4] >= b[1] ? '#26a69a' : '#ef5350';
       hb += `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${y(b[2]).toFixed(1)}" y2="${y(b[3]).toFixed(1)}" stroke="${col}" stroke-width="0.7"/>` +
         `<rect x="${(x - hw / 2).toFixed(1)}" y="${y(Math.max(b[1], b[4])).toFixed(1)}" width="${hw.toFixed(1)}" height="${Math.max(1, Math.abs(y(b[1]) - y(b[4]))).toFixed(1)}" fill="${col}"/>`;
       const older = hist[hist.length - 2 - j]; // barre précédente : si elle est d'un autre jour (coupure 12:00 UTC-10), séparateur vertical
-      if (older && Math.floor((b[0] - 79200) / 86400) !== Math.floor((older[0] - 79200) / 86400)) {
+      if (older && candleHistTf !== '1D' && Math.floor((b[0] - 79200) / 86400) !== Math.floor((older[0] - 79200) / 86400)) {
         const xs = x + hs / 2;
         hb += `<line x1="${xs.toFixed(1)}" x2="${xs.toFixed(1)}" y1="0" y2="${H}" stroke="#5a5e68" stroke-width="0.7" stroke-dasharray="2 3"/>` +
           `<text x="${(xs + 3).toFixed(1)}" y="${TOP - 6}" style="fill:#7d818c;font-size:9px">${new Date((b[0] - 36000) * 1000).toISOString().slice(5, 10)}</text>`;
       }
-      if (j % kLbl === 0) hb += `<text x="${x.toFixed(1)}" y="${H - 3}" text-anchor="middle" class="pc-ax" style="font-size:9px">${alerteTime(b[0])}</text>`;
+      if (j % kLbl === 0) hb += `<text x="${x.toFixed(1)}" y="${H - 3}" text-anchor="middle" class="pc-ax" style="font-size:9px">${candleHistTf === '1D' ? new Date((b[0] - 36000) * 1000).toISOString().slice(2, 10) : alerteTime(b[0])}</text>`;
     }
     const f = (candleF50 || {})[id];
     if (f) { // niveaux de la boîte 14H : Entry = bords, 50 % = bord ± R/2, TP = bord ± R (seulement s'ils sont dans l'échelle)
@@ -2580,11 +2582,11 @@ document.getElementById('alerteToggle')?.addEventListener('click', () => { alert
 
 // Flèches ‹ › : POH seuls (—) / historique 1 min (1m) / historique 5 min (5m), sans molette
 (function candleHistCtl() {
-  const modes = ['0', '1', '5'], lbl = document.getElementById('candleHistLbl'), prev = document.getElementById('candleHistPrev'), next = document.getElementById('candleHistNext');
+  const modes = CANDLE_HIST_MODES, lbl = document.getElementById('candleHistLbl'), prev = document.getElementById('candleHistPrev'), next = document.getElementById('candleHistNext');
   if (!lbl || !prev || !next) return;
   const sync = () => {
     const i = modes.indexOf(candleHistTf);
-    lbl.textContent = candleHistTf === '0' ? '\u2014' : candleHistTf + 'm';
+    lbl.textContent = CANDLE_HIST_LBL[candleHistTf];
     prev.disabled = i <= 0; next.disabled = i >= modes.length - 1;
   };
   const go = (d) => {
