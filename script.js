@@ -2035,7 +2035,7 @@ function candleSvg(day, dly, view, id) {
   const stepP = candleNiceStep(rng, 8);
   let grid = '';
   for (let v = Math.ceil(lo / stepP) * stepP; v <= hi; v += stepP) {
-    grid += `<line x1="0" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="#1d1f24" stroke-width="1"/>` +
+    grid += `<line x1="0" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="#1d1f24" stroke-width="0.7"/>` +
       `<text x="${W - AX + 6}" y="${(y(v) + 4).toFixed(1)}" class="pc-ax">${fmt(v)}</text>`;
   }
   // avec l'historique : les POH occupent la moitié droite, l'historique la moitié gauche ; zoom/déplacement s'appliquent à l'ensemble
@@ -2051,14 +2051,14 @@ function candleSvg(day, dly, view, id) {
     const top = y(Math.max(o, c)), ht = Math.max(1, Math.abs(y(o) - y(c)));
     const vis = h >= lo && l <= hi; // la bougie touche la zone affichée
     return (vis ? `<text x="${cx.toFixed(1)}" y="${Math.min(H - 6, Math.max(14, y(h) - 6)).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:${col}">${x.lbl}</text>` : '') +
-      `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="1.3"/>` +
-      `<rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}" stroke-width="1.3"/>`;
+      `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="0.9"/>` +
+      `<rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}" stroke-width="0.9"/>`;
   }).join('');
   let fib = '';
   const fl = candleFibLevels(dly), d1i = cs.findIndex((x) => x.lbl === 'D1');
   if (fl && d1i >= 0) {
     const x0 = LEFT + xOff + step * (d1i + 0.5);
-    fib = fl.filter((f) => f.v >= lo && f.v <= hi).map((f) => `<line x1="${x0.toFixed(1)}" x2="${W - AX}" y1="${y(f.v).toFixed(1)}" y2="${y(f.v).toFixed(1)}" stroke="#f5b642" stroke-opacity="0.5" stroke-width="1" stroke-dasharray="1 4" stroke-linecap="round"/>` +
+    fib = fl.filter((f) => f.v >= lo && f.v <= hi).map((f) => `<line x1="${x0.toFixed(1)}" x2="${W - AX}" y1="${y(f.v).toFixed(1)}" y2="${y(f.v).toFixed(1)}" stroke="#f5b642" stroke-opacity="0.5" stroke-width="0.7" stroke-dasharray="1 4" stroke-linecap="round"/>` +
       `<text x="${W - AX - 4}" y="${(y(f.v) - 4).toFixed(1)}" text-anchor="end" style="fill:#f5b642;fill-opacity:.6;font-size:10px">${f.t}% · ${fmt(f.v)}</text>`).join('');
   }
   let hb = '';
@@ -2068,16 +2068,22 @@ function candleSvg(day, dly, view, id) {
     const kLbl = Math.max(1, Math.round(70 / hs));
     for (let j = jMin; j <= jMax; j++) {
       const b = hist[hist.length - 1 - j], x = edge - (j + 0.5) * hs, col = b[4] >= b[1] ? '#26a69a' : '#ef5350';
-      hb += `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${y(b[2]).toFixed(1)}" y2="${y(b[3]).toFixed(1)}" stroke="${col}"/>` +
+      hb += `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${y(b[2]).toFixed(1)}" y2="${y(b[3]).toFixed(1)}" stroke="${col}" stroke-width="0.7"/>` +
         `<rect x="${(x - hw / 2).toFixed(1)}" y="${y(Math.max(b[1], b[4])).toFixed(1)}" width="${hw.toFixed(1)}" height="${Math.max(1, Math.abs(y(b[1]) - y(b[4]))).toFixed(1)}" fill="${col}"/>`;
+      const older = hist[hist.length - 2 - j]; // barre précédente : si elle est d'un autre jour (coupure 12:00 UTC-10), séparateur vertical
+      if (older && Math.floor((b[0] - 79200) / 86400) !== Math.floor((older[0] - 79200) / 86400)) {
+        const xs = x + hs / 2;
+        hb += `<line x1="${xs.toFixed(1)}" x2="${xs.toFixed(1)}" y1="0" y2="${H}" stroke="#5a5e68" stroke-width="0.7" stroke-dasharray="2 3"/>` +
+          `<text x="${(xs + 3).toFixed(1)}" y="${TOP - 6}" style="fill:#7d818c;font-size:9px">${new Date((b[0] - 36000) * 1000).toISOString().slice(5, 10)}</text>`;
+      }
       if (j % kLbl === 0) hb += `<text x="${x.toFixed(1)}" y="${H - 3}" text-anchor="middle" class="pc-ax" style="font-size:9px">${alerteTime(b[0])}</text>`;
     }
     const f = (candleF50 || {})[id];
     if (f) { // niveaux de la boîte 14H : Entry = bords, 50 % = bord ± R/2, TP = bord ± R (seulement s'ils sont dans l'échelle)
       const R = f.hi - f.lo;
-      hb += [[f.hi + R, 'TP 14H', '#5cc8ff'], [f.hi + R / 2, 'H50% 14H', '#ff9f43'], [f.hi, 'Entry 14H', '#5cc8ff'], [f.lo, 'Entry 14H', '#5cc8ff'], [f.lo - R / 2, 'L50% 14H', '#ff9f43'], [f.lo - R, 'TP 14H', '#5cc8ff']]
-        .filter(([v]) => v >= lo && v <= hi)
-        .map(([v, t, c]) => `<line x1="0" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="${c}" stroke-opacity=".7" stroke-dasharray="1 4" stroke-linecap="round"/>` +
+      hb += [[f.hi + R, 'TP 14H', '#5cc8ff'], [f.hi + R / 2, 'H50% 14H', '#ff9f43', !!f.up], [f.hi, 'Entry 14H', '#5cc8ff'], [f.lo, 'Entry 14H', '#5cc8ff'], [f.lo - R / 2, 'L50% 14H', '#ff9f43', !!f.dn], [f.lo - R, 'TP 14H', '#5cc8ff']]
+        .filter(([v, , , touched]) => v >= lo && v <= hi && touched !== false)
+        .map(([v, t, c]) => `<line x1="0" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="${c}" stroke-opacity=".7" stroke-width="0.7" stroke-dasharray="1 4" stroke-linecap="round"/>` +
           `<text x="4" y="${(y(v) - 3).toFixed(1)}" style="fill:${c};font-size:10px">${t}</text>`).join('');
     }
   }
@@ -2089,11 +2095,11 @@ function candleSvg(day, dly, view, id) {
     const xs = LEFT + xOff + step * (pdD0i >= 0 ? pdD0i : cs.findIndex((x) => x.lbl === 'D1') + 1);
     for (const [v, t] of [[pdD1.c[1], 'PDH'], [pdD1.c[2], 'PDL']]) {
       if (v < lo || v > hi) continue;
-      pd += `<line x1="${xs.toFixed(1)}" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="#F5B700" stroke-opacity="0.85" stroke-width="1" stroke-dasharray="1 3"/>` +
+      pd += `<line x1="${xs.toFixed(1)}" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="#F5B700" stroke-opacity="0.85" stroke-width="0.7" stroke-dasharray="1 3"/>` +
         `<text x="${W - AX - 4}" y="${(y(v) - 4).toFixed(1)}" text-anchor="end" style="fill:#F5B700;font-size:10px">${t}</text>`;
     }
   }
-  const tag = `<line x1="0" x2="${W - AX}" y1="${yl.toFixed(1)}" y2="${yl.toFixed(1)}" stroke="${lastCol}" stroke-width="1" stroke-dasharray="2 3"/>` +
+  const tag = `<line x1="0" x2="${W - AX}" y1="${yl.toFixed(1)}" y2="${yl.toFixed(1)}" stroke="${lastCol}" stroke-width="0.7" stroke-dasharray="2 3"/>` +
     `<rect x="${W - AX + 1}" y="${(yl - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
     `<text x="${W - AX + 6}" y="${(yl + 4).toFixed(1)}" class="pc-ax" style="fill:#fff">${fmt(lastC)}</text>`;
   return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${grid}<g clip-path="url(#pcClip)">${hb}${fib}${pd}${body}</g>${tag}</svg>`;

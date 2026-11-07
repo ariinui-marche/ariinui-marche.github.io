@@ -1279,12 +1279,12 @@ body.cc-lock { overflow: hidden; }
 .al-ntfy-topic { margin-top: 6px; font-size: 11px; color: #6b7280; word-break: break-all; }
 
 /* Historique 1 min / 5 min dans CANDLE : flèches ‹ — › */
-.cc-top .cc-hist { margin-left: -2px; }
 .cc-hist { display: flex; align-items: center; gap: 0; flex: 0 0 auto; color: #e5e5e5; font-size: 12px; }
-.cc-hist b { min-width: 18px; font-size: 11px; text-align: center; font-weight: 700; }
-.cc-hist button { width: 14px; height: 32px; background: #1a1a1a; color: #e5e5e5; border: 1px solid #333; border-radius: 5px; font-size: 15px; line-height: 1; cursor: pointer; padding: 0; }
+.cc-hist b { min-width: 24px; font-size: 12px; text-align: center; font-weight: 700; }
+.cc-hist button { width: 28px; height: 32px; background: #1a1a1a; color: #e5e5e5; border: 1px solid #333; border-radius: 5px; font-size: 15px; line-height: 1; cursor: pointer; padding: 0; }
 .cc-hist button:disabled { opacity: .3; cursor: default; }
 
-.cc-top .cc-hist { margin-left: -4px; }
-.cc-top #candleClose { flex: 0 0 30px; }
-.cc-top { gap: 2px; padding-right: 4px; }
+
+.cc-bottom { position: relative; }
+.cc-bottom .cc-hist { position: absolute; left: 8px; top: 50%; transform: translateY(-50%); }
+.cc-bottom .cc-hist button { width: 24px; height: 34px; border-radius: 8px; font-size: 18px; }
