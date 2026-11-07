@@ -1326,3 +1326,18 @@ body.cc-lock { overflow: hidden; }
 .rp-trade .sell { color: #f6465d; border-color: #f6465d; }
 .rp-trade input { flex: 1.2 1 0; }
 .rp-date { position: absolute; left: 0; bottom: 0; width: 1px; height: 1px; opacity: 0; pointer-events: none; padding: 0; border: 0; }
+
+
+/* CANDLE : fiche des alertes de prix (appui long sur le graphique) */
+#candleAlSheet { position: absolute; inset: 0; z-index: 70; }
+#candleAlSheet .ce-scrim { position: absolute; inset: 0; background: rgba(0, 0, 0, .55); }
+.ca-sheet { position: absolute; left: 0; right: 0; bottom: 0; background: #1b1c20; border-radius: 14px 14px 0 0; box-shadow: 0 -8px 30px rgba(0, 0, 0, .6); padding: 18px 20px calc(18px + env(safe-area-inset-bottom)); }
+.ca-t { font-size: 19px; font-weight: 700; color: #d1d4dc; margin-bottom: 6px; }
+.ca-d { font-size: 14px; color: #9aa0a6; margin-bottom: 14px; }
+.ca-px { width: 100%; box-sizing: border-box; height: 46px; padding: 0 12px; background: #0b0b0b; color: #fff; border: 1px solid #333; border-radius: 8px; font-size: 20px; font-variant-numeric: tabular-nums; margin-bottom: 14px; }
+.ca-err { color: #f6465d; font-size: 13px; margin-bottom: 10px; }
+.ca-err[hidden] { display: none; }
+.ca-b { display: flex; gap: 10px; }
+.ca-b button { flex: 1; height: 46px; border-radius: 10px; border: 1px solid #333; background: #26282d; color: #e5e5e5; font-size: 16px; font-weight: 600; cursor: pointer; }
+.ca-b .ok { background: #2f7bff; border-color: #2f7bff; color: #fff; }
+.ca-b button:disabled { opacity: .5; }

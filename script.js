@@ -1977,6 +1977,8 @@ let candleF50 = {}; // { PAIR: { hi, lo, ... } } boîte 14H (niveaux Entry / 50 
 const rp = { on: false, id: null, t: 0, pick: false, playing: false, timer: 0, spd: 2, view: null, vkey: '', pos: null, done: [], msg: '' };
 const RP_SPEEDS = [[100, '10x'], [300, '3x'], [1000, '1x'], [3000, '0.3x'], [10000, '0.1x']]; // délai entre 2 bougies
 try { const s = parseInt(localStorage.getItem('candleRpSpd'), 10); if (s >= 0 && s < RP_SPEEDS.length) rp.spd = s; } catch (e) { /* pas de stockage */ }
+let candleAl = [], candleAlAt = 0; // alertes de prix en attente (serveur) : { id, pair, price, dir, created }
+const candleAlHits = {};
 function candleRpCount(full) { // nombre de barres dont l'ouverture <= rp.t (borne haute par dichotomie)
   let a = 0, b = full.length;
   while (a < b) { const m = (a + b) >> 1; if (full[m][0] <= rp.t) a = m + 1; else b = m; }
@@ -2231,7 +2233,7 @@ function candleSvg(day, dly, view, id) {
   const tag = `<line x1="0" x2="${W - AX}" y1="${yl.toFixed(1)}" y2="${yl.toFixed(1)}" stroke="${lastCol}" stroke-width="0.7" stroke-dasharray="2 3"/>` +
     `<rect x="${W - AX + 1}" y="${(yl - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
     `<text x="${W - AX + 6}" y="${(yl + 4).toFixed(1)}" class="pc-ax" style="fill:${lastC >= last.c[0] ? '#fff' : '#000'}">${fmt(lastC)}</text>`;
-  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${grid}<g clip-path="url(#pcClip)">${sepSvg}${hb}${fib}${pd}${body}${evb}${RP ? candleRpOverlay(y, W - AX, fmt, lo, hi, lastC) : ''}</g>${tag}</svg>`;
+  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${grid}<g clip-path="url(#pcClip)">${sepSvg}${hb}${fib}${pd}${body}${evb}${RP ? candleRpOverlay(y, W - AX, fmt, lo, hi, lastC) : candleAlSvg(id, y, W - AX, lo, hi, fmt)}</g>${tag}</svg>`;
 }
 
 // Sweep de la bougie daily précédente (même règle qu'Arii SNIPER) : D0 dépasse le haut de D1 et clôture dessous, ou casse son bas et clôture dessus
@@ -2572,6 +2574,7 @@ async function candleAutoRefresh() {
     candleMerge(j);
     try { localStorage.setItem(CANDLE_LS, JSON.stringify({ pairs: candlePoh, daily: candleDaily })); } catch (e) { /* quota */ }
     candleRefreshInPlace();
+    if (Date.now() - candleAlAt > 120000) candleAlFetch(); // alertes de prix : relues toutes les 2 min (celles touchées disparaissent)
   } catch (e) { /* on réessaiera au prochain tour */ }
   candleAutoBusy = false;
 }
@@ -2583,7 +2586,7 @@ document.getElementById('candleToggle')?.addEventListener('click', (e) => {
   document.body.classList.toggle('cc-lock', !expanded);
   e.currentTarget.setAttribute('aria-expanded', String(!expanded));
   document.getElementById('candleBody').classList.toggle('collapsed', expanded);
-  if (!expanded) candleLoad();
+  if (!expanded) { candleLoad(); candleAlFetch(); }
 });
 
 document.getElementById('candleViewReset')?.addEventListener('click', () => {
@@ -2958,4 +2961,109 @@ function candleRpOpen(side) { // achat / vente au prix de la dernière barre
   }, true);
   document.addEventListener('visibilitychange', () => { if (document.hidden) candleRpPlay(false); });
   ['candleClose', 'candleToggle'].forEach((i) => rpEl(i)?.addEventListener('click', () => { if (rp.on) candleRpExit(); }));
+})();
+
+// ===== LIGNES D'ALERTE DE PRIX sur CANDLE : appui long sur le graphique = créer, toucher l'étiquette bleue = supprimer ; surveillées par le serveur (api/alerte), notification téléphone =====
+function candleAlSvg(id, y, xr, lo, hi, fmt) { // lignes bleues pointillées + étiquette (sens et prix) ; zones cliquables gardées pour la suppression
+  candleAlHits[id] = [];
+  if (!id) return '';
+  let s = '';
+  for (const a of candleAl) {
+    if (a.pair !== id || a.price < lo || a.price > hi) continue;
+    const yy = y(a.price), w = 118, x0 = xr - w - 6;
+    s += `<line x1="0" x2="${xr}" y1="${yy.toFixed(1)}" y2="${yy.toFixed(1)}" stroke="#2f7bff" stroke-width="1" stroke-dasharray="6 4"/>` +
+      `<rect x="${x0}" y="${(yy - 10).toFixed(1)}" width="${w}" height="20" rx="4" fill="#2f7bff"/>` +
+      `<text x="${x0 + 8}" y="${(yy + 4).toFixed(1)}" style="fill:#fff;font-size:11px;font-weight:700">${a.dir === 'above' ? '▲' : '▼'} ${fmt(a.price)}  ✕</text>`;
+    candleAlHits[id].push({ x: x0, y: yy - 10, w, h: 20, aid: a.id });
+  }
+  return s;
+}
+function candlePriceAt(id, yPx) { // ordonnée (pixels du graphique) -> prix
+  const g = candleGeo(id), v = candleViewOf(id), rngV = g.baseRng / v.yz, lo = g.cenB + v.yp * g.baseRng - rngV / 2;
+  return lo + (1 - (yPx - CANDLE_G.TOP) / g.plotH) * rngV;
+}
+function candleLastPx(id) { // dernier prix connu de la paire
+  const h = candleHistData[id + '|' + candleHistTf];
+  if (h && h.bars.length) return h.bars[h.bars.length - 1][4];
+  const day = candleDays[id];
+  if (!day) return null;
+  for (let i = CANDLE_SLOTS.length - 1; i >= 0; i--) { const c = day.c[CANDLE_SLOTS[i][0]]; if (c) return c[3]; }
+  return null;
+}
+async function candleAlFetch() {
+  candleAlAt = Date.now();
+  try {
+    const r = await fetch(`${ALERTE_API}/alerte?lines=1`, { cache: 'no-store', signal: AbortSignal.timeout(10000) });
+    const j = r.ok ? await r.json() : null;
+    if (j && Array.isArray(j.lines)) { candleAl = j.lines; candleAlRedraw(); }
+  } catch (e) { /* on garde la liste actuelle */ }
+}
+function candleAlRedraw() { const id = candleCurId(); if (id && !(rp.on && rp.id === id)) candleRedraw(id, candleViewOf(id)); }
+async function candleAlPost(body) {
+  const r = await fetch(`${ALERTE_API}/alerte`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), signal: AbortSignal.timeout(15000) });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(j.error || 'Server error');
+  if (Array.isArray(j.lines)) candleAl = j.lines;
+  candleAlAt = Date.now();
+  candleAlRedraw();
+}
+function candleAlClose() { document.getElementById('candleAlSheet')?.remove(); }
+function candleAlSheet(title, sub, price, okLabel, onOk) { // petite fiche en bas : prix modifiable + Annuler / OK
+  candleAlClose();
+  const body = document.getElementById('candleBody');
+  if (!body) return;
+  const wrap = document.createElement('div');
+  wrap.id = 'candleAlSheet';
+  wrap.innerHTML = `<div class="ce-scrim"></div><div class="ca-sheet" role="dialog"><div class="ca-t"></div><div class="ca-d"></div>${price === null ? '' : '<input class="ca-px" type="number" step="any" inputmode="decimal">'}<div class="ca-err" hidden></div><div class="ca-b"><button type="button" class="no">Cancel</button><button type="button" class="ok"></button></div></div>`;
+  wrap.querySelector('.ca-t').textContent = title;
+  wrap.querySelector('.ca-d').textContent = sub;
+  const inp = wrap.querySelector('.ca-px'), ok = wrap.querySelector('.ok'), err = wrap.querySelector('.ca-err');
+  if (inp) inp.value = price;
+  ok.textContent = okLabel;
+  body.appendChild(wrap);
+  wrap.querySelector('.ce-scrim').addEventListener('click', candleAlClose);
+  wrap.querySelector('.no').addEventListener('click', candleAlClose);
+  ok.addEventListener('click', async () => {
+    ok.disabled = true;
+    try { await onOk(inp ? parseFloat(inp.value) : null); candleAlClose(); } catch (e) { err.textContent = e.message || 'Error'; err.hidden = false; ok.disabled = false; }
+  });
+}
+function candleAlCreate(id, price) {
+  const label = (CORR_ALL_PAIRS.find((p) => p.id === id) || { label: id }).label, dec = price >= 1000 ? 2 : price >= 100 ? 3 : 5;
+  candleAlSheet(`Price alert · ${label}`, 'You will be notified (sound) when the price touches this level.', +price.toFixed(dec), 'Create alert', async (px) => {
+    if (!(px > 0)) throw new Error('Enter a valid price');
+    const last = candleLastPx(id);
+    await candleAlPost({ line: { pair: id, price: px, dir: last === null || px >= last ? 'above' : 'below' } });
+  });
+}
+(function candleAlInit() {
+  const list = document.getElementById('candleList');
+  if (!list) return;
+  let lp = null;
+  const cancel = () => { if (lp) { clearTimeout(lp.timer); lp = null; } };
+  list.addEventListener('pointerdown', (e) => {
+    cancel();
+    const ch = e.target.closest('.cd-chart');
+    if (!ch || (rp.on && rp.id === ch.dataset.pair) || (e.pointerType === 'mouse' && e.button !== 0) || cg.pts.size > 1) return;
+    const rc = ch.getBoundingClientRect(), id = ch.dataset.pair, x0 = e.clientX, y0 = e.clientY;
+    lp = { x: x0, y: y0, timer: setTimeout(() => { // appui long immobile : création d'une alerte au prix touché
+      lp = null;
+      if (cg.pts.size !== 1 || Math.hypot(cg.pts.values().next().value.x - x0, cg.pts.values().next().value.y - y0) > 10) return;
+      cg.swallow = Date.now() + 900;
+      if (navigator.vibrate) { try { navigator.vibrate(20); } catch (err) { /* ignoré */ } }
+      candleAlCreate(id, candlePriceAt(id, y0 - rc.top));
+    }, 520) };
+  });
+  list.addEventListener('pointermove', (e) => { if (lp && Math.hypot(e.clientX - lp.x, e.clientY - lp.y) > 10) cancel(); });
+  list.addEventListener('pointerup', cancel);
+  list.addEventListener('pointercancel', cancel);
+  list.addEventListener('click', (e) => { // toucher l'étiquette bleue = supprimer l'alerte
+    if (Date.now() < cg.swallow) return;
+    const ch = e.target.closest('.cd-chart');
+    if (!ch || (rp.on && rp.id === ch.dataset.pair)) return;
+    const rc = ch.getBoundingClientRect(), px = e.clientX - rc.left, py = e.clientY - rc.top;
+    const hit = (candleAlHits[ch.dataset.pair] || []).find((h) => px >= h.x - 6 && px <= h.x + h.w + 6 && py >= h.y - 6 && py <= h.y + h.h + 6);
+    const a = hit && candleAl.find((x) => x.id === hit.aid);
+    if (a) candleAlSheet(`Alert · ${a.pair.slice(0, 3)}/${a.pair.slice(3)}`, `${a.dir === 'above' ? 'Rises to' : 'Falls to'} ${a.price}`, null, 'Delete alert', () => candleAlPost({ lineDelete: a.id }));
+  });
 })();
