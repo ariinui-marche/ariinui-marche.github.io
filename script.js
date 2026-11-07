@@ -2285,12 +2285,13 @@ function candleOnMove() {
     const rngV = g.baseRng / v.yz, lo = g.cenB + v.yp * g.baseRng - rngV / 2;
     return lo + (1 - (yPx - T) / g.plotH) * rngV;
   };
-  if (pts.length >= 2 && cg.start.length >= 2) { // pincement : horizontal = bougies, vertical = prix, le centre suit les doigts
+  const pinching = pts.length >= 2 && cg.start.length >= 2 && Math.hypot(cg.start[0].x - cg.start[1].x, cg.start[0].y - cg.start[1].y) >= 60; // 2 doigts réellement écartés (un contact parasite tout près du doigt n'est pas un pincement)
+  if (pinching) { // pincement : horizontal = bougies, vertical = prix, le centre suit les doigts
     cg.mode = 'pinch';
     const [a, b] = pts, [a0, b0] = cg.start;
     const cx0 = (a0.x + b0.x) / 2 - r.left, cy0 = (a0.y + b0.y) / 2 - r.top, cx = (a.x + b.x) / 2 - r.left, cy = (a.y + b.y) / 2 - r.top;
-    const sx = Math.max(Math.abs(a.x - b.x), 16) / Math.max(Math.abs(a0.x - b0.x), 16);
-    const sy = Math.max(Math.abs(a.y - b.y), 16) / Math.max(Math.abs(a0.y - b0.y), 16);
+    const sx = Math.max(Math.abs(a.x - b.x), 40) / Math.max(Math.abs(a0.x - b0.x), 40);
+    const sy = Math.max(Math.abs(a.y - b.y), 40) / Math.max(Math.abs(a0.y - b0.y), 40);
     const v = cg.cur, v0 = cg.v0;
     v.xz = candleClamp(v0.xz * sx, CANDLE_XZ[0], CANDLE_XZ[1]);
     v.xp = (cx - (cx0 - v0.xp * g.plotW) * (v.xz / v0.xz)) / g.plotW;
@@ -2298,7 +2299,7 @@ function candleOnMove() {
     const rng2 = g.baseRng / v.yz, lo2 = priceAt(v0, cy0) - (1 - (cy - T) / g.plotH) * rng2;
     v.yp = (lo2 + rng2 / 2 - g.cenB) / g.baseRng;
     cg.moved = true;
-  } else if (pts.length === 1 && cg.start.length === 1 && cg.mode !== 'done') {
+  } else if (pts.length >= 1 && cg.start.length >= 1 && !(pts.length >= 2 && pinching) && cg.mode !== 'done') {
     const dx = pts[0].x - cg.start[0].x, dy = pts[0].y - cg.start[0].y;
     if (!cg.mode) {
       if (Math.hypot(dx, dy) < 8) return;
