@@ -2258,8 +2258,12 @@ function candleViewIsDef(v) { return Math.abs(v.yz - 1) < 1e-3 && Math.abs(v.yp)
 function candleViewSave(id, v) {
   if (candleViewIsDef(v)) delete candleViews[id]; else candleViews[id] = v;
   try { localStorage.setItem(CANDLE_VIEW_LS, JSON.stringify(candleViews)); } catch (e) { /* quota */ }
-  const rb = document.querySelector(`.cd-reset[data-reset="${id}"]`);
-  if (rb) rb.hidden = candleViewIsDef(v);
+  candleResetUpdate();
+}
+// Bouton « recentrer » (barre du bas, à droite) : visible seulement quand la vue de la paire affichée n'est plus la vue d'origine
+function candleResetUpdate() {
+  const b = document.getElementById('candleViewReset'), id = typeof candleCurId === 'function' ? candleCurId() : null;
+  if (b) b.hidden = !id || candleViewIsDef(candleViewOf(id));
 }
 function candleRedraw(id, v) {
   const ch = document.querySelector(`.cd-chart[data-pair="${id}"]`);
@@ -2379,7 +2383,7 @@ function candleRender() {
     date = day.d;
     candleDays[p.id] = day;
     const cls = s.group === 0 ? 'cd-bull' : s.group === 1 ? 'cd-bear' : '';
-    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id], day)}</button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id], candleViewOf(p.id), p.id)}</button><button type="button" class="cd-reset" data-reset="${p.id}" aria-label="Reset zoom"${candleViewIsDef(candleViewOf(p.id)) ? ' hidden' : ''}>\u27f2</button></div>`;
+    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id], day)}</button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id], candleViewOf(p.id), p.id)}</button></div>`;
   }).join('');
   const ki = keepId ? [...candleSlides()].findIndex((r) => r.dataset.id === keepId) : -1;
   list.scrollLeft = (ki >= 0 ? ki : keep) * list.clientWidth;
@@ -2403,6 +2407,7 @@ function candleGo(i) {
 function candleCurId() { return candleSlides()[candleIndex()]?.dataset.id || null; }
 function candleNavUpdate() {
   candleHistEnsure(candleCurId());
+  candleResetUpdate();
   const n = candleSlides().length, i = Math.min(candleIndex(), Math.max(0, n - 1));
   const c = document.getElementById('candleCount');
   if (c) c.textContent = n ? `${i + 1} / ${n}` : '';
@@ -2560,9 +2565,11 @@ document.getElementById('candleToggle')?.addEventListener('click', (e) => {
   if (!expanded) candleLoad();
 });
 
+document.getElementById('candleViewReset')?.addEventListener('click', () => {
+  const id = candleCurId();
+  if (id) { candleRedraw(id, CANDLE_DEF); candleViewSave(id, Object.assign({}, CANDLE_DEF)); }
+});
 document.getElementById('candleList').addEventListener('click', (e) => {
-  const rs = e.target.closest('[data-reset]');
-  if (rs) { const id = rs.dataset.reset; candleRedraw(id, CANDLE_DEF); candleViewSave(id, Object.assign({}, CANDLE_DEF)); return; }
   if (Date.now() < cg.swallow) return; // clic issu d'un geste de zoom / déplacement
   const ch = e.target.closest('.cd-chart');
   if (!ch || candleHistTf === '0' || candleHistTf === '1D') return;

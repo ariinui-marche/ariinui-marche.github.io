@@ -1239,8 +1239,6 @@ body.cc-lock { overflow: hidden; }
 
 #candleBody:not(.collapsed) .cd-chart { touch-action: none; user-select: none; -webkit-user-select: none; }
 #candleBody:not(.collapsed) .cd-row { position: relative; }
-.cd-reset { position: absolute; top: 52px; left: 10px; z-index: 3; width: 36px; height: 36px; border-radius: 50%; background: #1a1c20; color: #e5e5e5; border: 1px solid #333; font-size: 18px; line-height: 1; cursor: pointer; opacity: .9; }
-.cd-reset[hidden] { display: none; }
 
 /* Mise en page compacte : Fibo / Sweep / ✕ en haut, ‹ n/N › en bas, nom de la paire sur le graphique */
 .cc-top { display: flex; align-items: center; gap: 6px; flex: 0 0 44px; box-sizing: border-box; padding-right: 8px; background: #0b0b0b; border-bottom: 1px solid #1d1f24; }
@@ -1248,7 +1246,6 @@ body.cc-lock { overflow: hidden; }
 .cc-top #candleClose { flex: 0 0 40px; height: 32px; background: #1a1a1a; color: #e5e5e5; border: 1px solid #333; border-radius: 8px; font-size: 18px; line-height: 1; cursor: pointer; padding: 0; }
 #candleBody:not(.collapsed) .cc-bottom { flex: 0 0 44px; box-sizing: content-box; padding: 0 0 env(safe-area-inset-bottom); border-bottom: 0; border-top: 1px solid #1d1f24; background: #0b0b0b; }
 #candleBody:not(.collapsed) .cd-head { position: absolute; top: 4px; left: 0; right: 0; width: auto; height: auto; padding: 4px 12px; pointer-events: none; z-index: 2; }
-#candleBody:not(.collapsed) .cd-reset { top: 50px; }
 
 /* 3 boutons Fibo / Sweep / F+S : textes compacts pour tenir sur une seule rangée, même sur petit écran */
 .cc-top .cc-strip { gap: 5px; padding: 6px 6px; }
@@ -1302,8 +1299,13 @@ body.cc-lock { overflow: hidden; }
 #candleEvSheet .ce-r b { font-weight: 400; }
 
 /* CANDLE : plus de clignotement au toucher d'un graphique (surbrillance de tap Android, contour de focus) */
-#candleBody .cd-chart, #candleBody .cd-head, #candleBody .cd-reset { -webkit-tap-highlight-color: transparent; outline: none; }
+#candleBody .cd-chart, #candleBody .cd-head { -webkit-tap-highlight-color: transparent; outline: none; }
 #candleBody .cd-chart:focus, #candleBody .cd-chart:active, #candleBody .cd-chart:focus-visible { outline: none; background: none; }
 #candleEvSheet .ce-r b.ce-pos { color: var(--green); }
 #candleEvSheet .ce-r b.ce-neg { color: var(--red); }
 #candleEvSheet .ce-r b.ce-neu { color: #ffffff; }
+
+/* CANDLE : bouton « recentrer » dans la barre du bas (ne couvre plus le graphique) */
+.cc-bottom .cc-vreset { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 34px; height: 34px; padding: 0; display: flex; align-items: center; justify-content: center; background: #1a1a1a; color: #e5e5e5; border: 1px solid #333; border-radius: 8px; cursor: pointer; -webkit-tap-highlight-color: transparent; outline: none; }
+.cc-bottom .cc-vreset[hidden] { display: none; }
+.cc-bottom .cc-vreset:active { background: #26282d; }
