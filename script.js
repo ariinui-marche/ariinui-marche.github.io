@@ -3012,13 +3012,13 @@ async function candleAlPost(body) {
   candleAlRedraw();
 }
 function candleAlClose() { document.getElementById('candleAlSheet')?.remove(); }
-function candleAlSheet(title, sub, price, okLabel, onOk) { // petite fiche en bas : prix modifiable + Annuler / OK
+function candleAlSheet(title, sub, price, okLabel, onOk, withExpiry) { // petite fiche en bas : prix modifiable + Annuler / OK
   candleAlClose();
   const body = document.getElementById('candleBody');
   if (!body) return;
   const wrap = document.createElement('div');
   wrap.id = 'candleAlSheet';
-  wrap.innerHTML = `<div class="ce-scrim"></div><div class="ca-sheet" role="dialog"><div class="ca-t"></div><div class="ca-d"></div>${price === null ? '' : '<input class="ca-px" type="number" step="any" inputmode="decimal">'}<div class="ca-err" hidden></div><div class="ca-b"><button type="button" class="no">Cancel</button><button type="button" class="ok"></button></div></div>`;
+  wrap.innerHTML = `<div class="ce-scrim"></div><div class="ca-sheet" role="dialog"><div class="ca-t"></div><div class="ca-d"></div>${price === null ? '' : '<input class="ca-px" type="number" step="any" inputmode="decimal">'}${withExpiry ? '<select class="ca-exp" aria-label="Expiration"><option value="0">Never expires</option><option value="86400">Expires in 1 day</option><option value="604800">Expires in 1 week</option><option value="2592000">Expires in 1 month</option></select>' : ''}<div class="ca-err" hidden></div><div class="ca-b"><button type="button" class="no">Cancel</button><button type="button" class="ok"></button></div></div>`;
   wrap.querySelector('.ca-t').textContent = title;
   wrap.querySelector('.ca-d').textContent = sub;
   const inp = wrap.querySelector('.ca-px'), ok = wrap.querySelector('.ok'), err = wrap.querySelector('.ca-err');
@@ -3029,16 +3029,16 @@ function candleAlSheet(title, sub, price, okLabel, onOk) { // petite fiche en ba
   wrap.querySelector('.no').addEventListener('click', candleAlClose);
   ok.addEventListener('click', async () => {
     ok.disabled = true;
-    try { await onOk(inp ? parseFloat(inp.value) : null); candleAlClose(); } catch (e) { err.textContent = e.message || 'Error'; err.hidden = false; ok.disabled = false; }
+    try { await onOk(inp ? parseFloat(inp.value) : null, wrap.querySelector('.ca-exp')?.value); candleAlClose(); } catch (e) { err.textContent = e.message || 'Error'; err.hidden = false; ok.disabled = false; }
   });
 }
 function candleAlCreate(id, price) {
   const label = (CORR_ALL_PAIRS.find((p) => p.id === id) || { label: id }).label, dec = price >= 1000 ? 2 : price >= 100 ? 3 : 5;
-  candleAlSheet(`Price alert · ${label}`, 'You will be notified (sound) when the price touches this level.', +price.toFixed(dec), 'Create alert', async (px) => {
+  candleAlSheet(`Price alert · ${label}`, 'You will be notified (sound) when the price touches this level.', +price.toFixed(dec), 'Create alert', async (px, exp) => {
     if (!(px > 0)) throw new Error('Enter a valid price');
     const last = candleLastPx(id);
-    await candleAlPost({ line: { pair: id, price: px, dir: last === null || px >= last ? 'above' : 'below' } });
-  });
+    await candleAlPost({ line: { pair: id, price: px, dir: last === null || px >= last ? 'above' : 'below', ttl: Number(exp) || 0 } });
+  }, true);
 }
 (function candleAlInit() {
   const list = document.getElementById('candleList');

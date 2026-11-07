@@ -1334,6 +1334,7 @@ body.cc-lock { overflow: hidden; }
 .ca-sheet { position: absolute; left: 0; right: 0; bottom: 0; background: #1b1c20; border-radius: 14px 14px 0 0; box-shadow: 0 -8px 30px rgba(0, 0, 0, .6); padding: 18px 20px calc(18px + env(safe-area-inset-bottom)); }
 .ca-t { font-size: 19px; font-weight: 700; color: #d1d4dc; margin-bottom: 6px; }
 .ca-d { font-size: 14px; color: #9aa0a6; margin-bottom: 14px; }
+.ca-exp { width: 100%; box-sizing: border-box; height: 42px; padding: 0 10px; background: #0b0b0b; color: #fff; border: 1px solid #333; border-radius: 8px; font-size: 15px; margin-bottom: 14px; }
 .ca-px { width: 100%; box-sizing: border-box; height: 46px; padding: 0 12px; background: #0b0b0b; color: #fff; border: 1px solid #333; border-radius: 8px; font-size: 20px; font-variant-numeric: tabular-nums; margin-bottom: 14px; }
 .ca-err { color: #f6465d; font-size: 13px; margin-bottom: 10px; }
 .ca-err[hidden] { display: none; }
