@@ -2067,15 +2067,20 @@ function candleSvg(day, dly, view, id) {
   }
   let hb = '';
   if (hist) {
-    const hs = stepB / 3 * vw.xz, edge = LEFT + xOff - stepB * 0.5 * vw.xz, hw = Math.max(1, hs * 0.7);
-    const jMin = Math.max(0, Math.floor((edge - (W - AX)) / hs) - 1), jMax = Math.min(hist.length - 1, Math.ceil((edge + hs) / hs));
+    const hs0 = stepB / 3 * vw.xz, edge = LEFT + xOff - stepB * 0.5 * vw.xz;
+    const sg = Math.max(1, Math.floor(1.2 / hs0)); // très dézoomé : bougies regroupées (comme TradingView), le graphique reste fluide quel que soit le zoom
+    const hs = hs0 * sg, hw = Math.max(1, hs * 0.7);
+    const jMin = Math.max(0, Math.floor((edge - (W - AX)) / hs) - 1), jMax = Math.min(Math.ceil(hist.length / sg) - 1, Math.ceil((edge + hs) / hs));
     const kLbl = Math.max(1, Math.round((candleHistTf === '1D' ? 80 : 70) / hs));
     let sepX = 1e9, sepLbl = 1e9;
-    for (let j = jMin; j <= jMax; j++) {
-      const b = hist[hist.length - 1 - j], x = edge - (j + 0.5) * hs, col = b[4] >= b[1] ? '#26a69a' : '#ef5350';
+    for (let j = jMin; j <= jMax; j++) { // j = rang du groupe (1 bougie par groupe quand le zoom est normal)
+      const i0 = hist.length - 1 - j * sg, iLo = Math.max(0, i0 - sg + 1);
+      let b = hist[i0];
+      if (sg > 1) { let gh = -Infinity, gl = Infinity; for (let q = iLo; q <= i0; q++) { if (hist[q][2] > gh) gh = hist[q][2]; if (hist[q][3] < gl) gl = hist[q][3]; } b = [hist[i0][0], hist[iLo][1], gh, gl, hist[i0][4]]; }
+      const x = edge - (j + 0.5) * hs, col = b[4] >= b[1] ? '#26a69a' : '#ef5350';
       hb += `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="${y(b[2]).toFixed(1)}" y2="${y(b[3]).toFixed(1)}" stroke="${col}" stroke-width="0.7"/>` +
         `<rect x="${(x - hw / 2).toFixed(1)}" y="${y(Math.max(b[1], b[4])).toFixed(1)}" width="${hw.toFixed(1)}" height="${Math.max(1, Math.abs(y(b[1]) - y(b[4]))).toFixed(1)}" fill="${col}"/>`;
-      const older = hist[hist.length - 2 - j]; // barre précédente : si elle est d'un autre jour (coupure 12:00 UTC-10), séparateur vertical
+      const older = hist[iLo - 1]; // barre précédente : si elle est d'un autre jour (coupure 12:00 UTC-10), séparateur vertical
       if (older && candleHistTf !== '1D' && Math.floor((b[0] - 79200) / 86400) !== Math.floor((older[0] - 79200) / 86400)) {
         const xs = x + hs / 2;
         if (Math.abs(xs - sepX) >= 5) { // trop dézoomé : on n'empile pas les traits ni les dates
@@ -2176,6 +2181,7 @@ function candleBeginGesture(rect) {
   cg.rect = rect;
 }
 const candleClamp = (v, a, b) => Math.min(b, Math.max(a, v));
+const CANDLE_XZ = [0.002, 400], CANDLE_YZ = [0.02, 500]; // bornes de zoom (bougies / prix) : pratiquement illimité, de tout l'historique à une seule bougie
 function candleOnMove() {
   const g = candleGeo(cg.id), r = cg.rect, T = CANDLE_G.TOP, pts = [...cg.pts.values()];
   const priceAt = (v, yPx) => {
@@ -2186,12 +2192,12 @@ function candleOnMove() {
     cg.mode = 'pinch';
     const [a, b] = pts, [a0, b0] = cg.start;
     const cx0 = (a0.x + b0.x) / 2 - r.left, cy0 = (a0.y + b0.y) / 2 - r.top, cx = (a.x + b.x) / 2 - r.left, cy = (a.y + b.y) / 2 - r.top;
-    const sx = Math.max(Math.abs(a.x - b.x), 40) / Math.max(Math.abs(a0.x - b0.x), 40);
-    const sy = Math.max(Math.abs(a.y - b.y), 40) / Math.max(Math.abs(a0.y - b0.y), 40);
+    const sx = Math.max(Math.abs(a.x - b.x), 16) / Math.max(Math.abs(a0.x - b0.x), 16);
+    const sy = Math.max(Math.abs(a.y - b.y), 16) / Math.max(Math.abs(a0.y - b0.y), 16);
     const v = cg.cur, v0 = cg.v0;
-    v.xz = candleClamp(v0.xz * sx, 0.3, 10);
+    v.xz = candleClamp(v0.xz * sx, CANDLE_XZ[0], CANDLE_XZ[1]);
     v.xp = (cx - (cx0 - v0.xp * g.plotW) * (v.xz / v0.xz)) / g.plotW;
-    v.yz = candleClamp(v0.yz * sy, 0.15, 12);
+    v.yz = candleClamp(v0.yz * sy, CANDLE_YZ[0], CANDLE_YZ[1]);
     const rng2 = g.baseRng / v.yz, lo2 = priceAt(v0, cy0) - (1 - (cy - T) / g.plotH) * rng2;
     v.yp = (lo2 + rng2 / 2 - g.cenB) / g.baseRng;
     cg.moved = true;
@@ -2240,15 +2246,22 @@ function candleOnMove() {
   };
   list.addEventListener('pointerup', end);
   list.addEventListener('pointercancel', end);
-  list.addEventListener('wheel', (e) => { // souris : molette = zoom prix autour du curseur
+  list.addEventListener('wheel', (e) => { // souris : molette = zoom des bougies autour du curseur (comme TradingView) ; Maj + molette = zoom du prix
     const ch = e.target.closest('.cd-chart');
     if (!ch) return;
     e.preventDefault();
-    const id = ch.dataset.pair, g = candleGeo(id), v = candleViewOf(id), T = CANDLE_G.TOP, yPx = e.clientY - ch.getBoundingClientRect().top;
-    const rngV = g.baseRng / v.yz, lo = g.cenB + v.yp * g.baseRng - rngV / 2, p0 = lo + (1 - (yPx - T) / g.plotH) * rngV;
-    v.yz = candleClamp(v.yz * (e.deltaY < 0 ? 1.15 : 1 / 1.15), 0.15, 12);
-    const rng2 = g.baseRng / v.yz, lo2 = p0 - (1 - (yPx - T) / g.plotH) * rng2;
-    v.yp = (lo2 + rng2 / 2 - g.cenB) / g.baseRng;
+    const id = ch.dataset.pair, g = candleGeo(id), v = candleViewOf(id), T = CANDLE_G.TOP, rc = ch.getBoundingClientRect(), yPx = e.clientY - rc.top, xPx = e.clientX - rc.left;
+    const dl = e.deltaY || e.deltaX, f = dl < 0 ? 1.15 : 1 / 1.15; // (Maj + molette : certains navigateurs renvoient deltaX)
+    if (e.shiftKey) {
+      const rngV = g.baseRng / v.yz, lo = g.cenB + v.yp * g.baseRng - rngV / 2, p0 = lo + (1 - (yPx - T) / g.plotH) * rngV;
+      v.yz = candleClamp(v.yz * f, CANDLE_YZ[0], CANDLE_YZ[1]);
+      const rng2 = g.baseRng / v.yz, lo2 = p0 - (1 - (yPx - T) / g.plotH) * rng2;
+      v.yp = (lo2 + rng2 / 2 - g.cenB) / g.baseRng;
+    } else {
+      const z0 = v.xz;
+      v.xz = candleClamp(z0 * f, CANDLE_XZ[0], CANDLE_XZ[1]);
+      v.xp = (xPx - (xPx - v.xp * g.plotW) * (v.xz / z0)) / g.plotW;
+    }
     candleRedraw(id, v); candleViewSave(id, v);
   }, { passive: false });
 })();
