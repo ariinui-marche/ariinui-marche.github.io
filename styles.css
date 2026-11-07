@@ -1300,3 +1300,10 @@ body.cc-lock { overflow: hidden; }
 #candleEvSheet .ce-d { font-size: 17px; color: #b2b5be; margin-bottom: 20px; }
 #candleEvSheet .ce-r { display: grid; grid-template-columns: 50% 50%; font-size: 18px; color: #d1d4dc; line-height: 1.75; }
 #candleEvSheet .ce-r b { font-weight: 400; }
+
+/* CANDLE : plus de clignotement au toucher d'un graphique (surbrillance de tap Android, contour de focus) */
+#candleBody .cd-chart, #candleBody .cd-head, #candleBody .cd-reset { -webkit-tap-highlight-color: transparent; outline: none; }
+#candleBody .cd-chart:focus, #candleBody .cd-chart:active, #candleBody .cd-chart:focus-visible { outline: none; background: none; }
+#candleEvSheet .ce-r b.ce-pos { color: var(--green); }
+#candleEvSheet .ce-r b.ce-neg { color: var(--red); }
+#candleEvSheet .ce-r b.ce-neu { color: #ffffff; }

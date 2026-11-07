@@ -2078,22 +2078,38 @@ function candleSvg(day, dly, view, id) {
     const kLbl = Math.max(1, Math.round((candleHistTf === '1D' ? 80 : 70) / hs));
     let sepX = 1e9, sepLbl = 1e9;
     const lblXs = [], tfMin = candleHistTf === '1D' ? 1440 : +candleHistTf, dayOnly = candleHistTf !== '1D' && hs0 * (1440 / tfMin) < 70; // très dézoomé : seulement les numéros de jour
+    const tfSec = tfMin * 60, tLast = hist[hist.length - 1][0], noClose = /^(BTC|ETH)/.test(id);
+    const futStart = LEFT + xOff + step * cs.length; // le futur commence à droite du bloc des POH et se prolonge à l'infini
+    const phase = (t) => ((t % 604800) + 604800) % 604800;
+    const closedAt = (t) => !noClose && phase(t) >= 165600 && phase(t) < 338400; // marché fermé du vendredi 22:00 UTC au dimanche 22:00 UTC (pas de barres le week-end ; crypto : jamais)
+    const openSecs = (a, b) => { // secondes de marché ouvert entre a et b
+      let tot = b - a;
+      if (!noClose) for (let w = Math.floor((a - 338400) / 604800); w * 604800 + 165600 < b; w++) tot -= Math.max(0, Math.min(b, w * 604800 + 338400) - Math.max(a, w * 604800 + 165600));
+      return tot;
+    };
+    const fx = (t) => futStart + openSecs(tLast, t) / tfSec * hs0;
     candleEvHits[id] = [];
-    if (candleHistTf !== '1D' && candleEcoEv.length && id) { // news à fort impact : pastille drapeau (anneau = couleur de la devise) sur l'axe du temps + trait vertical gris très discret
-      const ccys = chartsPairCcys(id), tN = hist[hist.length - 1][0], groups = new Map(), R = 10;
+    if (candleHistTf !== '1D' && candleEcoEv.length && id) { // news à fort impact (passé ET futur) : pastille drapeau (anneau = couleur de la devise) sur l'axe du temps + trait vertical gris très discret
+      const ccys = chartsPairCcys(id), groups = new Map(), R = 10;
       for (const e of candleEcoEv) {
         const ri = ccys.indexOf(e.country);
-        if (ri < 0 || e._t + 60 < hist[0][0] || e._t + 60 > tN) continue;
-        let lo2 = 0, hi2 = hist.length - 1; // dernière barre dont l'heure <= heure de la news (barres datées hh:01)
-        while (lo2 < hi2) { const m = (lo2 + hi2 + 1) >> 1; if (hist[m][0] <= e._t + 60) lo2 = m; else hi2 = m - 1; }
-        const jg = Math.floor((hist.length - 1 - lo2) / sg), k = ri + '|' + jg;
-        if (!groups.has(k)) groups.set(k, { ri, jg, ccy: e.country, list: [] });
-        groups.get(k).list.push(e);
+        if (ri < 0 || e._t + 60 < hist[0][0]) continue;
+        let g, x;
+        if (e._t + 60 <= tLast) {
+          let lo2 = 0, hi2 = hist.length - 1; // dernière barre dont l'heure <= heure de la news (barres datées hh:01)
+          while (lo2 < hi2) { const m = (lo2 + hi2 + 1) >> 1; if (hist[m][0] <= e._t + 60) lo2 = m; else hi2 = m - 1; }
+          const jg = Math.floor((hist.length - 1 - lo2) / sg);
+          x = edge - (jg + 0.5) * hs; g = ri + '|p|' + jg;
+        } else {
+          x = fx(e._t); g = ri + '|f|' + Math.round(openSecs(tLast, e._t) / tfSec);
+        }
+        if (!groups.has(g)) groups.set(g, { ri, x, ccy: e.country, list: [] });
+        groups.get(g).list.push(e);
       }
       const lastX = {};
-      [...groups.values()].sort((a, b) => a.jg - b.jg).forEach((g) => {
-        const x = edge - (g.jg + 0.5) * hs, cy = H - BOT - R - 4 - g.ri * (2 * R + 3);
-        if (x < -R || x > W - AX + R || (lastX[g.ri] !== undefined && Math.abs(lastX[g.ri] - x) < R * 1.8)) return;
+      [...groups.values()].sort((a, b) => a.x - b.x).forEach((g) => {
+        const x = g.x, cy = H - BOT - R - 4 - g.ri * (2 * R + 3);
+        if (x < -R || x > W - AX + R || (lastX[g.ri] !== undefined && x - lastX[g.ri] < R * 1.8)) return;
         lastX[g.ri] = x;
         const col = ALERTE_CCY[g.ccy] || '#ef5350', fl = CURRENCY_FLAGS[g.ccy] || '';
         g.list.sort((a, b) => a._t - b._t);
@@ -2132,6 +2148,33 @@ function candleSvg(day, dly, view, id) {
         } else if (!dayOnly && j % kLbl === 0 && lblXs.every((lx) => Math.abs(lx - x) >= 34)) {
           hb += `<text x="${x.toFixed(1)}" y="${H - 3}" text-anchor="middle" class="pc-ax" style="font-size:9px">${alerteTime(b[0])}</text>`;
           lblXs.push(x);
+        }
+      }
+    }
+    if (candleHistTf !== '1D') { // axe du temps du FUTUR (à droite des POH) : même règles que l'historique, jours ouvrés seulement
+      const xMax = W - AX;
+      if (futStart < xMax + 60) {
+        for (let d = 0, tt = (Math.floor((tLast - 36000) / 86400) + 1) * 86400 + 36000; d < 400; d++, tt += 86400) { // minuits UTC-10 suivants
+          let to = tt;
+          if (closedAt(to)) to += 338400 - phase(to); // week-end : le numéro du jour va sur la réouverture du dimanche
+          if (to >= tt + 86400) continue;
+          const x = fx(to);
+          if (x > xMax) break;
+          if (x < 0 || !lblXs.every((lx) => Math.abs(lx - x) >= 22)) continue;
+          const dt = new Date((tt - 36000) * 1000);
+          hb += `<text x="${x.toFixed(1)}" y="${H - 3}" text-anchor="middle" class="pc-ax" style="font-size:10px;font-weight:700;fill:#d1d4dc">${dt.getUTCDate() === 1 ? CANDLE_MON[dt.getUTCMonth()] : dt.getUTCDate()}</text>`;
+          lblXs.push(x);
+        }
+        if (!dayOnly) {
+          const labelSec = [60, 300, 900, 1800, 3600, 7200, 10800, 14400, 21600, 43200].find((s) => s >= tfSec && s / tfSec * hs0 >= 70) || 43200;
+          for (let k = 0, t = (Math.floor((tLast - 36000) / labelSec) + 1) * labelSec + 36000; k < 4000; k++, t += labelSec) {
+            if (closedAt(t) || (t - 36000) % 86400 === 0) continue;
+            const x = fx(t);
+            if (x > xMax) break;
+            if (x < 0 || !lblXs.every((lx) => Math.abs(lx - x) >= 34)) continue;
+            hb += `<text x="${x.toFixed(1)}" y="${H - 3}" text-anchor="middle" class="pc-ax" style="font-size:9px">${alerteTime(t)}</text>`;
+            lblXs.push(x);
+          }
         }
       }
     }
@@ -2442,11 +2485,15 @@ async function candleLoad() {
       candlePoh = (await res.json()).pairs;
     } catch (e2) { candlePoh = null; }
   }
-  if (!candleEcoEv.length) {
-    try {
-      const r = await fetch('./data/eco-calendar.json', { cache: 'no-store' });
-      if (r.ok) candleEcoEv = ((await r.json()).events || []).filter((e) => e.impact === 'High' && e.date).map((e) => Object.assign({}, e, { _t: Date.parse(e.date) / 1000 })).filter((e) => e._t > 0);
-    } catch (e) { /* pastilles de news facultatives */ }
+  if (!candleEcoEv.length) { // news à fort impact : calendrier TradingView (historique depuis 2023 + futur) complété par celui du site (NZD, CHF, discours)
+    let tv = [], ff = [];
+    try { const r = await fetch('./data/tv-events.json', { cache: 'no-store' }); if (r.ok) tv = ((await r.json()).events || []).map((a) => ({ country: a[1], title: a[2], _t: a[0], actual: a[3], forecast: a[4], previous: a[5] })); } catch (e) { /* facultatif */ }
+    try { const r = await fetch('./data/eco-calendar.json', { cache: 'no-store' }); if (r.ok) ff = ((await r.json()).events || []).filter((e) => e.impact === 'High' && e.date).map((e) => Object.assign({}, e, { _t: Date.parse(e.date) / 1000 })).filter((e) => e._t > 0); } catch (e) { /* facultatif */ }
+    const isSpeech = (t) => /speak|speech|press conf|testif|hearing|minutes/i.test(t || '');
+    const byCcy = {};
+    for (const e of tv) (byCcy[e.country] = byCcy[e.country] || []).push(e._t);
+    const extra = ff.filter((e) => isSpeech(e.title) || !(byCcy[e.country] || []).some((t) => Math.abs(t - e._t) <= 600)); // une news déjà dans TradingView (même devise, ±10 min) n'est pas doublée
+    candleEcoEv = tv.concat(extra);
   }
   if (!chartsCandles) {
     try {
@@ -2522,7 +2569,7 @@ function candleEvOpen(list) {
   const rows = list.map((e0) => {
     const e = live(e0), d = new Date((e0._t - 36000) * 1000), v = (x) => (x === undefined || x === null || String(x).trim() === '' ? '—' : esc(x));
     return `<div class="ce-ev"><div class="ce-t">${esc(e0.title)}</div><div class="ce-d">${pad(d.getUTCDate())} ${CANDLE_MON[d.getUTCMonth()]} '${String(d.getUTCFullYear()).slice(2)} ${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}</div>` +
-      `<div class="ce-r"><span>Actual</span><b>${v(e.actual || e0.actual)}</b></div><div class="ce-r"><span>Forecast</span><b>${v(e.forecast || e0.forecast)}</b></div><div class="ce-r"><span>Previous</span><b>${v(e.previous || e0.previous)}</b></div></div>`;
+      `<div class="ce-r"><span>Actual</span><b class="${candleActCls(e.actual || e0.actual, e.forecast || e0.forecast)}">${v(e.actual || e0.actual)}</b></div><div class="ce-r"><span>Forecast</span><b>${v(e.forecast || e0.forecast)}</b></div><div class="ce-r"><span>Previous</span><b>${v(e.previous || e0.previous)}</b></div></div>`;
   }).join('');
   const wrap = document.createElement('div');
   wrap.id = 'candleEvSheet';
@@ -2534,6 +2581,17 @@ function candleEvOpen(list) {
   sheet.addEventListener('touchstart', (ev) => { y0 = sheet.scrollTop <= 0 ? ev.touches[0].clientY : null; dy = 0; }, { passive: true });
   sheet.addEventListener('touchmove', (ev) => { if (y0 === null) return; dy = ev.touches[0].clientY - y0; if (dy > 0) sheet.style.transform = `translateY(${dy}px)`; }, { passive: true });
   sheet.addEventListener('touchend', () => { if (dy > 70) candleEvClose(); else sheet.style.transform = ''; y0 = null; });
+}
+// Couleur du résultat (Actual) : exactement la règle du calendrier éco du site (actualVsForecast) : plus haut que la prévision = vert, plus bas = rouge, égal ou sans prévision = blanc neutre.
+function candleNum(v) { // « A$3.047B », « 10.632M », « 3.6% » -> nombre comparable
+  const m = String(v == null ? '' : v).replace(/,/g, '').match(/-?\d+(?:\.\d+)?\s*([KMBT])?/i);
+  if (!m) return null;
+  return parseFloat(m[0]) * ({ K: 1e3, M: 1e6, B: 1e9, T: 1e12 }[(m[1] || '').toUpperCase()] || 1);
+}
+function candleActCls(actual, forecast) {
+  const a = candleNum(actual), f = candleNum(forecast);
+  const r = a === null || f === null ? 'neutral' : actualVsForecast(String(a), String(f));
+  return r === 'pos' ? 'ce-pos' : r === 'neg' ? 'ce-neg' : 'ce-neu';
 }
 function candleEvClose() { document.getElementById('candleEvSheet')?.remove(); }
 

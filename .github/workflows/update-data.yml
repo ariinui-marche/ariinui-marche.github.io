@@ -28,6 +28,9 @@ jobs:
       - run: node scripts/fetch-tv-actuals.mjs || true
 
       # Actual Forex Smart Alert (même source que le relais local), visible sur mobile ; non bloquant
+      # Calendrier « fort impact » façon TradingView pour les pastilles de news de CANDLE (historique + futur) ; non bloquant
+      - run: node scripts/fetch-tv-events.mjs || true
+
       - run: node scripts/fetch-fsa-actuals.mjs || true
 
       - name: Commit and push if changed
