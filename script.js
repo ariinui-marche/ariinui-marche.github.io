@@ -1976,12 +1976,14 @@ function candleHistBars(id) {
 function candleHistEnsure(id) { // charge (au plus toutes les 25 s) les bougies de la paire affichée, puis redessine EN PLACE
   if (!id || candleHistTf === '0') return;
   const tf = candleHistTf, key = id + '|' + tf, h = candleHistData[key] || (candleHistData[key] = { bars: [], at: 0, busy: false });
-  if (h.busy || Date.now() - h.at < 25000) return;
+  if (h.busy || Date.now() - h.at < (tf === '1' || tf === '5' ? 25000 : 300000)) return; // 1h / 4h / 1D : fichiers plus lourds, rechargés au plus toutes les 5 min
   h.busy = true;
-  fetch(`https://ariinuiirgina.vercel.app/api/poh-candles?pair=${id}&tf=${tf}`, { cache: 'no-store', signal: AbortSignal.timeout(15000) })
+  // 1 min / 5 min : après le 1er chargement complet (historique), on ne redemande que les bougies récentes (dernière = en formation)
+  const since = (tf === '1' || tf === '5') && h.bars.length ? h.bars[h.bars.length - 1][0] : 0;
+  fetch(`https://ariinuiirgina.vercel.app/api/poh-candles?pair=${id}&tf=${tf}${since ? '&since=' + since : ''}`, { cache: 'no-store', signal: AbortSignal.timeout(20000) })
     .then((r) => (r.ok ? r.json() : null))
     .then((j) => {
-      if (j && j.bars && j.bars.length) h.bars = j.bars;
+      if (j && j.bars && j.bars.length) h.bars = since ? h.bars.filter((b) => b[0] < since).concat(j.bars) : j.bars;
       if (tf === candleHistTf && !(cg.mode)) candleRedraw(id, candleViewOf(id));
     })
     .catch(() => { /* on garde ce qui est affiché */ })
