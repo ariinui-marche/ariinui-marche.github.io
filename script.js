@@ -1979,6 +1979,7 @@ const RP_SPEEDS = [[100, '10x'], [300, '3x'], [1000, '1x'], [3000, '0.3x'], [100
 try { const s = parseInt(localStorage.getItem('candleRpSpd'), 10); if (s >= 0 && s < RP_SPEEDS.length) rp.spd = s; } catch (e) { /* pas de stockage */ }
 let candleAl = [], candleAlAt = 0; // alertes de prix en attente (serveur) : { id, pair, price, dir, created }
 const candleAlHits = {};
+let candleAlDrag = null; // alerte en cours de déplacement : { aid, price, moved }
 function candleRpCount(full) { // nombre de barres dont l'ouverture <= rp.t (borne haute par dichotomie)
   let a = 0, b = full.length;
   while (a < b) { const m = (a + b) >> 1; if (full[m][0] <= rp.t) a = m + 1; else b = m; }
@@ -2969,12 +2970,15 @@ function candleAlSvg(id, y, xr, lo, hi, fmt) { // lignes bleues pointillées + �
   if (!id) return '';
   let s = '';
   for (const a of candleAl) {
-    if (a.pair !== id || a.price < lo || a.price > hi) continue;
-    const yy = y(a.price), w = 118, x0 = xr - w - 6;
+    const price = candleAlDrag && candleAlDrag.aid === a.id ? candleAlDrag.price : a.price;
+    if (a.pair !== id || price < lo || price > hi) continue;
+    const yy = y(price), w = 118, x0 = xr - w - 6;
     s += `<line x1="0" x2="${xr}" y1="${yy.toFixed(1)}" y2="${yy.toFixed(1)}" stroke="#2f7bff" stroke-width="1" stroke-dasharray="6 4"/>` +
       `<rect x="${x0}" y="${(yy - 10).toFixed(1)}" width="${w}" height="20" rx="4" fill="#2f7bff"/>` +
-      `<text x="${x0 + 8}" y="${(yy + 4).toFixed(1)}" style="fill:#fff;font-size:11px;font-weight:700">${a.dir === 'above' ? '▲' : '▼'} ${fmt(a.price)}  ✕</text>`;
-    candleAlHits[id].push({ x: x0, y: yy - 10, w, h: 20, aid: a.id });
+      `<rect x="${x0 + w - 26}" y="${(yy - 10).toFixed(1)}" width="26" height="20" rx="4" fill="#1b4cc4"/>` +
+      `<text x="${x0 + 8}" y="${(yy + 4).toFixed(1)}" style="fill:#fff;font-size:11px;font-weight:700">${(candleAlDrag && candleAlDrag.aid === a.id ? candleAlDrag.price >= (candleLastPx(id) ?? 0) : a.dir === 'above') ? '▲' : '▼'} ${fmt(price)}</text>` +
+      `<text x="${x0 + w - 13}" y="${(yy + 4).toFixed(1)}" text-anchor="middle" style="fill:#fff;font-size:12px;font-weight:700">✕</text>`;
+    candleAlHits[id].push({ x: x0, y: yy - 10, w, h: 20, yc: yy, xr, aid: a.id });
   }
   return s;
 }
@@ -3054,15 +3058,48 @@ function candleAlCreate(id, price) {
       candleAlCreate(id, candlePriceAt(id, y0 - rc.top));
     }, 520) };
   });
-  list.addEventListener('pointermove', (e) => { if (lp && Math.hypot(e.clientX - lp.x, e.clientY - lp.y) > 10) cancel(); });
-  list.addEventListener('pointerup', cancel);
-  list.addEventListener('pointercancel', cancel);
+  const near = (id, px, py) => (candleAlHits[id] || []).find((h) => py >= h.yc - 14 && py <= h.yc + 14 && px >= 0 && px <= h.xr && !(px >= h.x + h.w - 26 - 6 && py >= h.y - 4 && py <= h.y + h.h + 4)); // ligne ou étiquette (hors bouton ✕)
+  list.addEventListener('pointerdown', (e) => { // toucher une ligne d'alerte : on la déplace au doigt (le graphique ne bouge pas)
+    const ch = e.target.closest('.cd-chart');
+    if (!ch || (rp.on && rp.id === ch.dataset.pair) || (e.pointerType === 'mouse' && e.button !== 0)) return;
+    if (cg.pts.size > 1) { candleAlDrag = null; return; }
+    const rc = ch.getBoundingClientRect(), hit = near(ch.dataset.pair, e.clientX - rc.left, e.clientY - rc.top), a = hit && candleAl.find((x) => x.id === hit.aid);
+    if (!a) return;
+    cancel();
+    cg.mode = 'alert';
+    candleAlDrag = { aid: a.id, price: a.price, moved: false, y0: e.clientY, id: ch.dataset.pair, rc };
+  });
+  list.addEventListener('pointermove', (e) => {
+    if (candleAlDrag) {
+      const d = candleAlDrag;
+      if (!d.moved && Math.abs(e.clientY - d.y0) < 4) return;
+      d.moved = true;
+      d.price = candlePriceAt(d.id, e.clientY - d.rc.top);
+      candleRedraw(d.id, candleViewOf(d.id));
+      return;
+    }
+    if (lp && Math.hypot(e.clientX - lp.x, e.clientY - lp.y) > 10) cancel();
+  });
+  const dragEnd = async (e) => {
+    cancel();
+    const d = candleAlDrag;
+    if (!d) return;
+    candleAlDrag = null;
+    if (e.type === 'pointercancel' || !d.moved) { candleRedraw(d.id, candleViewOf(d.id)); return; }
+    cg.swallow = Date.now() + 600;
+    const last = candleLastPx(d.id), dec = d.price >= 1000 ? 2 : d.price >= 100 ? 3 : 5, price = +d.price.toFixed(dec);
+    try { await candleAlPost({ lineMove: { id: d.aid, price, dir: last === null || price >= last ? 'above' : 'below' } }); } catch (err) { candleRedraw(d.id, candleViewOf(d.id)); candleAlFetch(); }
+  };
+  list.addEventListener('pointerup', dragEnd);
+  list.addEventListener('pointercancel', dragEnd);
+  window.addEventListener('pointerup', dragEnd); // filet : si le graphique est redessiné pendant le geste, le relâchement est quand même pris en compte
+  window.addEventListener('pointercancel', dragEnd);
   list.addEventListener('click', (e) => { // toucher l'étiquette bleue = supprimer l'alerte
     if (Date.now() < cg.swallow) return;
     const ch = e.target.closest('.cd-chart');
     if (!ch || (rp.on && rp.id === ch.dataset.pair)) return;
     const rc = ch.getBoundingClientRect(), px = e.clientX - rc.left, py = e.clientY - rc.top;
-    const hit = (candleAlHits[ch.dataset.pair] || []).find((h) => px >= h.x - 6 && px <= h.x + h.w + 6 && py >= h.y - 6 && py <= h.y + h.h + 6);
+    const hit = (candleAlHits[ch.dataset.pair] || []).find((h) => px >= h.x + h.w - 26 - 6 && px <= h.x + h.w + 6 && py >= h.y - 6 && py <= h.y + h.h + 6); // seulement le bouton ✕
     const a = hit && candleAl.find((x) => x.id === hit.aid);
     if (a) candleAlSheet(`Alert · ${a.pair.slice(0, 3)}/${a.pair.slice(3)}`, `${a.dir === 'above' ? 'Rises to' : 'Falls to'} ${a.price}`, null, 'Delete alert', () => candleAlPost({ lineDelete: a.id }));
   });
