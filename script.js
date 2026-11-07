@@ -2281,14 +2281,13 @@ function candleRender() {
     date = day.d;
     candleDays[p.id] = day;
     const cls = s.group === 0 ? 'cd-bull' : s.group === 1 ? 'cd-bear' : '';
-    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id], day)}</button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id], candleViewOf(p.id), p.id)}</button><button type="button" class="cd-reset" data-reset="${p.id}" aria-label="Reset zoom"${candleViewIsDef(candleViewOf(p.id)) ? ' hidden' : ''}>\u27f2</button><div class="cd-detail" id="pc-detail-${p.id}"></div></div>`;
+    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id], day)}</button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id], candleViewOf(p.id), p.id)}</button><button type="button" class="cd-reset" data-reset="${p.id}" aria-label="Reset zoom"${candleViewIsDef(candleViewOf(p.id)) ? ' hidden' : ''}>\u27f2</button></div>`;
   }).join('');
   const ki = keepId ? [...candleSlides()].findIndex((r) => r.dataset.id === keepId) : -1;
   list.scrollLeft = (ki >= 0 ? ki : keep) * list.clientWidth;
   if (!rows.length) list.innerHTML = '<div class="charts-intro">No pair matches.</div>';
   candleFilterUpdate();
   candleNavUpdate();
-  if (candleSelected) chartsOpenDetail(candleSelected, '60', 'pc-detail-');
 }
 
 // Carrousel : une paire par diapo (défilement par glissement), flèches + compteur
@@ -2456,20 +2455,7 @@ document.getElementById('candleToggle')?.addEventListener('click', (e) => {
 document.getElementById('candleList').addEventListener('click', (e) => {
   const rs = e.target.closest('[data-reset]');
   if (rs) { const id = rs.dataset.reset; candleRedraw(id, CANDLE_DEF); candleViewSave(id, Object.assign({}, CANDLE_DEF)); return; }
-  if (Date.now() < cg.swallow) return; // clic issu d'un geste de zoom / déplacement
-  const btn = e.target.closest('[data-pair]');
-  if (!btn) return;
-  const id = btn.dataset.pair;
-  const wasOpen = candleSelected === id;
-  if (candleSelected) {
-    const prev = document.getElementById(`pc-detail-${candleSelected}`);
-    if (prev) prev.innerHTML = '';
-  }
-  candleSelected = wasOpen ? null : id;
-  if (!wasOpen) {
-    chartsOpenDetail(id, '60', 'pc-detail-');
-    setTimeout(() => document.getElementById(`pc-detail-${id}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
-  }
+  // un appui sur le graphique n'ouvre plus de widget TradingView en dessous (supprimé à la demande)
 });
 
 // ===== ALERTE : tableau Symbol | 50 % façon PAPER TRADING =====
