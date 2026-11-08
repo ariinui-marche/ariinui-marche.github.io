@@ -2876,13 +2876,26 @@ function alerteCtxHtml(c, side) {
   if (c.fibo) out.push(chip(`Fibo ${c.fibo === 'haussier' ? '▲' : '▼'}`, '', 'D2 et D1 vont dans le même sens : Fibo 38/50/61 actif'));
   return out.join('');
 }
+// Jour de trading affiché (celui de la majorité des paires) et ses 2 meilleures paires : classées par R potentiel, parmi les paires dont un trade a atteint le TP1
+function alerteDayStr() {
+  const days = {};
+  for (const k of Object.keys(alerteData || {})) if (alerteData[k] && alerteData[k].d) days[alerteData[k].d] = (days[alerteData[k].d] || 0) + 1;
+  return Object.keys(days).sort((a, b) => days[b] - days[a] || (a < b ? 1 : -1))[0] || null;
+}
+function alerteTop2() {
+  const dstr = alerteDayStr();
+  if (!dstr) return [];
+  return Object.keys(alerteData).filter((id) => { const f = alerteData[id]; return f && f.d === dstr && f.pt && f.pt.res === 1 && f.pt.rp != null; })
+    .map((id) => ({ id, rp: alerteData[id].pt.rp })).sort((a, b) => b.rp - a.rp).slice(0, 2);
+}
 function alerteRender() {
   const box = document.getElementById('alerteTable');
   if (!box) return;
   if (!alerteData) { box.innerHTML = '<div class="charts-intro">Alert data unavailable right now.</div>'; return; }
   // Règle PAPER TRADING : un 50 % compte seulement si sa 1re touche est la barre du milieu d'un FVG 1 min qui le chevauche (heure = 3e barre, clôturée).
   // PTP = côté de la 1re sortie de la boîte 14H, OCO = côté opposé. Type : BUY côté haut, SELL côté bas. Résultat : TP / SL (un des deux trades) ; Rpot = R maximum atteint (vide si SL).
-  const rows = [];
+  const rows = [], topRank = {};
+  alerteTop2().forEach((t, i) => { topRank[t.id] = i + 1; });
   for (const p of CORR_ALL_PAIRS) {
     const f = alerteData[p.id], q = f && f.pt;
     if (!q) continue;
@@ -2900,8 +2913,8 @@ function alerteRender() {
       const tip = `Box 14H: ${dec(r.f.hi)} / ${dec(r.f.lo)} · 50% up ${dec(r.f.hi + R / 2)} · 50% down ${dec(r.f.lo - R / 2)}`;
       const res = r.q.res === 1 ? '<span style="color:#089981">TP</span>' : r.q.res === 2 ? '<span style="color:#f23645">SL</span>' : '—';
       const rp = r.q.res !== 2 && r.q.rp != null ? '+' + r.q.rp.toFixed(2) + 'R' : '';
-      const da = `data-fid="${r.id}" data-ft="${r.t}"`, cx = alerteCtx(r.id, r.side), star = cx && cx.star ? '<span class="al-star" title="Profil vendredi : paire dollar, tendance alignée, veille agitée (hypothèse en cours de test)">★</span> ' : '';
-      return `<div class="al-c ${alt} al-go" ${da} title="${tip}">${star}<span style="color:${ALERTE_CCY[b] || '#e5e5e5'}">${b}</span> <span style="color:${ALERTE_CCY[q] || '#e5e5e5'}">${q}</span></div>` +
+      const da = `data-fid="${r.id}" data-ft="${r.t}"`, cx = alerteCtx(r.id, r.side), star = cx && cx.star ? '<span class="al-star" title="Profil vendredi : paire dollar, tendance alignée, veille agitée (hypothèse en cours de test)">★</span> ' : '', top = topRank[r.id] ? `<span class="al-top" title="${topRank[r.id] === 1 ? '1re' : '2e'} meilleure paire du jour (R potentiel)">#${topRank[r.id]}</span> ` : '';
+      return `<div class="al-c ${alt} al-go" ${da} title="${tip}">${top}${star}<span style="color:${ALERTE_CCY[b] || '#e5e5e5'}">${b}</span> <span style="color:${ALERTE_CCY[q] || '#e5e5e5'}">${q}</span></div>` +
         `<div class="al-c al-t al-go" ${da} style="color:${col};background:${col}1f" title="${tip}">${alerteTime(r.t)}</div>` +
         `<div class="al-c ${alt} al-go al-sens ${r.sens === 'OCO' ? 'oco' : 'ptp'}" ${da}>${r.sens}</div>` +
         `<div class="al-c ${alt} al-go al-type ${r.side === 'up' ? 'buy' : 'sell'}" ${da}>${r.side === 'up' ? 'BUY' : 'SELL'}</div>` +
@@ -2991,6 +3004,14 @@ function alerteSigCtx(x) {
 function alerteStatsHtml() {
   const all = Object.values(Object.assign({}, alerteHist || {}, alerteJournal || {})).filter((x) => x.res === 1 || x.res === 2).map((x) => ({ x, c: alerteSigCtx(x) })).filter((r) => r.c);
   const days = new Set(all.map((r) => r.x.d)).size;
+  // 2 meilleures paires de chaque jour (R potentiel le plus haut, paires gagnantes) : choisies APRÈS coup, donc leur win rate est gagnant par construction
+  const perDay = {};
+  for (const r of all) if (r.x.res === 1 && r.x.mf != null) { const m = perDay[r.x.d] || (perDay[r.x.d] = {}); m[r.x.pair] = Math.max(m[r.x.pair] || 0, r.x.mf); }
+  const topSet = new Set(), topDays = Object.keys(perDay).sort().reverse().map((d) => {
+    const t = Object.entries(perDay[d]).sort((a, b) => b[1] - a[1]).slice(0, 2);
+    t.forEach(([pair]) => topSet.add(d + '|' + pair));
+    return { d, t };
+  });
   const groups = [
     ['Tous les signaux', () => true],
     ['★ profil vendredi', (r) => r.c.star],
@@ -3003,6 +3024,7 @@ function alerteStatsHtml() {
     ['Autres paires', (r) => !r.c.usd],
     ['PTP', (r) => r.x.sens === 'PTP'],
     ['OCO', (r) => r.x.sens === 'OCO'],
+    ['2 meilleures du jour *', (r) => topSet.has(r.x.d + '|' + r.x.pair)],
   ];
   const rows = groups.map(([lbl, f]) => {
     const g = all.filter(f), tp = g.filter((r) => r.x.res === 1).length, n = g.length;
@@ -3010,61 +3032,39 @@ function alerteStatsHtml() {
   }).join('');
   return `<div class="alr-h">Statistiques du journal</div><div class="alr-r">${all.length} signaux terminés sur ${days} jour${days > 1 ? 's' : ''}${all.length < 30 ? ' · échantillon trop petit (moins de 30), à titre indicatif' : ''}</div>` +
     `<div class="als-grid"><div class="als-h">Profil</div><div class="als-h als-n">N</div><div class="als-h als-n">TP</div><div class="als-h als-n">SL</div><div class="als-h als-n">Win</div>${rows}</div>` +
+    `<div class="alr-h">2 meilleures paires par jour (R potentiel)</div>` +
+    topDays.slice(0, 8).map(({ d, t }) => `<div class="alr-ev"><b>${d.slice(5)}</b> ${t.map(([pair, mf]) => `${pair.slice(0, 3)}/${pair.slice(3)} <i>+${mf.toFixed(1)}R</i>`).join(' · ')}</div>`).join('') +
+    `<div class="alr-r als-note">* Sélection faite après coup : ces paires sont choisies parce qu'elles ont gagné, leur win rate ne prouve rien. La liste ci-dessus sert à voir si les mêmes paires reviennent.</div>` +
     `<div class="alr-r als-note">Les groupes se recoupent. Les signaux encore en cours ne sont pas comptés. Un écart n'est significatif qu'avec plusieurs dizaines de signaux par groupe.</div>`;
 }
 function alerteReportRender() {
   const box = document.getElementById('alerteReport');
   if (!box || !alerteData || !alerteCtxData) return;
-  const days = {}; for (const k of Object.keys(alerteData)) if (alerteData[k] && alerteData[k].d) days[alerteData[k].d] = (days[alerteData[k].d] || 0) + 1;
-  const dstr = Object.keys(days).sort((a, b) => days[b] - days[a] || (a < b ? 1 : -1))[0];
+  const dstr = alerteDayStr();
   if (!dstr) { box.innerHTML = ''; return; }
   const dayEnd = Date.parse(dstr + 'T22:00:00Z') / 1000, dayStart = dayEnd - 86400, over = Date.now() / 1000 >= dayEnd;
-  const ccyOf = (id) => [id.slice(0, 3), id.slice(3)];
-  // volatilité du jour par paire : amplitude D0 / moyenne des 20 jours précédents (flux quotidien du site)
-  const vol = [], byC = {};
-  for (const p of CORR_ALL_PAIRS) {
-    const dy = alerteCtxData.daily[p.id], hist = ((chartsCandles || {})[p.id] || []).slice(0, -1).slice(-20);
-    if (!dy || !dy.length || hist.length < 10 || /^(BTC|ETH)/.test(p.id)) continue;
-    const d0 = dy[dy.length - 1], base = hist.reduce((a, b) => a + (b[2] - b[3]), 0) / hist.length;
-    if (!(base > 0)) continue;
-    const r = (d0[2] - d0[3]) / base, mv = (d0[4] - d0[1]) / d0[1] * 100;
-    vol.push({ id: p.id, r, mv });
-    for (const c of ccyOf(p.id)) (byC[c] = byC[c] || []).push(r);
-  }
-  vol.sort((a, b) => b.r - a.r);
-  const fmtP = (v) => `<span class="alr-p"><b>${v.id.slice(0, 3)}/${v.id.slice(3)}</b> ${v.r.toFixed(1)}× <i class="${v.mv >= 0 ? 'up' : 'dn'}">${v.mv >= 0 ? '+' : ''}${v.mv.toFixed(2)}%</i></span>`;
-  const ccy = Object.keys(byC).filter((c) => byC[c].length >= 3).map((c) => ({ c, r: byC[c].reduce((a, b) => a + b, 0) / byC[c].length })).sort((a, b) => b.r - a.r);
-  // signaux du jour (journal serveur)
-  const sg = Object.values(alerteJournal || {}).filter((x) => x.d === dstr);
-  const tp = sg.filter((x) => x.res === 1).length, sl = sg.filter((x) => x.res === 2).length, op = sg.length - tp - sl;
-  const best = sg.filter((x) => x.mf != null && x.res !== 2).sort((a, b) => b.mf - a.mf).slice(0, 3);
-  // cassures de PDH / PDL par le corps d'une POH et sweeps de D1 par 14h / 22h / 02h
-  let nH = 0, nL = 0, s14 = 0, s22 = 0, s02 = 0;
-  for (const p of CORR_ALL_PAIRS) {
-    const dy = alerteCtxData.daily[p.id], ds = alerteCtxData.pairs[p.id], day = ds && ds[ds.length - 1];
-    if (!dy || dy.length < 3 || !day || !day.c || day.d !== dstr) continue;
-    const H = dy[dy.length - 2][2], L = dy[dy.length - 2][3];
-    let bh = false, bl = false;
-    for (const sl2 of ALERTE_SLOTS) {
-      const c = day.c[sl2]; if (!c) continue;
-      if (Math.max(c[0], c[3]) > H) bh = true;
-      if (Math.min(c[0], c[3]) < L) bl = true;
-      const sw = (c[1] > H && c[3] < H) || (c[2] < L && c[3] > L);
-      if (sw) { if (sl2 === '14') s14++; else if (sl2 === '22') s22++; else if (sl2 === '02') s02++; }
+  const sgAll = Object.values(alerteJournal || {}).filter((x) => x.d === dstr);
+  const tp = sgAll.filter((x) => x.res === 1).length, sl = sgAll.filter((x) => x.res === 2).length, op = sgAll.length - tp - sl;
+  const top = alerteTop2();
+  // une fiche par paire : signaux, R potentiel, volatilité du jour, contexte connu avant la décision de 15 h
+  const card = ({ id, rp }, i) => {
+    const sg = sgAll.filter((x) => x.pair === id).sort((a, b) => a.t - b.t);
+    const dy = alerteCtxData.daily[id], hist = ((chartsCandles || {})[id] || []).slice(0, -1).slice(-20);
+    let vol = '';
+    if (dy && dy.length && hist.length >= 10) {
+      const d0 = dy[dy.length - 1], base = hist.reduce((a, b) => a + (b[2] - b[3]), 0) / hist.length, mv = (d0[4] - d0[1]) / d0[1] * 100;
+      if (base > 0) vol = `<div class="alr-r">Volatilité du jour : <b>${((d0[2] - d0[3]) / base).toFixed(1)}×</b> sa moyenne · <b class="${mv >= 0 ? 'up' : 'dn'}">${mv >= 0 ? '+' : ''}${mv.toFixed(2)} %</b></div>`;
     }
-    if (bh) nH++; if (bl) nL++;
-  }
+    const main = sg.find((x) => x.res === 1) || sg[0], side = main ? (main.side === 'BUY' ? 'up' : 'dn') : ((alerteData[id].pt.dir === 1) ? 'up' : 'dn');
+    const rows = sg.length ? sg.map((x) => `<div class="alr-ev"><b>${alerteTime(x.t)}</b> ${x.side} ${x.sens} · ${x.res === 1 ? '<i>TP</i>' : x.res === 2 ? 'SL' : 'en cours'}${x.mf != null && x.res !== 2 ? ` · +${x.mf.toFixed(1)}R` : ''}</div>`).join('') : '';
+    return `<div class="alr-card"><div class="alr-ct"><span class="al-top">#${i + 1}</span> ${id.slice(0, 3)}/${id.slice(3)} <b class="up">+${rp.toFixed(1)}R</b></div>${rows}${vol}<div class="al-ctx-in">${alerteCtxHtml(alerteCtx(id, side), side)}</div></div>`;
+  };
   // annonces majeures du jour (heure UTC-10)
   const ev = (alerteEco || []).filter((e) => e.impact === 'High' && e.date).map((e) => ({ e, t: Date.parse(e.date) / 1000 })).filter((x) => x.t >= dayStart && x.t < dayEnd).sort((a, b) => a.t - b.t);
   const evHtml = ev.length ? ev.slice(0, 8).map(({ e, t }) => `<div class="alr-ev"><b>${alerteTime(t)}</b> ${alEsc(e.country)} · ${alEsc(e.title)}${e.actual ? ` <i>${alEsc(e.actual)}</i> <span>/ ${alEsc(e.forecast || '—')}</span>` : ''}</div>`).join('') + (ev.length > 8 ? `<div class="alr-ev">+${ev.length - 8}</div>` : '') : '<div class="alr-ev">Aucune annonce majeure</div>';
   box.innerHTML = `<div class="alr-t">Jour de trading ${alEsc(dstr)} · ${over ? 'terminé' : 'en cours'}</div>` +
-    `<div class="alr-h">Signaux</div><div class="alr-r">${sg.length ? `${sg.length} signaux · <b class="up">${tp} TP</b> · <b class="dn">${sl} SL</b>${op ? ` · ${op} en cours` : ''}${tp + sl ? ` · win rate ${Math.round(100 * tp / (tp + sl))} %` : ''}` : 'Aucun signal enregistré'}</div>` +
-    (best.length ? `<div class="alr-r">Meilleurs R potentiels : ${best.map((x) => `${x.pair.slice(0, 3)}/${x.pair.slice(3)} +${x.mf.toFixed(1)}R`).join(' · ')}</div>` : '') +
-    `<div class="alr-h">Volatilité (amplitude du jour / moyenne 20 jours)</div>` +
-    `<div class="alr-r"><span class="alr-l">Plus actives</span>${vol.slice(0, 5).map(fmtP).join('')}</div>` +
-    `<div class="alr-r"><span class="alr-l">Plus calmes</span>${vol.slice(-5).reverse().map(fmtP).join('')}</div>` +
-    (ccy.length ? `<div class="alr-r"><span class="alr-l">Devises</span>${ccy.map((x) => `<span class="alr-p"><b>${x.c}</b> ${x.r.toFixed(1)}×</span>`).join('')}</div>` : '') +
-    `<div class="alr-h">Niveaux</div><div class="alr-r">PDL cassé par un corps : <b>${nL}</b> paires · PDH : <b>${nH}</b> · Sweeps de D1 : 14h <b>${s14}</b> · 22h <b>${s22}</b> · 02h <b>${s02}</b></div>` +
+    `<div class="alr-r">${sgAll.length ? `${sgAll.length} signaux · <b class="up">${tp} TP</b> · <b class="dn">${sl} SL</b>${op ? ` · ${op} en cours` : ''}${tp + sl ? ` · win rate ${Math.round(100 * tp / (tp + sl))} %` : ''}` : 'Aucun signal enregistré'}</div>` +
+    `<div class="alr-h">Les 2 meilleures paires du jour</div>` + (top.length ? top.map(card).join('') : '<div class="alr-ev">Aucune paire gagnante pour l\'instant</div>') +
     `<div class="alr-h">Annonces majeures (UTC-10)</div>${evHtml}` + alerteStatsHtml();
 }
 async function alerteLoad() {
