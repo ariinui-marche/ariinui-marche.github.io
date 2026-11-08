@@ -1976,6 +1976,7 @@ const CANDLE_DAYS = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendred
 const CANDLE_MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 let candleEcoEv = []; // news à fort impact (calendrier éco) : { country, title, _t, actual, forecast, previous }
 const candleEvHits = {}; // paire -> [{ x, y, r, list }] zones cliquables des pastilles (repère du graphique)
+let candleFocusMark = null; // repère de l'événement ALERTE ouvert dans CANDLE : { id, t } (trait bleu vertical + flèche)
 let candleF50 = {}; // { PAIR: { hi, lo, ... } } boîte 14H (niveaux Entry / 50 % / TP)
 // REPLAY (façon TradingView) : on rejoue les bougies du graphique affiché. rp.t = heure d'ouverture de la dernière barre visible ; tout ce qui est après est masqué
 const rp = { on: false, id: null, t: 0, pick: false, playing: false, timer: 0, spd: 0, qty: 1, slp: 0, tpp: 0, tw: true, wm: true, view: null, vkey: '', pos: null, done: [], msg: '' };
@@ -2156,6 +2157,13 @@ function candleSvg(day, dly, view, id) {
     if (candleXh && candleXh.id === id) { const j = Math.floor((edge - candleXh.x) / hs), i = hist.length - 1 - j * sg; if (candleXh.x <= edge && j >= 0 && i >= 0) xhT = candleXhTime(hist[i][0]); } // les barres vont vers la gauche depuis `edge` (dernière barre) ; pas d'heure au-dessus des POH ni du futur
     const jMin = Math.max(0, Math.floor((edge - (W - AX)) / hs) - 1), jMax = Math.min(Math.ceil(hist.length / sg) - 1, Math.ceil((edge + hs) / hs));
     const is1D = candleHistTf === '1D', tfMin = is1D ? 1440 : +candleHistTf, tfSec = tfMin * 60, kLbl = Math.max(1, Math.round(80 / hs));
+    if (candleFocusMark && candleFocusMark.id === id && !is1D) { // repère de l'événement ALERTE : dernière barre dont l'heure d'ouverture <= heure de l'événement
+      let a = 0, b = hist.length - 1;
+      while (a < b) { const m = (a + b + 1) >> 1; if (hist[m][0] <= candleFocusMark.t) a = m; else b = m - 1; }
+      const fx = edge - (Math.floor((hist.length - 1 - a) / sg) + 0.5) * hs;
+      if (fx >= 0 && fx <= W - AX) evb += `<line x1="${fx.toFixed(1)}" x2="${fx.toFixed(1)}" y1="0" y2="${H - BOT - 30}" stroke="#5cc8ff" stroke-width="1" stroke-dasharray="4 4" stroke-opacity=".8"/>` +
+        `<path d="M${(fx - 7).toFixed(1)} ${H - BOT - 2} L${(fx + 7).toFixed(1)} ${H - BOT - 2} L${fx.toFixed(1)} ${H - BOT - 14} Z" fill="#5cc8ff"/>`;
+    }
     const tLast = hist[hist.length - 1][0], noClose = /^(BTC|ETH)/.test(id), xMax = W - AX, R = 12;
     const futStart = LEFT + xOff + step * cs.length; // le futur commence à droite du bloc des POH et se prolonge à l'infini
     const phase = (t) => ((t % 604800) + 604800) % 604800;
@@ -2831,14 +2839,64 @@ function alerteRender() {
       const tip = `Box 14H: ${dec(r.f.hi)} / ${dec(r.f.lo)} · 50% up ${dec(r.f.hi + R / 2)} · 50% down ${dec(r.f.lo - R / 2)}`;
       const res = r.q.res === 1 ? '<span style="color:#089981">TP</span>' : r.q.res === 2 ? '<span style="color:#f23645">SL</span>' : '—';
       const rp = r.q.res !== 2 && r.q.rp != null ? '+' + r.q.rp.toFixed(2) + 'R' : '';
-      return `<div class="al-c ${alt}" title="${tip}"><span style="color:${ALERTE_CCY[b] || '#e5e5e5'}">${b}</span> <span style="color:${ALERTE_CCY[q] || '#e5e5e5'}">${q}</span></div>` +
-        `<div class="al-c al-t" style="color:${col};background:${col}1f" title="${tip}">${alerteTime(r.t)}</div>` +
-        `<div class="al-c ${alt} al-sens ${r.sens === 'OCO' ? 'oco' : 'ptp'}">${r.sens}</div>` +
-        `<div class="al-c ${alt} al-type ${r.side === 'up' ? 'buy' : 'sell'}">${r.side === 'up' ? 'BUY' : 'SELL'}</div>` +
-        `<div class="al-c ${alt}">${res}</div><div class="al-c ${alt}">${rp}</div>`;
+      const da = `data-fid="${r.id}" data-ft="${r.t}"`;
+      return `<div class="al-c ${alt} al-go" ${da} title="${tip}"><span style="color:${ALERTE_CCY[b] || '#e5e5e5'}">${b}</span> <span style="color:${ALERTE_CCY[q] || '#e5e5e5'}">${q}</span></div>` +
+        `<div class="al-c al-t al-go" ${da} style="color:${col};background:${col}1f" title="${tip}">${alerteTime(r.t)}</div>` +
+        `<div class="al-c ${alt} al-go al-sens ${r.sens === 'OCO' ? 'oco' : 'ptp'}" ${da}>${r.sens}</div>` +
+        `<div class="al-c ${alt} al-go al-type ${r.side === 'up' ? 'buy' : 'sell'}" ${da}>${r.side === 'up' ? 'BUY' : 'SELL'}</div>` +
+        `<div class="al-c ${alt} al-go" ${da}>${res}</div><div class="al-c ${alt} al-go" ${da}>${rp}</div>`;
     }).join('') : '<div class="al-empty">—</div>') +
     `</div>`;
 }
+// Clic sur un symbole du tableau : ouvre CANDLE sur cette paire, en 1 min, centré sur la barre de l'événement (3e barre du FVG) avec un repère bleu
+let alerteFocusBusy = false;
+async function alerteFocus(id, t) {
+  if (alerteFocusBusy || !id || !t) return;
+  alerteFocusBusy = true;
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+  try {
+    if (rp.on) candleRpExit();
+    const tg = document.getElementById('candleToggle');
+    if (tg && tg.getAttribute('aria-expanded') !== 'true') tg.click();
+    if (candleMini) { candleMini = false; try { localStorage.setItem('candleMini', '0'); } catch (e) { /* pas de stockage */ } candleMiniApply(); }
+    candleHistTf = '1';
+    try { localStorage.setItem('candleHistTf', '1'); } catch (e) { /* pas de stockage */ }
+    if (window.candleHistSync) window.candleHistSync();
+    for (let k = 0; k < 40 && !(candlePoh && candleDays[id]); k++) await wait(250); // attente du chargement des POH
+    candleF.fibo = candleF.sweep = candleF.both = false; candleSelected = null;
+    candleFocusMark = { id, t };
+    candleRender();
+    const l = document.getElementById('candleList'), i = [...candleSlides()].findIndex((r) => r.dataset.id === id);
+    if (i >= 0) l.scrollLeft = i * l.clientWidth;
+    candleNavUpdate();
+    const key = id + '|1';
+    for (let k = 0; k < 80; k++) { // attente des barres 1 min (historique complet au 1er chargement)
+      candleHistEnsure(id);
+      const h = candleHistData[key];
+      if (h && h.bars.length && h.bars[0][0] <= t) break;
+      await wait(250);
+    }
+    const h = candleHistData[key], bars = h && h.bars;
+    if (!bars || !bars.length) return;
+    let a = 0, b = bars.length - 1; // dernière barre dont l'ouverture <= t
+    while (a < b) { const m = (a + b + 1) >> 1; if (bars[m][0] <= t) a = m; else b = m - 1; }
+    // vue : la barre de l'événement au centre de la zone des prix, ~8 px par barre ; prix centré sur les barres autour de l'événement
+    const { W } = candleDims(), { AX, LEFT } = CANDLE_G, plotW0 = W - AX - LEFT, nCs = ((candleDaily || {})[id] || []).slice(-4).length + 1 + CANDLE_SLOTS.length;
+    const stepB = plotW0 * 0.5 / nCs, xz = candleClamp(24 / stepB, CANDLE_XZ[0], CANDLE_XZ[1]), hs0 = stepB / 3 * xz, j = bars.length - 1 - a;
+    const xp = ((W - AX) / 2 + (j + 0.5) * hs0 - LEFT - 0.5 * plotW0 * xz + 0.5 * stepB * xz) / (W - AX);
+    const near = bars.slice(Math.max(0, a - 40), a + 40);
+    let hi = -Infinity, lo = Infinity;
+    for (const x of near) { hi = Math.max(hi, x[2]); lo = Math.min(lo, x[3]); }
+    const g = candleGeo(id), span = Math.max(hi - lo, g.baseRng * 0.002) * 1.25;
+    const v = { xz, xp, yz: candleClamp(g.baseRng / span, CANDLE_YZ[0], CANDLE_YZ[1]), yp: ((hi + lo) / 2 - g.cenB) / g.baseRng };
+    candleViewSave(id, v);
+    candleRedraw(id, v);
+  } finally { alerteFocusBusy = false; }
+}
+document.getElementById('alerteTable')?.addEventListener('click', (e) => {
+  const r = e.target.closest('[data-fid]');
+  if (r) alerteFocus(r.dataset.fid, +r.dataset.ft);
+});
 async function alerteLoad() {
   if (!alerteData) {
     try { const c = JSON.parse(localStorage.getItem(ALERTE_LS) || 'null'); if (c && c.f50) { alerteData = c.f50; alerteRender(); } } catch (e) { /* pas de cache */ }
@@ -2947,6 +3005,7 @@ document.getElementById('alerteToggle')?.addEventListener('click', () => { alert
   prev.addEventListener('click', () => go(-1));
   next.addEventListener('click', () => go(1));
   sync();
+  window.candleHistSync = sync;
 })();
 
 // ===== REPLAY (façon TradingView) : barre de départ, lecture / pause, pas à pas, vitesse, changement de période, trading papier =====

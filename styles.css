@@ -1261,6 +1261,7 @@ body.cc-lock { overflow: hidden; }
 .al-c.a { background: rgba(128,128,128,.15); }
 .al-c.b { background: rgba(128,128,128,.08); }
 .al-c.al-t { text-align: center; font-variant-numeric: tabular-nums; }
+.al-go { cursor: pointer; }
 .al-empty { grid-column: 1 / -1; padding: 14px 12px; color: #9aa0a6; background: rgba(128,128,128,.08); }
 .al-sens.ptp { color: #e5e5e5; }
 .al-sens.oco { color: #b388ff; }
