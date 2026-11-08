@@ -3016,8 +3016,8 @@ function rpSetTf(tf) { // période du replay : mêmes boutons cachés ‹ › qu
   rpEl('rpDice').addEventListener('click', () => rpMenu('Sélectionnez le point de départ', [
     { t: 'Barre', fn: () => { candleRpPlay(false); rp.pick = true; rp.msg = ''; rp.pos = null; candleRpUi(); candleRpRedraw(); } },
     { t: 'Date…', fn: () => { try { dt.showPicker(); } catch (e) { dt.click(); } } },
-    { t: 'Barre aléatoire', fn: () => { const full = rpFull(); if (!full) return; candleRpPlay(false); candleRpSet(full.length > 400 ? 100 + Math.floor(Math.random() * (full.length - 300)) : Math.floor(full.length / 2)); } },
     { t: 'Première date disponible', fn: () => { candleRpPlay(false); candleRpSet(0); } },
+    { t: 'Barre aléatoire', fn: () => { const full = rpFull(); if (!full) return; candleRpPlay(false); candleRpSet(full.length > 400 ? 100 + Math.floor(Math.random() * (full.length - 300)) : Math.floor(full.length / 2)); } },
   ]));
   rpEl('rpSpd').addEventListener('click', () => rpMenu('Vitesse du replay', RP_SPEEDS.map(([, l, d], i) => ({ t: l, d, on: i === rp.spd, fn: () => { rp.spd = i; try { localStorage.setItem('candleRpSpd3', String(i)); } catch (e) { /* pas de stockage */ } candleRpUi(); } }))));
   rpEl('rpTf').addEventListener('click', () => rpMenu("Mettre à jour l'intervalle", CANDLE_HIST_MODES.filter((m) => m !== '0').map((m) => ({ t: ({ 1: '1 minute', 5: '5 minutes', 60: '1 heure', 240: '4 heures', '1D': '1 jour' })[m], on: m === candleHistTf, fn: () => rpSetTf(m) }))));
