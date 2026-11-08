@@ -1369,6 +1369,12 @@ body.cc-lock { overflow: hidden; }
 .cd-mchart { display: block; width: 100%; padding-bottom: 8px; }
 .cd-mchart svg { display: block; width: 100%; height: 150px; }
 .cc-setmenu { position: absolute; right: 8px; bottom: calc(54px + env(safe-area-inset-bottom)); z-index: 30; min-width: 230px; background: #1c1c1e; border: 1px solid #2a2a2e; border-radius: 12px; padding: 6px; box-shadow: 0 8px 24px rgba(0, 0, 0, .6); }
+.cc-top { justify-content: flex-end; }
+.cc-setmenu .cc-strip { display: flex; flex-direction: column; flex: none; gap: 6px; overflow: visible; padding: 8px 0 4px; margin-top: 6px; background: none; border: 0; border-top: 1px solid #2a2a2e; }
+.cc-setmenu .cc-grp { flex: none; display: flex; width: 100%; }
+.cc-setmenu .cc-chip { flex: 1 1 auto; flex-direction: row; justify-content: center; align-items: center; width: auto; height: 36px; padding: 0 12px; background: #14161a; border: 1px solid #2a2d33; border-right-width: 0; border-radius: 8px 0 0 8px; font-size: 14px; color: #cfd2d6; }
+.cc-setmenu .cc-chip.on { background: #f5b642; color: #000; border-color: #f5b642; font-weight: 700; }
+.cc-setmenu .cc-drop { flex: 0 0 44px; width: 44px; height: 36px; padding: 0; flex-direction: row; justify-content: center; align-items: center; background: #14161a; border: 1px solid #2a2d33; border-radius: 0 8px 8px 0; font-size: 14px; color: #cfd2d6; }
 .cc-setmenu[hidden] { display: none; }
 .cc-setmenu button { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; width: 100%; background: none; border: 0; border-radius: 8px; padding: 10px 12px; color: #e5e5e5; font-size: 15px; text-align: left; cursor: pointer; }
 .cc-setmenu button small { color: #787b86; font-size: 12px; }

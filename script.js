@@ -2562,6 +2562,7 @@ document.getElementById('candleStrip')?.addEventListener('click', (e) => {
   const d = e.target.closest('[data-d]');
   if (!d) return;
   e.stopPropagation();
+  document.getElementById('candleSetMenu').hidden = true; document.getElementById('candleSet')?.setAttribute('aria-expanded', 'false');
   candleNamesOpen = candleNamesOpen === d.dataset.d ? null : d.dataset.d;
   candleNamesRender();
 });
@@ -2578,6 +2579,7 @@ document.addEventListener('click', (e) => { // un clic ailleurs referme la liste
 document.getElementById('candleStrip')?.addEventListener('click', (e) => {
   const b = e.target.closest('[data-f]');
   if (!b) return;
+  document.getElementById('candleSetMenu').hidden = true; document.getElementById('candleSet')?.setAttribute('aria-expanded', 'false'); // le menu se referme après le choix
   candleF[b.dataset.f] = !candleF[b.dataset.f];
   if (b.dataset.f === 'both') { candleF.fibo = false; candleF.sweep = false; } else candleF.both = false; // « F+S » remplace Fibo+Sweep ; Fibo ou Sweep seul annule « F+S »
   candleSelected = null;
