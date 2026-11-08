@@ -2323,15 +2323,17 @@ function candleFilterUpdate() {
 // ===== Zoom / déplacement façon TradingView (pincer à deux doigts, glisser), enregistré par paire =====
 const CANDLE_DEF = { yz: 1, yp: 0, xz: 1, xp: 0 }; // zoom prix, décalage prix (fraction de l'échelle de base), zoom bougies, décalage horizontal (fraction de la largeur)
 try { localStorage.removeItem('candleAlertsV1'); } catch (e) { /* nettoyage des anciennes alertes (fonction retirée) */ }
-const CANDLE_VIEW_LS = 'candleViewV1';
+const CANDLE_VIEW_LS = 'candleViewV2'; // UNE seule vue (zoom / centrage) partagée par tous les symboles, enregistrée dans le téléphone
 let candleViews = {};
 try { candleViews = JSON.parse(localStorage.getItem(CANDLE_VIEW_LS) || '{}') || {}; } catch (e) { candleViews = {}; }
 const candleDays = {};
-function candleViewOf(id) { return Object.assign({}, CANDLE_DEF, candleViews[id] || {}); }
+function candleViewOf() { return Object.assign({}, CANDLE_DEF, candleViews.all || {}); } // même vue pour toutes les paires
 function candleViewIsDef(v) { return Math.abs(v.yz - 1) < 1e-3 && Math.abs(v.yp) < 1e-3 && Math.abs(v.xz - 1) < 1e-3 && Math.abs(v.xp) < 1e-3; }
 function candleViewSave(id, v) {
-  if (candleViewIsDef(v)) delete candleViews[id]; else candleViews[id] = v;
+  if (candleViewIsDef(v)) delete candleViews.all; else candleViews.all = v;
   try { localStorage.setItem(CANDLE_VIEW_LS, JSON.stringify(candleViews)); } catch (e) { /* quota */ }
+  const cur = typeof candleCurId === 'function' ? candleCurId() : null;
+  for (const k of Object.keys(candleDays)) if (k !== cur && !(typeof rp !== 'undefined' && rp.on && rp.id === k)) { try { candleRedraw(k, candleViewOf()); } catch (e) { /* paire pas encore dessinée */ } } // les autres symboles prennent aussitôt la même vue
   candleResetUpdate();
 }
 // Bouton « recentrer » (barre du bas, à droite) : visible seulement quand la vue de la paire affichée n'est plus la vue d'origine
