@@ -1962,6 +1962,8 @@ const CANDLE_SLOTS = [['12', '12h'], ['14', '14h'], ['15', '15h'], ['17', '17h']
 let candleDaily = null; // { PAIR: [[t,o,h,l,c], ...4 derniers jours D3..D0] }
 // Historique 1 min / 5 min à gauche des POH (flèches ‹ › dans l'en-tête) : '0' = POH seuls (vue habituelle), '1' / '5' = bougies 1 min / 5 min
 let candleHistTf = '0';
+let candleClean = false; // clic sur le nom du symbole : échelle de prix + rangée Fibo / Sweep / F+S masquées, jusqu'au prochain clic (enregistré)
+try { candleClean = localStorage.getItem('candleClean') === '1'; } catch (e) { /* pas de stockage */ }
 try { candleHistTf = localStorage.getItem('candleHistTf') || '0'; } catch (e) { /* pas de stockage */ }
 const CANDLE_HIST_MODES = ['0', '1', '5', '60', '240', '1D'], CANDLE_HIST_LBL = { 0: '\u2014', 1: '1m', 5: '5m', 60: '1h', 240: '4h', '1D': '1D' };
 const CANDLE_HIST_N = { 1: 50, 5: 50, 60: 24, 240: 12, '1D': 8 }; // bougies récentes prises pour caler l'échelle de prix (1 jour environ)
@@ -2065,7 +2067,7 @@ function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bou
 // Dimensions réelles de la zone graphique (plein écran) : le SVG est dessiné à l'échelle 1:1, sans déformation
 function candleDims() {
   const rpp = rp.on ? document.getElementById('rpBar') : null; // replay : barres du haut et du bas masquées, seule la barre d'icônes du replay occupe le bas
-  return { W: Math.max(300, Math.round(window.innerWidth)), H: Math.max(300, Math.round(window.innerHeight) - (rpp && rpp.offsetHeight ? rpp.offsetHeight : rp.on ? 58 : 90)) };
+  return { W: Math.max(300, Math.round(window.innerWidth)), H: Math.max(300, Math.round(window.innerHeight) - (rpp && rpp.offsetHeight ? rpp.offsetHeight : rp.on ? 58 : candleClean ? 46 : 90)) };
 }
 function candleNiceStep(rng, n) {
   const raw = rng / n, p = Math.pow(10, Math.floor(Math.log10(raw))), m = raw / p;
@@ -2096,6 +2098,7 @@ function candleFibLevels(dly) {
 }
 const CANDLE_UP = '#00a3e0', CANDLE_DN = '#ffffff'; // couleurs des bougies comme TradingView (haussière bleue, baissière blanche)
 const CANDLE_G = { AX: 60, TOP: 44, BOT: 14, LEFT: 4 }; // géométrie du graphique (aussi utilisée par les gestes)
+if (candleClean) CANDLE_G.AX = 0;
 function candleSvg(day, dly, view, id) {
   const rpx = candleRpPoh(id); // replay : POH / daily calculés à la position du replay
   if (rpx) { day = rpx.day; dly = rpx.dly; }
@@ -2553,6 +2556,21 @@ document.getElementById('candleStrip')?.addEventListener('click', (e) => {
   candleNavUpdate();
 });
 document.getElementById('candleClose')?.addEventListener('click', () => document.getElementById('candleToggle').click());
+function candleCleanApply() { // mode épuré : échelle de prix + rangée Fibo / Sweep / F+S masquées
+  const b = document.getElementById('candleBody');
+  if (b) b.classList.toggle('cc-clean', candleClean);
+  CANDLE_G.AX = rp.on || candleClean ? 0 : 60;
+}
+candleCleanApply();
+document.getElementById('candleList').addEventListener('click', (e) => { // clic sur le nom du symbole : bascule le mode épuré (enregistré)
+  const n = e.target.closest('.cd-name');
+  if (!n || document.getElementById('candleBody').classList.contains('collapsed')) return;
+  e.stopPropagation(); e.preventDefault();
+  candleClean = !candleClean;
+  try { localStorage.setItem('candleClean', candleClean ? '1' : '0'); } catch (err) { /* pas de stockage */ }
+  candleCleanApply();
+  if (candlePoh) candleRender();
+}, true);
 let candleRz = 0;
 window.addEventListener('resize', () => { clearTimeout(candleRz); candleRz = setTimeout(() => { if (candlePoh && !document.getElementById('candleBody').classList.contains('collapsed')) candleRender(); }, 200); });
 document.getElementById('candlePrev')?.addEventListener('click', () => candleGo(candleIndex() - 1));
@@ -2893,7 +2911,7 @@ function candleRpUi() { // texte d'état + boutons
 function candleRpMode(on) { // replay plein écran façon TradingView : plus de barre du haut (Fibo/Sweep/F+S), ni de barre du bas (périodes), ni d'échelle de prix à droite
   const body = document.getElementById('candleBody');
   if (body) body.classList.toggle('rp-mode', !!on);
-  CANDLE_G.AX = on ? 0 : 60;
+  CANDLE_G.AX = on || candleClean ? 0 : 60;
 }
 function candleRpSync() { // le panneau n'apparaît que sur la paire en replay ; en changeant de paire, la lecture se met en pause
   const p = rpEl('candleRp');
