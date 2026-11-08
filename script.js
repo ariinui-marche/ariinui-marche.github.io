@@ -1998,21 +1998,27 @@ function candleRpBars(full, id) { // barres visibles pendant le replay (copie mi
   return rp.view;
 }
 const RP_SLOTS = { '12': [0, 2], '14': [2, 3], '15': [3, 5], '17': [5, 10], '22': [10, 11], '23': [11, 14], '02': [14, 15], '03': [15, 19], '07': [19, 24] }; // mêmes périodes POH que le proxy (heures UTC+2)
-function candleRpPoh(id) { // replay : POH et bougies D3..D0 recalculés à partir des barres fines JUSQU'À la position du replay (le POH en cours se forme comme le prix)
+function candleRpPoh(id) { // replay : POH et bougies D3..D0 recalculés à partir des barres fines JUSQU'À la position du replay ; la journée POH commence toujours par la bougie 12h, le POH en cours se forme avec le prix (comme D0)
   if (!rp.on || rp.id !== id || rp.pick) return null;
   const tfSec = (candleHistTf === '1D' ? 1440 : +candleHistTf || 1) * 60, cut = rp.t + tfSec;
   let bars = null, used = '';
-  for (const tf of ['1', '5', '60']) { const h = candleHistData[id + '|' + tf]; if (h && h.bars.length) { bars = h.bars; used = tf; break; } }
+  for (const tf of ['1', '5', '60']) { // barres les plus fines qui couvrent la position du replay (4 jours d'avance pour D3), sinon les plus anciennes disponibles
+    const h = candleHistData[id + '|' + tf];
+    if (!h || !h.bars.length) continue;
+    if (!bars || h.bars[0][0] < bars[0][0]) { bars = h.bars; used = tf; }
+    if (h.bars[0][0] <= cut - 5 * 86400) { bars = h.bars; used = tf; break; }
+  }
   if (!bars) return { day: { d: '', c: {} }, dly: [] };
   const key = id + '|' + used + '|' + cut + '|' + bars.length;
   if (rp.poh && rp.poh.key === key) return rp.poh;
+  const bsec = +used * 60;
   let a = 0, b = bars.length; const from = cut - 6 * 86400;
   while (a < b) { const m = (a + b) >> 1; if (bars[m][0] < from) a = m + 1; else b = m; }
   const days = new Map(); let lastK = null;
-  for (let i = a; i < bars.length && bars[i][0] < cut; i++) {
+  for (let i = a; i < bars.length && bars[i][0] + bsec <= cut; i++) { // seules les barres entièrement jouées (pas de futur)
     const [t, o, h, l, c] = bars[i], k = Math.floor((t + 7200) / 86400);
     const d = days.get(k);
-    if (!d) days.set(k, { o, h, l, c, slots: {} }); else { if (h > d.h) d.h = h; if (l < d.l) d.l = l; d.c = c; }
+    if (!d) days.set(k, { o, h, l, c }); else { if (h > d.h) d.h = h; if (l < d.l) d.l = l; d.c = c; }
     lastK = k;
   }
   const out = { key, day: { d: '', c: {} }, dly: [] };
@@ -2020,22 +2026,14 @@ function candleRpPoh(id) { // replay : POH et bougies D3..D0 recalculés à part
   const ks = [...days.keys()].sort((x, y) => x - y).slice(-4);
   out.dly = ks.map((k) => { const d = days.get(k); return [k * 86400 - 7200, d.o, d.h, d.l, d.c]; });
   out.day.d = new Date(lastK * 86400 * 1000).toISOString().slice(0, 10);
-  // POH comme Arii SNIPER : pour chaque période, sa DERNIÈRE occurrence terminée (jour en cours si finie, sinon la veille) ; un POH ne bouge plus, seule D0 suit le prix
-  const per = {}; // jour -> période -> [o, h, l, c]
-  for (let i = a; i < bars.length && bars[i][0] < cut; i++) {
-    const [t, o, h, l, c] = bars[i], k = Math.floor((t + 7200) / 86400), hr = Math.floor(((t + 7200) % 86400) / 3600);
-    for (const sl of Object.keys(RP_SLOTS)) {
-      if (hr < RP_SLOTS[sl][0] || hr >= RP_SLOTS[sl][1]) continue;
-      const dm = per[k] || (per[k] = {}), s0 = dm[sl];
-      if (!s0) dm[sl] = [o, h, l, c]; else { if (h > s0[1]) s0[1] = h; if (l < s0[2]) s0[2] = l; s0[3] = c; }
-    }
-  }
-  const pk = Object.keys(per).map(Number).sort((x, y) => y - x);
-  for (const sl of Object.keys(RP_SLOTS)) {
-    for (const k of pk) {
-      if (!per[k][sl] || k * 86400 - 7200 + RP_SLOTS[sl][1] * 3600 > cut) continue; // période pas encore terminée
-      out.day.c[sl] = per[k][sl];
-      break;
+  for (let i = a; i < bars.length && bars[i][0] + bsec <= cut; i++) { // POH du jour de trading en cours (UTC+2) : de 12h jusqu'à la période en cours
+    const [t, o, h, l, c] = bars[i];
+    if (Math.floor((t + 7200) / 86400) !== lastK) continue;
+    const hr = Math.floor(((t + 7200) % 86400) / 3600);
+    for (const k of Object.keys(RP_SLOTS)) {
+      if (hr < RP_SLOTS[k][0] || hr >= RP_SLOTS[k][1]) continue;
+      const s0 = out.day.c[k];
+      if (!s0) out.day.c[k] = [o, h, l, c]; else { if (h > s0[1]) s0[1] = h; if (l < s0[2]) s0[2] = l; s0[3] = c; }
     }
   }
   rp.poh = out;
@@ -2911,7 +2909,7 @@ function candleRpEnter() {
   if (candleHistTf === '0') rpEl('candleHistNext').click(); // le replay a besoin des bougies : 1m par défaut
   Object.assign(rp, { on: true, id, pick: true, playing: false, pos: null, done: [], msg: '', view: null, vkey: '' });
   candleHistEnsure(id);
-  if (!['1', '5', '60'].includes(candleHistTf)) candleHistEnsure(id, '60'); // 4h / 1D : barres 1h pour recalculer les POH
+  if (candleHistTf !== '60') candleHistEnsure(id, '60'); // barres 1h : historique long pour D3..D0 et POH quand le replay démarre loin dans le passé
   candleRpSync();
   const tw = rpEl('rpTw'); // widget Sell / Buy : recentré en bas à chaque nouveau replay
   if (tw) { tw.style.top = 'auto'; tw.style.bottom = ''; tw.style.left = Math.max(0, (innerWidth - tw.offsetWidth) / 2) + 'px'; }
