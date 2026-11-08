@@ -2796,7 +2796,7 @@ function candleActCls(actual, forecast) {
 }
 function candleEvClose() { document.getElementById('candleEvSheet')?.remove(); }
 
-// ===== ALERTE : tableau Symbol | 50 % façon PAPER TRADING =====
+// ===== ALERTE : tableau Symbol | 50 % | Sens | Type | Result | Rpot, règle PAPER TRADING (FVG 1 min sur le 50 %) =====
 // 50 % = milieu entre l'entrée (bord de la boîte 14H) et le TP1 (bord ± R) : haut + R/2 ou bas - R/2. L'heure affichée (UTC-10) est celle de la 1re touche.
 const ALERTE_LS = 'alerteCacheV1';
 let alerteData = null; // { PAIR: { d, hi, lo, up, dn } }
@@ -2811,28 +2811,31 @@ function alerteRender() {
   const box = document.getElementById('alerteTable');
   if (!box) return;
   if (!alerteData) { box.innerHTML = '<div class="charts-intro">Alert data unavailable right now.</div>'; return; }
-  // Une ligne par niveau touché : le 1er touché = PTP, le côté opposé touché ensuite = OCO. Type : BUY côté haut, SELL côté bas.
+  // Règle PAPER TRADING : un 50 % compte seulement si sa 1re touche est la barre du milieu d'un FVG 1 min qui le chevauche (heure = 3e barre, clôturée).
+  // PTP = côté de la 1re sortie de la boîte 14H, OCO = côté opposé. Type : BUY côté haut, SELL côté bas. Résultat : TP / SL (un des deux trades) ; Rpot = R maximum atteint (vide si SL).
   const rows = [];
   for (const p of CORR_ALL_PAIRS) {
-    const f = alerteData[p.id];
-    if (!f) continue;
+    const f = alerteData[p.id], q = f && f.pt;
+    if (!q) continue;
     const ev = [];
-    if (f.up) ev.push({ t: f.up, side: 'up' });
-    if (f.dn) ev.push({ t: f.dn, side: 'dn' });
-    ev.sort((x, y) => x.t - y.t);
-    ev.forEach((e, k) => rows.push({ id: p.id, f, t: e.t, side: e.side, sens: k === 0 ? 'PTP' : 'OCO' }));
+    if (q.up) ev.push({ t: q.up, side: 'up' });
+    if (q.dn) ev.push({ t: q.dn, side: 'dn' });
+    ev.forEach((e) => rows.push({ id: p.id, f, q, t: e.t, side: e.side, sens: (e.side === 'up') === (q.dir === 1) ? 'PTP' : 'OCO' }));
   }
   rows.sort((a, b) => a.t - b.t);
   const dec = (v) => v.toFixed(v >= 1000 ? 2 : v >= 100 ? 3 : 5);
-  box.innerHTML = `<div class="al-grid"><div class="al-h">Symbol</div><div class="al-h">50%</div><div class="al-h">Sens</div><div class="al-h">Type</div>` +
+  box.innerHTML = `<div class="al-grid"><div class="al-h">Symbol</div><div class="al-h">50%</div><div class="al-h">Sens</div><div class="al-h">Type</div><div class="al-h">Result</div><div class="al-h">Rpot</div>` +
     (rows.length ? rows.map((r, i) => {
       const b = r.id.slice(0, 3), q = r.id.slice(3), col = alerteZone(r.t), alt = i % 2 === 0 ? 'a' : 'b';
       const R = r.f.hi - r.f.lo;
       const tip = `Box 14H: ${dec(r.f.hi)} / ${dec(r.f.lo)} · 50% up ${dec(r.f.hi + R / 2)} · 50% down ${dec(r.f.lo - R / 2)}`;
+      const res = r.q.res === 1 ? '<span style="color:#089981">TP</span>' : r.q.res === 2 ? '<span style="color:#f23645">SL</span>' : '—';
+      const rp = r.q.res !== 2 && r.q.rp != null ? '+' + r.q.rp.toFixed(2) + 'R' : '';
       return `<div class="al-c ${alt}" title="${tip}"><span style="color:${ALERTE_CCY[b] || '#e5e5e5'}">${b}</span> <span style="color:${ALERTE_CCY[q] || '#e5e5e5'}">${q}</span></div>` +
         `<div class="al-c al-t" style="color:${col};background:${col}1f" title="${tip}">${alerteTime(r.t)}</div>` +
         `<div class="al-c ${alt} al-sens ${r.sens === 'OCO' ? 'oco' : 'ptp'}">${r.sens}</div>` +
-        `<div class="al-c ${alt} al-type ${r.side === 'up' ? 'buy' : 'sell'}">${r.side === 'up' ? 'BUY' : 'SELL'}</div>`;
+        `<div class="al-c ${alt} al-type ${r.side === 'up' ? 'buy' : 'sell'}">${r.side === 'up' ? 'BUY' : 'SELL'}</div>` +
+        `<div class="al-c ${alt}">${res}</div><div class="al-c ${alt}">${rp}</div>`;
     }).join('') : '<div class="al-empty">—</div>') +
     `</div>`;
 }
