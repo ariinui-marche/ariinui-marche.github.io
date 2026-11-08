@@ -2020,17 +2020,24 @@ function candleRpPoh(id) { // replay : POH et bougies D3..D0 recalculés à part
   const ks = [...days.keys()].sort((x, y) => x - y).slice(-4);
   out.dly = ks.map((k) => { const d = days.get(k); return [k * 86400 - 7200, d.o, d.h, d.l, d.c]; });
   out.day.d = new Date(lastK * 86400 * 1000).toISOString().slice(0, 10);
-  for (let i = a; i < bars.length && bars[i][0] < cut; i++) { // POH du jour de trading en cours (UTC+2)
-    const [t, o, h, l, c] = bars[i];
-    if (Math.floor((t + 7200) / 86400) !== lastK) continue;
-    const hr = Math.floor(((t + 7200) % 86400) / 3600);
-    for (const k of Object.keys(RP_SLOTS)) {
-      if (hr < RP_SLOTS[k][0] || hr >= RP_SLOTS[k][1]) continue;
-      const s = out.day.c[k];
-      if (!s) out.day.c[k] = [o, h, l, c]; else { if (h > s[1]) s[1] = h; if (l < s[2]) s[2] = l; s[3] = c; }
+  // POH comme Arii SNIPER : pour chaque période, sa DERNIÈRE occurrence terminée (jour en cours si finie, sinon la veille) ; un POH ne bouge plus, seule D0 suit le prix
+  const per = {}; // jour -> période -> [o, h, l, c]
+  for (let i = a; i < bars.length && bars[i][0] < cut; i++) {
+    const [t, o, h, l, c] = bars[i], k = Math.floor((t + 7200) / 86400), hr = Math.floor(((t + 7200) % 86400) / 3600);
+    for (const sl of Object.keys(RP_SLOTS)) {
+      if (hr < RP_SLOTS[sl][0] || hr >= RP_SLOTS[sl][1]) continue;
+      const dm = per[k] || (per[k] = {}), s0 = dm[sl];
+      if (!s0) dm[sl] = [o, h, l, c]; else { if (h > s0[1]) s0[1] = h; if (l < s0[2]) s0[2] = l; s0[3] = c; }
     }
   }
-  for (const k of Object.keys(out.day.c)) if (lastK * 86400 - 7200 + RP_SLOTS[k][1] * 3600 > cut) delete out.day.c[k]; // un POH n'apparaît qu'une fois sa période terminée et ne bouge plus ; seule D0 suit le prix (comme Arii SNIPER)
+  const pk = Object.keys(per).map(Number).sort((x, y) => y - x);
+  for (const sl of Object.keys(RP_SLOTS)) {
+    for (const k of pk) {
+      if (!per[k][sl] || k * 86400 - 7200 + RP_SLOTS[sl][1] * 3600 > cut) continue; // période pas encore terminée
+      out.day.c[sl] = per[k][sl];
+      break;
+    }
+  }
   rp.poh = out;
   return out;
 }
