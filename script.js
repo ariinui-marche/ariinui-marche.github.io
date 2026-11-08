@@ -2959,6 +2959,77 @@ document.getElementById('alerteTable')?.addEventListener('click', (e) => {
   const r = e.target.closest('[data-fid]');
   if (r) alerteFocus(r.dataset.fid, +r.dataset.ft);
 });
+// ===== RAPPORT DE FIN DE JOURNÉE (jour de trading 22:00 UTC → 22:00 UTC) : signaux, volatilité par paire et par devise, annonces majeures, cassures PDH/PDL, sweeps =====
+// Généré à partir des données déjà chargées (bougies quotidiennes, POH, journal des signaux du serveur, calendrier du site) ; le serveur envoie en plus un résumé à 22:05 UTC (notification).
+let alerteJournal = null, alerteJournalAt = 0, alerteEco = null;
+const alEsc = (t) => String(t == null ? '' : t).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+async function alerteReportLoad() {
+  const box = document.getElementById('alerteReport');
+  if (!box || !alerteData || !alerteCtxData) return;
+  try {
+    if (Date.now() - alerteJournalAt > 60000) {
+      const r = await fetch(`${ALERTE_API}/alerte?journal=1`, { cache: 'no-store', signal: AbortSignal.timeout(10000) });
+      if (r.ok) { alerteJournal = (await r.json()).journal || {}; alerteJournalAt = Date.now(); }
+    }
+    if (!alerteEco) { const r = await fetch('./data/eco-calendar.json', { cache: 'no-store' }); if (r.ok) alerteEco = (await r.json()).events || []; }
+  } catch (e) { /* le rapport s'affiche avec ce qui est disponible */ }
+  alerteReportRender();
+}
+function alerteReportRender() {
+  const box = document.getElementById('alerteReport');
+  if (!box || !alerteData || !alerteCtxData) return;
+  const days = {}; for (const k of Object.keys(alerteData)) if (alerteData[k] && alerteData[k].d) days[alerteData[k].d] = (days[alerteData[k].d] || 0) + 1;
+  const dstr = Object.keys(days).sort((a, b) => days[b] - days[a] || (a < b ? 1 : -1))[0];
+  if (!dstr) { box.innerHTML = ''; return; }
+  const dayEnd = Date.parse(dstr + 'T22:00:00Z') / 1000, dayStart = dayEnd - 86400, over = Date.now() / 1000 >= dayEnd;
+  const ccyOf = (id) => [id.slice(0, 3), id.slice(3)];
+  // volatilité du jour par paire : amplitude D0 / moyenne des 20 jours précédents (flux quotidien du site)
+  const vol = [], byC = {};
+  for (const p of CORR_ALL_PAIRS) {
+    const dy = alerteCtxData.daily[p.id], hist = ((chartsCandles || {})[p.id] || []).slice(0, -1).slice(-20);
+    if (!dy || !dy.length || hist.length < 10 || /^(BTC|ETH)/.test(p.id)) continue;
+    const d0 = dy[dy.length - 1], base = hist.reduce((a, b) => a + (b[2] - b[3]), 0) / hist.length;
+    if (!(base > 0)) continue;
+    const r = (d0[2] - d0[3]) / base, mv = (d0[4] - d0[1]) / d0[1] * 100;
+    vol.push({ id: p.id, r, mv });
+    for (const c of ccyOf(p.id)) (byC[c] = byC[c] || []).push(r);
+  }
+  vol.sort((a, b) => b.r - a.r);
+  const fmtP = (v) => `<span class="alr-p"><b>${v.id.slice(0, 3)}/${v.id.slice(3)}</b> ${v.r.toFixed(1)}× <i class="${v.mv >= 0 ? 'up' : 'dn'}">${v.mv >= 0 ? '+' : ''}${v.mv.toFixed(2)}%</i></span>`;
+  const ccy = Object.keys(byC).filter((c) => byC[c].length >= 3).map((c) => ({ c, r: byC[c].reduce((a, b) => a + b, 0) / byC[c].length })).sort((a, b) => b.r - a.r);
+  // signaux du jour (journal serveur)
+  const sg = Object.values(alerteJournal || {}).filter((x) => x.d === dstr);
+  const tp = sg.filter((x) => x.res === 1).length, sl = sg.filter((x) => x.res === 2).length, op = sg.length - tp - sl;
+  const best = sg.filter((x) => x.mf != null && x.res !== 2).sort((a, b) => b.mf - a.mf).slice(0, 3);
+  // cassures de PDH / PDL par le corps d'une POH et sweeps de D1 par 14h / 22h / 02h
+  let nH = 0, nL = 0, s14 = 0, s22 = 0, s02 = 0;
+  for (const p of CORR_ALL_PAIRS) {
+    const dy = alerteCtxData.daily[p.id], ds = alerteCtxData.pairs[p.id], day = ds && ds[ds.length - 1];
+    if (!dy || dy.length < 3 || !day || !day.c || day.d !== dstr) continue;
+    const H = dy[dy.length - 2][2], L = dy[dy.length - 2][3];
+    let bh = false, bl = false;
+    for (const sl2 of ALERTE_SLOTS) {
+      const c = day.c[sl2]; if (!c) continue;
+      if (Math.max(c[0], c[3]) > H) bh = true;
+      if (Math.min(c[0], c[3]) < L) bl = true;
+      const sw = (c[1] > H && c[3] < H) || (c[2] < L && c[3] > L);
+      if (sw) { if (sl2 === '14') s14++; else if (sl2 === '22') s22++; else if (sl2 === '02') s02++; }
+    }
+    if (bh) nH++; if (bl) nL++;
+  }
+  // annonces majeures du jour (heure UTC-10)
+  const ev = (alerteEco || []).filter((e) => e.impact === 'High' && e.date).map((e) => ({ e, t: Date.parse(e.date) / 1000 })).filter((x) => x.t >= dayStart && x.t < dayEnd).sort((a, b) => a.t - b.t);
+  const evHtml = ev.length ? ev.slice(0, 8).map(({ e, t }) => `<div class="alr-ev"><b>${alerteTime(t)}</b> ${alEsc(e.country)} · ${alEsc(e.title)}${e.actual ? ` <i>${alEsc(e.actual)}</i> <span>/ ${alEsc(e.forecast || '—')}</span>` : ''}</div>`).join('') + (ev.length > 8 ? `<div class="alr-ev">+${ev.length - 8}</div>` : '') : '<div class="alr-ev">Aucune annonce majeure</div>';
+  box.innerHTML = `<div class="alr-t">Jour de trading ${alEsc(dstr)} · ${over ? 'terminé' : 'en cours'}</div>` +
+    `<div class="alr-h">Signaux</div><div class="alr-r">${sg.length ? `${sg.length} signaux · <b class="up">${tp} TP</b> · <b class="dn">${sl} SL</b>${op ? ` · ${op} en cours` : ''}${tp + sl ? ` · win rate ${Math.round(100 * tp / (tp + sl))} %` : ''}` : 'Aucun signal enregistré'}</div>` +
+    (best.length ? `<div class="alr-r">Meilleurs R potentiels : ${best.map((x) => `${x.pair.slice(0, 3)}/${x.pair.slice(3)} +${x.mf.toFixed(1)}R`).join(' · ')}</div>` : '') +
+    `<div class="alr-h">Volatilité (amplitude du jour / moyenne 20 jours)</div>` +
+    `<div class="alr-r"><span class="alr-l">Plus actives</span>${vol.slice(0, 5).map(fmtP).join('')}</div>` +
+    `<div class="alr-r"><span class="alr-l">Plus calmes</span>${vol.slice(-5).reverse().map(fmtP).join('')}</div>` +
+    (ccy.length ? `<div class="alr-r"><span class="alr-l">Devises</span>${ccy.map((x) => `<span class="alr-p"><b>${x.c}</b> ${x.r.toFixed(1)}×</span>`).join('')}</div>` : '') +
+    `<div class="alr-h">Niveaux</div><div class="alr-r">PDL cassé par un corps : <b>${nL}</b> paires · PDH : <b>${nH}</b> · Sweeps de D1 : 14h <b>${s14}</b> · 22h <b>${s22}</b> · 02h <b>${s02}</b></div>` +
+    `<div class="alr-h">Annonces majeures (UTC-10)</div>${evHtml}`;
+}
 async function alerteLoad() {
   if (!alerteData) {
     try { const c = JSON.parse(localStorage.getItem(ALERTE_LS) || 'null'); if (c && c.f50) { alerteData = c.f50; alerteRender(); } } catch (e) { /* pas de cache */ }
@@ -2968,6 +3039,7 @@ async function alerteLoad() {
     alerteData = j.f50 || {};
     alerteCtxData = { pairs: j.pairs || {}, daily: j.daily || {} };
     if (!chartsCandles) { try { const r = await fetch('./data/daily-candles.json', { cache: 'no-store' }); if (r.ok) chartsCandles = (await r.json()).pairs; } catch (e) { /* contexte sans moyenne 20 jours */ } }
+    alerteReportLoad();
     try { localStorage.setItem(ALERTE_LS, JSON.stringify({ f50: alerteData })); } catch (e) { /* quota */ }
   } catch (e) { /* on garde la dernière version */ }
   alerteRender();

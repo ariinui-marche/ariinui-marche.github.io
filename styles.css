@@ -1262,6 +1262,16 @@ body.cc-lock { overflow: hidden; }
 .al-c.b { background: rgba(128,128,128,.08); }
 .al-c.al-t { text-align: center; font-variant-numeric: tabular-nums; }
 .al-go { cursor: pointer; }
+.al-report { margin-top: 12px; background: #101216; border: 1px solid #1d1f24; border-radius: 10px; padding: 0 12px; }
+.al-report summary { cursor: pointer; padding: 11px 0; font-weight: 700; color: #e5e5e5; font-size: 14px; }
+.alr-t { color: #9aa0a6; font-size: 12px; margin-bottom: 4px; }
+.alr-h { margin: 12px 0 5px; font-size: 11px; letter-spacing: .6px; text-transform: uppercase; color: #6b7280; font-weight: 700; }
+.alr-r { font-size: 13px; color: #cfd2d6; line-height: 1.9; }
+.alr-l { display: block; font-size: 11px; color: #6b7280; line-height: 1.4; margin-top: 4px; }
+.alr-p { display: inline-block; margin: 0 6px 4px 0; padding: 3px 8px; background: #1a1c20; border: 1px solid #2a2d33; border-radius: 999px; font-size: 12px; white-space: nowrap; }
+.alr-p i, .alr-r .up { color: #089981; font-style: normal; } .alr-p i.dn, .alr-r .dn { color: #f23645; }
+.alr-ev { font-size: 13px; color: #cfd2d6; padding: 4px 0; border-top: 1px solid #1d1f24; } .alr-ev b { color: #5cc8ff; margin-right: 6px; } .alr-ev i { font-style: normal; color: #f5b642; } .alr-ev span { color: #6b7280; }
+.al-report > div:last-child { padding-bottom: 12px; }
 .al-ctx { grid-column: 1 / -1; padding: 2px 6px 8px; display: flex; flex-wrap: wrap; gap: 4px; font-weight: 500; }
 .al-ctx.a { background: rgba(128,128,128,.15); }
 .al-ctx.b { background: rgba(128,128,128,.08); }
