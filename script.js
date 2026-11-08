@@ -2030,6 +2030,7 @@ function candleRpPoh(id) { // replay : POH et bougies D3..D0 recalculés à part
       if (!s) out.day.c[k] = [o, h, l, c]; else { if (h > s[1]) s[1] = h; if (l < s[2]) s[2] = l; s[3] = c; }
     }
   }
+  for (const k of Object.keys(out.day.c)) if (lastK * 86400 - 7200 + RP_SLOTS[k][1] * 3600 > cut) delete out.day.c[k]; // un POH n'apparaît qu'une fois sa période terminée et ne bouge plus ; seule D0 suit le prix (comme Arii SNIPER)
   rp.poh = out;
   return out;
 }
