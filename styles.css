@@ -1262,6 +1262,15 @@ body.cc-lock { overflow: hidden; }
 .al-c.b { background: rgba(128,128,128,.08); }
 .al-c.al-t { text-align: center; font-variant-numeric: tabular-nums; }
 .al-go { cursor: pointer; }
+.al-ctx { grid-column: 1 / -1; padding: 2px 6px 8px; display: flex; flex-wrap: wrap; gap: 4px; font-weight: 500; }
+.al-ctx.a { background: rgba(128,128,128,.15); }
+.al-ctx.b { background: rgba(128,128,128,.08); }
+.al-chip { font-size: 11px; line-height: 1; padding: 4px 7px; border-radius: 999px; background: #1a1c20; color: #aeb2b8; border: 1px solid #2a2d33; white-space: nowrap; }
+.al-chip.hot { color: #f5b642; border-color: #6b5320; }
+.al-chip.cold { color: #6b7280; }
+.al-chip.ok { color: #089981; border-color: #0b4b43; }
+.al-chip.bad { color: #f23645; border-color: #5a1e25; }
+.al-star { color: #f5b642; font-size: 14px; }
 .al-empty { grid-column: 1 / -1; padding: 14px 12px; color: #9aa0a6; background: rgba(128,128,128,.08); }
 .al-sens.ptp { color: #e5e5e5; }
 .al-sens.oco { color: #b388ff; }

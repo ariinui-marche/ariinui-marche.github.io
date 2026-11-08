@@ -2833,6 +2833,49 @@ function alerteZone(t) { // couleurs de session de PAPER TRADING : 14-17 bleu, 2
   const h = alerteHour(t);
   return (h >= 14 && h < 17) ? '#2962ff' : (h >= 22 || h < 2) ? '#f23645' : (h >= 2 && h < 3) ? '#089981' : (h >= 3 && h < 7) ? '#fdd835' : '#787b86';
 }
+// Contexte d'un signal, connu AVANT la décision de 15 h (UTC-10) : volatilité de la veille, tendance 3 jours, cassure de PDH/PDL par le corps d'une POH, sweeps de D1 par les bougies 14h / 22h / 02h, Fibo de D1.
+// ★ « profil vendredi » (hypothèse à valider avec le journal) : paire contenant le dollar + signal dans le sens de la tendance D3→D1 + veille > 1,3× sa moyenne des 20 jours.
+let alerteCtxData = null; // { pairs, daily } du proxy
+const ALERTE_SLOTS = ['12', '14', '15', '17', '22', '23', '02', '03', '07'];
+function alerteCtx(id, side) {
+  const dy = alerteCtxData && alerteCtxData.daily && alerteCtxData.daily[id], ds = alerteCtxData && alerteCtxData.pairs && alerteCtxData.pairs[id];
+  if (!dy || dy.length < 3 || !ds || !ds.length) return null;
+  const day = ds[ds.length - 1], d1 = dy[dy.length - 2], d2 = dy[dy.length - 3], d3 = dy.length >= 4 ? dy[dy.length - 4] : d2;
+  if (!day || !day.c) return null;
+  const H = d1[2], L = d1[3], cc = [];
+  const hist = (chartsCandles && chartsCandles[id] || []).slice(0, -2).slice(-20); // 20 jours précédant la veille (flux quotidien du site)
+  const base = hist.length >= 10 ? hist.reduce((a, b) => a + (b[2] - b[3]), 0) / hist.length : null;
+  const vr = base ? (H - L) / base : null;
+  const trend = d1[4] - d3[1], aligned = (trend > 0) === (side === 'up');
+  let bh = null, bl = null;
+  const sw = [];
+  for (const sl of ALERTE_SLOTS) {
+    const c = day.c[sl];
+    if (!c) continue;
+    if (bh === null && Math.max(c[0], c[3]) > H) bh = sl;
+    if (bl === null && Math.min(c[0], c[3]) < L) bl = sl;
+    if (sl === '14' || sl === '22' || sl === '02') {
+      if (c[1] > H && c[3] < H) sw.push(sl + 'h H');
+      if (c[2] < L && c[3] > L) sw.push(sl + 'h L');
+    }
+  }
+  const bu1 = d1[4] > d1[1], be1 = d1[4] < d1[1], bu2 = d2[4] > d2[1], be2 = d2[4] < d2[1];
+  const fibo = bu1 && bu2 ? 'haussier' : be1 && be2 ? 'baissier' : null;
+  const star = /USD|XAU/.test(id) && aligned && vr !== null && vr >= 1.3;
+  return { vr, aligned, trendUp: trend > 0, bh, bl, sw, fibo, star };
+}
+function alerteCtxHtml(c, side) {
+  if (!c) return '';
+  const chip = (t, cls, tip) => `<span class="al-chip ${cls || ''}" title="${tip || ''}">${t}</span>`;
+  const out = [];
+  if (c.vr !== null) out.push(chip(`Veille ${c.vr.toFixed(1)}×`, c.vr >= 1.3 ? 'hot' : c.vr < 0.8 ? 'cold' : '', 'Amplitude de la veille (D1) / sa moyenne des 20 jours'));
+  out.push(chip(`Tendance 3j ${c.trendUp ? '▲' : '▼'} ${c.aligned ? 'alignée' : 'contre'}`, c.aligned ? 'ok' : 'bad', 'Sens de D3 → D1 comparé au sens du signal'));
+  if (c.bh) out.push(chip(`PDH corps ${c.bh}h`, '', 'Une bougie POH a cassé le haut de la veille par son corps (heure UTC-10)'));
+  if (c.bl) out.push(chip(`PDL corps ${c.bl}h`, '', 'Une bougie POH a cassé le bas de la veille par son corps (heure UTC-10)'));
+  c.sw.forEach((x) => out.push(chip(`Sweep ${x}`, '', 'Mèche au-delà du haut / bas de D1 avec clôture de retour dans la plage')));
+  if (c.fibo) out.push(chip(`Fibo ${c.fibo === 'haussier' ? '▲' : '▼'}`, '', 'D2 et D1 vont dans le même sens : Fibo 38/50/61 actif'));
+  return out.join('');
+}
 function alerteRender() {
   const box = document.getElementById('alerteTable');
   if (!box) return;
@@ -2857,12 +2900,13 @@ function alerteRender() {
       const tip = `Box 14H: ${dec(r.f.hi)} / ${dec(r.f.lo)} · 50% up ${dec(r.f.hi + R / 2)} · 50% down ${dec(r.f.lo - R / 2)}`;
       const res = r.q.res === 1 ? '<span style="color:#089981">TP</span>' : r.q.res === 2 ? '<span style="color:#f23645">SL</span>' : '—';
       const rp = r.q.res !== 2 && r.q.rp != null ? '+' + r.q.rp.toFixed(2) + 'R' : '';
-      const da = `data-fid="${r.id}" data-ft="${r.t}"`;
-      return `<div class="al-c ${alt} al-go" ${da} title="${tip}"><span style="color:${ALERTE_CCY[b] || '#e5e5e5'}">${b}</span> <span style="color:${ALERTE_CCY[q] || '#e5e5e5'}">${q}</span></div>` +
+      const da = `data-fid="${r.id}" data-ft="${r.t}"`, cx = alerteCtx(r.id, r.side), star = cx && cx.star ? '<span class="al-star" title="Profil vendredi : paire dollar, tendance alignée, veille agitée (hypothèse en cours de test)">★</span> ' : '';
+      return `<div class="al-c ${alt} al-go" ${da} title="${tip}">${star}<span style="color:${ALERTE_CCY[b] || '#e5e5e5'}">${b}</span> <span style="color:${ALERTE_CCY[q] || '#e5e5e5'}">${q}</span></div>` +
         `<div class="al-c al-t al-go" ${da} style="color:${col};background:${col}1f" title="${tip}">${alerteTime(r.t)}</div>` +
         `<div class="al-c ${alt} al-go al-sens ${r.sens === 'OCO' ? 'oco' : 'ptp'}" ${da}>${r.sens}</div>` +
         `<div class="al-c ${alt} al-go al-type ${r.side === 'up' ? 'buy' : 'sell'}" ${da}>${r.side === 'up' ? 'BUY' : 'SELL'}</div>` +
-        `<div class="al-c ${alt} al-go" ${da}>${res}</div><div class="al-c ${alt} al-go" ${da}>${rp}</div>`;
+        `<div class="al-c ${alt} al-go" ${da}>${res}</div><div class="al-c ${alt} al-go" ${da}>${rp}</div>` +
+        (cx ? `<div class="al-ctx ${alt} al-go" ${da}>${alerteCtxHtml(cx, r.side)}</div>` : '');
     }).join('') : '<div class="al-empty">—</div>') +
     `</div>`;
 }
@@ -2922,6 +2966,8 @@ async function alerteLoad() {
   try {
     const j = await candleFetchProxy();
     alerteData = j.f50 || {};
+    alerteCtxData = { pairs: j.pairs || {}, daily: j.daily || {} };
+    if (!chartsCandles) { try { const r = await fetch('./data/daily-candles.json', { cache: 'no-store' }); if (r.ok) chartsCandles = (await r.json()).pairs; } catch (e) { /* contexte sans moyenne 20 jours */ } }
     try { localStorage.setItem(ALERTE_LS, JSON.stringify({ f50: alerteData })); } catch (e) { /* quota */ }
   } catch (e) { /* on garde la dernière version */ }
   alerteRender();
