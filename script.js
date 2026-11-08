@@ -1991,6 +1991,7 @@ function candleXhTime(t) { // secondes UTC -> « Sat 07 Nov '26  16:39 » en UTC
 let candleAl = [], candleAlAt = 0; // alertes de prix en attente (serveur) : { id, pair, price, dir, created }
 const candleAlHits = {};
 let candleAlDrag = null; // alerte en cours de déplacement : { aid, price, moved }
+let candlePrev = null; // niveau en cours de création (fiche « Price alert » ouverte) : { id, price } — ligne bleue d'aperçu qui reste visible tant que la fiche est ouverte
 function candleRpCount(full) { // nombre de barres dont l'ouverture <= rp.t (borne haute par dichotomie)
   let a = 0, b = full.length;
   while (a < b) { const m = (a + b) >> 1; if (full[m][0] <= rp.t) a = m + 1; else b = m; }
@@ -3417,6 +3418,12 @@ function candleAlSvg(id, y, xr, lo, hi, fmt) { // lignes bleues pointillées + �
       `<text x="${x0 + w - 13}" y="${(yy + 4).toFixed(1)}" text-anchor="middle" style="fill:#fff;font-size:12px;font-weight:700">✕</text>`;
     candleAlHits[id].push({ x: x0, y: yy - 10, w, h: 20, yc: yy, xr, aid: a.id });
   }
+  if (candlePrev && candlePrev.id === id && candlePrev.price >= lo && candlePrev.price <= hi) { // aperçu du niveau en cours de création
+    const yy = y(candlePrev.price), w = 96, x0 = xr - w - 6;
+    s += `<line x1="0" x2="${xr}" y1="${yy.toFixed(1)}" y2="${yy.toFixed(1)}" stroke="#2f7bff" stroke-width="1" stroke-dasharray="3 4" stroke-opacity=".9"/>` +
+      `<rect x="${x0}" y="${(yy - 10).toFixed(1)}" width="${w}" height="20" rx="4" fill="#2f7bff" fill-opacity=".85"/>` +
+      `<text x="${x0 + 8}" y="${(yy + 4).toFixed(1)}" style="fill:#fff;font-size:11px;font-weight:700">+ ${fmt(candlePrev.price)}</text>`;
+  }
   return s;
 }
 function candlePriceAt(id, yPx) { // ordonnée (pixels du graphique) -> prix
@@ -3448,7 +3455,7 @@ async function candleAlPost(body) {
   candleAlAt = Date.now();
   candleAlRedraw();
 }
-function candleAlClose() { document.getElementById('candleAlSheet')?.remove(); }
+function candleAlClose() { document.getElementById('candleAlSheet')?.remove(); if (candlePrev) { candlePrev = null; candleAlRedraw(); } }
 function candleAlSheet(title, sub, price, okLabel, onOk, withExpiry) { // petite fiche en bas : prix modifiable + Annuler / OK
   candleAlClose();
   const body = document.getElementById('candleBody');
@@ -3469,13 +3476,24 @@ function candleAlSheet(title, sub, price, okLabel, onOk, withExpiry) { // petite
     try { await onOk(inp ? parseFloat(inp.value) : null, wrap.querySelector('.ca-exp')?.value); candleAlClose(); } catch (e) { err.textContent = e.message || 'Error'; err.hidden = false; ok.disabled = false; }
   });
 }
+async function candleLiveLast(id) { // dernier prix 1 min en direct (le dernier prix « POH » peut dater de plusieurs heures) ; repli : dernier prix connu
+  try {
+    const r = await fetch(`https://ariinuiirgina.vercel.app/api/poh-candles?pair=${id}&tf=1&since=${Math.floor(Date.now() / 1000) - 900}`, { cache: 'no-store', signal: AbortSignal.timeout(6000) });
+    const j = r.ok ? await r.json() : null;
+    if (j && j.bars && j.bars.length) return j.bars[j.bars.length - 1][4];
+  } catch (e) { /* repli */ }
+  return candleLastPx(id);
+}
 function candleAlCreate(id, price) {
   const label = (CORR_ALL_PAIRS.find((p) => p.id === id) || { label: id }).label, dec = price >= 1000 ? 2 : price >= 100 ? 3 : 5;
   candleAlSheet(`Price alert · ${label}`, 'You will be notified (sound) when the price touches this level.', +price.toFixed(dec), 'Create alert', async (px, exp) => {
     if (!(px > 0)) throw new Error('Enter a valid price');
-    const last = candleLastPx(id);
+    const last = await candleLiveLast(id);
     await candleAlPost({ line: { pair: id, price: px, dir: last === null || px >= last ? 'above' : 'below', ttl: Number(exp) || 0 } });
   }, true);
+  candlePrev = { id, price: +price }; // la ligne reste visible pendant que la fiche est ouverte, et suit le prix saisi
+  candleAlRedraw();
+  document.querySelector('#candleAlSheet input')?.addEventListener('input', (e) => { const v = parseFloat(e.target.value); if (v > 0 && candlePrev) { candlePrev.price = v; candleAlRedraw(); } });
 }
 (function candleAlInit() {
   const list = document.getElementById('candleList');
@@ -3544,7 +3562,7 @@ function candleAlCreate(id, price) {
     candleAlDrag = null;
     if (e.type === 'pointercancel' || !d.moved) { candleRedraw(d.id, candleViewOf(d.id)); return; }
     cg.swallow = Date.now() + 600;
-    const last = candleLastPx(d.id), dec = d.price >= 1000 ? 2 : d.price >= 100 ? 3 : 5, price = +d.price.toFixed(dec);
+    const last = await candleLiveLast(d.id), dec = d.price >= 1000 ? 2 : d.price >= 100 ? 3 : 5, price = +d.price.toFixed(dec);
     try { await candleAlPost({ lineMove: { id: d.aid, price, dir: last === null || price >= last ? 'above' : 'below' } }); } catch (err) { candleRedraw(d.id, candleViewOf(d.id)); candleAlFetch(); }
   };
   const xhEnd = (e) => {
