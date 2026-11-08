@@ -2975,6 +2975,42 @@ async function alerteReportLoad() {
   } catch (e) { /* le rapport s'affiche avec ce qui est disponible */ }
   alerteReportRender();
 }
+// ===== STATISTIQUES DU JOURNAL : win rate par profil (preuve avec tes propres signaux) =====
+// Chaque signal enregistré par le serveur est classé avec les données connues AVANT sa journée (bougies quotidiennes du site) : volatilité de la veille, tendance D3→D1 alignée ou non, paire dollar, ★ (= dollar + tendance alignée + veille ≥ 1,3×).
+function alerteSigCtx(x) {
+  const arr = (chartsCandles || {})[x.pair];
+  if (!arr) return null;
+  const t0 = Date.parse(x.d + 'T00:00:00Z') / 1000, prev = arr.filter((b) => b[0] < t0), n = prev.length;
+  if (n < 24) return null;
+  const d1 = prev[n - 1], d3 = prev[n - 3], hist = prev.slice(n - 21, n - 1), base = hist.reduce((a, b) => a + (b[2] - b[3]), 0) / hist.length;
+  if (!(base > 0)) return null;
+  const vr = (d1[2] - d1[3]) / base, trend = d1[4] - d3[1], aligned = (trend > 0) === (x.side === 'BUY'), usd = /USD|XAU/.test(x.pair);
+  return { vr, aligned, usd, star: usd && aligned && vr >= 1.3 };
+}
+function alerteStatsHtml() {
+  const all = Object.values(alerteJournal || {}).filter((x) => x.res === 1 || x.res === 2).map((x) => ({ x, c: alerteSigCtx(x) })).filter((r) => r.c);
+  const days = new Set(all.map((r) => r.x.d)).size;
+  const groups = [
+    ['Tous les signaux', () => true],
+    ['★ profil vendredi', (r) => r.c.star],
+    ['Sans ★', (r) => !r.c.star],
+    ['Veille ≥ 1,3×', (r) => r.c.vr >= 1.3],
+    ['Veille < 1,3×', (r) => r.c.vr < 1.3],
+    ['Tendance alignée', (r) => r.c.aligned],
+    ['Tendance contre', (r) => !r.c.aligned],
+    ['Paires dollar / or', (r) => r.c.usd],
+    ['Autres paires', (r) => !r.c.usd],
+    ['PTP', (r) => r.x.sens === 'PTP'],
+    ['OCO', (r) => r.x.sens === 'OCO'],
+  ];
+  const rows = groups.map(([lbl, f]) => {
+    const g = all.filter(f), tp = g.filter((r) => r.x.res === 1).length, n = g.length;
+    return `<div class="als-c">${lbl}</div><div class="als-c als-n">${n}</div><div class="als-c als-n">${tp}</div><div class="als-c als-n">${n - tp}</div><div class="als-c als-n ${n >= 30 ? 'als-ok' : ''}">${n ? Math.round(100 * tp / n) + ' %' : '—'}</div>`;
+  }).join('');
+  return `<div class="alr-h">Statistiques du journal</div><div class="alr-r">${all.length} signaux terminés sur ${days} jour${days > 1 ? 's' : ''}${all.length < 30 ? ' · échantillon trop petit (moins de 30), à titre indicatif' : ''}</div>` +
+    `<div class="als-grid"><div class="als-h">Profil</div><div class="als-h als-n">N</div><div class="als-h als-n">TP</div><div class="als-h als-n">SL</div><div class="als-h als-n">Win</div>${rows}</div>` +
+    `<div class="alr-r als-note">Les groupes se recoupent. Les signaux encore en cours ne sont pas comptés. Un écart n'est significatif qu'avec plusieurs dizaines de signaux par groupe.</div>`;
+}
 function alerteReportRender() {
   const box = document.getElementById('alerteReport');
   if (!box || !alerteData || !alerteCtxData) return;
@@ -3028,7 +3064,7 @@ function alerteReportRender() {
     `<div class="alr-r"><span class="alr-l">Plus calmes</span>${vol.slice(-5).reverse().map(fmtP).join('')}</div>` +
     (ccy.length ? `<div class="alr-r"><span class="alr-l">Devises</span>${ccy.map((x) => `<span class="alr-p"><b>${x.c}</b> ${x.r.toFixed(1)}×</span>`).join('')}</div>` : '') +
     `<div class="alr-h">Niveaux</div><div class="alr-r">PDL cassé par un corps : <b>${nL}</b> paires · PDH : <b>${nH}</b> · Sweeps de D1 : 14h <b>${s14}</b> · 22h <b>${s22}</b> · 02h <b>${s02}</b></div>` +
-    `<div class="alr-h">Annonces majeures (UTC-10)</div>${evHtml}`;
+    `<div class="alr-h">Annonces majeures (UTC-10)</div>${evHtml}` + alerteStatsHtml();
 }
 async function alerteLoad() {
   if (!alerteData) {
