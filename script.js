@@ -2282,9 +2282,14 @@ function candleSvg(day, dly, view, id) {
       pd += `<line x1="${xs.toFixed(1)}" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="#F5B700" stroke-opacity="0.85" stroke-width="0.7" stroke-dasharray="1 3"/>`;
     }
   }
-  for (const a of axT) if (Math.abs(a.y - yl) < 17) a.y = yl + (a.y >= yl ? 17 : -17); // une étiquette de ligne ne cache jamais l'étiquette du dernier prix
-  axT.sort((a, b) => a.y - b.y);
-  for (let i = 1; i < axT.length; i++) if (axT[i].y - axT[i - 1].y < 13) axT[i].y = axT[i - 1].y + 13; // deux étiquettes trop proches ne se chevauchent pas
+  { // étiquettes de lignes : jamais l'une sur l'autre ni sur l'étiquette du dernier prix (obstacle fixe), restent dans la zone du graphique
+    const it = axT.concat([{ y: yl, p: true }]).sort((a, b) => a.y - b.y), gap = (a, b) => (a.p || b.p ? 19 : 17), top = TOP + 8, bot = H - BOT - 8;
+    for (let k = 0; k < 6; k++) {
+      for (let n = 1; n < it.length; n++) if (!it[n].p && it[n].y < it[n - 1].y + gap(it[n - 1], it[n])) it[n].y = it[n - 1].y + gap(it[n - 1], it[n]);
+      for (let n = it.length - 2; n >= 0; n--) if (!it[n].p && it[n].y > it[n + 1].y - gap(it[n], it[n + 1])) it[n].y = it[n + 1].y - gap(it[n], it[n + 1]);
+      for (const a of it) if (!a.p) a.y = Math.max(top, Math.min(bot, a.y));
+    }
+  }
   const axl = axT.map((a) => `<rect x="${W - AX + 1}" y="${(a.y - 8).toFixed(1)}" width="${AX - 2}" height="16" rx="3" fill="${a.c}" fill-opacity=".92"/><text x="${(W - AX / 2).toFixed(1)}" y="${(a.y + 3.5).toFixed(1)}" text-anchor="middle" style="fill:#0b0b0b;font-size:10px;font-weight:700;pointer-events:none">${a.t}</text>`).join('');
   const tag = `<line x1="0" x2="${W - AX}" y1="${yl.toFixed(1)}" y2="${yl.toFixed(1)}" stroke="${lastCol}" stroke-width="0.7" stroke-dasharray="2 3"/>` +
     `<rect x="${W - AX + 1}" y="${(yl - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
