@@ -1354,6 +1354,7 @@ body.cc-lock { overflow: hidden; }
 .rp-tw .flat:not(:disabled) { color: #fff; }
 .rp-menu { position: absolute; left: 8px; right: 8px; bottom: calc(66px + env(safe-area-inset-bottom)); max-height: 60vh; overflow: auto; background: #1c1c1e; border: 1px solid #2a2a2e; border-radius: 12px; padding: 6px; box-shadow: 0 -8px 30px rgba(0, 0, 0, .6); }
 .rp-menu[hidden] { display: none; }
+.rp-mi .rp-d { float: right; color: #787b86; font-size: 12px; font-weight: 400; margin-left: 14px; }
 .rp-mt { padding: 8px 12px 4px; font-size: 12px; color: #787b86; }
 .rp-mi { display: flex; width: 100%; align-items: center; justify-content: space-between; height: 44px; padding: 0 12px; background: none; border: 0; border-radius: 8px; color: #e5e5e5; font-size: 16px; cursor: pointer; text-align: left; }
 .rp-mi:active, .rp-mi.on { background: #2a2a2e; }

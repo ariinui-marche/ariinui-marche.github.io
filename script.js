@@ -1975,8 +1975,8 @@ const candleEvHits = {}; // paire -> [{ x, y, r, list }] zones cliquables des pa
 let candleF50 = {}; // { PAIR: { hi, lo, ... } } boîte 14H (niveaux Entry / 50 % / TP)
 // REPLAY (façon TradingView) : on rejoue les bougies du graphique affiché. rp.t = heure d'ouverture de la dernière barre visible ; tout ce qui est après est masqué
 const rp = { on: false, id: null, t: 0, pick: false, playing: false, timer: 0, spd: 0, qty: 1, slp: 0, tpp: 0, tw: true, wm: true, view: null, vkey: '', pos: null, done: [], msg: '' };
-const RP_SPEEDS = [[100, '10x'], [143, '7x'], [200, '5x'], [333, '3x'], [1000, '1x'], [2000, '0.5x'], [3333, '0.3x'], [10000, '0.1x']]; // délai entre 2 bougies (mêmes vitesses que TradingView)
-try { const s = parseInt(localStorage.getItem('candleRpSpd2'), 10); if (s >= 0 && s < RP_SPEEDS.length) rp.spd = s; } catch (e) { /* pas de stockage */ }
+const RP_SPEEDS = [[100, '10x', '10 màj par sec'], [143, '7x', '7 MàJ par seconde'], [200, '5x', '5 MàJ par seconde'], [333, '3x', '3 màj par sec'], [1000, '1x', '1 màj par sec'], [2000, '0.5x', '1 màj par 2 sec'], [3333, '0.3x', '1 màj par 3 sec'], [5000, '0.2x', '1 MàJ par 5 secondes'], [10000, '0.1x', '1 màj par 10 sec']]; // délai entre 2 bougies (mêmes vitesses que TradingView)
+try { const s = parseInt(localStorage.getItem('candleRpSpd3'), 10); if (s >= 0 && s < RP_SPEEDS.length) rp.spd = s; } catch (e) { /* pas de stockage */ }
 let candleXh = null; // réticule (croix pointillée) façon TradingView : { id, x, y } en pixels du graphique ; le ⊕ de l'étiquette de prix crée une alerte
 const XH_DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], XH_MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 function candleXhTime(t) { // secondes UTC -> « Sat 07 Nov '26  16:39 » en UTC-10 (fuseau de l'utilisateur)
@@ -2867,6 +2867,7 @@ function candleRpUi() { // texte d'état + boutons
     }
   }
   rpEl('rpMsg').textContent = m;
+  rpEl('rpPlay').title = rp.playing ? 'Pause' : 'Play';
   rpEl('rpPlay').innerHTML = rp.playing ? '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5v14M16 5v14"/></svg>' : '<svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4.5v15l12-7.5z"/></svg>';
   rpEl('rpSpd').textContent = RP_SPEEDS[rp.spd][1];
   rpEl('rpTf').textContent = CANDLE_HIST_LBL[candleHistTf];
@@ -2988,6 +2989,7 @@ function rpMenu(title, rows) { // petit menu au-dessus de la barre : rows = [{ t
   for (const r of rows) {
     const b = document.createElement('button');
     b.type = 'button'; b.className = 'rp-mi' + (r.on ? ' on' : ''); b.textContent = r.t;
+    if (r.d) { const sp = document.createElement('span'); sp.className = 'rp-d'; sp.textContent = r.d; b.appendChild(sp); }
     b.addEventListener('click', () => { rpMenuClose(); r.fn(); });
     m.appendChild(b);
   }
@@ -3011,14 +3013,14 @@ function rpSetTf(tf) { // période du replay : mêmes boutons cachés ‹ › qu
   rpEl('rpFwd').addEventListener('click', () => { rpMenuClose(); candleRpPlay(false); candleRpStep(1); });
   rpEl('rpEnd').addEventListener('click', () => { rpMenuClose(); const full = rpFull(); if (!full) return; candleRpPlay(false); candleRpSet(full.length - 1); });
   const dt = rpEl('rpDate');
-  rpEl('rpDice').addEventListener('click', () => rpMenu('Start the replay from…', [
-    { t: 'Select bar', fn: () => { candleRpPlay(false); rp.pick = true; rp.msg = ''; rp.pos = null; candleRpUi(); candleRpRedraw(); } },
-    { t: 'Select date', fn: () => { try { dt.showPicker(); } catch (e) { dt.click(); } } },
-    { t: 'Random bar', fn: () => { const full = rpFull(); if (!full) return; candleRpPlay(false); candleRpSet(full.length > 400 ? 100 + Math.floor(Math.random() * (full.length - 300)) : Math.floor(full.length / 2)); } },
-    { t: 'First bar', fn: () => { candleRpPlay(false); candleRpSet(0); } },
+  rpEl('rpDice').addEventListener('click', () => rpMenu('Sélectionnez le point de départ', [
+    { t: 'Barre', fn: () => { candleRpPlay(false); rp.pick = true; rp.msg = ''; rp.pos = null; candleRpUi(); candleRpRedraw(); } },
+    { t: 'Date…', fn: () => { try { dt.showPicker(); } catch (e) { dt.click(); } } },
+    { t: 'Barre aléatoire', fn: () => { const full = rpFull(); if (!full) return; candleRpPlay(false); candleRpSet(full.length > 400 ? 100 + Math.floor(Math.random() * (full.length - 300)) : Math.floor(full.length / 2)); } },
+    { t: 'Première date disponible', fn: () => { candleRpPlay(false); candleRpSet(0); } },
   ]));
-  rpEl('rpSpd').addEventListener('click', () => rpMenu('Replay speed', RP_SPEEDS.map(([, l], i) => ({ t: l, on: i === rp.spd, fn: () => { rp.spd = i; try { localStorage.setItem('candleRpSpd2', String(i)); } catch (e) { /* pas de stockage */ } candleRpUi(); } }))));
-  rpEl('rpTf').addEventListener('click', () => rpMenu('Timeframe', CANDLE_HIST_MODES.filter((m) => m !== '0').map((m) => ({ t: CANDLE_HIST_LBL[m], on: m === candleHistTf, fn: () => rpSetTf(m) }))));
+  rpEl('rpSpd').addEventListener('click', () => rpMenu('Vitesse du replay', RP_SPEEDS.map(([, l, d], i) => ({ t: l, d, on: i === rp.spd, fn: () => { rp.spd = i; try { localStorage.setItem('candleRpSpd3', String(i)); } catch (e) { /* pas de stockage */ } candleRpUi(); } }))));
+  rpEl('rpTf').addEventListener('click', () => rpMenu("Mettre à jour l'intervalle", CANDLE_HIST_MODES.filter((m) => m !== '0').map((m) => ({ t: ({ 1: '1 minute', 5: '5 minutes', 60: '1 heure', 240: '4 heures', '1D': '1 jour' })[m], on: m === candleHistTf, fn: () => rpSetTf(m) }))));
   rpEl('rpQty').addEventListener('click', () => rpMenu('Quantity (lots)', [0.1, 0.5, 1, 2, 5, 10].map((q) => ({ t: String(q), on: q === rp.qty, fn: () => { rp.qty = q; candleRpUi(); } }))));
   rpEl('rpSet').addEventListener('click', () => {
     const m = rpMenu('Replay settings', [
