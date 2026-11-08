@@ -2621,6 +2621,117 @@ function candleAim(id) {
   candleViewSave(id, v);
   candleRedraw(id, v);
 }
+// ===== PANNEAU « ALERTS » (dans la roue ⚙) : comme TradingView — onglets Alerts / Log, « + », recherche, tri, modifier / supprimer, non-lus en surbrillance =====
+// Alerts = alertes de prix en attente (serveur) ; Log = alertes de prix déclenchées (serveur, 200 dernières) + signaux ALERTE (journal). Toucher une ligne ouvre le graphique de la paire au niveau de l'alerte.
+const AL_SEEN_LS = 'alertLogSeenV1', AL_CLR_LS = 'alertLogClearedV1', AL_SORTS = [['new', 'Newest first'], ['old', 'Oldest first'], ['pair', 'Symbol A–Z']];
+const alP = { tab: 'alerts', sort: 'new', q: '', log: [], loaded: false };
+const alLsGet = (k) => { try { return +localStorage.getItem(k) || 0; } catch (e) { return 0; } };
+const alLsSet = (k, v) => { try { localStorage.setItem(k, String(v)); } catch (e) { /* pas de stockage */ } };
+const alPairLbl = (id) => `${id.slice(0, 3)}/${id.slice(3)}`;
+const alDec = (v) => (v >= 1000 ? 2 : v >= 100 ? 3 : 5);
+async function alLogFetch() {
+  try { const r = await fetch(`${ALERTE_API}/alerte?alog=1`, { cache: 'no-store', signal: AbortSignal.timeout(10000) }); if (r.ok) alP.log = (await r.json()).log || []; } catch (e) { /* on garde le dernier journal */ }
+  if (!alerteJournal) { try { const r = await fetch(`${ALERTE_API}/alerte?journal=1`, { cache: 'no-store', signal: AbortSignal.timeout(10000) }); if (r.ok) alerteJournal = (await r.json()).journal || {}; } catch (e) { /* signaux indisponibles */ } }
+  alP.loaded = true;
+  alBadgeUpdate();
+}
+function alLogItems() {
+  const cleared = alLsGet(AL_CLR_LS), items = [];
+  for (const x of alP.log) items.push({ t: x.t, pair: x.pair, price: x.price, title: `${alPairLbl(x.pair)} ${x.dir === 'above' ? 'Crossing up' : 'Crossing down'} ${(+x.price).toFixed(alDec(x.price))}`, sub: 'Price alert' });
+  for (const x of Object.values(alerteJournal || {})) if (x.t) items.push({ t: x.t, pair: x.pair, title: `${alPairLbl(x.pair)} · 50% ${x.sens} · ${x.side}`, sub: x.res === 1 ? 'TP reached' : x.res === 2 ? 'Stop hit' : 'Open' });
+  return items.filter((i) => i.t > cleared).sort((a, b) => b.t - a.t).slice(0, 150);
+}
+const alUnread = () => { const seen = alLsGet(AL_SEEN_LS); return alLogItems().filter((i) => i.t > seen).length; };
+function alBadgeUpdate() {
+  const el = document.getElementById('candleAlertsSub');
+  if (el) { const u = alUnread(), n = candleAl.length; el.textContent = `${n} active${u ? ` · ${u} new in log` : ''}`; }
+}
+function alExpiryTxt(a) {
+  if (!a.expires) return 'No expiry';
+  const d = a.expires - Math.floor(Date.now() / 1000);
+  return d <= 0 ? 'Expiring' : d < 3600 ? `Expires in ${Math.ceil(d / 60)} min` : d < 172800 ? `Expires in ${Math.round(d / 3600)} h` : `Expires in ${Math.round(d / 86400)} d`;
+}
+function alPanelRender() {
+  const box = document.getElementById('alPanel');
+  if (!box) return;
+  const q = alP.q.trim().toLowerCase();
+  const unread = alUnread(), act = alP.tab === 'alerts';
+  let list = '';
+  if (act) {
+    let rows = candleAl.filter((a) => !q || (alPairLbl(a.pair) + ' ' + a.pair + ' ' + a.price).toLowerCase().includes(q));
+    rows = rows.slice().sort((a, b) => alP.sort === 'old' ? a.created - b.created : alP.sort === 'pair' ? a.pair.localeCompare(b.pair) : b.created - a.created);
+    list = rows.length ? rows.map((a) => `<div class="alp-it" data-go="${a.pair}" data-px="${a.price}"><div class="alp-m"><div class="alp-t">${alPairLbl(a.pair)} ${a.dir === 'above' ? 'Crossing up' : 'Crossing down'} ${(+a.price).toFixed(alDec(a.price))}</div><div class="alp-s"><b>${a.pair}</b> · <span class="alp-on">Active</span> · ${alExpiryTxt(a)}</div></div><button type="button" class="alp-b" data-ed="${a.id}" aria-label="Edit">✎</button><button type="button" class="alp-b" data-del="${a.id}" aria-label="Delete">🗑</button></div>`).join('')
+      : `<div class="alp-empty">${candleAl.length ? 'No alert matches your search.' : 'No active alerts.<br>Long-press a chart, then tap ⊕ on the price axis, or use + above.'}</div>`;
+  } else {
+    const seen = alLsGet(AL_SEEN_LS), items = alLogItems().filter((i) => !q || i.title.toLowerCase().includes(q));
+    let day = '';
+    list = items.length ? items.map((i) => {
+      const d = new Date((i.t - 36000) * 1000), ds = d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', timeZone: 'UTC' }).toUpperCase();
+      const head = ds !== day ? `<div class="alp-day">${ds}</div>` : ''; day = ds;
+      return head + `<div class="alp-it ${i.t > seen ? 'new' : ''}" data-go="${i.pair}" data-px="${i.price || ''}"><div class="alp-m"><div class="alp-t">${alEsc(i.title)}</div><div class="alp-s"><b>${i.pair}</b> · ${alEsc(i.sub)} · ${alerteTime(i.t)}:${String(d.getUTCSeconds()).padStart(2, '0')}</div></div></div>`;
+    }).join('') : '<div class="alp-empty">The log is empty.</div>';
+  }
+  box.innerHTML = `<div class="alp-top"><div class="alp-tabs"><button type="button" data-tab="alerts" class="${act ? 'on' : ''}">Alerts ${candleAl.length ? `<i>${candleAl.length}</i>` : ''}</button><button type="button" data-tab="log" class="${act ? '' : 'on'}">Log ${unread ? `<i class="hot">${unread > 99 ? '99+' : unread}</i>` : ''}</button></div><button type="button" class="alp-x" data-close aria-label="Close">✕</button></div>` +
+    `<div class="alp-bar">${act ? `<button type="button" class="alp-b" data-add aria-label="New alert">＋</button>` : `<button type="button" class="alp-b" data-clear aria-label="Clear log" title="Clear log">🧹</button><button type="button" class="alp-b" data-read aria-label="Mark all as read" title="Mark all as read">✓✓</button>`}<input class="alp-q" type="search" placeholder="Search" value="${alEsc(alP.q)}" aria-label="Search">${act ? `<button type="button" class="alp-b alp-sort" data-sort title="Sort">⇅ <small>${AL_SORTS.find((s) => s[0] === alP.sort)[1]}</small></button>` : ''}</div>` +
+    `<div class="alp-list">${list}</div>`;
+  const qi = box.querySelector('.alp-q');
+  qi.addEventListener('input', () => { alP.q = qi.value; const pos = qi.selectionStart; alPanelRender(); const n = document.querySelector('#alPanel .alp-q'); n.focus(); n.setSelectionRange(pos, pos); });
+}
+async function alPanelOpen() {
+  const body = document.getElementById('candleBody');
+  if (!body || document.getElementById('alPanel')) return;
+  const box = document.createElement('div');
+  box.id = 'alPanel';
+  body.appendChild(box);
+  alP.tab = 'alerts'; alP.q = '';
+  alPanelRender();
+  box.addEventListener('click', (e) => {
+    const t = e.target;
+    const tab = t.closest('[data-tab]'), ed = t.closest('[data-ed]'), del = t.closest('[data-del]');
+    if (t.closest('[data-close]')) { box.remove(); alBadgeUpdate(); return; }
+    if (tab) { alP.tab = tab.dataset.tab; alP.q = ''; alPanelRender(); return; }
+    if (t.closest('[data-add]')) {
+      const id = candleCurId(); if (!id) return;
+      candleLiveLast(id).then((last) => { box.remove(); candleAlCreate(id, last == null ? candleLastPx(id) : last); });
+      return;
+    }
+    if (t.closest('[data-sort]')) { const i = AL_SORTS.findIndex((s) => s[0] === alP.sort); alP.sort = AL_SORTS[(i + 1) % AL_SORTS.length][0]; alPanelRender(); return; }
+    if (t.closest('[data-clear]')) { alLsSet(AL_CLR_LS, Math.floor(Date.now() / 1000)); alPanelRender(); return; }
+    if (t.closest('[data-read]')) { alLsSet(AL_SEEN_LS, Math.floor(Date.now() / 1000)); alPanelRender(); return; }
+    if (ed) {
+      const a = candleAl.find((x) => x.id === ed.dataset.ed); if (!a) return;
+      candleAlSheet(`Edit alert · ${alPairLbl(a.pair)}`, 'Change the price level.', a.price, 'Save', async (px) => {
+        if (!(px > 0)) throw new Error('Enter a valid price');
+        const last = await candleLiveLast(a.pair);
+        await candleAlPost({ lineMove: { id: a.id, price: px, dir: last === null || px >= last ? 'above' : 'below' } });
+        alPanelRender();
+      });
+      return;
+    }
+    if (del) {
+      const a = candleAl.find((x) => x.id === del.dataset.del); if (!a) return;
+      candleAlSheet(`Delete alert · ${alPairLbl(a.pair)}`, `${a.dir === 'above' ? 'Rises to' : 'Falls to'} ${(+a.price).toFixed(alDec(a.price))}`, null, 'Delete alert', async () => { await candleAlPost({ lineDelete: a.id }); alPanelRender(); });
+      return;
+    }
+    const it = t.closest('[data-go]');
+    if (it) { // ouvre le graphique de la paire, prix de l'alerte visible
+      const id = it.dataset.go, px = parseFloat(it.dataset.px);
+      box.remove(); alBadgeUpdate();
+      if (candleMini) { candleMini = false; try { localStorage.setItem('candleMini', '0'); } catch (err) { /* pas de stockage */ } candleMiniApply(); }
+      candleGoTo(id);
+      if (px > 0) setTimeout(() => candleShowPrice(id, px), 450);
+    }
+  });
+  await Promise.all([candleAlFetch(), alLogFetch()]);
+  if (document.getElementById('alPanel')) alPanelRender();
+}
+function candleShowPrice(id, price) { // rend visibles le dernier prix ET le niveau d'une alerte (zoom vertical seulement)
+  if (!candleDays[id]) return;
+  const g = candleGeo(id), v = candleViewOf(id), last = candleLastPx(id), hi = Math.max(price, last == null ? price : last), lo = Math.min(price, last == null ? price : last);
+  const span = Math.max(hi - lo, g.baseRng * 0.02) * 1.4, nv = Object.assign({}, v, { yz: candleClamp(g.baseRng / span, CANDLE_YZ[0], CANDLE_YZ[1]), yp: ((hi + lo) / 2 - g.cenB) / g.baseRng });
+  candleViewSave(id, nv);
+  candleRedraw(id, nv);
+}
 function candleSetMenuUpdate() {
   const m = document.getElementById('candleSetMenu');
   if (!m) return;
@@ -2640,6 +2751,7 @@ candleSetMenuUpdate();
 document.getElementById('candleSet')?.addEventListener('click', (e) => {
   e.stopPropagation();
   const m = document.getElementById('candleSetMenu'), open = m.hidden;
+  if (open) { alBadgeUpdate(); if (!alP.loaded) alLogFetch(); }
   m.hidden = !open;
   e.currentTarget.setAttribute('aria-expanded', String(open));
 });
@@ -2650,6 +2762,8 @@ document.getElementById('candleSetMenu')?.addEventListener('click', (e) => {
   if (a.dataset.a === 'aim') {
     const id = candleCurId();
     if (id) candleAim(id);
+  } else if (a.dataset.a === 'alerts') {
+    alPanelOpen();
   } else if (a.dataset.a === 'mini') {
     candleMini = !candleMini;
     try { localStorage.setItem('candleMini', candleMini ? '1' : '0'); } catch (err) { /* pas de stockage */ }
