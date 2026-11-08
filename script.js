@@ -2631,6 +2631,16 @@ document.getElementById('candleSetMenu')?.addEventListener('click', (e) => {
   document.getElementById('candleSetMenu').hidden = true;
   document.getElementById('candleSet')?.setAttribute('aria-expanded', 'false');
 });
+document.getElementById('candleList').addEventListener('click', (e) => { // liste « 4 candles » : un clic sur un symbole ouvre aussitôt son graphique sur les POH
+  if (!candleMini) return;
+  const r = e.target.closest('.cd-mini');
+  if (!r || !r.dataset.id) return;
+  e.stopPropagation(); e.preventDefault();
+  try { localStorage.setItem(CANDLE_LAST_LS, r.dataset.id); localStorage.setItem('candleMini', '0'); } catch (err) { /* pas de stockage */ }
+  candleMini = false;
+  candleMiniApply(); // carrousel sur cette paire (position instantanée)
+  for (let k = 0; k < 8 && candleHistTf !== '0'; k++) document.getElementById('candleHistPrev').click(); // vue POH seuls
+}, true);
 document.addEventListener('click', (e) => { // un clic ailleurs referme le menu
   const m = document.getElementById('candleSetMenu');
   if (m && !m.hidden && !e.target.closest('#candleSetMenu')) { m.hidden = true; document.getElementById('candleSet')?.setAttribute('aria-expanded', 'false'); }
