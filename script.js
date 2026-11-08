@@ -2262,7 +2262,7 @@ function candleSvg(day, dly, view, id) {
     }
     const dayPx = hs0 * 1440 / (tfMin || 1440), names = dayPx >= 70 ? CANDLE_DAYS : dayPx >= 34 ? CANDLE_DAYS_S : null; // noms des jours : discrets, au-dessus des pastilles, abrégés puis masqués quand on dézoome
     if (names && !is1D) for (const w of wdays) hb += `<text x="${w.x.toFixed(1)}" y="${H - BOT - 2 * R - 26}" text-anchor="middle" style="fill:#4a4a4a;font-size:11px;letter-spacing:1px;pointer-events:none">${names[w.d]}</text>`;
-    const f = RP ? null : (candleF50 || {})[id];
+    const f50 = RP ? null : (candleF50 || {})[id], f = f50 && f50.d === new Date(Date.now() + 7200 * 1000).toISOString().slice(0, 10) ? f50 : null; // lignes 14H : seulement la journée de trading en cours (UTC+2) ; elles disparaissent à minuit UTC+2 (12:00 UTC-10) et reviennent quand la bougie 14H de la nouvelle journée est terminée, comme Arii SNIPER
     if (f) { // niveaux de la boîte 14H : Entry = bords, 50 % = bord ± R/2, TP = bord ± R (seulement s'ils sont dans l'échelle)
       const R = f.hi - f.lo;
       hb += [[f.hi + R, 'TP 14H', '#5cc8ff'], [f.hi + R / 2, 'H50% 14H', '#ff9f43', !!f.up], [f.hi, 'Entry 14H', '#5cc8ff'], [f.lo, 'Entry 14H', '#5cc8ff'], [f.lo - R / 2, 'L50% 14H', '#ff9f43', !!f.dn], [f.lo - R, 'TP 14H', '#5cc8ff']]
