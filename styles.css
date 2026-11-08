@@ -1338,7 +1338,6 @@ body.cc-lock { overflow: hidden; }
 .rp[hidden] { display: none; }
 .rp > * { pointer-events: auto; }
 .rp-msg { position: absolute; top: 34px; left: 12px; font-size: 12px; color: #9aa0a6; font-variant-numeric: tabular-nums; pointer-events: none; }
-.rp-wm { position: absolute; top: 42%; left: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 14px; color: rgba(255, 255, 255, .06); font-size: 64px; font-weight: 500; pointer-events: none; }
 .rp-bar { position: absolute; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: space-between; padding: 6px 10px calc(6px + env(safe-area-inset-bottom)); background: #0b0b0b; border-top: 1px solid #1d1f24; }
 .rp-bar button { flex: 1 1 0; min-width: 0; height: 44px; background: none; border: 0; color: #e5e5e5; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; -webkit-tap-highlight-color: transparent; }
 .rp-bar button:active { background: #1a1a1a; border-radius: 8px; }

@@ -2830,7 +2830,6 @@ function candleRpUi() { // texte d'état + boutons
   rpEl('rpQty').textContent = rp.qty;
   rpEl('rpClose').disabled = !rp.pos;
   rpEl('rpTw').hidden = !rp.tw;
-  document.querySelector('.rp-wm').style.display = rp.wm ? '' : 'none';
   rpEl('rpDice').classList.toggle('on', rp.pick);
 }
 function candleRpMode(on) { // replay plein écran façon TradingView : plus de barre du haut (Fibo/Sweep/F+S), ni de barre du bas (périodes), ni d'échelle de prix à droite
@@ -2868,6 +2867,8 @@ function candleRpEnter() {
   Object.assign(rp, { on: true, id, pick: true, playing: false, pos: null, done: [], msg: '', view: null, vkey: '' });
   candleHistEnsure(id);
   candleRpSync();
+  const tw = rpEl('rpTw'); // widget Sell / Buy : recentré en bas à chaque nouveau replay
+  if (tw) { tw.style.top = 'auto'; tw.style.bottom = ''; tw.style.left = Math.max(0, (innerWidth - tw.offsetWidth) / 2) + 'px'; }
   candleRpRedraw();
 }
 function candleRpSet(idx) { // place le curseur du replay sur la barre idx (les barres suivantes sont masquées)
@@ -2978,7 +2979,6 @@ function rpSetTf(tf) { // période du replay : mêmes boutons cachés ‹ › qu
   rpEl('rpSet').addEventListener('click', () => {
     const m = rpMenu('Replay settings', [
       { t: 'Trading widget', on: rp.tw, fn: () => { rp.tw = !rp.tw; candleRpUi(); } },
-      { t: 'Replay watermark', on: rp.wm, fn: () => { rp.wm = !rp.wm; candleRpUi(); } },
     ]);
     for (const [lbl, key] of [['Stop loss (pips)', 'slp'], ['Take profit (pips)', 'tpp']]) {
       const i = document.createElement('input'); i.type = 'number'; i.min = '0'; i.inputMode = 'decimal'; i.placeholder = 'none'; i.value = rp[key] || '';
