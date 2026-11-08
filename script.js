@@ -2120,8 +2120,7 @@ function candleSvg(day, dly, view, id) {
   const stepP = candleNiceStep(rng, 8);
   let grid = '';
   for (let v = Math.ceil(lo / stepP) * stepP; v <= hi; v += stepP) {
-    grid += `<line x1="0" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="#1d1f24" stroke-width="0.7"/>` +
-      `<text x="${W - AX + 6}" y="${(y(v) + 4).toFixed(1)}" class="pc-ax">${fmt(v)}</text>`;
+    grid += `<text x="${W - AX + 6}" y="${(y(v) + 4).toFixed(1)}" class="pc-ax">${fmt(v)}</text>`; // seuls les chiffres de l'échelle : plus de lignes grises horizontales
   }
   // avec l'historique : les POH occupent la moitié droite, l'historique la moitié gauche ; zoom/déplacement s'appliquent à l'ensemble
   const split = hist ? 0.5 : 0, plotW0 = W - AX - LEFT, stepB = plotW0 * (1 - split) / cs.length;
