@@ -2961,7 +2961,7 @@ document.getElementById('alerteTable')?.addEventListener('click', (e) => {
 });
 // ===== RAPPORT DE FIN DE JOURNÉE (jour de trading 22:00 UTC → 22:00 UTC) : signaux, volatilité par paire et par devise, annonces majeures, cassures PDH/PDL, sweeps =====
 // Généré à partir des données déjà chargées (bougies quotidiennes, POH, journal des signaux du serveur, calendrier du site) ; le serveur envoie en plus un résumé à 22:05 UTC (notification).
-let alerteJournal = null, alerteJournalAt = 0, alerteEco = null;
+let alerteJournal = null, alerteJournalAt = 0, alerteEco = null, alerteHist = null; // alerteHist = signaux reconstitués à partir de l'historique 1 min (data/journal-history.json) ; le journal du serveur prime sur la même clé
 const alEsc = (t) => String(t == null ? '' : t).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 async function alerteReportLoad() {
   const box = document.getElementById('alerteReport');
@@ -2971,6 +2971,7 @@ async function alerteReportLoad() {
       const r = await fetch(`${ALERTE_API}/alerte?journal=1`, { cache: 'no-store', signal: AbortSignal.timeout(10000) });
       if (r.ok) { alerteJournal = (await r.json()).journal || {}; alerteJournalAt = Date.now(); }
     }
+    if (!alerteHist) { const r = await fetch('./data/journal-history.json', { cache: 'no-store' }); if (r.ok) alerteHist = await r.json(); }
     if (!alerteEco) { const r = await fetch('./data/eco-calendar.json', { cache: 'no-store' }); if (r.ok) alerteEco = (await r.json()).events || []; }
   } catch (e) { /* le rapport s'affiche avec ce qui est disponible */ }
   alerteReportRender();
@@ -2988,7 +2989,7 @@ function alerteSigCtx(x) {
   return { vr, aligned, usd, star: usd && aligned && vr >= 1.3 };
 }
 function alerteStatsHtml() {
-  const all = Object.values(alerteJournal || {}).filter((x) => x.res === 1 || x.res === 2).map((x) => ({ x, c: alerteSigCtx(x) })).filter((r) => r.c);
+  const all = Object.values(Object.assign({}, alerteHist || {}, alerteJournal || {})).filter((x) => x.res === 1 || x.res === 2).map((x) => ({ x, c: alerteSigCtx(x) })).filter((r) => r.c);
   const days = new Set(all.map((r) => r.x.d)).size;
   const groups = [
     ['Tous les signaux', () => true],
