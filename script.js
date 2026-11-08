@@ -2604,6 +2604,22 @@ document.getElementById('candleList').addEventListener('click', (e) => { // clic
   if (candlePoh) candleRender();
 }, true);
 // Roue (remplace le bouton viseur) : menu déroulant « Aim » (recentrer) + « 4 candles » (liste défilante des 4 bougies de tous les symboles)
+// Aim : recentre EXCLUSIVEMENT sur les bougies POH (12h … 07h) : D3-D0 et l'historique sortent à gauche, prix cadré sur les POH seuls
+function candleAim(id) {
+  const day = candleDays[id], dly = (candleDaily || {})[id];
+  const vals = day ? CANDLE_SLOTS.map(([k]) => day.c[k]).filter(Boolean) : [];
+  if (!vals.length || (rp.on && rp.id === id)) { candleRedraw(id, CANDLE_DEF); candleViewSave(id, Object.assign({}, CANDLE_DEF)); return; }
+  const { W } = candleDims(), { AX, LEFT } = CANDLE_G, plotW0 = W - AX - LEFT, split = candleHistBars(id) ? 0.5 : 0;
+  const nd = (dly || []).slice(-4).length, n = nd + 1 + CANDLE_SLOTS.length, f = nd + 1, m = CANDLE_SLOTS.length; // f = indice de la 1re bougie POH
+  const stepB = plotW0 * (1 - split) / n, xz = candleClamp(0.94 * plotW0 / (m * stepB), CANDLE_XZ[0], CANDLE_XZ[1]), step = stepB * xz;
+  const xOff = plotW0 * 0.03 - step * f, xp = (xOff - split * plotW0 * xz) / (W - AX);
+  let hi = -Infinity, lo = Infinity;
+  for (const c of vals) { hi = Math.max(hi, c[1]); lo = Math.min(lo, c[2]); }
+  const g = candleGeo(id), span = Math.max(hi - lo, g.baseRng * 0.01) * 1.15;
+  const v = { xz, xp, yz: candleClamp(g.baseRng / span, CANDLE_YZ[0], CANDLE_YZ[1]), yp: ((hi + lo) / 2 - g.cenB) / g.baseRng };
+  candleViewSave(id, v);
+  candleRedraw(id, v);
+}
 function candleSetMenuUpdate() {
   const m = document.getElementById('candleSetMenu');
   if (!m) return;
@@ -2632,7 +2648,7 @@ document.getElementById('candleSetMenu')?.addEventListener('click', (e) => {
   e.stopPropagation();
   if (a.dataset.a === 'aim') {
     const id = candleCurId();
-    if (id) { candleRedraw(id, CANDLE_DEF); candleViewSave(id, Object.assign({}, CANDLE_DEF)); }
+    if (id) candleAim(id);
   } else if (a.dataset.a === 'mini') {
     candleMini = !candleMini;
     try { localStorage.setItem('candleMini', candleMini ? '1' : '0'); } catch (err) { /* pas de stockage */ }
