@@ -1962,6 +1962,8 @@ const CANDLE_SLOTS = [['12', '12h'], ['14', '14h'], ['15', '15h'], ['17', '17h']
 let candleDaily = null; // { PAIR: [[t,o,h,l,c], ...4 derniers jours D3..D0] }
 // Historique 1 min / 5 min à gauche des POH (flèches ‹ › dans l'en-tête) : '0' = POH seuls (vue habituelle), '1' / '5' = bougies 1 min / 5 min
 let candleHistTf = '0';
+let candleMini = false; // roue > « 4 candles » : liste défilante de tous les symboles avec leurs 4 bougies (14h, 15-17h, 22h, 02h), comme à l'origine (enregistré)
+try { candleMini = localStorage.getItem('candleMini') === '1'; } catch (e) { /* pas de stockage */ }
 let candleClean = false; // clic sur le nom du symbole : échelle de prix + rangée Fibo / Sweep / F+S masquées, jusqu'au prochain clic (enregistré)
 try { candleClean = localStorage.getItem('candleClean') === '1'; } catch (e) { /* pas de stockage */ }
 try { candleHistTf = localStorage.getItem('candleHistTf') || '0'; } catch (e) { /* pas de stockage */ }
@@ -2456,6 +2458,22 @@ function candleOnMove() {
 
 const CANDLE_LAST_LS = 'candleLastPair'; // dernier symbole affiché : retrouvé à la réouverture (même après fermeture de l'appli)
 function candleLastId() { try { return localStorage.getItem(CANDLE_LAST_LS) || null; } catch (e) { return null; } }
+function candleMiniSvg(day, W) { // 4 bougies d'origine : 14h, 15-17h, 22h, 02h (UTC-10), même couleurs et même style que les POH
+  const H = 150, TOP = 22, BOT = 8, cs = [['14', '14h'], ['15', '15-17h'], ['22', '22h'], ['02', '02h']].map(([k, l]) => ({ l, c: day.c[k] }));
+  const vals = cs.filter((x) => x.c);
+  if (!vals.length) return '';
+  let hi = Math.max(...vals.map((x) => x.c[1])), lo = Math.min(...vals.map((x) => x.c[2]));
+  const m = (hi - lo || hi * 0.001) * 0.08;
+  hi += m; lo -= m;
+  const y = (v) => TOP + (1 - (v - lo) / (hi - lo)) * (H - TOP - BOT), step = (W - 8) / 4, bw = Math.min(step * 0.5, 46);
+  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true">` + cs.map((x, i) => {
+    if (!x.c) return '';
+    const [o, h, l, c] = x.c, col = c >= o ? CANDLE_UP : CANDLE_DN, cx = 4 + step * (i + 0.5), top = y(Math.max(o, c)), ht = Math.max(1, Math.abs(y(o) - y(c)));
+    return `<text x="${cx.toFixed(1)}" y="${Math.max(14, y(h) - 6).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:${col}">${x.l}</text>` +
+      `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="0.9"/>` +
+      `<rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}" stroke-width="0.9"/>`;
+  }).join('') + '</svg>';
+}
 function candleRender() {
   const list = document.getElementById('candleList');
   if (!candlePoh) { list.innerHTML = '<div class="charts-intro">POH candles unavailable right now.</div>'; return; }
@@ -2463,7 +2481,8 @@ function candleRender() {
     .map((p) => ({ p, s: chartsCandles ? chartsScore(p.id) : { group: 2, move: 0 } }))
     .sort((x, y) => x.s.group - y.s.group || y.s.move - x.s.move);
   let date = '';
-  const keep = candleIndex(), keepId = (list.clientWidth ? candleCurId() : null) || candleLastId();
+  const wasMini = !!list.querySelector(':scope > .cd-mini'); // la liste affichée est encore celle des 4 bougies : sa position ne dit rien sur la paire
+  const keep = candleMini || wasMini ? 0 : candleIndex(), keepId = candleMini ? null : (!wasMini && list.clientWidth ? candleCurId() : null) || candleLastId(), keepTop = candleMini ? list.scrollTop : 0, Wm = Math.max(300, Math.round(window.innerWidth));
   list.innerHTML = rows.map(({ p, s }) => {
     const days = candlePoh[p.id].filter((d) => Object.keys(d.c).length);
     const day = days[days.length - 1];
@@ -2471,10 +2490,12 @@ function candleRender() {
     date = day.d;
     candleDays[p.id] = day;
     const cls = s.group === 0 ? 'cd-bull' : s.group === 1 ? 'cd-bear' : '';
+    if (candleMini) return `<div class="cd-row cd-mini ${cls}" data-id="${p.id}"><div class="cd-mhead"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id], day)}</div><div class="cd-mchart">${candleMiniSvg(day, Wm)}</div></div>`;
     return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id], day)}</button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id], candleViewOf(p.id), p.id)}</button></div>`;
   }).join('');
   const ki = keepId ? [...candleSlides()].findIndex((r) => r.dataset.id === keepId) : -1;
   list.scrollLeft = (ki >= 0 ? ki : keep) * list.clientWidth;
+  if (candleMini) list.scrollTop = keepTop;
   if (!rows.length) list.innerHTML = '<div class="charts-intro">No pair matches.</div>';
   candleFilterUpdate();
   candleNavUpdate();
@@ -2494,6 +2515,7 @@ function candleGo(i) {
 }
 function candleCurId() { return candleSlides()[candleIndex()]?.dataset.id || null; }
 function candleNavUpdate() {
+  if (candleMini) { const c0 = document.getElementById('candleCount'); if (c0) c0.textContent = ''; return; } // liste défilante : ni compteur ni historique
   const lid = candleCurId();
   if (lid && document.getElementById('candleList').clientWidth) { try { localStorage.setItem(CANDLE_LAST_LS, lid); } catch (e) { /* pas de stockage */ } } // mémorise le symbole à l'écran
   candleHistEnsure(candleCurId());
@@ -2522,6 +2544,7 @@ function candleNamesRender() {
   box.hidden = false;
 }
 function candleGoTo(id) {
+  if (candleMini) { const r = [...candleSlides()].find((x) => x.dataset.id === id); if (r) r.scrollIntoView({ block: 'start', behavior: 'smooth' }); return; }
   let i = [...candleSlides()].findIndex((r) => r.dataset.id === id);
   if (i < 0) { candleF.fibo = false; candleF.sweep = false; candleF.both = false; candleSelected = null; candleRender(); i = [...candleSlides()].findIndex((r) => r.dataset.id === id); } // la paire est masquée par un filtre : on l'enlève
   const l = document.getElementById('candleList');
@@ -2563,13 +2586,55 @@ function candleCleanApply() { // mode épuré : échelle de prix + rangée Fibo 
 candleCleanApply();
 document.getElementById('candleList').addEventListener('click', (e) => { // clic sur le nom du symbole : bascule le mode épuré (enregistré)
   const n = e.target.closest('.cd-name');
-  if (!n || document.getElementById('candleBody').classList.contains('collapsed')) return;
+  if (!n || candleMini || document.getElementById('candleBody').classList.contains('collapsed')) return;
   e.stopPropagation(); e.preventDefault();
   candleClean = !candleClean;
   try { localStorage.setItem('candleClean', candleClean ? '1' : '0'); } catch (err) { /* pas de stockage */ }
   candleCleanApply();
   if (candlePoh) candleRender();
 }, true);
+// Roue (remplace le bouton viseur) : menu déroulant « Aim » (recentrer) + « 4 candles » (liste défilante des 4 bougies de tous les symboles)
+function candleSetMenuUpdate() {
+  const m = document.getElementById('candleSetMenu');
+  if (!m) return;
+  const mi = m.querySelector('[data-a="mini"]'), ai = m.querySelector('[data-a="aim"]');
+  if (mi) mi.setAttribute('aria-checked', String(candleMini));
+  if (ai) ai.disabled = candleMini;
+}
+function candleMiniApply() {
+  const b = document.getElementById('candleBody');
+  if (b) b.classList.toggle('cc-mini', candleMini);
+  if (candleMini && rp.on) candleRpExit();
+  candleSetMenuUpdate();
+  if (candlePoh) candleRender();
+}
+if (candleMini) document.getElementById('candleBody')?.classList.add('cc-mini');
+candleSetMenuUpdate();
+document.getElementById('candleSet')?.addEventListener('click', (e) => {
+  e.stopPropagation();
+  const m = document.getElementById('candleSetMenu'), open = m.hidden;
+  m.hidden = !open;
+  e.currentTarget.setAttribute('aria-expanded', String(open));
+});
+document.getElementById('candleSetMenu')?.addEventListener('click', (e) => {
+  const a = e.target.closest('[data-a]');
+  if (!a || a.disabled) return;
+  e.stopPropagation();
+  if (a.dataset.a === 'aim') {
+    const id = candleCurId();
+    if (id) { candleRedraw(id, CANDLE_DEF); candleViewSave(id, Object.assign({}, CANDLE_DEF)); }
+  } else if (a.dataset.a === 'mini') {
+    candleMini = !candleMini;
+    try { localStorage.setItem('candleMini', candleMini ? '1' : '0'); } catch (err) { /* pas de stockage */ }
+    candleMiniApply();
+  }
+  document.getElementById('candleSetMenu').hidden = true;
+  document.getElementById('candleSet')?.setAttribute('aria-expanded', 'false');
+});
+document.addEventListener('click', (e) => { // un clic ailleurs referme le menu
+  const m = document.getElementById('candleSetMenu');
+  if (m && !m.hidden && !e.target.closest('#candleSetMenu')) { m.hidden = true; document.getElementById('candleSet')?.setAttribute('aria-expanded', 'false'); }
+});
 let candleRz = 0;
 window.addEventListener('resize', () => { clearTimeout(candleRz); candleRz = setTimeout(() => { if (candlePoh && !document.getElementById('candleBody').classList.contains('collapsed')) candleRender(); }, 200); });
 document.getElementById('candlePrev')?.addEventListener('click', () => candleGo(candleIndex() - 1));
@@ -2640,9 +2705,10 @@ function candleRefreshInPlace() {
     const days = ((candlePoh || {})[id] || []).filter((d) => Object.keys(d.c).length), day = days[days.length - 1];
     if (!day) return;
     candleDays[id] = day;
-    const ch = r.querySelector('.cd-chart');
+    const ch = r.querySelector('.cd-chart'), mc = r.querySelector('.cd-mchart');
     if (ch) ch.innerHTML = candleSvg(day, (candleDaily || {})[id], candleViewOf(id), id);
-    const hd = r.querySelector('.cd-head');
+    if (mc) mc.innerHTML = candleMiniSvg(day, Math.max(300, Math.round(window.innerWidth)));
+    const hd = r.querySelector('.cd-head, .cd-mhead');
     if (hd) { hd.querySelectorAll('.cd-sweep').forEach((x) => x.remove()); hd.insertAdjacentHTML('beforeend', candleSweep((candleDaily || {})[id], day)); }
   });
   candleFilterUpdate();
