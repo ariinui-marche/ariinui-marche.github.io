@@ -1997,15 +1997,51 @@ function candleRpBars(full, id) { // barres visibles pendant le replay (copie mi
   if (rp.vkey !== key) { rp.view = full.slice(0, n); rp.vkey = key; }
   return rp.view;
 }
+const RP_SLOTS = { '12': [0, 2], '14': [2, 3], '15': [3, 5], '17': [5, 10], '22': [10, 11], '23': [11, 14], '02': [14, 15], '03': [15, 19], '07': [19, 24] }; // mêmes périodes POH que le proxy (heures UTC+2)
+function candleRpPoh(id) { // replay : POH et bougies D3..D0 recalculés à partir des barres fines JUSQU'À la position du replay (le POH en cours se forme comme le prix)
+  if (!rp.on || rp.id !== id || rp.pick) return null;
+  const tfSec = (candleHistTf === '1D' ? 1440 : +candleHistTf || 1) * 60, cut = rp.t + tfSec;
+  let bars = null, used = '';
+  for (const tf of ['1', '5', '60']) { const h = candleHistData[id + '|' + tf]; if (h && h.bars.length) { bars = h.bars; used = tf; break; } }
+  if (!bars) return { day: { d: '', c: {} }, dly: [] };
+  const key = id + '|' + used + '|' + cut + '|' + bars.length;
+  if (rp.poh && rp.poh.key === key) return rp.poh;
+  let a = 0, b = bars.length; const from = cut - 6 * 86400;
+  while (a < b) { const m = (a + b) >> 1; if (bars[m][0] < from) a = m + 1; else b = m; }
+  const days = new Map(); let lastK = null;
+  for (let i = a; i < bars.length && bars[i][0] < cut; i++) {
+    const [t, o, h, l, c] = bars[i], k = Math.floor((t + 7200) / 86400);
+    const d = days.get(k);
+    if (!d) days.set(k, { o, h, l, c, slots: {} }); else { if (h > d.h) d.h = h; if (l < d.l) d.l = l; d.c = c; }
+    lastK = k;
+  }
+  const out = { key, day: { d: '', c: {} }, dly: [] };
+  if (lastK === null) { rp.poh = out; return out; }
+  const ks = [...days.keys()].sort((x, y) => x - y).slice(-4);
+  out.dly = ks.map((k) => { const d = days.get(k); return [k * 86400 - 7200, d.o, d.h, d.l, d.c]; });
+  out.day.d = new Date(lastK * 86400 * 1000).toISOString().slice(0, 10);
+  for (let i = a; i < bars.length && bars[i][0] < cut; i++) { // POH du jour de trading en cours (UTC+2)
+    const [t, o, h, l, c] = bars[i];
+    if (Math.floor((t + 7200) / 86400) !== lastK) continue;
+    const hr = Math.floor(((t + 7200) % 86400) / 3600);
+    for (const k of Object.keys(RP_SLOTS)) {
+      if (hr < RP_SLOTS[k][0] || hr >= RP_SLOTS[k][1]) continue;
+      const s = out.day.c[k];
+      if (!s) out.day.c[k] = [o, h, l, c]; else { if (h > s[1]) s[1] = h; if (l < s[2]) s[2] = l; s[3] = c; }
+    }
+  }
+  rp.poh = out;
+  return out;
+}
 function candleHistBars(id) {
   if (candleHistTf === '0') return null;
   const h = candleHistData[id + '|' + candleHistTf];
   if (!h || !h.bars.length) return null;
   return rp.on && rp.id === id ? candleRpBars(h.bars, id) : h.bars;
 }
-function candleHistEnsure(id) { // charge (au plus toutes les 25 s) les bougies de la paire affichée, puis redessine EN PLACE
-  if (!id || candleHistTf === '0') return;
-  const tf = candleHistTf, key = id + '|' + tf, h = candleHistData[key] || (candleHistData[key] = { bars: [], at: 0, busy: false });
+function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bougies de la paire affichée, puis redessine EN PLACE
+  if (!id || (candleHistTf === '0' && !tfx)) return;
+  const tf = tfx || candleHistTf, key = id + '|' + tf, h = candleHistData[key] || (candleHistData[key] = { bars: [], at: 0, busy: false });
   if (h.busy || Date.now() - h.at < (tf === '1' || tf === '5' ? 25000 : 300000)) return; // 1h / 4h / 1D : fichiers plus lourds, rechargés au plus toutes les 5 min
   h.busy = true;
   // 1 min / 5 min : après le 1er chargement complet (historique), on ne redemande que les bougies récentes (dernière = en formation)
@@ -2014,7 +2050,7 @@ function candleHistEnsure(id) { // charge (au plus toutes les 25 s) les bougies 
     .then((r) => (r.ok ? r.json() : null))
     .then((j) => {
       if (j && j.bars && j.bars.length) h.bars = since ? h.bars.filter((b) => b[0] < since).concat(j.bars) : j.bars;
-      if (tf === candleHistTf && !(cg.mode)) candleRedraw(id, candleViewOf(id));
+      if ((tf === candleHistTf || rp.on) && !(cg.mode)) candleRedraw(id, candleViewOf(id));
     })
     .catch(() => { /* on garde ce qui est affiché */ })
     .finally(() => { h.busy = false; h.at = Date.now(); });
@@ -2055,16 +2091,18 @@ function candleFibLevels(dly) {
 const CANDLE_UP = '#00a3e0', CANDLE_DN = '#ffffff'; // couleurs des bougies comme TradingView (haussière bleue, baissière blanche)
 const CANDLE_G = { AX: 60, TOP: 44, BOT: 14, LEFT: 4 }; // géométrie du graphique (aussi utilisée par les gestes)
 function candleSvg(day, dly, view, id) {
+  const rpx = candleRpPoh(id); // replay : POH / daily calculés à la position du replay
+  if (rpx) { day = rpx.day; dly = rpx.dly; }
   const dd = (dly || []).slice(-4).map((b, i, a) => ({ lbl: 'D' + (a.length - 1 - i), c: b.slice(1, 5) }));
   const cs = dd.concat([{ lbl: '', c: null }], CANDLE_SLOTS.map(([k, lbl]) => ({ lbl, c: day.c[k] })));
   const vals = cs.filter((x) => x.c);
-  if (!vals.length) return '';
+  if (!vals.length && !(id && rp.on && rp.id === id)) return '';
   const { W, H } = candleDims();
   const { AX, TOP, BOT, LEFT } = CANDLE_G;
   const hist = id ? candleHistBars(id) : null;
   const RP = !!(id && rp.on && rp.id === id); // replay : POH, Fibo, PDH/PDL et boîte 14H masqués (ils montreraient le futur)
   if (RP && !hist) return '';
-  const sc = candleScale(RP ? null : dly, RP ? null : day, hist), vw = view || CANDLE_DEF;
+  const sc = candleScale(dly, day, hist), vw = view || CANDLE_DEF;
   const baseRng = sc.hi - sc.lo, cenV = (sc.hi + sc.lo) / 2 + vw.yp * baseRng, rng = baseRng / vw.yz;
   const lo = cenV - rng / 2, hi = cenV + rng / 2; // fenêtre de prix affichée (zoom vertical + décalage)
   const y = (v) => TOP + (1 - (v - lo) / rng) * (H - TOP - BOT);
@@ -2082,7 +2120,7 @@ function candleSvg(day, dly, view, id) {
   const hl = RP ? hist[hist.length - 1] : null;
   const last = RP ? { c: [hl[1], hl[2], hl[3], hl[4]] } : [...cs].reverse().find((x) => x.c);
   const lastC = last.c[3], lastCol = last.c[3] >= last.c[0] ? CANDLE_UP : CANDLE_DN;
-  const body = RP ? '' : cs.map((x, i) => {
+  const body = cs.map((x, i) => {
     const cx = LEFT + xOff + step * (i + 0.5);
     if (!x.c) return '';
     const [o, h, l, c] = x.c;
@@ -2242,7 +2280,7 @@ function candleSvg(day, dly, view, id) {
   const tag = `<line x1="0" x2="${W - AX}" y1="${yl.toFixed(1)}" y2="${yl.toFixed(1)}" stroke="${lastCol}" stroke-width="0.7" stroke-dasharray="2 3"/>` +
     `<rect x="${W - AX + 1}" y="${(yl - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
     `<text x="${W - AX + 6}" y="${(yl + 4).toFixed(1)}" class="pc-ax" style="fill:${lastC >= last.c[0] ? '#fff' : '#000'}">${fmt(lastC)}</text>`;
-  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${grid}<g clip-path="url(#pcClip)">${sepSvg}${hb}${fib}${pd}${body}${evb}${RP ? candleRpOverlay(y, W - AX, fmt, lo, hi, lastC) : candleAlSvg(id, y, W - AX, lo, hi, fmt)}</g>${tag}${!RP && candleXh && candleXh.id === id ? candleXhSvg(candleXh, W, H, AX, TOP, BOT, lo, rng, fmt, xhT) : ''}</svg>`;
+  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${RP ? '' : grid}<g clip-path="url(#pcClip)">${sepSvg}${hb}${fib}${pd}${body}${evb}${RP ? candleRpOverlay(y, W - AX, fmt, lo, hi, lastC) : candleAlSvg(id, y, W - AX, lo, hi, fmt)}</g>${RP ? '' : tag}${!RP && candleXh && candleXh.id === id ? candleXhSvg(candleXh, W, H, AX, TOP, BOT, lo, rng, fmt, xhT) : ''}</svg>`;
 }
 
 // Sweep de la bougie daily précédente (même règle qu'Arii SNIPER) : D0 dépasse le haut de D1 et clôture dessous, ou casse son bas et clôture dessus
@@ -2302,8 +2340,7 @@ function candleRedraw(id, v) {
 const cg = { pts: new Map(), id: null, mode: null, v0: null, start: null, cur: null, dx: 0, swallow: 0, moved: false, rect: null };
 function candleGeo(id) {
   const { W, H } = candleDims(), { AX, TOP, BOT } = CANDLE_G;
-  const R = rp.on && rp.id === id;
-  const sc = candleScale(R ? null : (candleDaily || {})[id], R ? null : candleDays[id], candleHistBars(id)) || { hi: 1, lo: 0 };
+  const rpx = candleRpPoh(id), sc = candleScale(rpx ? rpx.dly : (candleDaily || {})[id], rpx ? rpx.day : candleDays[id], candleHistBars(id)) || { hi: 1, lo: 0 };
   return { plotW: W - AX, plotH: H - TOP - BOT, baseRng: sc.hi - sc.lo, cenB: (sc.hi + sc.lo) / 2 };
 }
 function candleBeginGesture(rect) {
@@ -2866,6 +2903,7 @@ function candleRpEnter() {
   if (candleHistTf === '0') rpEl('candleHistNext').click(); // le replay a besoin des bougies : 1m par défaut
   Object.assign(rp, { on: true, id, pick: true, playing: false, pos: null, done: [], msg: '', view: null, vkey: '' });
   candleHistEnsure(id);
+  if (!['1', '5', '60'].includes(candleHistTf)) candleHistEnsure(id, '60'); // 4h / 1D : barres 1h pour recalculer les POH
   candleRpSync();
   const tw = rpEl('rpTw'); // widget Sell / Buy : recentré en bas à chaque nouveau replay
   if (tw) { tw.style.top = 'auto'; tw.style.bottom = ''; tw.style.left = Math.max(0, (innerWidth - tw.offsetWidth) / 2) + 'px'; }
