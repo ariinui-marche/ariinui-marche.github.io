@@ -2125,7 +2125,7 @@ function candleSvg(day, dly, view, id) {
   const step = stepB * vw.xz, xOff = vw.xp * (W - AX) + split * plotW0 * vw.xz, bw = Math.min(step * 0.74, 120); // zoom horizontal + décalage
   const hl = RP ? hist[hist.length - 1] : null;
   const last = RP ? { c: [hl[1], hl[2], hl[3], hl[4]] } : [...cs].reverse().find((x) => x.c);
-  const lastC = last.c[3], lastCol = last.c[3] >= last.c[0] ? CANDLE_UP : CANDLE_DN;
+  const lastC = last.c[3], lastCol = last.c[3] >= last.c[0] ? '#089981' : '#f23645'; // ligne du dernier prix : verte si haussière, rouge si baissière
   const body = cs.map((x, i) => {
     const cx = LEFT + xOff + step * (i + 0.5);
     if (!x.c) return '';
@@ -2285,7 +2285,7 @@ function candleSvg(day, dly, view, id) {
   }
   const tag = `<line x1="0" x2="${W - AX}" y1="${yl.toFixed(1)}" y2="${yl.toFixed(1)}" stroke="${lastCol}" stroke-width="0.7" stroke-dasharray="2 3"/>` +
     `<rect x="${W - AX + 1}" y="${(yl - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
-    `<text x="${W - AX + 6}" y="${(yl + 4).toFixed(1)}" class="pc-ax" style="fill:${lastC >= last.c[0] ? '#fff' : '#000'}">${fmt(lastC)}</text>`;
+    `<text x="${W - AX + 6}" y="${(yl + 4).toFixed(1)}" class="pc-ax" style="fill:#fff">${fmt(lastC)}</text>`;
   return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${RP ? '' : grid}<g clip-path="url(#pcClip)">${sepSvg}${hb}${fib}${pd}${body}${evb}${RP ? candleRpOverlay(y, W - AX, fmt, lo, hi, lastC) : candleAlSvg(id, y, W - AX, lo, hi, fmt)}</g>${RP ? '' : tag}${!RP && candleXh && candleXh.id === id ? candleXhSvg(candleXh, W, H, AX, TOP, BOT, lo, rng, fmt, xhT) : ''}</svg>`;
 }
 
