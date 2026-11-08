@@ -2444,6 +2444,8 @@ function candleOnMove() {
   }, { passive: false });
 })();
 
+const CANDLE_LAST_LS = 'candleLastPair'; // dernier symbole affiché : retrouvé à la réouverture (même après fermeture de l'appli)
+function candleLastId() { try { return localStorage.getItem(CANDLE_LAST_LS) || null; } catch (e) { return null; } }
 function candleRender() {
   const list = document.getElementById('candleList');
   if (!candlePoh) { list.innerHTML = '<div class="charts-intro">POH candles unavailable right now.</div>'; return; }
@@ -2451,7 +2453,7 @@ function candleRender() {
     .map((p) => ({ p, s: chartsCandles ? chartsScore(p.id) : { group: 2, move: 0 } }))
     .sort((x, y) => x.s.group - y.s.group || y.s.move - x.s.move);
   let date = '';
-  const keep = candleIndex(), keepId = candleCurId();
+  const keep = candleIndex(), keepId = (list.clientWidth ? candleCurId() : null) || candleLastId();
   list.innerHTML = rows.map(({ p, s }) => {
     const days = candlePoh[p.id].filter((d) => Object.keys(d.c).length);
     const day = days[days.length - 1];
@@ -2482,6 +2484,8 @@ function candleGo(i) {
 }
 function candleCurId() { return candleSlides()[candleIndex()]?.dataset.id || null; }
 function candleNavUpdate() {
+  const lid = candleCurId();
+  if (lid && document.getElementById('candleList').clientWidth) { try { localStorage.setItem(CANDLE_LAST_LS, lid); } catch (e) { /* pas de stockage */ } } // mémorise le symbole à l'écran
   candleHistEnsure(candleCurId());
   candleResetUpdate();
   const n = candleSlides().length, i = Math.min(candleIndex(), Math.max(0, n - 1));
