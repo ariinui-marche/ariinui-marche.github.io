@@ -2137,12 +2137,12 @@ function candleSvg(day, dly, view, id) {
       `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="0.9"/>` +
       `<rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}" stroke-width="0.9"/>`;
   }).join('');
+  const axT = []; // étiquettes des lignes : affichées DANS l'échelle de prix à droite (nom de la ligne à la place du prix), centrées sur la ligne
   let fib = '';
   const fl = RP ? null : candleFibLevels(dly), d1i = cs.findIndex((x) => x.lbl === 'D1');
   if (fl && d1i >= 0) {
     const x0 = LEFT + xOff + step * (d1i + 0.5);
-    fib = fl.filter((f) => f.v >= lo && f.v <= hi).map((f) => `<line x1="${x0.toFixed(1)}" x2="${W - AX}" y1="${y(f.v).toFixed(1)}" y2="${y(f.v).toFixed(1)}" stroke="#f5b642" stroke-opacity="0.5" stroke-width="0.7" stroke-dasharray="1 4" stroke-linecap="round"/>` +
-      `<text x="${W - AX - 4}" y="${(y(f.v) - 4).toFixed(1)}" text-anchor="end" style="fill:#f5b642;fill-opacity:.6;font-size:10px">${f.t}% · ${fmt(f.v)}</text>`).join('');
+    fib = fl.filter((f) => f.v >= lo && f.v <= hi).map((f) => { axT.push({ y: y(f.v), t: f.t + '%', c: '#f5b642' }); return `<line x1="${x0.toFixed(1)}" x2="${W - AX}" y1="${y(f.v).toFixed(1)}" y2="${y(f.v).toFixed(1)}" stroke="#f5b642" stroke-opacity="0.5" stroke-width="0.7" stroke-dasharray="1 4" stroke-linecap="round"/>`; }).join('');
   }
   let hb = '', evb = '', sepSvg = '', xhT = '';
   if (hist) {
@@ -2267,8 +2267,7 @@ function candleSvg(day, dly, view, id) {
       const R = f.hi - f.lo;
       hb += [[f.hi + R, 'TP 14H', '#5cc8ff'], [f.hi + R / 2, 'H50% 14H', '#ff9f43', !!f.up], [f.hi, 'Entry 14H', '#5cc8ff'], [f.lo, 'Entry 14H', '#5cc8ff'], [f.lo - R / 2, 'L50% 14H', '#ff9f43', !!f.dn], [f.lo - R, 'TP 14H', '#5cc8ff']]
         .filter(([v, , , touched]) => v >= lo && v <= hi && touched !== false)
-        .map(([v, t, c]) => `<line x1="0" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="${c}" stroke-opacity=".7" stroke-width="0.7" stroke-dasharray="1 4" stroke-linecap="round"/>` +
-          `<text x="4" y="${(y(v) - 3).toFixed(1)}" style="fill:${c};font-size:10px">${t}</text>`).join('');
+        .map(([v, t, c]) => { axT.push({ y: y(v), t, c }); return `<line x1="0" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="${c}" stroke-opacity=".7" stroke-width="0.7" stroke-dasharray="1 4" stroke-linecap="round"/>`; }).join('');
     }
   }
   const yl = Math.min(H - BOT, Math.max(TOP - 20, y(lastC))); // l'étiquette du dernier prix reste visible sur le bord
@@ -2279,14 +2278,18 @@ function candleSvg(day, dly, view, id) {
     const xs = LEFT + xOff + step * (pdD0i >= 0 ? pdD0i : cs.findIndex((x) => x.lbl === 'D1') + 1);
     for (const [v, t] of [[pdD1.c[1], 'PDH'], [pdD1.c[2], 'PDL']]) {
       if (v < lo || v > hi) continue;
-      pd += `<line x1="${xs.toFixed(1)}" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="#F5B700" stroke-opacity="0.85" stroke-width="0.7" stroke-dasharray="1 3"/>` +
-        `<text x="${W - AX - 4}" y="${(y(v) - 4).toFixed(1)}" text-anchor="end" style="fill:#F5B700;font-size:10px">${t}</text>`;
+      axT.push({ y: y(v), t, c: '#F5B700' });
+      pd += `<line x1="${xs.toFixed(1)}" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="#F5B700" stroke-opacity="0.85" stroke-width="0.7" stroke-dasharray="1 3"/>`;
     }
   }
+  for (const a of axT) if (Math.abs(a.y - yl) < 17) a.y = yl + (a.y >= yl ? 17 : -17); // une étiquette de ligne ne cache jamais l'étiquette du dernier prix
+  axT.sort((a, b) => a.y - b.y);
+  for (let i = 1; i < axT.length; i++) if (axT[i].y - axT[i - 1].y < 13) axT[i].y = axT[i - 1].y + 13; // deux étiquettes trop proches ne se chevauchent pas
+  const axl = axT.map((a) => `<rect x="${W - AX + 1}" y="${(a.y - 8).toFixed(1)}" width="${AX - 2}" height="16" rx="3" fill="${a.c}" fill-opacity=".92"/><text x="${(W - AX / 2).toFixed(1)}" y="${(a.y + 3.5).toFixed(1)}" text-anchor="middle" style="fill:#0b0b0b;font-size:10px;font-weight:700;pointer-events:none">${a.t}</text>`).join('');
   const tag = `<line x1="0" x2="${W - AX}" y1="${yl.toFixed(1)}" y2="${yl.toFixed(1)}" stroke="${lastCol}" stroke-width="0.7" stroke-dasharray="2 3"/>` +
     `<rect x="${W - AX + 1}" y="${(yl - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
     `<text x="${W - AX + 6}" y="${(yl + 4).toFixed(1)}" class="pc-ax" style="fill:#fff">${fmt(lastC)}</text>`;
-  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${RP ? '' : grid}<g clip-path="url(#pcClip)">${sepSvg}${hb}${fib}${pd}${body}${evb}${RP ? candleRpOverlay(y, W - AX, fmt, lo, hi, lastC) : candleAlSvg(id, y, W - AX, lo, hi, fmt)}</g>${RP ? '' : tag}${!RP && candleXh && candleXh.id === id ? candleXhSvg(candleXh, W, H, AX, TOP, BOT, lo, rng, fmt, xhT) : ''}</svg>`;
+  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${RP ? '' : grid}<g clip-path="url(#pcClip)">${sepSvg}${hb}${fib}${pd}${body}${evb}${RP ? candleRpOverlay(y, W - AX, fmt, lo, hi, lastC) : candleAlSvg(id, y, W - AX, lo, hi, fmt)}</g>${RP ? '' : axl}${RP ? '' : tag}${!RP && candleXh && candleXh.id === id ? candleXhSvg(candleXh, W, H, AX, TOP, BOT, lo, rng, fmt, xhT) : ''}</svg>`;
 }
 
 // Sweep de la bougie daily précédente (même règle qu'Arii SNIPER) : D0 dépasse le haut de D1 et clôture dessous, ou casse son bas et clôture dessus
