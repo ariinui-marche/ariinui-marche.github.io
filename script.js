@@ -3583,9 +3583,11 @@ function candleAlSheet(title, sub, price, okLabel, onOk, withExpiry) { // petite
   if (inp) inp.value = price;
   ok.textContent = okLabel;
   body.appendChild(wrap);
-  wrap.querySelector('.ce-scrim').addEventListener('click', candleAlClose);
-  wrap.querySelector('.no').addEventListener('click', candleAlClose);
+  const born = Date.now(); // au toucher, le « clic » qui suit le relâchement (⊕ ou ✕ sous le doigt) tombe sur la fiche toute neuve : on ignore les clics des 700 premières ms (sinon elle se refermait aussitôt)
+  wrap.querySelector('.ce-scrim').addEventListener('click', () => { if (Date.now() - born > 700) candleAlClose(); });
+  wrap.querySelector('.no').addEventListener('click', () => { if (Date.now() - born > 700) candleAlClose(); });
   ok.addEventListener('click', async () => {
+    if (Date.now() - born < 700) return;
     ok.disabled = true;
     try { await onOk(inp ? parseFloat(inp.value) : null, wrap.querySelector('.ca-exp')?.value); candleAlClose(); } catch (e) { err.textContent = e.message || 'Error'; err.hidden = false; ok.disabled = false; }
   });
