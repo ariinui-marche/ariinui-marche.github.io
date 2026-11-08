@@ -2968,22 +2968,6 @@ document.getElementById('alerteNotif')?.addEventListener('click', async () => { 
 });
 alerteNotifState();
 
-// ntfy : alertes sonores (son, vibration, pop-up). Le serveur crée un canal au nom aléatoire ; le lien l'ouvre directement dans l'application ntfy.
-async function alerteNtfyInit() {
-  const box = document.getElementById('alerteNtfy');
-  if (!box || box.dataset.ready) return;
-  try {
-    const r = await fetch(`${ALERTE_API}/alerte?ntfy=1`);
-    const j = r.ok ? await r.json() : null;
-    if (!j || !j.topic) return;
-    document.getElementById('alerteNtfySub').href = `ntfy://ntfy.sh/${j.topic}?display=Alerte`;
-    document.getElementById('alerteNtfyTopic').textContent = `Channel: ${j.topic}`;
-    box.hidden = false;
-    box.dataset.ready = '1';
-  } catch (e) { /* le panneau reste sans ntfy tant que le serveur ne répond pas */ }
-}
-document.getElementById('alerteToggle')?.addEventListener('click', () => { alerteNtfyInit(); });
-
 // Flèches ‹ › : POH seuls (—) / historique 1 min (1m) / historique 5 min (5m), sans molette
 (function candleHistCtl() {
   const modes = CANDLE_HIST_MODES, lbl = document.getElementById('candleHistLbl'), prev = document.getElementById('candleHistPrev'), next = document.getElementById('candleHistNext');
