@@ -2421,8 +2421,8 @@ function candleOnMove() {
   list.addEventListener('pointerdown', (e) => {
     const ch = e.target.closest('.cd-chart');
     if (!ch || (e.pointerType === 'mouse' && e.button !== 0)) return;
-    if (cg.id !== ch.dataset.pair) { cg.pts.clear(); cg.mode = null; }
-    cg.id = ch.dataset.pair;
+    if (cg.id !== ch.dataset.pair || (e.pointerType !== 'mouse' && cg.pts.size && Date.now() - (cg.lastEv || 0) > 1500)) { cg.pts.clear(); cg.mode = null; } // changement de paire ou doigt fantôme : on repart propre
+    cg.id = ch.dataset.pair; cg.lastEv = Date.now();
     cg.pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
     try { ch.setPointerCapture(e.pointerId); } catch (err) { /* ignoré */ }
     if (cg.pts.size === 1) { cg.mode = null; cg.moved = false; cg.dx = 0; }
@@ -2430,7 +2430,7 @@ function candleOnMove() {
   });
   list.addEventListener('pointermove', (e) => {
     if (!cg.pts.has(e.pointerId) || !cg.id) return;
-    cg.pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    cg.pts.set(e.pointerId, { x: e.clientX, y: e.clientY }); cg.lastEv = Date.now();
     candleOnMove();
   });
   const end = (e) => {
@@ -2445,6 +2445,21 @@ function candleOnMove() {
   };
   list.addEventListener('pointerup', end);
   list.addEventListener('pointercancel', end);
+  // Filets anti-blocage : si le relâchement n'arrive pas sur la liste (doigt levé hors graphique, graphique redessiné, appel entrant, geste système…),
+  // le doigt « fantôme » restait en mémoire et bloquait ensuite tout déplacement / zoom / changement de paire.
+  window.addEventListener('pointerup', end, true);
+  window.addEventListener('pointercancel', end, true);
+  window.addEventListener('lostpointercapture', (e) => { if (e.pointerType !== 'mouse') setTimeout(() => { if (cg.pts.has(e.pointerId)) end(e); }, 80); }, true);
+  const unstick = () => { // plus aucun doigt à l'écran : on remet le geste à zéro
+    if (!cg.pts.size && !cg.mode) return;
+    if ((cg.mode === 'pan' || cg.mode === 'pinch' || cg.mode === 'done') && cg.cur && cg.id) candleViewSave(cg.id, cg.cur);
+    cg.pts.clear(); cg.mode = null;
+  };
+  const noTouch = (e) => { if (!e.touches || e.touches.length === 0) setTimeout(unstick, 120); };
+  window.addEventListener('touchend', noTouch, true);
+  window.addEventListener('touchcancel', noTouch, true);
+  window.addEventListener('blur', unstick);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) unstick(); });
   list.addEventListener('wheel', (e) => { // souris : molette = zoom des bougies autour du curseur (comme TradingView) ; Maj + molette = zoom du prix
     const ch = e.target.closest('.cd-chart');
     if (!ch) return;
