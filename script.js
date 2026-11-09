@@ -3168,32 +3168,39 @@ function alerteStatsHtml() {
     `<div class="alr-r als-note">* Sélection faite après coup : ces paires sont choisies parce qu'elles ont gagné, leur win rate ne prouve rien. La liste ci-dessus sert à voir si les mêmes paires reviennent.</div>` +
     `<div class="alr-r als-note">Les groupes se recoupent. Les signaux encore en cours ne sont pas comptés. Un écart n'est significatif qu'avec plusieurs dizaines de signaux par groupe.</div>`;
 }
+let alerteDaySel = null; // jour du rapport choisi avec les flèches (null = jour en cours)
 function alerteReportRender() {
   const box = document.getElementById('alerteReport');
   if (!box || !alerteData || !alerteCtxData) return;
-  const dstr = alerteDayStr();
-  if (!dstr) { box.innerHTML = ''; return; }
+  const cur = alerteDayStr();
+  if (!cur) { box.innerHTML = ''; return; }
+  const allSg = Object.assign({}, alerteHist || {}, alerteJournal || {});
+  const dayList = [...new Set([cur, ...Object.values(allSg).map((x) => x.d)])].sort().reverse();
+  if (!dayList.includes(alerteDaySel)) alerteDaySel = null;
+  const dstr = alerteDaySel || cur, isCur = dstr === cur, di = dayList.indexOf(dstr);
   const dayEnd = Date.parse(dstr + 'T22:00:00Z') / 1000, dayStart = dayEnd - 86400, over = Date.now() / 1000 >= dayEnd;
-  const sgAll = Object.values(alerteJournal || {}).filter((x) => x.d === dstr);
+  const sgAll = Object.values(isCur ? (alerteJournal || {}) : allSg).filter((x) => x.d === dstr);
   const tp = sgAll.filter((x) => x.res === 1).length, sl = sgAll.filter((x) => x.res === 2).length, op = sgAll.length - tp - sl;
-  const top = alerteTop2();
+  let top = alerteTop2();
+  if (!isCur) { const mp = {}; for (const x of sgAll) if (x.res === 1 && x.mf != null) mp[x.pair] = Math.max(mp[x.pair] || 0, x.mf); top = Object.entries(mp).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([id, rp]) => ({ id, rp })); }
   // une fiche par paire : signaux, R potentiel, volatilité du jour, contexte connu avant la décision de 15 h
   const card = ({ id, rp }, i) => {
     const sg = sgAll.filter((x) => x.pair === id).sort((a, b) => a.t - b.t);
-    const dy = alerteCtxData.daily[id], hist = ((chartsCandles || {})[id] || []).slice(0, -1).slice(-20);
+    const dy = isCur ? alerteCtxData.daily[id] : null, hist = ((chartsCandles || {})[id] || []).slice(0, -1).slice(-20);
     let vol = '';
     if (dy && dy.length && hist.length >= 10) {
       const d0 = dy[dy.length - 1], base = hist.reduce((a, b) => a + (b[2] - b[3]), 0) / hist.length, mv = (d0[4] - d0[1]) / d0[1] * 100;
       if (base > 0) vol = `<div class="alr-r">Volatilité du jour : <b>${((d0[2] - d0[3]) / base).toFixed(1)}×</b> sa moyenne · <b class="${mv >= 0 ? 'up' : 'dn'}">${mv >= 0 ? '+' : ''}${mv.toFixed(2)} %</b></div>`;
     }
     const main = sg.find((x) => x.res === 1) || sg[0], side = main ? (main.side === 'BUY' ? 'up' : 'dn') : ((alerteData[id].pt.dir === 1) ? 'up' : 'dn');
+    const ctxIn = isCur ? `<div class="al-ctx-in">${alerteCtxHtml(alerteCtx(id, side), side)}</div>` : '';
     const rows = sg.length ? sg.map((x) => `<div class="alr-ev"><b>${alerteTime(x.t)}</b> ${x.side} ${x.sens} · ${x.res === 1 ? '<i>TP</i>' : x.res === 2 ? 'SL' : 'en cours'}${x.mf != null && x.res !== 2 ? ` · +${x.mf.toFixed(1)}R` : ''}</div>`).join('') : '';
-    return `<div class="alr-card"><div class="alr-ct"><span class="al-top">#${i + 1}</span> ${id.slice(0, 3)}/${id.slice(3)} <b class="up">+${rp.toFixed(1)}R</b></div>${rows}${vol}<div class="al-ctx-in">${alerteCtxHtml(alerteCtx(id, side), side)}</div></div>`;
+    return `<div class="alr-card"><div class="alr-ct"><span class="al-top">#${i + 1}</span> ${id.slice(0, 3)}/${id.slice(3)} <b class="up">+${rp.toFixed(1)}R</b></div>${rows}${vol}${ctxIn}</div>`;
   };
   // annonces majeures du jour (heure UTC-10)
   const ev = (alerteEco || []).filter((e) => e.impact === 'High' && e.date).map((e) => ({ e, t: Date.parse(e.date) / 1000 })).filter((x) => x.t >= dayStart && x.t < dayEnd).sort((a, b) => a.t - b.t);
   const evHtml = ev.length ? ev.slice(0, 8).map(({ e, t }) => `<div class="alr-ev"><b>${alerteTime(t)}</b> ${alEsc(e.country)} · ${alEsc(e.title)}${e.actual ? ` <i>${alEsc(e.actual)}</i> <span>/ ${alEsc(e.forecast || '—')}</span>` : ''}</div>`).join('') + (ev.length > 8 ? `<div class="alr-ev">+${ev.length - 8}</div>` : '') : '<div class="alr-ev">Aucune annonce majeure</div>';
-  box.innerHTML = `<div class="alr-t">Jour de trading ${alEsc(dstr)} · ${over ? 'terminé' : 'en cours'}</div>` +
+  box.innerHTML = `<div class="alr-t"><button type="button" class="alr-nav" data-dn="${di + 1}" ${di + 1 >= dayList.length ? 'disabled' : ''} aria-label="Jour précédent">◀</button> Jour de trading ${alEsc(dstr)} · ${over ? 'terminé' : 'en cours'} <button type="button" class="alr-nav" data-dn="${di - 1}" ${di <= 0 ? 'disabled' : ''} aria-label="Jour suivant">▶</button></div>` +
     `<div class="alr-r">${sgAll.length ? `${sgAll.length} signaux · <b class="up">${tp} TP</b> · <b class="dn">${sl} SL</b>${op ? ` · ${op} en cours` : ''}${tp + sl ? ` · win rate ${Math.round(100 * tp / (tp + sl))} %` : ''}` : 'Aucun signal enregistré'}</div>` +
     `<div class="alr-h">Les 2 meilleures paires du jour</div>` + (top.length ? top.map(card).join('') : '<div class="alr-ev">Aucune paire gagnante pour l\'instant</div>') +
     `<div class="alr-h">Annonces majeures (UTC-10)</div>${evHtml}` + alerteStatsHtml();
@@ -3212,6 +3219,14 @@ async function alerteLoad() {
   } catch (e) { /* on garde la dernière version */ }
   alerteRender();
 }
+document.getElementById('alerteReport')?.addEventListener('click', (e) => {
+  const b = e.target.closest('.alr-nav');
+  if (!b || b.disabled) return;
+  const all = Object.assign({}, alerteHist || {}, alerteJournal || {}), cur = alerteDayStr();
+  const list = [...new Set([cur, ...Object.values(all).map((x) => x.d)])].sort().reverse(), t = list[+b.dataset.dn];
+  alerteDaySel = t && t !== cur ? t : null;
+  alerteReportRender();
+});
 document.getElementById('alerteToggle')?.addEventListener('click', (e) => {
   const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
   e.currentTarget.setAttribute('aria-expanded', String(!expanded));
