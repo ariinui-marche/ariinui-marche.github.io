@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-08T22:43:45.155Z",
+  "timestamp": "2026-11-09T01:58:51.886Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -12149,7 +12149,7 @@
       "impact": "Low",
       "forecast": "0.8%",
       "previous": "0.9%",
-      "actual": ""
+      "actual": "0.7%"
     },
     {
       "title": "PPI y/y",
@@ -12158,7 +12158,7 @@
       "impact": "Low",
       "forecast": "5.3%",
       "previous": "5.0%",
-      "actual": ""
+      "actual": "5.7%"
     },
     {
       "title": "Leading Indicators",
