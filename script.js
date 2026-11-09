@@ -1973,6 +1973,7 @@ if (!CANDLE_HIST_MODES.includes(candleHistTf)) candleHistTf = '0';
 const candleHistData = {}; // 'PAIR|tf' -> { bars: [[t,o,h,l,c]...], at, busy }
 const CANDLE_FLAG = { USD: 'us', EUR: 'eu', GBP: 'gb', JPY: 'jp', AUD: 'au', NZD: 'nz', CAD: 'ca', CHF: 'ch' }; // drapeaux ronds des pastilles de news (comme TradingView)
 const CANDLE_DAYS = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'], CANDLE_DAYS_S = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
+const CANDLE_DAYFR = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
 const CANDLE_MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 let candleEcoEv = []; // news à fort impact (calendrier éco) : { country, title, _t, actual, forecast, previous }
 const candleEvHits = {}; // paire -> [{ x, y, r, list }] zones cliquables des pastilles (repère du graphique)
@@ -2106,7 +2107,7 @@ if (candleClean) CANDLE_G.AX = 0;
 function candleSvg(day, dly, view, id) {
   const rpx = candleRpPoh(id); // replay : POH / daily calculés à la position du replay
   if (rpx) { day = rpx.day; dly = rpx.dly; }
-  const dd = (dly || []).slice(-4).map((b, i, a) => ({ lbl: 'D' + (a.length - 1 - i), c: b.slice(1, 5) }));
+  const dd = (dly || []).slice(-4).map((b, i, a) => ({ lbl: 'D' + (a.length - 1 - i), dn: CANDLE_DAYFR[new Date((b[0] + 7200) * 1000).getUTCDay()], c: b.slice(1, 5) })); // dn : jour de la semaine en français (jour de trading UTC+2) affiché à la place de D3..D0
   const cs = dd.concat([{ lbl: '', c: null }], CANDLE_SLOTS.map(([k, lbl]) => ({ lbl, c: day.c[k] })));
   const vals = cs.filter((x) => x.c);
   if (!vals.length && !(id && rp.on && rp.id === id)) return '';
@@ -2139,7 +2140,7 @@ function candleSvg(day, dly, view, id) {
     const col = c >= o ? CANDLE_UP : CANDLE_DN;
     const top = y(Math.max(o, c)), ht = Math.max(1, Math.abs(y(o) - y(c)));
     const vis = h >= lo && l <= hi; // la bougie touche la zone affichée
-    return (vis ? `<text x="${cx.toFixed(1)}" y="${Math.min(H - 6, Math.max(14, y(h) - 6)).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:${col}">${x.lbl}</text>` : '') +
+    return (vis ? `<text x="${cx.toFixed(1)}" y="${Math.min(H - 6, Math.max(14, y(h) - 6)).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:${col}">${x.dn || x.lbl}</text>` : '') +
       `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="0.9"/>` +
       `<rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}" stroke-width="0.9"/>`;
   }).join('');
