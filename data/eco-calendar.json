@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-09T01:58:51.886Z",
+  "timestamp": "2026-11-09T09:09:11.462Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -12167,7 +12167,7 @@
       "impact": "Low",
       "forecast": "116.7%",
       "previous": "118.0%",
-      "actual": ""
+      "actual": "116.4%"
     },
     {
       "title": "German Trade Balance",
@@ -12176,7 +12176,7 @@
       "impact": "Low",
       "forecast": "19.2B",
       "previous": "19.5B",
-      "actual": ""
+      "actual": "15.6B"
     },
     {
       "title": "M2 Money Supply y/y",
