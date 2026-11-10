@@ -3177,13 +3177,16 @@ const PLAN_KZ = { A: 'Asia', L: 'London', NA: 'NY AM', NL: 'NY Lunch' };
 const planTok = (t) => String(t).replace(/^[^\wÀ-ÿ]+/u, '').replace(/KZ(NA|NL|A|L)(H|L)/, (m, k, hl) => `KZ ${PLAN_KZ[k]} ${hl === 'H' ? 'haut' : 'bas'}`);
 const planSweep = (x) => { const m = String(x.sweep || '').replace(/\s*\(il y a[^)]*\)/, '').trim(); return m ? 'Sweep ' + m : ''; }; // « dernier sweep » de l'infobulle (type seulement, sans l'ancienneté)
 const planConf = (x) => [...new Set([...(x.source || []).map(planTok), ...(x.ligne || []).map(planTok), ...(x.ifvg ? ['IFVG rouge'] : []), planSweep(x)].filter(Boolean))];
+const planExact = (x) => [...(x.source || []), ...(x.ligne || []).map(planTok), ...(x.ifvg ? ['IFVG rouge 1m/5m'] : []), x.sweep ? 'dernier sweep : ' + x.sweep : ''].filter(Boolean); // confluences telles qu'écrites dans l'infobulle du plan
 function alertePlansHtml(dstr) {
   if (!alertePlans || !alertePlans.length) return '';
   const dayEnd = Date.parse(dstr + 'T22:00:00Z') / 1000, dayStart = dayEnd - 86400, wkStart = dayEnd - 5 * 86400;
   const inDay = alertePlans.filter((x) => x.t >= dayStart && x.t < dayEnd), inWk = alertePlans.filter((x) => x.t >= wkStart && x.t < dayEnd);
   const pn = (id) => id.slice(0, 3) + '/' + id.slice(3), win = (x) => x.pic >= PLAN_WIN_R;
   const tag = (x) => `${alEsc(pn(x.pair))} ${x.side === 'BUY' ? 'achat' : 'vente'}`;
-  const best = inDay.slice().sort((a, b) => b.pic - a.pic).slice(0, 3).map((x) => `<div class="alr-card"><div class="alr-ct">${tag(x)} <b class="${win(x) ? 'up' : 'dn'}">+${x.pic.toFixed(2)}R</b> <span class="alr-r">${alerteTime(x.t)} · ${alEsc(x.state)}</span></div><div class="alr-ev">${planConf(x).map(alEsc).join(' · ') || 'sans confluence notée'}</div></div>`).join('');
+  const planCard = (x) => `<div class="alr-card"><div class="alr-ct">${tag(x)} <b class="${win(x) ? 'up' : 'dn'}">+${x.pic.toFixed(2)}R</b> <span class="alr-r">${alerteTime(x.t)} · ${alEsc(x.state)}</span></div><div class="alr-ev">${planExact(x).map(alEsc).join(' · ') || 'sans confluence notée'}</div></div>`;
+  const best = inDay.slice().sort((a, b) => b.pic - a.pic).slice(0, 3).map(planCard).join('');
+  const worst = inDay.filter((x) => x.state !== 'en cours').sort((a, b) => a.pic - b.pic).slice(0, 3).map(planCard).join('');
   const byPair = {};
   for (const x of inWk) (byPair[x.pair] || (byPair[x.pair] = [])).push(x);
   const pairs = Object.entries(byPair).filter(([, a]) => a.length >= 2).map(([id, a]) => ({ id, n: a.length, w: a.filter(win).length, top: a.slice().sort((p, q) => q.pic - p.pic)[0] })).sort((a, b) => b.w / b.n - a.w / a.n || b.top.pic - a.top.pic).slice(0, 3)
@@ -3193,6 +3196,7 @@ function alertePlansHtml(dstr) {
   const confs = Object.entries(byConf).filter(([, o]) => o.n >= 3).sort((a, b) => b[1].w / b[1].n - a[1].w / a[1].n || b[1].n - a[1].n).slice(0, 6)
     .map(([c, o]) => `<div class="alr-ev"><b>${Math.round(100 * o.w / o.n)} %</b> (${o.w}/${o.n}) ${alEsc(c)}</div>`).join('');
   return `<div class="alr-h">Meilleurs plans du jour (confluences)</div>${best || '<div class="alr-ev">Aucun plan lu pour ce jour</div>'}` +
+    `<div class="alr-h">Pires plans du jour (confluences)</div>${worst || '<div class="alr-ev">Aucun plan terminé pour ce jour</div>'}` +
     `<div class="alr-h">Win rate de la semaine par paire</div>${pairs || '<div class="alr-ev">Pas assez de plans (2 minimum par paire)</div>'}` +
     `<div class="alr-h">Win rate de la semaine par confluence</div>${confs || '<div class="alr-ev">Pas assez de plans (3 minimum par confluence)</div>'}` +
     `<div class="alr-r als-note">Plan gagnant = pic d'au moins ${PLAN_WIN_R}R. Plans lus sur TradingView (Arii CDX SW), confluences de l'infobulle de la partie rouge du stop.</div>`;
