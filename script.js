@@ -3174,7 +3174,7 @@ let alerteDaySel = null; // jour du rapport choisi avec les flèches (null = jou
 // ===== PLANS CDX SW : meilleurs plans du jour et win rate de la semaine, avec les confluences notées dans l'infobulle du plan =====
 const PLAN_WIN_R = 1; // un plan est « gagnant » si son pic atteint au moins 1R
 const PLAN_KZ = { A: 'Asia', L: 'London', NA: 'NY AM', NL: 'NY Lunch' };
-const planTok = (t) => String(t).replace(/^[^\wÀ-ÿ]+/u, '').replace(/KZ(NA|NL|A|L)(H|L)/, (m, k, hl) => `KZ ${PLAN_KZ[k]} ${hl === 'H' ? 'haut' : 'bas'}`);
+const planTok = (t) => String(t).replace(/^[^\wÀ-ÿ]+/u, '').replace(/KZ(NA|NL|A|L)(H|L)/, (m, k, hl) => `KZ ${PLAN_KZ[k]} ${hl === 'H' ? 'haut' : 'bas'}`);
 const planConf = (x) => [...new Set([...(x.source || []).map(planTok), ...(x.ligne || []).map(planTok), ...(x.ifvg ? ['IFVG rouge'] : [])])];
 function alertePlansHtml(dstr) {
   if (!alertePlans || !alertePlans.length) return '';
