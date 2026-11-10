@@ -2064,9 +2064,25 @@ function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bou
     .then((j) => {
       if (j && j.bars && j.bars.length) h.bars = since ? h.bars.filter((b) => b[0] < since).concat(j.bars) : j.bars;
       if ((tf === candleHistTf || rp.on) && !(cg.mode)) candleRedraw(id, candleViewOf(id));
+      if (!since && tf === '1' && id === 'EURUSD' && h.bars.length && !h.deep) candleDeepLoad(id, h); // TEST : jusqu'à 250 000 barres 1 min MT5
     })
     .catch(() => { /* on garde ce qui est affiché */ })
     .finally(() => { h.busy = false; h.at = Date.now(); });
+}
+// Historique profond (fichiers MT5 privés) : pages de 50 000 barres plus anciennes, ajoutées à GAUCHE des barres déjà chargées
+async function candleDeepLoad(id, h) {
+  h.deep = true;
+  try {
+    for (let k = 0; k < 8 && h.bars.length; k++) {
+      const r = await fetch(`https://ariinuiirgina.vercel.app/api/poh-candles?pair=${id}&tf=1&older=${h.bars[0][0]}&n=50000`, { signal: AbortSignal.timeout(30000) });
+      if (!r.ok) break;
+      const j = await r.json();
+      if (!j.bars || !j.bars.length) break;
+      h.bars = j.bars.concat(h.bars);
+      if (candleHistTf === '1' && !(cg.mode)) candleRedraw(id, candleViewOf(id));
+      if (!j.more) break;
+    }
+  } catch (e) { h.deep = false; /* nouvel essai au prochain chargement */ }
 }
 
 // Dimensions réelles de la zone graphique (plein écran) : le SVG est dessiné à l'échelle 1:1, sans déformation
