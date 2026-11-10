@@ -3175,7 +3175,8 @@ let alerteDaySel = null; // jour du rapport choisi avec les flèches (null = jou
 const PLAN_WIN_R = 1; // un plan est « gagnant » si son pic atteint au moins 1R
 const PLAN_KZ = { A: 'Asia', L: 'London', NA: 'NY AM', NL: 'NY Lunch' };
 const planTok = (t) => String(t).replace(/^[^\wÀ-ÿ]+/u, '').replace(/KZ(NA|NL|A|L)(H|L)/, (m, k, hl) => `KZ ${PLAN_KZ[k]} ${hl === 'H' ? 'haut' : 'bas'}`);
-const planConf = (x) => [...new Set([...(x.source || []).map(planTok), ...(x.ligne || []).map(planTok), ...(x.ifvg ? ['IFVG rouge'] : [])])];
+const planSweep = (x) => { const m = String(x.sweep || '').replace(/\s*\(il y a[^)]*\)/, '').trim(); return m ? 'Sweep ' + m : ''; }; // « dernier sweep » de l'infobulle (type seulement, sans l'ancienneté)
+const planConf = (x) => [...new Set([...(x.source || []).map(planTok), ...(x.ligne || []).map(planTok), ...(x.ifvg ? ['IFVG rouge'] : []), planSweep(x)].filter(Boolean))];
 function alertePlansHtml(dstr) {
   if (!alertePlans || !alertePlans.length) return '';
   const dayEnd = Date.parse(dstr + 'T22:00:00Z') / 1000, dayStart = dayEnd - 86400, wkStart = dayEnd - 5 * 86400;
