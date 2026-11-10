@@ -3105,6 +3105,7 @@ document.getElementById('alerteTable')?.addEventListener('click', (e) => {
 });
 // ===== RAPPORT DE FIN DE JOURNÉE (jour de trading 22:00 UTC → 22:00 UTC) : signaux, volatilité par paire et par devise, annonces majeures, cassures PDH/PDL, sweeps =====
 // Généré à partir des données déjà chargées (bougies quotidiennes, POH, journal des signaux du serveur, calendrier du site) ; le serveur envoie en plus un résumé à 22:05 UTC (notification).
+let alertePlans = null; // plans réels d'Arii CDX SW lus sur TradingView (outil plans_report.mjs) : confluences de l'infobulle de la partie rouge du stop
 let alerteJournal = null, alerteJournalAt = 0, alerteEco = null, alerteHist = null; // alerteHist = signaux reconstitués à partir de l'historique 1 min (data/journal-history.json) ; le journal du serveur prime sur la même clé
 const alEsc = (t) => String(t == null ? '' : t).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 async function alerteReportLoad() {
@@ -3116,6 +3117,7 @@ async function alerteReportLoad() {
       if (r.ok) { alerteJournal = (await r.json()).journal || {}; alerteJournalAt = Date.now(); }
     }
     if (!alerteHist) { const r = await fetch('./data/journal-history.json', { cache: 'no-store' }); if (r.ok) alerteHist = await r.json(); }
+    if (!alertePlans) { const r = await fetch('./data/plans-log.json', { cache: 'no-store' }); if (r.ok) alertePlans = Object.values((await r.json()).plans || {}); }
     if (!alerteEco) { const r = await fetch('./data/eco-calendar.json', { cache: 'no-store' }); if (r.ok) alerteEco = (await r.json()).events || []; }
   } catch (e) { /* le rapport s'affiche avec ce qui est disponible */ }
   alerteReportRender();
@@ -3169,6 +3171,31 @@ function alerteStatsHtml() {
     `<div class="alr-r als-note">Les groupes se recoupent. Les signaux encore en cours ne sont pas comptés. Un écart n'est significatif qu'avec plusieurs dizaines de signaux par groupe.</div>`;
 }
 let alerteDaySel = null; // jour du rapport choisi avec les flèches (null = jour en cours)
+// ===== PLANS CDX SW : meilleurs plans du jour et win rate de la semaine, avec les confluences notées dans l'infobulle du plan =====
+const PLAN_WIN_R = 1; // un plan est « gagnant » si son pic atteint au moins 1R
+const PLAN_KZ = { A: 'Asia', L: 'London', NA: 'NY AM', NL: 'NY Lunch' };
+const planTok = (t) => String(t).replace(/^[^\wÀ-ÿ]+/u, '').replace(/KZ(NA|NL|A|L)(H|L)/, (m, k, hl) => `KZ ${PLAN_KZ[k]} ${hl === 'H' ? 'haut' : 'bas'}`);
+const planConf = (x) => [...new Set([...(x.source || []).map(planTok), ...(x.ligne || []).map(planTok), ...(x.ifvg ? ['IFVG rouge'] : [])])];
+function alertePlansHtml(dstr) {
+  if (!alertePlans || !alertePlans.length) return '';
+  const dayEnd = Date.parse(dstr + 'T22:00:00Z') / 1000, dayStart = dayEnd - 86400, wkStart = dayEnd - 5 * 86400;
+  const inDay = alertePlans.filter((x) => x.t >= dayStart && x.t < dayEnd), inWk = alertePlans.filter((x) => x.t >= wkStart && x.t < dayEnd);
+  const pn = (id) => id.slice(0, 3) + '/' + id.slice(3), win = (x) => x.pic >= PLAN_WIN_R;
+  const tag = (x) => `${alEsc(pn(x.pair))} ${x.side === 'BUY' ? 'achat' : 'vente'}`;
+  const best = inDay.slice().sort((a, b) => b.pic - a.pic).slice(0, 3).map((x) => `<div class="alr-card"><div class="alr-ct">${tag(x)} <b class="${win(x) ? 'up' : 'dn'}">+${x.pic.toFixed(2)}R</b> <span class="alr-r">${alerteTime(x.t)} · ${alEsc(x.state)}</span></div><div class="alr-ev">${planConf(x).map(alEsc).join(' · ') || 'sans confluence notée'}</div></div>`).join('');
+  const byPair = {};
+  for (const x of inWk) (byPair[x.pair] || (byPair[x.pair] = [])).push(x);
+  const pairs = Object.entries(byPair).filter(([, a]) => a.length >= 2).map(([id, a]) => ({ id, n: a.length, w: a.filter(win).length, top: a.slice().sort((p, q) => q.pic - p.pic)[0] })).sort((a, b) => b.w / b.n - a.w / a.n || b.top.pic - a.top.pic).slice(0, 3)
+    .map((r) => `<div class="alr-ev"><b>${alEsc(pn(r.id))}</b> ${Math.round(100 * r.w / r.n)} % (${r.w}/${r.n}) · meilleur plan +${r.top.pic.toFixed(2)}R : ${planConf(r.top).map(alEsc).join(' · ') || '—'}</div>`).join('');
+  const byConf = {};
+  for (const x of inWk) for (const c of planConf(x)) { const o = byConf[c] || (byConf[c] = { n: 0, w: 0 }); o.n++; if (win(x)) o.w++; }
+  const confs = Object.entries(byConf).filter(([, o]) => o.n >= 3).sort((a, b) => b[1].w / b[1].n - a[1].w / a[1].n || b[1].n - a[1].n).slice(0, 6)
+    .map(([c, o]) => `<div class="alr-ev"><b>${Math.round(100 * o.w / o.n)} %</b> (${o.w}/${o.n}) ${alEsc(c)}</div>`).join('');
+  return `<div class="alr-h">Meilleurs plans du jour (confluences)</div>${best || '<div class="alr-ev">Aucun plan lu pour ce jour</div>'}` +
+    `<div class="alr-h">Win rate de la semaine par paire</div>${pairs || '<div class="alr-ev">Pas assez de plans (2 minimum par paire)</div>'}` +
+    `<div class="alr-h">Win rate de la semaine par confluence</div>${confs || '<div class="alr-ev">Pas assez de plans (3 minimum par confluence)</div>'}` +
+    `<div class="alr-r als-note">Plan gagnant = pic d'au moins ${PLAN_WIN_R}R. Plans lus sur TradingView (Arii CDX SW), confluences de l'infobulle de la partie rouge du stop.</div>`;
+}
 function alerteReportRender() {
   const box = document.getElementById('alerteReport');
   if (!box || !alerteData || !alerteCtxData) return;
@@ -3203,7 +3230,7 @@ function alerteReportRender() {
   box.innerHTML = `<div class="alr-t"><button type="button" class="alr-nav" data-dn="${di + 1}" ${di + 1 >= dayList.length ? 'disabled' : ''} aria-label="Jour précédent">◀</button> Jour de trading ${alEsc(dstr)} · ${over ? 'terminé' : 'en cours'} <button type="button" class="alr-nav" data-dn="${di - 1}" ${di <= 0 ? 'disabled' : ''} aria-label="Jour suivant">▶</button></div>` +
     `<div class="alr-r">${sgAll.length ? `${sgAll.length} signaux · <b class="up">${tp} TP</b> · <b class="dn">${sl} SL</b>${op ? ` · ${op} en cours` : ''}${tp + sl ? ` · win rate ${Math.round(100 * tp / (tp + sl))} %` : ''}` : 'Aucun signal enregistré'}</div>` +
     `<div class="alr-h">Les 2 meilleures paires du jour</div>` + (top.length ? top.map(card).join('') : '<div class="alr-ev">Aucune paire gagnante pour l\'instant</div>') +
-    `<div class="alr-h">Annonces majeures (UTC-10)</div>${evHtml}` + alerteStatsHtml();
+    alertePlansHtml(dstr) + `<div class="alr-h">Annonces majeures (UTC-10)</div>${evHtml}` + alerteStatsHtml();
 }
 async function alerteLoad() {
   if (!alerteData) {
