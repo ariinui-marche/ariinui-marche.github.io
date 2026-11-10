@@ -3203,6 +3203,16 @@ function alertePlansHtml(dstr) {
     .map((r) => `<div class="alr-ev"><b>${alEsc(pn(r.id))}</b> ${Math.round(100 * r.w / r.n)} % (${r.w}/${r.n}) · meilleur plan +${r.top.pic.toFixed(2)}R : ${planConf(r.top).map(alEsc).join(' · ') || '—'}</div>`).join('');
   const byConf = {};
   for (const x of inWk) for (const c of planConf(x)) { const o = byConf[c] || (byConf[c] = { n: 0, w: 0 }); o.n++; if (win(x)) o.w++; }
+  // meilleur combo de 2 confluences de la semaine (plans terminés, 1 min confirmés par le 5 min) : classé sur le taux de plans à 2R et plus, puis sur le nombre de plans
+  const cb = {};
+  for (const x of inWk) {
+    if (x.state === 'en cours') continue;
+    const cs = planConf(x).filter((c) => c !== 'Plan 5 min confirmé').sort();
+    for (let i = 0; i < cs.length; i++) for (let j = i + 1; j < cs.length; j++) { const o = cb[cs[i] + ' + ' + cs[j]] || (cb[cs[i] + ' + ' + cs[j]] = { n: 0, w1: 0, w2: 0, p: [] }); o.n++; if (x.pic >= 1) o.w1++; if (x.pic >= 2) o.w2++; o.p.push(x.pic); }
+  }
+  const cbMin = Object.values(cb).some((o) => o.n >= 8) ? 8 : 5;
+  const cbBest = Object.entries(cb).filter(([, o]) => o.n >= cbMin).sort((a, b) => b[1].w2 / b[1].n - a[1].w2 / a[1].n || b[1].n - a[1].n)[0];
+  const comboHtml = cbBest ? (() => { const [k, o] = cbBest, md = o.p.slice().sort((a, b) => a - b)[Math.floor(o.p.length / 2)]; return `<div class="alr-card"><div class="alr-ct"><b class="up">${alEsc(k)}</b></div><div class="alr-ev">${o.n} plans · ≥ 1R : <b>${Math.round(100 * o.w1 / o.n)} %</b> · ≥ 2R : <b>${Math.round(100 * o.w2 / o.n)} %</b> · pic médian +${md.toFixed(2)}R</div></div>`; })() : '<div class="alr-ev">Pas assez de plans pour classer un combo (5 minimum)</div>';
   const confRow = ([c, o]) => `<div class="alr-ev"><b>${Math.round(100 * o.w / o.n)} %</b> (${o.w}/${o.n}) ${alEsc(c)}</div>`;
   const confAll = Object.entries(byConf).filter(([, o]) => o.n >= 3);
   const confs = confAll.slice().sort((a, b) => b[1].w / b[1].n - a[1].w / a[1].n || b[1].n - a[1].n).slice(0, 6).map(confRow).join('');
@@ -3211,6 +3221,7 @@ function alertePlansHtml(dstr) {
     `<div class="alr-h">Plans du jour par symbole (${inDay.length})</div>${perSym || '<div class="alr-ev">Aucun plan pour ce jour</div>'}` +
     `<div class="alr-h">Pires plans du jour (confluences)</div>${worst || '<div class="alr-ev">Aucun plan terminé pour ce jour</div>'}` +
     `<div class="alr-h">Win rate de la semaine par paire</div>${pairs || '<div class="alr-ev">Pas assez de plans (2 minimum par paire)</div>'}` +
+    `<div class="alr-h">Meilleur combo de la semaine (1 min + 5 min)</div>${comboHtml}` +
     `<div class="alr-h">Meilleures confluences de la semaine</div>${confs || '<div class="alr-ev">Pas assez de plans (3 minimum par confluence)</div>'}` +
     `<div class="alr-h">Pires confluences de la semaine</div>${confBad || '<div class="alr-ev">Pas assez de plans (3 minimum par confluence)</div>'}` +
     `<div class="alr-r als-note">Plan gagnant = pic d'au moins ${PLAN_WIN_R}R. Seuls les plans 1 min confirmés par un plan 5 min de même sens (écart 45 min max) sont comptés. Plans lus sur TradingView (Arii CDX SW), confluences de l'infobulle de la partie rouge du stop.</div>`;
