@@ -2137,7 +2137,15 @@ function candleSvg(day, dly, view, id) {
     const cx = LEFT + xOff + step * (i + 0.5);
     if (!x.c) return '';
     const [o, h, l, c] = x.c;
-    const col = c >= o ? CANDLE_UP : CANDLE_DN;
+    let col = c >= o ? CANDLE_UP : CANDLE_DN;
+    // POH 14h / 22h / 02h : la bougie POH suivante sweepe son haut (rouge) ou son bas (vert) = dépasse l'extrême puis clôture de retour dedans ; si les deux, la clôture de la suivante tranche (baissière = haut en dernier)
+    if (x.lbl === '14h' || x.lbl === '22h' || x.lbl === '02h') {
+      const nx = cs[i + 1] && cs[i + 1].c;
+      if (nx) {
+        const sh = nx[1] > h && nx[3] < h, sl = nx[2] < l && nx[3] > l;
+        if (sh && sl) col = nx[3] < nx[0] ? '#f23645' : '#089981'; else if (sh) col = '#f23645'; else if (sl) col = '#089981';
+      }
+    }
     const top = y(Math.max(o, c)), ht = Math.max(1, Math.abs(y(o) - y(c)));
     const vis = h >= lo && l <= hi; // la bougie touche la zone affichée
     return (vis ? `<text x="${cx.toFixed(1)}" y="${Math.min(H - 6, Math.max(14, y(h) - 6)).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:${col}">${x.dn || x.lbl}</text>` : '') +
