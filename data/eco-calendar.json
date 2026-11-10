@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-10T10:05:27.427Z",
+  "timestamp": "2026-11-10T17:41:03.341Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -12422,13 +12422,22 @@
       "actual": ""
     },
     {
+      "title": "30-y Bond Auction",
+      "country": "GBP",
+      "date": "2026-11-10T05:02:00-05:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "5.52|3.8",
+      "actual": "5.54|3.8"
+    },
+    {
       "title": "NFIB Small Business Index",
       "country": "USD",
       "date": "2026-11-10T06:00:00-05:00",
       "impact": "Low",
       "forecast": "98.0",
       "previous": "97.9",
-      "actual": ""
+      "actual": "97.8"
     },
     {
       "title": "Core CPI y/y",
@@ -12449,15 +12458,6 @@
       "actual": ""
     },
     {
-      "title": "30-y Bond Auction",
-      "country": "GBP",
-      "date": "2026-11-10T06:32:00-05:00",
-      "impact": "Low",
-      "forecast": "",
-      "previous": "5.52|3.8",
-      "actual": ""
-    },
-    {
       "title": "MPC Member Lombardelli Speaks",
       "country": "GBP",
       "date": "2026-11-10T07:30:00-05:00",
@@ -12469,11 +12469,11 @@
     {
       "title": "ADP Weekly Employment Change",
       "country": "USD",
-      "date": "2026-11-10T08:16:00-05:00",
+      "date": "2026-11-10T08:15:00-05:00",
       "impact": "Low",
       "forecast": "",
-      "previous": "16.8K",
-      "actual": ""
+      "previous": "19.5K",
+      "actual": "19.8K"
     },
     {
       "title": "Core CPI m/m",
@@ -12482,7 +12482,7 @@
       "impact": "High",
       "forecast": "0.2%",
       "previous": "0.3%",
-      "actual": ""
+      "actual": "0.3%"
     },
     {
       "title": "CPI m/m",
@@ -12491,7 +12491,7 @@
       "impact": "High",
       "forecast": "0.3%",
       "previous": "0.6%",
-      "actual": ""
+      "actual": "0.4%"
     },
     {
       "title": "FOMC Member Logan Speaks",
@@ -12617,6 +12617,24 @@
       "impact": "Low",
       "forecast": "0.7%",
       "previous": "-1.3%",
+      "actual": ""
+    },
+    {
+      "title": "M2 Money Supply y/y",
+      "country": "CNY",
+      "date": "2026-11-11T04:03:00-05:00",
+      "impact": "Low",
+      "forecast": "7.2%",
+      "previous": "7.2%",
+      "actual": ""
+    },
+    {
+      "title": "New Loans",
+      "country": "CNY",
+      "date": "2026-11-11T04:03:00-05:00",
+      "impact": "Low",
+      "forecast": "80B",
+      "previous": "1080B",
       "actual": ""
     },
     {
