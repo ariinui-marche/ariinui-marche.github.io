@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-10T02:23:53.662Z",
+  "timestamp": "2026-11-10T10:05:27.427Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -12341,22 +12341,22 @@
       "actual": "-15"
     },
     {
-      "title": "Trade Balance",
-      "country": "CNY",
-      "date": "2026-11-09T22:03:00-05:00",
-      "impact": "Low",
-      "forecast": "855B",
-      "previous": "906B",
-      "actual": ""
-    },
-    {
       "title": "USD-Denominated Trade Balance",
       "country": "CNY",
-      "date": "2026-11-09T22:04:00-05:00",
+      "date": "2026-11-09T21:32:00-05:00",
       "impact": "Low",
       "forecast": "126.5B",
       "previous": "133.5B",
-      "actual": ""
+      "actual": "105.3B"
+    },
+    {
+      "title": "Trade Balance",
+      "country": "CNY",
+      "date": "2026-11-09T21:33:00-05:00",
+      "impact": "Low",
+      "forecast": "855B",
+      "previous": "906B",
+      "actual": "713B"
     },
     {
       "title": "30-y Bond Auction",
@@ -12365,7 +12365,7 @@
       "impact": "Low",
       "forecast": "",
       "previous": "4.11|3.9",
-      "actual": ""
+      "actual": "3.85|3.4"
     },
     {
       "title": "Economy Watchers Sentiment",
@@ -12374,7 +12374,7 @@
       "impact": "Low",
       "forecast": "47.1",
       "previous": "47.0",
-      "actual": ""
+      "actual": "46.1"
     },
     {
       "title": "MPC Member Breeden Speaks",
