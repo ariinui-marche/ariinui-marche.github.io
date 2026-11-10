@@ -2316,9 +2316,14 @@ function candleSweep(dly, day) {
   const a = (dly || []).slice(-4);
   if (a.length < 2) return '';
   const d1 = a[a.length - 2]; // [t, o, h, l, c]
-  // Sur la journée entière : chacune des 9 bougies POH est testée contre D1 (le sweep reste affiché même si le prix repart ensuite de l'autre côté)
-  const poh = Object.values((day && day.c) || {}); // [o, h, l, c]
-  const hi = poh.some((c) => c[1] > d1[2] && c[3] < d1[2]), lo = poh.some((c) => c[2] < d1[3] && c[3] > d1[3]);
+  // Sur la journée entière, bougies POH dans l'ordre (plusieurs sweeps possibles dans la journée) : un Sweep High naît quand une bougie dépasse le haut de D1 et clôture dessous ;
+  // il reste valide tant que le prix reste revenu sous ce haut — une clôture au-dessus du haut l'annule (le prix a accepté la cassure), un nouveau sweep peut ensuite le recréer. Sweep Low : inverse avec le bas de D1.
+  let hi = false, lo = false;
+  for (const [k] of CANDLE_SLOTS) {
+    const c = day && day.c && day.c[k]; if (!c) continue; // [o, h, l, c]
+    if (c[1] > d1[2] && c[3] < d1[2]) hi = true; else if (c[3] > d1[2]) hi = false;
+    if (c[2] < d1[3] && c[3] > d1[3]) lo = true; else if (c[3] < d1[3]) lo = false;
+  }
   // bas = bleu, haut = rouge (les deux si D0 a pris les deux côtés)
   return (lo ? '<span class="cd-sweep cd-sweep-lo">Sweep</span>' : '') + (hi ? '<span class="cd-sweep cd-sweep-hi">Sweep</span>' : '');
 }
