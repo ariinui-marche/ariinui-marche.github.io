@@ -3117,7 +3117,7 @@ async function alerteReportLoad() {
       if (r.ok) { alerteJournal = (await r.json()).journal || {}; alerteJournalAt = Date.now(); }
     }
     if (!alerteHist) { const r = await fetch('./data/journal-history.json', { cache: 'no-store' }); if (r.ok) alerteHist = await r.json(); }
-    if (!alertePlans) { const r = await fetch('./data/plans-log.json', { cache: 'no-store' }); if (r.ok) alertePlans = Object.values((await r.json()).plans || {}); }
+    if (!alertePlans) { const r = await fetch('./data/plans-log.json', { cache: 'no-store' }); if (r.ok) alertePlans = Object.values((await r.json()).plans || {}).filter((x) => (x.tf || '1') === '1' && x.c5); } // règle : seuls les plans 1 min en confluence avec un plan 5 min de même sens au même endroit (écart <= 45 min)
     if (!alerteEco) { const r = await fetch('./data/eco-calendar.json', { cache: 'no-store' }); if (r.ok) alerteEco = (await r.json()).events || []; }
   } catch (e) { /* le rapport s'affiche avec ce qui est disponible */ }
   alerteReportRender();
@@ -3176,8 +3176,8 @@ const PLAN_WIN_R = 1; // un plan est « gagnant » si son pic atteint au moins 1
 const PLAN_KZ = { A: 'Asia', L: 'London', NA: 'NY AM', NL: 'NY Lunch' };
 const planTok = (t) => String(t).replace(/^[^\wÀ-ÿ]+/u, '').replace(/KZ(NA|NL|A|L)(H|L)/, (m, k, hl) => `KZ ${PLAN_KZ[k]} ${hl === 'H' ? 'haut' : 'bas'}`);
 const planSweep = (x) => { const m = String(x.sweep || '').replace(/\s*\(il y a[^)]*\)/, '').trim(); return m ? 'Sweep ' + m : ''; }; // « dernier sweep » de l'infobulle (type seulement, sans l'ancienneté)
-const planConf = (x) => [...new Set([...(x.source || []).map(planTok), ...(x.ligne || []).map(planTok), ...(x.ifvg ? ['IFVG rouge'] : []), planSweep(x)].filter(Boolean))];
-const planExact = (x) => [...(x.source || []), ...(x.ligne || []).map(planTok), ...(x.ifvg ? ['IFVG rouge 1m/5m'] : []), x.sweep ? 'dernier sweep : ' + x.sweep : ''].filter(Boolean); // confluences telles qu'écrites dans l'infobulle du plan
+const planConf = (x) => [...new Set([...(x.source || []).map(planTok), ...(x.ligne || []).map(planTok), ...(x.ifvg ? ['IFVG rouge'] : []), planSweep(x), ...(x.c5 ? ['Plan 5 min confirmé', ...(x.c5.source || []).map(planTok)] : [])].filter(Boolean))];
+const planExact = (x) => [...(x.source || []), ...(x.ligne || []).map(planTok), ...(x.ifvg ? ['IFVG rouge 1m/5m'] : []), x.sweep ? 'dernier sweep : ' + x.sweep : '', x.c5 ? 'plan 5 min ' + alerteTime(x.c5.t) + ' : ' + ((x.c5.source || []).join(' + ') || 'FVG jaune') : ''].filter(Boolean); // confluences telles qu'écrites dans l'infobulle du plan
 function alertePlansHtml(dstr) {
   if (!alertePlans || !alertePlans.length) return '';
   const dayEnd = Date.parse(dstr + 'T22:00:00Z') / 1000, dayStart = dayEnd - 86400, wkStart = dayEnd - 5 * 86400;
@@ -3213,7 +3213,7 @@ function alertePlansHtml(dstr) {
     `<div class="alr-h">Win rate de la semaine par paire</div>${pairs || '<div class="alr-ev">Pas assez de plans (2 minimum par paire)</div>'}` +
     `<div class="alr-h">Meilleures confluences de la semaine</div>${confs || '<div class="alr-ev">Pas assez de plans (3 minimum par confluence)</div>'}` +
     `<div class="alr-h">Pires confluences de la semaine</div>${confBad || '<div class="alr-ev">Pas assez de plans (3 minimum par confluence)</div>'}` +
-    `<div class="alr-r als-note">Plan gagnant = pic d'au moins ${PLAN_WIN_R}R. Plans lus sur TradingView (Arii CDX SW), confluences de l'infobulle de la partie rouge du stop.</div>`;
+    `<div class="alr-r als-note">Plan gagnant = pic d'au moins ${PLAN_WIN_R}R. Seuls les plans 1 min confirmés par un plan 5 min de même sens (écart 45 min max) sont comptés. Plans lus sur TradingView (Arii CDX SW), confluences de l'infobulle de la partie rouge du stop.</div>`;
 }
 function alerteReportRender() {
   const box = document.getElementById('alerteReport');
