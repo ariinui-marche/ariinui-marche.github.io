@@ -2149,6 +2149,7 @@ function candleSvg(day, dly, view, id) {
   const hl = RP ? hist[hist.length - 1] : null;
   const last = RP ? { c: [hl[1], hl[2], hl[3], hl[4]] } : [...cs].reverse().find((x) => x.c);
   const lastC = last.c[3], lastCol = last.c[3] >= last.c[0] ? '#089981' : '#f23645'; // ligne du dernier prix : verte si haussière, rouge si baissière
+  const lfCap = 0.9 * step / (0.62 * Math.max(2, ...cs.map((x) => String(x.dn || x.lbl || '').length))); // taille max commune : le plus long label tient dans l'écart entre 2 bougies (pas de chevauchement)
   const body = cs.map((x, i) => {
     const cx = LEFT + xOff + step * (i + 0.5);
     if (!x.c) return '';
@@ -2164,7 +2165,7 @@ function candleSvg(day, dly, view, id) {
     }
     const top = y(Math.max(o, c)), ht = Math.max(1, Math.abs(y(o) - y(c)));
     const vis = h >= lo && l <= hi; // la bougie touche la zone affichée
-    const lf = Math.min(44, 11 * bw / Math.max(1, Math.min(stepB * 0.74, 120))); // label POH : suit la largeur de la bougie (11 px au zoom d'origine)
+    const lf = Math.min(44, 11 * bw / Math.max(1, Math.min(stepB * 0.74, 120)), lfCap); // label POH : suit la largeur de la bougie (11 px au zoom d'origine)
     return (vis && lf >= 3.5 ? `<text x="${cx.toFixed(1)}" y="${Math.min(H - 6 * lf / 11, Math.max(1.3 * lf, y(h) - 0.55 * lf)).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:${col};font-size:${lf.toFixed(1)}px">${x.dn || x.lbl}</text>` : '') +
       `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="0.9"/>` +
       `<rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}" stroke-width="0.9"/>`;
