@@ -3172,12 +3172,12 @@ let alerteDaySel = null; // jour du rapport choisi avec les flèches (null = jou
 function alerteReportRender() {
   const box = document.getElementById('alerteReport');
   if (!box || !alerteData || !alerteCtxData) return;
-  const cur = alerteDayStr();
-  if (!cur) { box.innerHTML = ''; return; }
+  const realCur = alerteDayStr(); // null entre 22:00 UTC et la formation du 50 % du nouveau jour : on affiche alors le dernier jour du journal
   const allSg = Object.assign({}, alerteHist || {}, alerteJournal || {});
-  const dayList = [...new Set([cur, ...Object.values(allSg).map((x) => x.d)])].sort().reverse();
+  const dayList = [...new Set([realCur, ...Object.values(allSg).map((x) => x.d)].filter(Boolean))].sort().reverse();
+  if (!dayList.length) { box.innerHTML = ''; return; }
   if (!dayList.includes(alerteDaySel)) alerteDaySel = null;
-  const dstr = alerteDaySel || cur, isCur = dstr === cur, di = dayList.indexOf(dstr);
+  const cur = realCur || dayList[0], dstr = alerteDaySel || cur, isCur = dstr === realCur, di = dayList.indexOf(dstr);
   const dayEnd = Date.parse(dstr + 'T22:00:00Z') / 1000, dayStart = dayEnd - 86400, over = Date.now() / 1000 >= dayEnd;
   const sgAll = Object.values(isCur ? (alerteJournal || {}) : allSg).filter((x) => x.d === dstr);
   const tp = sgAll.filter((x) => x.res === 1).length, sl = sgAll.filter((x) => x.res === 2).length, op = sgAll.length - tp - sl;
@@ -3222,9 +3222,9 @@ async function alerteLoad() {
 document.getElementById('alerteReport')?.addEventListener('click', (e) => {
   const b = e.target.closest('.alr-nav');
   if (!b || b.disabled) return;
-  const all = Object.assign({}, alerteHist || {}, alerteJournal || {}), cur = alerteDayStr();
-  const list = [...new Set([cur, ...Object.values(all).map((x) => x.d)])].sort().reverse(), t = list[+b.dataset.dn];
-  alerteDaySel = t && t !== cur ? t : null;
+  const all = Object.assign({}, alerteHist || {}, alerteJournal || {}), rc = alerteDayStr();
+  const list = [...new Set([rc, ...Object.values(all).map((x) => x.d)].filter(Boolean))].sort().reverse(), t = list[+b.dataset.dn];
+  alerteDaySel = t && t !== (rc || list[0]) ? t : null;
   alerteReportRender();
 });
 document.getElementById('alerteToggle')?.addEventListener('click', (e) => {
