@@ -3213,6 +3213,18 @@ function alertePlansHtml(dstr) {
   const cbMin = Object.values(cb).some((o) => o.n >= 8) ? 8 : 5;
   const cbBest = Object.entries(cb).filter(([, o]) => o.n >= cbMin).sort((a, b) => b[1].w2 / b[1].n - a[1].w2 / a[1].n || b[1].n - a[1].n)[0];
   const comboHtml = cbBest ? (() => { const [k, o] = cbBest, md = o.p.slice().sort((a, b) => a - b)[Math.floor(o.p.length / 2)]; return `<div class="alr-card"><div class="alr-ct"><b class="up">${alEsc(k)}</b></div><div class="alr-ev">${o.n} plans · ≥ 1R : <b>${Math.round(100 * o.w1 / o.n)} %</b> · ≥ 2R : <b>${Math.round(100 * o.w2 / o.n)} %</b> · pic médian +${md.toFixed(2)}R</div></div>`; })() : '<div class="alr-ev">Pas assez de plans pour classer un combo (5 minimum)</div>';
+  // vue cumulée : tous les plans terminés depuis le début de l'historique jusqu'à la fin du jour affiché
+  const allDone = alertePlans.filter((x) => x.t < dayEnd && x.state !== 'en cours');
+  const cu1 = {}, cu2 = {};
+  for (const x of allDone) {
+    const cs = planConf(x).filter((c) => c !== 'Plan 5 min confirmé').sort();
+    const add = (m, k) => { const o = m[k] || (m[k] = { n: 0, w1: 0, w2: 0, p: [] }); o.n++; if (x.pic >= 1) o.w1++; if (x.pic >= 2) o.w2++; o.p.push(x.pic); };
+    for (let i = 0; i < cs.length; i++) { add(cu1, cs[i]); for (let j = i + 1; j < cs.length; j++) add(cu2, cs[i] + ' + ' + cs[j]); }
+  }
+  const cuRow = ([k, o]) => `<div class="alr-ev"><b>${alEsc(k)}</b><br>${o.n} plans · ≥ 1R <b>${Math.round(100 * o.w1 / o.n)} %</b> · ≥ 2R <b>${Math.round(100 * o.w2 / o.n)} %</b> · pic médian +${o.p.slice().sort((a, b) => a - b)[Math.floor(o.p.length / 2)].toFixed(2)}R</div>`;
+  const cuTop = (m, min, k) => Object.entries(m).filter(([, o]) => o.n >= min).sort((a, b) => b[1].w2 / b[1].n - a[1].w2 / a[1].n || b[1].n - a[1].n).slice(0, k).map(cuRow).join('');
+  const cuDays = new Set(allDone.map((x) => new Date((x.t + 7200) * 1000).toISOString().slice(0, 10)));
+  const cumulHtml = allDone.length ? `<div class="alr-h">Cumul depuis le début (${cuDays.size} jour${cuDays.size > 1 ? 's' : ''}, ${allDone.length} plans)</div><div class="alr-r">Meilleurs combos (8 plans minimum)</div>${cuTop(cu2, 8, 3) || '<div class="alr-ev">Pas encore assez de plans</div>'}<div class="alr-r">Meilleures confluences seules (8 plans minimum)</div>${cuTop(cu1, 8, 5) || '<div class="alr-ev">Pas encore assez de plans</div>'}` : '';
   const confRow = ([c, o]) => `<div class="alr-ev"><b>${Math.round(100 * o.w / o.n)} %</b> (${o.w}/${o.n}) ${alEsc(c)}</div>`;
   const confAll = Object.entries(byConf).filter(([, o]) => o.n >= 3);
   const confs = confAll.slice().sort((a, b) => b[1].w / b[1].n - a[1].w / a[1].n || b[1].n - a[1].n).slice(0, 6).map(confRow).join('');
@@ -3222,6 +3234,7 @@ function alertePlansHtml(dstr) {
     `<div class="alr-h">Pires plans du jour (confluences)</div>${worst || '<div class="alr-ev">Aucun plan terminé pour ce jour</div>'}` +
     `<div class="alr-h">Win rate de la semaine par paire</div>${pairs || '<div class="alr-ev">Pas assez de plans (2 minimum par paire)</div>'}` +
     `<div class="alr-h">Meilleur combo de la semaine (1 min + 5 min)</div>${comboHtml}` +
+    cumulHtml +
     `<div class="alr-h">Meilleures confluences de la semaine</div>${confs || '<div class="alr-ev">Pas assez de plans (3 minimum par confluence)</div>'}` +
     `<div class="alr-h">Pires confluences de la semaine</div>${confBad || '<div class="alr-ev">Pas assez de plans (3 minimum par confluence)</div>'}` +
     `<div class="alr-r als-note">Plan gagnant = pic d'au moins ${PLAN_WIN_R}R. Seuls les plans 1 min confirmés par un plan 5 min de même sens (écart 45 min max) sont comptés. Plans lus sur TradingView (Arii CDX SW), confluences de l'infobulle de la partie rouge du stop.</div>`;
