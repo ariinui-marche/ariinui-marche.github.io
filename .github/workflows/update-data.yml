@@ -33,6 +33,9 @@ jobs:
 
       - run: node scripts/fetch-fsa-actuals.mjs || true
 
+      # Fichier compact des news fort impact pour l'EA MT5 Arii CDX SW (même fusion que CANDLE) ; non bloquant
+      - run: node scripts/build-candle-news.mjs || true
+
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"

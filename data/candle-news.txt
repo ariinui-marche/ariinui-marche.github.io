@@ -1,0 +1,189 @@
+1790656200	AUD	RBA Interest Rate Decision	4.6%	4.6%	4.35%
+1790690400	USD	JOLTs Job Openings	7.19M	7.225M	7.335M
+1790731800	AUD	CPI m/m	0.4%	0.5%	1.0%
+1790731800	AUD	CPI y/y	4.0%	4.1%	3.5%
+1790731800	AUD	Trimmed Mean CPI m/m	0.2%	0.3%	0.5%
+1790771400	USD	Personal Spending MoM	0.9%	0.8%	0.2%
+1790771400	USD	Core PCE Price Index MoM	0.3%	0.3%	0.1%
+1790771400	USD	Personal Income MoM	0.3%	0.4%	0.3%
+1790771400	USD	GDP Growth Rate QoQ Final	2.2%	1.5%	2.1%
+1790812200	JPY	Tankan Large Manufacturers Index	24	25	22
+1790818200	AUD	Balance of Trade	A$0.184B	A$2B	A$1.515B
+1790863200	USD	ISM Manufacturing PMI	54.5	55	54.6
+1790931600	EUR	Inflation Rate YoY Flash	3.8%	3.6%	3.3%
+1790944200	USD	Non Farm Payrolls	60K	90K	186K
+1790944200	USD	Unemployment Rate	4.2%	4.1%	4.1%
+1791176400	JPY	Consumer Confidence	35.4		35.5
+1791208800	USD	ISM Services PMI	54.9	55.2	55.4
+1791268500	JPY	BOJ Gov Ueda Speaks			
+1791295200	CAD	Ivey PMI	61.9		62.7
+1791295200	CAD	Ivey PMI s.a	58.2		64.3
+1791396000	USD	FOMC Meeting Minutes			
+1791461700	GBP	BOE Gov Bailey Speaks			
+1791549000	CAD	Unemployment Rate	6.5%	6.5%	6.4%
+1791554400	USD	Michigan Consumer Sentiment Prel	46.3	47.8	47.8
+1791851400	AUD	NAB Business Confidence	-13		-9
+1791900000	USD	Existing Home Sales	3.99M	3.95M	3.93M
+1791981000	USD	Core Inflation Rate MoM	0.3%	0.2%	0.3%
+1791981000	USD	Core Inflation Rate YoY	2.6%	2.5%	2.4%
+1791981000	USD	Inflation Rate MoM	0.6%	0.6%	0.4%
+1791981000	USD	Inflation Rate YoY	3.7%	3.6%	3.4%
+1792024200	AUD	Employment Change		19.6K	39.5K
+1792024200	AUD	Unemployment Rate		4.6%	4.6%
+1792044000	GBP	GDP MoM	0.1%	-0.1%	0.4%
+1792067400	USD	PPI MoM	1.3%	0.5%	0.5%
+1792067400	USD	Retail Sales MoM	0.8%	0.3%	1.3%
+1792116000	GBP	BOE Gov Bailey Speaks			
+1792121400	USD	Fed Chairman Warsh Speaks			
+1792413000	CAD	Core Inflation Rate MoM s.a	0.1%		0.2%
+1792413000	CAD	Inflation Rate YoY	3.1%	3.2%	3%
+1792442700	NZD	CPI q/q			
+1792476000	GBP	Unemployment Rate	4.7%	5%	4.9%
+1792499400	USD	Housing Starts	1.221M	1.301M	1.288M
+1792499400	USD	Building Permits Prel	1.4M	1.388M	1.394M
+1792540200	JPY	Balance of Trade	-556.5B ¥	-181B ¥	-1121B ¥
+1792562400	GBP	Core Inflation Rate MoM	0.2%	0.2%	0.3%
+1792562400	GBP	Inflation Rate YoY	3.5%	3.4%	3.1%
+1792619100	NZD	CPI q/q	0.7%	0.8%	1.5%
+1792711800	JPY	Inflation Rate YoY	2.1%		1.9%
+1792735200	GBP	Retail Sales MoM	-0.4%	-0.1%	0.7%
+1792744200	GBP	S&P Global Manufacturing PMI Flash		51.7	
+1792744200	GBP	S&P Global Services PMI Flash		51.8	
+1793104200	USD	Durable Goods Orders MoM	1.8%	1.5%	0%
+1793147400	AUD	Quarterly Inflation Rate QoQ	1.3%	1.2%	0.6%
+1793147400	AUD	Quarterly Inflation Rate YoY	3.9%	3.9%	3.9%
+1793149200	NZD	Official Cash Rate	2.75%	3.00%	2.75%
+1793149200	NZD	RBNZ Rate Statement			
+1793152800	NZD	RBNZ Press Conference			
+1793190600	GBP	Annual Budget Release			
+1793195100	CAD	Interest Rate	2.5%		2.25%
+1793197800	CAD	BOC Press Conference			
+1793210400	USD	Interest Rate	4%		4%
+1793212200	USD	FOMC Press Conference			
+1793250000	JPY	Consumer Confidence	35		35.4
+1793277000	USD	Personal Spending MoM	0.5%	0.6%	0.9%
+1793277000	USD	Core PCE Price Index MoM	0.3%	0.3%	0.3%
+1793277000	USD	Personal Income MoM	0.2%	0.3%	0.3%
+1793277000	USD	GDP Growth Rate QoQ Adv	3.4%	3.2%	1.5%
+1793279700	EUR	Deposit Facility Rate	2.5%	2.5%	2.5%
+1793279700	EUR	ECB Interest Rate Decision	2.65%	2.65%	2.65%
+1793281500	EUR	ECB Press Conference			
+1793327400	JPY	Interest Rate	1.25%	1.25%	1.25%
+1793329320	JPY	BOJ Policy Rate	1.25%	<1.25%	<1.25%
+1793329320	JPY	Monetary Policy Statement			
+1793329320	JPY	BOJ Outlook Report			
+1793341800	JPY	BOJ Press Conference			
+1793354400	EUR	GDP Growth Rate QoQ Flash	0.4%	0.2%	0.4%
+1793354400	EUR	GDP Growth Rate YoY Flash	1.3%	1.1%	1%
+1793631600	USD	ISM Manufacturing PMI	55.5	54.5	54.5
+1793676600	AUD	RBA Interest Rate Decision	4.85%	4.85%	4.6%
+1793680200	AUD	RBA Press Conference			
+1793718000	USD	JOLTs Job Openings	7.523M	7.1M	7.19M
+1793718960	USD	Congressional Elections			
+1793742300	NZD	Employment Change q/q	-0.1%	0.4%	0.5%
+1793742300	NZD	Unemployment Rate	5.7%	5.5%	5.6%
+1793786400	EUR	Inflation Rate YoY Flash	4%	4%	3.8%
+1793804400	USD	ISM Services PMI	54.5	54.8	54.9
+1793838600	AUD	Balance of Trade	A$2.826B	A$0.81B	A$0.184B
+1793880000	GBP	Interest Rate	4%	4%	3.75%
+1793881800	GBP	BOE Gov Bailey Speaks			
+1793971800	CAD	Unemployment Rate	6.7%	6.5%	6.5%
+1793971800	USD	Non Farm Payrolls	165K	65K	60K
+1793971800	USD	Unemployment Rate	4.1%	4.2%	4.2%
+1793977200	CAD	Ivey PMI	56.4		61.9
+1793977200	CAD	Ivey PMI s.a	58.3		58.2
+1793977200	USD	Michigan Consumer Sentiment Prel	51	48	46.3
+1793980800	JPY	BOJ Gov Ueda Speaks			
+1794001500	NZD	Parliamentary Elections			
+1794270600	AUD	NAB Business Confidence	-15		-14
+1794310200	USD	Core CPI y/y			
+1794310200	USD	CPI y/y			
+1794317400	USD	Core Inflation Rate MoM	0.3%	0.2%	0.3%
+1794317400	USD	Inflation Rate MoM	0.4%	0.3%	0.6%
+1794466800	GBP	GDP Growth Rate QoQ Prel		0.7%	0.4%
+1794466800	GBP	GDP Growth Rate YoY Prel		1.9%	1.2%
+1794466800	GBP	GDP MoM		-0.1%	0.1%
+1794495600	USD	Existing Home Sales		3.85M	3.99M
+1794576600	USD	PPI MoM		0.4%	1.3%
+1794786600	JPY	GDP Growth Rate QoQ Prel		0.1%	0.3%
+1794805200	GBP	Claimant Count Change			
+1794828600	CAD	CPI m/m			
+1794828600	CAD	Median CPI y/y			
+1794828600	CAD	Trimmed CPI y/y			
+1794835800	CAD	Core Inflation Rate MoM s.a			0.1%
+1794835800	CAD	Inflation Rate YoY			3.1%
+1794873600	NZD	Inflation Expectations q/q			
+1794898800	GBP	Unemployment Rate			4.7%
+1794922200	USD	Retail Sales MoM		0%	0.8%
+1794959400	JPY	Balance of Trade			-556.5B ¥
+1794985200	GBP	Core Inflation Rate MoM			0.2%
+1794985200	GBP	Inflation Rate YoY			3.5%
+1795008600	USD	Housing Starts		1.23M	1.221M
+1795008600	USD	Building Permits Prel			1.4M
+1795021200	USD	FOMC Meeting Minutes			
+1795041000	AUD	Employment Change			
+1795041000	AUD	Unemployment Rate			
+1795131000	JPY	Inflation Rate YoY			2.1%
+1795158000	GBP	Retail Sales MoM			-0.4%
+1795426200	GBP	S&P Global Manufacturing PMI Flash			
+1795426200	GBP	S&P Global Services PMI Flash			
+1795606200	USD	Core PCE Price Index m/m			
+1795606200	USD	Prelim GDP q/q			
+1795613400	USD	Personal Spending MoM			0.5%
+1795613400	USD	Core PCE Price Index MoM			0.3%
+1795613400	USD	Personal Income MoM			0.2%
+1795613400	USD	GDP Growth Rate QoQ 2nd Est			1.5%
+1795613400	USD	Durable Goods Orders MoM			1.8%
+1796038200	CAD	GDP m/m			
+1796045400	CAD	GDP Growth Rate Annualized			3.3%
+1796045400	CAD	GDP Growth Rate QoQ			0.8%
+1796119200	EUR	Inflation Rate YoY Flash			4%
+1796137200	USD	ISM Manufacturing PMI			55.5
+1796137200	USD	JOLTs Job Openings			7.523M
+1796164200	AUD	GDP q/q			
+1796171400	AUD	GDP Growth Rate QoQ			0.4%
+1796187600	JPY	Consumer Confidence			35
+1796257800	AUD	Balance of Trade			A$2.826B
+1796310000	USD	ISM Services PMI			54.5
+1796383800	CAD	Employment Change			
+1796383800	CAD	Unemployment Rate			
+1796383800	USD	Average Hourly Earnings m/m			
+1796383800	USD	Non-Farm Employment Change			
+1796383800	USD	Unemployment Rate			
+1796391000	CAD	Unemployment Rate			6.7%
+1796391000	USD	Non Farm Payrolls			165K
+1796391000	USD	Unemployment Rate			4.1%
+1796396400	CAD	Ivey PMI			56.4
+1796396400	CAD	Ivey PMI s.a			58.3
+1796396400	USD	Michigan Consumer Sentiment Prel			51
+1796689800	AUD	NAB Business Confidence			-15
+1796700600	AUD	RBA Interest Rate Decision			4.85%
+1796770800	NZD	Official Cash Rate			
+1796770800	NZD	RBNZ Monetary Policy Statement			
+1796770800	NZD	RBNZ Rate Statement			
+1796774400	NZD	RBNZ Press Conference			
+1796823900	CAD	BOC Rate Statement			
+1796823900	CAD	Overnight Rate			
+1796826600	CAD	BOC Press Conference			
+1796827500	CAD	Interest Rate			
+1796828400	USD	Existing Home Sales			
+1796839200	USD	Federal Funds Rate			
+1796839200	USD	FOMC Economic Projections			
+1796839200	USD	FOMC Statement			
+1796841000	USD	FOMC Press Conference			
+1796842800	USD	Interest Rate			
+1796887800	CHF	SNB Monetary Policy Assessment			
+1796887800	CHF	SNB Policy Rate			
+1796889600	CHF	SNB Press Conference			
+1796905800	USD	Core CPI m/m			
+1796905800	USD	Core CPI y/y			
+1796905800	USD	CPI m/m			
+1796905800	USD	CPI y/y			
+1796909400	USD	Core Inflation Rate MoM			0.3%
+1796909400	USD	Core Inflation Rate YoY		2.8%	2.6%
+1796909400	USD	Inflation Rate MoM			0.4%
+1796909400	USD	Inflation Rate YoY		3.9%	3.7%
+1796968800	GBP	GDP m/m			
+1796972400	GBP	GDP MoM			
+1797337800	USD	Core PPI m/m			
+1797337800	USD	PPI m/m			
