@@ -1437,3 +1437,5 @@ body.cc-lock { overflow: hidden; }
 .alr-t { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .alr-nav { background: none; border: 1px solid #3c4043; color: #e8eaed; border-radius: 6px; min-width: 40px; min-height: 36px; font-size: 14px; cursor: pointer; }
 .alr-nav:disabled { opacity: .3; cursor: default; }
+.alr-sym { margin: 2px 0; }
+.alr-sym > summary { cursor: pointer; padding: 6px 0; font-size: 13px; }

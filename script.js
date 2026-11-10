@@ -3187,6 +3187,16 @@ function alertePlansHtml(dstr) {
   const planCard = (x) => `<div class="alr-card"><div class="alr-ct">${tag(x)} <b class="${win(x) ? 'up' : 'dn'}">+${x.pic.toFixed(2)}R</b> <span class="alr-r">${alerteTime(x.t)} · ${alEsc(x.state)}</span></div><div class="alr-ev">${planExact(x).map(alEsc).join(' · ') || 'sans confluence notée'}</div></div>`;
   const best = inDay.slice().sort((a, b) => b.pic - a.pic).slice(0, 3).map(planCard).join('');
   const worst = inDay.filter((x) => x.state !== 'en cours').sort((a, b) => a.pic - b.pic).slice(0, 3).map(planCard).join('');
+  // tous les plans du jour par symbole, tels qu'affichés par l'indicateur (état de l'infobulle : stop touché / arrêté (plan contraire ou 07h) / en cours)
+  const dayPair = {};
+  for (const x of inDay) (dayPair[x.pair] || (dayPair[x.pair] = [])).push(x);
+  const stLbl = (x) => (x.state === 'stop' ? 'SL (stop touché)' : x.state === 'contraire' ? 'arrêté (plan contraire)' : x.state === '07h' ? 'arrêté à 07h' : 'en cours');
+  const perSym = Object.entries(dayPair).sort((a, b) => b[1].length - a[1].length || (a[0] < b[0] ? -1 : 1)).map(([id, a]) => {
+    a.sort((p, q) => p.t - q.t);
+    const sl = a.filter((x) => x.state === 'stop').length, st = a.filter((x) => x.state === 'contraire' || x.state === '07h').length, run = a.filter((x) => x.state === 'en cours').length;
+    return `<details class="alr-sym"><summary><b>${alEsc(pn(id))}</b> · ${a.length} plan${a.length > 1 ? 's' : ''} · ${sl} SL${st ? ` · ${st} arrêté${st > 1 ? 's' : ''}` : ''}${run ? ` · ${run} en cours` : ''}</summary>` +
+      a.map((x) => `<div class="alr-ev"><b>${alerteTime(x.t)}</b> ${x.side === 'BUY' ? 'achat' : 'vente'} · ${stLbl(x)} · pic +${x.pic.toFixed(2)}R</div>`).join('') + `</details>`;
+  }).join('');
   const byPair = {};
   for (const x of inWk) (byPair[x.pair] || (byPair[x.pair] = [])).push(x);
   const pairs = Object.entries(byPair).filter(([, a]) => a.length >= 2).map(([id, a]) => ({ id, n: a.length, w: a.filter(win).length, top: a.slice().sort((p, q) => q.pic - p.pic)[0] })).sort((a, b) => b.w / b.n - a.w / a.n || b.top.pic - a.top.pic).slice(0, 3)
@@ -3198,6 +3208,7 @@ function alertePlansHtml(dstr) {
   const confs = confAll.slice().sort((a, b) => b[1].w / b[1].n - a[1].w / a[1].n || b[1].n - a[1].n).slice(0, 6).map(confRow).join('');
   const confBad = confAll.slice().sort((a, b) => a[1].w / a[1].n - b[1].w / b[1].n || b[1].n - a[1].n).slice(0, 6).map(confRow).join('');
   return `<div class="alr-h">Meilleurs plans du jour (confluences)</div>${best || '<div class="alr-ev">Aucun plan lu pour ce jour</div>'}` +
+    `<div class="alr-h">Plans du jour par symbole (${inDay.length})</div>${perSym || '<div class="alr-ev">Aucun plan pour ce jour</div>'}` +
     `<div class="alr-h">Pires plans du jour (confluences)</div>${worst || '<div class="alr-ev">Aucun plan terminé pour ce jour</div>'}` +
     `<div class="alr-h">Win rate de la semaine par paire</div>${pairs || '<div class="alr-ev">Pas assez de plans (2 minimum par paire)</div>'}` +
     `<div class="alr-h">Meilleures confluences de la semaine</div>${confs || '<div class="alr-ev">Pas assez de plans (3 minimum par confluence)</div>'}` +
