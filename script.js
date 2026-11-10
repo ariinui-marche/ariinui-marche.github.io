@@ -3193,12 +3193,15 @@ function alertePlansHtml(dstr) {
     .map((r) => `<div class="alr-ev"><b>${alEsc(pn(r.id))}</b> ${Math.round(100 * r.w / r.n)} % (${r.w}/${r.n}) · meilleur plan +${r.top.pic.toFixed(2)}R : ${planConf(r.top).map(alEsc).join(' · ') || '—'}</div>`).join('');
   const byConf = {};
   for (const x of inWk) for (const c of planConf(x)) { const o = byConf[c] || (byConf[c] = { n: 0, w: 0 }); o.n++; if (win(x)) o.w++; }
-  const confs = Object.entries(byConf).filter(([, o]) => o.n >= 3).sort((a, b) => b[1].w / b[1].n - a[1].w / a[1].n || b[1].n - a[1].n).slice(0, 6)
-    .map(([c, o]) => `<div class="alr-ev"><b>${Math.round(100 * o.w / o.n)} %</b> (${o.w}/${o.n}) ${alEsc(c)}</div>`).join('');
+  const confRow = ([c, o]) => `<div class="alr-ev"><b>${Math.round(100 * o.w / o.n)} %</b> (${o.w}/${o.n}) ${alEsc(c)}</div>`;
+  const confAll = Object.entries(byConf).filter(([, o]) => o.n >= 3);
+  const confs = confAll.slice().sort((a, b) => b[1].w / b[1].n - a[1].w / a[1].n || b[1].n - a[1].n).slice(0, 6).map(confRow).join('');
+  const confBad = confAll.slice().sort((a, b) => a[1].w / a[1].n - b[1].w / b[1].n || b[1].n - a[1].n).slice(0, 6).map(confRow).join('');
   return `<div class="alr-h">Meilleurs plans du jour (confluences)</div>${best || '<div class="alr-ev">Aucun plan lu pour ce jour</div>'}` +
     `<div class="alr-h">Pires plans du jour (confluences)</div>${worst || '<div class="alr-ev">Aucun plan terminé pour ce jour</div>'}` +
     `<div class="alr-h">Win rate de la semaine par paire</div>${pairs || '<div class="alr-ev">Pas assez de plans (2 minimum par paire)</div>'}` +
-    `<div class="alr-h">Win rate de la semaine par confluence</div>${confs || '<div class="alr-ev">Pas assez de plans (3 minimum par confluence)</div>'}` +
+    `<div class="alr-h">Meilleures confluences de la semaine</div>${confs || '<div class="alr-ev">Pas assez de plans (3 minimum par confluence)</div>'}` +
+    `<div class="alr-h">Pires confluences de la semaine</div>${confBad || '<div class="alr-ev">Pas assez de plans (3 minimum par confluence)</div>'}` +
     `<div class="alr-r als-note">Plan gagnant = pic d'au moins ${PLAN_WIN_R}R. Plans lus sur TradingView (Arii CDX SW), confluences de l'infobulle de la partie rouge du stop.</div>`;
 }
 function alerteReportRender() {
