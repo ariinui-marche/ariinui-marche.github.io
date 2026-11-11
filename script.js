@@ -2906,7 +2906,7 @@ async function candleLoad() {
   if (!candleEcoEv.length) { // news à fort impact : calendrier TradingView (historique depuis 2023 + futur) complété par celui du site (NZD, CHF, discours)
     let tv = [], ff = [];
     try { const r = await fetch('./data/tv-events.json', { cache: 'no-store' }); if (r.ok) tv = ((await r.json()).events || []).map((a) => ({ country: a[1], title: a[2], _t: a[0], actual: a[3], forecast: a[4], previous: a[5] })); } catch (e) { /* facultatif */ }
-    try { const r = await fetch('./data/eco-calendar.json', { cache: 'no-store' }); if (r.ok) ff = ((await r.json()).events || []).filter((e) => e.impact === 'High' && e.date).map((e) => Object.assign({}, e, { _t: Date.parse(e.date) / 1000 })).filter((e) => e._t > 0); } catch (e) { /* facultatif */ }
+    try { const r = await fetch('./data/eco-calendar.json', { cache: 'no-store' }); if (r.ok) ff = ((await r.json()).events || []).filter((e) => (e.impact === 'High' || SPEECH_RE.test(e.title)) && e.date).map((e) => Object.assign({}, e, { _t: Date.parse(e.date) / 1000 })).filter((e) => e._t > 0); } catch (e) { /* facultatif */ }
     const isSpeech = (t) => /speak|speech|press conf|testif|hearing|minutes/i.test(t || '');
     const byCcy = {};
     for (const e of tv) (byCcy[e.country] = byCcy[e.country] || []).push(e._t);

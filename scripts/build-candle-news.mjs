@@ -5,7 +5,7 @@ const MAJ = ['USD', 'EUR', 'GBP', 'JPY', 'AUD', 'NZD', 'CAD', 'CHF'];
 const tvRaw = JSON.parse(fs.readFileSync('data/tv-events.json', 'utf8')).events || [];
 const tv = tvRaw.map((a) => ({ country: a[1], title: a[2], _t: a[0], actual: a[3], forecast: a[4], previous: a[5] }));
 let ff = [];
-try { ff = (JSON.parse(fs.readFileSync('data/eco-calendar.json', 'utf8')).events || []).filter((e) => e.impact === 'High' && e.date).map((e) => Object.assign({}, e, { _t: Math.floor(Date.parse(e.date) / 1000) })).filter((e) => e._t > 0); } catch { /* facultatif */ }
+try { ff = (JSON.parse(fs.readFileSync('data/eco-calendar.json', 'utf8')).events || []).filter((e) => (e.impact === 'High' || /(speaks|testifies|speech)/i.test(e.title)) && e.date).map((e) => Object.assign({}, e, { _t: Math.floor(Date.parse(e.date) / 1000) })).filter((e) => e._t > 0); } catch { /* facultatif */ }
 const isSpeech = (t) => /speak|speech|press conf|testif|hearing|minutes/i.test(t || '');
 const byCcy = {};
 for (const e of tv) (byCcy[e.country] = byCcy[e.country] || []).push(e._t);
