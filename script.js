@@ -2521,7 +2521,7 @@ function candleOnMove() {
 const CANDLE_LAST_LS = 'candleLastPair'; // dernier symbole affiché : retrouvé à la réouverture (même après fermeture de l'appli)
 function candleLastId() { try { return localStorage.getItem(CANDLE_LAST_LS) || null; } catch (e) { return null; } }
 function candleMiniSvg(day, W) { // 4 bougies d'origine : 14h, 15-17h, 22h, 02h (UTC-10), même couleurs et même style que les POH
-  const H = 150, TOP = 22, BOT = 8, cs = [['14', '14h'], ['15', '15-17h'], ['22', '22h'], ['02', '02h']].map(([k, l]) => ({ l, c: day.c[k] }));
+  const H = 150, TOP = 22, cs = [['14', '14h'], ['15', '15-17h'], ['22', '22h'], ['02', '02h']].map(([k, l]) => ({ l, c: day.c[k] })), isDoji = (c) => !!c && c[1] > c[2] && Math.abs(c[3] - c[0]) <= 0.1 * (c[1] - c[2]), BOT = cs.some((x) => isDoji(x.c)) ? 22 : 8; // doji : corps <= 10 % de la hauteur, place réservée sous la mèche basse pour le libellé
   const vals = cs.filter((x) => x.c);
   if (!vals.length) return '';
   let hi = Math.max(...vals.map((x) => x.c[1])), lo = Math.min(...vals.map((x) => x.c[2]));
@@ -2533,7 +2533,8 @@ function candleMiniSvg(day, W) { // 4 bougies d'origine : 14h, 15-17h, 22h, 02h 
     const [o, h, l, c] = x.c, col = c >= o ? CANDLE_UP : CANDLE_DN, cx = 4 + step * (i + 0.5), top = y(Math.max(o, c)), ht = Math.max(1, Math.abs(y(o) - y(c)));
     return `<text x="${cx.toFixed(1)}" y="${Math.max(14, y(h) - 6).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:${col}">${x.l}</text>` +
       `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="0.9"/>` +
-      `<rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}" stroke-width="0.9"/>`;
+      `<rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}" stroke-width="0.9"/>` +
+      (isDoji(x.c) ? `<text x="${cx.toFixed(1)}" y="${(y(l) + 12).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:#d1d4dc;font-size:10px">Doji</text>` : '');
   }).join('') + '</svg>';
 }
 function candleRender() {
