@@ -151,7 +151,7 @@ function renderTrendMomentum(data) {
     grid.innerHTML = '<div class="empty-state">Data unavailable</div>';
     return;
   }
-  grid.innerHTML = data.currencies.filter((c) => inFocus(c.id)).map((c) => {
+  grid.innerHTML = data.currencies.map((c) => {
     const label = momentumLabel(c.score);
     return `
       <div class="trend-card">
@@ -178,7 +178,7 @@ function renderCurrencies(data) {
     grid.innerHTML = '<div class="empty-state">Data unavailable</div>';
     return;
   }
-  grid.innerHTML = data.currencies.filter((c) => inFocus(c.id)).map((c) => {
+  grid.innerHTML = data.currencies.map((c) => {
     const pctClass = c.changePct >= 0 ? 'pct-pos' : 'pct-neg';
     const pctSign = c.changePct >= 0 ? '+' : '';
     return `
