@@ -2811,12 +2811,19 @@ function candleSetMenuUpdate() {
   if (mi) mi.setAttribute('aria-checked', String(candleMini));
   if (ai) ai.disabled = candleMini;
 }
+let candleMiniBack = null; // { id, top } : paire ouverte depuis la liste « 4 candles » et position de défilement, pour y revenir exactement
 function candleMiniApply() {
   const b = document.getElementById('candleBody');
   if (b) b.classList.toggle('cc-mini', candleMini);
   if (candleMini && rp.on) candleRpExit();
   candleSetMenuUpdate();
   if (candlePoh) candleRender();
+  if (candleMini && candleMiniBack) { // retour dans « 4 candles » : même position, même paire
+    const l = document.getElementById('candleList'), mb = candleMiniBack; candleMiniBack = null;
+    l.scrollTop = mb.top;
+    const r = [...l.querySelectorAll('.cd-mini')].find((x) => x.dataset.id === mb.id);
+    if (r) { const lr = l.getBoundingClientRect(), rr = r.getBoundingClientRect(); if (rr.top < lr.top || rr.bottom > lr.bottom) r.scrollIntoView({ block: 'start' }); }
+  }
 }
 if (candleMini) document.getElementById('candleBody')?.classList.add('cc-mini');
 candleSetMenuUpdate();
@@ -2849,6 +2856,7 @@ document.getElementById('candleList').addEventListener('click', (e) => { // list
   const r = e.target.closest('.cd-mini');
   if (!r || !r.dataset.id) return;
   e.stopPropagation(); e.preventDefault();
+  candleMiniBack = { id: r.dataset.id, top: document.getElementById('candleList').scrollTop }; // mémorisé pour le retour
   try { localStorage.setItem(CANDLE_LAST_LS, r.dataset.id); localStorage.setItem('candleMini', '0'); } catch (err) { /* pas de stockage */ }
   candleMini = false;
   candleMiniApply(); // carrousel sur cette paire (position instantanée)
