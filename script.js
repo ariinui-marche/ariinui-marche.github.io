@@ -2575,6 +2575,20 @@ function candleGo(i) {
   l.scrollTo({ left: Math.max(0, Math.min(n - 1, i)) * l.clientWidth, behavior: 'smooth' });
 }
 function candleCurId() { return candleSlides()[candleIndex()]?.dataset.id || null; }
+// Filtre « Alerts » actif : la paire affichée s'ouvre sur le 1 min, centrée sur le repère bleu vertical de son plan (dernier 50 % du tableau ALERTE) ; sans plan, sur le prix de sa ligne bleue
+let candleAlFocusKey = '', candleAlFocusTimer = 0;
+function candleAlertFocusSoon() {
+  clearTimeout(candleAlFocusTimer);
+  candleAlFocusTimer = setTimeout(() => {
+    if (!candleF.alert || candleMini || rp.on) return;
+    if (alerteFocusBusy) { candleAlertFocusSoon(); return; }
+    const id = candleCurId(); if (!id) return;
+    const q = alerteData && alerteData[id] && alerteData[id].pt, t = q ? Math.max(q.up || 0, q.dn || 0) : 0, ln = candleAl.find((a) => a.pair === id), px = ln ? +ln.price : 0, key = id + '|' + t + '|' + px;
+    if (key === candleAlFocusKey || (!t && !(px > 0))) return;
+    candleAlFocusKey = key;
+    alerteFocus(id, t || 0, true, px);
+  }, 350);
+}
 function candleNavUpdate() {
   if (candleMini) { const c0 = document.getElementById('candleCount'); if (c0) c0.textContent = ''; return; } // liste défilante : ni compteur ni historique
   const lid = candleCurId();
@@ -2585,6 +2599,7 @@ function candleNavUpdate() {
   const c = document.getElementById('candleCount');
   if (c) c.textContent = n ? `${i + 1} / ${n}` : '';
   candleRpSync();
+  if (candleF.alert) candleAlertFocusSoon();
 }
 // Petit bouton ▾ de Fibo / Sweep : liste des noms des paires concernées ; un clic sur un nom la ferme et amène le carrousel à cette paire
 let candleNamesOpen = null; // 'fibo' | 'sweep' | 'both' | null
@@ -2633,6 +2648,7 @@ document.getElementById('candleStrip')?.addEventListener('click', (e) => {
   const b = e.target.closest('[data-f]');
   if (!b) return;
   document.getElementById('candleSetMenu').hidden = true; document.getElementById('candleSet')?.setAttribute('aria-expanded', 'false'); // le menu se referme après le choix
+  candleAlFocusKey = '';
   const was = candleF[b.dataset.f];
   candleF[b.dataset.f] = !was;
   if (b.dataset.f === 'alert') { candleF.fibo = candleF.sweep = candleF.both = false; } else { candleF.alert = false; if (b.dataset.f === 'both') { candleF.fibo = false; candleF.sweep = false; } else candleF.both = false; } // « Alerts » est seul ; Fibo / Sweep / F+S l'annulent (et inversement) // « F+S » remplace Fibo+Sweep ; Fibo ou Sweep seul annule « F+S »
@@ -3096,8 +3112,8 @@ function alerteRender() {
 }
 // Clic sur un symbole du tableau : ouvre CANDLE sur cette paire, en 1 min, centré sur la barre de l'événement (3e barre du FVG) avec un repère bleu
 let alerteFocusBusy = false;
-async function alerteFocus(id, t) {
-  if (alerteFocusBusy || !id || !t) return;
+async function alerteFocus(id, t, keep, px) { // keep = on garde le filtre « Alerts » ; px = prix de la ligne bleue quand la paire n'a pas de plan (pas de repère vertical)
+  if (alerteFocusBusy || !id || (!t && !(px > 0))) return;
   alerteFocusBusy = true;
   const wait = (ms) => new Promise((r) => setTimeout(r, ms));
   try {
@@ -3105,25 +3121,29 @@ async function alerteFocus(id, t) {
     const tg = document.getElementById('candleToggle');
     if (tg && tg.getAttribute('aria-expanded') !== 'true') tg.click();
     if (candleMini) { candleMini = false; try { localStorage.setItem('candleMini', '0'); } catch (e) { /* pas de stockage */ } candleMiniApply(); }
+    const was1 = candleHistTf === '1';
     candleHistTf = '1';
     try { localStorage.setItem('candleHistTf', '1'); } catch (e) { /* pas de stockage */ }
     if (window.candleHistSync) window.candleHistSync();
     for (let k = 0; k < 40 && !(candlePoh && candleDays[id]); k++) await wait(250); // attente du chargement des POH
-    candleF.fibo = candleF.sweep = candleF.both = candleF.alert = false; candleSelected = null;
-    candleFocusMark = { id, t };
-    candleRender();
-    const l = document.getElementById('candleList'), i = [...candleSlides()].findIndex((r) => r.dataset.id === id);
-    if (i >= 0) l.scrollLeft = i * l.clientWidth;
-    candleNavUpdate();
+    if (!keep) { candleF.fibo = candleF.sweep = candleF.both = candleF.alert = false; candleSelected = null; }
+    candleFocusMark = t ? { id, t } : null;
+    if (!keep || !was1) {
+      candleRender();
+      const l = document.getElementById('candleList'), i = [...candleSlides()].findIndex((r) => r.dataset.id === id);
+      if (i >= 0) l.scrollLeft = i * l.clientWidth;
+      candleNavUpdate();
+    }
     const key = id + '|1';
     for (let k = 0; k < 80; k++) { // attente des barres 1 min (historique complet au 1er chargement)
       candleHistEnsure(id);
       const h = candleHistData[key];
-      if (h && h.bars.length && h.bars[0][0] <= t) break;
+      if (h && h.bars.length && (!t || h.bars[0][0] <= t)) break;
       await wait(250);
     }
     const h = candleHistData[key], bars = h && h.bars;
     if (!bars || !bars.length) return;
+    if (!t) { candleShowPrice(id, px); return; } // ligne bleue horizontale seule : on cadre son prix sur le 1 min
     let a = 0, b = bars.length - 1; // dernière barre dont l'ouverture <= t
     while (a < b) { const m = (a + b + 1) >> 1; if (bars[m][0] <= t) a = m; else b = m - 1; }
     // vue : la barre de l'événement au centre de la zone des prix, ~8 px par barre ; prix centré sur les barres autour de l'événement
