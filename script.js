@@ -2354,7 +2354,12 @@ function candleSweep(dly, day) {
   return (lo ? '<span class="cd-sweep cd-sweep-lo">Sweep</span>' : '') + (hi ? '<span class="cd-sweep cd-sweep-hi">Sweep</span>' : '');
 }
 // Boutons Fibo / Sweep : affichent immédiatement les paires concernées (les deux actifs = les deux conditions)
-const candleF = { fibo: false, sweep: false, both: false }; // both = Fibo ET Sweep (3e bouton « F+S »)
+const candleF = { fibo: false, sweep: false, both: false, alert: false }; // both = Fibo ET Sweep (3e bouton « F+S ») ; alert = paires avec ligne bleue ou plan du tableau ALERTE (4e bouton)
+function candleHasAlert(id) { // ligne d'alerte de prix (bleue) OU plan (PTP/OCO) dans le tableau ALERTE
+  if (candleAl.some((a) => a.pair === id)) return true;
+  const f = alerteData && alerteData[id], q = f && f.pt;
+  return !!(q && (q.up || q.dn));
+}
 function candleInfo(id) {
   const dly = (candleDaily || {})[id], a = (dly || []).slice(-4);
   const days = ((candlePoh || {})[id] || []).filter((d) => Object.keys(d.c).length), day = days[days.length - 1];
@@ -2362,15 +2367,15 @@ function candleInfo(id) {
   const fl = candleFibLevels(dly), sc = day ? candleScale(dly, day) : null;
   const fibo = !!(fl && sc && fl.some((f) => f.v >= sc.lo && f.v <= sc.hi));
   const sweep = !!(day && candleSweep(dly, day));
-  return { fibo, sweep, both: fibo && sweep };
+  return { fibo, sweep, both: fibo && sweep, alert: candleHasAlert(id) };
 }
 function candleFilterUpdate() {
   const ids = CORR_ALL_PAIRS.filter((p) => candlePoh && candlePoh[p.id]).map((p) => p.id);
-  const n = { fibo: 0, sweep: 0, both: 0 };
-  for (const id of ids) { const i = candleInfo(id); if (i.fibo) n.fibo++; if (i.sweep) n.sweep++; if (i.both) n.both++; }
+  const n = { fibo: 0, sweep: 0, both: 0, alert: 0 };
+  for (const id of ids) { const i = candleInfo(id); if (i.fibo) n.fibo++; if (i.sweep) n.sweep++; if (i.both) n.both++; if (i.alert) n.alert++; }
   document.querySelectorAll('#candleStrip [data-f]').forEach((b) => {
     b.classList.toggle('on', candleF[b.dataset.f]);
-    b.textContent = `${{ fibo: 'Fibo', sweep: 'Sweep', both: 'F+S' }[b.dataset.f]} (${n[b.dataset.f]})`;
+    b.textContent = `${{ fibo: 'Fibo', sweep: 'Sweep', both: 'F+S', alert: 'Alerts' }[b.dataset.f]} (${n[b.dataset.f]})`;
   });
 }
 // ===== Zoom / déplacement façon TradingView (pincer à deux doigts, glisser), enregistré par paire =====
@@ -2533,7 +2538,7 @@ function candleMiniSvg(day, W) { // 4 bougies d'origine : 14h, 15-17h, 22h, 02h 
 function candleRender() {
   const list = document.getElementById('candleList');
   if (!candlePoh) { list.innerHTML = '<div class="charts-intro">POH candles unavailable right now.</div>'; return; }
-  const rows = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id] && (!candleF.fibo || candleInfo(p.id).fibo) && (!candleF.sweep || candleInfo(p.id).sweep) && (!candleF.both || candleInfo(p.id).both))
+  const rows = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id] && (!candleF.fibo || candleInfo(p.id).fibo) && (!candleF.sweep || candleInfo(p.id).sweep) && (!candleF.both || candleInfo(p.id).both) && (!candleF.alert || candleInfo(p.id).alert))
     .map((p) => ({ p, s: chartsCandles ? chartsScore(p.id) : { group: 2, move: 0 } }))
     .sort((x, y) => x.s.group - y.s.group || y.s.move - x.s.move);
   let date = '';
@@ -2602,7 +2607,7 @@ function candleNamesRender() {
 function candleGoTo(id) {
   if (candleMini) { const r = [...candleSlides()].find((x) => x.dataset.id === id); if (r) r.scrollIntoView({ block: 'start', behavior: 'smooth' }); return; }
   let i = [...candleSlides()].findIndex((r) => r.dataset.id === id);
-  if (i < 0) { candleF.fibo = false; candleF.sweep = false; candleF.both = false; candleSelected = null; candleRender(); i = [...candleSlides()].findIndex((r) => r.dataset.id === id); } // la paire est masquée par un filtre : on l'enlève
+  if (i < 0) { candleF.fibo = false; candleF.sweep = false; candleF.both = false; candleF.alert = false; candleSelected = null; candleRender(); i = [...candleSlides()].findIndex((r) => r.dataset.id === id); } // la paire est masquée par un filtre : on l'enlève
   const l = document.getElementById('candleList');
   if (i >= 0) l.scrollTo({ left: i * l.clientWidth, behavior: 'smooth' });
 }
@@ -2628,12 +2633,16 @@ document.getElementById('candleStrip')?.addEventListener('click', (e) => {
   const b = e.target.closest('[data-f]');
   if (!b) return;
   document.getElementById('candleSetMenu').hidden = true; document.getElementById('candleSet')?.setAttribute('aria-expanded', 'false'); // le menu se referme après le choix
-  candleF[b.dataset.f] = !candleF[b.dataset.f];
-  if (b.dataset.f === 'both') { candleF.fibo = false; candleF.sweep = false; } else candleF.both = false; // « F+S » remplace Fibo+Sweep ; Fibo ou Sweep seul annule « F+S »
+  const was = candleF[b.dataset.f];
+  candleF[b.dataset.f] = !was;
+  if (b.dataset.f === 'alert') { candleF.fibo = candleF.sweep = candleF.both = false; } else { candleF.alert = false; if (b.dataset.f === 'both') { candleF.fibo = false; candleF.sweep = false; } else candleF.both = false; } // « Alerts » est seul ; Fibo / Sweep / F+S l'annulent (et inversement) // « F+S » remplace Fibo+Sweep ; Fibo ou Sweep seul annule « F+S »
   candleSelected = null;
   if (candlePoh) candleRender();
   document.getElementById('candleList').scrollLeft = 0;
   candleNavUpdate();
+  if (b.dataset.f === 'alert' && candleF.alert && !alerteData) { // plans du tableau ALERTE pas encore chargés : on les charge puis on réaffiche
+    Promise.all([alerteLoad(), candleAlFetch()]).then(() => { if (candleF.alert && candlePoh) { candleRender(); document.getElementById('candleList').scrollLeft = 0; candleNavUpdate(); } });
+  }
 });
 document.getElementById('candleClose')?.addEventListener('click', () => document.getElementById('candleToggle').click());
 function candleCleanApply() { // mode épuré : échelle de prix + rangée Fibo / Sweep / F+S masquées
@@ -2933,7 +2942,7 @@ document.getElementById('candleToggle')?.addEventListener('click', (e) => {
   document.body.classList.toggle('cc-lock', !expanded);
   e.currentTarget.setAttribute('aria-expanded', String(!expanded));
   document.getElementById('candleBody').classList.toggle('collapsed', expanded);
-  if (!expanded) { candleLoad(); candleAlFetch(); }
+  if (!expanded) { candleLoad(); candleAlFetch(); if (!alerteData) alerteLoad().then(candleAlFilterSync); } // plans ALERTE chargés aussi : le compteur « Alerts » est juste dès l'ouverture
 });
 
 document.getElementById('candleViewReset')?.addEventListener('click', () => {
@@ -3100,7 +3109,7 @@ async function alerteFocus(id, t) {
     try { localStorage.setItem('candleHistTf', '1'); } catch (e) { /* pas de stockage */ }
     if (window.candleHistSync) window.candleHistSync();
     for (let k = 0; k < 40 && !(candlePoh && candleDays[id]); k++) await wait(250); // attente du chargement des POH
-    candleF.fibo = candleF.sweep = candleF.both = false; candleSelected = null;
+    candleF.fibo = candleF.sweep = candleF.both = candleF.alert = false; candleSelected = null;
     candleFocusMark = { id, t };
     candleRender();
     const l = document.getElementById('candleList'), i = [...candleSlides()].findIndex((r) => r.dataset.id === id);
@@ -3689,8 +3698,15 @@ async function candleAlFetch() {
   try {
     const r = await fetch(`${ALERTE_API}/alerte?lines=1`, { cache: 'no-store', signal: AbortSignal.timeout(10000) });
     const j = r.ok ? await r.json() : null;
-    if (j && Array.isArray(j.lines)) { candleAl = j.lines; candleAlRedraw(); }
+    if (j && Array.isArray(j.lines)) { candleAl = j.lines; candleAlRedraw(); candleAlFilterSync(); }
   } catch (e) { /* on garde la liste actuelle */ }
+}
+function candleAlFilterSync() { // la liste des lignes a changé : compteur « Alerts » à jour, et si le filtre est actif, paires retirées/ajoutées
+  if (!candlePoh) return;
+  candleFilterUpdate();
+  if (!candleF.alert || candleMini) return;
+  const want = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id] && candleHasAlert(p.id)).map((p) => p.id).sort().join(), have = [...candleSlides()].map((r) => r.dataset.id).sort().join();
+  if (want !== have) candleRender();
 }
 function candleAlRedraw() { const id = candleCurId(); if (id && !(rp.on && rp.id === id)) candleRedraw(id, candleViewOf(id)); }
 async function candleAlPost(body) {
@@ -3700,6 +3716,7 @@ async function candleAlPost(body) {
   if (Array.isArray(j.lines)) candleAl = j.lines;
   candleAlAt = Date.now();
   candleAlRedraw();
+  candleAlFilterSync();
 }
 function candleAlClose() { document.getElementById('candleAlSheet')?.remove(); if (candlePrev) { candlePrev = null; candleAlRedraw(); } }
 function candleAlSheet(title, sub, price, okLabel, onOk, withExpiry) { // petite fiche en bas : prix modifiable + Annuler / OK
