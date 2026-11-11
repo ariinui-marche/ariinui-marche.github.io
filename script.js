@@ -3426,6 +3426,27 @@ document.getElementById('alerteNotif')?.addEventListener('click', async () => { 
   alerteNotifState();
 });
 alerteNotifState();
+// Interrupteur « Doji alerts » : réglage serveur (settings.json) — actif par défaut ; mis à jour tout de suite, annulé si le serveur refuse
+const alerteDojiBtn = document.getElementById('alerteDoji');
+function alerteDojiShow(on) { if (!alerteDojiBtn) return; alerteDojiBtn.classList.toggle('on', !!on); alerteDojiBtn.setAttribute('aria-pressed', String(!!on)); alerteDojiBtn.textContent = on ? 'Doji alerts: on' : 'Doji alerts: off'; }
+async function alerteDojiLoad() {
+  if (!alerteDojiBtn) return;
+  try { const r = await fetch(`${ALERTE_API}/alerte?settings=1`, { cache: 'no-store', signal: AbortSignal.timeout(10000) }); if (r.ok) { alerteDojiShow((await r.json()).doji !== false); return; } } catch (e) { /* hors ligne */ }
+  alerteDojiBtn.textContent = 'Doji alerts: unavailable (tap to retry)';
+}
+alerteDojiBtn?.addEventListener('click', async () => {
+  if (alerteDojiBtn.disabled) return;
+  if (!/: (on|off)$/.test(alerteDojiBtn.textContent)) { alerteDojiLoad(); return; } // état inconnu : on relit d'abord
+  const was = alerteDojiBtn.classList.contains('on'), now = !was;
+  alerteDojiShow(now); alerteDojiBtn.disabled = true;
+  try {
+    const r = await fetch(`${ALERTE_API}/alerte`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ setting: { doji: now } }), signal: AbortSignal.timeout(15000) });
+    if (!r.ok) throw new Error('refus');
+    alerteDojiShow((await r.json()).doji !== false);
+  } catch (e) { alerteDojiShow(was); }
+  alerteDojiBtn.disabled = false;
+});
+alerteDojiLoad();
 
 // Flèches ‹ › : POH seuls (—) / historique 1 min (1m) / historique 5 min (5m), sans molette
 (function candleHistCtl() {
