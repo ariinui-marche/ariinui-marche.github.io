@@ -225,7 +225,7 @@
 1794390300	EUR	ECB President Lagarde Speaks			
 1794466800	GBP	GDP Growth Rate QoQ Prel		0.7%	0.4%
 1794466800	GBP	GDP Growth Rate YoY Prel		1.9%	1.2%
-1794466800	GBP	GDP MoM		-0.1%	0.1%
+1794466800	GBP	GDP MoM		0%	0.1%
 1794490200	USD	FOMC Member Hammack Speaks			
 1794495600	USD	Existing Home Sales		3.85M	3.99M
 1794495600	USD	FOMC Member Barr Speaks			
@@ -237,6 +237,7 @@
 1794526200	USD	FOMC Member Williams Speaks			
 1794576600	USD	PPI MoM		0.4%	1.3%
 1794579000	USD	FOMC Member Collins Speaks			
+1794580800	USD	FOMC Member Logan Speaks			
 1794585000	USD	FOMC Member Bowman Speaks			
 1794585600	EUR	German Buba President Nagel Speaks			
 1794589200	USD	FOMC Member Daly Speaks			

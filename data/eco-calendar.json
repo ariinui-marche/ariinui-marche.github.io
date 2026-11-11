@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-11T02:07:56.785Z",
+  "timestamp": "2026-11-11T09:15:55.633Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -12581,7 +12581,7 @@
       "impact": "Low",
       "forecast": "",
       "previous": "60.4%",
-      "actual": ""
+      "actual": "42.5%"
     },
     {
       "title": "German Final CPI m/m",
@@ -12590,7 +12590,7 @@
       "impact": "Low",
       "forecast": "-0.2%",
       "previous": "-0.2%",
-      "actual": ""
+      "actual": "-0.2%"
     },
     {
       "title": "French Bank Holiday",
@@ -12617,7 +12617,7 @@
       "impact": "Low",
       "forecast": "0.7%",
       "previous": "-1.3%",
-      "actual": ""
+      "actual": "1.2%"
     },
     {
       "title": "M2 Money Supply y/y",
@@ -12876,7 +12876,7 @@
       "country": "USD",
       "date": "2026-11-12T12:00:00-05:00",
       "impact": "Low",
-      "forecast": "",
+      "forecast": "-0.6M",
       "previous": "-0.9M",
       "actual": ""
     },
@@ -12921,7 +12921,7 @@
       "country": "USD",
       "date": "2026-11-12T14:00:00-05:00",
       "impact": "Low",
-      "forecast": "-286.3B",
+      "forecast": "-298.6B",
       "previous": "-26.9B",
       "actual": ""
     },
@@ -13070,11 +13070,20 @@
       "actual": ""
     },
     {
+      "title": "FOMC Member Logan Speaks",
+      "country": "USD",
+      "date": "2026-11-13T09:40:00-05:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
       "title": "Natural Gas Storage",
       "country": "USD",
       "date": "2026-11-13T10:30:00-05:00",
       "impact": "Low",
-      "forecast": "",
+      "forecast": "65B",
       "previous": "77B",
       "actual": ""
     },
