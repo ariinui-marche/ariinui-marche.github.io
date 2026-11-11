@@ -1,5 +1,21 @@
+1790589600	GBP	MPC Member Ramsden Speaks			
+1790597700	USD	FOMC Member Bowman Speaks			
+1790602200	EUR	ECB President Lagarde Speaks			
+1790616300	USD	FOMC Member Cook Speaks			
+1790616600	USD	FOMC Member Barkin Speaks			
 1790656200	AUD	RBA Interest Rate Decision	4.6%	4.6%	4.35%
+1790676000	EUR	German Buba President Nagel Speaks			
+1790679600	EUR	ECB President Lagarde Speaks			
 1790690400	USD	JOLTs Job Openings	7.19M	7.225M	7.335M
+1790694000	GBP	MPC Member Mann Speaks			
+1790694000	USD	FOMC Member Bowman Speaks			
+1790695800	GBP	MPC Member Taylor Speaks			
+1790700000	USD	FOMC Member Barr Speaks			
+1790701200	USD	FOMC Member Goolsbee Speaks			
+1790702400	CAD	Gov Council Member Gravelle Speaks			
+1790703000	USD	FOMC Member Musalem Speaks			
+1790704800	USD	FOMC Member Williams Speaks			
+1790708400	USD	FOMC Member Waller Speaks			
 1790731800	AUD	CPI m/m	0.4%	0.5%	1.0%
 1790731800	AUD	CPI y/y	4.0%	4.1%	3.5%
 1790731800	AUD	Trimmed Mean CPI m/m	0.2%	0.3%	0.5%
@@ -7,49 +23,119 @@
 1790771400	USD	Core PCE Price Index MoM	0.3%	0.3%	0.1%
 1790771400	USD	Personal Income MoM	0.3%	0.4%	0.3%
 1790771400	USD	GDP Growth Rate QoQ Final	2.2%	1.5%	2.1%
+1790778600	CHF	Gov Board Member Tschudin Speaks			
+1790789400	USD	FOMC Member Barkin Speaks			
+1790796300	USD	FOMC Member Cook Speaks			
+1790796600	USD	President Trump Speaks			
+1790802600	USD	FOMC Member Goolsbee Speaks			
+1790805600	USD	FOMC Member Kashkari Speaks			
 1790812200	JPY	Tankan Large Manufacturers Index	24	25	22
 1790818200	AUD	Balance of Trade	A$0.184B	A$2B	A$1.515B
+1790841600	GBP	BOE Gov Bailey Speaks			
+1790850900	EUR	German Buba President Nagel Speaks			
+1790856000	GBP	MPC Member Mann Speaks			
+1790859900	USD	FOMC Member Barkin Speaks			
+1790859900	USD	FOMC Member Collins Speaks			
+1790859900	USD	FOMC Member Schmid Speaks			
+1790861400	EUR	ECB President Lagarde Speaks			
 1790863200	USD	ISM Manufacturing PMI	54.5	55	54.6
+1790863200	USD	FOMC Member Waller Speaks			
+1790868600	CHF	SNB Chairman Schlegel Speaks			
+1790875800	USD	FOMC Member Jefferson Speaks			
+1790881200	USD	FOMC Member Bowman Speaks			
+1790881500	CAD	Gov Council Member Rogers Speaks			
+1790883000	USD	FOMC Member Cook Speaks			
+1790896800	USD	FOMC Member Logan Speaks			
 1790931600	EUR	Inflation Rate YoY Flash	3.8%	3.6%	3.3%
 1790944200	USD	Non Farm Payrolls	60K	90K	186K
 1790944200	USD	Unemployment Rate	4.2%	4.1%	4.1%
+1790949600	USD	FOMC Member Logan Speaks			
+1790960400	USD	FOMC Member Goolsbee Speaks			
+1790969700	EUR	German Buba President Nagel Speaks			
 1791176400	JPY	Consumer Confidence	35.4		35.5
+1791186300	EUR	German Buba President Nagel Speaks			
 1791208800	USD	ISM Services PMI	54.9	55.2	55.4
 1791268500	JPY	BOJ Gov Ueda Speaks			
+1791275400	GBP	MPC Member Mann Speaks			
 1791295200	CAD	Ivey PMI	61.9		62.7
 1791295200	CAD	Ivey PMI s.a	58.2		64.3
+1791297900	USD	FOMC Member Bowman Speaks			
+1791306900	USD	FOMC Member Schmid Speaks			
+1791392400	USD	President Trump Speaks			
 1791396000	USD	FOMC Meeting Minutes			
+1791446700	CHF	Gov Board Member Martin Speaks			
+1791448200	USD	FOMC Member Waller Speaks			
+1791450000	GBP	MPC Member Pill Speaks			
+1791450900	GBP	MPC Member Greene Speaks			
 1791461700	GBP	BOE Gov Bailey Speaks			
+1791464400	GBP	MPC Member Lombardelli Speaks			
+1791481200	USD	FOMC Member Musalem Speaks			
 1791549000	CAD	Unemployment Rate	6.5%	6.5%	6.4%
 1791554400	USD	Michigan Consumer Sentiment Prel	46.3	47.8	47.8
+1791576000	USD	FOMC Member Collins Speaks			
+1791797400	GBP	MPC Member Breeden Speaks			
+1791809400	GBP	MPC Member Mann Speaks			
+1791821400	USD	FOMC Member Hammack Speaks			
 1791851400	AUD	NAB Business Confidence	-13		-9
+1791860400	GBP	MPC Member Greene Speaks			
+1791877500	USD	FOMC Member Waller Speaks			
 1791900000	USD	Existing Home Sales	3.99M	3.95M	3.93M
+1791907200	GBP	MPC Member Dhingra Speaks			
+1791910800	USD	FOMC Member Barkin Speaks			
+1791921600	USD	FOMC Member Collins Speaks			
+1791943800	EUR	ECB President Lagarde Speaks			
+1791948600	GBP	MPC Member Breeden Speaks			
+1791955800	GBP	BOE Gov Bailey Speaks			
+1791957900	CAD	BOC Gov Macklem Speaks			
+1791966600	EUR	ECB President Lagarde Speaks			
 1791981000	USD	Core Inflation Rate MoM	0.3%	0.2%	0.3%
 1791981000	USD	Core Inflation Rate YoY	2.6%	2.5%	2.4%
 1791981000	USD	Inflation Rate MoM	0.6%	0.6%	0.4%
 1791981000	USD	Inflation Rate YoY	3.7%	3.6%	3.4%
+1791999000	USD	FOMC Member Barkin Speaks			
+1792004400	USD	FOMC Member Goolsbee Speaks			
 1792024200	AUD	Employment Change		19.6K	39.5K
 1792024200	AUD	Unemployment Rate		4.6%	4.6%
+1792032900	USD	FOMC Member Bowman Speaks			
+1792035300	GBP	MPC Member Pill Speaks			
+1792038600	CHF	SNB Chairman Schlegel Speaks			
 1792044000	GBP	GDP MoM	0.1%	-0.1%	0.4%
+1792046700	GBP	MPC Member Greene Speaks			
+1792053900	GBP	MPC Member Breeden Speaks			
+1792054800	CAD	Gov Council Member Rogers Speaks			
 1792067400	USD	PPI MoM	1.3%	0.5%	0.5%
 1792067400	USD	Retail Sales MoM	0.8%	0.3%	1.3%
+1792096200	USD	FOMC Member Hammack Speaks			
 1792116000	GBP	BOE Gov Bailey Speaks			
+1792117800	EUR	German Buba President Nagel Speaks			
 1792121400	USD	Fed Chairman Warsh Speaks			
+1792124100	CAD	BOC Gov Macklem Speaks			
+1792152000	CAD	Gov Council Member Alexopoulos Speaks			
+1792212300	EUR	German Buba President Nagel Speaks			
+1792219500	GBP	BOE Gov Bailey Speaks			
+1792281600	AUD	RBA Assist Gov Kent Speaks			
+1792364700	AUD	RBA Assist Gov Kent Speaks			
 1792413000	CAD	Core Inflation Rate MoM s.a	0.1%		0.2%
 1792413000	CAD	Inflation Rate YoY	3.1%	3.2%	3%
 1792442700	NZD	CPI q/q			
 1792476000	GBP	Unemployment Rate	4.7%	5%	4.9%
 1792499400	USD	Housing Starts	1.221M	1.301M	1.288M
 1792499400	USD	Building Permits Prel	1.4M	1.388M	1.394M
+1792515600	GBP	MPC Member Greene Speaks			
+1792535400	AUD	RBA Deputy Gov Hauser Speaks			
 1792540200	JPY	Balance of Trade	-556.5B ¥	-181B ¥	-1121B ¥
 1792562400	GBP	Core Inflation Rate MoM	0.2%	0.2%	0.3%
 1792562400	GBP	Inflation Rate YoY	3.5%	3.4%	3.1%
+1792566900	EUR	German Buba President Nagel Speaks			
+1792587600	GBP	BOE Gov Bailey Speaks			
 1792619100	NZD	CPI q/q	0.7%	0.8%	1.5%
 1792711800	JPY	Inflation Rate YoY	2.1%		1.9%
 1792735200	GBP	Retail Sales MoM	-0.4%	-0.1%	0.7%
 1792744200	GBP	S&P Global Manufacturing PMI Flash		51.7	
 1792744200	GBP	S&P Global Services PMI Flash		51.8	
+1792962600	AUD	RBA Assist Gov Jones Speaks			
 1793104200	USD	Durable Goods Orders MoM	1.8%	1.5%	0%
+1793146500	AUD	RBA Gov Bullock Speaks			
 1793147400	AUD	Quarterly Inflation Rate QoQ	1.3%	1.2%	0.6%
 1793147400	AUD	Quarterly Inflation Rate YoY	3.9%	3.9%	3.9%
 1793149200	NZD	Official Cash Rate	2.75%	3.00%	2.75%
@@ -65,9 +151,12 @@
 1793277000	USD	Core PCE Price Index MoM	0.3%	0.3%	0.3%
 1793277000	USD	Personal Income MoM	0.2%	0.3%	0.3%
 1793277000	USD	GDP Growth Rate QoQ Adv	3.4%	3.2%	1.5%
+1793278200	CAD	Gov Council Member Gravelle Speaks			
 1793279700	EUR	Deposit Facility Rate	2.5%	2.5%	2.5%
 1793279700	EUR	ECB Interest Rate Decision	2.65%	2.65%	2.65%
 1793281500	EUR	ECB Press Conference			
+1793287800	CAD	Gov Council Member Vincent Speaks			
+1793295000	CHF	Gov Board Member Tschudin Speaks			
 1793327400	JPY	Interest Rate	1.25%	1.25%	1.25%
 1793329320	JPY	BOJ Policy Rate	1.25%	<1.25%	<1.25%
 1793329320	JPY	Monetary Policy Statement			
@@ -75,36 +164,84 @@
 1793341800	JPY	BOJ Press Conference			
 1793354400	EUR	GDP Growth Rate QoQ Flash	0.4%	0.2%	0.4%
 1793354400	EUR	GDP Growth Rate YoY Flash	1.3%	1.1%	1%
+1793376000	USD	FOMC Member Daly Speaks			
+1793377800	USD	FOMC Member Musalem Speaks			
+1793381400	USD	FOMC Member Logan Speaks			
+1793620800	EUR	German Buba President Nagel Speaks			
 1793631600	USD	ISM Manufacturing PMI	55.5	54.5	54.5
 1793676600	AUD	RBA Interest Rate Decision	4.85%	4.85%	4.6%
 1793680200	AUD	RBA Press Conference			
 1793718000	USD	JOLTs Job Openings	7.523M	7.1M	7.19M
 1793718960	USD	Congressional Elections			
+1793721600	CAD	BOC Gov Macklem Speaks			
+1793728800	EUR	German Buba President Nagel Speaks			
 1793742300	NZD	Employment Change q/q	-0.1%	0.4%	0.5%
 1793742300	NZD	Unemployment Rate	5.7%	5.5%	5.6%
 1793786400	EUR	Inflation Rate YoY Flash	4%	4%	3.8%
 1793804400	USD	ISM Services PMI	54.5	54.8	54.9
 1793838600	AUD	Balance of Trade	A$2.826B	A$0.81B	A$0.184B
+1793861100	AUD	RBA Deputy Gov Hauser Speaks			
 1793880000	GBP	Interest Rate	4%	4%	3.75%
 1793881800	GBP	BOE Gov Bailey Speaks			
+1793882400	CHF	SNB Chairman Schlegel Speaks			
+1793886600	USD	FOMC Member Hammack Speaks			
+1793887800	USD	FOMC Member Barkin Speaks			
+1793892600	CAD	BOC Gov Macklem Speaks			
+1793900700	EUR	German Buba President Nagel Speaks			
+1793901600	EUR	ECB President Lagarde Speaks			
+1793957400	USD	FOMC Member Williams Speaks			
+1793962800	CHF	Gov Board Member Tschudin Speaks			
+1793967300	GBP	MPC Member Pill Speaks			
 1793971800	CAD	Unemployment Rate	6.7%	6.5%	6.5%
 1793971800	USD	Non Farm Payrolls	165K	65K	60K
 1793971800	USD	Unemployment Rate	4.1%	4.2%	4.2%
+1793974200	USD	FOMC Member Musalem Speaks			
 1793977200	CAD	Ivey PMI	56.4		61.9
 1793977200	CAD	Ivey PMI s.a	58.3		58.2
 1793977200	USD	Michigan Consumer Sentiment Prel	51	48	46.3
 1793980800	JPY	BOJ Gov Ueda Speaks			
+1793985300	USD	FOMC Member Bowman Speaks			
+1793988000	USD	FOMC Member Daly Speaks			
 1794001500	NZD	Parliamentary Elections			
+1794177000	AUD	RBA Assist Gov Hunter Speaks			
+1794231600	USD	FOMC Member Bowman Speaks			
+1794236400	USD	FOMC Member Goolsbee Speaks			
+1794244500	USD	FOMC Member Barkin Speaks			
+1794245100	GBP	BOE Gov Bailey Speaks			
 1794270600	AUD	NAB Business Confidence	-15		-14
+1794299400	GBP	MPC Member Breeden Speaks			
+1794301200	USD	FOMC Member Waller Speaks			
 1794310200	USD	Core CPI y/y			
 1794310200	USD	CPI y/y			
+1794313800	GBP	MPC Member Lombardelli Speaks			
 1794317400	USD	Core Inflation Rate MoM	0.3%	0.2%	0.3%
 1794317400	USD	Inflation Rate MoM	0.4%	0.3%	0.6%
+1794325800	USD	FOMC Member Logan Speaks			
+1794335400	GBP	MPC Member Pill Speaks			
+1794335400	USD	FOMC Member Schmid Speaks			
+1794353400	USD	FOMC Member Bowman Speaks			
+1794353400	USD	FOMC Member Paulson Speaks			
+1794384900	EUR	German Buba President Nagel Speaks			
+1794390300	EUR	ECB President Lagarde Speaks			
 1794466800	GBP	GDP Growth Rate QoQ Prel		0.7%	0.4%
 1794466800	GBP	GDP Growth Rate YoY Prel		1.9%	1.2%
 1794466800	GBP	GDP MoM		-0.1%	0.1%
+1794490200	USD	FOMC Member Hammack Speaks			
 1794495600	USD	Existing Home Sales		3.85M	3.99M
+1794495600	USD	FOMC Member Barr Speaks			
+1794500100	USD	FOMC Member Goolsbee Speaks			
+1794504600	EUR	German Buba President Nagel Speaks			
+1794507000	USD	FOMC Member Daly Speaks			
+1794508200	USD	FOMC Member Schmid Speaks			
+1794511800	EUR	ECB President Lagarde Speaks			
+1794526200	USD	FOMC Member Williams Speaks			
 1794576600	USD	PPI MoM		0.4%	1.3%
+1794579000	USD	FOMC Member Collins Speaks			
+1794585000	USD	FOMC Member Bowman Speaks			
+1794585600	EUR	German Buba President Nagel Speaks			
+1794589200	USD	FOMC Member Daly Speaks			
+1794614400	USD	FOMC Member Jefferson Speaks			
+1794654000	GBP	MPC Member Greene Speaks			
 1794786600	JPY	GDP Growth Rate QoQ Prel		0.1%	0.3%
 1794805200	GBP	Claimant Count Change			
 1794828600	CAD	CPI m/m			
