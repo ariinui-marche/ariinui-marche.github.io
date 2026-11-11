@@ -2168,7 +2168,8 @@ function candleSvg(day, dly, view, id) {
     const lf = Math.min(44, 11 * bw / Math.max(1, Math.min(stepB * 0.74, 120)), lfCap); // label POH : suit la largeur de la bougie (11 px au zoom d'origine)
     return (vis && lf >= 3.5 ? `<text x="${cx.toFixed(1)}" y="${Math.min(H - 6 * lf / 11, Math.max(1.3 * lf, y(h) - 0.55 * lf)).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:${col};font-size:${lf.toFixed(1)}px">${x.dn || x.lbl}</text>` : '') +
       `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="0.9"/>` +
-      `<rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}" stroke-width="0.9"/>`;
+      `<rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}" stroke-width="0.9"/>` +
+      (vis && lf >= 3.5 && h > l && Math.abs(c - o) <= 0.1 * (h - l) ? `<text x="${cx.toFixed(1)}" y="${Math.min(H - 2, y(l) + 1.1 * lf).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:#d1d4dc;font-size:${(lf * 0.9).toFixed(1)}px">Doji</text>` : '');
   }).join('');
   const axT = []; // étiquettes des lignes : affichées DANS l'échelle de prix à droite (nom de la ligne à la place du prix), centrées sur la ligne
   let fib = '';
