@@ -2325,6 +2325,16 @@ function candleSvg(day, dly, view, id) {
         else { const r = (b[0] - 36000) % hourStep; if (r === 0 || (r === 60 && !((older[0] - 36000) % hourStep === 0))) ticks.push({ x, w: 1, t: alerteTime(b[0]) }); }
       }
     }
+    if (is1D) { // moyennes mobiles simples 50 et 200 jours, UNIQUEMENT en daily (calculées sur toutes les bougies chargées, tracées sur la fenêtre visible)
+      const ps = new Float64Array(hist.length + 1);
+      for (let q = 0; q < hist.length; q++) ps[q + 1] = ps[q] + hist[q][4];
+      for (const [n, colM] of [[200, '#E040FB'], [50, '#FF9800']]) {
+        let pts = '';
+        for (let j = jMax; j >= jMin; j--) { const i0 = hist.length - 1 - j * sg; if (i0 < n - 1 || i0 >= hist.length) continue; pts += `${(edge - (j + 0.5) * hs).toFixed(1)},${y((ps[i0 + 1] - ps[i0 + 1 - n]) / n).toFixed(1)} `; }
+        if (pts) hb += `<polyline points="${pts.trim()}" fill="none" stroke="${colM}" stroke-width="1.6" stroke-linejoin="round" stroke-opacity=".95"/>`;
+      }
+      hb += `<text x="6" y="14" class="pc-ax" style="font-size:10px"><tspan fill="#FF9800">SMA 50</tspan><tspan fill="#E040FB" dx="10">SMA 200</tspan></text>`;
+    }
     if (!is1D && futStart < xMax + 60) { // axe du temps du FUTUR (à droite des POH) : mêmes règles que l'historique, jours ouvrés seulement
       const nBar = (t) => Math.round(openSecs(tLast, t + barShift) / tfSec);
       for (let d = 0, tt = (Math.floor((tLast - 36000) / 86400) + 1) * 86400 + 36000; d < 400; d++, tt += 86400) { // minuits UTC-10 suivants
