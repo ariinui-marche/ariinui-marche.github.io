@@ -3613,7 +3613,6 @@ function alerteSwitch(id, key, label) {
 }
 alerteSwitch('alerteDoji', 'doji', 'Doji alerts');
 alerteSwitch('alerteP50', 'p50', '50% alerts');
-alerteSwitch('alerteCdx', 'plans', 'Plan alerts');
 
 // Flèches ‹ › : POH seuls (—) / historique 1 min (1m) / historique 5 min (5m), sans molette
 (function candleHistCtl() {
