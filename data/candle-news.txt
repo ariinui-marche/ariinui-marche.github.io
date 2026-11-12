@@ -1,4 +1,3 @@
-1790589600	GBP	MPC Member Ramsden Speaks			
 1790597700	USD	FOMC Member Bowman Speaks			
 1790602200	EUR	ECB President Lagarde Speaks			
 1790616300	USD	FOMC Member Cook Speaks			
@@ -223,9 +222,9 @@
 1794353400	USD	FOMC Member Paulson Speaks			
 1794384900	EUR	German Buba President Nagel Speaks			
 1794390300	EUR	ECB President Lagarde Speaks			
-1794466800	GBP	GDP Growth Rate QoQ Prel		0.7%	0.4%
-1794466800	GBP	GDP Growth Rate YoY Prel		1.9%	1.2%
-1794466800	GBP	GDP MoM		0%	0.1%
+1794466800	GBP	GDP Growth Rate QoQ Prel	0.7%	0.7%	0.4%
+1794466800	GBP	GDP Growth Rate YoY Prel	1.9%	1.9%	1.2%
+1794466800	GBP	GDP MoM	0.2%	0%	0%
 1794490200	USD	FOMC Member Hammack Speaks			
 1794495600	USD	Existing Home Sales		3.85M	3.99M
 1794495600	USD	FOMC Member Barr Speaks			
@@ -322,6 +321,6 @@
 1796909400	USD	Inflation Rate MoM			0.4%
 1796909400	USD	Inflation Rate YoY		3.9%	3.7%
 1796968800	GBP	GDP m/m			
-1796972400	GBP	GDP MoM			
+1796972400	GBP	GDP MoM			0.2%
 1797337800	USD	Core PPI m/m			
 1797337800	USD	PPI m/m			

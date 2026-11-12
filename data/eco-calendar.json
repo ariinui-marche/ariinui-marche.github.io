@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-12T03:58:29.687Z",
+  "timestamp": "2026-11-12T12:10:35.408Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -12716,7 +12716,7 @@
       "impact": "High",
       "forecast": "0.0%",
       "previous": "0.1%",
-      "actual": ""
+      "actual": "0.2%"
     },
     {
       "title": "Prelim GDP q/q",
@@ -12725,7 +12725,7 @@
       "impact": "Medium",
       "forecast": "0.7%",
       "previous": "0.5%",
-      "actual": ""
+      "actual": "0.7%"
     },
     {
       "title": "Construction Output m/m",
@@ -12734,7 +12734,7 @@
       "impact": "Low",
       "forecast": "0.0%",
       "previous": "-0.2%",
-      "actual": ""
+      "actual": "0.8%"
     },
     {
       "title": "Goods Trade Balance",
@@ -12743,7 +12743,7 @@
       "impact": "Low",
       "forecast": "-19.2B",
       "previous": "-18.0B",
-      "actual": ""
+      "actual": "-22.3B"
     },
     {
       "title": "Index of Services 3m/3m",
@@ -12752,7 +12752,7 @@
       "impact": "Low",
       "forecast": "0.9%",
       "previous": "0.9%",
-      "actual": ""
+      "actual": "0.9%"
     },
     {
       "title": "Industrial Production m/m",
@@ -12761,7 +12761,7 @@
       "impact": "Low",
       "forecast": "-0.4%",
       "previous": "0.8%",
-      "actual": ""
+      "actual": "0.3%"
     },
     {
       "title": "Manufacturing Production m/m",
@@ -12770,7 +12770,7 @@
       "impact": "Low",
       "forecast": "-0.5%",
       "previous": "1.2%",
-      "actual": ""
+      "actual": "0.7%"
     },
     {
       "title": "Prelim Business Investment q/q",
@@ -12779,7 +12779,7 @@
       "impact": "Low",
       "forecast": "0.4%",
       "previous": "1.7%",
-      "actual": ""
+      "actual": "0.4%"
     },
     {
       "title": "ECB Economic Bulletin",
@@ -13031,6 +13031,24 @@
       "impact": "Low",
       "forecast": "-4.5B",
       "previous": "-6.8B",
+      "actual": ""
+    },
+    {
+      "title": "M2 Money Supply y/y",
+      "country": "CNY",
+      "date": "2026-11-13T05:03:00-05:00",
+      "impact": "Low",
+      "forecast": "7.2%",
+      "previous": "7.2%",
+      "actual": ""
+    },
+    {
+      "title": "New Loans",
+      "country": "CNY",
+      "date": "2026-11-13T05:03:00-05:00",
+      "impact": "Low",
+      "forecast": "80B",
+      "previous": "1080B",
       "actual": ""
     },
     {
