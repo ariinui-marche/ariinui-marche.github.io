@@ -1,9 +1,10 @@
-const CACHE = 'ariinui-marche-shell-v185';
+const CACHE = 'ariinui-marche-shell-v186';
 const SHELL_PATHS = [
   '/',
   '/index.html',
   '/styles.css',
   '/script.js',
+  '/cdx-engine.js',
   '/manifest.json',
   '/icons/icon-192.png',
   '/icons/icon-512.png',

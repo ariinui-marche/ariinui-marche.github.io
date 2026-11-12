@@ -1971,6 +1971,31 @@ const CANDLE_HIST_MODES = ['0', '1', '5', '60', '240', '1D'], CANDLE_HIST_LBL = 
 const CANDLE_HIST_N = { 1: 50, 5: 50, 60: 24, 240: 12, '1D': 8 }; // bougies récentes prises pour caler l'échelle de prix (1 jour environ)
 if (!CANDLE_HIST_MODES.includes(candleHistTf)) candleHistTf = '0';
 const candleHistData = {}; // 'PAIR|tf' -> { bars: [[t,o,h,l,c]...], at, busy }
+// ===== Plans Arii CDX SW sur CANDLE (graphiques 1 min / 5 min) : moteur cdx-engine.js, identique au moteur Python de référence =====
+let candlePlans = true; // roue > « Plans » (enregistré)
+try { candlePlans = localStorage.getItem('candlePlans') !== '0'; } catch (e) { /* pas de stockage */ }
+const candlePlanCache = {}; // 'PAIR|tf' -> { key, plans: [{ ts, te, lg, e, s, pic, vis, sid, kind }] }
+const CANDLE_PLAN_SESS = { 0: '#787b86', 1: '#2962ff', 2: '#f23645', 3: '#089981', 4: '#f5b642' }; // hors session, Asia, London, NY AM, NY Lunch
+function candlePlansGet(id, tf, bars) { // plans du moteur sur les barres de la paire (mis en cache tant que les barres ne changent pas)
+  if (!candlePlans || !window.CDX || (tf !== '1' && tf !== '5') || !bars || bars.length < 300) return null;
+  const m1h = tf === '5' ? candleHistData[id + '|1'] : null, m1b = m1h && m1h.bars.length ? m1h.bars : null;
+  if (tf === '5' && !m1b) return null; // le mode 5 min a besoin des barres 1 min (chargées en parallèle)
+  const lb = bars[bars.length - 1], key = bars.length + '|' + lb[0] + '|' + lb[4] + (m1b ? '|' + m1b.length + '|' + m1b[m1b.length - 1][0] + '|' + m1b[m1b.length - 1][4] : '');
+  const ck = id + '|' + tf, c = candlePlanCache[ck];
+  if (c && c.key === key) return c.plans;
+  let plans = [];
+  try {
+    const cap = tf === '1' ? 30000 : 15000, bs = bars.slice(-cap), t0 = bs[0][0];
+    let m1 = null;
+    if (m1b) { let a = 0, b = m1b.length; while (a < b) { const m = (a + b) >> 1; if (m1b[m][0] < t0) a = m + 1; else b = m; } m1 = m1b.slice(a); }
+    const px = lb[4], digits = px >= 1000 ? 2 : px >= 20 ? 3 : 5;
+    const out = CDX.run(bs, digits, Object.assign({ tfMin: +tf, m1, atr1: m1 ? CDX.atrSeries(m1) : null }, CDX.brokerKeys));
+    const tMin = t0 + 7 * 86400; // les 7 premiers jours de la fenêtre servent à chauffer le moteur (niveaux de session, sweeps)
+    plans = out.filter((p) => (p.vis || p.end === null) && p.t >= tMin).map((p) => ({ ts: bs[p.i][0], te: p.ie !== undefined ? bs[p.ie][0] : null, lg: p.lg, e: p.e, s: p.s, pic: p.pic, vis: p.vis, sid: p.sid, kind: p.kind }));
+  } catch (err) { plans = []; }
+  candlePlanCache[ck] = { key, plans };
+  return plans;
+}
 const CANDLE_FLAG = { USD: 'us', EUR: 'eu', GBP: 'gb', JPY: 'jp', AUD: 'au', NZD: 'nz', CAD: 'ca', CHF: 'ch' }; // drapeaux ronds des pastilles de news (comme TradingView)
 const CANDLE_DAYS = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'], CANDLE_DAYS_S = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
 const CANDLE_DAYFR = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
@@ -2054,6 +2079,7 @@ function candleHistBars(id) {
 }
 function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bougies de la paire affichée, puis redessine EN PLACE
   if (!id || (candleHistTf === '0' && !tfx)) return;
+  if (!tfx && candlePlans && candleHistTf === '5') candleHistEnsure(id, '1'); // plans en 5 min : confirmation sur les barres 1 min
   const tf = tfx || candleHistTf, key = id + '|' + tf, h = candleHistData[key] || (candleHistData[key] = { bars: [], at: 0, busy: false });
   if (h.busy || Date.now() - h.at < (tf === '1' || tf === '5' ? 25000 : 300000)) return; // 1h / 4h / 1D : fichiers plus lourds, rechargés au plus toutes les 5 min
   h.busy = true;
@@ -2063,7 +2089,7 @@ function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bou
     .then((r) => (r.ok ? r.json() : null))
     .then((j) => {
       if (j && j.bars && j.bars.length) h.bars = since ? h.bars.filter((b) => b[0] < since).concat(j.bars) : j.bars;
-      if ((tf === candleHistTf || rp.on) && !(cg.mode)) candleRedraw(id, candleViewOf(id));
+      if ((tf === candleHistTf || rp.on || (candlePlans && tf === '1' && candleHistTf === '5')) && !(cg.mode)) candleRedraw(id, candleViewOf(id));
       if (!since && tf === '1' && id === 'EURUSD' && h.bars.length && !h.deep) candleDeepLoad(id, h); // TEST : jusqu'à 250 000 barres 1 min MT5
     })
     .catch(() => { /* on garde ce qui est affiché */ })
@@ -2290,6 +2316,28 @@ function candleSvg(day, dly, view, id) {
           if (x > xMax) break;
           if (x >= 0) ticks.push({ x, w: 1, t: alerteTime(t + barShift) });
         }
+      }
+    }
+    if (!RP && !is1D && (candleHistTf === '1' || candleHistTf === '5')) { // plans Arii CDX SW : boîte de risque (entrée -> stop) + boîte de gain jusqu'au pic en R, couleur de la session
+      const pls = candlePlansGet(id, candleHistTf, hist);
+      if (pls && pls.length) {
+        const idxOf = (t) => { let a = 0, b = hist.length - 1; while (a < b) { const m = (a + b + 1) >> 1; if (hist[m][0] <= t) a = m; else b = m - 1; } return a; };
+        const xOf = (k) => edge - (Math.floor((hist.length - 1 - k) / sg) + 0.5) * hs;
+        let ps = '';
+        for (const p of pls) {
+          const xs = xOf(idxOf(p.ts)) - hs / 2, xe = (p.te === null ? xOf(hist.length - 1) : xOf(idxOf(p.te))) + hs / 2;
+          if (xe < 0 || xs > xMax) continue;
+          const x0 = Math.max(-2, xs), w = Math.max(2, Math.min(xe, xMax + 2) - x0), R = Math.abs(p.e - p.s), yE = y(p.e), yS = y(p.s);
+          const tgt = p.vis ? p.e + (p.lg ? 1 : -1) * R * Math.min(p.pic, 4) : p.e, yT = y(tgt);
+          if (Math.max(yE, yS, yT) < TOP - 40 || Math.min(yE, yS, yT) > H) continue;
+          const sc = CANDLE_PLAN_SESS[p.sid] || CANDLE_PLAN_SESS[0];
+          ps += `<rect x="${x0.toFixed(1)}" y="${Math.min(yE, yS).toFixed(1)}" width="${w.toFixed(1)}" height="${Math.max(1, Math.abs(yS - yE)).toFixed(1)}" fill="#f23645" fill-opacity=".16"/>` +
+            (p.vis ? `<rect x="${x0.toFixed(1)}" y="${Math.min(yE, yT).toFixed(1)}" width="${w.toFixed(1)}" height="${Math.max(1, Math.abs(yT - yE)).toFixed(1)}" fill="#089981" fill-opacity=".28"/>` : '') +
+            `<line x1="${x0.toFixed(1)}" x2="${(x0 + w).toFixed(1)}" y1="${yE.toFixed(1)}" y2="${yE.toFixed(1)}" stroke="#d1d4dc" stroke-width="1"/>` +
+            `<line x1="${x0.toFixed(1)}" x2="${(x0 + w).toFixed(1)}" y1="${yS.toFixed(1)}" y2="${yS.toFixed(1)}" stroke="#f23645" stroke-width="1" stroke-dasharray="3 3"/>` +
+            (w >= 46 ? `<text x="${(x0 + 4).toFixed(1)}" y="${(Math.min(yE, yS, yT) - 3).toFixed(1)}" style="fill:${sc === '#2962ff' ? '#6c8cff' : sc};font-size:10px;font-weight:700;pointer-events:none">${p.lg ? 'BUY' : 'SELL'}${p.vis ? ' ' + Math.min(p.pic, 99).toFixed(1) + 'R' : ''}</text>` : '');
+        }
+        hb += ps;
       }
     }
     if (ticks.length) { // étiquettes de l'axe : par priorité (mois > jour > début de séance > heure), sans jamais se chevaucher
@@ -2811,6 +2859,8 @@ function candleSetMenuUpdate() {
   if (!m) return;
   const mi = m.querySelector('[data-a="mini"]'), ai = m.querySelector('[data-a="aim"]');
   if (mi) mi.setAttribute('aria-checked', String(candleMini));
+  const pl = m.querySelector('[data-a="plans"]');
+  if (pl) pl.setAttribute('aria-checked', String(candlePlans));
   if (ai) ai.disabled = candleMini;
 }
 let candleMiniBack = null; // { id, top } : paire ouverte depuis la liste « 4 candles » et position de défilement, pour y revenir exactement
@@ -2845,6 +2895,12 @@ document.getElementById('candleSetMenu')?.addEventListener('click', (e) => {
     if (id) candleAim(id);
   } else if (a.dataset.a === 'alerts') {
     alPanelOpen();
+  } else if (a.dataset.a === 'plans') {
+    candlePlans = !candlePlans;
+    try { localStorage.setItem('candlePlans', candlePlans ? '1' : '0'); } catch (err) { /* pas de stockage */ }
+    candleSetMenuUpdate();
+    const id = candleCurId();
+    if (id) { candleHistEnsure(id); candleRedraw(id, candleViewOf(id)); }
   } else if (a.dataset.a === 'mini') {
     candleMini = !candleMini;
     try { localStorage.setItem('candleMini', candleMini ? '1' : '0'); } catch (err) { /* pas de stockage */ }
