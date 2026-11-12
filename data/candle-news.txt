@@ -1,7 +1,3 @@
-1790597700	USD	FOMC Member Bowman Speaks			
-1790602200	EUR	ECB President Lagarde Speaks			
-1790616300	USD	FOMC Member Cook Speaks			
-1790616600	USD	FOMC Member Barkin Speaks			
 1790656200	AUD	RBA Interest Rate Decision	4.6%	4.6%	4.35%
 1790676000	EUR	German Buba President Nagel Speaks			
 1790679600	EUR	ECB President Lagarde Speaks			
@@ -226,7 +222,7 @@
 1794466800	GBP	GDP Growth Rate YoY Prel	1.9%	1.9%	1.2%
 1794466800	GBP	GDP MoM	0.2%	0%	0%
 1794490200	USD	FOMC Member Hammack Speaks			
-1794495600	USD	Existing Home Sales		3.85M	3.99M
+1794495600	USD	Existing Home Sales	3.75M	3.85M	3.97M
 1794495600	USD	FOMC Member Barr Speaks			
 1794500100	USD	FOMC Member Goolsbee Speaks			
 1794504600	EUR	German Buba President Nagel Speaks			
@@ -303,7 +299,7 @@
 1796823900	CAD	Overnight Rate			
 1796826600	CAD	BOC Press Conference			
 1796827500	CAD	Interest Rate			
-1796828400	USD	Existing Home Sales			
+1796828400	USD	Existing Home Sales			3.75M
 1796839200	USD	Federal Funds Rate			
 1796839200	USD	FOMC Economic Projections			
 1796839200	USD	FOMC Statement			

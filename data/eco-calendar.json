@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-12T12:10:35.408Z",
+  "timestamp": "2026-11-12T19:51:41.100Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -12824,7 +12824,7 @@
       "impact": "Low",
       "forecast": "-4.0%",
       "previous": "8.8%",
-      "actual": ""
+      "actual": "-4.1%"
     },
     {
       "title": "Unemployment Claims",
@@ -12833,7 +12833,7 @@
       "impact": "Medium",
       "forecast": "194K",
       "previous": "189K",
-      "actual": ""
+      "actual": "200K"
     },
     {
       "title": "FOMC Member Hammack Speaks",
@@ -12851,7 +12851,7 @@
       "impact": "Low",
       "forecast": "3.89M",
       "previous": "3.99M",
-      "actual": ""
+      "actual": "3.75M"
     },
     {
       "title": "FOMC Member Barr Speaks",
@@ -12878,7 +12878,7 @@
       "impact": "Low",
       "forecast": "",
       "previous": "-0.3%",
-      "actual": ""
+      "actual": "0.0%"
     },
     {
       "title": "FOMC Member Goolsbee Speaks",
@@ -12896,7 +12896,7 @@
       "impact": "Low",
       "forecast": "-0.6M",
       "previous": "-0.9M",
-      "actual": ""
+      "actual": "4.7M"
     },
     {
       "title": "German Buba President Nagel Speaks",
@@ -12914,7 +12914,7 @@
       "impact": "Low",
       "forecast": "",
       "previous": "5.62|2.5",
-      "actual": ""
+      "actual": "5.44|2.4"
     },
     {
       "title": "FOMC Member Daly Speaks",
@@ -12941,7 +12941,7 @@
       "impact": "Low",
       "forecast": "-298.6B",
       "previous": "-26.9B",
-      "actual": ""
+      "actual": "-404.1B"
     },
     {
       "title": "ECB President Lagarde Speaks",
@@ -13112,6 +13112,15 @@
       "impact": "Low",
       "forecast": "",
       "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "Mortgage Delinquencies",
+      "country": "USD",
+      "date": "2026-11-13T10:15:00-05:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "4.37%",
       "actual": ""
     },
     {
