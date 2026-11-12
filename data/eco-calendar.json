@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-11T23:26:45.128Z",
+  "timestamp": "2026-11-12T03:58:29.687Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -12689,7 +12689,7 @@
       "impact": "Low",
       "forecast": "6.5%",
       "previous": "6.8%",
-      "actual": ""
+      "actual": "7.1%"
     },
     {
       "title": "MI Inflation Expectations",
@@ -12698,7 +12698,7 @@
       "impact": "Low",
       "forecast": "",
       "previous": "5.3%",
-      "actual": ""
+      "actual": "5.3%"
     },
     {
       "title": "RICS House Price Balance",
@@ -12707,7 +12707,7 @@
       "impact": "Low",
       "forecast": "-33%",
       "previous": "-32%",
-      "actual": ""
+      "actual": "-36%"
     },
     {
       "title": "GDP m/m",
