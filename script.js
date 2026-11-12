@@ -3089,6 +3089,7 @@ async function candleAutoRefresh() {
     candleMerge(j);
     try { localStorage.setItem(CANDLE_LS, JSON.stringify({ pairs: candlePoh, daily: candleDaily })); } catch (e) { /* quota */ }
     candleRefreshInPlace();
+    if (!rp.on && candleHistTf !== '0') { const cid = candleCurId(); if (cid) candleHistEnsure(cid); } // bougies 1 min / 5 min de la paire affichée rechargées (limite 25 s) : bougies, plans, zones et sweeps restent à jour
     if (Date.now() - candleAlAt > 120000) candleAlFetch(); // alertes de prix : relues toutes les 2 min (celles touchées disparaissent)
   } catch (e) { /* on réessaiera au prochain tour */ }
   candleAutoBusy = false;
