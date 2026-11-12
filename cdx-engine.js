@@ -552,7 +552,7 @@ function atrSeries(bars) {
   return out;
 }
 
-const API = { run, usDst, brokerKeys, atrSeries, pipOf, hourLoc, sidOf };
+const API = { run, usDst, brokerKeys, atrSeries, pipOf, hourLoc, sidOf, pohIx };
 if (typeof module !== 'undefined' && module.exports) module.exports = API;
 else if (typeof window !== 'undefined') window.CDX = API;
 })();

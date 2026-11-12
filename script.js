@@ -1974,6 +1974,24 @@ const candleHistData = {}; // 'PAIR|tf' -> { bars: [[t,o,h,l,c]...], at, busy }
 // ===== Plans Arii CDX SW sur CANDLE (graphiques 1 min / 5 min) : moteur cdx-engine.js, identique au moteur Python de référence =====
 let candlePlans = true, candleZones = true; // roue > « Plans » / « Zones » (enregistrés)
 try { candlePlans = localStorage.getItem('candlePlans') !== '0'; candleZones = localStorage.getItem('candleZones') !== '0'; } catch (e) { /* pas de stockage */ }
+function candleSweepMarks(bars, i0, prevU, keyOf, isPoh) { // règle de l'EA MT5 / Pine : le plus haut (bas) d'une période dépasse celui de la période précédente et la clôture de la période revient dessous (dessus) -> marque sur la barre de l'extrême
+  const out = []; let ci = null, ch = 0, cl = 0, cc = 0, hb = 0, lb = 0, ph = 0, pl = 0, hP = false;
+  const flush = () => {
+    if (ci === null || !hP) return;
+    if (ch > ph && cc < ph && bars[hb][0] >= prevU) out.push({ t: bars[hb][0], p: ch, hi: true });
+    if (cl < pl && cc > pl && bars[lb][0] >= prevU) out.push({ t: bars[lb][0], p: cl, hi: false });
+  };
+  for (let i = i0; i < bars.length; i++) {
+    const b = bars[i], k = keyOf(b[0]);
+    if (k !== ci) {
+      if (ci !== null) { flush(); if (isPoh && (k < ci || (i > i0 && b[0] - bars[i - 1][0] > 43200))) hP = false; else { ph = ch; pl = cl; hP = true; } }
+      ci = k; ch = b[2]; cl = b[3]; hb = lb = i;
+    } else { if (b[2] > ch) { ch = b[2]; hb = i; } if (b[3] < cl) { cl = b[3]; lb = i; } }
+    cc = b[4];
+  }
+  flush();
+  return out;
+}
 const candlePlanHits = {}; // paire -> [{ x0, x1, y0, y1, p }] zones cliquables des plans (infobulle au clic)
 const candlePlanCache = {}; // 'PAIR|tf' -> { key, plans: [{ ts, te, lg, e, s, pic, vis, sid, kind }] }
 const CANDLE_PLAN_SESS = { 0: '#787b86', 1: '#2962ff', 2: '#f23645', 3: '#089981', 4: '#f5b642' }; // hors session, Asia, London, NY AM, NY Lunch
@@ -2006,6 +2024,8 @@ function candlePlansGet(id, tf, bars) { // plans du moteur sur les barres de la 
         zones.fvg.push({ ts: b2[0], top: bu ? bi[3] : b2[3], bot: bu ? b2[2] : bi[2], sid: CDX.sidOf(CDX.hourLoc(bars[i - 1][0])) });
       }
       if (zones.fvg.length > 300) zones.fvg.splice(0, zones.fvg.length - 300);
+      let j0 = n; while (j0 > 0 && bars[j0][0] >= prevU - 2 * 86400) j0--; // marqueurs de sweep : POH (●), daily (●), 4H (★)
+      zones.sw = { poh: candleSweepMarks(bars, j0, prevU, CDX.pohIx, true), d: candleSweepMarks(bars, j0, prevU, CDX.brokerKeys.d1, false), h4: candleSweepMarks(bars, j0, prevU, CDX.brokerKeys.h4, false) };
     }
     plans = out.filter((p) => (p.vis || p.end === null) && p.t >= tMin).map((p) => ({ ts: bs[p.i][0], te: p.ie !== undefined ? bs[p.ie][0] : null, lg: p.lg, e: p.e, s: p.s, pic: p.pic, vis: p.vis, sid: p.sid, kind: p.kind, end: p.end, info: p.info || {}, pips: Math.abs(p.e - p.s) / CDX.pipOf(digits), dec: digits === 2 ? 2 : digits === 3 ? 3 : 5, tf }));
   } catch (err) { plans = []; }
@@ -2353,6 +2373,20 @@ function candleSvg(day, dly, view, id) {
         for (const f of pls.zones.fvg) zr(f.ts, null, f.top, f.bot, CANDLE_PLAN_SESS[f.sid] || CANDLE_PLAN_SESS[0], 0.35, '', false);
         for (const g of pls.zones.ifv) zr(g.ts, null, g.ot, g.obt, g.hot ? '#f23645' : g.ib ? '#F9A825' : '#E65100', g.hot ? 0.4 : 0.14, 'IFVG', false);
         for (const g of pls.zones.bprs) zr(g.ts, g.te, g.ot, g.obt, g.bull ? '#00E676' : '#FF1744', 0.18, 'BPR', true);
+        if (pls.zones.sw) { // marqueurs de sweep (boules POH / daily, étoiles 4H) posés sur l'extrême balayé
+          let mk = '';
+          const put = (m, kind) => {
+            const x = xOf(idxOf(m.t)), yy = y(m.p);
+            if (x < -10 || x > xMax + 10 || yy < TOP - 20 || yy > H) return;
+            if (kind === 'p') mk += `<circle cx="${x.toFixed(1)}" cy="${yy.toFixed(1)}" r="4" fill="${m.hi ? '#F23645' : '#089981'}" fill-opacity=".85"/>`;
+            else if (kind === 'd') mk += `<circle cx="${x.toFixed(1)}" cy="${yy.toFixed(1)}" r="6" fill="${m.hi ? '#FF8A80' : '#00E676'}" fill-opacity=".9"/>`;
+            else mk += `<text x="${x.toFixed(1)}" y="${(yy + 5).toFixed(1)}" text-anchor="middle" style="fill:${m.hi ? '#FF8A80' : '#00E676'};font-size:15px;pointer-events:none">&#9733;</text>`;
+          };
+          for (const m of pls.zones.sw.poh) put(m, 'p');
+          for (const m of pls.zones.sw.d) put(m, 'd');
+          for (const m of pls.zones.sw.h4) put(m, 'h');
+          hb += mk;
+        }
       }
       if (candlePlans && pls && pls.length) {
         let ps = '';
