@@ -2717,12 +2717,20 @@ function candleMiniSvg(day, W) { // 4 bougies d'origine : 14h, 15-17h, 22h, 02h 
       (isDoji(x.c) ? `<text x="${cx.toFixed(1)}" y="${(y(l) + 12).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:#d1d4dc;font-size:10px">Doji</text>` : '');
   }).join('') + '</svg>';
 }
+// Vue 4 candles : rang du doji le plus récent de la journée (14h = 0, 15-17h = 1, 22h = 2, 02h = 3 ; -1 = aucun doji). Les paires au doji le plus récent passent en tête de liste.
+function candleDojiRank(id) {
+  const days = ((candlePoh || {})[id] || []).filter((d) => Object.keys(d.c).length), day = days[days.length - 1];
+  if (!day) return -1;
+  let r = -1;
+  ['14', '15', '22', '02'].forEach((k, i) => { const c = day.c[k]; if (c && c[1] > c[2] && Math.abs(c[3] - c[0]) <= 0.1 * (c[1] - c[2])) r = i; });
+  return r;
+}
 function candleRender() {
   const list = document.getElementById('candleList');
   if (!candlePoh) { list.innerHTML = '<div class="charts-intro">POH candles unavailable right now.</div>'; return; }
   const rows = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id] && (!candleF.fibo || candleInfo(p.id).fibo) && (!candleF.sweep || candleInfo(p.id).sweep) && (!candleF.both || candleInfo(p.id).both) && (!candleF.alert || candleInfo(p.id).alert) && (!candleF.bias || candleInfo(p.id).bias))
     .map((p) => ({ p, s: chartsCandles ? chartsScore(p.id) : { group: 2, move: 0 } }))
-    .sort((x, y) => x.s.group - y.s.group || y.s.move - x.s.move);
+    .sort((x, y) => (candleMini ? candleDojiRank(y.p.id) - candleDojiRank(x.p.id) : 0) || x.s.group - y.s.group || y.s.move - x.s.move); // 4 candles : doji le plus récent d'abord (14h, puis 15-17h, 22h, 02h prennent la tête à leur clôture), puis ordre habituel
   let date = '';
   const wasMini = !!list.querySelector(':scope > .cd-mini'); // la liste affichée est encore celle des 4 bougies : sa position ne dit rien sur la paire
   const keep = candleMini || wasMini ? 0 : candleIndex(), keepId = candleMini ? null : (!wasMini && list.clientWidth ? candleCurId() : null) || candleLastId(), keepTop = candleMini ? list.scrollTop : 0, Wm = Math.max(300, Math.round(window.innerWidth));
@@ -3129,7 +3137,13 @@ async function candleLoad() {
 // Actualisation automatique (toutes les 20 s tant que CANDLE est ouvert) : met à jour bougies, sweep et compteurs EN PLACE,
 // sans toucher au carrousel, au zoom, au graphique TradingView ouvert ni à un geste en cours
 let candleAutoBusy = false;
+let candleMiniRankSig = '';
 function candleRefreshInPlace() {
+  if (candleMini && candlePoh) { // 4 candles : un doji vient d'apparaître / de changer de rang (clôture 14h, 15-17h, 22h, 02h) → la liste se réordonne toute seule
+    const sig = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id]).map((p) => p.id + ':' + candleDojiRank(p.id)).join();
+    if (candleMiniRankSig && sig !== candleMiniRankSig && !(cg.pts && cg.pts.size)) { candleMiniRankSig = sig; candleRender(); return; }
+    candleMiniRankSig = sig;
+  }
   document.querySelectorAll('#candleList > .cd-row').forEach((r) => {
     const id = r.dataset.id;
     if (cg.pts.size && cg.id === id) return; // geste en cours sur ce graphique
