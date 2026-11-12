@@ -2122,7 +2122,7 @@ function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bou
   h.busy = true;
   // 1 min / 5 min : après le 1er chargement complet (historique), on ne redemande que les bougies récentes (dernière = en formation)
   const since = (tf === '1' || tf === '5') && h.bars.length ? h.bars[h.bars.length - 1][0] : 0;
-  fetch(`https://ariinuiirgina.vercel.app/api/poh-candles?pair=${id}&tf=${tf}${since ? '&since=' + since : ''}`, { cache: 'no-store', signal: AbortSignal.timeout(20000) })
+  return fetch(`https://ariinuiirgina.vercel.app/api/poh-candles?pair=${id}&tf=${tf}${since ? '&since=' + since : ''}`, { cache: 'no-store', signal: AbortSignal.timeout(20000) })
     .then((r) => (r.ok ? r.json() : null))
     .then((j) => {
       if (j && j.bars && j.bars.length) h.bars = since ? h.bars.filter((b) => b[0] < since).concat(j.bars) : j.bars;
@@ -2183,12 +2183,41 @@ function candleFibLevels(dly) {
 const CANDLE_UP = '#00a3e0', CANDLE_DN = '#ffffff'; // couleurs des bougies comme TradingView (haussière bleue, baissière blanche)
 const CANDLE_G = { AX: 60, TOP: 44, BOT: 14, LEFT: 4 }; // géométrie du graphique (aussi utilisée par les gestes)
 if (candleClean) CANDLE_G.AX = 0;
-// Biais multi-timeframe : D1 = dernière clôture vs SMA 200 ; H4 = vs EMA 200 ; H1 = vs EMA 50 ET EMA 200 (▲ au-dessus des deux, ▼ en dessous des deux, 0 = mixte). 0 aussi = pas assez de bougies / pas encore chargées (chargement lancé en fond, redessin à l'arrivée)
-function candleBias(id) {
+// Biais multi-timeframe : D1 = dernière clôture vs SMA 200 ; H4 = vs EMA 200 ; H1 = vs EMA 50 ET EMA 200 (▲ au-dessus des deux, ▼ en dessous des deux, 0 = mixte). 0 aussi = pas assez de bougies / pas encore chargées.
+// load = true : les bougies manquantes sont chargées en fond (4 à la fois), puis graphique / filtre « Bias » remis à jour. Résultat mis en cache tant que les bougies ne changent pas.
+const CANDLE_BIAS_TFS = [['d', '1D', [200], false], ['h', '240', [200], true], ['u', '60', [50, 200], true]];
+const candleBiasQ = [], candleBiasQd = new Set(), candleBiasCache = {};
+let candleBiasRun = 0, candleBiasTimer = 0;
+function candleBiasLoad(id, tf) {
+  const k = id + '|' + tf;
+  if (candleBiasQd.has(k)) return;
+  candleBiasQd.add(k); candleBiasQ.push([id, tf]); candleBiasPump();
+}
+function candleBiasPump() {
+  while (candleBiasRun < 4 && candleBiasQ.length) {
+    const [id, tf] = candleBiasQ.shift(); candleBiasRun++;
+    Promise.resolve(candleHistEnsure(id, tf)).catch(() => {}).finally(() => { candleBiasRun--; candleBiasQd.delete(id + '|' + tf); candleBiasSync(); candleBiasPump(); });
+  }
+}
+function candleBiasSync() { // des bougies sont arrivées : compteur « Bias » à jour, et si le filtre est actif, paires retirées / ajoutées (regroupé : au plus un redessin par seconde)
+  clearTimeout(candleBiasTimer);
+  candleBiasTimer = setTimeout(() => {
+    if (!candlePoh) return;
+    candleFilterUpdate();
+    if (!candleF.bias || candleMini) return;
+    const want = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id] && candleInfo(p.id).bias).map((p) => p.id).sort().join(), have = [...candleSlides()].map((r) => r.dataset.id).sort().join();
+    if (want !== have) { candleRender(); candleNavUpdate(); }
+  }, 1000);
+}
+function candleBiasLoaded(id) { return CANDLE_BIAS_TFS.every(([, tf]) => { const h = candleHistData[id + '|' + tf]; return h && h.bars && h.bars.length; }); }
+function candleBias(id, load = true) {
   const out = {};
-  for (const [k, tf, ns, ema] of [['d', '1D', [200], false], ['h', '240', [200], true], ['u', '60', [50, 200], true]]) {
+  const sig = CANDLE_BIAS_TFS.map(([, tf]) => { const h = candleHistData[id + '|' + tf], b = h && h.bars; return b && b.length ? b.length + ':' + b[b.length - 1][4] : '0'; }).join('|');
+  const ca = candleBiasCache[id];
+  if (ca && ca.sig === sig && (!load || !sig.split('|').includes('0'))) return ca.out;
+  for (const [k, tf, ns, ema] of CANDLE_BIAS_TFS) {
     const h = candleHistData[id + '|' + tf];
-    if (!h || !h.bars || !h.bars.length) { if (!h || (!h.busy && Date.now() - h.at > 300000)) setTimeout(() => candleHistEnsure(id, tf), 0); out[k] = 0; continue; }
+    if (!h || !h.bars || !h.bars.length) { if (load && (!h || (!h.busy && Date.now() - h.at > 300000))) candleBiasLoad(id, tf); out[k] = 0; continue; }
     const b = h.bars, L = b.length;
     if (L < Math.max(...ns)) { out[k] = 0; continue; }
     const c = b[L - 1][4];
@@ -2201,6 +2230,7 @@ function candleBias(id) {
     }
     out[k] = up === ns.length ? 1 : dn === ns.length ? -1 : 0;
   }
+  candleBiasCache[id] = { sig, out };
   return out;
 }
 function candleSvg(day, dly, view, id) {
@@ -2345,7 +2375,7 @@ function candleSvg(day, dly, view, id) {
         else { const r = (b[0] - 36000) % hourStep; if (r === 0 || (r === 60 && !((older[0] - 36000) % hourStep === 0))) ticks.push({ x, w: 1, t: alerteTime(b[0]) }); }
       }
     }
-    if (is1D || candleHistTf === '240') { // moyennes mobiles : SMA 50 / 200 en daily, EMA 50 / 200 en H4 (rien sur les autres timeframes) ; calculées sur toutes les bougies chargées, tracées sur la fenêtre visible
+    if (is1D || candleHistTf === '240' || candleHistTf === '60') { // moyennes mobiles : SMA 50 / 200 en daily, EMA 50 / 200 en H4 (rien sur les autres timeframes) ; calculées sur toutes les bougies chargées, tracées sur la fenêtre visible
       const ema = !is1D, kind = ema ? 'EMA' : 'SMA', ps = new Float64Array(hist.length + 1);
       for (let q = 0; q < hist.length; q++) ps[q + 1] = ps[q] + hist[q][4];
       for (const [n, colM] of [[200, '#E040FB'], [50, '#FF9800']]) {
@@ -2502,7 +2532,8 @@ function candleSweep(dly, day) {
   return (lo ? '<span class="cd-sweep cd-sweep-lo">Sweep</span>' : '') + (hi ? '<span class="cd-sweep cd-sweep-hi">Sweep</span>' : '');
 }
 // Boutons Fibo / Sweep : affichent immédiatement les paires concernées (les deux actifs = les deux conditions)
-const candleF = { fibo: false, sweep: false, both: false, alert: false }; // both = Fibo ET Sweep (3e bouton « F+S ») ; alert = paires avec ligne bleue ou plan du tableau ALERTE (4e bouton)
+const candleF = { fibo: false, sweep: false, both: false, alert: false, bias: false }; // bias = paires dont le biais D1, H4 et H1 est aligné (5e bouton)
+// // both = Fibo ET Sweep (3e bouton « F+S ») ; alert = paires avec ligne bleue ou plan du tableau ALERTE (4e bouton)
 function candleHasAlert(id) { // ligne d'alerte de prix (bleue) OU plan (PTP/OCO) dans le tableau ALERTE
   if (candleAl.some((a) => a.pair === id)) return true;
   const f = alerteData && alerteData[id], q = f && f.pt;
@@ -2515,15 +2546,17 @@ function candleInfo(id) {
   const fl = candleFibLevels(dly), sc = day ? candleScale(dly, day) : null;
   const fibo = !!(fl && sc && fl.some((f) => f.v >= sc.lo && f.v <= sc.hi));
   const sweep = !!(day && candleSweep(dly, day));
-  return { fibo, sweep, both: fibo && sweep, alert: candleHasAlert(id) };
+  const bi = candleBias(id, false);
+  return { fibo, sweep, both: fibo && sweep, alert: candleHasAlert(id), bias: bi.d !== 0 && bi.d === bi.h && bi.h === bi.u };
 }
 function candleFilterUpdate() {
   const ids = CORR_ALL_PAIRS.filter((p) => candlePoh && candlePoh[p.id]).map((p) => p.id);
-  const n = { fibo: 0, sweep: 0, both: 0, alert: 0 };
-  for (const id of ids) { const i = candleInfo(id); if (i.fibo) n.fibo++; if (i.sweep) n.sweep++; if (i.both) n.both++; if (i.alert) n.alert++; }
+  const n = { fibo: 0, sweep: 0, both: 0, alert: 0, bias: 0 };
+  for (const id of ids) { const i = candleInfo(id); if (i.fibo) n.fibo++; if (i.sweep) n.sweep++; if (i.both) n.both++; if (i.alert) n.alert++; if (i.bias) n.bias++; }
+  const biasAll = ids.length && ids.every(candleBiasLoaded); // compteur « Bias » affiché seulement quand toutes les bougies sont chargées (sinon il serait faux)
   document.querySelectorAll('#candleStrip [data-f]').forEach((b) => {
     b.classList.toggle('on', candleF[b.dataset.f]);
-    b.textContent = `${{ fibo: 'Fibo', sweep: 'Sweep', both: 'F+S', alert: 'Alerts' }[b.dataset.f]} (${n[b.dataset.f]})`;
+    b.textContent = b.dataset.f === 'bias' && !biasAll ? 'Bias' : `${{ fibo: 'Fibo', sweep: 'Sweep', both: 'F+S', alert: 'Alerts', bias: 'Bias' }[b.dataset.f]} (${n[b.dataset.f]})`;
   });
 }
 // ===== Zoom / déplacement façon TradingView (pincer à deux doigts, glisser), enregistré par paire =====
@@ -2687,7 +2720,7 @@ function candleMiniSvg(day, W) { // 4 bougies d'origine : 14h, 15-17h, 22h, 02h 
 function candleRender() {
   const list = document.getElementById('candleList');
   if (!candlePoh) { list.innerHTML = '<div class="charts-intro">POH candles unavailable right now.</div>'; return; }
-  const rows = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id] && (!candleF.fibo || candleInfo(p.id).fibo) && (!candleF.sweep || candleInfo(p.id).sweep) && (!candleF.both || candleInfo(p.id).both) && (!candleF.alert || candleInfo(p.id).alert))
+  const rows = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id] && (!candleF.fibo || candleInfo(p.id).fibo) && (!candleF.sweep || candleInfo(p.id).sweep) && (!candleF.both || candleInfo(p.id).both) && (!candleF.alert || candleInfo(p.id).alert) && (!candleF.bias || candleInfo(p.id).bias))
     .map((p) => ({ p, s: chartsCandles ? chartsScore(p.id) : { group: 2, move: 0 } }))
     .sort((x, y) => x.s.group - y.s.group || y.s.move - x.s.move);
   let date = '';
@@ -2773,7 +2806,7 @@ function candleNamesRender() {
 function candleGoTo(id) {
   if (candleMini) { const r = [...candleSlides()].find((x) => x.dataset.id === id); if (r) r.scrollIntoView({ block: 'start', behavior: 'smooth' }); return; }
   let i = [...candleSlides()].findIndex((r) => r.dataset.id === id);
-  if (i < 0) { candleF.fibo = false; candleF.sweep = false; candleF.both = false; candleF.alert = false; candleSelected = null; candleRender(); i = [...candleSlides()].findIndex((r) => r.dataset.id === id); } // la paire est masquée par un filtre : on l'enlève
+  if (i < 0) { candleF.fibo = false; candleF.sweep = false; candleF.both = false; candleF.alert = false; candleF.bias = false; candleSelected = null; candleRender(); i = [...candleSlides()].findIndex((r) => r.dataset.id === id); } // la paire est masquée par un filtre : on l'enlève
   const l = document.getElementById('candleList');
   if (i >= 0) l.scrollTo({ left: i * l.clientWidth, behavior: 'smooth' });
 }
@@ -2809,7 +2842,7 @@ document.getElementById('candleStrip')?.addEventListener('click', (e) => {
   candleAlFocusKey = '';
   const was = candleF[b.dataset.f];
   candleF[b.dataset.f] = !was;
-  if (b.dataset.f === 'alert') { candleF.fibo = candleF.sweep = candleF.both = false; } else { candleF.alert = false; if (b.dataset.f === 'both') { candleF.fibo = false; candleF.sweep = false; } else candleF.both = false; } // « Alerts » est seul ; Fibo / Sweep / F+S l'annulent (et inversement) // « F+S » remplace Fibo+Sweep ; Fibo ou Sweep seul annule « F+S »
+  if (b.dataset.f === 'bias') { candleF.fibo = candleF.sweep = candleF.both = candleF.alert = false; if (candleF.bias) candlePoh && CORR_ALL_PAIRS.forEach((p) => { if (candlePoh[p.id]) candleBias(p.id, true); }); } else if (b.dataset.f === 'alert') { candleF.fibo = candleF.sweep = candleF.both = candleF.bias = false; } else { candleF.alert = false; candleF.bias = false; if (b.dataset.f === 'both') { candleF.fibo = false; candleF.sweep = false; } else candleF.both = false; } // « Alerts » est seul ; Fibo / Sweep / F+S l'annulent (et inversement) // « F+S » remplace Fibo+Sweep ; Fibo ou Sweep seul annule « F+S »
   candleSelected = null;
   if (candlePoh) candleRender();
   document.getElementById('candleList').scrollLeft = 0;
@@ -3330,7 +3363,7 @@ async function alerteFocus(id, t, keep, px) { // keep = on garde le filtre « Al
     try { localStorage.setItem('candleHistTf', '1'); } catch (e) { /* pas de stockage */ }
     if (window.candleHistSync) window.candleHistSync();
     for (let k = 0; k < 40 && !(candlePoh && candleDays[id]); k++) await wait(250); // attente du chargement des POH
-    if (!keep) { candleF.fibo = candleF.sweep = candleF.both = candleF.alert = false; candleSelected = null; }
+    if (!keep) { candleF.fibo = candleF.sweep = candleF.both = candleF.alert = candleF.bias = false; candleSelected = null; }
     candleFocusMark = t ? { id, t } : null;
     if (!keep || !was1) {
       candleRender();
