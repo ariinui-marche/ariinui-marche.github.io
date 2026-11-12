@@ -2725,13 +2725,15 @@ function candleNamesRender() {
   if (!box) return;
   document.querySelectorAll('#candleStrip [data-d]').forEach((b) => b.setAttribute('aria-expanded', String(candleNamesOpen === b.dataset.d)));
   if (!candleNamesOpen) { box.hidden = true; return; }
-  const ids = CORR_ALL_PAIRS.filter((p) => candlePoh && candlePoh[p.id])
+  const curId = candleCurId();
+  const ids = candleNamesOpen === 'all' ? [...candleSlides()].map((r) => CORR_ALL_PAIRS.find((p) => p.id === r.dataset.id)).filter(Boolean) : CORR_ALL_PAIRS.filter((p) => candlePoh && candlePoh[p.id])
     .map((p) => ({ p, s: chartsCandles ? chartsScore(p.id) : { group: 2, move: 0 } }))
     .sort((x, y) => x.s.group - y.s.group || y.s.move - x.s.move)
     .map((x) => x.p).filter((p) => candleInfo(p.id)[candleNamesOpen]);
   box.innerHTML = ids.length ? ids.map((p) => {
     let cls = '';
     if (candleNamesOpen === 'sweep' || candleNamesOpen === 'both') { const h = candleSweep((candleDaily || {})[p.id], ((candlePoh[p.id] || []).filter((d) => Object.keys(d.c).length).slice(-1)[0])); cls = (h.includes('cd-sweep-lo') ? ' lo' : '') + (h.includes('cd-sweep-hi') ? ' hi' : ''); }
+    if (candleNamesOpen === 'all' && p.id === curId) cls += ' cur';
     return `<button type="button" class="cc-name${cls}" data-go="${p.id}">${p.label}</button>`;
   }).join('') : '<span class="cc-none">No pair</span>';
   box.hidden = false;
@@ -2751,6 +2753,13 @@ document.getElementById('candleStrip')?.addEventListener('click', (e) => {
   candleNamesOpen = candleNamesOpen === d.dataset.d ? null : d.dataset.d;
   candleNamesRender();
 });
+document.getElementById('candleCount')?.addEventListener('click', (e) => { // clic sur « 1 / 31 » : toutes les paires du carrousel, un clic sur un nom y mène
+  if (candleMini) return;
+  e.stopPropagation();
+  document.getElementById('candleSetMenu').hidden = true; document.getElementById('candleSet')?.setAttribute('aria-expanded', 'false');
+  candleNamesOpen = candleNamesOpen === 'all' ? null : 'all';
+  candleNamesRender();
+});
 document.getElementById('candleNames')?.addEventListener('click', (e) => {
   const g = e.target.closest('[data-go]');
   if (!g) return;
@@ -2759,7 +2768,7 @@ document.getElementById('candleNames')?.addEventListener('click', (e) => {
   candleGoTo(g.dataset.go);
 });
 document.addEventListener('click', (e) => { // un clic ailleurs referme la liste
-  if (candleNamesOpen && !e.target.closest('#candleNames') && !e.target.closest('#candleStrip [data-d]')) { candleNamesOpen = null; candleNamesRender(); }
+  if (candleNamesOpen && !e.target.closest('#candleNames') && !e.target.closest('#candleStrip [data-d]') && !e.target.closest('#candleCount')) { candleNamesOpen = null; candleNamesRender(); }
 });
 document.getElementById('candleStrip')?.addEventListener('click', (e) => {
   const b = e.target.closest('[data-f]');
