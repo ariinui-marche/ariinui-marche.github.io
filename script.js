@@ -2325,15 +2325,17 @@ function candleSvg(day, dly, view, id) {
         else { const r = (b[0] - 36000) % hourStep; if (r === 0 || (r === 60 && !((older[0] - 36000) % hourStep === 0))) ticks.push({ x, w: 1, t: alerteTime(b[0]) }); }
       }
     }
-    if (is1D) { // moyennes mobiles simples 50 et 200 jours, UNIQUEMENT en daily (calculées sur toutes les bougies chargées, tracées sur la fenêtre visible)
-      const ps = new Float64Array(hist.length + 1);
+    if (is1D || candleHistTf === '240') { // moyennes mobiles : SMA 50 / 200 en daily, EMA 50 / 200 en H4 (rien sur les autres timeframes) ; calculées sur toutes les bougies chargées, tracées sur la fenêtre visible
+      const ema = !is1D, kind = ema ? 'EMA' : 'SMA', ps = new Float64Array(hist.length + 1);
       for (let q = 0; q < hist.length; q++) ps[q + 1] = ps[q] + hist[q][4];
       for (const [n, colM] of [[200, '#E040FB'], [50, '#FF9800']]) {
+        let ev = null;
+        if (ema) { ev = new Float64Array(hist.length); const al = 2 / (n + 1); ev[0] = hist[0][4]; for (let q = 1; q < hist.length; q++) ev[q] = hist[q][4] * al + ev[q - 1] * (1 - al); }
         let pts = '';
-        for (let j = jMax; j >= jMin; j--) { const i0 = hist.length - 1 - j * sg; if (i0 < n - 1 || i0 >= hist.length) continue; pts += `${(edge - (j + 0.5) * hs).toFixed(1)},${y((ps[i0 + 1] - ps[i0 + 1 - n]) / n).toFixed(1)} `; }
-        if (pts) hb += `<polyline points="${pts.trim()}" fill="none" stroke="${colM}" stroke-width="1.6" stroke-linejoin="round" stroke-opacity=".95"/>`;
+        for (let j = jMax; j >= jMin; j--) { const i0 = hist.length - 1 - j * sg; if (i0 < n - 1 || i0 >= hist.length) continue; pts += `${(edge - (j + 0.5) * hs).toFixed(1)},${y(ema ? ev[i0] : (ps[i0 + 1] - ps[i0 + 1 - n]) / n).toFixed(1)} `; }
+        if (pts) hb += `<polyline points="${pts.trim()}" fill="none" stroke="${colM}" stroke-width="0.9" stroke-linejoin="round" stroke-opacity=".95"/>`;
       }
-      hb += `<text x="6" y="14" class="pc-ax" style="font-size:10px"><tspan fill="#FF9800">SMA 50</tspan><tspan fill="#E040FB" dx="10">SMA 200</tspan></text>`;
+      hb += `<text x="6" y="14" class="pc-ax" style="font-size:10px"><tspan fill="#FF9800">${kind} 50</tspan><tspan fill="#E040FB" dx="10">${kind} 200</tspan></text>`;
     }
     if (!is1D && futStart < xMax + 60) { // axe du temps du FUTUR (à droite des POH) : mêmes règles que l'historique, jours ouvrés seulement
       const nBar = (t) => Math.round(openSecs(tLast, t + barShift) / tfSec);
