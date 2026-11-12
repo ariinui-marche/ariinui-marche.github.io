@@ -2126,7 +2126,7 @@ function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bou
     .then((r) => (r.ok ? r.json() : null))
     .then((j) => {
       if (j && j.bars && j.bars.length) h.bars = since ? h.bars.filter((b) => b[0] < since).concat(j.bars) : j.bars;
-      if ((tf === candleHistTf || rp.on || ((candlePlans || candleZones) && tf === '1' && candleHistTf === '5')) && !(cg.mode)) candleRedraw(id, candleViewOf(id));
+      if ((tf === candleHistTf || tf === '1D' || tf === '240' || rp.on || ((candlePlans || candleZones) && tf === '1' && candleHistTf === '5')) && !(cg.mode)) candleRedraw(id, candleViewOf(id));
       if (!since && tf === '1' && id === 'EURUSD' && h.bars.length && !h.deep) candleDeepLoad(id, h); // TEST : jusqu'à 250 000 barres 1 min MT5
     })
     .catch(() => { /* on garde ce qui est affiché */ })
@@ -2183,6 +2183,21 @@ function candleFibLevels(dly) {
 const CANDLE_UP = '#00a3e0', CANDLE_DN = '#ffffff'; // couleurs des bougies comme TradingView (haussière bleue, baissière blanche)
 const CANDLE_G = { AX: 60, TOP: 44, BOT: 14, LEFT: 4 }; // géométrie du graphique (aussi utilisée par les gestes)
 if (candleClean) CANDLE_G.AX = 0;
+// Biais multi-timeframe : prix (dernière clôture) au-dessus (+1) ou en dessous (-1) de la SMA 200 daily et de l'EMA 200 H4 ; 0 = pas assez de bougies / pas encore chargées (chargement lancé en fond, redessin à l'arrivée)
+function candleBias(id) {
+  const out = {};
+  for (const [k, tf, n, ema] of [['d', '1D', 200, false], ['h', '240', 200, true]]) {
+    const h = candleHistData[id + '|' + tf];
+    if (!h || !h.bars || !h.bars.length) { if (!h || (!h.busy && Date.now() - h.at > 300000)) setTimeout(() => candleHistEnsure(id, tf), 0); out[k] = 0; continue; }
+    const b = h.bars, L = b.length;
+    if (L < n) { out[k] = 0; continue; }
+    let m;
+    if (ema) { const al = 2 / (n + 1); m = b[0][4]; for (let q = 1; q < L; q++) m = b[q][4] * al + m * (1 - al); }
+    else { m = 0; for (let q = L - n; q < L; q++) m += b[q][4]; m /= n; }
+    out[k] = b[L - 1][4] >= m ? 1 : -1;
+  }
+  return out;
+}
 function candleSvg(day, dly, view, id) {
   const rpx = candleRpPoh(id); // replay : POH / daily calculés à la position du replay
   if (rpx) { day = rpx.day; dly = rpx.dly; }
@@ -2462,7 +2477,7 @@ function candleSvg(day, dly, view, id) {
   const tag = `<line x1="0" x2="${W - AX}" y1="${yl.toFixed(1)}" y2="${yl.toFixed(1)}" stroke="${lastCol}" stroke-width="0.7" stroke-dasharray="2 3"/>` +
     `<rect x="${W - AX + 1}" y="${(yl - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
     `<text x="${W - AX + 6}" y="${(yl + 4).toFixed(1)}" class="pc-ax" style="fill:#fff">${fmt(lastC)}</text>`;
-  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${RP ? '' : grid}<g clip-path="url(#pcClip)">${sepSvg}${zoneSvg}${hb}${fib}${pd}${body}${evb}${RP ? candleRpOverlay(y, W - AX, fmt, lo, hi, lastC) : candleAlSvg(id, y, W - AX, lo, hi, fmt)}</g>${RP ? '' : axl}${RP ? '' : tag}${!RP && candleXh && candleXh.id === id ? candleXhSvg(candleXh, W, H, AX, TOP, BOT, lo, rng, fmt, xhT) : ''}</svg>`;
+  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${RP ? '' : grid}<g clip-path="url(#pcClip)">${sepSvg}${zoneSvg}${hb}${fib}${pd}${body}${evb}${RP ? candleRpOverlay(y, W - AX, fmt, lo, hi, lastC) : candleAlSvg(id, y, W - AX, lo, hi, fmt)}</g>${RP || !id ? '' : (() => { const bi = candleBias(id), c = (v) => (v > 0 ? '#089981' : v < 0 ? '#f23645' : '#787b86'), g = (v) => (v > 0 ? '▲' : v < 0 ? '▼' : '—'); return `<text x="${W - AX - 6}" y="14" text-anchor="end" class="pc-ax" style="font-size:10px"><tspan fill="#d1d4dc">BIAS</tspan><tspan fill="${c(bi.d)}" dx="6">D1 ${g(bi.d)}</tspan><tspan fill="${c(bi.h)}" dx="6">H4 ${g(bi.h)}</tspan></text>`; })()}${RP ? '' : axl}${RP ? '' : tag}${!RP && candleXh && candleXh.id === id ? candleXhSvg(candleXh, W, H, AX, TOP, BOT, lo, rng, fmt, xhT) : ''}</svg>`;
 }
 
 // Sweep de la bougie daily précédente (même règle qu'Arii SNIPER) : D0 dépasse le haut de D1 et clôture dessous, ou casse son bas et clôture dessus
