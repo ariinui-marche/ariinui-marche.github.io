@@ -174,6 +174,7 @@ function run(bars, digits, opts) {
   const { tfMin, slPips, fvgMinPips, minRiskPips, d1, h4, w1, mn1, trace, m1, atr1, swInval, ifvgLog } = o_;
   const pip = pipOf(digits);
   const swWin = o_.swWinBase * (tfMin === 1 ? 5 : 1);
+  const KZNAME = { 1: 'Asia', 2: 'London', 3: 'NY AM', 4: 'NY Lunch' };
   const kzs = { 1: new KZ(1), 2: new KZ(2), 3: new KZ(3), 4: new KZ(4) };
   const kzList = [kzs[1], kzs[2], kzs[3], kzs[4]];
   let ddKey = null, ddH = null, ddL = null, pdh = null, pdl = null;
@@ -335,7 +336,7 @@ function run(bars, digits, opts) {
     if (eLo) { sxBar = i; sxDir = 1; }
     prev.psh = psh; prev.dsh = dsh; prev.hsh = hsh; prev.psl = psl; prev.dsl = dsl; prev.hsl = hsl;
     // ---------- mode 5 min
-    let pzHit5 = null;
+    let pzHit5 = null, pzSrc = '';
     const lvs = [];
     if (bHi !== null && bLo !== null) {
       const rg_ = bHi - bLo;
@@ -365,14 +366,14 @@ function run(bars, digits, opts) {
           const [qT, qO, qH, qL, qC] = m1[gx];
           const [d1_, t1_, b1_, p1_, u1_, v1_] = pz1.step(qO, qH, qL, qC, 150, atr);
           if (p1_ !== 0) zz.push([u1_, v1_, 5 * p1_, i]);
-          if (d1_ !== 0 && d1_ === sxDir && pzHit5 === null) pzHit5 = [t1_, b1_];
-          if (p1_ !== 0 && p1_ === sxDir && pzHit5 === null) pzHit5 = [u1_, v1_];
+          if (d1_ !== 0 && d1_ === sxDir && pzHit5 === null) { pzHit5 = [t1_, b1_]; pzSrc = '1m IFVG'; }
+          if (p1_ !== 0 && p1_ === sxDir && pzHit5 === null) { pzHit5 = [u1_, v1_]; pzSrc = '1m BPR'; }
           const qK = fdiv(qT, 180);
           if (k3 !== null && qK !== k3) {
             const [d3_, t3_, b3_, p3_, u3_, v3_] = pz3.step(o3, h3, l3, c3, 50, atr);
             if (p3_ !== 0) zz.push([u3_, v3_, 6 * p3_, i]);
-            if (d3_ !== 0 && d3_ === sxDir && pzHit5 === null) pzHit5 = [t3_, b3_];
-            if (p3_ !== 0 && p3_ === sxDir && pzHit5 === null) pzHit5 = [u3_, v3_];
+            if (d3_ !== 0 && d3_ === sxDir && pzHit5 === null) { pzHit5 = [t3_, b3_]; pzSrc = '3m IFVG'; }
+            if (p3_ !== 0 && p3_ === sxDir && pzHit5 === null) { pzHit5 = [u3_, v3_]; pzSrc = '3m BPR'; }
           }
           if (k3 === null || qK !== k3) { k3 = qK; o3 = qO; h3 = qH; l3 = qL; c3 = qC; }
           else { h3 = Math.max(h3, qH); l3 = Math.min(l3, qL); c3 = qC; }
@@ -380,7 +381,7 @@ function run(bars, digits, opts) {
       }
     }
 
-    const attempt = (isl, midx, entry, midH, midT, kind, left) => {
+    const attempt = (isl, midx, entry, midH, midT, kind, left, info) => {
       plUsed.push(left);
       if (plUsed.length > 60) plUsed.shift();
       const stop = isl ? midx - slPips * pip : midx + slPips * pip;
@@ -412,7 +413,7 @@ function run(bars, digits, opts) {
           act.mfav = act.lg ? Math.max(act.mfav, h) : Math.min(act.mfav, l);
           fl.push(act);
         }
-        act = { lg: isl, e: entry, s: stop, mfav: entry, t: midT, i, sid, vis: false, end: null, dx, kind };
+        act = { lg: isl, e: entry, s: stop, mfav: entry, t: midT, i, sid, vis: false, end: null, dx, kind, info: Object.assign({ sw: swNm, swAge: swBar !== null ? i - swBar : null }, info || {}) };   // info : confluences (affichage seulement)
         plans.push(act);
         created = true;
         return true;
@@ -428,18 +429,19 @@ function run(bars, digits, opts) {
       const bull = l > b2[2], bear = h < b2[3];
       if (bull || bear) {
         const top = bull ? l : b2[3]; const bot = bull ? b2[2] : h;
-        const lv = [];
+        const lv = [], lvn = [];
         if (bHi !== null && bLo !== null) {
           const rg = bHi - bLo;
-          lv.push(bHi, bLo, (bHi + bLo) / 2);
-          for (let kk = 1; kk <= 10; kk++) lv.push(bHi + kk * 0.5 * rg, bLo - kk * 0.5 * rg);
+          lv.push(bHi, bLo, (bHi + bLo) / 2); lvn.push('14H box high', '14H box low', '14H box 50%');
+          for (let kk = 1; kk <= 10; kk++) { lv.push(bHi + kk * 0.5 * rg, bLo - kk * 0.5 * rg); lvn.push('14H high +' + (kk * 0.5) + 'R', '14H low -' + (kk * 0.5) + 'R'); }
         }
-        for (const kz of kzList) for (const [a_, b_] of kz.lines) lv.push(a_, b_);
-        if (pdh !== null && pdl !== null) lv.push(pdh, pdl);
+        for (const kz of kzList) kz.lines.forEach(([a_, b_], q) => { lv.push(a_, b_); const nm = KZNAME[kz.k] + (q === 0 ? '' : ' (-' + q + ')'); lvn.push(nm + ' high', nm + ' low'); });
+        if (pdh !== null && pdl !== null) { lv.push(pdh, pdl); lvn.push('PDH', 'PDL'); }
         let hit = lv.some((v) => bot <= v && v <= top);
+        const lvHit = []; lv.forEach((v, q) => { if (bot <= v && v <= top && lvHit.length < 3) lvHit.push(lvn[q]); });
         if (hit && (b1[2] - b1[3]) < fvgMinPips * pip) hit = false;
         if (hit) {
-          let dom = true;
+          let dom = true; const conf = [];
           if (mode5) {
             const fl_ = i - 2;
             const ov = (a_, b_) => a_ <= top && b_ >= bot;
@@ -455,10 +457,12 @@ function run(bars, digits, opts) {
             const ex_ = bull ? Math.min(l, bars[i - 1][3], b2[3]) : Math.max(h, bars[i - 1][2], b2[2]);
             const d5c = bprs.some((g) => (g.ot >= bot && g.obt <= top) || (ex_ <= g.ot && ex_ >= g.obt));
             dom = d1c || zhas(0) || zhas(bull ? 1 : -1) || d4c || d5c || zhas(bull ? 5 : -5) || zhas(bull ? 6 : -6);
+            if (d1c) conf.push('1m FVG on a level'); if (zhas(0)) conf.push('1m BPR'); if (zhas(bull ? 1 : -1)) conf.push('1m red IFVG');
+            if (d4c) conf.push('Red IFVG (14H box)'); if (d5c) conf.push('5m BPR'); if (zhas(bull ? 5 : -5)) conf.push('1m BPR (sweep)'); if (zhas(bull ? 6 : -6)) conf.push('3m BPR');
           }
           if (dom) {
             cand = true;
-            attempt(bull, bull ? b1[3] : b1[2], b1[4], hourLoc(b1[0]), b1[0], 'fvg', i - 2);
+            attempt(bull, bull ? b1[3] : b1[2], b1[4], hourLoc(b1[0]), b1[0], 'fvg', i - 2, { levels: lvHit, conf, gap: [bot, top] });
           } else {
             plUsed.push(i - 2);
             if (plUsed.length > 60) plUsed.shift();
@@ -474,7 +478,7 @@ function run(bars, digits, opts) {
       if (!plUsed.includes(lf) && 0 <= i - lf - 1 && i - lf - 1 <= 1400) {
         via = true;
         const mb = bars[lf + 1];
-        attempt(rdLast.ib, rdLast.ib ? mb[3] : mb[2], mb[4], hourLoc(mb[0]), mb[0], 'rouge', lf);
+        attempt(rdLast.ib, rdLast.ib ? mb[3] : mb[2], mb[4], hourLoc(mb[0]), mb[0], 'rouge', lf, { conf: ['Red IFVG (14H box)'] });
       }
     }
     // ---------- plan sweep + IFVG / BPR (pz_via)
@@ -484,7 +488,7 @@ function run(bars, digits, opts) {
       if (pz !== null) {
         const rg = (bHi !== null && bLo !== null) ? (bHi - bLo) : null;
         if (rg === null || (rg > 0 && pz[2] >= bLo - 5 * rg && pz[3] <= bHi + 5 * rg)) {
-          if (attempt(sxDir === 1, sxDir === 1 ? l : h, c, hl, t, 'pz', i - 1)) sxUsed = sxBar;
+          if (attempt(sxDir === 1, sxDir === 1 ? l : h, c, hl, t, 'pz', i - 1, { conf: [mode5 && pzHit5 !== null ? pzSrc : (pz[0] === 1 ? 'IFVG' : 'BPR')], zone: [pz[3], pz[2]] })) sxUsed = sxBar;
         }
       }
     }

@@ -1974,6 +1974,7 @@ const candleHistData = {}; // 'PAIR|tf' -> { bars: [[t,o,h,l,c]...], at, busy }
 // ===== Plans Arii CDX SW sur CANDLE (graphiques 1 min / 5 min) : moteur cdx-engine.js, identique au moteur Python de référence =====
 let candlePlans = true; // roue > « Plans » (enregistré)
 try { candlePlans = localStorage.getItem('candlePlans') !== '0'; } catch (e) { /* pas de stockage */ }
+const candlePlanHits = {}; // paire -> [{ x0, x1, y0, y1, p }] zones cliquables des plans (infobulle au clic)
 const candlePlanCache = {}; // 'PAIR|tf' -> { key, plans: [{ ts, te, lg, e, s, pic, vis, sid, kind }] }
 const CANDLE_PLAN_SESS = { 0: '#787b86', 1: '#2962ff', 2: '#f23645', 3: '#089981', 4: '#f5b642' }; // hors session, Asia, London, NY AM, NY Lunch
 function candlePlansGet(id, tf, bars) { // plans du moteur sur les barres de la paire (mis en cache tant que les barres ne changent pas)
@@ -1991,7 +1992,7 @@ function candlePlansGet(id, tf, bars) { // plans du moteur sur les barres de la 
     const px = lb[4], digits = px >= 1000 ? 2 : px >= 20 ? 3 : 5;
     const out = CDX.run(bs, digits, Object.assign({ tfMin: +tf, m1, atr1: m1 ? CDX.atrSeries(m1) : null }, CDX.brokerKeys));
     const tMin = t0 + 7 * 86400; // les 7 premiers jours de la fenêtre servent à chauffer le moteur (niveaux de session, sweeps)
-    plans = out.filter((p) => (p.vis || p.end === null) && p.t >= tMin).map((p) => ({ ts: bs[p.i][0], te: p.ie !== undefined ? bs[p.ie][0] : null, lg: p.lg, e: p.e, s: p.s, pic: p.pic, vis: p.vis, sid: p.sid, kind: p.kind }));
+    plans = out.filter((p) => (p.vis || p.end === null) && p.t >= tMin).map((p) => ({ ts: bs[p.i][0], te: p.ie !== undefined ? bs[p.ie][0] : null, lg: p.lg, e: p.e, s: p.s, pic: p.pic, vis: p.vis, sid: p.sid, kind: p.kind, end: p.end, info: p.info || {}, pips: Math.abs(p.e - p.s) / CDX.pipOf(digits), dec: digits === 2 ? 2 : digits === 3 ? 3 : 5, tf }));
   } catch (err) { plans = []; }
   candlePlanCache[ck] = { key, plans };
   return plans;
@@ -2318,6 +2319,7 @@ function candleSvg(day, dly, view, id) {
         }
       }
     }
+    candlePlanHits[id] = [];
     if (!RP && !is1D && (candleHistTf === '1' || candleHistTf === '5')) { // plans Arii CDX SW : boîte de risque (entrée -> stop) + boîte de gain jusqu'au pic en R, couleur de la session
       const pls = candlePlansGet(id, candleHistTf, hist);
       if (pls && pls.length) {
@@ -2331,6 +2333,7 @@ function candleSvg(day, dly, view, id) {
           const tgt = p.vis ? p.e + (p.lg ? 1 : -1) * R * Math.min(p.pic, 4) : p.e, yT = y(tgt);
           if (Math.max(yE, yS, yT) < TOP - 40 || Math.min(yE, yS, yT) > H) continue;
           const sc = CANDLE_PLAN_SESS[p.sid] || CANDLE_PLAN_SESS[0];
+          candlePlanHits[id].push({ x0, x1: x0 + w, y0: Math.min(yE, yS, yT), y1: Math.max(yE, yS, yT), p });
           ps += `<rect x="${x0.toFixed(1)}" y="${Math.min(yE, yS).toFixed(1)}" width="${w.toFixed(1)}" height="${Math.max(1, Math.abs(yS - yE)).toFixed(1)}" fill="#f23645" fill-opacity=".16"/>` +
             (p.vis ? `<rect x="${x0.toFixed(1)}" y="${Math.min(yE, yT).toFixed(1)}" width="${w.toFixed(1)}" height="${Math.max(1, Math.abs(yT - yE)).toFixed(1)}" fill="#089981" fill-opacity=".28"/>` : '') +
             `<line x1="${x0.toFixed(1)}" x2="${(x0 + w).toFixed(1)}" y1="${yE.toFixed(1)}" y2="${yE.toFixed(1)}" stroke="#d1d4dc" stroke-width="1"/>` +
@@ -3037,8 +3040,36 @@ document.getElementById('candleList').addEventListener('click', (e) => {
   if (!ch || candleHistTf === '0' || candleHistTf === '1D') return;
   const rc = ch.getBoundingClientRect(), px = e.clientX - rc.left, py = e.clientY - rc.top;
   const hit = (candleEvHits[ch.dataset.pair] || []).slice().reverse().find((h) => Math.hypot(h.x - px, h.y - py) <= h.r + 6); // la pastille du dessus d'abord
-  if (hit) candleEvOpen(hit.list);
+  if (hit) { candleEvOpen(hit.list); return; }
+  const ph = (candlePlanHits[ch.dataset.pair] || []).slice().reverse().find((h) => px >= h.x0 - 3 && px <= h.x1 + 3 && py >= h.y0 - 3 && py <= h.y1 + 3); // plan Arii CDX SW sous le doigt
+  if (ph) candlePlanOpen(ph.p);
 });
+function candlePlanOpen(p) { // infobulle d'un plan : prix, résultat, sweep, niveaux et confluences (même panneau du bas que les news)
+  candleEvClose();
+  const body = document.getElementById('candleBody');
+  if (!body || !p) return;
+  const esc = (t) => String(t).replace(/[&<>"]/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m])), pad = (n) => String(n).padStart(2, '0');
+  const dt = (t) => { const d = new Date((t - 36000) * 1000); return `${pad(d.getUTCDate())} ${CANDLE_MON[d.getUTCMonth()]} '${String(d.getUTCFullYear()).slice(2)} ${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}`; };
+  const row = (k, v, cls) => `<div class="ce-r"><span>${k}</span><b${cls ? ` class="${cls}"` : ''}>${v}</b></div>`;
+  const SESSN = { 0: 'Off session', 1: 'Asia', 2: 'London', 3: 'NY AM', 4: 'NY Lunch' }, KIND = { fvg: 'Yellow FVG on a level', rouge: 'Red IFVG', pz: 'Sweep + IFVG / BPR' };
+  const inf = p.info || {}, tfm = +p.tf || 1, f = (v) => v.toFixed(p.dec);
+  const res = p.end === null ? 'Active' : p.end === 'stop' ? 'Stopped ' + alerteTime(p.te) : p.end === '07h' ? 'Closed at 07h' : 'Opposite plan ' + alerteTime(p.te);
+  const swTxt = inf.sw ? `${esc(inf.sw)}${inf.swAge !== null && inf.swAge !== undefined ? ' · ' + inf.swAge * tfm + ' min before' : ''}` : '—';
+  const rows = row('Entry', f(p.e)) + row('Stop', `${f(p.s)} <small>(${p.pips.toFixed(1)} pips)</small>`, 'ce-neg') +
+    row('Peak', p.vis ? Math.min(p.pic, 99).toFixed(1) + 'R' : '< 0.5R', p.vis ? 'ce-pos' : 'ce-neu') + row('Result', res) + row('Sweep', swTxt) +
+    (inf.levels && inf.levels.length ? row('Level', inf.levels.map(esc).join(' · ')) : '') +
+    row('Confluence', inf.conf && inf.conf.length ? inf.conf.map(esc).join(' · ') : '—') + row('Chart', tfm + 'm');
+  const wrap = document.createElement('div');
+  wrap.id = 'candleEvSheet';
+  wrap.innerHTML = `<div class="ce-scrim"></div><div class="ce-sheet" role="dialog"><div class="ce-ev"><div class="ce-t">${p.lg ? 'BUY' : 'SELL'} · ${KIND[p.kind] || esc(p.kind)}</div><div class="ce-d">${dt(p.ts)} · ${SESSN[p.sid] || ''}</div>${rows}</div></div>`;
+  body.appendChild(wrap);
+  const sheet = wrap.querySelector('.ce-sheet');
+  wrap.querySelector('.ce-scrim').addEventListener('click', candleEvClose);
+  let y0 = null, dy = 0; // glisser vers le bas = fermer
+  sheet.addEventListener('touchstart', (ev) => { y0 = sheet.scrollTop <= 0 ? ev.touches[0].clientY : null; dy = 0; }, { passive: true });
+  sheet.addEventListener('touchmove', (ev) => { if (y0 === null) return; dy = ev.touches[0].clientY - y0; if (dy > 0) sheet.style.transform = `translateY(${dy}px)`; }, { passive: true });
+  sheet.addEventListener('touchend', () => { if (dy > 70) candleEvClose(); else sheet.style.transform = ''; y0 = null; });
+}
 // Panneau du bas façon TradingView : toutes les news de la pastille (nom, date/heure UTC-10, Actual / Forecast / Previous)
 function candleEvOpen(list) {
   candleEvClose();
