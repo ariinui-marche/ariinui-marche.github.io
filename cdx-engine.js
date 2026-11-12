@@ -279,7 +279,7 @@ function run(bars, digits, opts) {
           const ot = Math.min(tt, r.top), ob = Math.max(bb, r.bot);
           if (!r.used && i - r.cb <= 10 && ot - ob > atr * 0.1) {
             r.used = true;
-            const bo = { bull: newBull, ct: ot, cb: ob, ot: ot, obt: ob, left: Math.min(i - 2, r.cb - 2), mit: false };
+            const bo = { bull: newBull, ct: ot, cb: ob, ot: ot, obt: ob, left: Math.min(i - 2, r.cb - 2), mit: false, cr: i };
             bprs.push(bo); keepLast(bprs, 5);
             events.push([2, newBull ? 1 : -1, ot, ob, i, bo]);
             break;
@@ -520,6 +520,7 @@ function run(bars, digits, opts) {
     const r = Math.abs(p.e - p.s);
     p.pic = r ? Math.abs(p.mfav - p.e) / r : 0.0;
   }
+  plans.zones = { ifv, bprs };   // IFVG / BPR encore valides a la fin (affichage seulement ; indices de barres)
   return plans;
 }
 
@@ -551,7 +552,7 @@ function atrSeries(bars) {
   return out;
 }
 
-const API = { run, usDst, brokerKeys, atrSeries, pipOf, hourLoc };
+const API = { run, usDst, brokerKeys, atrSeries, pipOf, hourLoc, sidOf };
 if (typeof module !== 'undefined' && module.exports) module.exports = API;
 else if (typeof window !== 'undefined') window.CDX = API;
 })();
