@@ -2334,10 +2334,10 @@ function candleSvg(day, dly, view, id) {
           if (Math.max(yE, yS, yT) < TOP - 40 || Math.min(yE, yS, yT) > H) continue;
           const sc = CANDLE_PLAN_SESS[p.sid] || CANDLE_PLAN_SESS[0];
           candlePlanHits[id].push({ x0, x1: x0 + w, y0: Math.min(yE, yS, yT), y1: Math.max(yE, yS, yT), p });
-          ps += `<rect x="${x0.toFixed(1)}" y="${Math.min(yE, yS).toFixed(1)}" width="${w.toFixed(1)}" height="${Math.max(1, Math.abs(yS - yE)).toFixed(1)}" fill="#f23645" fill-opacity=".16"/>` +
-            (p.vis ? `<rect x="${x0.toFixed(1)}" y="${Math.min(yE, yT).toFixed(1)}" width="${w.toFixed(1)}" height="${Math.max(1, Math.abs(yT - yE)).toFixed(1)}" fill="#089981" fill-opacity=".28"/>` : '') +
+          ps += `<rect x="${x0.toFixed(1)}" y="${Math.min(yE, yS).toFixed(1)}" width="${w.toFixed(1)}" height="${Math.max(1, Math.abs(yS - yE)).toFixed(1)}" fill="${sc}" fill-opacity=".14"/>` +
+            (p.vis ? `<rect x="${x0.toFixed(1)}" y="${Math.min(yE, yT).toFixed(1)}" width="${w.toFixed(1)}" height="${Math.max(1, Math.abs(yT - yE)).toFixed(1)}" fill="${sc}" fill-opacity=".42"/>` : '') +
             `<line x1="${x0.toFixed(1)}" x2="${(x0 + w).toFixed(1)}" y1="${yE.toFixed(1)}" y2="${yE.toFixed(1)}" stroke="#d1d4dc" stroke-width="1"/>` +
-            `<line x1="${x0.toFixed(1)}" x2="${(x0 + w).toFixed(1)}" y1="${yS.toFixed(1)}" y2="${yS.toFixed(1)}" stroke="#f23645" stroke-width="1" stroke-dasharray="3 3"/>` +
+            `<line x1="${x0.toFixed(1)}" x2="${(x0 + w).toFixed(1)}" y1="${yS.toFixed(1)}" y2="${yS.toFixed(1)}" stroke="${sc}" stroke-width="1" stroke-dasharray="3 3"/>` +
             (w >= 46 ? `<text x="${(x0 + 4).toFixed(1)}" y="${(Math.min(yE, yS, yT) - 3).toFixed(1)}" style="fill:${sc === '#2962ff' ? '#6c8cff' : sc};font-size:10px;font-weight:700;pointer-events:none">${p.lg ? 'BUY' : 'SELL'}${p.vis ? ' ' + Math.min(p.pic, 99).toFixed(1) + 'R' : ''}</text>` : '');
         }
         hb += ps;
