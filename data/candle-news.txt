@@ -318,5 +318,6 @@
 1796909400	USD	Inflation Rate YoY		3.9%	3.7%
 1796968800	GBP	GDP m/m			
 1796972400	GBP	GDP MoM			0.2%
+1797205800	JPY	Tankan Large Manufacturers Index			24
 1797337800	USD	Core PPI m/m			
 1797337800	USD	PPI m/m			
