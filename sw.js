@@ -1,4 +1,4 @@
-const CACHE = 'ariinui-marche-shell-v202';
+const CACHE = 'ariinui-marche-shell-v203';
 const SHELL_PATHS = [
   '/',
   '/index.html',
@@ -54,7 +54,7 @@ self.addEventListener('push', (event) => {
   event.waitUntil(self.registration.showNotification(d.title || 'Alerte', {
     body: d.body || '',
     tag: d.tag,
-    icon: '/icons/icon-192.png',
+    // pas d'`icon` : sinon Android affiche une 2e grande icône à droite et réduit la place du texte
     badge: '/icons/badge-96.png',
     vibrate: [300, 150, 300, 150, 600],
     requireInteraction: true, // reste affichée tant qu'on ne la ferme pas
