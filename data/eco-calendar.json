@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-13T15:28:51.379Z",
+  "timestamp": "2026-11-13T21:30:00.029Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -13130,7 +13130,7 @@
       "impact": "Low",
       "forecast": "65B",
       "previous": "77B",
-      "actual": ""
+      "actual": "61B"
     },
     {
       "title": "FOMC Member Bowman Speaks",
