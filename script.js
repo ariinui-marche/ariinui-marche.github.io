@@ -1959,6 +1959,11 @@ if ('serviceWorker' in navigator) {
 let candlePoh = null;
 let candleSelected = null;
 const CANDLE_SLOTS = [['12', '12h'], ['14', '14h'], ['15', '15h'], ['17', '17h'], ['22', '22h'], ['23', '23h'], ['02', '02h'], ['03', '03h'], ['07', '07h']];
+const CANDLE_SLOT_END = { '12': 2, '14': 3, '15': 5, '17': 10, '22': 11, '23': 14, '02': 15, '03': 19, '07': 24 }; // fin de chaque tranche POH, heure UTC+2 (14h UTC-10 = 02-03h UTC+2)
+function candleSlotClosed(dayStr, k) { // un doji n'existe qu'une fois la bougie CLÔTURÉE (jamais pendant sa formation)
+  const n = new Date(Date.now() + 7200 * 1000), today = n.toISOString().slice(0, 10);
+  return dayStr < today || (dayStr === today && n.getUTCHours() >= CANDLE_SLOT_END[k]);
+}
 let candleDaily = null; // { PAIR: [[t,o,h,l,c], ...4 derniers jours D3..D0] }
 // Historique 1 min / 5 min à gauche des POH (flèches ‹ › dans l'en-tête) : '0' = POH seuls (vue habituelle), '1' / '5' = bougies 1 min / 5 min
 let candleHistTf = '0';
@@ -2236,8 +2241,8 @@ function candleBias(id, load = true) {
 function candleSvg(day, dly, view, id) {
   const rpx = candleRpPoh(id); // replay : POH / daily calculés à la position du replay
   if (rpx) { day = rpx.day; dly = rpx.dly; }
-  const dd = (dly || []).slice(-4).map((b, i, a) => ({ lbl: 'D' + (a.length - 1 - i), dn: CANDLE_DAYFR[new Date((b[0] + 7200) * 1000).getUTCDay()], c: b.slice(1, 5) })); // dn : jour de la semaine en français (jour de trading UTC+2) affiché à la place de D3..D0
-  const cs = dd.concat([{ lbl: '', c: null }], CANDLE_SLOTS.map(([k, lbl]) => ({ lbl, c: day.c[k] })));
+  const dd = (dly || []).slice(-4).map((b, i, a) => ({ lbl: 'D' + (a.length - 1 - i), dn: CANDLE_DAYFR[new Date((b[0] + 7200) * 1000).getUTCDay()], c: b.slice(1, 5), ok: !!rpx || b[0] + 86400 <= Date.now() / 1000 })); // ok : bougie du jour clôturée (doji seulement alors) ; dn : jour de la semaine en français (jour de trading UTC+2) affiché à la place de D3..D0
+  const cs = dd.concat([{ lbl: '', c: null }], CANDLE_SLOTS.map(([k, lbl]) => ({ lbl, c: day.c[k], ok: !!rpx || candleSlotClosed(day.d, k) })));
   const vals = cs.filter((x) => x.c);
   if (!vals.length && !(id && rp.on && rp.id === id)) return '';
   const { W, H } = candleDims();
@@ -2282,7 +2287,7 @@ function candleSvg(day, dly, view, id) {
     return (vis && lf >= 3.5 ? `<text x="${cx.toFixed(1)}" y="${Math.min(H - 6 * lf / 11, Math.max(1.3 * lf, y(h) - 0.55 * lf)).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:${col};font-size:${lf.toFixed(1)}px">${x.dn || x.lbl}</text>` : '') +
       `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="0.9"/>` +
       `<rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}" stroke-width="0.9"/>` +
-      (vis && lf >= 3.5 && h > l && Math.abs(c - o) <= 0.1 * (h - l) ? `<text x="${cx.toFixed(1)}" y="${Math.min(H - 2, y(l) + 1.1 * lf).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:#d1d4dc;font-size:${(lf * 0.9).toFixed(1)}px">Doji</text>` : '');
+      (vis && x.ok && lf >= 3.5 && h > l && Math.abs(c - o) <= 0.1 * (h - l) ? `<text x="${cx.toFixed(1)}" y="${Math.min(H - 2, y(l) + 1.1 * lf).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:#d1d4dc;font-size:${(lf * 0.9).toFixed(1)}px">Doji</text>` : '');
   }).join('');
   const axT = []; // étiquettes des lignes : affichées DANS l'échelle de prix à droite (nom de la ligne à la place du prix), centrées sur la ligne
   let fib = '';
@@ -2701,7 +2706,7 @@ function candleOnMove() {
 const CANDLE_LAST_LS = 'candleLastPair'; // dernier symbole affiché : retrouvé à la réouverture (même après fermeture de l'appli)
 function candleLastId() { try { return localStorage.getItem(CANDLE_LAST_LS) || null; } catch (e) { return null; } }
 function candleMiniSvg(day, W) { // 4 bougies d'origine : 14h, 15-17h, 22h, 02h (UTC-10), même couleurs et même style que les POH
-  const H = 150, TOP = 22, cs = [['14', '14h'], ['15', '15-17h'], ['22', '22h'], ['02', '02h']].map(([k, l]) => ({ l, c: day.c[k] })), isDoji = (c) => !!c && c[1] > c[2] && Math.abs(c[3] - c[0]) <= 0.1 * (c[1] - c[2]), BOT = cs.some((x) => isDoji(x.c)) ? 22 : 8; // doji : corps <= 10 % de la hauteur, place réservée sous la mèche basse pour le libellé
+  const H = 150, TOP = 22, cs = [['14', '14h'], ['15', '15-17h'], ['22', '22h'], ['02', '02h']].map(([k, l]) => ({ l, c: day.c[k], ok: candleSlotClosed(day.d, k) })), isDoji = (x) => !!x.c && x.ok && x.c[1] > x.c[2] && Math.abs(x.c[3] - x.c[0]) <= 0.1 * (x.c[1] - x.c[2]), BOT = cs.some((x) => isDoji(x)) ? 22 : 8; // doji : corps <= 10 % de la hauteur, place réservée sous la mèche basse pour le libellé
   const vals = cs.filter((x) => x.c);
   if (!vals.length) return '';
   let hi = Math.max(...vals.map((x) => x.c[1])), lo = Math.min(...vals.map((x) => x.c[2]));
@@ -2714,7 +2719,7 @@ function candleMiniSvg(day, W) { // 4 bougies d'origine : 14h, 15-17h, 22h, 02h 
     return `<text x="${cx.toFixed(1)}" y="${Math.max(14, y(h) - 6).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:${col}">${x.l}</text>` +
       `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="0.9"/>` +
       `<rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}" stroke-width="0.9"/>` +
-      (isDoji(x.c) ? `<text x="${cx.toFixed(1)}" y="${(y(l) + 12).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:#d1d4dc;font-size:10px">Doji</text>` : '');
+      (isDoji(x) ? `<text x="${cx.toFixed(1)}" y="${(y(l) + 12).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:#d1d4dc;font-size:10px">Doji</text>` : '');
   }).join('') + '</svg>';
 }
 // Vue 4 candles : rang du doji le plus récent de la journée (14h = 0, 15-17h = 1, 22h = 2, 02h = 3 ; -1 = aucun doji). Les paires au doji le plus récent passent en tête de liste.
@@ -2722,7 +2727,7 @@ function candleDojiRank(id) {
   const days = ((candlePoh || {})[id] || []).filter((d) => Object.keys(d.c).length), day = days[days.length - 1];
   if (!day) return -1;
   let r = -1;
-  ['14', '15', '22', '02'].forEach((k, i) => { const c = day.c[k]; if (c && c[1] > c[2] && Math.abs(c[3] - c[0]) <= 0.1 * (c[1] - c[2])) r = i; });
+  ['14', '15', '22', '02'].forEach((k, i) => { const c = day.c[k]; if (c && candleSlotClosed(day.d, k) && c[1] > c[2] && Math.abs(c[3] - c[0]) <= 0.1 * (c[1] - c[2])) r = i; });
   return r;
 }
 function candleRender() {
