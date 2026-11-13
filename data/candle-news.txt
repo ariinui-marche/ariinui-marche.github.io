@@ -1,8 +1,3 @@
-1790676000	EUR	German Buba President Nagel Speaks			
-1790679600	EUR	ECB President Lagarde Speaks			
-1790690400	USD	JOLTs Job Openings	7.19M	7.225M	7.335M
-1790694000	GBP	MPC Member Mann Speaks			
-1790694000	USD	FOMC Member Bowman Speaks			
 1790695800	GBP	MPC Member Taylor Speaks			
 1790700000	USD	FOMC Member Barr Speaks			
 1790701200	USD	FOMC Member Goolsbee Speaks			
@@ -229,7 +224,7 @@
 1794508200	USD	FOMC Member Schmid Speaks			
 1794511800	EUR	ECB President Lagarde Speaks			
 1794526200	USD	FOMC Member Williams Speaks			
-1794576600	USD	PPI MoM		0.4%	1.3%
+1794576600	USD	PPI MoM	0.3%	0.4%	1.4%
 1794579000	USD	FOMC Member Collins Speaks			
 1794580800	USD	FOMC Member Logan Speaks			
 1794585000	USD	FOMC Member Bowman Speaks			
@@ -243,15 +238,15 @@
 1794828600	CAD	Median CPI y/y			
 1794828600	CAD	Trimmed CPI y/y			
 1794835800	CAD	Core Inflation Rate MoM s.a			0.1%
-1794835800	CAD	Inflation Rate YoY			3.1%
+1794835800	CAD	Inflation Rate YoY		3.2%	3.1%
 1794873600	NZD	Inflation Expectations q/q			
-1794898800	GBP	Unemployment Rate			4.7%
+1794898800	GBP	Unemployment Rate		4.7%	4.7%
 1794922200	USD	Retail Sales MoM		0%	0.8%
 1794959400	JPY	Balance of Trade		-956B ¥	-556.5B ¥
 1794985200	GBP	Core Inflation Rate MoM			0.2%
-1794985200	GBP	Inflation Rate YoY			3.5%
-1795008600	USD	Housing Starts		1.23M	1.221M
-1795008600	USD	Building Permits Prel			1.4M
+1794985200	GBP	Inflation Rate YoY		3.7%	3.5%
+1795008600	USD	Housing Starts		1.277M	1.221M
+1795008600	USD	Building Permits Prel		1.378M	1.4M
 1795021200	USD	FOMC Meeting Minutes			
 1795041000	AUD	Employment Change			
 1795041000	AUD	Unemployment Rate			
@@ -318,5 +313,7 @@
 1796968800	GBP	GDP m/m			
 1796972400	GBP	GDP MoM			0.2%
 1797205800	JPY	Tankan Large Manufacturers Index			24
+1797255000	CAD	Core Inflation Rate MoM s.a			
+1797255000	CAD	Inflation Rate YoY			
 1797337800	USD	Core PPI m/m			
 1797337800	USD	PPI m/m			
