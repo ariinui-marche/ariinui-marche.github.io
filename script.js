@@ -3200,7 +3200,7 @@ function candleOpenPair(id, tries = 0) {
   candleGoTo(id);
 }
 if (navigator.serviceWorker) navigator.serviceWorker.addEventListener('message', (e) => { if (e.data && e.data.type === 'open-pair') candleOpenPair(e.data.pair); });
-try { const q = new URLSearchParams(location.search).get('pair'); if (q) { history.replaceState(null, '', location.pathname); candleOpenPair(q); } } catch (e) {}
+try { const q = new URLSearchParams(location.search).get('pair'); if (q) { history.replaceState(null, '', location.pathname); setTimeout(() => candleOpenPair(q), 0); } } catch (e) {}
 
 document.getElementById('candleViewReset')?.addEventListener('click', () => {
   const id = candleCurId();
