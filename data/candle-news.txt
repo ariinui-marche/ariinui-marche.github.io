@@ -1,6 +1,3 @@
-1790731800	AUD	CPI m/m	0.4%	0.5%	1.0%
-1790731800	AUD	CPI y/y	4.0%	4.1%	3.5%
-1790731800	AUD	Trimmed Mean CPI m/m	0.2%	0.3%	0.5%
 1790771400	USD	Personal Spending MoM	0.9%	0.8%	0.2%
 1790771400	USD	Core PCE Price Index MoM	0.3%	0.3%	0.1%
 1790771400	USD	Personal Income MoM	0.3%	0.4%	0.3%
