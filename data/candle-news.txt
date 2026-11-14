@@ -297,7 +297,7 @@
 1796905800	USD	CPI m/m			
 1796905800	USD	CPI y/y			
 1796909400	USD	Core Inflation Rate MoM			0.3%
-1796909400	USD	Core Inflation Rate YoY		2.8%	2.6%
+1796909400	USD	Core Inflation Rate YoY		2.7%	2.6%
 1796909400	USD	Inflation Rate MoM			0.4%
 1796909400	USD	Inflation Rate YoY		3.9%	3.7%
 1796968800	GBP	GDP m/m			
@@ -305,5 +305,6 @@
 1797205800	JPY	Tankan Large Manufacturers Index			24
 1797255000	CAD	Core Inflation Rate MoM s.a			
 1797255000	CAD	Inflation Rate YoY			
+1797318000	GBP	Unemployment Rate			
 1797337800	USD	Core PPI m/m			
 1797337800	USD	PPI m/m			
