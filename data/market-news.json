@@ -1,82 +1,96 @@
 {
-  "timestamp": "2026-11-14T19:29:25.474Z",
+  "timestamp": "2026-11-14T23:14:32.176Z",
   "items": [
     {
-      "title": "Flexsteel chief growth officer David Crimmins sells $443,290 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/flexsteel-chief-growth-officer-david-crimmins-sells-443290-in-stock-93CH-5027472",
-      "pubDate": "2026-11-14T19:01:03.000Z",
+      "title": "DraftKings director Gregory Wendt buys $98,800 in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/draftkings-director-gregory-wendt-buys-98800-in-shares-93CH-5027554",
+      "pubDate": "2026-11-14T22:45:54.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "As Democrats seek changes to bill on energy permits, divisions emerge",
-      "link": "https://www.investing.com/news/commodities-news/as-democrats-seek-changes-to-bill-on-energy-permits-divisions-emerge-5027468",
-      "pubDate": "2026-11-14T18:54:23.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Bitcoin falls below $68,000 as ETF outflows extend to seventh straight day",
+      "title": "Bitcoin falls below $64,000 as ETF outflows extend to seventh straight day",
       "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-slides-below-68000-as-anthropic-ipo-frenzy-drains-market-liquidity-5027106",
-      "pubDate": "2026-11-14T18:52:05.000Z",
+      "pubDate": "2026-11-14T22:19:32.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Teledyne Technologies senior vp sells $2.97 million in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/teledyne-technologies-senior-vp-sells-297-million-in-stock-93CH-5027466",
-      "pubDate": "2026-11-14T18:46:06.000Z",
+      "title": "U.S. flight disruptions persist as FAA probes L3Harris role in nationwide outage",
+      "link": "https://www.investing.com/news/stock-market-news/faa-orders-nationwide-ground-stop-citing-extraordinary-safety-concerns-5026489",
+      "pubDate": "2026-11-14T22:07:51.000Z",
       "description": "",
       "source": "Investing.com"
     },
     {
-      "title": "Thousands of US flights canceled, delayed as air travel system slowly recovers from shutdown",
+      "title": "Riley Exploration Permian CIO sells $143,428 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/riley-exploration-permian-cio-sells-143428-in-stock-93CH-5027535",
+      "pubDate": "2026-11-14T22:00:59.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Beta Technologies CEO Kyle Clark sells $563,525 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/beta-technologies-ceo-kyle-clark-sells-563525-in-stock-93CH-5027528",
+      "pubDate": "2026-11-14T21:46:12.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Investors Title Co director Elton Parker Jr. buys $133,000 in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/investors-title-co-director-elton-parker-jr-buys-133000-in-shares-93CH-5027527",
+      "pubDate": "2026-11-14T21:46:06.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Air travel issues to persist well into Sunday, officials say, with thousands of flights affected",
       "link": "https://www.investing.com/news/stock-market-news/thousands-of-us-flights-canceled-delayed-as-air-travel-system-recovers-from-shutdown-5027394",
-      "pubDate": "2026-11-14T18:42:18.000Z",
+      "pubDate": "2026-11-14T21:42:40.000Z",
       "description": "",
       "source": "Investing.com"
+    },
+    {
+      "title": "XRP Falls 10% In Rout",
+      "link": "https://www.investing.com/news/cryptocurrency-news/xrp-falls-10-in-rout-5027520",
+      "pubDate": "2026-11-14T21:34:02.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Humana chief legal officer Joseph Ventura sells $2.38M in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/humana-chief-legal-officer-joseph-ventura-sells-238m-in-shares-93CH-5027519",
+      "pubDate": "2026-11-14T21:31:06.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Russia stocks lower at close of trade; MOEX Russia Index unchanged",
+      "link": "https://www.investing.com/news/stock-market-news/russia-stocks-lower-at-close-of-trade-moex-russia-index-unchanged-5027517",
+      "pubDate": "2026-11-14T21:20:03.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "AMD Just Had Its Biggest Run Against Nvidia Since 1999. Can It Survive Earnings?",
+      "link": "https://beincrypto.com/amd-stock-record-run-nvidia-earnings/",
+      "pubDate": "2026-11-14T20:06:56.000Z",
+      "description": "AMD outperformed Nvidia by 53.2 percentage points over five trading days, according to The Kobeissi Letter. That is the widest gap between the two chipmakers since Nvidia went public in January 1999. That lead met its first test on Friday, ",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "50 feared dead in Congo gold mine collapse",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB4U21MM3ZndG5qVTFMMUx3eFJJTnFVMEROX2tIZDZaYVI5X2trei1jeEtrYTBtc2wzZWV2eG9ZbDR1bE5FWWFNOW5yeVdmeERiV041ZlFoLVhsUzlO?oc=5",
+      "pubDate": "2026-11-14T19:15:06.000Z",
+      "description": "50 feared dead in Congo gold mine collapse&nbsp;&nbsp;Reuters",
+      "source": "Reuters"
     },
     {
       "title": "Joint Statement of the Government of Canada and the Bank of Canada on the Renewal of the Monetary Policy Framework",
       "link": "https://www.bankofcanada.ca/2026/11/joint-statement-of-the-government-of-canada-and-the-bank-of-canada-on-the-renewal-of-the-monetary-policy-framework-2026/",
-      "pubDate": "2026-11-14T18:31:35.000Z",
+      "pubDate": "2026-11-14T18:31:48.000Z",
       "description": "The Government and the Bank agree that monetary policy must work to promote the economic and financial well-being of Canadians. We also agree that the best way monetary policy can do this is by keeping inflation low, stable and predictable,",
       "source": "Bank of Canada"
-    },
-    {
-      "title": "Amdocs director John MacDonald buys $41,629 in shares",
-      "link": "https://www.investing.com/news/insider-trading-news/amdocs-director-john-macdonald-buys-41629-in-shares-93CH-5027461",
-      "pubDate": "2026-11-14T18:31:19.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Hasbro EVP & CFO Gina Goetter sells $343,754 in company stock",
-      "link": "https://www.investing.com/news/insider-trading-news/hasbro-evp--cfo-gina-goetter-sells-343754-in-company-stock-93CH-5027460",
-      "pubDate": "2026-11-14T18:31:06.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Aura Minerals director Sousa Mauad sells $620,940 in common shares",
-      "link": "https://www.investing.com/news/insider-trading-news/aura-minerals-director-sousa-mauad-sells-620940-in-common-shares-93CH-5027459",
-      "pubDate": "2026-11-14T18:31:05.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Cardano Falls 10% In Selloff",
-      "link": "https://www.investing.com/news/cryptocurrency-news/cardano-falls-10-in-selloff-5027456",
-      "pubDate": "2026-11-14T18:19:55.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Duffy investigates L3Harris over FAA outage that grounded U.S. flights",
-      "link": "https://www.investing.com/news/stock-market-news/duffy-investigates-l3harris-over-faa-outage-that-grounded-us-flights-5027454",
-      "pubDate": "2026-11-14T18:18:02.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Opinion: The trillion-dollar mistake corporate America is making about retirement",
@@ -174,13 +188,6 @@
       "link": "https://beincrypto.com/one-third-bitcoin-supply-faces-quantum-risk/",
       "pubDate": "2026-11-13T23:30:00.000Z",
       "description": "About 7.12 million Bitcoin, or 35.4% of every coin in existence, now has a weak spot. Most owners can fix it in minutes. Satoshi Nakamoto&#8217;s coins may never be fixed. Analytics firm Glassnode counted coins whose &#8220;public key&#8221",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "XRP Price Faces a Potential 20% Drop: Key Levels to Watch",
-      "link": "https://beincrypto.com/xrp-price-crash-warning-key-levels-to-watch/",
-      "pubDate": "2026-11-13T23:19:18.000Z",
-      "description": "XRP is back at the $1 line, and the next break could be costly. The token traded near $1.03 on November 13 after losing around 15% in a week.&#160; It briefly slipped below $1 during Friday&#8217;s sell-off before recovering, leaving buyers",
       "source": "BeInCrypto"
     },
     {
@@ -317,32 +324,11 @@
       "source": "Reuters"
     },
     {
-      "title": "US Treasury bought yen in July; Fed made no solo FX interventions in Q3",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQMkM3MHBxSC0zWERfdnhqRURMc2dhS01oamJOMC1TZFMwNGljLUtmTEVlaFZsVWc4b2JsUmJVNkUwWEpraUJaVVJrNHp3TktqczB6RXhtSTBOaWZFQ0k0WFd6UHhvTGFJMWs5UTAzZDkyb1FfNU90RVh5WVZfT0ZzMzNfeGVLR1J2NDItOVhvbmFtQVgtclBoMEpQdkxCcXFtVkUzZFZrQzB2bmd3NlE?oc=5",
-      "pubDate": "2026-11-12T23:03:22.000Z",
-      "description": "US Treasury bought yen in July; Fed made no solo FX interventions in Q3&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "The Yen Is Becoming Too Hard for Some Investors to Trade",
       "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPM0R4Y3M3MFFkZHVHS1E0ZTRqT2psWDJoTHpQQnlzeGY0WUVnM1BSLVk3SGRpNjNTZUtlVEdaM1JISll6NElFTmIzN3B5SU93M2Uyb3A2MVU5eUtiTTZ6dnlaQjYyXzMxNWpPMEk2U2J0UzE5bFY0Q1dGNVJLTDJXMWZOQ0NvQnM3eG11dXZTMHdORDl2VkFWeEp3LUdFNVFDVkxpbHRRVHRuX1k?oc=5",
       "pubDate": "2026-11-12T22:24:57.000Z",
       "description": "The Yen Is Becoming Too Hard for Some Investors to Trade&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
-    },
-    {
-      "title": "Dollar hits 19-month high as hawkish Fed view lifts yields",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQmd6aUhaTzk5c0pGbUgyQ2U2clNjX0VCQjZVT1g4dmNVUkFFa05DQTRmWHNLVl9oRGJ5R0tfeVZjbGlsSjhwMHNTVEhUaWtJMzJGUk15dnRGd2d5RGpLbEVtZzZFTGVVOHM0cmtMTFNkMTJDbUNPMm5acjZFbjltWC1URXlPTHdOLUlIUVdJOWxqb0xnMndvUGVwYlEtTGNvQXZ0Vg?oc=5",
-      "pubDate": "2026-11-12T21:57:57.000Z",
-      "description": "Dollar hits 19-month high as hawkish Fed view lifts yields&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "TSX falls as gold hits lowest level in more than one year",
-      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQUjV1NmhwN3pkREp3eTdIdVFnNC1iYWJyc2RabVBzb3V2RS1mY0ZaaHJKcmZBejFNclA5a1BVOFp6WkZjZl9iU1R1cUxTaVZFN25Hb1lLc3VJRzNHRGJHWk83SUlOSHVucDBxNW5Pb2R0dmNFdHdkTmJqcGR5MUExYldHb0l4UGZ2M2F0dXNXb19GX0dRMWpNZjRDUzhyN1lmRHprSk1BeU5XV0IxYWxPSWd3LWZ4c2ZsNE5qb1VXeDNHejg?oc=5",
-      "pubDate": "2026-11-12T21:38:19.000Z",
-      "description": "TSX falls as gold hits lowest level in more than one year&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "Yen Falls to Key 160 Level Per Dollar, Raising Intervention Risk",
@@ -357,13 +343,6 @@
       "pubDate": "2026-11-12T21:18:00.000Z",
       "description": "US FX: Dollar Strengthens; Emerging Markets Mixed&nbsp;&nbsp;WSJ",
       "source": "Google News"
-    },
-    {
-      "title": "Canadian dollar steadies near 19-month low ahead of US inflation data",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPd3UzM2VUR3MtMHVGVnlhSzdLWmpnZks3empvRE1nVV9DbjNBUmNuQXBNSTVXQURfMnN0S1VJdVdfbS1aV19XTjhHX04za2lpbElHam0tTDNoZU1xbGxTN0NLZXJQMS1HbXcxX2prclluZW1zZlVKMjktZnFidlJHNmlIR3kyZm5iWnZMaXJGemk0cDlZeC16UFgtc2hiQy1ZLVV0SHVOV1NLbXFnNUtFY3FYVQ?oc=5",
-      "pubDate": "2026-11-12T20:21:26.000Z",
-      "description": "Canadian dollar steadies near 19-month low ahead of US inflation data&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "Gold Falls to More Than 1-Year Low As U.S. Dollar, Yields Rise",
@@ -406,13 +385,6 @@
       "pubDate": "2026-11-12T15:00:00.000Z",
       "description": "Speech At Yale University, New Haven, Connecticut",
       "source": "Federal Reserve"
-    },
-    {
-      "title": "An Inside Look Into The Weeknd’s Historic Billion-Dollar Tour",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPZHdRRHFJNHMtR09XM0daMEZIaWZhUndNaTVtOUpzZWtlSVlfeFJ4UEx1ZFdYR2Q4X09WNWd6RE1sN3Nud0pfQ2stLVNSOGJkMUp6RFJwZ1NOTzlEeFd0YnNtRXpFM1NhcEtVQm1udF93S2VBRlZxRzNib0huUjAya3VESjVNUkJueUhsMnhmcVR1SlhrdEVXREllenFkR255Y0d1X08yaThmc2thZjRyQ2dtV0s?oc=5",
-      "pubDate": "2026-11-12T13:00:00.000Z",
-      "description": "An Inside Look Into The Weeknd’s Historic Billion-Dollar Tour&nbsp;&nbsp;Forbes",
-      "source": "Google News"
     },
     {
       "title": "Japanese Government Bonds Held by the Bank of Japan",
@@ -604,13 +576,6 @@
       "source": "Federal Reserve"
     },
     {
-      "title": "First Abu Dhabi Bank Weighs Multibillion-Dollar Rights Issue - Bloomberg",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOWkl2WnIwQXUtX3pLekREMXdxSEwwc3JNWXBlbjM5QUN0VGVoOHRnbll1OG45c1NkV1dESkJScDVqUG4zYW5nb2dNSHRmbHVudlVGWWV6VEJsUjRtZ0ZlWU00S0F0Y0dGVDBsMWFnU3U4bUMwM3ZpNWMyeHBkOVFCLWhLN3NkeEIzbUZkdWptdEJTSWJBbGx1TVluZXplcFpfSHdYaTIzblJJMzJ1NHphbQ?oc=5",
-      "pubDate": "2026-11-10T06:02:00.000Z",
-      "description": "First Abu Dhabi Bank Weighs Multibillion-Dollar Rights Issue&nbsp;&nbsp;Bloomberg",
-      "source": "Google News"
-    },
-    {
       "title": "Gold falls as CPI tops forecasts, lifting dollar and yields",
       "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOZGItVzRMT1dpY19zRm5oSlJwTXRwQTZpMFNYaUJEVFZfbmZmUjVfZWluWEZRVUt5Q0ZDa21tcHJObUdCLXNkTmVRajh6SDRkYS1Zc24zZ3pWNFFEdGZBM0Y0MHV5TWZPcnZhZkYxdVpuYTQ0amp4aUZtR052SHRlVjZoampxbDgwYlZabkxtTDl4dk1z0gGaAUFVX3lxTFBkcVBvV1N6QXZZZk1sRElZemlTdVpULTJJWlRvUG1raVhZMHRlaVdXcGpHUTVVZ0VkTk1NZi1iTzhLWXVTUDQ4YS1HWE5sclp3U0hVU3h2X1UzcDc4WDg5eGVESG5BV1RlbzhuQXZReEd1Tnpaemc3SmlNNVg4OEJhR0dqTlJlaXl2SXFNOUt5QkpmMHpFMGU4bkE?oc=5",
       "pubDate": "2026-11-10T05:46:59.000Z",
@@ -630,6 +595,41 @@
       "pubDate": "2026-11-10T01:16:00.000Z",
       "description": "Berkshire Tests Wider Yen Spreads in Latest Japan Bond Deal&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
+    },
+    {
+      "title": "Principal Figures of Financial Institutions (Oct.)",
+      "link": "http://www.boj.or.jp/en/statistics/dl/depo/kashi/kasi2610.pdf",
+      "pubDate": "2026-11-09T23:50:00.000Z",
+      "description": "",
+      "source": "Bank of Japan"
+    },
+    {
+      "title": "Summary of Opinions at the Monetary Policy Meeting on October 29 and 30, 2026",
+      "link": "http://www.boj.or.jp/en/mopo/mpmsche_minu/opinion_2026/opi261030.pdf",
+      "pubDate": "2026-11-09T23:50:00.000Z",
+      "description": "",
+      "source": "Bank of Japan"
+    },
+    {
+      "title": "WSJ Dollar Index Falls 0.46% to 97.07",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNZUVjSk42R0l4dmpQWTE4dEFNLWs3YzBrMlQ1am1iRTNuMVI2NnFWODVfR0NQR2dSYjZ3c3dVZk95V2s3OEw4YllDcWk3b1huVmc2OWZJRkRXa0xnVXBxMzFXaldwZzc2eEhLZTg1djkzWVY0VkppSlAyZ0lmTC1Mem9LVVVWT1NWUmg3VVY5QnhjREEtSk9lNVZZZGhxTUN5MU9DQ25BZUo3dw?oc=5",
+      "pubDate": "2026-11-09T22:36:00.000Z",
+      "description": "WSJ Dollar Index Falls 0.46% to 97.07&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "Ecopetrol Is Selling $2 Billion in Bonds in Global Markets",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNckduMWZmeTBQM1ZldEpMRkFoM3RvUmRCbUwxWG00c2VWTU8wVXBnb1JFOERCR2xlaS02TVVFbjhUSUQ0cU9VMFBxS0g2ODlVemNDcWZhdWxKMy15NlhDa193TnFfdGVVZVZzRjlPeFREWUloUWw5OGtvUWpUVUpBSVBGWkJxMjdxUnU4aW43Y0R2ZjRQMEFkcWpqX05GN09iTVdlWFE2RDFQNDlNTFE?oc=5",
+      "pubDate": "2026-11-09T21:22:18.000Z",
+      "description": "Ecopetrol Is Selling $2 Billion in Bonds in Global Markets&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "Federal Reserve Board announces approval of two applications by Mutual Federal Bancorp, MHC, and MFB Bancorp, Inc.",
+      "link": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm",
+      "pubDate": "2026-11-09T21:00:00.000Z",
+      "description": "Federal Reserve Board announces approval of two applications by Mutual Federal Bancorp, MHC, and MFB Bancorp, Inc.",
+      "source": "Federal Reserve"
     },
     {
       "title": "2026-11-09 - Data portal - Important monetary policy data, 9 November 2026",
