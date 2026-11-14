@@ -1,5 +1,3 @@
-1790789400	USD	FOMC Member Barkin Speaks			
-1790796300	USD	FOMC Member Cook Speaks			
 1790796600	USD	President Trump Speaks			
 1790802600	USD	FOMC Member Goolsbee Speaks			
 1790805600	USD	FOMC Member Kashkari Speaks			
