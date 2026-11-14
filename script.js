@@ -3193,6 +3193,7 @@ document.getElementById('candleToggle')?.addEventListener('click', (e) => {
 function candleOpenPair(id, tries = 0) {
   id = String(id || '').toUpperCase();
   if (!/^[A-Z0-9]{3,12}$/.test(id)) return;
+  if (focusMode) { focusMode = false; setFocusPanelsOpen(false); renderFocusViews(); } // le mode Focus masque la section CANDLE
   const tg = document.getElementById('candleToggle');
   if (tg && tg.getAttribute('aria-expanded') !== 'true') tg.click();
   if (!candlePoh || !candleSlides().length) { if (tries < 60) setTimeout(() => candleOpenPair(id, tries + 1), 500); return; } // données pas encore chargées
