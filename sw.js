@@ -1,4 +1,4 @@
-const CACHE = 'ariinui-marche-shell-v203';
+const CACHE = 'ariinui-marche-shell-v204';
 const SHELL_PATHS = [
   '/',
   '/index.html',
@@ -66,8 +66,10 @@ self.addEventListener('push', (event) => {
 });
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
+  const url = (event.notification.data && event.notification.data.url) || '/';
+  const m = /[?&]pair=([A-Za-z0-9]+)/.exec(url);
   event.waitUntil(self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((list) => {
-    for (const c of list) if ('focus' in c) return c.focus();
-    return self.clients.openWindow((event.notification.data && event.notification.data.url) || '/');
+    for (const c of list) if ('focus' in c) { if (m) c.postMessage({ type: 'open-pair', pair: m[1] }); return c.focus(); } // appli déjà ouverte : on lui dit quelle paire afficher
+    return self.clients.openWindow(url); // appli fermée : ouverte avec ?pair=...
   }));
 });

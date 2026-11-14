@@ -3189,6 +3189,19 @@ document.getElementById('candleToggle')?.addEventListener('click', (e) => {
   if (!expanded) { candleLoad(); candleAlFetch(); if (!alerteData) alerteLoad().then(candleAlFilterSync); } // plans ALERTE chargés aussi : le compteur « Alerts » est juste dès l'ouverture
 });
 
+// Clic sur une notification : ouvre CANDLE sur la paire concernée (?pair=EURUSD au démarrage, ou message du service worker si l'appli est déjà ouverte)
+function candleOpenPair(id, tries = 0) {
+  id = String(id || '').toUpperCase();
+  if (!/^[A-Z0-9]{3,12}$/.test(id)) return;
+  const tg = document.getElementById('candleToggle');
+  if (tg && tg.getAttribute('aria-expanded') !== 'true') tg.click();
+  if (!candlePoh || !candleSlides().length) { if (tries < 60) setTimeout(() => candleOpenPair(id, tries + 1), 500); return; } // données pas encore chargées
+  if (rp.on) candleRpExit();
+  candleGoTo(id);
+}
+if (navigator.serviceWorker) navigator.serviceWorker.addEventListener('message', (e) => { if (e.data && e.data.type === 'open-pair') candleOpenPair(e.data.pair); });
+try { const q = new URLSearchParams(location.search).get('pair'); if (q) { history.replaceState(null, '', location.pathname); candleOpenPair(q); } } catch (e) {}
+
 document.getElementById('candleViewReset')?.addEventListener('click', () => {
   const id = candleCurId();
   if (id) { candleRedraw(id, CANDLE_DEF); candleViewSave(id, Object.assign({}, CANDLE_DEF)); }
