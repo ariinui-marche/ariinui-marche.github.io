@@ -2132,7 +2132,7 @@ function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bou
     .then((j) => {
       if (j && j.bars && j.bars.length) h.bars = since ? h.bars.filter((b) => b[0] < since).concat(j.bars) : j.bars;
       if ((tf === candleHistTf || tf === '1D' || tf === '240' || tf === '60' || rp.on || ((candlePlans || candleZones) && tf === '1' && candleHistTf === '5')) && !(cg.mode)) candleRedraw(id, candleViewOf(id));
-      if (!since && tf === '1' && id === 'EURUSD' && h.bars.length && !h.deep) candleDeepLoad(id, h); // TEST : jusqu'à 250 000 barres 1 min MT5
+      if (!since && tf === '1' && (id === 'EURUSD' || id === 'XAUUSD') && h.bars.length && !h.deep) candleDeepLoad(id, h); // historique profond MT5 1 min : EURUSD 250 000, XAUUSD 500 000 barres
     })
     .catch(() => { /* on garde ce qui est affiché */ })
     .finally(() => { h.busy = false; h.at = Date.now(); });
@@ -2141,7 +2141,7 @@ function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bou
 async function candleDeepLoad(id, h) {
   h.deep = true;
   try {
-    for (let k = 0; k < 8 && h.bars.length; k++) {
+    for (let k = 0; k < 10 && h.bars.length; k++) {
       const r = await fetch(`https://ariinuiirgina.vercel.app/api/poh-candles?pair=${id}&tf=1&older=${h.bars[0][0]}&n=50000`, { signal: AbortSignal.timeout(30000) });
       if (!r.ok) break;
       const j = await r.json();
