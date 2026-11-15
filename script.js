@@ -1979,64 +1979,68 @@ const candleHistData = {}; // 'PAIR|tf' -> { bars: [[t,o,h,l,c]...], at, busy }
 // ===== Plans Arii CDX SW sur CANDLE (graphiques 1 min / 5 min) : moteur cdx-engine.js, identique au moteur Python de référence =====
 let candlePlans = true, candleZones = true; // roue > « Plans » / « Zones » (enregistrés)
 try { candlePlans = localStorage.getItem('candlePlans') !== '0'; candleZones = localStorage.getItem('candleZones') !== '0'; } catch (e) { /* pas de stockage */ }
-function candleSweepMarks(bars, i0, prevU, keyOf, isPoh) { // règle de l'EA MT5 / Pine : le plus haut (bas) d'une période dépasse celui de la période précédente et la clôture de la période revient dessous (dessus) -> marque sur la barre de l'extrême
-  const out = []; let ci = null, ch = 0, cl = 0, cc = 0, hb = 0, lb = 0, ph = 0, pl = 0, hP = false;
-  const flush = () => {
-    if (ci === null || !hP) return;
-    if (ch > ph && cc < ph && bars[hb][0] >= prevU) out.push({ t: bars[hb][0], p: ch, hi: true });
-    if (cl < pl && cc > pl && bars[lb][0] >= prevU) out.push({ t: bars[lb][0], p: cl, hi: false });
-  };
-  for (let i = i0; i < bars.length; i++) {
-    const b = bars[i], k = keyOf(b[0]);
-    if (k !== ci) {
-      if (ci !== null) { flush(); if (isPoh && (k < ci || (i > i0 && b[0] - bars[i - 1][0] > 43200))) hP = false; else { ph = ch; pl = cl; hP = true; } }
-      ci = k; ch = b[2]; cl = b[3]; hb = lb = i;
-    } else { if (b[2] > ch) { ch = b[2]; hb = i; } if (b[3] < cl) { cl = b[3]; lb = i; } }
-    cc = b[4];
-  }
-  flush();
-  return out;
-}
+// (candleSweepMarks et le calcul des plans / zones / sweeps sont dans cdx-plans.js, exécutés par cdx-worker.js hors du fil principal)
 const candlePlanHits = {}; // paire -> [{ x0, x1, y0, y1, p }] zones cliquables des plans (infobulle au clic)
 const candlePlanCache = {}; // 'PAIR|tf' -> { key, plans: [{ ts, te, lg, e, s, pic, vis, sid, kind }] }
 const CANDLE_PLAN_SESS = { 0: '#787b86', 1: '#2962ff', 2: '#f23645', 3: '#089981', 4: '#f5b642' }; // hors session, Asia, London, NY AM, NY Lunch
-function candlePlansGet(id, tf, bars) { // plans du moteur sur les barres de la paire (mis en cache tant que les barres ne changent pas)
+const candlePlanWk = { w: null, dead: false, seq: 0, inflight: {}, pending: null }; // Web Worker du moteur de plans : calcul hors du fil principal (jamais de blocage de l'affichage ni des gestes)
+function candlePack(a) { const f = new Float64Array(a.length * 5); for (let i = 0, k = 0; i < a.length; i++) { const b = a[i]; f[k++] = b[0]; f[k++] = b[1]; f[k++] = b[2]; f[k++] = b[3]; f[k++] = b[4]; } return f; }
+function candlePlanWorker() {
+  if (candlePlanWk.dead) return null;
+  if (!candlePlanWk.w) {
+    try {
+      const w = new Worker('./cdx-worker.js');
+      w.onmessage = (e) => candlePlanDone(e.data);
+      w.onerror = () => { candlePlanWk.dead = true; candlePlanWk.w = null; candlePlanWk.inflight = {}; const id = typeof candleCurId === 'function' ? candleCurId() : null; if (id && !rp.on) candleRedraw(id, candleViewOf(id)); }; // pas de Worker : repli sur le fil principal
+      candlePlanWk.w = w;
+    } catch (err) { candlePlanWk.dead = true; return null; }
+  }
+  return candlePlanWk.w;
+}
+function candlePlanDone(m) {
+  const inf = candlePlanWk.inflight[m.ck];
+  if (!inf || inf.seq !== m.seq) return;
+  delete candlePlanWk.inflight[m.ck];
+  const plans = m.res.plans; plans.zones = m.res.zones;
+  candlePlanCache[m.ck] = { key: m.key, plans };
+  const [id, tf] = m.ck.split('|');
+  if (rp.on || tf !== candleHistTf) return;
+  if (cg.pts.size > 0) candlePlanWk.pending = id; // geste en cours : on redessine à la fin du geste (rien ne bouge pendant que le doigt est posé)
+  else candleRedraw(id, candleViewOf(id));
+}
+function candlePlanFlush() { // fin d'un geste : redessin des plans arrivés entre-temps
+  const id = candlePlanWk.pending; candlePlanWk.pending = null;
+  if (id && !rp.on) candleRedraw(id, candleViewOf(id));
+}
+function candlePlansGet(id, tf, bars) { // plans du moteur sur les barres de la paire (en cache tant que la fenêtre récente ne change pas ; calculés dans un Worker, anciens plans affichés en attendant)
   if ((!candlePlans && !candleZones) || !window.CDX || (tf !== '1' && tf !== '5') || !bars || bars.length < 300) return null;
   const m1h = tf === '5' ? candleHistData[id + '|1'] : null, m1b = m1h && m1h.bars.length ? m1h.bars : null;
   if (tf === '5' && !m1b) return null; // le mode 5 min a besoin des barres 1 min (chargées en parallèle)
-  const lb = bars[bars.length - 1], key = bars.length + '|' + lb[0] + '|' + lb[4] + (m1b ? '|' + m1b.length + '|' + m1b[m1b.length - 1][0] + '|' + m1b[m1b.length - 1][4] : '');
+  const cap = tf === '1' ? 30000 : 15000, w0 = bars.length > cap ? bars.length - cap : 0, t0 = bars[w0][0], lb = bars[bars.length - 1];
+  // clé = fenêtre réellement utilisée par le moteur (dernières barres) : des barres plus anciennes qui arrivent (historique profond) ne changent rien et ne relancent aucun calcul
+  const key = (bars.length - w0) + '|' + t0 + '|' + lb[0] + '|' + lb[4] + (m1b ? '|' + Math.max(m1b[0][0], t0) + '|' + m1b[m1b.length - 1][0] + '|' + m1b[m1b.length - 1][4] : '');
   const ck = id + '|' + tf, c = candlePlanCache[ck];
   if (c && c.key === key) return c.plans;
-  let plans = [], zones = null;
-  try {
-    const cap = tf === '1' ? 30000 : 15000, bs = bars.slice(-cap), t0 = bs[0][0];
+  const win = () => {
     let m1 = null;
     if (m1b) { let a = 0, b = m1b.length; while (a < b) { const m = (a + b) >> 1; if (m1b[m][0] < t0) a = m + 1; else b = m; } m1 = m1b.slice(a); }
-    const px = lb[4], digits = px >= 1000 ? 2 : px >= 20 ? 3 : 5;
-    const out = CDX.run(bs, digits, Object.assign({ tfMin: +tf, m1, atr1: m1 ? CDX.atrSeries(m1) : null }, CDX.brokerKeys));
-    const tMin = t0 + 7 * 86400; // les 7 premiers jours de la fenêtre servent à chauffer le moteur (niveaux de session, sweeps)
-    const tm = (k) => bs[Math.max(0, Math.min(bs.length - 1, k))][0], zi = out.zones;
-    zones = { ifv: zi.ifv.map((g) => ({ ib: g.ib, hot: g.hot, ts: tm(g.left), ot: g.ot, obt: g.obt })), bprs: zi.bprs.map((g) => ({ bull: g.bull, ts: tm(g.left), te: tm(g.cr + 2), ot: g.ot, obt: g.obt })), fvg: [] };
-    { // FVG de session (règle de l'EA MT5) : non comblés, jour de trading précédent + en cours, couleur de la session de la bougie du milieu, 300 derniers
-      const n = bars.length - 1, startU = Math.floor((lb[0] - 36000 - 43200) / 86400) * 86400 + 36000 + 43200, prevU = startU - 86400;
-      let i0 = n; while (i0 > 2 && bars[i0 - 2][0] >= prevU - 3 * 86400) i0--;
-      for (let i = Math.max(2, i0); i < n; i++) {
-        const b2 = bars[i - 2], bi = bars[i], bu = bi[3] > b2[2], be = bi[2] < b2[3];
-        if ((!bu && !be) || bars[i - 1][0] < prevU) continue;
-        let mit = false;
-        for (let k = i + 1; k < n && !mit; k++) mit = bu ? bars[k][3] <= b2[2] : bars[k][2] >= b2[3];
-        if (mit) continue;
-        zones.fvg.push({ ts: b2[0], top: bu ? bi[3] : b2[3], bot: bu ? b2[2] : bi[2], sid: CDX.sidOf(CDX.hourLoc(bars[i - 1][0])) });
-      }
-      if (zones.fvg.length > 300) zones.fvg.splice(0, zones.fvg.length - 300);
-      let j0 = n; while (j0 > 0 && bars[j0][0] >= prevU - 2 * 86400) j0--; // marqueurs de sweep : POH (●), daily (●), 4H (★)
-      zones.sw = { poh: candleSweepMarks(bars, j0, prevU, CDX.pohIx, true), d: candleSweepMarks(bars, j0, prevU, CDX.brokerKeys.d1, false), h4: candleSweepMarks(bars, j0, prevU, CDX.brokerKeys.h4, false) };
-    }
-    plans = out.filter((p) => (p.vis || p.end === null) && p.t >= tMin).map((p) => ({ ts: bs[p.i][0], te: p.ie !== undefined ? bs[p.ie][0] : null, lg: p.lg, e: p.e, s: p.s, pic: p.pic, vis: p.vis, sid: p.sid, kind: p.kind, end: p.end, info: p.info || {}, pips: Math.abs(p.e - p.s) / CDX.pipOf(digits), dec: digits === 2 ? 2 : digits === 3 ? 3 : 5, tf }));
-  } catch (err) { plans = []; }
-  plans.zones = zones;
-  candlePlanCache[ck] = { key, plans };
-  return plans;
+    return { bs: bars.slice(-cap), m1 };
+  };
+  const sync = () => { // repli (replay : plans exacts à chaque pas ; navigateur sans Worker)
+    if (!window.CDXP) return c ? c.plans : null;
+    const { bs, m1 } = win(), r = window.CDXP.compute(bs, m1, tf);
+    r.plans.zones = r.zones;
+    candlePlanCache[ck] = { key, plans: r.plans };
+    return r.plans;
+  };
+  const wk = rp.on ? null : candlePlanWorker();
+  if (!wk) return sync();
+  if (!candlePlanWk.inflight[ck]) {
+    const { bs, m1 } = win(), fb = candlePack(bs), fm = m1 ? candlePack(m1) : null, seq = ++candlePlanWk.seq;
+    candlePlanWk.inflight[ck] = { seq, key };
+    try { wk.postMessage({ ck, key, seq, tf, bs: fb, m1: fm }, fm ? [fb.buffer, fm.buffer] : [fb.buffer]); } catch (err) { delete candlePlanWk.inflight[ck]; candlePlanWk.dead = true; return sync(); }
+  }
+  return c ? c.plans : null; // calcul en cours : jamais de blocage, on garde les derniers plans connus
 }
 const CANDLE_FLAG = { USD: 'us', EUR: 'eu', GBP: 'gb', JPY: 'jp', AUD: 'au', NZD: 'nz', CAD: 'ca', CHF: 'ch' }; // drapeaux ronds des pastilles de news (comme TradingView)
 const CANDLE_DAYS = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'], CANDLE_DAYS_S = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
@@ -2665,6 +2669,7 @@ function candleOnMove() {
     if (wasMode === 'swipe' && wasSingle && e.type === 'pointerup' && Math.abs(cg.dx) > 50) candleGo(candleIndex() + (cg.dx < 0 ? 1 : -1));
     if (cg.moved) cg.swallow = Date.now() + 350; // un geste n'ouvre pas le graphique TradingView
     cg.mode = null;
+    candlePlanFlush();
   };
   list.addEventListener('pointerup', end);
   list.addEventListener('pointercancel', end);

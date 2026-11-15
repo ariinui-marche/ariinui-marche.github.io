@@ -525,14 +525,19 @@ function run(bars, digits, opts) {
 }
 
 // ---------- utilitaires : bords de periodes du courtier (UTC+2 / UTC+3 en heure d'ete US) et ATR 1 min
+let dstY0 = 0, dstY1 = -1, dstA = 0, dstB = 0;           // année en cache : bornes [1er janv., 1er janv. suivant[ et dates de bascule (même résultat que le calcul direct, sans refaire des Date par barre)
 function usDst(utc) {
-  const d = new Date(utc * 1000); const y = d.getUTCFullYear();
-  const nthSun = (m, nth, hour) => {
-    const x = new Date(Date.UTC(y, m - 1, 1));
-    const wd = (x.getUTCDay() + 6) % 7;                  // lundi = 0 (comme Python)
-    return Date.UTC(y, m - 1, 1 + pmod(6 - wd, 7) + 7 * (nth - 1), hour) / 1000;
-  };
-  return nthSun(3, 2, 7) <= utc && utc < nthSun(11, 1, 6);
+  if (!(utc >= dstY0 && utc < dstY1)) {
+    const y = new Date(utc * 1000).getUTCFullYear();
+    const nthSun = (m, nth, hour) => {
+      const x = new Date(Date.UTC(y, m - 1, 1));
+      const wd = (x.getUTCDay() + 6) % 7;                  // lundi = 0 (comme Python)
+      return Date.UTC(y, m - 1, 1 + pmod(6 - wd, 7) + 7 * (nth - 1), hour) / 1000;
+    };
+    dstA = nthSun(3, 2, 7); dstB = nthSun(11, 1, 6);
+    dstY0 = Date.UTC(y, 0, 1) / 1000; dstY1 = Date.UTC(y + 1, 0, 1) / 1000;
+  }
+  return dstA <= utc && utc < dstB;
 }
 function brokerOff(utc) { return usDst(utc) ? 3 * 3600 : 2 * 3600; }
 function srv(t) { return t + brokerOff(t); }
