@@ -1,47 +1,103 @@
 {
-  "timestamp": "2026-11-15T09:53:08.701Z",
+  "timestamp": "2026-11-15T16:39:13.061Z",
   "items": [
-    {
-      "title": "VSE Corp CEO John Cuomo sells $293,614 of company shares",
-      "link": "https://www.investing.com/news/insider-trading-news/vse-corp-ceo-john-cuomo-sells-293614-of-company-shares-93CH-5027774",
-      "pubDate": "2026-11-15T09:31:33.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "United Therapeutics CEO Martine Rothblatt sells $4.77M in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/united-therapeutics-ceo-martine-rothblatt-sells-477m-in-stock-93CH-5027773",
-      "pubDate": "2026-11-15T09:31:31.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Globus Medical director Tobin sells $2.2M in shares",
-      "link": "https://www.investing.com/news/insider-trading-news/globus-medical-director-tobin-sells-22m-in-shares-93CH-5027772",
-      "pubDate": "2026-11-15T09:31:10.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Agco SVP chief HR officer Harris sells $200,480 in shares",
-      "link": "https://www.investing.com/news/insider-trading-news/agco-svp-chief-hr-officer-harris-sells-200480-in-shares-93CH-5027771",
-      "pubDate": "2026-11-15T09:31:09.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Rent the Runway director Dhiren Fonseca sells $48,680 in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/rent-the-runway-director-dhiren-fonseca-sells-48680-in-stock-93CH-5027767",
-      "pubDate": "2026-11-15T09:16:08.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
     {
       "title": "Cape Verde votes for president with emigration in focus",
       "link": "https://www.investing.com/news/economic-indicators/cape-verde-votes-for-president-with-emigration-in-focus-5027689",
-      "pubDate": "2026-11-15T09:12:37.000Z",
+      "pubDate": "2026-11-15T16:24:18.000Z",
       "description": "",
       "source": "Investing.com"
+    },
+    {
+      "title": "Bread Financial EVP Dennis McCarthy acquires $1,718 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/bread-financial-evp-dennis-mccarthy-acquires-1718-in-stock-93CH-5028011",
+      "pubDate": "2026-11-15T16:16:01.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Intuitive Surgical VP Fredrik Widman sells $407,765 in common stock",
+      "link": "https://www.investing.com/news/insider-trading-news/intuitive-surgical-vp-fredrik-widman-sells-407765-in-common-stock-93CH-5028008",
+      "pubDate": "2026-11-15T16:01:20.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Mizuho upgrades Viking Holdings stock rating on normalized valuation",
+      "link": "https://www.investing.com/news/analyst-ratings/mizuho-upgrades-viking-holdings-stock-rating-on-normalized-valuation-93CH-5028005",
+      "pubDate": "2026-11-15T15:56:55.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Bessent says Nvidia must ’go outside the company’ to find new CEO",
+      "link": "https://www.investing.com/news/economy-news/bessent-says-nvidia-must-go-outside-the-company-to-find-new-ceo-5028004",
+      "pubDate": "2026-11-15T15:54:16.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Trump urges Congress to fund air traffic overhaul as flight chaos drags on",
+      "link": "https://www.investing.com/news/stock-market-news/faa-orders-nationwide-ground-stop-citing-extraordinary-safety-concerns-5026489",
+      "pubDate": "2026-11-15T15:53:45.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Binance Holds the Least Ethereum Since 2021",
+      "link": "https://beincrypto.com/ethereum-price-4-month-low-binance-reserves/",
+      "pubDate": "2026-11-15T15:46:28.000Z",
+      "description": "Ethereum&#8217;s (ETH) price fell to its lowest level since early July on Sunday. Yet Binance&#8217;s ETH reserves dropped to about 2.9 million, the smallest stockpile in nearly five years. Coins leaving exchanges usually point to holders w",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "RGC Resources director John B. Williamson III acquires $2,374 in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/rgc-resources-director-john-b-williamson-iii-acquires-2374-in-shares-93CH-5027997",
+      "pubDate": "2026-11-15T15:46:08.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Umh Properties evp, cfo Kevin Miller buys $1,000 in shares",
+      "link": "https://www.investing.com/news/insider-trading-news/umh-properties-evp-cfo-kevin-miller-buys-1000-in-shares-93CH-5027996",
+      "pubDate": "2026-11-15T15:45:57.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Bessent says Nvidia needs \"dramatic\" leadership shakeup",
+      "link": "https://www.investing.com/news/stock-market-news/bessent-says-nvidia-needs-dramatic-leadership-shakeup-5027992",
+      "pubDate": "2026-11-15T15:39:58.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Redwood Trust president buys $251,580 in stock",
+      "link": "https://www.investing.com/news/insider-trading-news/redwood-trust-president-buys-251580-in-stock-93CH-5027990",
+      "pubDate": "2026-11-15T15:31:20.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Hyperliquid Whale Who Lost $10 Million Now Bets on Solana",
+      "link": "https://beincrypto.com/hyperliquid-whale-eth-loss-solana-long/",
+      "pubDate": "2026-11-15T12:49:42.000Z",
+      "description": "A Hyperliquid whale lost $10.5 million on a single Ethereum long, erasing 10 straight winning trades. The trader then opened a 10x leveraged long on $26.97 million worth of Solana (SOL). The new bet lands with SOL at $70.27, down 20.94% ove",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "AI Agent Identity Needs Blockchain, Legal Experts Say",
+      "link": "https://beincrypto.com/ai-agent-identity-blockchain-legal-experts/",
+      "pubDate": "2026-11-15T10:00:00.000Z",
+      "description": "AI agents already spend money, but the law still expects a human. Legal experts say AI agent identity built on ZK proofs can close the gap.\nThe post AI Agent Identity Needs Blockchain, Legal Experts Say appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Bitcoin’s Fall to $62,000 Sparks Market Manipulation Claims",
+      "link": "https://beincrypto.com/bitcoin-62000-crash-manipulation-claims/",
+      "pubDate": "2026-11-15T09:24:29.000Z",
+      "description": "Bitcoin plunged to nearly $62,000 on November 15, its lowest level since July. The drop wiped out months of gains and triggered more than $2 billion in liquidations. Now, several analysts claim that large players orchestrated the crash. How",
+      "source": "BeInCrypto"
     },
     {
       "title": "3 Key Events in the Coming Week That Could Move AI Stocks and Crypto",
@@ -49,34 +105,6 @@
       "pubDate": "2026-11-15T09:12:29.000Z",
       "description": "Nvidia earnings, Fed minutes, and Anthropic&#8217;s IPO all land between Tuesday and Thursday in the coming week. Each will test an AI selloff that has also spilled into crypto. Rates add a second layer of risk. Traders now price in a Decem",
       "source": "BeInCrypto"
-    },
-    {
-      "title": "Megaspeed says Alice Huang left company in August 2025",
-      "link": "https://www.investing.com/news/stock-market-news/megaspeed-says-alice-huang-left-company-in-august-2025-5027761",
-      "pubDate": "2026-11-15T09:12:22.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Eagle Cash Buyers Releases 2026 Cost Comparison of Traditional MLS and Direct Cash Home Sales",
-      "link": "https://www.investing.com/news/press-releases/eagle-cash-buyers-releases-2026-cost-comparison-of-traditional-mls-and-direct-cash-home-sales-5027760",
-      "pubDate": "2026-11-15T09:02:24.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "5 big analyst AI moves: Nvidia hit with downgrades after Huang’s exit",
-      "link": "https://www.investing.com/news/stock-market-news/5-big-analyst-ai-moves-nvidia-hit-with-downgrades-after-huangs-exit-5027576",
-      "pubDate": "2026-11-15T09:00:02.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "ECB cannot replace sound fiscal policy, presidential contender Knot warns",
-      "link": "https://www.investing.com/news/stock-market-news/ecb-cannot-replace-sound-fiscal-policy-presidential-contender-knot-warns-5027752",
-      "pubDate": "2026-11-15T08:56:54.000Z",
-      "description": "",
-      "source": "Investing.com"
     },
     {
       "title": "Democrats Torn Over Floating New Taxes to Cover Multitrillion-Dollar Agenda",
@@ -107,16 +135,9 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "50 feared dead in Congo gold mine collapse",
-      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB4U21MM3ZndG5qVTFMMUx3eFJJTnFVMEROX2tIZDZaYVI5X2trei1jeEtrYTBtc2wzZWV2eG9ZbDR1bE5FWWFNOW5yeVdmeERiV041ZlFoLVhsUzlO?oc=5",
-      "pubDate": "2026-11-14T19:15:06.000Z",
-      "description": "50 feared dead in Congo gold mine collapse&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "Joint Statement of the Government of Canada and the Bank of Canada on the Renewal of the Monetary Policy Framework",
       "link": "https://www.bankofcanada.ca/2026/11/joint-statement-of-the-government-of-canada-and-the-bank-of-canada-on-the-renewal-of-the-monetary-policy-framework-2026/",
-      "pubDate": "2026-11-14T18:31:37.000Z",
+      "pubDate": "2026-11-14T19:18:25.000Z",
       "description": "The Government and the Bank agree that monetary policy must work to promote the economic and financial well-being of Canadians. We also agree that the best way monetary policy can do this is by keeping inflation low, stable and predictable,",
       "source": "Bank of Canada"
     },
@@ -163,39 +184,11 @@
       "source": "BeInCrypto"
     },
     {
-      "title": "Big Banks Have Nearly $1 Trillion Tied to AI. What If the Boom Cracks?",
-      "link": "https://beincrypto.com/fed-banks-1-trillion-ai-exposure/",
-      "pubDate": "2026-11-14T09:00:00.000Z",
-      "description": "The largest US bank holding companies have close to $1 trillion in exposure to firms behind the AI buildout. The Federal Reserve (Fed) disclosed the figure in its November Financial Stability Report. The Fed still describes the banking syst",
-      "source": "BeInCrypto"
-    },
-    {
       "title": "Gold Futures Fall as Yields, Dollar Rise on U.S. CPI Data",
       "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOLWdJcGVCYzJpRDF3cHlEUlBWb3duUEl2bUp3bHYzQXVUWTh0Q3hMZVRzVlhoUndFTlUzOHBvNzBWUVhPUGFNVWdudGF4S0J5dFVtaTZyYWp3amZlRGktZHZ4XzdUNDZOc3BSN0pJaEVWdUhSd3RpMVFEV1VmUnRoZC1XSlF5dDFzV0VrSzFIMDlGbHlpRE5WYm5Wc1dzZnVvSnBVLWtWVW5EWTh2RF9VbE1sTlBRUQ?oc=5",
       "pubDate": "2026-11-14T07:54:30.000Z",
       "description": "Gold Futures Fall as Yields, Dollar Rise on U.S. CPI Data&nbsp;&nbsp;WSJ",
       "source": "Google News"
-    },
-    {
-      "title": "Metaplanet Cuts 2026 Revenue Target 59%: Is the Bitcoin Playbook Running Dry?",
-      "link": "https://beincrypto.com/metaplanet-cuts-2026-revenue-forecast-mnav/",
-      "pubDate": "2026-11-14T06:15:28.000Z",
-      "description": "Metaplanet cut its 2026 revenue forecast by 59% on November 13, to &#165;6.5 billion from &#165;16 billion. Its operating profit forecast fell 74%, to &#165;3 billion from &#165;11.4 billion. The Tokyo-listed Bitcoin (BTC) treasury firm tra",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Will Bitcoin Never Set Another All-Time High? Analysts Debate On X",
-      "link": "https://beincrypto.com/bitcoin-never-all-time-high-analyst-key-levels/",
-      "pubDate": "2026-11-14T04:00:00.000Z",
-      "description": "Bitcoin price fell below $68,000 on November 13. The price now sits more than 45% below its record high of $126,080. Some analysts are saying that the peak will never return. However, other traders see a bottom forming soon. Is Bitcoin&#821",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Crypto Market’s Nearly 6% Slide Costs Bulls $1 Billion in a Day",
-      "link": "https://beincrypto.com/bitcoin-below-68000-crypto-liquidations-bulls/",
-      "pubDate": "2026-11-14T03:35:48.000Z",
-      "description": "Crypto traders lost $1.23 billion to forced liquidations over the past 24 hours, nearly double the previous day&#8217;s total. Bets on higher prices accounted for $1.02 billion of it as the crypto market cap fell 5.75% to $2.33 trillion. Lo",
-      "source": "BeInCrypto"
     },
     {
       "title": "Jefferson, New Technology, Old Questions: Productivity Puzzles  and the Macroeconomy",
@@ -210,13 +203,6 @@
       "pubDate": "2026-11-13T22:33:00.000Z",
       "description": "WSJ Dollar Index Rises 0.84% This Week to 98.34&nbsp;&nbsp;WSJ",
       "source": "Google News"
-    },
-    {
-      "title": "Agencies extend comment period for proposed third-party risk management guidance",
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm",
-      "pubDate": "2026-11-13T21:15:00.000Z",
-      "description": "Agencies extend comment period for proposed third-party risk management guidance",
-      "source": "Federal Reserve"
     },
     {
       "title": "Egypt to set up state-backed company to license artisanal gold miners, free detainees, lawmaker says",
@@ -244,20 +230,6 @@
       "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNdXI2eWRwY1h1QWkxeldEbWhGUmdSYzRrQjZveW9TTm5LekpTdEthSzRRZHI1NlhoQjAwXzdjdVFSU0ItZjA3NFFxTUUxQlNWUzBoRHdtVkhtZ09hVUt2SmNyaFVvRkhOa0VERndHN1EweWdGajFEa050UDNqN1dCTllZamxKS0J1R0FHWXJOU0lweWJDMnV2clZBRVI4YVU4MTFBeg?oc=5",
       "pubDate": "2026-11-13T17:17:29.000Z",
       "description": "Dollar set for best week in two months, yen weakens toward 160&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "UEFA sets up human rights board for Euro 2028",
-      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOYWNEckhPajU0UlBoa3U0WWlIbm0yMzhOX05waXZOS2JFZFJPNWl6V3BCVWF0d0QyQVZnVkV0eHZ3V1RKNktuMEtwYjhBX1NmOEdRSmE2WkNVbWZiMEFfVmlBazFVQVk3a3F0NnJzS0lzUXZ6dW9mVXp6TGQ0aUtrb0xhQzhsQUJ6dHBr?oc=5",
-      "pubDate": "2026-11-13T15:25:44.000Z",
-      "description": "UEFA sets up human rights board for Euro 2028&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Sterling set for biggest weekly drop since September",
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxObDFpb05ZZWFVb21Fa3UwS1o5THY5dWtUU0FobS1WSDMtbUo3YXFEVTV4VmdncXM3WWJhNjJibERoT2huS1VBcXVVb1pSZDVGQUItZ0tmM2VwQXNXSDNHamV6elVoZVFKSGFKQjJSUzNmUkhWcEhBaHphWjZzMTNBS0JYSnF3TTZueUpybU05QVFhejBRSDk1YQ?oc=5",
-      "pubDate": "2026-11-13T13:20:26.000Z",
-      "description": "Sterling set for biggest weekly drop since September&nbsp;&nbsp;Reuters",
       "source": "Reuters"
     },
     {
@@ -338,32 +310,11 @@
       "source": "Google News"
     },
     {
-      "title": "Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services",
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/other20261112a.htm",
-      "pubDate": "2026-11-12T18:30:00.000Z",
-      "description": "Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services",
-      "source": "Federal Reserve"
-    },
-    {
-      "title": "Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027",
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm",
-      "pubDate": "2026-11-12T17:45:00.000Z",
-      "description": "Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027",
-      "source": "Federal Reserve"
-    },
-    {
       "title": "Yen Hovers Near Key 160 Level, Fueling Intervention Concerns",
       "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNRm84VTU3NGN1SjlwOWF6Q0NvRHlpMEFLNFAxUTFYTE1EWUZVWWFlYjlYX3liNEdURl9RTVh3amV2NzdCdHFyaHJrT2t3U3NORU9hZm9pLWdiREhONUZZTFJ6cDNGR1FqRTYyLTdVZlkzWXM4X1dreXJpX3RKR1ZLMWM4YzZjTThNVmxFN0M5bWF5Y2JYTHotTUdYMGZEME4wSjMzV01JODd2c2dka3dN?oc=5",
       "pubDate": "2026-11-12T16:16:31.000Z",
       "description": "Yen Hovers Near Key 160 Level, Fueling Intervention Concerns&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
-    },
-    {
-      "title": "Federal Reserve Board issues enforcement action with former employee of United Community Bank",
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261112a.htm",
-      "pubDate": "2026-11-12T16:00:00.000Z",
-      "description": "Federal Reserve Board issues enforcement action with former employee of United Community Bank",
-      "source": "Federal Reserve"
     },
     {
       "title": "Barr, American Inequality and the Future of AI",
@@ -604,13 +555,6 @@
       "source": "Bank of Japan"
     },
     {
-      "title": "Federal Reserve Board announces approval of two applications by Mutual Federal Bancorp, MHC, and MFB Bancorp, Inc.",
-      "link": "https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm",
-      "pubDate": "2026-11-09T21:00:00.000Z",
-      "description": "Federal Reserve Board announces approval of two applications by Mutual Federal Bancorp, MHC, and MFB Bancorp, Inc.",
-      "source": "Federal Reserve"
-    },
-    {
       "title": "Top Yen Forecaster Predicts 147 Per Dollar as Rate Gap Narrows",
       "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOUkhFZDd5R1ZESDNFUk9CTXFrMzlFRktiR1JsWmdfTWlyd1lhbTh0TFRqbF9IWm9QaWloUlJSOUh5MVVXR0dpLVg2R2I0MDM3ZXlGdjVsdUNNYW9la2pEOEtEU3dfOF8wX2g3aGVCQ01uc0EzYW16T3dKN0dPNmRkd3pVdjJaMGRvYU11RV9tUlE5MTFHYVp4SXV5RDJyVkhCbHhNRjhPRkpUZHYtaWtVR1JpSQ?oc=5",
       "pubDate": "2026-11-09T21:00:00.000Z",
@@ -637,6 +581,55 @@
       "pubDate": "2026-11-09T09:00:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
+    },
+    {
+      "title": "Amounts Outstanding in the Call Money Market (Oct.)",
+      "link": "http://www.boj.or.jp/en/statistics/market/short/call/call.xlsx",
+      "pubDate": "2026-11-09T06:00:00.000Z",
+      "description": "",
+      "source": "Bank of Japan"
+    },
+    {
+      "title": "Consumption Activity Index",
+      "link": "http://www.boj.or.jp/en/research/research_data/cai/index.htm",
+      "pubDate": "2026-11-09T05:00:00.000Z",
+      "description": "",
+      "source": "Bank of Japan"
+    },
+    {
+      "title": "Dollar gains after U.S. inflation data reinforces Fed rate-hike bets",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSUYyclpRR1BKNWFtY2UtSVppQklwSjJ4eUFsRlY1ejhVMmNjSmFKWU94UUpZemxQWWU1dTY2MmFJYXpvNWVoY2FPc1VIRzdUTDRFSC11SldydldwZlB4c1pDQ1VyTVh2VDBxN2NTNEQ1TDlaaXo1M19uRFZhRmh3WWkyUml0eDdtMU95c19MYUNIckhjRFlLcHk1X3B6SDdfSFRkV0F30gGrAUFVX3lxTE9vTl9vR09vWEk2Y25WYW1UdmtSekotREsxVmNVSXlPMDVjTlY4T1RqdUw0ZnVOc0JwcTFVRnBrUUhuR043R2x6VW5ZRE1pQjByOW8zNEZmVVpfMVNEbkN6a2ZaQkdfdE1vODNwSzlBb0FyQkktbXJZMUZTZkxQVW44RXVnYUQtWm41ZTBmWVlHTG1oeGMtUGQtMVg2ZnJTSW9mZXNYRVNLZzJrMA?oc=5",
+      "pubDate": "2026-11-09T03:06:00.000Z",
+      "description": "Dollar gains after U.S. inflation data reinforces Fed rate-hike bets&nbsp;&nbsp;CNBC",
+      "source": "Google News"
+    },
+    {
+      "title": "Japan Spent Record $50 Billion in Single Day to Bolster Yen",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQY3lMUTI3WFg1TUlac1JZQ1Y4bDN0ejNVNXpKdmZJczk5dVlhaDlSbmhkamQ2TGdvb09hbWhJMjZpSFRCcDBpRUoxOHI1b3I4U0hMSXhWaUxYQWE2MVhXV2p1dGNBN3gtZXY4eWU5RVVpMzQ4ZFplbjI1aGV3UXZ4R2oxX0I0VHdmTXMtalRRMDVZQVdvellGandneGNCX0xhWjZLbDR2ZlBZM0VDdWktVw?oc=5",
+      "pubDate": "2026-11-09T02:58:00.000Z",
+      "description": "Japan Spent Record $50 Billion in Single Day to Bolster Yen&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "Japan Says Three-Day Yen Intervention Lifted Yen in Summer",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOU0hIS1pBbjdyM0tsMldxMjVocXRtMW5PV2RrSkE4SjYxeG9zVG9FTTJnNi1IUkFUeU4yazRJMHlUenJHeWJkb1c3Tl95TUs0d2pwTmFGS2tkMlBGNzVnYm52Mjhfc1RFYWNBLVlWUWk3and3aUNzMlNuT0QyZHgwZWdsdnZvQ05NSkZRdVl2aGdfQl80WEZSMDV0WU9hMUJsQzJYOHlKNUI0RlJONVE?oc=5",
+      "pubDate": "2026-11-09T00:48:00.000Z",
+      "description": "Japan Says Three-Day Yen Intervention Lifted Yen in Summer&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "Market Operations by the Bank of Japan (Oct.)",
+      "link": "http://www.boj.or.jp/en/statistics/boj/fm/ope/m_release/2026/ope2610.xlsx",
+      "pubDate": "2026-11-08T23:50:00.000Z",
+      "description": "",
+      "source": "Bank of Japan"
+    },
+    {
+      "title": "Monetary Base and the Bank of Japan's Transactions (Oct.)",
+      "link": "http://www.boj.or.jp/en/statistics/boj/other/mbt/mbt2610.pdf",
+      "pubDate": "2026-11-08T23:50:00.000Z",
+      "description": "",
+      "source": "Bank of Japan"
     },
     {
       "title": "Christine Lagarde: Interview with Yomiuri Shimbun",
@@ -679,6 +672,13 @@
       "pubDate": "2026-10-28T09:47:20.000Z",
       "description": "The Bank of Canada today increased its target for the overnight rate by 25 basis points to 2.5%, with the Bank Rate at 2.75% and the deposit rate at 2.45%.",
       "source": "Bank of Canada"
+    },
+    {
+      "title": "Bowman, Supervisory Modernization After Silicon Valley Bank",
+      "link": "https://www.federalreserve.gov/newsevents/speech/bowman20261014a.htm",
+      "pubDate": "2026-10-15T02:55:00.000Z",
+      "description": "Speech At the Bangkok Economic Festival, Reinventing Bretton Woods Committee, Bangkok, Thailand",
+      "source": "Federal Reserve"
     },
     {
       "title": "Bank of Canada Board launches process to fill external Deputy Governor position",

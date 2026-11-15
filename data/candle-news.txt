@@ -1,12 +1,3 @@
-1790850900	EUR	German Buba President Nagel Speaks			
-1790856000	GBP	MPC Member Mann Speaks			
-1790859900	USD	FOMC Member Barkin Speaks			
-1790859900	USD	FOMC Member Collins Speaks			
-1790859900	USD	FOMC Member Schmid Speaks			
-1790861400	EUR	ECB President Lagarde Speaks			
-1790863200	USD	ISM Manufacturing PMI	54.5	55	54.6
-1790863200	USD	FOMC Member Waller Speaks			
-1790868600	CHF	SNB Chairman Schlegel Speaks			
 1790875800	USD	FOMC Member Jefferson Speaks			
 1790881200	USD	FOMC Member Bowman Speaks			
 1790881500	CAD	Gov Council Member Rogers Speaks			
@@ -325,3 +316,4 @@
 1797404400	GBP	Inflation Rate YoY			
 1797413400	GBP	S&P Global Manufacturing PMI Flash			
 1797413400	GBP	S&P Global Services PMI Flash			
+1797427800	USD	Retail Sales MoM			
