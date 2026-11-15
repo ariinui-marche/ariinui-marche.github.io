@@ -1441,3 +1441,17 @@ body.cc-lock { overflow: hidden; }
 .alr-nav:disabled { opacity: .3; cursor: default; }
 .alr-sym { margin: 2px 0; }
 .alr-sym > summary { cursor: pointer; padding: 6px 0; font-size: 13px; }
+
+/* Vue « 4 graphiques » (appui long sur le nom du symbole) */
+#candleMulti { position: absolute; inset: 0; z-index: 80; background: #0b0b0b; display: flex; flex-direction: column; }
+#candleMulti[hidden] { display: none; }
+.cm-bar { flex: 0 0 48px; display: flex; align-items: center; justify-content: space-between; padding: 0 4px 0 14px; border-bottom: 1px solid #1d1f24; }
+.cm-bar b { font-size: 18px; color: var(--text, #e5e5e5); }
+#candleMultiClose { background: none; border: 0; color: #e5e5e5; font-size: 22px; min-width: 48px; min-height: 48px; cursor: pointer; }
+.cm-scroll { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; touch-action: pan-y; }
+.cm-sec { position: relative; border-bottom: 6px solid #15161a; }
+.cm-tf { display: block; padding: 8px 12px 0; font-size: 14px; font-weight: 700; color: #e5e5e5; letter-spacing: .5px; }
+.cm-chart { min-height: 300px; }
+.cm-chart svg { display: block; }
+.cm-load { padding: 130px 0; text-align: center; color: #9aa0a6; }
+#candleBody .cd-name { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }

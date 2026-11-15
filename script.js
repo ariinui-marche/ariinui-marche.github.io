@@ -2154,7 +2154,9 @@ async function candleDeepLoad(id, h) {
 }
 
 // Dimensions réelles de la zone graphique (plein écran) : le SVG est dessiné à l'échelle 1:1, sans déformation
+let candleDimsOv = null; // vue « 4 graphiques » : dimensions imposées le temps de dessiner un panneau
 function candleDims() {
+  if (candleDimsOv) return candleDimsOv;
   const rpp = rp.on ? document.getElementById('rpBar') : null; // replay : barres du haut et du bas masquées, seule la barre d'icônes du replay occupe le bas
   return { W: Math.max(300, Math.round(window.innerWidth)), H: Math.max(300, Math.round(window.innerHeight) - (rpp && rpp.offsetHeight ? rpp.offsetHeight : rp.on ? 58 : candleClean ? 46 : 90)) };
 }
@@ -2875,11 +2877,78 @@ document.getElementById('candleList').addEventListener('click', (e) => { // clic
   const n = e.target.closest('.cd-name');
   if (!n || candleMini || document.getElementById('candleBody').classList.contains('collapsed')) return;
   e.stopPropagation(); e.preventDefault();
+  if (Date.now() - candleLpFired < 800) return; // le relâchement d'un appui long ne doit pas basculer le mode épuré
   candleClean = !candleClean;
   try { localStorage.setItem('candleClean', candleClean ? '1' : '0'); } catch (err) { /* pas de stockage */ }
   candleCleanApply();
   if (candlePoh) candleRender();
 }, true);
+// ===== Appui long sur le nom du symbole : vue « 4 graphiques » (5m / 1h / 4h / 1D) empilés, défilement vertical, ✕ pour revenir =====
+// Un clic court sur le nom garde son rôle (mode épuré). Chaque panneau réutilise candleSvg() avec son timeframe (candleHistTf et dimensions imposées le temps du dessin, puis restaurés).
+const CANDLE_MULTI_TFS = [['5', '5m'], ['60', '1h'], ['240', '4h'], ['1D', '1D']];
+let candleLpFired = 0, candleMultiId = null, candleMultiTimer = 0, candleMultiSig = {};
+function candleMultiSvg(id, tf) {
+  const day = candleDays[id];
+  if (!day) return '';
+  const sv = { tf: candleHistTf, ov: candleDimsOv, hits: candleEvHits[id] };
+  candleHistTf = tf;
+  candleDimsOv = { W: Math.max(300, Math.round(window.innerWidth)), H: Math.max(300, Math.round(window.innerHeight * 0.62)) };
+  try { return candleSvg(day, (candleDaily || {})[id], CANDLE_DEF, id).replace(/pcClip/g, 'pcClipM' + tf); } // id de clip propre à chaque panneau (pas de doublon dans la page)
+  catch (e) { return ''; }
+  finally { candleHistTf = sv.tf; candleDimsOv = sv.ov; candleEvHits[id] = sv.hits; }
+}
+function candleMultiRender() {
+  const box = document.getElementById('candleMulti');
+  if (!box || box.hidden || !candleMultiId) return;
+  for (const [tf] of CANDLE_MULTI_TFS) {
+    const h = candleHistData[candleMultiId + '|' + tf], l = h && h.bars.length ? h.bars[h.bars.length - 1] : null;
+    const sig = l ? h.bars.length + ':' + l[0] + ':' + l[4] : '';
+    if (sig && candleMultiSig[tf] === sig) continue; // rien de nouveau : pas de redessin
+    candleMultiSig[tf] = sig;
+    const el = box.querySelector(`[data-tf="${tf}"] .cm-chart`);
+    if (el) el.innerHTML = sig ? candleMultiSvg(candleMultiId, tf) : '<div class="cm-load">Loading\u2026</div>';
+  }
+}
+function candleMultiClose() {
+  clearInterval(candleMultiTimer); candleMultiTimer = 0; candleMultiId = null;
+  const box = document.getElementById('candleMulti');
+  if (box) { box.hidden = true; box.innerHTML = ''; }
+}
+function candleMultiOpen(id) {
+  const box = document.getElementById('candleMulti');
+  if (!box || rp.on || candleMini || !candleDays[id]) return;
+  candleMultiClose();
+  candleMultiId = id; candleMultiSig = {};
+  const p = CORR_ALL_PAIRS.find((x) => x.id === id);
+  box.innerHTML = `<div class="cm-bar"><b>${p ? p.label : id}</b><button type="button" id="candleMultiClose" aria-label="Close">&#10005;</button></div>` +
+    `<div class="cm-scroll">${CANDLE_MULTI_TFS.map(([tf, lbl]) => `<section class="cm-sec" data-tf="${tf}"><span class="cm-tf">${lbl}</span><div class="cm-chart"></div></section>`).join('')}</div>`;
+  box.hidden = false;
+  document.getElementById('candleMultiClose').addEventListener('click', candleMultiClose);
+  const tick = () => {
+    if (!candleMultiId) return;
+    if (document.getElementById('candleBody').classList.contains('collapsed')) { candleMultiClose(); return; }
+    for (const [tf] of CANDLE_MULTI_TFS) candleHistEnsure(id, tf);
+    if (candlePlans || candleZones) candleHistEnsure(id, '1'); // plans / zones du 5m : confirmation sur les barres 1 min (comme le mode 5m habituel)
+    candleMultiRender();
+  };
+  tick();
+  candleMultiTimer = setInterval(tick, 2000);
+}
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && candleMultiId) candleMultiClose(); });
+(function candleLongPress() {
+  const list = document.getElementById('candleList');
+  let t = 0, x0 = 0, y0 = 0;
+  const cancel = () => { clearTimeout(t); t = 0; };
+  list.addEventListener('pointerdown', (e) => {
+    const n = e.target.closest('.cd-name'), row = n && n.closest('.cd-row');
+    if (!row || !row.dataset.id || candleMini || rp.on || (e.pointerType === 'mouse' && e.button !== 0) || document.getElementById('candleBody').classList.contains('collapsed')) return;
+    cancel(); x0 = e.clientX; y0 = e.clientY;
+    t = setTimeout(() => { t = 0; candleLpFired = Date.now(); candleMultiOpen(row.dataset.id); }, 500);
+  });
+  list.addEventListener('pointermove', (e) => { if (t && Math.hypot(e.clientX - x0, e.clientY - y0) > 10) cancel(); });
+  ['pointerup', 'pointercancel', 'pointerleave'].forEach((ev) => list.addEventListener(ev, () => { if (t) cancel(); }));
+  list.addEventListener('contextmenu', (e) => { if (e.target.closest('.cd-name')) e.preventDefault(); }); // pas de menu contextuel du navigateur pendant l'appui long
+})();
 // Roue (remplace le bouton viseur) : menu déroulant « Aim » (recentrer) + « 4 candles » (liste défilante des 4 bougies de tous les symboles)
 // Aim : recentre EXCLUSIVEMENT sur les bougies POH (12h … 07h) : D3-D0 et l'historique sortent à gauche, prix cadré sur les POH seuls
 function candleAim(id) {
