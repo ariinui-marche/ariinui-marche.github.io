@@ -2886,20 +2886,25 @@ document.getElementById('candleList').addEventListener('click', (e) => { // clic
 // ===== Appui long sur le nom du symbole : vue « 4 graphiques » (5m / 1h / 4h / 1D) empilés, défilement vertical, ✕ pour revenir =====
 // Un clic court sur le nom garde son rôle (mode épuré). Chaque panneau réutilise candleSvg() avec son timeframe (candleHistTf et dimensions imposées le temps du dessin, puis restaurés).
 const CANDLE_MULTI_TFS = [['5', '5m'], ['60', '1h'], ['240', '4h'], ['1D', '1D']];
-let candleLpFired = 0, candleMultiId = null, candleMultiTimer = 0, candleMultiSig = {};
-const candleMultiViews = {}; // 'PAIR|tf' -> vue (zoom / décalage) propre à chaque panneau, gardée tant que la page reste ouverte
-const candleMultiView = (id, tf) => Object.assign({}, CANDLE_DEF, candleMultiViews[id + '|' + tf] || {});
+const CANDLE_MULTI_LS = 'candleMultiViewV1'; // zoom / position de chaque graphique (un par timeframe, communs à tous les symboles), enregistrés dans le téléphone
+let candleLpFired = 0, candleMultiId = null, candleMultiTimer = 0, candleMultiSig = {}, candleMultiViews = {};
+try { candleMultiViews = JSON.parse(localStorage.getItem(CANDLE_MULTI_LS) || '{}') || {}; } catch (e) { candleMultiViews = {}; }
+const candleMultiView = (tf) => Object.assign({}, CANDLE_DEF, candleMultiViews[tf] || {});
+function candleMultiSave() { try { localStorage.setItem(CANDLE_MULTI_LS, JSON.stringify(candleMultiViews)); } catch (e) { /* quota */ } }
+function candleMultiDims() { // un graphique occupe toute la zone sous l'en-tête de la diapo (36 px)
+  const sc = document.querySelector('#candleMulti .cm-scroll');
+  return { W: Math.max(300, Math.round((sc && sc.clientWidth) || window.innerWidth)), H: Math.max(300, Math.round(((sc && sc.clientHeight) || window.innerHeight - 48) - 36)) };
+}
 function candleMultiWith(tf, fn) { // exécute fn() avec le timeframe et les dimensions du panneau, puis restaure l'état du graphique principal
   const sv = { tf: candleHistTf, ov: candleDimsOv };
-  candleHistTf = tf;
-  candleDimsOv = { W: Math.max(300, Math.round(window.innerWidth)), H: Math.max(300, Math.round(window.innerHeight * 0.62)) };
+  candleHistTf = tf; candleDimsOv = candleMultiDims();
   try { return fn(); } finally { candleHistTf = sv.tf; candleDimsOv = sv.ov; }
 }
 function candleMultiSvg(id, tf) {
   const day = candleDays[id];
   if (!day) return '';
   const hits = candleEvHits[id];
-  try { return candleMultiWith(tf, () => candleSvg(day, (candleDaily || {})[id], candleMultiView(id, tf), id)).replace(/pcClip/g, 'pcClipM' + tf); } // id de clip propre à chaque panneau (pas de doublon dans la page)
+  try { return candleMultiWith(tf, () => candleSvg(day, (candleDaily || {})[id], candleMultiView(tf), id)).replace(/pcClip/g, 'pcClipM' + tf); } // id de clip propre à chaque panneau (pas de doublon dans la page)
   catch (e) { return ''; }
   finally { candleEvHits[id] = hits; }
 }
@@ -2909,7 +2914,7 @@ function candleMultiDraw(tf) { // (re)dessine un panneau avec sa vue ; bouton «
   if (!sec) return;
   const h = candleHistData[id + '|' + tf];
   sec.querySelector('.cm-chart').innerHTML = h && h.bars.length ? candleMultiSvg(id, tf) : '<div class="cm-load">Loading\u2026</div>';
-  sec.querySelector('.cm-reset').hidden = candleViewIsDef(candleMultiView(id, tf));
+  sec.querySelector('.cm-reset').hidden = candleViewIsDef(candleMultiView(tf));
 }
 function candleMultiRender() {
   const box = document.getElementById('candleMulti');
@@ -2922,6 +2927,12 @@ function candleMultiRender() {
     candleMultiDraw(tf);
   }
 }
+function candleMultiIndex() { const sc = document.querySelector('#candleMulti .cm-scroll'); return sc ? Math.round(sc.scrollLeft / Math.max(1, sc.clientWidth)) : 0; }
+function candleMultiTabs() { const i = candleMultiIndex(); document.querySelectorAll('#candleMulti .cm-tabs button').forEach((b, k) => b.classList.toggle('on', k === i)); }
+function candleMultiGo(i) { // diapo suivante / précédente (sans boucle)
+  const sc = document.querySelector('#candleMulti .cm-scroll');
+  if (sc) sc.scrollTo({ left: candleClamp(i, 0, CANDLE_MULTI_TFS.length - 1) * sc.clientWidth, behavior: 'smooth' });
+}
 function candleMultiClose() {
   clearInterval(candleMultiTimer); candleMultiTimer = 0; candleMultiId = null;
   const box = document.getElementById('candleMulti');
@@ -2933,11 +2944,14 @@ function candleMultiOpen(id) {
   candleMultiClose();
   candleMultiId = id; candleMultiSig = {};
   const p = CORR_ALL_PAIRS.find((x) => x.id === id);
-  box.innerHTML = `<div class="cm-bar"><b>${p ? p.label : id}</b><button type="button" id="candleMultiClose" aria-label="Close">&#10005;</button></div>` +
+  box.innerHTML = `<div class="cm-bar"><b>${p ? p.label : id}</b><div class="cm-tabs">${CANDLE_MULTI_TFS.map(([tf, lbl], i) => `<button type="button" data-i="${i}">${lbl}</button>`).join('')}</div><button type="button" id="candleMultiClose" aria-label="Close">&#10005;</button></div>` +
     `<div class="cm-scroll">${CANDLE_MULTI_TFS.map(([tf, lbl]) => `<section class="cm-sec" data-tf="${tf}"><div class="cm-head"><span class="cm-tf">${lbl}</span><button type="button" class="cm-reset" hidden>Reset</button></div><div class="cm-chart"></div></section>`).join('')}</div>`;
   box.hidden = false;
   document.getElementById('candleMultiClose').addEventListener('click', candleMultiClose);
-  box.querySelectorAll('.cm-reset').forEach((b) => b.addEventListener('click', () => { const tf = b.closest('.cm-sec').dataset.tf; delete candleMultiViews[id + '|' + tf]; candleMultiDraw(tf); }));
+  box.querySelectorAll('.cm-tabs button').forEach((b) => b.addEventListener('click', () => candleMultiGo(+b.dataset.i)));
+  box.querySelector('.cm-scroll').addEventListener('scroll', candleMultiTabs, { passive: true });
+  box.querySelectorAll('.cm-reset').forEach((b) => b.addEventListener('click', () => { const tf = b.closest('.cm-sec').dataset.tf; delete candleMultiViews[tf]; candleMultiSave(); candleMultiDraw(tf); }));
+  candleMultiTabs();
   const tick = () => {
     if (!candleMultiId) return;
     if (document.getElementById('candleBody').classList.contains('collapsed')) { candleMultiClose(); return; }
@@ -2948,13 +2962,14 @@ function candleMultiOpen(id) {
   tick();
   candleMultiTimer = setInterval(tick, 2000);
 }
-// Gestes des panneaux : glisser à l'horizontale = déplacer les bougies ; pincer = zoom (horizontal = bougies, vertical = prix, le centre suit les doigts) ; souris : glisser = déplacer, molette = zoom (Maj = prix).
-// touch-action: pan-y : le glissement vertical reste réservé au défilement de la liste des 4 graphiques.
+window.addEventListener('resize', () => { if (candleMultiId) { const i = candleMultiIndex(); candleMultiSig = {}; candleMultiRender(); candleMultiGo(i); } });
+// Gestes (comme le graphique principal) : vue d'origine + glissement horizontal = timeframe suivant / précédent ; sinon glisser = déplacer ;
+// pincer = zoom (horizontal = bougies, vertical = prix, le centre suit les doigts) ; molette (Maj = prix). Zoom et position enregistrés (par timeframe).
 (function candleMultiGestures() {
   const box = document.getElementById('candleMulti');
   if (!box) return;
-  const mg = { pts: new Map(), tf: null, id: null, v0: null, cur: null, start: [], rect: null, geo: null, mode: null };
-  const apply = () => { candleMultiViews[mg.id + '|' + mg.tf] = Object.assign({}, mg.cur); candleMultiDraw(mg.tf); };
+  const mg = { pts: new Map(), tf: null, id: null, v0: null, cur: null, start: [], rect: null, geo: null, mode: null, dx: 0 };
+  const apply = () => { candleMultiViews[mg.tf] = Object.assign({}, mg.cur); candleMultiDraw(mg.tf); };
   const priceAt = (v, yPx) => { const g = mg.geo, rngV = g.baseRng / v.yz, lo = g.cenB + v.yp * g.baseRng - rngV / 2; return lo + (1 - (yPx - CANDLE_G.TOP) / g.plotH) * rngV; };
   box.addEventListener('pointerdown', (e) => {
     const ch = e.target.closest('.cm-chart');
@@ -2964,9 +2979,9 @@ function candleMultiOpen(id) {
     mg.tf = tf; mg.id = candleMultiId;
     mg.pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
     try { ch.setPointerCapture(e.pointerId); } catch (err) { /* ignoré */ }
-    if (mg.pts.size === 1) mg.mode = null;
+    if (mg.pts.size === 1) { mg.mode = null; mg.dx = 0; }
     mg.geo = candleMultiWith(tf, () => candleGeo(mg.id));
-    mg.v0 = candleMultiView(mg.id, tf); mg.cur = Object.assign({}, mg.v0);
+    mg.v0 = candleMultiView(tf); mg.cur = Object.assign({}, mg.v0);
     mg.start = [...mg.pts.values()].map((q) => ({ x: q.x, y: q.y }));
     mg.rect = ch.getBoundingClientRect();
   });
@@ -2987,17 +3002,25 @@ function candleMultiOpen(id) {
       apply();
     } else if (pts.length === 1 && mg.start.length >= 1 && mg.mode !== 'done') {
       const dx = pts[0].x - mg.start[0].x, dy = pts[0].y - mg.start[0].y;
-      if (!mg.mode) { if (Math.hypot(dx, dy) < 8) return; mg.mode = e.pointerType !== 'mouse' && Math.abs(dy) > Math.abs(dx) ? 'scroll' : 'pan'; } // au doigt, un geste surtout vertical = défilement de la liste, le graphique ne bouge pas
-      if (mg.mode !== 'pan') return;
-      v.xp = v0.xp + dx / g.plotW;
-      if (e.pointerType === 'mouse') v.yp = v0.yp + dy * ((g.baseRng / v0.yz) / g.plotH) / g.baseRng; // souris : déplacement aussi en vertical (au doigt, le vertical fait défiler la liste)
-      apply();
+      if (!mg.mode) {
+        if (Math.hypot(dx, dy) < 8) return;
+        mg.mode = candleViewIsDef(mg.v0) && Math.abs(dx) > Math.abs(dy) * 1.2 ? 'swipe' : 'pan'; // vue d'origine : glisser à l'horizontale = changer de timeframe
+      }
+      mg.dx = dx;
+      if (mg.mode === 'pan') {
+        v.xp = v0.xp + dx / g.plotW;
+        v.yp = v0.yp + dy * ((g.baseRng / v0.yz) / g.plotH) / g.baseRng;
+        apply();
+      }
     }
   });
   const end = (e) => {
     if (!mg.pts.has(e.pointerId)) return;
+    const wasMode = mg.mode, wasSingle = mg.pts.size === 1;
     mg.pts.delete(e.pointerId);
     if (mg.pts.size > 0) { mg.mode = 'done'; return; } // un doigt levé pendant un pincement : on attend la fin du geste
+    if (wasMode === 'pan' || wasMode === 'pinch' || wasMode === 'done') candleMultiSave();
+    if (wasMode === 'swipe' && wasSingle && e.type === 'pointerup' && Math.abs(mg.dx) > 50) candleMultiGo(candleMultiIndex() + (mg.dx < 0 ? 1 : -1));
     mg.mode = null;
   };
   box.addEventListener('pointerup', end);
@@ -3008,7 +3031,7 @@ function candleMultiOpen(id) {
     const ch = e.target.closest('.cm-chart');
     if (!ch || !candleMultiId || !ch.querySelector('svg')) return;
     e.preventDefault();
-    const tf = ch.closest('.cm-sec').dataset.tf, id = candleMultiId, g = candleMultiWith(tf, () => candleGeo(id)), v = candleMultiView(id, tf), T = CANDLE_G.TOP, rc = ch.getBoundingClientRect(), yPx = e.clientY - rc.top, xPx = e.clientX - rc.left;
+    const tf = ch.closest('.cm-sec').dataset.tf, id = candleMultiId, g = candleMultiWith(tf, () => candleGeo(id)), v = candleMultiView(tf), T = CANDLE_G.TOP, rc = ch.getBoundingClientRect(), yPx = e.clientY - rc.top, xPx = e.clientX - rc.left;
     const f = (e.deltaY || e.deltaX) < 0 ? 1.15 : 1 / 1.15;
     if (e.shiftKey) {
       const rngV = g.baseRng / v.yz, lo = g.cenB + v.yp * g.baseRng - rngV / 2, p0 = lo + (1 - (yPx - T) / g.plotH) * rngV;
@@ -3020,7 +3043,7 @@ function candleMultiOpen(id) {
       v.xz = candleClamp(z0 * f, CANDLE_XZ[0], CANDLE_XZ[1]);
       v.xp = (xPx - (xPx - v.xp * g.plotW) * (v.xz / z0)) / g.plotW;
     }
-    candleMultiViews[id + '|' + tf] = v; candleMultiDraw(tf);
+    candleMultiViews[tf] = v; candleMultiSave(); candleMultiDraw(tf);
   }, { passive: false });
 })();
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && candleMultiId) candleMultiClose(); });
