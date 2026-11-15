@@ -2887,15 +2887,29 @@ document.getElementById('candleList').addEventListener('click', (e) => { // clic
 // Un clic court sur le nom garde son rôle (mode épuré). Chaque panneau réutilise candleSvg() avec son timeframe (candleHistTf et dimensions imposées le temps du dessin, puis restaurés).
 const CANDLE_MULTI_TFS = [['5', '5m'], ['60', '1h'], ['240', '4h'], ['1D', '1D']];
 let candleLpFired = 0, candleMultiId = null, candleMultiTimer = 0, candleMultiSig = {};
+const candleMultiViews = {}; // 'PAIR|tf' -> vue (zoom / décalage) propre à chaque panneau, gardée tant que la page reste ouverte
+const candleMultiView = (id, tf) => Object.assign({}, CANDLE_DEF, candleMultiViews[id + '|' + tf] || {});
+function candleMultiWith(tf, fn) { // exécute fn() avec le timeframe et les dimensions du panneau, puis restaure l'état du graphique principal
+  const sv = { tf: candleHistTf, ov: candleDimsOv };
+  candleHistTf = tf;
+  candleDimsOv = { W: Math.max(300, Math.round(window.innerWidth)), H: Math.max(300, Math.round(window.innerHeight * 0.62)) };
+  try { return fn(); } finally { candleHistTf = sv.tf; candleDimsOv = sv.ov; }
+}
 function candleMultiSvg(id, tf) {
   const day = candleDays[id];
   if (!day) return '';
-  const sv = { tf: candleHistTf, ov: candleDimsOv, hits: candleEvHits[id] };
-  candleHistTf = tf;
-  candleDimsOv = { W: Math.max(300, Math.round(window.innerWidth)), H: Math.max(300, Math.round(window.innerHeight * 0.62)) };
-  try { return candleSvg(day, (candleDaily || {})[id], CANDLE_DEF, id).replace(/pcClip/g, 'pcClipM' + tf); } // id de clip propre à chaque panneau (pas de doublon dans la page)
+  const hits = candleEvHits[id];
+  try { return candleMultiWith(tf, () => candleSvg(day, (candleDaily || {})[id], candleMultiView(id, tf), id)).replace(/pcClip/g, 'pcClipM' + tf); } // id de clip propre à chaque panneau (pas de doublon dans la page)
   catch (e) { return ''; }
-  finally { candleHistTf = sv.tf; candleDimsOv = sv.ov; candleEvHits[id] = sv.hits; }
+  finally { candleEvHits[id] = hits; }
+}
+function candleMultiDraw(tf) { // (re)dessine un panneau avec sa vue ; bouton « Reset » visible seulement si la vue n'est plus celle d'origine
+  const box = document.getElementById('candleMulti'), id = candleMultiId;
+  const sec = box && id ? box.querySelector(`.cm-sec[data-tf="${tf}"]`) : null;
+  if (!sec) return;
+  const h = candleHistData[id + '|' + tf];
+  sec.querySelector('.cm-chart').innerHTML = h && h.bars.length ? candleMultiSvg(id, tf) : '<div class="cm-load">Loading\u2026</div>';
+  sec.querySelector('.cm-reset').hidden = candleViewIsDef(candleMultiView(id, tf));
 }
 function candleMultiRender() {
   const box = document.getElementById('candleMulti');
@@ -2905,8 +2919,7 @@ function candleMultiRender() {
     const sig = l ? h.bars.length + ':' + l[0] + ':' + l[4] : '';
     if (sig && candleMultiSig[tf] === sig) continue; // rien de nouveau : pas de redessin
     candleMultiSig[tf] = sig;
-    const el = box.querySelector(`[data-tf="${tf}"] .cm-chart`);
-    if (el) el.innerHTML = sig ? candleMultiSvg(candleMultiId, tf) : '<div class="cm-load">Loading\u2026</div>';
+    candleMultiDraw(tf);
   }
 }
 function candleMultiClose() {
@@ -2921,9 +2934,10 @@ function candleMultiOpen(id) {
   candleMultiId = id; candleMultiSig = {};
   const p = CORR_ALL_PAIRS.find((x) => x.id === id);
   box.innerHTML = `<div class="cm-bar"><b>${p ? p.label : id}</b><button type="button" id="candleMultiClose" aria-label="Close">&#10005;</button></div>` +
-    `<div class="cm-scroll">${CANDLE_MULTI_TFS.map(([tf, lbl]) => `<section class="cm-sec" data-tf="${tf}"><span class="cm-tf">${lbl}</span><div class="cm-chart"></div></section>`).join('')}</div>`;
+    `<div class="cm-scroll">${CANDLE_MULTI_TFS.map(([tf, lbl]) => `<section class="cm-sec" data-tf="${tf}"><div class="cm-head"><span class="cm-tf">${lbl}</span><button type="button" class="cm-reset" hidden>Reset</button></div><div class="cm-chart"></div></section>`).join('')}</div>`;
   box.hidden = false;
   document.getElementById('candleMultiClose').addEventListener('click', candleMultiClose);
+  box.querySelectorAll('.cm-reset').forEach((b) => b.addEventListener('click', () => { const tf = b.closest('.cm-sec').dataset.tf; delete candleMultiViews[id + '|' + tf]; candleMultiDraw(tf); }));
   const tick = () => {
     if (!candleMultiId) return;
     if (document.getElementById('candleBody').classList.contains('collapsed')) { candleMultiClose(); return; }
@@ -2934,6 +2948,81 @@ function candleMultiOpen(id) {
   tick();
   candleMultiTimer = setInterval(tick, 2000);
 }
+// Gestes des panneaux : glisser à l'horizontale = déplacer les bougies ; pincer = zoom (horizontal = bougies, vertical = prix, le centre suit les doigts) ; souris : glisser = déplacer, molette = zoom (Maj = prix).
+// touch-action: pan-y : le glissement vertical reste réservé au défilement de la liste des 4 graphiques.
+(function candleMultiGestures() {
+  const box = document.getElementById('candleMulti');
+  if (!box) return;
+  const mg = { pts: new Map(), tf: null, id: null, v0: null, cur: null, start: [], rect: null, geo: null, mode: null };
+  const apply = () => { candleMultiViews[mg.id + '|' + mg.tf] = Object.assign({}, mg.cur); candleMultiDraw(mg.tf); };
+  const priceAt = (v, yPx) => { const g = mg.geo, rngV = g.baseRng / v.yz, lo = g.cenB + v.yp * g.baseRng - rngV / 2; return lo + (1 - (yPx - CANDLE_G.TOP) / g.plotH) * rngV; };
+  box.addEventListener('pointerdown', (e) => {
+    const ch = e.target.closest('.cm-chart');
+    if (!ch || !candleMultiId || !ch.querySelector('svg') || (e.pointerType === 'mouse' && e.button !== 0)) return;
+    const tf = ch.closest('.cm-sec').dataset.tf;
+    if (mg.tf !== tf || mg.id !== candleMultiId) { mg.pts.clear(); mg.mode = null; }
+    mg.tf = tf; mg.id = candleMultiId;
+    mg.pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    try { ch.setPointerCapture(e.pointerId); } catch (err) { /* ignoré */ }
+    if (mg.pts.size === 1) mg.mode = null;
+    mg.geo = candleMultiWith(tf, () => candleGeo(mg.id));
+    mg.v0 = candleMultiView(mg.id, tf); mg.cur = Object.assign({}, mg.v0);
+    mg.start = [...mg.pts.values()].map((q) => ({ x: q.x, y: q.y }));
+    mg.rect = ch.getBoundingClientRect();
+  });
+  box.addEventListener('pointermove', (e) => {
+    if (!mg.pts.has(e.pointerId) || !mg.id) return;
+    mg.pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    const pts = [...mg.pts.values()], g = mg.geo, r = mg.rect, T = CANDLE_G.TOP, v = mg.cur, v0 = mg.v0;
+    if (pts.length >= 2 && mg.start.length >= 2 && Math.hypot(mg.start[0].x - mg.start[1].x, mg.start[0].y - mg.start[1].y) >= 60) { // pincement
+      mg.mode = 'pinch';
+      const [a, b] = pts, [a0, b0] = mg.start;
+      const cx0 = (a0.x + b0.x) / 2 - r.left, cy0 = (a0.y + b0.y) / 2 - r.top, cx = (a.x + b.x) / 2 - r.left, cy = (a.y + b.y) / 2 - r.top;
+      const sx = Math.max(Math.abs(a.x - b.x), 40) / Math.max(Math.abs(a0.x - b0.x), 40), sy = Math.max(Math.abs(a.y - b.y), 40) / Math.max(Math.abs(a0.y - b0.y), 40);
+      v.xz = candleClamp(v0.xz * sx, CANDLE_XZ[0], CANDLE_XZ[1]);
+      v.xp = (cx - (cx0 - v0.xp * g.plotW) * (v.xz / v0.xz)) / g.plotW;
+      v.yz = candleClamp(v0.yz * sy, CANDLE_YZ[0], CANDLE_YZ[1]);
+      const rng2 = g.baseRng / v.yz, lo2 = priceAt(v0, cy0) - (1 - (cy - T) / g.plotH) * rng2;
+      v.yp = (lo2 + rng2 / 2 - g.cenB) / g.baseRng;
+      apply();
+    } else if (pts.length === 1 && mg.start.length >= 1 && mg.mode !== 'done') {
+      const dx = pts[0].x - mg.start[0].x, dy = pts[0].y - mg.start[0].y;
+      if (!mg.mode) { if (Math.hypot(dx, dy) < 8) return; mg.mode = e.pointerType !== 'mouse' && Math.abs(dy) > Math.abs(dx) ? 'scroll' : 'pan'; } // au doigt, un geste surtout vertical = défilement de la liste, le graphique ne bouge pas
+      if (mg.mode !== 'pan') return;
+      v.xp = v0.xp + dx / g.plotW;
+      if (e.pointerType === 'mouse') v.yp = v0.yp + dy * ((g.baseRng / v0.yz) / g.plotH) / g.baseRng; // souris : déplacement aussi en vertical (au doigt, le vertical fait défiler la liste)
+      apply();
+    }
+  });
+  const end = (e) => {
+    if (!mg.pts.has(e.pointerId)) return;
+    mg.pts.delete(e.pointerId);
+    if (mg.pts.size > 0) { mg.mode = 'done'; return; } // un doigt levé pendant un pincement : on attend la fin du geste
+    mg.mode = null;
+  };
+  box.addEventListener('pointerup', end);
+  box.addEventListener('pointercancel', end);
+  window.addEventListener('pointerup', end, true);
+  window.addEventListener('pointercancel', end, true);
+  box.addEventListener('wheel', (e) => { // souris : molette = zoom des bougies autour du curseur ; Maj + molette = zoom du prix
+    const ch = e.target.closest('.cm-chart');
+    if (!ch || !candleMultiId || !ch.querySelector('svg')) return;
+    e.preventDefault();
+    const tf = ch.closest('.cm-sec').dataset.tf, id = candleMultiId, g = candleMultiWith(tf, () => candleGeo(id)), v = candleMultiView(id, tf), T = CANDLE_G.TOP, rc = ch.getBoundingClientRect(), yPx = e.clientY - rc.top, xPx = e.clientX - rc.left;
+    const f = (e.deltaY || e.deltaX) < 0 ? 1.15 : 1 / 1.15;
+    if (e.shiftKey) {
+      const rngV = g.baseRng / v.yz, lo = g.cenB + v.yp * g.baseRng - rngV / 2, p0 = lo + (1 - (yPx - T) / g.plotH) * rngV;
+      v.yz = candleClamp(v.yz * f, CANDLE_YZ[0], CANDLE_YZ[1]);
+      const rng2 = g.baseRng / v.yz, lo2 = p0 - (1 - (yPx - T) / g.plotH) * rng2;
+      v.yp = (lo2 + rng2 / 2 - g.cenB) / g.baseRng;
+    } else {
+      const z0 = v.xz;
+      v.xz = candleClamp(z0 * f, CANDLE_XZ[0], CANDLE_XZ[1]);
+      v.xp = (xPx - (xPx - v.xp * g.plotW) * (v.xz / z0)) / g.plotW;
+    }
+    candleMultiViews[id + '|' + tf] = v; candleMultiDraw(tf);
+  }, { passive: false });
+})();
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && candleMultiId) candleMultiClose(); });
 (function candleLongPress() {
   const list = document.getElementById('candleList');

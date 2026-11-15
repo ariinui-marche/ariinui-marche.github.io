@@ -1450,8 +1450,11 @@ body.cc-lock { overflow: hidden; }
 #candleMultiClose { background: none; border: 0; color: #e5e5e5; font-size: 22px; min-width: 48px; min-height: 48px; cursor: pointer; }
 .cm-scroll { flex: 1; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; touch-action: pan-y; }
 .cm-sec { position: relative; border-bottom: 6px solid #15161a; }
-.cm-tf { display: block; padding: 8px 12px 0; font-size: 14px; font-weight: 700; color: #e5e5e5; letter-spacing: .5px; }
-.cm-chart { min-height: 300px; }
+.cm-head { display: flex; align-items: center; justify-content: space-between; padding: 8px 12px 0; }
+.cm-tf { font-size: 14px; font-weight: 700; color: #e5e5e5; letter-spacing: .5px; }
+.cm-reset { background: #1c1c1e; border: 1px solid #2a2a2e; color: #e5e5e5; border-radius: 8px; padding: 4px 12px; font-size: 12px; cursor: pointer; }
+.cm-reset[hidden] { display: none; }
+.cm-chart { min-height: 300px; touch-action: pan-y; -webkit-user-select: none; user-select: none; }
 .cm-chart svg { display: block; }
 .cm-load { padding: 130px 0; text-align: center; color: #9aa0a6; }
 #candleBody .cd-name { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
