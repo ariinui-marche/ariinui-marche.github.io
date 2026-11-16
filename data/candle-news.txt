@@ -1,8 +1,3 @@
-1790931600	EUR	Inflation Rate YoY Flash	3.8%	3.6%	3.3%
-1790944200	USD	Non Farm Payrolls	60K	90K	186K
-1790944200	USD	Unemployment Rate	4.2%	4.1%	4.1%
-1790949600	USD	FOMC Member Logan Speaks			
-1790960400	USD	FOMC Member Goolsbee Speaks			
 1790969700	EUR	German Buba President Nagel Speaks			
 1791176400	JPY	Consumer Confidence	35.4		35.5
 1791186300	EUR	German Buba President Nagel Speaks			
@@ -198,8 +193,8 @@
 1794786600	JPY	GDP Growth Rate QoQ Prel	0%	0.1%	0.3%
 1794805200	GBP	Claimant Count Change			
 1794823200	USD	FOMC Member Barr Speaks			
-1794835800	CAD	Core Inflation Rate MoM s.a			0.1%
-1794835800	CAD	Inflation Rate YoY		3.2%	3.1%
+1794835800	CAD	Core Inflation Rate MoM s.a	0.1%		0.1%
+1794835800	CAD	Inflation Rate YoY	3.1%	3.2%	3.1%
 1794837900	USD	FOMC Member Williams Speaks			
 1794848400	USD	Fed Chairman Warsh Speaks			
 1794856500	USD	FOMC Member Hammack Speaks			
@@ -213,9 +208,9 @@
 1794943500	USD	FOMC Member Williams Speaks			
 1794959400	JPY	Balance of Trade		-956B ¥	-556.5B ¥
 1794969900	EUR	German Buba President Nagel Speaks			
-1794985200	GBP	Core Inflation Rate MoM			0.2%
-1794985200	GBP	Inflation Rate YoY		3.7%	3.5%
-1795008600	USD	Housing Starts		1.268M	1.221M
+1794985200	GBP	Core Inflation Rate MoM		0.3%	0.2%
+1794985200	GBP	Inflation Rate YoY		3.6%	3.5%
+1795008600	USD	Housing Starts		1.245M	1.221M
 1795008600	USD	Building Permits Prel		1.377M	1.4M
 1795011900	EUR	ECB President Lagarde Speaks			
 1795014000	GBP	BOE Gov Bailey Speaks			
@@ -235,7 +230,7 @@
 1795122000	USD	FOMC Member Barkin Speaks			
 1795131000	JPY	Inflation Rate YoY			2.1%
 1795131000	USD	FOMC Member Paulson Speaks			
-1795158000	GBP	Retail Sales MoM			-0.4%
+1795158000	GBP	Retail Sales MoM		0%	-0.4%
 1795162500	EUR	ECB President Lagarde Speaks			
 1795179600	EUR	German Buba President Nagel Speaks			
 1795181100	USD	FOMC Member Waller Speaks			
@@ -245,10 +240,10 @@
 1795606200	USD	Core PCE Price Index m/m			
 1795606200	USD	Prelim GDP q/q			
 1795613400	USD	Personal Spending MoM			0.5%
-1795613400	USD	Core PCE Price Index MoM			0.3%
+1795613400	USD	Core PCE Price Index MoM		0.3%	0.3%
 1795613400	USD	Personal Income MoM			0.2%
-1795613400	USD	GDP Growth Rate QoQ 2nd Est			1.5%
-1795613400	USD	Durable Goods Orders MoM			1.8%
+1795613400	USD	GDP Growth Rate QoQ 2nd Est		3.4%	1.5%
+1795613400	USD	Durable Goods Orders MoM		0%	1.8%
 1796038200	CAD	GDP m/m			
 1796045400	CAD	GDP Growth Rate Annualized			3.3%
 1796045400	CAD	GDP Growth Rate QoQ			0.8%
@@ -301,8 +296,8 @@
 1796968800	GBP	GDP m/m			
 1796972400	GBP	GDP MoM			0.2%
 1797205800	JPY	Tankan Large Manufacturers Index			24
-1797255000	CAD	Core Inflation Rate MoM s.a			
-1797255000	CAD	Inflation Rate YoY			
+1797255000	CAD	Core Inflation Rate MoM s.a			0.1%
+1797255000	CAD	Inflation Rate YoY			3.1%
 1797318000	GBP	Unemployment Rate			
 1797337800	USD	Core PPI m/m			
 1797337800	USD	PPI m/m			
@@ -313,3 +308,8 @@
 1797413400	GBP	S&P Global Manufacturing PMI Flash			
 1797413400	GBP	S&P Global Services PMI Flash			
 1797427800	USD	Retail Sales MoM			
+1797508800	GBP	Interest Rate			4%
+1797513300	EUR	Deposit Facility Rate			
+1797513300	EUR	ECB Interest Rate Decision			
+1797514200	USD	Housing Starts			
+1797514200	USD	Building Permits Prel			

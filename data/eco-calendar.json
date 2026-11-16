@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-16T07:51:42.324Z",
+  "timestamp": "2026-11-16T17:30:11.624Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -13301,7 +13301,7 @@
       "impact": "Low",
       "forecast": "0.3%",
       "previous": "-0.5%",
-      "actual": ""
+      "actual": "0.2%"
     },
     {
       "title": "FOMC Member Barr Speaks",
@@ -13319,7 +13319,7 @@
       "impact": "High",
       "forecast": "0.3%",
       "previous": "0.1%",
-      "actual": ""
+      "actual": "0.1%"
     },
     {
       "title": "Median CPI y/y",
@@ -13328,7 +13328,7 @@
       "impact": "High",
       "forecast": "2.0%",
       "previous": "1.9%",
-      "actual": ""
+      "actual": "2.0%"
     },
     {
       "title": "Trimmed CPI y/y",
@@ -13337,7 +13337,7 @@
       "impact": "High",
       "forecast": "1.9%",
       "previous": "1.8%",
-      "actual": ""
+      "actual": "1.8%"
     },
     {
       "title": "Common CPI y/y",
@@ -13346,7 +13346,7 @@
       "impact": "Medium",
       "forecast": "2.5%",
       "previous": "2.4%",
-      "actual": ""
+      "actual": "2.5%"
     },
     {
       "title": "Core CPI m/m",
@@ -13355,7 +13355,7 @@
       "impact": "Low",
       "forecast": "0.2%",
       "previous": "0.0%",
-      "actual": ""
+      "actual": "0.4%"
     },
     {
       "title": "Empire State Manufacturing Index",
@@ -13364,7 +13364,7 @@
       "impact": "Low",
       "forecast": "17.6",
       "previous": "25.5",
-      "actual": ""
+      "actual": "7.8"
     },
     {
       "title": "FOMC Member Williams Speaks",
@@ -13378,11 +13378,11 @@
     {
       "title": "Cleveland Fed Inflation Expectations",
       "country": "USD",
-      "date": "2026-11-16T09:48:00-05:00",
+      "date": "2026-11-16T09:45:00-05:00",
       "impact": "Low",
       "forecast": "",
       "previous": "3.3%",
-      "actual": ""
+      "actual": "3.5%"
     },
     {
       "title": "Fed Chairman Warsh Speaks",
@@ -14074,7 +14074,7 @@
       "date": "2026-11-19T10:30:00-05:00",
       "impact": "Low",
       "forecast": "",
-      "previous": "",
+      "previous": "61B",
       "actual": ""
     },
     {
