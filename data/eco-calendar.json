@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-15T21:15:11.311Z",
+  "timestamp": "2026-11-16T01:03:21.859Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -13193,7 +13193,7 @@
       "impact": "Low",
       "forecast": "",
       "previous": "50.9",
-      "actual": ""
+      "actual": "51.7"
     },
     {
       "title": "Prelim GDP Price Index y/y",
@@ -13202,7 +13202,7 @@
       "impact": "Low",
       "forecast": "2.6%",
       "previous": "2.6%",
-      "actual": ""
+      "actual": "2.4%"
     },
     {
       "title": "Prelim GDP q/q",
@@ -13211,7 +13211,7 @@
       "impact": "Low",
       "forecast": "0.1%",
       "previous": "0.3%",
-      "actual": ""
+      "actual": "0.0%"
     },
     {
       "title": "Rightmove HPI m/m",
@@ -13220,7 +13220,7 @@
       "impact": "Low",
       "forecast": "",
       "previous": "1.0%",
-      "actual": ""
+      "actual": "-1.8%"
     },
     {
       "title": "New Home Prices m/m",
@@ -14198,7 +14198,7 @@
       "title": "FOMC Member Waller Speaks",
       "country": "USD",
       "date": "2026-11-20T08:25:00-05:00",
-      "impact": "Medium",
+      "impact": "Low",
       "forecast": "",
       "previous": "",
       "actual": ""

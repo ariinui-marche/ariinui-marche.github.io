@@ -1,4 +1,3 @@
-1790896800	USD	FOMC Member Logan Speaks			
 1790931600	EUR	Inflation Rate YoY Flash	3.8%	3.6%	3.3%
 1790944200	USD	Non Farm Payrolls	60K	90K	186K
 1790944200	USD	Unemployment Rate	4.2%	4.1%	4.1%
@@ -196,7 +195,7 @@
 1794589200	USD	FOMC Member Daly Speaks			
 1794614400	USD	FOMC Member Jefferson Speaks			
 1794654000	GBP	MPC Member Greene Speaks			
-1794786600	JPY	GDP Growth Rate QoQ Prel		0.1%	0.3%
+1794786600	JPY	GDP Growth Rate QoQ Prel	0%	0.1%	0.3%
 1794805200	GBP	Claimant Count Change			
 1794823200	USD	FOMC Member Barr Speaks			
 1794835800	CAD	Core Inflation Rate MoM s.a			0.1%
