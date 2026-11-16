@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-16T01:03:21.859Z",
+  "timestamp": "2026-11-16T07:51:42.324Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -13229,7 +13229,7 @@
       "impact": "Low",
       "forecast": "",
       "previous": "-0.14%",
-      "actual": ""
+      "actual": "-0.15%"
     },
     {
       "title": "Fixed Asset Investment ytd/y",
@@ -13238,7 +13238,7 @@
       "impact": "Low",
       "forecast": "-7.0%",
       "previous": "-7.2%",
-      "actual": ""
+      "actual": "-8.1%"
     },
     {
       "title": "Industrial Production y/y",
@@ -13247,7 +13247,7 @@
       "impact": "Low",
       "forecast": "5.3%",
       "previous": "5.5%",
-      "actual": ""
+      "actual": "4.8%"
     },
     {
       "title": "NBS Press Conference",
@@ -13265,7 +13265,7 @@
       "impact": "Low",
       "forecast": "0.8%",
       "previous": "1.1%",
-      "actual": ""
+      "actual": "0.4%"
     },
     {
       "title": "Unemployment Rate",
@@ -13274,7 +13274,7 @@
       "impact": "Low",
       "forecast": "5.2%",
       "previous": "5.2%",
-      "actual": ""
+      "actual": "5.1%"
     },
     {
       "title": "Revised Industrial Production m/m",
@@ -13283,7 +13283,7 @@
       "impact": "Low",
       "forecast": "2.2%",
       "previous": "2.2%",
-      "actual": ""
+      "actual": "2.0%"
     },
     {
       "title": "Claimant Count Change",
@@ -13389,6 +13389,15 @@
       "country": "USD",
       "date": "2026-11-16T12:00:00-05:00",
       "impact": "High",
+      "forecast": "",
+      "previous": "",
+      "actual": ""
+    },
+    {
+      "title": "FOMC Member Hammack Speaks",
+      "country": "USD",
+      "date": "2026-11-16T14:15:00-05:00",
+      "impact": "Low",
       "forecast": "",
       "previous": "",
       "actual": ""
