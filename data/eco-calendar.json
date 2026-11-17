@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-17T08:49:06.539Z",
+  "timestamp": "2026-11-17T17:55:11.795Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -13526,7 +13526,7 @@
       "impact": "Low",
       "forecast": "19.1",
       "previous": "18.5",
-      "actual": ""
+      "actual": "26.5"
     },
     {
       "title": "German ZEW Economic Sentiment",
@@ -13535,7 +13535,7 @@
       "impact": "Low",
       "forecast": "28.8",
       "previous": "28.1",
-      "actual": ""
+      "actual": "35.6"
     },
     {
       "title": "FOMC Member Musalem Speaks",
@@ -13553,7 +13553,7 @@
       "impact": "Low",
       "forecast": "241K",
       "previous": "249K",
-      "actual": ""
+      "actual": "245K"
     },
     {
       "title": "ADP Weekly Employment Change",
@@ -13562,7 +13562,7 @@
       "impact": "Low",
       "forecast": "",
       "previous": "19.8K",
-      "actual": ""
+      "actual": "23.8K"
     },
     {
       "title": "Foreign Securities Purchases",
@@ -13571,7 +13571,7 @@
       "impact": "Low",
       "forecast": "14.85B",
       "previous": "-17.31B",
-      "actual": ""
+      "actual": "19.46B"
     },
     {
       "title": "Core Retail Sales m/m",
@@ -13580,7 +13580,7 @@
       "impact": "High",
       "forecast": "0.4%",
       "previous": "0.9%",
-      "actual": ""
+      "actual": "0.6%"
     },
     {
       "title": "Retail Sales m/m",
@@ -13589,7 +13589,7 @@
       "impact": "High",
       "forecast": "0.1%",
       "previous": "0.8%",
-      "actual": ""
+      "actual": "0.2%"
     },
     {
       "title": "Import Prices m/m",
@@ -13598,7 +13598,7 @@
       "impact": "Low",
       "forecast": "0.7%",
       "previous": "1.1%",
-      "actual": ""
+      "actual": "1.1%"
     },
     {
       "title": "FOMC Member Waller Speaks",
@@ -13616,7 +13616,7 @@
       "impact": "Low",
       "forecast": "76.8%",
       "previous": "76.9%",
-      "actual": ""
+      "actual": "76.4%"
     },
     {
       "title": "Industrial Production m/m",
@@ -13625,7 +13625,16 @@
       "impact": "Low",
       "forecast": "0.0%",
       "previous": "0.7%",
-      "actual": ""
+      "actual": "-0.4%"
+    },
+    {
+      "title": "GDT Price Index",
+      "country": "NZD",
+      "date": "2026-11-17T09:29:00-05:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "3.0%",
+      "actual": "0.0%"
     },
     {
       "title": "FOMC Member Hammack Speaks",
@@ -13643,7 +13652,7 @@
       "impact": "Low",
       "forecast": "0.5%",
       "previous": "0.4%",
-      "actual": ""
+      "actual": "0.5%"
     },
     {
       "title": "NAHB Housing Market Index",
@@ -13652,16 +13661,7 @@
       "impact": "Low",
       "forecast": "29",
       "previous": "29",
-      "actual": ""
-    },
-    {
-      "title": "GDT Price Index",
-      "country": "NZD",
-      "date": "2026-11-17T10:50:00-05:00",
-      "impact": "Low",
-      "forecast": "",
-      "previous": "3.0%",
-      "actual": ""
+      "actual": "25"
     },
     {
       "title": "FOMC Member Williams Speaks",
@@ -13875,7 +13875,7 @@
       "country": "USD",
       "date": "2026-11-18T10:00:00-05:00",
       "impact": "Low",
-      "forecast": "-2.1%",
+      "forecast": "-1.8%",
       "previous": "-7.3%",
       "actual": ""
     },
@@ -13884,7 +13884,7 @@
       "country": "USD",
       "date": "2026-11-18T10:30:00-05:00",
       "impact": "Low",
-      "forecast": "",
+      "forecast": "-0.3M",
       "previous": "4.7M",
       "actual": ""
     },

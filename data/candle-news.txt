@@ -204,7 +204,7 @@
 1794880800	NZD	Inflation Expectations q/q	2.36%		2.34%
 1794898800	GBP	Unemployment Rate	4.6%	4.7%	4.7%
 1794918600	USD	FOMC Member Musalem Speaks			
-1794922200	USD	Retail Sales MoM		0.2%	0.8%
+1794922200	USD	Retail Sales MoM	0.2%	0.2%	0.8%
 1794924600	USD	FOMC Member Waller Speaks			
 1794925800	USD	FOMC Member Hammack Speaks			
 1794943500	USD	FOMC Member Williams Speaks			
@@ -311,7 +311,7 @@
 1797404400	GBP	Inflation Rate YoY			
 1797413400	GBP	S&P Global Manufacturing PMI Flash			
 1797413400	GBP	S&P Global Services PMI Flash			
-1797427800	USD	Retail Sales MoM			
+1797427800	USD	Retail Sales MoM			0.2%
 1797508800	GBP	Interest Rate			4%
 1797513300	EUR	Deposit Facility Rate			
 1797513300	EUR	ECB Interest Rate Decision			
