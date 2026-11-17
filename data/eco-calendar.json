@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-17T00:58:47.764Z",
+  "timestamp": "2026-11-17T08:49:06.539Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -13472,7 +13472,7 @@
       "impact": "High",
       "forecast": "",
       "previous": "2.34%",
-      "actual": ""
+      "actual": "2.36%"
     },
     {
       "title": "Tertiary Industry Activity m/m",
@@ -13481,7 +13481,7 @@
       "impact": "Low",
       "forecast": "0.1%",
       "previous": "-0.1%",
-      "actual": ""
+      "actual": "-0.5%"
     },
     {
       "title": "Average Earnings Index 3m/y",
@@ -13490,7 +13490,7 @@
       "impact": "Medium",
       "forecast": "3.5%",
       "previous": "3.7%",
-      "actual": ""
+      "actual": "3.6%"
     },
     {
       "title": "Claimant Count Change",
@@ -13499,7 +13499,7 @@
       "impact": "Low",
       "forecast": "25.4K",
       "previous": "30.3K",
-      "actual": ""
+      "actual": "33.2K"
     },
     {
       "title": "Unemployment Rate",
@@ -13508,7 +13508,7 @@
       "impact": "Low",
       "forecast": "4.7%",
       "previous": "4.7%",
-      "actual": ""
+      "actual": "4.6%"
     },
     {
       "title": "EU Economic Forecasts",

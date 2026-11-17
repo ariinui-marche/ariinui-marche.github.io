@@ -201,8 +201,8 @@
 1794870600	USD	FOMC Member Barkin Speaks			
 1794871800	USD	FOMC Member Goolsbee Speaks			
 1794873600	NZD	RBNZ Gov Breman Speaks			
-1794880800	NZD	Inflation Expectations q/q			2.34%
-1794898800	GBP	Unemployment Rate		4.7%	4.7%
+1794880800	NZD	Inflation Expectations q/q	2.36%		2.34%
+1794898800	GBP	Unemployment Rate	4.6%	4.7%	4.7%
 1794918600	USD	FOMC Member Musalem Speaks			
 1794922200	USD	Retail Sales MoM		0.2%	0.8%
 1794924600	USD	FOMC Member Waller Speaks			
@@ -302,7 +302,7 @@
 1797205800	JPY	Tankan Large Manufacturers Index			24
 1797255000	CAD	Core Inflation Rate MoM s.a			0.1%
 1797255000	CAD	Inflation Rate YoY			3.1%
-1797318000	GBP	Unemployment Rate			
+1797318000	GBP	Unemployment Rate			4.6%
 1797337800	USD	Core PPI m/m			
 1797337800	USD	PPI m/m			
 1797341400	USD	PPI MoM			0.3%
@@ -318,3 +318,5 @@
 1797514200	USD	Housing Starts			
 1797514200	USD	Building Permits Prel			
 1797550200	JPY	Inflation Rate YoY			
+1797561000	JPY	Interest Rate			
+1797577200	GBP	Retail Sales MoM			
