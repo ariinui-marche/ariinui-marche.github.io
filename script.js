@@ -2123,7 +2123,7 @@ function candleHistBars(id) {
   if (!h || !h.bars.length) return null;
   return rp.on && rp.id === id ? candleRpBars(h.bars, id) : h.bars;
 }
-const CANDLE_STATIC = new Set('EURUSD GBPUSD USDJPY AUDUSD USDCAD USDCHF NZDUSD XAUUSD BTCUSD ETHUSD EURJPY GBPJPY EURGBP EURAUD EURCAD EURCHF EURNZD GBPAUD GBPCAD GBPCHF GBPNZD AUDJPY CADJPY CHFJPY NZDJPY AUDCAD AUDCHF AUDNZD CADCHF NZDCAD NZDCHF'.split(' ').map((p) => p + '|1D')); // couples paire|timeframe servis par data/candles/<tf>/<paire>.json (workflow fetch-static-candles.yml)
+const CANDLE_STATIC = new Set('EURUSD GBPUSD USDJPY AUDUSD USDCAD USDCHF NZDUSD XAUUSD BTCUSD ETHUSD EURJPY GBPJPY EURGBP EURAUD EURCAD EURCHF EURNZD GBPAUD GBPCAD GBPCHF GBPNZD AUDJPY CADJPY CHFJPY NZDJPY AUDCAD AUDCHF AUDNZD CADCHF NZDCAD NZDCHF'.split(' ').flatMap((p) => [p + '|1D', p + '|60', p + '|240'])); // couples paire|timeframe servis par data/candles/<tf>/<paire>.json (workflow fetch-static-candles.yml)
 function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bougies de la paire affichée, puis redessine EN PLACE
   if (!id || (candleHistTf === '0' && !tfx)) return;
   if (!tfx && (candlePlans || candleZones) && candleHistTf === '5') candleHistEnsure(id, '1'); // plans en 5 min : confirmation sur les barres 1 min
@@ -2133,7 +2133,7 @@ function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bou
   // 1 min / 5 min : après le 1er chargement complet (historique), on ne redemande que les bougies récentes (dernière = en formation)
   const since = (tf === '1' || tf === '5') && h.bars.length ? h.bars[h.bars.length - 1][0] : 0;
   const staticFirst = CANDLE_STATIC.has(key) // test : fichier statique GitHub Pages (0 requête Vercel), repli sur l'API si absent ou vide
-    ? fetch(`./data/candles/${tf}/${id}.json`, { cache: 'no-store', signal: AbortSignal.timeout(20000) }).then((r) => (r.ok ? r.json() : null)).then((j) => (j && j.bars && j.bars.length ? j : null)).catch(() => null)
+    ? fetch(tf === '1D' ? `./data/candles/1D/${id}.json` : `https://raw.githubusercontent.com/ariinui-marche/ariinui-marche.github.io/candle-data/${tf}/${id}.json`, { cache: 'no-store', signal: AbortSignal.timeout(20000) }).then((r) => (r.ok ? r.json() : null)).then((j) => (j && j.bars && j.bars.length ? j : null)).catch(() => null)
     : Promise.resolve(null);
   return staticFirst
     .then((sj) => sj || fetch(`https://ariinuiirgina.vercel.app/api/poh-candles?pair=${id}&tf=${tf}${since ? '&since=' + since : ''}`, { cache: 'no-store', signal: AbortSignal.timeout(20000) }).then((r) => (r.ok ? r.json() : null)))

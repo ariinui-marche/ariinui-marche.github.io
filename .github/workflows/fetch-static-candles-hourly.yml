@@ -1,0 +1,39 @@
+name: Fetch Static Candles (31 paires 1h + 4h)
+
+on:
+  schedule:
+    - cron: '3 * * * *'   # chaque heure, juste après la clôture de la barre 1h
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: candle-data
+  cancel-in-progress: false
+
+jobs:
+  candles:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: candle-data
+          path: out
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install --no-save --no-package-lock ws
+      - run: OUT=out node scripts/fetch-static-candles.mjs ALL 60
+      - run: OUT=out node scripts/fetch-static-candles.mjs ALL 240
+      - name: Publier sur la branche candle-data (un seul commit, écrasé : le dépôt ne grossit pas)
+        working-directory: out
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --staged --quiet && exit 0
+          git checkout --orphan tmp
+          git commit -qm "Bougies 1h/4h $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push -f origin tmp:candle-data

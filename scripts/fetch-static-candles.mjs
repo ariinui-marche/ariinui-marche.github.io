@@ -7,7 +7,7 @@ import WebSocket from 'ws';
 const ALL = 'EURUSD GBPUSD USDJPY AUDUSD USDCAD USDCHF NZDUSD XAUUSD BTCUSD ETHUSD EURJPY GBPJPY EURGBP EURAUD EURCAD EURCHF EURNZD GBPAUD GBPCAD GBPCHF GBPNZD AUDJPY CADJPY CHFJPY NZDJPY AUDCAD AUDCHF AUDNZD CADCHF NZDCAD NZDCHF'.split(' ');
 const [ARG = 'ALL', TF = '1D'] = process.argv.slice(2); // PAIRE, 'EURUSD,GBPUSD' ou ALL
 const PAIRS = ARG === 'ALL' ? ALL : ARG.split(',');
-const N_UPDATE = 400, N_FIRST = 5000; // barres demandées : mise à jour / 1er passage (historique complet)
+const OUT = process.env.OUT || 'data/candles', N_UPDATE = 400, N_FIRST = +(process.env.N_FIRST || 5000); // barres demandées : mise à jour / 1er passage (historique complet)
 
 function fetchBars(sym, tf, n) {
   return new Promise((resolve, reject) => {
@@ -35,7 +35,7 @@ function fetchBars(sym, tf, n) {
 }
 
 async function run(PAIR) {
-  const FILE = `data/candles/${TF}/${PAIR}.json`;
+  const FILE = `${OUT}/${TF}/${PAIR}.json`;
   let old = { pair: PAIR, tf: TF, bars: [] };
   try { old = JSON.parse(readFileSync(FILE, 'utf8')); } catch { /* 1er passage */ }
   const fresh = (await fetchBars(`IC:${PAIR}`, TF, old.bars.length ? N_UPDATE : N_FIRST)).filter((b) => b.slice(0, 5).every((v) => v != null)).map((b) => b.slice(0, 5));
@@ -44,7 +44,7 @@ async function run(PAIR) {
   for (const b of fresh) map.set(b[0], b); // même horodatage = barre remplacée par la plus récente
   const bars = [...map.values()].sort((a, b) => a[0] - b[0]);
   if (bars.length < old.bars.length) throw new Error('fusion incohérente');
-  mkdirSync(`data/candles/${TF}`, { recursive: true });
+  mkdirSync(`${OUT}/${TF}`, { recursive: true });
   writeFileSync(FILE, JSON.stringify({ pair: PAIR, tf: TF, updated: new Date().toISOString(), bars }));
   console.log(`${PAIR} ${TF} : ${old.bars.length} -> ${bars.length} barres (dernière ${new Date(bars[bars.length - 1][0] * 1000).toISOString()})`);
 }
