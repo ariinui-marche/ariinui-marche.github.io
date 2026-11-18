@@ -2222,9 +2222,9 @@ function candleFibLevels(dly) {
 const CANDLE_UP = '#00a3e0', CANDLE_DN = '#ffffff'; // couleurs des bougies comme TradingView (haussière bleue, baissière blanche)
 const CANDLE_G = { AX: 60, TOP: 44, BOT: 14, LEFT: 4 }; // géométrie du graphique (aussi utilisée par les gestes)
 if (candleClean) CANDLE_G.AX = 0;
-// Biais multi-timeframe (D1, H4, H1, M5, M1) : dernière clôture vs EMA 8 ET EMA 21 (▲ prix au-dessus des deux, ▼ en dessous des deux, 0 = mixte). 0 aussi = pas assez de bougies / pas encore chargées.
+// Biais multi-timeframe (D1, H4, H1) : dernière clôture vs EMA 8 ET EMA 21 (▲ prix au-dessus des deux, ▼ en dessous des deux, 0 = mixte). 0 aussi = pas assez de bougies / pas encore chargées.
 // load = true : les bougies manquantes sont chargées en fond (4 à la fois), puis graphique / filtre « Bias » remis à jour. Résultat mis en cache tant que les bougies ne changent pas.
-const CANDLE_BIAS_TFS = [['d', '1D', [8, 21], true], ['h', '240', [8, 21], true], ['u', '60', [8, 21], true], ['m', '5', [8, 21], true], ['n', '1', [8, 21], true]];
+const CANDLE_BIAS_TFS = [['d', '1D', [8, 21], true], ['h', '240', [8, 21], true], ['u', '60', [8, 21], true]];
 const candleBiasQ = [], candleBiasQd = new Set(), candleBiasCache = {};
 let candleBiasRun = 0, candleBiasTimer = 0;
 function candleBiasLoad(id, tf) {
@@ -2548,7 +2548,7 @@ function candleSvg(day, dly, view, id) {
   const tag = `<line x1="0" x2="${W - AX}" y1="${yl.toFixed(1)}" y2="${yl.toFixed(1)}" stroke="${lastCol}" stroke-width="0.7" stroke-dasharray="2 3"/>` +
     `<rect x="${W - AX + 1}" y="${(yl - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
     `<text x="${W - AX + 6}" y="${(yl + 4).toFixed(1)}" class="pc-ax" style="fill:#fff">${fmt(lastC)}</text>`;
-  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${RP ? '' : grid}<g clip-path="url(#pcClip)">${sepSvg}${zoneSvg}${hb}${fib}${pd}${body}${evb}${RP ? candleRpOverlay(y, W - AX, fmt, lo, hi, lastC) : candleAlSvg(id, y, W - AX, lo, hi, fmt)}</g>${RP || !id ? '' : (() => { const bi = candleBias(id), c = (v) => (v > 0 ? '#089981' : v < 0 ? '#f23645' : '#787b86'), g = (v) => (v > 0 ? '▲' : v < 0 ? '▼' : '—'); return `<text x="${W - AX - 6}" y="14" text-anchor="end" class="pc-ax" style="font-size:10px"><tspan fill="#d1d4dc">BIAS</tspan><tspan fill="${c(bi.d)}" dx="6">D1 ${g(bi.d)}</tspan><tspan fill="${c(bi.h)}" dx="6">H4 ${g(bi.h)}</tspan><tspan fill="${c(bi.u)}" dx="6">H1 ${g(bi.u)}</tspan><tspan fill="${c(bi.m)}" dx="6">M5 ${g(bi.m)}</tspan><tspan fill="${c(bi.n)}" dx="6">M1 ${g(bi.n)}</tspan></text>`; })()}${RP ? '' : axl}${RP ? '' : tag}${!RP && candleXh && candleXh.id === id ? candleXhSvg(candleXh, W, H, AX, TOP, BOT, lo, rng, fmt, xhT) : ''}</svg>`;
+  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${RP ? '' : grid}<g clip-path="url(#pcClip)">${sepSvg}${zoneSvg}${hb}${fib}${pd}${body}${evb}${RP ? candleRpOverlay(y, W - AX, fmt, lo, hi, lastC) : candleAlSvg(id, y, W - AX, lo, hi, fmt)}</g>${RP || !id ? '' : (() => { const bi = candleBias(id), c = (v) => (v > 0 ? '#089981' : v < 0 ? '#f23645' : '#787b86'), g = (v) => (v > 0 ? '▲' : v < 0 ? '▼' : '—'); return `<text x="${W - AX - 6}" y="14" text-anchor="end" class="pc-ax" style="font-size:10px"><tspan fill="#d1d4dc">BIAS</tspan><tspan fill="${c(bi.d)}" dx="6">D1 ${g(bi.d)}</tspan><tspan fill="${c(bi.h)}" dx="6">H4 ${g(bi.h)}</tspan><tspan fill="${c(bi.u)}" dx="6">H1 ${g(bi.u)}</tspan></text>`; })()}${RP ? '' : axl}${RP ? '' : tag}${!RP && candleXh && candleXh.id === id ? candleXhSvg(candleXh, W, H, AX, TOP, BOT, lo, rng, fmt, xhT) : ''}</svg>`;
 }
 
 // Sweep de la bougie daily précédente (même règle qu'Arii SNIPER) : D0 dépasse le haut de D1 et clôture dessous, ou casse son bas et clôture dessus
@@ -2583,7 +2583,7 @@ function candleInfo(id) {
   const fibo = !!(fl && sc && fl.some((f) => f.v >= sc.lo && f.v <= sc.hi));
   const sweep = !!(day && candleSweep(dly, day));
   const bi = candleBias(id, false);
-  return { fibo, sweep, both: fibo && sweep, alert: candleHasAlert(id), bias: bi.d !== 0 && bi.d === bi.h && bi.h === bi.u && bi.u === bi.m && bi.m === bi.n, doji: candleDojiRank(id) >= 0 };
+  return { fibo, sweep, both: fibo && sweep, alert: candleHasAlert(id), bias: bi.d !== 0 && bi.d === bi.h && bi.h === bi.u, doji: candleDojiRank(id) >= 0 };
 }
 function candleFilterUpdate() {
   const ids = CORR_ALL_PAIRS.filter((p) => candlePoh && candlePoh[p.id]).map((p) => p.id);
@@ -2778,8 +2778,8 @@ function candleRender() {
     date = day.d;
     candleDays[p.id] = day;
     const cls = s.group === 0 ? 'cd-bull' : s.group === 1 ? 'cd-bear' : '';
-    if (candleMini) return `<div class="cd-row cd-mini ${cls}" data-id="${p.id}"><div class="cd-mhead"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id], day)}</div><div class="cd-mchart">${candleMiniSvg(day, Wm)}</div></div>`;
-    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head"><span class="cd-name">${p.label}</span> <span class="pc-date">${day.d}</span>${candleSweep((candleDaily || {})[p.id], day)}</button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id], candleViewOf(p.id), p.id)}</button></div>`;
+    if (candleMini) return `<div class="cd-row cd-mini ${cls}" data-id="${p.id}"><div class="cd-mhead"><span class="cd-name">${p.label}</span>${candleSweep((candleDaily || {})[p.id], day)}</div><div class="cd-mchart">${candleMiniSvg(day, Wm)}</div></div>`;
+    return `<div class="cd-row ${cls}" data-id="${p.id}"><button type="button" class="cd-head"><span class="cd-name">${p.label}</span>${candleSweep((candleDaily || {})[p.id], day)}</button><button type="button" class="cd-chart" data-pair="${p.id}" aria-label="${p.label} 1h chart">${candleSvg(day, (candleDaily || {})[p.id], candleViewOf(p.id), p.id)}</button></div>`;
   }).join('');
   const ki = keepId ? [...candleSlides()].findIndex((r) => r.dataset.id === keepId) : -1;
   list.scrollLeft = (ki >= 0 ? ki : keep) * list.clientWidth;
