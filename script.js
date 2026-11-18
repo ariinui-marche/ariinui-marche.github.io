@@ -3121,10 +3121,10 @@ const CANDLE_LS = 'candlePohCache2';
 let candleStaticAt = 0;
 async function candleFetchStatic() { // repli quand Vercel est coupé : fichiers GitHub (POH + 4 derniers jours D1), relus au plus toutes les 55 s
   if (Date.now() - candleStaticAt < 55000) throw new Error('static-throttle');
-  const [r1, r2] = await Promise.all([fetch('./data/poh-candles.json', { cache: 'no-store' }), fetch('./data/daily-candles.json', { cache: 'no-store' }).catch(() => null)]);
+  const [r1, r2] = await Promise.all([fetch('./data/poh-candles.json', { cache: 'no-store' }), fetch('./data/daily-tv.json', { cache: 'no-store' }).catch(() => null)]);
   const j = r1.ok ? await r1.json() : null;
   if (!j || !j.pairs || !Object.keys(j.pairs).length) throw new Error('static');
-  try { const dj = r2 && r2.ok ? (await r2.json()).pairs : null; if (dj) { j.daily = {}; for (const id of Object.keys(dj)) j.daily[id] = dj[id].slice(-4); } } catch (e) { /* D1 facultatif */ }
+  try { const dj = r2 && r2.ok ? (await r2.json()).pairs : null; if (dj) { j.daily = {}; for (const id of Object.keys(dj)) j.daily[id] = dj[id].slice(-4); } } catch (e) { /* D1 facultatif */ } // D1 : mêmes bougies TradingView que le graphique 1D (data/daily-tv.json)
   candleStaticAt = Date.now();
   return j;
 }
