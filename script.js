@@ -2359,10 +2359,10 @@ function candleSvg(day, dly, view, id) {
     const hourStep = is1D ? 0 : ([60, 300, 900, 1800, 3600, 7200, 10800, 14400, 21600, 43200].find((s) => s >= tfSec && s / tfSec * hs0 >= 80) || 0); // pas des étiquettes d'heure ; 0 = jours seulement
     const ticks = [], wdays = [];
     candleEvHits[id] = [];
-    if (!is1D && candleEcoEv.length && id) { // news à fort impact (passé ET futur) : pastille drapeau rond à anneau rouge sur l'axe du temps, sur UNE seule rangée comme TradingView, + trait vertical gris très discret
+    if (candleEcoEv.length && id) { // news à fort impact (aussi sur 1D / 1W : une pastille par devise et par bougie ; pas de futur sur 1D) (passé ET futur) : pastille drapeau rond à anneau rouge sur l'axe du temps, sur UNE seule rangée comme TradingView, + trait vertical gris très discret
       const ccys = chartsPairCcys(id), groups = new Map(), cy = H - BOT - R - 4;
       for (const e of candleEcoEv) {
-        if (ccys.indexOf(e.country) < 0 || e._t < hist[0][0] || (RP && e._t >= tLast + tfSec)) continue; // replay : pas de news futures (leur résultat serait connu)
+        if (ccys.indexOf(e.country) < 0 || e._t < hist[0][0] || (RP && e._t >= tLast + tfSec) || (is1D && e._t >= tLast + tfSec)) continue; // replay : pas de news futures (leur résultat serait connu)
         let key, x;
         if (e._t < tLast + tfSec) { // la pastille est posée sur la barre qui contient l'heure de la news (dernière barre dont l'heure d'ouverture <= heure de la news)
           let lo2 = 0, hi2 = hist.length - 1;
