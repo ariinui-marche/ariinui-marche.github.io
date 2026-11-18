@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-18T00:09:10.315Z",
+  "timestamp": "2026-11-18T07:16:01.785Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -13724,7 +13724,7 @@
       "impact": "Medium",
       "forecast": "1.0%",
       "previous": "0.8%",
-      "actual": ""
+      "actual": "1.1%"
     },
     {
       "title": "German Buba President Nagel Speaks",
@@ -13742,7 +13742,7 @@
       "impact": "High",
       "forecast": "3.6%",
       "previous": "3.5%",
-      "actual": ""
+      "actual": "3.6%"
     },
     {
       "title": "Core CPI y/y",
@@ -13751,7 +13751,7 @@
       "impact": "Low",
       "forecast": "2.8%",
       "previous": "2.8%",
-      "actual": ""
+      "actual": "2.8%"
     },
     {
       "title": "PPI Input m/m",
@@ -13760,7 +13760,7 @@
       "impact": "Low",
       "forecast": "0.8%",
       "previous": "1.5%",
-      "actual": ""
+      "actual": "2.2%"
     },
     {
       "title": "PPI Output m/m",
@@ -13769,7 +13769,7 @@
       "impact": "Low",
       "forecast": "0.6%",
       "previous": "0.8%",
-      "actual": ""
+      "actual": "0.4%"
     },
     {
       "title": "RPI y/y",
@@ -13778,7 +13778,7 @@
       "impact": "Low",
       "forecast": "4.1%",
       "previous": "3.9%",
-      "actual": ""
+      "actual": "4.2%"
     },
     {
       "title": "Foreign Direct Investment ytd/y",
