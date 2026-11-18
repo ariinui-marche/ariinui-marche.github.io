@@ -27,7 +27,7 @@ jobs:
       - run: npm install --no-save --no-package-lock ws
       - run: OUT=out node scripts/fetch-static-candles.mjs ALL 60
       - run: OUT=out node scripts/fetch-static-candles.mjs ALL 240
-      - name: Publier sur la branche candle-data (un seul commit, écrasé : le dépôt ne grossit pas)
+      - name: Publier sur candle-data (commit unique écrasé, le dépôt ne grossit pas)
         working-directory: out
         run: |
           git config user.name "github-actions[bot]"
