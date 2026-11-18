@@ -3128,13 +3128,20 @@ async function candleFetchStatic() { // repli quand Vercel est coupé : fichiers
   candleStaticAt = Date.now();
   return j;
 }
-async function candleFetchProxy() {
-  try {
-    const res = await fetch('https://ariinuiirgina.vercel.app/api/poh-candles', { cache: 'no-store', signal: AbortSignal.timeout(15000) });
-    const j = res.ok ? await res.json() : null;
-    if (!j || !j.pairs || !Object.keys(j.pairs).length) throw new Error('proxy');
-    return j;
-  } catch (e) { return candleFetchStatic(); }
+let candleVercelAt = 0;
+async function candleFetchProxy() { // POH + D1 : fichiers GitHub d'abord (0 requête Vercel) ; Vercel seulement pour les lignes 50 % (au plus toutes les 10 min) ou si les fichiers manquent
+  let j = null;
+  try { j = await candleFetchStatic(); } catch (e) { if (e.message === 'static-throttle') throw e; }
+  if (!j || Date.now() - candleVercelAt > 600000) {
+    candleVercelAt = Date.now();
+    try {
+      const res = await fetch('https://ariinuiirgina.vercel.app/api/poh-candles', { cache: 'no-store', signal: AbortSignal.timeout(15000) });
+      const v = res.ok ? await res.json() : null;
+      if (v && v.pairs && Object.keys(v.pairs).length) { if (!j) j = v; else if (v.f50) j.f50 = v.f50; }
+    } catch (e) { /* Vercel coupé ou lent : on garde les fichiers */ }
+  }
+  if (!j) throw new Error('poh');
+  return j;
 }
 function candleMerge(j) { // par paire : on garde l'ancienne série si la nouvelle manque (jamais de bougie qui disparaît)
   candlePoh = Object.assign({}, candlePoh || {}, j.pairs);
