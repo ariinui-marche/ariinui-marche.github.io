@@ -2516,7 +2516,7 @@ function candleSvg(day, dly, view, id) {
     }
     const dayPx = hs0 * 1440 / (tfMin || 1440), names = dayPx >= 70 ? CANDLE_DAYS : dayPx >= 34 ? CANDLE_DAYS_S : null; // noms des jours : discrets, au-dessus des pastilles, abrégés puis masqués quand on dézoome
     if (names && !is1D) for (const w of wdays) hb += `<text x="${w.x.toFixed(1)}" y="${H - BOT - 2 * R - 26}" text-anchor="middle" style="fill:#4a4a4a;font-size:11px;letter-spacing:1px;pointer-events:none">${names[w.d]}</text>`;
-    const f50 = RP ? null : (candleF50 || {})[id], f = f50 && f50.d === new Date(Date.now() + 7200 * 1000).toISOString().slice(0, 10) ? f50 : null; // lignes 14H : seulement la journée de trading en cours (UTC+2) ; elles disparaissent à minuit UTC+2 (12:00 UTC-10) et reviennent quand la bougie 14H de la nouvelle journée est terminée, comme Arii SNIPER
+    const s14 = RP || !day || !day.c ? null : day.c['14'], f = s14 && day.d === new Date(Date.now() + 7200 * 1000).toISOString().slice(0, 10) && candleSlotClosed(day.d, '14') ? { hi: s14[1], lo: s14[2], up: true, dn: true } : null; // niveaux calculés ICI depuis la bougie 14h du fichier GitHub (plus de Vercel) ; // lignes 14H : seulement la journée de trading en cours (UTC+2) ; elles disparaissent à minuit UTC+2 (12:00 UTC-10) et reviennent quand la bougie 14H de la nouvelle journée est terminée, comme Arii SNIPER
     if (f) { // niveaux de la boîte 14H : Entry = bords, 50 % = bord ± R/2, TP = bord ± R (seulement s'ils sont dans l'échelle)
       const R = f.hi - f.lo;
       hb += [[f.hi + R, 'TP 14H', '#5cc8ff'], [f.hi + R / 2, 'H50% 14H', '#ff9f43', !!f.up], [f.hi, 'Entry 14H', '#5cc8ff'], [f.lo, 'Entry 14H', '#5cc8ff'], [f.lo - R / 2, 'L50% 14H', '#ff9f43', !!f.dn], [f.lo - R, 'TP 14H', '#5cc8ff']]
@@ -3128,17 +3128,15 @@ async function candleFetchStatic() { // repli quand Vercel est coupé : fichiers
   candleStaticAt = Date.now();
   return j;
 }
-let candleVercelAt = 0;
-async function candleFetchProxy() { // POH + D1 : fichiers GitHub d'abord (0 requête Vercel) ; Vercel seulement pour les lignes 50 % (au plus toutes les 10 min) ou si les fichiers manquent
+async function candleFetchProxy() { // POH + D1 : fichiers GitHub (0 requête Vercel) ; Vercel seulement en secours si les fichiers sont introuvables
   let j = null;
   try { j = await candleFetchStatic(); } catch (e) { if (e.message === 'static-throttle') throw e; }
-  if (!j || Date.now() - candleVercelAt > 600000) {
-    candleVercelAt = Date.now();
+  if (!j) {
     try {
       const res = await fetch('https://ariinuiirgina.vercel.app/api/poh-candles', { cache: 'no-store', signal: AbortSignal.timeout(15000) });
       const v = res.ok ? await res.json() : null;
-      if (v && v.pairs && Object.keys(v.pairs).length) { if (!j) j = v; else if (v.f50) j.f50 = v.f50; }
-    } catch (e) { /* Vercel coupé ou lent : on garde les fichiers */ }
+      if (v && v.pairs && Object.keys(v.pairs).length) j = v;
+    } catch (e) { /* secours indisponible */ }
   }
   if (!j) throw new Error('poh');
   return j;
