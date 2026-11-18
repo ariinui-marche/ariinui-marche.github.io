@@ -3295,103 +3295,7 @@ function candleEvClose() { document.getElementById('candleEvSheet')?.remove(); }
 // 50 % = milieu entre l'entrée (bord de la boîte 14H) et le TP1 (bord ± R) : haut + R/2 ou bas - R/2. L'heure affichée (UTC-10) est celle de la 1re touche.
 const ALERTE_LS = 'alerteCacheV1';
 let alerteData = null; // { PAIR: { d, hi, lo, up, dn } }
-const ALERTE_CCY = { EUR: '#4aa3ff', USD: '#ffd400', GBP: '#ff5ca8', JPY: '#ff4d4d', AUD: '#2ecc71', CAD: '#ff9f1c', CHF: '#b36bff', NZD: '#1de9d0', XAU: '#d4af37', BTC: '#f7931a' };
-function alerteHour(t) { return new Date((t - 36000) * 1000).getUTCHours(); } // heure UTC-10
 function alerteTime(t) { return new Date((t - 36000) * 1000).toISOString().slice(11, 16); }
-function alerteZone(t) { // couleurs de session de PAPER TRADING : 14-17 bleu, 22-02 rouge, 02-03 vert, 03-07 jaune, sinon gris
-  const h = alerteHour(t);
-  return (h >= 14 && h < 17) ? '#2962ff' : (h >= 22 || h < 2) ? '#f23645' : (h >= 2 && h < 3) ? '#089981' : (h >= 3 && h < 7) ? '#fdd835' : '#787b86';
-}
-// Contexte d'un signal, connu AVANT la décision de 15 h (UTC-10) : volatilité de la veille, tendance 3 jours, cassure de PDH/PDL par le corps d'une POH, sweeps de D1 par les bougies 14h / 22h / 02h, Fibo de D1.
-// ★ « profil vendredi » (hypothèse à valider avec le journal) : paire contenant le dollar + signal dans le sens de la tendance D3→D1 + veille > 1,3× sa moyenne des 20 jours.
-let alerteCtxData = null; // { pairs, daily } du proxy
-const ALERTE_SLOTS = ['12', '14', '15', '17', '22', '23', '02', '03', '07'];
-function alerteCtx(id, side) {
-  const dy = alerteCtxData && alerteCtxData.daily && alerteCtxData.daily[id], ds = alerteCtxData && alerteCtxData.pairs && alerteCtxData.pairs[id];
-  if (!dy || dy.length < 3 || !ds || !ds.length) return null;
-  const day = ds[ds.length - 1], d1 = dy[dy.length - 2], d2 = dy[dy.length - 3], d3 = dy.length >= 4 ? dy[dy.length - 4] : d2;
-  if (!day || !day.c) return null;
-  const H = d1[2], L = d1[3], cc = [];
-  const hist = (chartsCandles && chartsCandles[id] || []).slice(0, -2).slice(-20); // 20 jours précédant la veille (flux quotidien du site)
-  const base = hist.length >= 10 ? hist.reduce((a, b) => a + (b[2] - b[3]), 0) / hist.length : null;
-  const vr = base ? (H - L) / base : null;
-  const trend = d1[4] - d3[1], aligned = (trend > 0) === (side === 'up');
-  let bh = null, bl = null;
-  const sw = [];
-  for (const sl of ALERTE_SLOTS) {
-    const c = day.c[sl];
-    if (!c) continue;
-    if (bh === null && Math.max(c[0], c[3]) > H) bh = sl;
-    if (bl === null && Math.min(c[0], c[3]) < L) bl = sl;
-    if (sl === '14' || sl === '22' || sl === '02') {
-      if (c[1] > H && c[3] < H) sw.push(sl + 'h H');
-      if (c[2] < L && c[3] > L) sw.push(sl + 'h L');
-    }
-  }
-  const bu1 = d1[4] > d1[1], be1 = d1[4] < d1[1], bu2 = d2[4] > d2[1], be2 = d2[4] < d2[1];
-  const fibo = bu1 && bu2 ? 'haussier' : be1 && be2 ? 'baissier' : null;
-  const star = /USD|XAU/.test(id) && aligned && vr !== null && vr >= 1.3;
-  return { vr, aligned, trendUp: trend > 0, bh, bl, sw, fibo, star };
-}
-function alerteCtxHtml(c, side) {
-  if (!c) return '';
-  const chip = (t, cls, tip) => `<span class="al-chip ${cls || ''}" title="${tip || ''}">${t}</span>`;
-  const out = [];
-  if (c.vr !== null) out.push(chip(`Veille ${c.vr.toFixed(1)}×`, c.vr >= 1.3 ? 'hot' : c.vr < 0.8 ? 'cold' : '', 'Amplitude de la veille (D1) / sa moyenne des 20 jours'));
-  out.push(chip(`Tendance 3j ${c.trendUp ? '▲' : '▼'} ${c.aligned ? 'alignée' : 'contre'}`, c.aligned ? 'ok' : 'bad', 'Sens de D3 → D1 comparé au sens du signal'));
-  if (c.bh) out.push(chip(`PDH corps ${c.bh}h`, '', 'Une bougie POH a cassé le haut de la veille par son corps (heure UTC-10)'));
-  if (c.bl) out.push(chip(`PDL corps ${c.bl}h`, '', 'Une bougie POH a cassé le bas de la veille par son corps (heure UTC-10)'));
-  c.sw.forEach((x) => out.push(chip(`Sweep ${x}`, '', 'Mèche au-delà du haut / bas de D1 avec clôture de retour dans la plage')));
-  if (c.fibo) out.push(chip(`Fibo ${c.fibo === 'haussier' ? '▲' : '▼'}`, '', 'D2 et D1 vont dans le même sens : Fibo 38/50/61 actif'));
-  return out.join('');
-}
-// Jour de trading affiché (celui de la majorité des paires) et ses 2 meilleures paires : classées par R potentiel, parmi les paires dont un trade a atteint le TP1
-function alerteDayStr() {
-  const days = {};
-  for (const k of Object.keys(alerteData || {})) if (alerteData[k] && alerteData[k].d) days[alerteData[k].d] = (days[alerteData[k].d] || 0) + 1;
-  return Object.keys(days).sort((a, b) => days[b] - days[a] || (a < b ? 1 : -1))[0] || null;
-}
-function alerteTop2() {
-  const dstr = alerteDayStr();
-  if (!dstr) return [];
-  return Object.keys(alerteData).filter((id) => { const f = alerteData[id]; return f && f.d === dstr && f.pt && f.pt.res === 1 && f.pt.rp != null; })
-    .map((id) => ({ id, rp: alerteData[id].pt.rp })).sort((a, b) => b.rp - a.rp).slice(0, 2);
-}
-function alerteRender() {
-  const box = document.getElementById('alerteTable');
-  if (!box) return;
-  if (!alerteData) { box.innerHTML = '<div class="charts-intro">Alert data unavailable right now.</div>'; return; }
-  // Règle PAPER TRADING : un 50 % compte seulement si sa 1re touche est la barre du milieu d'un FVG 1 min qui le chevauche (heure = 3e barre, clôturée).
-  // PTP = côté de la 1re sortie de la boîte 14H, OCO = côté opposé. Type : BUY côté haut, SELL côté bas. Résultat : TP / SL (un des deux trades) ; Rpot = R maximum atteint (vide si SL).
-  const rows = [], topRank = {};
-  alerteTop2().forEach((t, i) => { topRank[t.id] = i + 1; });
-  for (const p of CORR_ALL_PAIRS) {
-    const f = alerteData[p.id], q = f && f.pt;
-    if (!q) continue;
-    const ev = [];
-    if (q.up) ev.push({ t: q.up, side: 'up' });
-    if (q.dn) ev.push({ t: q.dn, side: 'dn' });
-    ev.forEach((e) => rows.push({ id: p.id, f, q, t: e.t, side: e.side, sens: (e.side === 'up') === (q.dir === 1) ? 'PTP' : 'OCO' }));
-  }
-  rows.sort((a, b) => a.t - b.t);
-  const dec = (v) => v.toFixed(v >= 1000 ? 2 : v >= 100 ? 3 : 5);
-  box.innerHTML = `<div class="al-grid"><div class="al-h">Symbol</div><div class="al-h">50%</div><div class="al-h">Sens</div><div class="al-h">Type</div><div class="al-h">Result</div><div class="al-h">Rpot</div>` +
-    (rows.length ? rows.map((r, i) => {
-      const b = r.id.slice(0, 3), q = r.id.slice(3), col = alerteZone(r.t), alt = i % 2 === 0 ? 'a' : 'b';
-      const R = r.f.hi - r.f.lo;
-      const tip = `Box 14H: ${dec(r.f.hi)} / ${dec(r.f.lo)} · 50% up ${dec(r.f.hi + R / 2)} · 50% down ${dec(r.f.lo - R / 2)}`;
-      const res = r.q.res === 1 ? '<span style="color:#089981">TP</span>' : r.q.res === 2 ? '<span style="color:#f23645">SL</span>' : '—';
-      const rp = r.q.res !== 2 && r.q.rp != null ? '+' + r.q.rp.toFixed(2) + 'R' : '';
-      const da = `data-fid="${r.id}" data-ft="${r.t}"`, cx = alerteCtx(r.id, r.side), star = cx && cx.star ? '<span class="al-star" title="Profil vendredi : paire dollar, tendance alignée, veille agitée (hypothèse en cours de test)">★</span> ' : '', top = topRank[r.id] ? `<span class="al-top" title="${topRank[r.id] === 1 ? '1re' : '2e'} meilleure paire du jour (R potentiel)">#${topRank[r.id]}</span> ` : '';
-      return `<div class="al-c ${alt} al-go" ${da} title="${tip}">${top}${star}<span style="color:${ALERTE_CCY[b] || '#e5e5e5'}">${b}</span> <span style="color:${ALERTE_CCY[q] || '#e5e5e5'}">${q}</span></div>` +
-        `<div class="al-c al-t al-go" ${da} style="color:${col};background:${col}1f" title="${tip}">${alerteTime(r.t)}</div>` +
-        `<div class="al-c ${alt} al-go al-sens ${r.sens === 'OCO' ? 'oco' : 'ptp'}" ${da}>${r.sens}</div>` +
-        `<div class="al-c ${alt} al-go al-type ${r.side === 'up' ? 'buy' : 'sell'}" ${da}>${r.side === 'up' ? 'BUY' : 'SELL'}</div>` +
-        `<div class="al-c ${alt} al-go" ${da}>${res}</div><div class="al-c ${alt} al-go" ${da}>${rp}</div>` +
-        (cx ? `<div class="al-ctx ${alt} al-go" ${da}>${alerteCtxHtml(cx, r.side)}</div>` : '');
-    }).join('') : '<div class="al-empty">—</div>') +
-    `</div>`;
-}
 // Clic sur un symbole du tableau : ouvre CANDLE sur cette paire, en 1 min, centré sur la barre de l'événement (3e barre du FVG) avec un repère bleu
 let alerteFocusBusy = false;
 async function alerteFocus(id, t, keep, px) { // keep = on garde le filtre « Alerts » ; px = prix de la ligne bleue quand la paire n'a pas de plan (pas de repère vertical)
@@ -3441,220 +3345,25 @@ async function alerteFocus(id, t, keep, px) { // keep = on garde le filtre « Al
     candleRedraw(id, v);
   } finally { alerteFocusBusy = false; }
 }
-document.getElementById('alerteTable')?.addEventListener('click', (e) => {
-  const r = e.target.closest('[data-fid]');
-  if (r) alerteFocus(r.dataset.fid, +r.dataset.ft);
-});
-// ===== RAPPORT DE FIN DE JOURNÉE (jour de trading 22:00 UTC → 22:00 UTC) : signaux, volatilité par paire et par devise, annonces majeures, cassures PDH/PDL, sweeps =====
-// Généré à partir des données déjà chargées (bougies quotidiennes, POH, journal des signaux du serveur, calendrier du site) ; le serveur envoie en plus un résumé à 22:05 UTC (notification).
-let alertePlans = null; // plans réels d'Arii CDX SW lus sur TradingView (outil plans_report.mjs) : confluences de l'infobulle de la partie rouge du stop
-let alerteJournal = null, alerteJournalAt = 0, alerteEco = null, alerteHist = null; // alerteHist = signaux reconstitués à partir de l'historique 1 min (data/journal-history.json) ; le journal du serveur prime sur la même clé
+let alerteJournal = null, alerteJournalAt = 0; // journal des signaux du serveur : sert seulement aux entrées « 50% » du journal du panneau Alerts
 const alEsc = (t) => String(t == null ? '' : t).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-async function alerteReportLoad() {
-  const box = document.getElementById('alerteReport');
-  if (!box || !alerteData || !alerteCtxData) return;
-  try {
-    if (Date.now() - alerteJournalAt > 60000) {
-      const r = await fetch(`${ALERTE_API}/alerte?journal=1`, { cache: 'no-store', signal: AbortSignal.timeout(10000) });
-      if (r.ok) { alerteJournal = (await r.json()).journal || {}; alerteJournalAt = Date.now(); }
-    }
-    if (!alerteHist) { const r = await fetch('./data/journal-history.json', { cache: 'no-store' }); if (r.ok) alerteHist = await r.json(); }
-    if (!alertePlans) { const r = await fetch('./data/plans-log.json', { cache: 'no-store' }); if (r.ok) alertePlans = Object.values((await r.json()).plans || {}).filter((x) => (x.tf || '1') === '1' && x.c5); } // règle : seuls les plans 1 min en confluence avec un plan 5 min de même sens au même endroit (écart <= 45 min)
-    if (!alerteEco) { const r = await fetch('./data/eco-calendar.json', { cache: 'no-store' }); if (r.ok) alerteEco = (await r.json()).events || []; }
-  } catch (e) { /* le rapport s'affiche avec ce qui est disponible */ }
-  alerteReportRender();
-}
-// ===== STATISTIQUES DU JOURNAL : win rate par profil (preuve avec tes propres signaux) =====
-// Chaque signal enregistré par le serveur est classé avec les données connues AVANT sa journée (bougies quotidiennes du site) : volatilité de la veille, tendance D3→D1 alignée ou non, paire dollar, ★ (= dollar + tendance alignée + veille ≥ 1,3×).
-function alerteSigCtx(x) {
-  const arr = (chartsCandles || {})[x.pair];
-  if (!arr) return null;
-  const t0 = Date.parse(x.d + 'T00:00:00Z') / 1000, prev = arr.filter((b) => b[0] < t0), n = prev.length;
-  if (n < 24) return null;
-  const d1 = prev[n - 1], d3 = prev[n - 3], hist = prev.slice(n - 21, n - 1), base = hist.reduce((a, b) => a + (b[2] - b[3]), 0) / hist.length;
-  if (!(base > 0)) return null;
-  const vr = (d1[2] - d1[3]) / base, trend = d1[4] - d3[1], aligned = (trend > 0) === (x.side === 'BUY'), usd = /USD|XAU/.test(x.pair);
-  return { vr, aligned, usd, star: usd && aligned && vr >= 1.3 };
-}
-function alerteStatsHtml() {
-  const all = Object.values(Object.assign({}, alerteHist || {}, alerteJournal || {})).filter((x) => x.res === 1 || x.res === 2).map((x) => ({ x, c: alerteSigCtx(x) })).filter((r) => r.c);
-  const days = new Set(all.map((r) => r.x.d)).size;
-  // 2 meilleures paires de chaque jour (R potentiel le plus haut, paires gagnantes) : choisies APRÈS coup, donc leur win rate est gagnant par construction
-  const perDay = {};
-  for (const r of all) if (r.x.res === 1 && r.x.mf != null) { const m = perDay[r.x.d] || (perDay[r.x.d] = {}); m[r.x.pair] = Math.max(m[r.x.pair] || 0, r.x.mf); }
-  const topSet = new Set(), topDays = Object.keys(perDay).sort().reverse().map((d) => {
-    const t = Object.entries(perDay[d]).sort((a, b) => b[1] - a[1]).slice(0, 2);
-    t.forEach(([pair]) => topSet.add(d + '|' + pair));
-    return { d, t };
-  });
-  const groups = [
-    ['Tous les signaux', () => true],
-    ['★ profil vendredi', (r) => r.c.star],
-    ['Sans ★', (r) => !r.c.star],
-    ['Veille ≥ 1,3×', (r) => r.c.vr >= 1.3],
-    ['Veille < 1,3×', (r) => r.c.vr < 1.3],
-    ['Tendance alignée', (r) => r.c.aligned],
-    ['Tendance contre', (r) => !r.c.aligned],
-    ['Paires dollar / or', (r) => r.c.usd],
-    ['Autres paires', (r) => !r.c.usd],
-    ['PTP', (r) => r.x.sens === 'PTP'],
-    ['OCO', (r) => r.x.sens === 'OCO'],
-    ['2 meilleures du jour *', (r) => topSet.has(r.x.d + '|' + r.x.pair)],
-  ];
-  const rows = groups.map(([lbl, f]) => {
-    const g = all.filter(f), tp = g.filter((r) => r.x.res === 1).length, n = g.length;
-    return `<div class="als-c">${lbl}</div><div class="als-c als-n">${n}</div><div class="als-c als-n">${tp}</div><div class="als-c als-n">${n - tp}</div><div class="als-c als-n ${n >= 30 ? 'als-ok' : ''}">${n ? Math.round(100 * tp / n) + ' %' : '—'}</div>`;
-  }).join('');
-  return `<div class="alr-h">Statistiques du journal</div><div class="alr-r">${all.length} signaux terminés sur ${days} jour${days > 1 ? 's' : ''}${all.length < 30 ? ' · échantillon trop petit (moins de 30), à titre indicatif' : ''}</div>` +
-    `<div class="als-grid"><div class="als-h">Profil</div><div class="als-h als-n">N</div><div class="als-h als-n">TP</div><div class="als-h als-n">SL</div><div class="als-h als-n">Win</div>${rows}</div>` +
-    `<div class="alr-h">2 meilleures paires par jour (R potentiel)</div>` +
-    topDays.slice(0, 8).map(({ d, t }) => `<div class="alr-ev"><b>${d.slice(5)}</b> ${t.map(([pair, mf]) => `${pair.slice(0, 3)}/${pair.slice(3)} <i>+${mf.toFixed(1)}R</i>`).join(' · ')}</div>`).join('') +
-    `<div class="alr-r als-note">* Sélection faite après coup : ces paires sont choisies parce qu'elles ont gagné, leur win rate ne prouve rien. La liste ci-dessus sert à voir si les mêmes paires reviennent.</div>` +
-    `<div class="alr-r als-note">Les groupes se recoupent. Les signaux encore en cours ne sont pas comptés. Un écart n'est significatif qu'avec plusieurs dizaines de signaux par groupe.</div>`;
-}
-let alerteDaySel = null; // jour du rapport choisi avec les flèches (null = jour en cours)
-// ===== PLANS CDX SW : meilleurs plans du jour et win rate de la semaine, avec les confluences notées dans l'infobulle du plan =====
-const PLAN_WIN_R = 1; // un plan est « gagnant » si son pic atteint au moins 1R
-const PLAN_KZ = { A: 'Asia', L: 'London', NA: 'NY AM', NL: 'NY Lunch' };
-const planTok = (t) => String(t).replace(/^[^\wÀ-ÿ]+/u, '').replace(/KZ(NA|NL|A|L)(H|L)/, (m, k, hl) => `KZ ${PLAN_KZ[k]} ${hl === 'H' ? 'haut' : 'bas'}`);
-const planSweep = (x) => { const m = String(x.sweep || '').replace(/\s*\(il y a[^)]*\)/, '').trim(); return m ? 'Sweep ' + m : ''; }; // « dernier sweep » de l'infobulle (type seulement, sans l'ancienneté)
-const planConf = (x) => [...new Set([...(x.source || []).map(planTok), ...(x.ligne || []).map(planTok), ...(x.ifvg ? ['IFVG rouge'] : []), planSweep(x), ...(x.c5 ? ['Plan 5 min confirmé', ...(x.c5.source || []).map(planTok)] : [])].filter(Boolean))];
-const planExact = (x) => [...(x.source || []), ...(x.ligne || []).map(planTok), ...(x.ifvg ? ['IFVG rouge 1m/5m'] : []), x.sweep ? 'dernier sweep : ' + x.sweep : '', x.c5 ? 'plan 5 min ' + alerteTime(x.c5.t) + ' : ' + ((x.c5.source || []).join(' + ') || 'FVG jaune') : ''].filter(Boolean); // confluences telles qu'écrites dans l'infobulle du plan
-function alertePlansHtml(dstr) {
-  if (!alertePlans || !alertePlans.length) return '';
-  const dayEnd = Date.parse(dstr + 'T22:00:00Z') / 1000, dayStart = dayEnd - 86400, wkStart = dayEnd - 5 * 86400;
-  const inDay = alertePlans.filter((x) => x.t >= dayStart && x.t < dayEnd), inWk = alertePlans.filter((x) => x.t >= wkStart && x.t < dayEnd);
-  const pn = (id) => id.slice(0, 3) + '/' + id.slice(3), win = (x) => x.pic >= PLAN_WIN_R;
-  const tag = (x) => `${alEsc(pn(x.pair))} ${x.side === 'BUY' ? 'achat' : 'vente'}`;
-  const planCard = (x) => `<div class="alr-card"><div class="alr-ct">${tag(x)} <b class="${win(x) ? 'up' : 'dn'}">+${x.pic.toFixed(2)}R</b> <span class="alr-r">${alerteTime(x.t)} · ${alEsc(x.state)}</span></div><div class="alr-ev">${planExact(x).map(alEsc).join(' · ') || 'sans confluence notée'}</div></div>`;
-  const best = inDay.slice().sort((a, b) => b.pic - a.pic).slice(0, 3).map(planCard).join('');
-  const worst = inDay.filter((x) => x.state !== 'en cours').sort((a, b) => a.pic - b.pic).slice(0, 3).map(planCard).join('');
-  // tous les plans du jour par symbole, tels qu'affichés par l'indicateur (état de l'infobulle : stop touché / arrêté (plan contraire ou 07h) / en cours)
-  const dayPair = {};
-  for (const x of inDay) (dayPair[x.pair] || (dayPair[x.pair] = [])).push(x);
-  const stLbl = (x) => (x.state === 'stop' ? 'SL (stop touché)' : x.state === 'contraire' ? 'arrêté (plan contraire)' : x.state === '07h' ? 'arrêté à 07h' : 'en cours');
-  const perSym = Object.entries(dayPair).sort((a, b) => b[1].length - a[1].length || (a[0] < b[0] ? -1 : 1)).map(([id, a]) => {
-    a.sort((p, q) => p.t - q.t);
-    const sl = a.filter((x) => x.state === 'stop').length, st = a.filter((x) => x.state === 'contraire' || x.state === '07h').length, run = a.filter((x) => x.state === 'en cours').length;
-    return `<details class="alr-sym"><summary><b>${alEsc(pn(id))}</b> · ${a.length} plan${a.length > 1 ? 's' : ''} · ${sl} SL${st ? ` · ${st} arrêté${st > 1 ? 's' : ''}` : ''}${run ? ` · ${run} en cours` : ''}</summary>` +
-      a.map((x) => `<div class="alr-ev"><b>${alerteTime(x.t)}</b> ${x.side === 'BUY' ? 'achat' : 'vente'} · ${stLbl(x)} · pic +${x.pic.toFixed(2)}R</div>`).join('') + `</details>`;
-  }).join('');
-  const byPair = {};
-  for (const x of inWk) (byPair[x.pair] || (byPair[x.pair] = [])).push(x);
-  const pairs = Object.entries(byPair).filter(([, a]) => a.length >= 2).map(([id, a]) => ({ id, n: a.length, w: a.filter(win).length, top: a.slice().sort((p, q) => q.pic - p.pic)[0] })).sort((a, b) => b.w / b.n - a.w / a.n || b.top.pic - a.top.pic).slice(0, 3)
-    .map((r) => `<div class="alr-ev"><b>${alEsc(pn(r.id))}</b> ${Math.round(100 * r.w / r.n)} % (${r.w}/${r.n}) · meilleur plan +${r.top.pic.toFixed(2)}R : ${planConf(r.top).map(alEsc).join(' · ') || '—'}</div>`).join('');
-  const byConf = {};
-  for (const x of inWk) for (const c of planConf(x)) { const o = byConf[c] || (byConf[c] = { n: 0, w: 0 }); o.n++; if (win(x)) o.w++; }
-  // meilleur combo de 2 confluences de la semaine (plans terminés, 1 min confirmés par le 5 min) : classé sur le taux de plans à 2R et plus, puis sur le nombre de plans
-  const cb = {};
-  for (const x of inWk) {
-    if (x.state === 'en cours') continue;
-    const cs = planConf(x).filter((c) => c !== 'Plan 5 min confirmé').sort();
-    for (let i = 0; i < cs.length; i++) for (let j = i + 1; j < cs.length; j++) { const o = cb[cs[i] + ' + ' + cs[j]] || (cb[cs[i] + ' + ' + cs[j]] = { n: 0, w1: 0, w2: 0, p: [] }); o.n++; if (x.pic >= 1) o.w1++; if (x.pic >= 2) o.w2++; o.p.push(x.pic); }
-  }
-  const cbMin = Object.values(cb).some((o) => o.n >= 8) ? 8 : 5;
-  const cbBest = Object.entries(cb).filter(([, o]) => o.n >= cbMin).sort((a, b) => b[1].w2 / b[1].n - a[1].w2 / a[1].n || b[1].n - a[1].n)[0];
-  const comboHtml = cbBest ? (() => { const [k, o] = cbBest, md = o.p.slice().sort((a, b) => a - b)[Math.floor(o.p.length / 2)]; return `<div class="alr-card"><div class="alr-ct"><b class="up">${alEsc(k)}</b></div><div class="alr-ev">${o.n} plans · ≥ 1R : <b>${Math.round(100 * o.w1 / o.n)} %</b> · ≥ 2R : <b>${Math.round(100 * o.w2 / o.n)} %</b> · pic médian +${md.toFixed(2)}R</div></div>`; })() : '<div class="alr-ev">Pas assez de plans pour classer un combo (5 minimum)</div>';
-  // vue cumulée : tous les plans terminés depuis le début de l'historique jusqu'à la fin du jour affiché
-  const allDone = alertePlans.filter((x) => x.t < dayEnd && x.state !== 'en cours');
-  const cu1 = {}, cu2 = {};
-  for (const x of allDone) {
-    const cs = planConf(x).filter((c) => c !== 'Plan 5 min confirmé').sort();
-    const add = (m, k) => { const o = m[k] || (m[k] = { n: 0, w1: 0, w2: 0, p: [] }); o.n++; if (x.pic >= 1) o.w1++; if (x.pic >= 2) o.w2++; o.p.push(x.pic); };
-    for (let i = 0; i < cs.length; i++) { add(cu1, cs[i]); for (let j = i + 1; j < cs.length; j++) add(cu2, cs[i] + ' + ' + cs[j]); }
-  }
-  const cuRow = ([k, o]) => `<div class="alr-ev"><b>${alEsc(k)}</b><br>${o.n} plans · ≥ 1R <b>${Math.round(100 * o.w1 / o.n)} %</b> · ≥ 2R <b>${Math.round(100 * o.w2 / o.n)} %</b> · pic médian +${o.p.slice().sort((a, b) => a - b)[Math.floor(o.p.length / 2)].toFixed(2)}R</div>`;
-  const cuTop = (m, min, k) => Object.entries(m).filter(([, o]) => o.n >= min).sort((a, b) => b[1].w2 / b[1].n - a[1].w2 / a[1].n || b[1].n - a[1].n).slice(0, k).map(cuRow).join('');
-  const cuDays = new Set(allDone.map((x) => new Date((x.t + 7200) * 1000).toISOString().slice(0, 10)));
-  const cumulHtml = allDone.length ? `<div class="alr-h">Cumul depuis le début (${cuDays.size} jour${cuDays.size > 1 ? 's' : ''}, ${allDone.length} plans)</div><div class="alr-r">Meilleurs combos (8 plans minimum)</div>${cuTop(cu2, 8, 3) || '<div class="alr-ev">Pas encore assez de plans</div>'}<div class="alr-r">Meilleures confluences seules (8 plans minimum)</div>${cuTop(cu1, 8, 5) || '<div class="alr-ev">Pas encore assez de plans</div>'}` : '';
-  const confRow = ([c, o]) => `<div class="alr-ev"><b>${Math.round(100 * o.w / o.n)} %</b> (${o.w}/${o.n}) ${alEsc(c)}</div>`;
-  const confAll = Object.entries(byConf).filter(([, o]) => o.n >= 3);
-  const confs = confAll.slice().sort((a, b) => b[1].w / b[1].n - a[1].w / a[1].n || b[1].n - a[1].n).slice(0, 6).map(confRow).join('');
-  const confBad = confAll.slice().sort((a, b) => a[1].w / a[1].n - b[1].w / b[1].n || b[1].n - a[1].n).slice(0, 6).map(confRow).join('');
-  return `<div class="alr-h">Meilleurs plans du jour (confluences)</div>${best || '<div class="alr-ev">Aucun plan lu pour ce jour</div>'}` +
-    `<div class="alr-h">Plans du jour par symbole (${inDay.length})</div>${perSym || '<div class="alr-ev">Aucun plan pour ce jour</div>'}` +
-    `<div class="alr-h">Pires plans du jour (confluences)</div>${worst || '<div class="alr-ev">Aucun plan terminé pour ce jour</div>'}` +
-    `<div class="alr-h">Win rate de la semaine par paire</div>${pairs || '<div class="alr-ev">Pas assez de plans (2 minimum par paire)</div>'}` +
-    `<div class="alr-h">Meilleur combo de la semaine (1 min + 5 min)</div>${comboHtml}` +
-    cumulHtml +
-    `<div class="alr-h">Meilleures confluences de la semaine</div>${confs || '<div class="alr-ev">Pas assez de plans (3 minimum par confluence)</div>'}` +
-    `<div class="alr-h">Pires confluences de la semaine</div>${confBad || '<div class="alr-ev">Pas assez de plans (3 minimum par confluence)</div>'}` +
-    `<div class="alr-r als-note">Plan gagnant = pic d'au moins ${PLAN_WIN_R}R. Seuls les plans 1 min confirmés par un plan 5 min de même sens (écart 45 min max) sont comptés. Plans lus sur TradingView (Arii CDX SW), confluences de l'infobulle de la partie rouge du stop.</div>`;
-}
-function alerteReportRender() {
-  const box = document.getElementById('alerteReport');
-  if (!box || !alerteData || !alerteCtxData) return;
-  const realCur = alerteDayStr(); // null entre 22:00 UTC et la formation du 50 % du nouveau jour : on affiche alors le dernier jour du journal
-  const allSg = Object.assign({}, alerteHist || {}, alerteJournal || {});
-  const dayList = [...new Set([realCur, ...Object.values(allSg).map((x) => x.d)].filter(Boolean))].sort().reverse();
-  if (!dayList.length) { box.innerHTML = ''; return; }
-  if (!dayList.includes(alerteDaySel)) alerteDaySel = null;
-  const cur = realCur || dayList[0], dstr = alerteDaySel || cur, isCur = dstr === realCur, di = dayList.indexOf(dstr);
-  const dayEnd = Date.parse(dstr + 'T22:00:00Z') / 1000, dayStart = dayEnd - 86400, over = Date.now() / 1000 >= dayEnd;
-  const sgAll = Object.values(isCur ? (alerteJournal || {}) : allSg).filter((x) => x.d === dstr);
-  const tp = sgAll.filter((x) => x.res === 1).length, sl = sgAll.filter((x) => x.res === 2).length, op = sgAll.length - tp - sl;
-  let top = alerteTop2();
-  if (!isCur) { const mp = {}; for (const x of sgAll) if (x.res === 1 && x.mf != null) mp[x.pair] = Math.max(mp[x.pair] || 0, x.mf); top = Object.entries(mp).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([id, rp]) => ({ id, rp })); }
-  // une fiche par paire : signaux, R potentiel, volatilité du jour, contexte connu avant la décision de 15 h
-  const card = ({ id, rp }, i) => {
-    const sg = sgAll.filter((x) => x.pair === id).sort((a, b) => a.t - b.t);
-    const dy = isCur ? alerteCtxData.daily[id] : null, hist = ((chartsCandles || {})[id] || []).slice(0, -1).slice(-20);
-    let vol = '';
-    if (dy && dy.length && hist.length >= 10) {
-      const d0 = dy[dy.length - 1], base = hist.reduce((a, b) => a + (b[2] - b[3]), 0) / hist.length, mv = (d0[4] - d0[1]) / d0[1] * 100;
-      if (base > 0) vol = `<div class="alr-r">Volatilité du jour : <b>${((d0[2] - d0[3]) / base).toFixed(1)}×</b> sa moyenne · <b class="${mv >= 0 ? 'up' : 'dn'}">${mv >= 0 ? '+' : ''}${mv.toFixed(2)} %</b></div>`;
-    }
-    const main = sg.find((x) => x.res === 1) || sg[0], side = main ? (main.side === 'BUY' ? 'up' : 'dn') : ((alerteData[id].pt.dir === 1) ? 'up' : 'dn');
-    const ctxIn = isCur ? `<div class="al-ctx-in">${alerteCtxHtml(alerteCtx(id, side), side)}</div>` : '';
-    const rows = sg.length ? sg.map((x) => `<div class="alr-ev"><b>${alerteTime(x.t)}</b> ${x.side} ${x.sens} · ${x.res === 1 ? '<i>TP</i>' : x.res === 2 ? 'SL' : 'en cours'}${x.mf != null && x.res !== 2 ? ` · +${x.mf.toFixed(1)}R` : ''}</div>`).join('') : '';
-    return `<div class="alr-card"><div class="alr-ct"><span class="al-top">#${i + 1}</span> ${id.slice(0, 3)}/${id.slice(3)} <b class="up">+${rp.toFixed(1)}R</b></div>${rows}${vol}${ctxIn}</div>`;
-  };
-  // annonces majeures du jour (heure UTC-10)
-  const ev = (alerteEco || []).filter((e) => e.impact === 'High' && e.date).map((e) => ({ e, t: Date.parse(e.date) / 1000 })).filter((x) => x.t >= dayStart && x.t < dayEnd).sort((a, b) => a.t - b.t);
-  const evHtml = ev.length ? ev.slice(0, 8).map(({ e, t }) => `<div class="alr-ev"><b>${alerteTime(t)}</b> ${alEsc(e.country)} · ${alEsc(e.title)}${e.actual ? ` <i>${alEsc(e.actual)}</i> <span>/ ${alEsc(e.forecast || '—')}</span>` : ''}</div>`).join('') + (ev.length > 8 ? `<div class="alr-ev">+${ev.length - 8}</div>` : '') : '<div class="alr-ev">Aucune annonce majeure</div>';
-  box.innerHTML = `<div class="alr-t"><button type="button" class="alr-nav" data-dn="${di + 1}" ${di + 1 >= dayList.length ? 'disabled' : ''} aria-label="Jour précédent">◀</button> Jour de trading ${alEsc(dstr)} · ${over ? 'terminé' : 'en cours'} <button type="button" class="alr-nav" data-dn="${di - 1}" ${di <= 0 ? 'disabled' : ''} aria-label="Jour suivant">▶</button></div>` +
-    `<div class="alr-r">${sgAll.length ? `${sgAll.length} signaux · <b class="up">${tp} TP</b> · <b class="dn">${sl} SL</b>${op ? ` · ${op} en cours` : ''}${tp + sl ? ` · win rate ${Math.round(100 * tp / (tp + sl))} %` : ''}` : 'Aucun signal enregistré'}</div>` +
-    `<div class="alr-h">Les 2 meilleures paires du jour</div>` + (top.length ? top.map(card).join('') : '<div class="alr-ev">Aucune paire gagnante pour l\'instant</div>') +
-    alertePlansHtml(dstr) + `<div class="alr-h">Annonces majeures (UTC-10)</div>${evHtml}` + alerteStatsHtml();
-}
-async function alerteLoad() {
+async function alerteLoad() { // plans 50 % (filtre « Alert » et lignes de CANDLE) : cache local d'abord, puis le proxy
   if (!alerteData) {
-    try { const c = JSON.parse(localStorage.getItem(ALERTE_LS) || 'null'); if (c && c.f50) { alerteData = c.f50; alerteRender(); } } catch (e) { /* pas de cache */ }
+    try { const c = JSON.parse(localStorage.getItem(ALERTE_LS) || 'null'); if (c && c.f50) alerteData = c.f50; } catch (e) { /* pas de cache */ }
   }
   try {
     const j = await candleFetchProxy();
     alerteData = j.f50 || {};
-    alerteCtxData = { pairs: j.pairs || {}, daily: j.daily || {} };
-    if (!chartsCandles) { try { const r = await fetch('./data/daily-candles.json', { cache: 'no-store' }); if (r.ok) chartsCandles = (await r.json()).pairs; } catch (e) { /* contexte sans moyenne 20 jours */ } }
-    alerteReportLoad();
     try { localStorage.setItem(ALERTE_LS, JSON.stringify({ f50: alerteData })); } catch (e) { /* quota */ }
   } catch (e) { /* on garde la dernière version */ }
-  alerteRender();
 }
-document.getElementById('alerteReport')?.addEventListener('click', (e) => {
-  const b = e.target.closest('.alr-nav');
-  if (!b || b.disabled) return;
-  const all = Object.assign({}, alerteHist || {}, alerteJournal || {}), rc = alerteDayStr();
-  const list = [...new Set([rc, ...Object.values(all).map((x) => x.d)].filter(Boolean))].sort().reverse(), t = list[+b.dataset.dn];
-  alerteDaySel = t && t !== (rc || list[0]) ? t : null;
-  alerteReportRender();
-});
 document.getElementById('alerteToggle')?.addEventListener('click', (e) => {
   const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
   e.currentTarget.setAttribute('aria-expanded', String(!expanded));
   document.getElementById('alerteBody').classList.toggle('collapsed', expanded);
-  if (!expanded) alerteLoad();
-});
-setInterval(() => { // actualisation tant que le panneau est ouvert et visible
-  const b = document.getElementById('alerteBody');
-  if (b && !b.classList.contains('collapsed') && !document.hidden) alerteLoad();
-}, 20000);
-document.addEventListener('visibilitychange', () => {
-  const b = document.getElementById('alerteBody');
-  if (!document.hidden && b && !b.classList.contains('collapsed')) alerteLoad();
 });
 
-// Notifications téléphone éteint : abonnement Web Push, envoyé au serveur qui surveille les niveaux 50 % chaque minute
+// Notifications téléphone éteint : abonnement Web Push, envoyé au serveur qui surveille les alertes de prix et les doji
 const ALERTE_API = 'https://ariinuiirgina.vercel.app/api';
 function alerteKey(b64) {
   const p = '='.repeat((4 - (b64.length % 4)) % 4), raw = atob((b64 + p).replace(/-/g, '+').replace(/_/g, '/'));
