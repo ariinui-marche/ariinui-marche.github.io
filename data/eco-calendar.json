@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-18T16:28:45.012Z",
+  "timestamp": "2026-11-18T23:00:02.011Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -13949,7 +13949,7 @@
       "impact": "Low",
       "forecast": "160.7B",
       "previous": "279.2B",
-      "actual": ""
+      "actual": "155.3B"
     },
     {
       "title": "FOMC Member Kashkari Speaks",
@@ -13967,7 +13967,7 @@
       "impact": "Low",
       "forecast": "-1650M",
       "previous": "-1971M",
-      "actual": ""
+      "actual": "-2772M"
     },
     {
       "title": "Core Machinery Orders m/m",
@@ -14237,6 +14237,15 @@
       "impact": "Low",
       "forecast": "18.0B",
       "previous": "24.5B",
+      "actual": ""
+    },
+    {
+      "title": "Foreign Direct Investment ytd/y",
+      "country": "CNY",
+      "date": "2026-11-20T02:02:00-05:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "-4.3%",
       "actual": ""
     },
     {
