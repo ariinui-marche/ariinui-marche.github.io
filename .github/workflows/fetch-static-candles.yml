@@ -1,4 +1,4 @@
-name: Fetch Static Candles (test XAUUSD 1D)
+name: Fetch Static Candles (31 paires 1D)
 
 on:
   schedule:
@@ -22,12 +22,12 @@ jobs:
         with:
           node-version: 20
       - run: npm install --no-save --no-package-lock ws
-      - run: node scripts/fetch-static-candles.mjs XAUUSD 1D
+      - run: node scripts/fetch-static-candles.mjs ALL 1D
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/candles
-          git diff --staged --quiet || git commit -m "Update static candles XAUUSD 1D $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git diff --staged --quiet || git commit -m "Update static candles 1D $(date -u +%Y-%m-%dT%H:%M:%SZ)"
           git pull --rebase origin main
           git push

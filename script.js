@@ -2123,7 +2123,7 @@ function candleHistBars(id) {
   if (!h || !h.bars.length) return null;
   return rp.on && rp.id === id ? candleRpBars(h.bars, id) : h.bars;
 }
-const CANDLE_STATIC = new Set(['XAUUSD|1D']); // couples paire|timeframe servis par data/candles/<tf>/<paire>.json (workflow fetch-static-candles.yml)
+const CANDLE_STATIC = new Set('EURUSD GBPUSD USDJPY AUDUSD USDCAD USDCHF NZDUSD XAUUSD BTCUSD ETHUSD EURJPY GBPJPY EURGBP EURAUD EURCAD EURCHF EURNZD GBPAUD GBPCAD GBPCHF GBPNZD AUDJPY CADJPY CHFJPY NZDJPY AUDCAD AUDCHF AUDNZD CADCHF NZDCAD NZDCHF'.split(' ').map((p) => p + '|1D')); // couples paire|timeframe servis par data/candles/<tf>/<paire>.json (workflow fetch-static-candles.yml)
 function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bougies de la paire affichée, puis redessine EN PLACE
   if (!id || (candleHistTf === '0' && !tfx)) return;
   if (!tfx && (candlePlans || candleZones) && candleHistTf === '5') candleHistEnsure(id, '1'); // plans en 5 min : confirmation sur les barres 1 min
