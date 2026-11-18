@@ -1,4 +1,4 @@
-name: Fetch Static Candles (31 paires 1D)
+name: Fetch Static Candles (31 paires 1D + 1W)
 
 on:
   schedule:
@@ -23,6 +23,7 @@ jobs:
           node-version: 20
       - run: npm install --no-save --no-package-lock ws
       - run: node scripts/fetch-static-candles.mjs ALL 1D
+      - run: node scripts/fetch-static-candles.mjs ALL 1W
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"

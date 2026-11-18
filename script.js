@@ -1972,8 +1972,8 @@ try { candleMini = localStorage.getItem('candleMini') === '1'; } catch (e) { /* 
 let candleClean = false; // clic sur le nom du symbole : échelle de prix + rangée Fibo / Sweep / F+S masquées, jusqu'au prochain clic (enregistré)
 try { candleClean = localStorage.getItem('candleClean') === '1'; } catch (e) { /* pas de stockage */ }
 try { candleHistTf = localStorage.getItem('candleHistTf') || '0'; } catch (e) { /* pas de stockage */ }
-const CANDLE_HIST_MODES = ['0', '1', '5', '60', '240', '1D'], CANDLE_HIST_LBL = { 0: '\u2014', 1: '1m', 5: '5m', 60: '1h', 240: '4h', '1D': '1D' };
-const CANDLE_HIST_N = { 1: 50, 5: 50, 60: 24, 240: 12, '1D': 8 }; // bougies récentes prises pour caler l'échelle de prix (1 jour environ)
+const CANDLE_HIST_MODES = ['0', '1', '5', '60', '240', '1D', '1W'], CANDLE_HIST_LBL = { 0: '\u2014', 1: '1m', 5: '5m', 60: '1h', 240: '4h', '1D': '1D', '1W': '1W' };
+const CANDLE_HIST_N = { 1: 50, 5: 50, 60: 24, 240: 12, '1D': 8, '1W': 8 }; // bougies récentes prises pour caler l'échelle de prix (1 jour environ)
 if (!CANDLE_HIST_MODES.includes(candleHistTf)) candleHistTf = '0';
 const candleHistData = {}; // 'PAIR|tf' -> { bars: [[t,o,h,l,c]...], at, busy }
 // ===== Plans Arii CDX SW sur CANDLE (graphiques 1 min / 5 min) : moteur cdx-engine.js, identique au moteur Python de référence =====
@@ -2078,7 +2078,7 @@ function candleRpBars(full, id) { // barres visibles pendant le replay (copie mi
 const RP_SLOTS = { '12': [0, 2], '14': [2, 3], '15': [3, 5], '17': [5, 10], '22': [10, 11], '23': [11, 14], '02': [14, 15], '03': [15, 19], '07': [19, 24] }; // mêmes périodes POH que le proxy (heures UTC+2)
 function candleRpPoh(id) { // replay : POH et bougies D3..D0 recalculés à partir des barres fines JUSQU'À la position du replay ; la journée POH commence toujours par la bougie 12h, le POH en cours se forme avec le prix (comme D0)
   if (!rp.on || rp.id !== id || rp.pick) return null;
-  const tfSec = (candleHistTf === '1D' ? 1440 : +candleHistTf || 1) * 60, cut = rp.t + tfSec;
+  const tfSec = (candleHistTf === '1W' ? 10080 : candleHistTf === '1D' ? 1440 : +candleHistTf || 1) * 60, cut = rp.t + tfSec;
   let bars = null, used = '';
   for (const tf of ['1', '5', '60']) { // barres les plus fines qui couvrent la position du replay (4 jours d'avance pour D3), sinon les plus anciennes disponibles
     const h = candleHistData[id + '|' + tf];
@@ -2123,7 +2123,7 @@ function candleHistBars(id) {
   if (!h || !h.bars.length) return null;
   return rp.on && rp.id === id ? candleRpBars(h.bars, id) : h.bars;
 }
-const CANDLE_STATIC = new Set('EURUSD GBPUSD USDJPY AUDUSD USDCAD USDCHF NZDUSD XAUUSD BTCUSD ETHUSD EURJPY GBPJPY EURGBP EURAUD EURCAD EURCHF EURNZD GBPAUD GBPCAD GBPCHF GBPNZD AUDJPY CADJPY CHFJPY NZDJPY AUDCAD AUDCHF AUDNZD CADCHF NZDCAD NZDCHF'.split(' ').flatMap((p) => [p + '|1D', p + '|60', p + '|240'])); // couples paire|timeframe servis par data/candles/<tf>/<paire>.json (workflow fetch-static-candles.yml)
+const CANDLE_STATIC = new Set('EURUSD GBPUSD USDJPY AUDUSD USDCAD USDCHF NZDUSD XAUUSD BTCUSD ETHUSD EURJPY GBPJPY EURGBP EURAUD EURCAD EURCHF EURNZD GBPAUD GBPCAD GBPCHF GBPNZD AUDJPY CADJPY CHFJPY NZDJPY AUDCAD AUDCHF AUDNZD CADCHF NZDCAD NZDCHF'.split(' ').flatMap((p) => [p + '|1D', p + '|1W', p + '|60', p + '|240'])); // couples paire|timeframe servis par data/candles/<tf>/<paire>.json (workflow fetch-static-candles.yml)
 function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bougies de la paire affichée, puis redessine EN PLACE
   if (!id || (candleHistTf === '0' && !tfx)) return;
   if (!tfx && (candlePlans || candleZones) && candleHistTf === '5') candleHistEnsure(id, '1'); // plans en 5 min : confirmation sur les barres 1 min
@@ -2133,13 +2133,13 @@ function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bou
   // 1 min / 5 min : après le 1er chargement complet (historique), on ne redemande que les bougies récentes (dernière = en formation)
   const since = (tf === '1' || tf === '5') && h.bars.length ? h.bars[h.bars.length - 1][0] : 0;
   const staticFirst = CANDLE_STATIC.has(key) // test : fichier statique GitHub Pages (0 requête Vercel), repli sur l'API si absent ou vide
-    ? fetch(tf === '1D' ? `./data/candles/1D/${id}.json` : `https://raw.githubusercontent.com/ariinui-marche/ariinui-marche.github.io/candle-data/${tf}/${id}.json`, { cache: 'no-store', signal: AbortSignal.timeout(20000) }).then((r) => (r.ok ? r.json() : null)).then((j) => (j && j.bars && j.bars.length ? j : null)).catch(() => null)
+    ? fetch(tf === '1D' || tf === '1W' ? `./data/candles/${tf}/${id}.json` : `https://raw.githubusercontent.com/ariinui-marche/ariinui-marche.github.io/candle-data/${tf}/${id}.json`, { cache: 'no-store', signal: AbortSignal.timeout(20000) }).then((r) => (r.ok ? r.json() : null)).then((j) => (j && j.bars && j.bars.length ? j : null)).catch(() => null)
     : Promise.resolve(null);
   return staticFirst
     .then((sj) => sj || fetch(`https://ariinuiirgina.vercel.app/api/poh-candles?pair=${id}&tf=${tf}${since ? '&since=' + since : ''}`, { cache: 'no-store', signal: AbortSignal.timeout(20000) }).then((r) => (r.ok ? r.json() : null)))
     .then((j) => {
       if (j && j.bars && j.bars.length) h.bars = since ? h.bars.filter((b) => b[0] < since).concat(j.bars) : j.bars;
-      if ((tf === candleHistTf || tf === '1D' || tf === '240' || tf === '60' || rp.on || ((candlePlans || candleZones) && tf === '1' && candleHistTf === '5')) && !(cg.mode)) candleRedraw(id, candleViewOf(id));
+      if ((tf === candleHistTf || tf === '1D' || tf === '1W' || tf === '240' || tf === '60' || rp.on || ((candlePlans || candleZones) && tf === '1' && candleHistTf === '5')) && !(cg.mode)) candleRedraw(id, candleViewOf(id));
       if (!since && tf === '1' && (id === 'EURUSD' || id === 'XAUUSD') && h.bars.length && !h.deep) candleDeepLoad(id, h); // historique profond MT5 1 min : EURUSD 250 000, XAUUSD 500 000 barres
     })
     .catch(() => { /* on garde ce qui est affiché */ })
@@ -2311,7 +2311,7 @@ function candleSvg(day, dly, view, id) {
     const hs = hs0 * sg, hw = Math.max(1, hs * 0.7);
     if (candleXh && candleXh.id === id) { const j = Math.floor((edge - candleXh.x) / hs), i = hist.length - 1 - j * sg; if (candleXh.x <= edge && j >= 0 && i >= 0) xhT = candleXhTime(hist[i][0]); } // les barres vont vers la gauche depuis `edge` (dernière barre) ; pas d'heure au-dessus des POH ni du futur
     const jMin = Math.max(0, Math.floor((edge - (W - AX)) / hs) - 1), jMax = Math.min(Math.ceil(hist.length / sg) - 1, Math.ceil((edge + hs) / hs));
-    const is1D = candleHistTf === '1D', tfMin = is1D ? 1440 : +candleHistTf, tfSec = tfMin * 60, kLbl = Math.max(1, Math.round(80 / hs));
+    const is1D = candleHistTf === '1D' || candleHistTf === '1W', tfMin = candleHistTf === '1W' ? 10080 : is1D ? 1440 : +candleHistTf, tfSec = tfMin * 60, kLbl = Math.max(1, Math.round(80 / hs));
     if (candleFocusMark && candleFocusMark.id === id && !is1D) { // repère de l'événement ALERTE : dernière barre dont l'heure d'ouverture <= heure de l'événement
       let a = 0, b = hist.length - 1;
       while (a < b) { const m = (a + b + 1) >> 1; if (hist[m][0] <= candleFocusMark.t) a = m; else b = m - 1; }
@@ -3222,7 +3222,7 @@ document.getElementById('candleViewReset')?.addEventListener('click', () => {
 document.getElementById('candleList').addEventListener('click', (e) => {
   if (Date.now() < cg.swallow) return; // clic issu d'un geste de zoom / déplacement
   const ch = e.target.closest('.cd-chart');
-  if (!ch || candleHistTf === '0' || candleHistTf === '1D') return;
+  if (!ch || candleHistTf === '0' || candleHistTf === '1D' || candleHistTf === '1W') return;
   const rc = ch.getBoundingClientRect(), px = e.clientX - rc.left, py = e.clientY - rc.top;
   const hit = (candleEvHits[ch.dataset.pair] || []).slice().reverse().find((h) => Math.hypot(h.x - px, h.y - py) <= h.r + 6); // la pastille du dessus d'abord
   if (hit) { candleEvOpen(hit.list); return; }
@@ -3928,7 +3928,7 @@ function rpSetTf(tf) { // période du replay : mêmes boutons cachés ‹ › qu
     { t: 'Barre aléatoire', fn: () => { const full = rpFull(); if (!full) return; candleRpPlay(false); candleRpSet(full.length > 400 ? 100 + Math.floor(Math.random() * (full.length - 300)) : Math.floor(full.length / 2)); } },
   ]));
   rpEl('rpSpd').addEventListener('click', () => rpMenu('Vitesse du replay', RP_SPEEDS.map(([, l, d], i) => ({ t: l, d, on: i === rp.spd, fn: () => { rp.spd = i; try { localStorage.setItem('candleRpSpd3', String(i)); } catch (e) { /* pas de stockage */ } candleRpUi(); } }))));
-  rpEl('rpTf').addEventListener('click', () => rpMenu("Mettre à jour l'intervalle", CANDLE_HIST_MODES.filter((m) => m !== '0').map((m) => ({ t: ({ 1: '1 minute', 5: '5 minutes', 60: '1 heure', 240: '4 heures', '1D': '1 jour' })[m], on: m === candleHistTf, fn: () => rpSetTf(m) }))));
+  rpEl('rpTf').addEventListener('click', () => rpMenu("Mettre à jour l'intervalle", CANDLE_HIST_MODES.filter((m) => m !== '0').map((m) => ({ t: ({ 1: '1 minute', 5: '5 minutes', 60: '1 heure', 240: '4 heures', '1D': '1 jour', '1W': '1 semaine' })[m], on: m === candleHistTf, fn: () => rpSetTf(m) }))));
   rpEl('rpQty').addEventListener('click', () => rpMenu('Quantity (lots)', [0.1, 0.5, 1, 2, 5, 10].map((q) => ({ t: String(q), on: q === rp.qty, fn: () => { rp.qty = q; candleRpUi(); } }))));
   rpEl('rpSet').addEventListener('click', () => {
     const m = rpMenu('Replay settings', [
