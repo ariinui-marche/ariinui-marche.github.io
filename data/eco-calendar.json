@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-18T07:16:01.785Z",
+  "timestamp": "2026-11-18T16:28:45.012Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -13805,7 +13805,7 @@
       "impact": "Low",
       "forecast": "0.7%",
       "previous": "0.9%",
-      "actual": ""
+      "actual": "1.2%"
     },
     {
       "title": "Final Core CPI y/y",
@@ -13814,7 +13814,7 @@
       "impact": "Low",
       "forecast": "2.5%",
       "previous": "2.5%",
-      "actual": ""
+      "actual": "2.6%"
     },
     {
       "title": "Final CPI y/y",
@@ -13823,7 +13823,7 @@
       "impact": "Low",
       "forecast": "4.0%",
       "previous": "4.0%",
-      "actual": ""
+      "actual": "4.0%"
     },
     {
       "title": "NHPI m/m",
@@ -13832,7 +13832,7 @@
       "impact": "Low",
       "forecast": "0.1%",
       "previous": "-0.2%",
-      "actual": ""
+      "actual": "-0.2%"
     },
     {
       "title": "Building Permits",
@@ -13841,7 +13841,7 @@
       "impact": "Low",
       "forecast": "1.38M",
       "previous": "1.40M",
-      "actual": ""
+      "actual": "1.30M"
     },
     {
       "title": "Housing Starts",
@@ -13850,7 +13850,7 @@
       "impact": "Low",
       "forecast": "1.25M",
       "previous": "1.22M",
-      "actual": ""
+      "actual": "1.31M"
     },
     {
       "title": "ECB President Lagarde Speaks",
@@ -13877,7 +13877,7 @@
       "impact": "Low",
       "forecast": "-2.0%",
       "previous": "-7.3%",
-      "actual": ""
+      "actual": "-4.7%"
     },
     {
       "title": "Crude Oil Inventories",
@@ -13886,7 +13886,7 @@
       "impact": "Low",
       "forecast": "0.4M",
       "previous": "4.7M",
-      "actual": ""
+      "actual": "3.4M"
     },
     {
       "title": "FOMC Member Daly Speaks",
@@ -13994,6 +13994,15 @@
       "impact": "High",
       "forecast": "4.7%",
       "previous": "4.7%",
+      "actual": ""
+    },
+    {
+      "title": "Foreign Direct Investment ytd/y",
+      "country": "CNY",
+      "date": "2026-11-19T02:02:00-05:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "-4.3%",
       "actual": ""
     },
     {

@@ -212,8 +212,8 @@
 1794969900	EUR	German Buba President Nagel Speaks			
 1794985200	GBP	Core Inflation Rate MoM	0.3%	0.3%	0.2%
 1794985200	GBP	Inflation Rate YoY	3.6%	3.6%	3.5%
-1795008600	USD	Housing Starts		1.245M	1.221M
-1795008600	USD	Building Permits Prel		1.377M	1.4M
+1795008600	USD	Housing Starts	1.309M	1.245M	1.191M
+1795008600	USD	Building Permits Prel	1.295M	1.377M	1.4M
 1795011900	EUR	ECB President Lagarde Speaks			
 1795014000	GBP	BOE Gov Bailey Speaks			
 1795022100	USD	FOMC Member Daly Speaks			
@@ -315,8 +315,8 @@
 1797508800	GBP	Interest Rate			4%
 1797513300	EUR	Deposit Facility Rate			
 1797513300	EUR	ECB Interest Rate Decision			
-1797514200	USD	Housing Starts			
-1797514200	USD	Building Permits Prel			
+1797514200	USD	Housing Starts			1.309M
+1797514200	USD	Building Permits Prel			1.295M
 1797550200	JPY	Inflation Rate YoY			
 1797561000	JPY	Interest Rate			
 1797577200	GBP	Retail Sales MoM			
