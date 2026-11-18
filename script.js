@@ -2123,7 +2123,7 @@ function candleHistBars(id) {
   if (!h || !h.bars.length) return null;
   return rp.on && rp.id === id ? candleRpBars(h.bars, id) : h.bars;
 }
-const CANDLE_STATIC = new Set('EURUSD GBPUSD USDJPY AUDUSD USDCAD USDCHF NZDUSD XAUUSD BTCUSD ETHUSD EURJPY GBPJPY EURGBP EURAUD EURCAD EURCHF EURNZD GBPAUD GBPCAD GBPCHF GBPNZD AUDJPY CADJPY CHFJPY NZDJPY AUDCAD AUDCHF AUDNZD CADCHF NZDCAD NZDCHF'.split(' ').flatMap((p) => [p + '|1D', p + '|1W', p + '|60', p + '|240'])); // couples paire|timeframe servis par data/candles/<tf>/<paire>.json (workflow fetch-static-candles.yml)
+const CANDLE_STATIC = new Set('EURUSD GBPUSD USDJPY AUDUSD USDCAD USDCHF NZDUSD XAUUSD BTCUSD ETHUSD EURJPY GBPJPY EURGBP EURAUD EURCAD EURCHF EURNZD GBPAUD GBPCAD GBPCHF GBPNZD AUDJPY CADJPY CHFJPY NZDJPY AUDCAD AUDCHF AUDNZD CADCHF NZDCAD NZDCHF'.split(' ').flatMap((p) => [p + '|1D', p + '|1W', p + '|60', p + '|240', p + '|5', p + '|1'])); // couples paire|timeframe servis par data/candles/<tf>/<paire>.json (workflow fetch-static-candles.yml)
 function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bougies de la paire affichée, puis redessine EN PLACE
   if (!id || (candleHistTf === '0' && !tfx)) return;
   if (!tfx && (candlePlans || candleZones) && candleHistTf === '5') candleHistEnsure(id, '1'); // plans en 5 min : confirmation sur les barres 1 min
@@ -2132,13 +2132,17 @@ function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bou
   h.busy = true;
   // 1 min / 5 min : après le 1er chargement complet (historique), on ne redemande que les bougies récentes (dernière = en formation)
   const since = (tf === '1' || tf === '5') && h.bars.length ? h.bars[h.bars.length - 1][0] : 0;
-  const staticFirst = CANDLE_STATIC.has(key) // test : fichier statique GitHub Pages (0 requête Vercel), repli sur l'API si absent ou vide
-    ? fetch(tf === '1D' || tf === '1W' ? `./data/candles/${tf}/${id}.json` : `https://raw.githubusercontent.com/ariinui-marche/ariinui-marche.github.io/candle-data/${tf}/${id}.json`, { cache: 'no-store', signal: AbortSignal.timeout(20000) }).then((r) => (r.ok ? r.json() : null)).then((j) => (j && j.bars && j.bars.length ? j : null)).catch(() => null)
-    : Promise.resolve(null);
+  // Fichier statique (GitHub, 0 requête Vercel). 1D / 1W : data/candles du site ; 1m / 5m / 1h / 4h : branche candle-data.
+  // 1m / 5m : après le 1er chargement on ne relit que le petit fichier « .recent.json » (dernières barres) ; s'il ne remonte pas jusqu'à notre dernière barre, on relit le fichier complet.
+  const stBase = tf === '1D' || tf === '1W' ? `./data/candles/${tf}/` : `https://raw.githubusercontent.com/ariinui-marche/ariinui-marche.github.io/candle-data/${tf}/`;
+  const stGet = (suffix) => fetch(`${stBase}${id}${suffix}.json`, { cache: 'no-store', signal: AbortSignal.timeout(20000) }).then((r) => (r.ok ? r.json() : null)).then((j) => (j && j.bars && j.bars.length ? j : null)).catch(() => null);
+  const staticFirst = !CANDLE_STATIC.has(key) ? Promise.resolve(null)
+    : since ? stGet('.recent').then((j) => (j && j.bars[0][0] <= since ? Object.assign({}, j, { bars: j.bars.filter((b) => b[0] >= since) }) : stGet('').then((f) => f && Object.assign(f, { full: true }))))
+      : stGet('');
   return staticFirst
     .then((sj) => sj || fetch(`https://ariinuiirgina.vercel.app/api/poh-candles?pair=${id}&tf=${tf}${since ? '&since=' + since : ''}`, { cache: 'no-store', signal: AbortSignal.timeout(20000) }).then((r) => (r.ok ? r.json() : null)))
     .then((j) => {
-      if (j && j.bars && j.bars.length) h.bars = since ? h.bars.filter((b) => b[0] < since).concat(j.bars) : j.bars;
+      if (j && j.bars && j.bars.length) h.bars = since && !j.full ? h.bars.filter((b) => b[0] < since).concat(j.bars) : j.bars;
       if ((tf === candleHistTf || tf === '1D' || tf === '1W' || tf === '240' || tf === '60' || rp.on || ((candlePlans || candleZones) && tf === '1' && candleHistTf === '5')) && !(cg.mode)) candleRedraw(id, candleViewOf(id));
       if (!since && tf === '1' && (id === 'EURUSD' || id === 'XAUUSD') && h.bars.length && !h.deep) candleDeepLoad(id, h); // historique profond MT5 1 min : EURUSD 250 000, XAUUSD 500 000 barres
     })

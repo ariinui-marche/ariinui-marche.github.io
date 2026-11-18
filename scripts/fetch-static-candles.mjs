@@ -46,6 +46,8 @@ async function run(PAIR) {
   if (bars.length < old.bars.length) throw new Error('fusion incohérente');
   mkdirSync(`${OUT}/${TF}`, { recursive: true });
   writeFileSync(FILE, JSON.stringify({ pair: PAIR, tf: TF, updated: new Date().toISOString(), bars }));
+  const RECENT = +(process.env.RECENT || 0); // petit fichier « récent » (dernières barres) : c'est lui que le site relit souvent, le fichier complet n'est lu qu'au 1er chargement
+  if (RECENT) writeFileSync(`${OUT}/${TF}/${PAIR}.recent.json`, JSON.stringify({ pair: PAIR, tf: TF, updated: new Date().toISOString(), bars: bars.slice(-RECENT) }));
   console.log(`${PAIR} ${TF} : ${old.bars.length} -> ${bars.length} barres (dernière ${new Date(bars[bars.length - 1][0] * 1000).toISOString()})`);
 }
 let fails = 0;
