@@ -3265,10 +3265,11 @@ document.getElementById('candleViewReset')?.addEventListener('click', () => {
 document.getElementById('candleList').addEventListener('click', (e) => {
   if (Date.now() < cg.swallow) return; // clic issu d'un geste de zoom / déplacement
   const ch = e.target.closest('.cd-chart');
-  if (!ch || candleHistTf === '0' || candleHistTf === '1D' || candleHistTf === '1W') return;
+  if (!ch || candleHistTf === '0') return;
   const rc = ch.getBoundingClientRect(), px = e.clientX - rc.left, py = e.clientY - rc.top;
   const hit = (candleEvHits[ch.dataset.pair] || []).slice().reverse().find((h) => Math.hypot(h.x - px, h.y - py) <= h.r + 6); // la pastille du dessus d'abord
   if (hit) { candleEvOpen(hit.list); return; }
+  if (candleHistTf === '1D' || candleHistTf === '1W') return; // pas de plans CDX SW sur le daily / weekly : seulement les pastilles de news
   const ph = (candlePlanHits[ch.dataset.pair] || []).slice().reverse().find((h) => px >= h.x0 - 3 && px <= h.x1 + 3 && py >= h.y0 - 3 && py <= h.y1 + 3); // plan Arii CDX SW sous le doigt
   if (ph) candlePlanOpen(ph.p);
 });
