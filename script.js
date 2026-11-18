@@ -2149,8 +2149,30 @@ function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bou
     .catch(() => { /* on garde ce qui est affiché */ })
     .finally(() => { h.busy = false; h.at = Date.now(); });
 }
-// Historique profond (fichiers MT5 privés) : pages de 50 000 barres plus anciennes, ajoutées à GAUCHE des barres déjà chargées
+// Historique profond MT5 1 min (EURUSD 250 000, XAUUSD 500 000 barres) : fichier statique compact `deep/<PAIRE>_1.cd.gz` de la branche candle-data (colonnes en deltas + gzip, sans perte),
+// décompressé dans le navigateur ; ajouté à GAUCHE des barres déjà chargées. Si le fichier est indisponible : ancienne API (pages de 50 000 barres).
 async function candleDeepLoad(id, h) {
+  h.deep = true;
+  try {
+    const r = await fetch(`https://raw.githubusercontent.com/ariinui-marche/ariinui-marche.github.io/candle-data/deep/${id}_1.cd.gz`, { signal: AbortSignal.timeout(60000) });
+    if (!r.ok || !r.body || typeof DecompressionStream === 'undefined') throw new Error('indisponible');
+    const d = JSON.parse(await new Response(r.body.pipeThrough(new DecompressionStream('gzip'))).text());
+    const P = d.p, first = h.bars.length ? h.bars[0][0] : Infinity, out = [];
+    let pt = 0, pc = 0;
+    for (let i = 0; i < d.n; i++) {
+      const t = i ? pt + d.t[i] * 60 : d.t[0], o = pc + d.o[i], c = o + d.c[i], hi = Math.max(o, c) + d.h[i], lo = Math.min(o, c) - d.l[i];
+      if (t < first) out.push([t, o / P, hi / P, lo / P, c / P]);
+      pt = t; pc = c;
+    }
+    if (out.length && h.bars.length) {
+      const f2 = h.bars[0][0];
+      h.bars = (out[out.length - 1][0] < f2 ? out : out.filter((b) => b[0] < f2)).concat(h.bars);
+      if (candleHistTf === '1' && !(cg.mode)) candleRedraw(id, candleViewOf(id));
+    }
+  } catch (e) { return candleDeepLoadApi(id, h); }
+}
+// Repli : historique profond par l'API Vercel (fichiers MT5 privés) : pages de 50 000 barres plus anciennes, ajoutées à GAUCHE des barres déjà chargées
+async function candleDeepLoadApi(id, h) {
   h.deep = true;
   try {
     for (let k = 0; k < 10 && h.bars.length; k++) {
