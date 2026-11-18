@@ -3118,11 +3118,23 @@ document.getElementById('candleNext')?.addEventListener('click', () => candleGo(
 document.getElementById('candleList')?.addEventListener('scroll', () => candleNavUpdate(), { passive: true });
 
 const CANDLE_LS = 'candlePohCache2';
-async function candleFetchProxy() {
-  const res = await fetch('https://ariinuiirgina.vercel.app/api/poh-candles', { cache: 'no-store', signal: AbortSignal.timeout(15000) });
-  const j = res.ok ? await res.json() : null;
-  if (!j || !j.pairs || !Object.keys(j.pairs).length) throw new Error('proxy');
+let candleStaticAt = 0;
+async function candleFetchStatic() { // repli quand Vercel est coupé : fichiers GitHub (POH + 4 derniers jours D1), relus au plus toutes les 55 s
+  if (Date.now() - candleStaticAt < 55000) throw new Error('static-throttle');
+  const [r1, r2] = await Promise.all([fetch('./data/poh-candles.json', { cache: 'no-store' }), fetch('./data/daily-candles.json', { cache: 'no-store' }).catch(() => null)]);
+  const j = r1.ok ? await r1.json() : null;
+  if (!j || !j.pairs || !Object.keys(j.pairs).length) throw new Error('static');
+  try { const dj = r2 && r2.ok ? (await r2.json()).pairs : null; if (dj) { j.daily = {}; for (const id of Object.keys(dj)) j.daily[id] = dj[id].slice(-4); } } catch (e) { /* D1 facultatif */ }
+  candleStaticAt = Date.now();
   return j;
+}
+async function candleFetchProxy() {
+  try {
+    const res = await fetch('https://ariinuiirgina.vercel.app/api/poh-candles', { cache: 'no-store', signal: AbortSignal.timeout(15000) });
+    const j = res.ok ? await res.json() : null;
+    if (!j || !j.pairs || !Object.keys(j.pairs).length) throw new Error('proxy');
+    return j;
+  } catch (e) { return candleFetchStatic(); }
 }
 function candleMerge(j) { // par paire : on garde l'ancienne série si la nouvelle manque (jamais de bougie qui disparaît)
   candlePoh = Object.assign({}, candlePoh || {}, j.pairs);
