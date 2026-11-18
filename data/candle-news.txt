@@ -208,7 +208,7 @@
 1794924600	USD	FOMC Member Waller Speaks			
 1794925800	USD	FOMC Member Hammack Speaks			
 1794943500	USD	FOMC Member Williams Speaks			
-1794959400	JPY	Balance of Trade		-956B ¥	-556.5B ¥
+1794959400	JPY	Balance of Trade	-476.5B ¥	-956B ¥	-556.5B ¥
 1794969900	EUR	German Buba President Nagel Speaks			
 1794985200	GBP	Core Inflation Rate MoM		0.3%	0.2%
 1794985200	GBP	Inflation Rate YoY		3.6%	3.5%
@@ -306,7 +306,7 @@
 1797337800	USD	Core PPI m/m			
 1797337800	USD	PPI m/m			
 1797341400	USD	PPI MoM			0.3%
-1797378600	JPY	Balance of Trade			
+1797378600	JPY	Balance of Trade			-476.5B ¥
 1797404400	GBP	Core Inflation Rate MoM			
 1797404400	GBP	Inflation Rate YoY			
 1797413400	GBP	S&P Global Manufacturing PMI Flash			

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-17T17:55:11.795Z",
+  "timestamp": "2026-11-18T00:09:10.315Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -13688,7 +13688,7 @@
       "impact": "Low",
       "forecast": "1.5%",
       "previous": "2.9%",
-      "actual": ""
+      "actual": "0.7%"
     },
     {
       "title": "PPI Output q/q",
@@ -13697,16 +13697,16 @@
       "impact": "Low",
       "forecast": "1.1%",
       "previous": "1.6%",
-      "actual": ""
+      "actual": "0.8%"
     },
     {
       "title": "MI Leading Index m/m",
       "country": "AUD",
-      "date": "2026-11-17T18:30:00-05:00",
+      "date": "2026-11-17T18:39:00-05:00",
       "impact": "Low",
       "forecast": "",
       "previous": "-0.1%",
-      "actual": ""
+      "actual": "0.0%"
     },
     {
       "title": "Trade Balance",
@@ -13715,7 +13715,7 @@
       "impact": "Low",
       "forecast": "-0.90T",
       "previous": "-0.70T",
-      "actual": ""
+      "actual": "-0.77T"
     },
     {
       "title": "Wage Price Index q/q",
@@ -13875,7 +13875,7 @@
       "country": "USD",
       "date": "2026-11-18T10:00:00-05:00",
       "impact": "Low",
-      "forecast": "-1.8%",
+      "forecast": "-2.0%",
       "previous": "-7.3%",
       "actual": ""
     },
@@ -13884,7 +13884,7 @@
       "country": "USD",
       "date": "2026-11-18T10:30:00-05:00",
       "impact": "Low",
-      "forecast": "-0.3M",
+      "forecast": "0.4M",
       "previous": "4.7M",
       "actual": ""
     },
@@ -14037,7 +14037,7 @@
       "country": "CAD",
       "date": "2026-11-19T08:30:00-05:00",
       "impact": "Low",
-      "forecast": "1.2%",
+      "forecast": "0.4%",
       "previous": "2.0%",
       "actual": ""
     },
@@ -14046,7 +14046,7 @@
       "country": "CAD",
       "date": "2026-11-19T08:30:00-05:00",
       "impact": "Low",
-      "forecast": "2.0%",
+      "forecast": "0.9%",
       "previous": "4.8%",
       "actual": ""
     },
@@ -14064,7 +14064,7 @@
       "country": "USD",
       "date": "2026-11-19T08:30:00-05:00",
       "impact": "Medium",
-      "forecast": "19.2",
+      "forecast": "20.6",
       "previous": "20.9",
       "actual": ""
     },
@@ -14073,7 +14073,7 @@
       "country": "USD",
       "date": "2026-11-19T08:30:00-05:00",
       "impact": "Medium",
-      "forecast": "199K",
+      "forecast": "198K",
       "previous": "200K",
       "actual": ""
     },
@@ -14118,7 +14118,7 @@
       "country": "USD",
       "date": "2026-11-19T10:30:00-05:00",
       "impact": "Low",
-      "forecast": "",
+      "forecast": "25B",
       "previous": "61B",
       "actual": ""
     },
@@ -14289,7 +14289,7 @@
       "country": "USD",
       "date": "2026-11-20T10:00:00-05:00",
       "impact": "Medium",
-      "forecast": "52.1",
+      "forecast": "51.7",
       "previous": "51.0",
       "actual": ""
     },
