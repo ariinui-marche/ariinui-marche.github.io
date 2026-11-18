@@ -3698,7 +3698,7 @@ document.getElementById('alerteNotif')?.addEventListener('click', async () => { 
   alerteNotifState();
 });
 alerteNotifState();
-// Interrupteurs « Doji alerts » et « 50% alerts » : réglages serveur (settings.json) — actifs par défaut ; mis à jour tout de suite, annulés si le serveur refuse
+// Interrupteur « Doji alerts » : réglages serveur (settings.json) — actifs par défaut ; mis à jour tout de suite, annulés si le serveur refuse
 function alerteSwitch(id, key, label) {
   const btn = document.getElementById(id);
   if (!btn) return;
@@ -3722,8 +3722,6 @@ function alerteSwitch(id, key, label) {
   load();
 }
 alerteSwitch('alerteDoji', 'doji', 'Doji alerts');
-alerteSwitch('alerteP50', 'p50', '50% alerts');
-alerteSwitch('alerteCross', 'cross', 'Cross alerts');
 
 // Flèches ‹ › : POH seuls (—) / historique 1 min (1m) / historique 5 min (5m), sans molette
 (function candleHistCtl() {
