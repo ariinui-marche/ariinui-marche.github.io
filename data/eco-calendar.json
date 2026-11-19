@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-19T03:59:45.032Z",
+  "timestamp": "2026-11-19T12:34:08.451Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -14012,7 +14012,7 @@
       "impact": "Low",
       "forecast": "16.6B",
       "previous": "8.7B",
-      "actual": ""
+      "actual": "12.5B"
     },
     {
       "title": "German Buba Monthly Report",
@@ -14030,7 +14030,7 @@
       "impact": "Low",
       "forecast": "-29",
       "previous": "-32",
-      "actual": ""
+      "actual": "-12"
     },
     {
       "title": "MPC Member Dhingra Speaks",

@@ -1,5 +1,3 @@
-1791176400	JPY	Consumer Confidence	35.4		35.5
-1791186300	EUR	German Buba President Nagel Speaks			
 1791208800	USD	ISM Services PMI	54.9	55.2	55.4
 1791268500	JPY	BOJ Gov Ueda Speaks			
 1791275400	GBP	MPC Member Mann Speaks			
