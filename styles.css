@@ -1245,7 +1245,7 @@ body.cc-lock { overflow: hidden; }
 /* Mise en page compacte : Fibo / Sweep / ✕ en haut, ‹ n/N › en bas, nom de la paire sur le graphique */
 .cc-top { display: flex; align-items: center; gap: 6px; flex: 0 0 44px; box-sizing: border-box; padding-right: 8px; background: #0b0b0b; border-bottom: 1px solid #1d1f24; }
 .cc-top .cc-strip { flex: 1 1 auto; min-width: 0; border-bottom: 0; }
-.cc-top #candleClose { flex: 0 0 40px; height: 32px; background: #1a1a1a; color: #e5e5e5; border: 1px solid #333; border-radius: 8px; font-size: 18px; line-height: 1; cursor: pointer; padding: 0; }
+.cc-top #candleRefresh, .cc-top #candleClose { flex: 0 0 40px; height: 32px; background: #1a1a1a; color: #e5e5e5; border: 1px solid #333; border-radius: 8px; font-size: 18px; line-height: 1; cursor: pointer; padding: 0; }
 #candleBody:not(.collapsed) .cc-bottom { flex: 0 0 44px; box-sizing: content-box; padding: 0 0 env(safe-area-inset-bottom); border-bottom: 0; border-top: 1px solid #1d1f24; background: #0b0b0b; }
 #candleBody:not(.collapsed) .cd-head { position: absolute; top: 4px; left: 0; right: 0; width: auto; height: auto; padding: 4px 12px; pointer-events: none; z-index: 2; }
 
@@ -1253,7 +1253,7 @@ body.cc-lock { overflow: hidden; }
 .cc-top .cc-strip { gap: 5px; padding: 6px 6px; }
 .cc-top .cc-grp .cc-chip { padding: 0 2px; font-size: 12px; letter-spacing: -0.1px; }
 .cc-top .cc-drop { flex: 0 0 26px; font-size: 12px; }
-.cc-top #candleClose { flex: 0 0 36px; }
+.cc-top #candleRefresh, .cc-top #candleClose { flex: 0 0 36px; }
 .cc-top { gap: 4px; padding-right: 6px; }
 
 /* ALERTE : boutons notifications / doji */

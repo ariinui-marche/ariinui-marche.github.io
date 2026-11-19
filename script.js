@@ -3223,12 +3223,11 @@ async function candleAutoRefresh() {
     try { localStorage.setItem(CANDLE_LS, JSON.stringify({ pairs: candlePoh, daily: candleDaily })); } catch (e) { /* quota */ }
     candleRefreshInPlace();
     if (!rp.on && candleHistTf !== '0') { const cid = candleCurId(); if (cid) candleHistEnsure(cid); } // bougies 1 min / 5 min de la paire affichée rechargées (limite 25 s) : bougies, plans, zones et sweeps restent à jour
-    if (Date.now() - candleAlAt > 120000) candleAlFetch(); // alertes de prix : relues toutes les 2 min (celles touchées disparaissent)
   } catch (e) { /* on réessaiera au prochain tour */ }
   candleAutoBusy = false;
 }
-setInterval(candleAutoRefresh, 20000);
-document.addEventListener('visibilitychange', () => { if (!document.hidden) candleAutoRefresh(); });
+// Rafraîchissement MANUEL uniquement (bouton ↻) : plus de relecture automatique toutes les 20 s
+document.getElementById('candleRefresh')?.addEventListener('click', async (e) => { const b = e.currentTarget; b.disabled = true; candleStaticAt = 0; try { await candleAutoRefresh(); } finally { b.disabled = false; } });
 
 document.getElementById('candleToggle')?.addEventListener('click', (e) => {
   const expanded = e.currentTarget.getAttribute('aria-expanded') === 'true';
@@ -3773,6 +3772,7 @@ function candleLastPx(id) { // dernier prix connu de la paire
   return null;
 }
 async function candleAlFetch() {
+  return; // alertes de prix désactivées côté serveur (économie du quota Vercel)
   candleAlAt = Date.now();
   try {
     const r = await fetch(`${ALERTE_API}/alerte?lines=1`, { cache: 'no-store', signal: AbortSignal.timeout(10000) });
@@ -3820,7 +3820,7 @@ function candleAlSheet(title, sub, price, okLabel, onOk, withExpiry) { // petite
     try { await onOk(inp ? parseFloat(inp.value) : null, wrap.querySelector('.ca-exp')?.value); candleAlClose(); } catch (e) { err.textContent = e.message || 'Error'; err.hidden = false; ok.disabled = false; }
   });
 }
-async function candleLiveLast(id) { // dernier prix 1 min en direct (le dernier prix « POH » peut dater de plusieurs heures) ; repli : dernier prix connu
+async function candleLiveLast(id) { return candleLastPx(id); // plus d'appel serveur (économie du quota Vercel) ; ancien : dernier prix 1 min en direct (le dernier prix « POH » peut dater de plusieurs heures) ; repli : dernier prix connu
   try {
     const r = await fetch(`https://ariinui-api.vercel.app/api/poh-candles?pair=${id}&tf=1&since=${Math.floor(Date.now() / 1000) - 900}`, { cache: 'no-store', signal: AbortSignal.timeout(6000) });
     const j = r.ok ? await r.json() : null;
