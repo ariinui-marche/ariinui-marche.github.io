@@ -47,7 +47,7 @@ const CURRENCY_NAMES = {
 
 // Force Devise: live proxy déjà utilisé par TradeJournal Pro (BabyPips bloque les IPs
 // cloud génériques type GitHub Actions, ce proxy Vercel est whitelisté — voir décision session)
-const MARKET_DATA_URL = 'https://ariinuiirgina.vercel.app/api/market-data';
+const MARKET_DATA_URL = 'https://ariinui-api.vercel.app/api/market-data';
 
 async function fetchMarketRaw() {
   const res = await fetch(MARKET_DATA_URL);
@@ -217,7 +217,7 @@ function parseEmoji(el) {
 // on Yahoo Finance price data) but a different underlying feed than
 // myfxbook's own broker ticks, so expect similar but not identical numbers.
 
-const LIVE_CORR_URL = 'https://ariinuiirgina.vercel.app/api/live-correlation';
+const LIVE_CORR_URL = 'https://ariinui-api.vercel.app/api/live-correlation';
 
 const CORR_TIMEFRAMES = [
   { id: '5m', label: '5 min' },
@@ -1338,7 +1338,7 @@ async function refreshEco() {
 // ── Actual quasi instantané : calendrier public TradingView via le proxy Vercel ──
 // (le cron GitHub Actions est trop lent). Rapprochement par devise + heure ±10 min
 // + forecast/previous numériquement égaux — les titres FF/TV diffèrent.
-const TV_ACTUALS_URL = 'https://ariinuiirgina.vercel.app/api/tv-actuals';
+const TV_ACTUALS_URL = 'https://ariinui-api.vercel.app/api/tv-actuals';
 function tvNum(s) {
   if (s == null || s === '') return null;
   const m = String(s).replace(/,/g, '').match(/-?\d+(?:\.\d+)?/);
@@ -1361,7 +1361,7 @@ function tvFormatLike(ev, v) {
 }
 // ── Actual Forex Smart Alert en direct : proxy Vercel (api/fsa-calendar), fonctionne sur mobile ──
 // En cas d'échec (fetch silencieux) : TradingView prend le relais.
-const FSA_RELAY_URL = 'https://ariinuiirgina.vercel.app/api/fsa-calendar';
+const FSA_RELAY_URL = 'https://ariinui-api.vercel.app/api/fsa-calendar';
 async function applyRelayActuals() {
   try {
     // Timeout court : sans relais (ou si Chrome attend l'autorisation réseau local), ne jamais bloquer l'affichage.
@@ -2140,7 +2140,7 @@ function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bou
     : since ? stGet('.recent').then((j) => (j && j.bars[0][0] <= since ? Object.assign({}, j, { bars: j.bars.filter((b) => b[0] >= since) }) : stGet('').then((f) => f && Object.assign(f, { full: true }))))
       : stGet('');
   return staticFirst
-    .then((sj) => sj || fetch(`https://ariinuiirgina.vercel.app/api/poh-candles?pair=${id}&tf=${tf}${since ? '&since=' + since : ''}`, { cache: 'no-store', signal: AbortSignal.timeout(20000) }).then((r) => (r.ok ? r.json() : null)))
+    .then((sj) => sj || fetch(`https://ariinui-api.vercel.app/api/poh-candles?pair=${id}&tf=${tf}${since ? '&since=' + since : ''}`, { cache: 'no-store', signal: AbortSignal.timeout(20000) }).then((r) => (r.ok ? r.json() : null)))
     .then((j) => {
       if (j && j.bars && j.bars.length) h.bars = since && !j.full ? h.bars.filter((b) => b[0] < since).concat(j.bars) : j.bars;
       if ((tf === candleHistTf || tf === '1D' || tf === '1W' || tf === '240' || tf === '60' || rp.on || ((candlePlans || candleZones) && tf === '1' && candleHistTf === '5')) && !(cg.mode)) candleRedraw(id, candleViewOf(id));
@@ -2176,7 +2176,7 @@ async function candleDeepLoadApi(id, h) {
   h.deep = true;
   try {
     for (let k = 0; k < 10 && h.bars.length; k++) {
-      const r = await fetch(`https://ariinuiirgina.vercel.app/api/poh-candles?pair=${id}&tf=1&older=${h.bars[0][0]}&n=50000`, { signal: AbortSignal.timeout(30000) });
+      const r = await fetch(`https://ariinui-api.vercel.app/api/poh-candles?pair=${id}&tf=1&older=${h.bars[0][0]}&n=50000`, { signal: AbortSignal.timeout(30000) });
       if (!r.ok) break;
       const j = await r.json();
       if (!j.bars || !j.bars.length) break;
@@ -3133,7 +3133,7 @@ async function candleFetchProxy() { // POH + D1 : fichiers GitHub (0 requête Ve
   try { j = await candleFetchStatic(); } catch (e) { if (e.message === 'static-throttle') throw e; }
   if (!j) {
     try {
-      const res = await fetch('https://ariinuiirgina.vercel.app/api/poh-candles', { cache: 'no-store', signal: AbortSignal.timeout(15000) });
+      const res = await fetch('https://ariinui-api.vercel.app/api/poh-candles', { cache: 'no-store', signal: AbortSignal.timeout(15000) });
       const v = res.ok ? await res.json() : null;
       if (v && v.pairs && Object.keys(v.pairs).length) j = v;
     } catch (e) { /* secours indisponible */ }
@@ -3408,7 +3408,7 @@ document.getElementById('alerteToggle')?.addEventListener('click', (e) => {
 });
 
 // Notifications téléphone éteint : abonnement Web Push, envoyé au serveur qui surveille les alertes de prix et les doji
-const ALERTE_API = 'https://ariinuiirgina.vercel.app/api';
+const ALERTE_API = 'https://ariinui-api.vercel.app/api';
 function alerteKey(b64) {
   const p = '='.repeat((4 - (b64.length % 4)) % 4), raw = atob((b64 + p).replace(/-/g, '+').replace(/_/g, '/'));
   return Uint8Array.from(raw, (c) => c.charCodeAt(0));
@@ -3822,7 +3822,7 @@ function candleAlSheet(title, sub, price, okLabel, onOk, withExpiry) { // petite
 }
 async function candleLiveLast(id) { // dernier prix 1 min en direct (le dernier prix « POH » peut dater de plusieurs heures) ; repli : dernier prix connu
   try {
-    const r = await fetch(`https://ariinuiirgina.vercel.app/api/poh-candles?pair=${id}&tf=1&since=${Math.floor(Date.now() / 1000) - 900}`, { cache: 'no-store', signal: AbortSignal.timeout(6000) });
+    const r = await fetch(`https://ariinui-api.vercel.app/api/poh-candles?pair=${id}&tf=1&since=${Math.floor(Date.now() / 1000) - 900}`, { cache: 'no-store', signal: AbortSignal.timeout(6000) });
     const j = r.ok ? await r.json() : null;
     if (j && j.bars && j.bars.length) return j.bars[j.bars.length - 1][4];
   } catch (e) { /* repli */ }
