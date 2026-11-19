@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-19T12:34:08.451Z",
+  "timestamp": "2026-11-19T20:55:27.712Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -14048,7 +14048,7 @@
       "impact": "Low",
       "forecast": "0.4%",
       "previous": "2.0%",
-      "actual": ""
+      "actual": "0.3%"
     },
     {
       "title": "RMPI m/m",
@@ -14057,7 +14057,7 @@
       "impact": "Low",
       "forecast": "0.9%",
       "previous": "4.8%",
-      "actual": ""
+      "actual": "-1.0%"
     },
     {
       "title": "ECB President Lagarde Speaks",
@@ -14075,7 +14075,7 @@
       "impact": "Medium",
       "forecast": "20.6",
       "previous": "20.9",
-      "actual": ""
+      "actual": "6.3"
     },
     {
       "title": "Unemployment Claims",
@@ -14084,7 +14084,7 @@
       "impact": "Medium",
       "forecast": "198K",
       "previous": "200K",
-      "actual": ""
+      "actual": "203K"
     },
     {
       "title": "FOMC Member Hammack Speaks",
@@ -14111,16 +14111,7 @@
       "impact": "Low",
       "forecast": "0.0%",
       "previous": "0.0%",
-      "actual": ""
-    },
-    {
-      "title": "Mortgage Delinquencies",
-      "country": "USD",
-      "date": "2026-11-19T10:15:00-05:00",
-      "impact": "Low",
-      "forecast": "",
-      "previous": "4.37%",
-      "actual": ""
+      "actual": "-0.3%"
     },
     {
       "title": "Natural Gas Storage",
@@ -14129,7 +14120,16 @@
       "impact": "Low",
       "forecast": "25B",
       "previous": "61B",
-      "actual": ""
+      "actual": "20B"
+    },
+    {
+      "title": "Mortgage Delinquencies",
+      "country": "USD",
+      "date": "2026-11-19T10:46:00-05:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "4.37%",
+      "actual": "4.42%"
     },
     {
       "title": "FOMC Member Goolsbee Speaks",
