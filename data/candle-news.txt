@@ -223,8 +223,8 @@
 1795028400	USD	FOMC Meeting Minutes			
 1795030200	USD	FOMC Member Williams Speaks			
 1795036500	USD	FOMC Member Kashkari Speaks			
-1795048200	AUD	Employment Change		25.5K	-39.3K
-1795048200	AUD	Unemployment Rate		4.7%	4.7%
+1795048200	AUD	Employment Change	-43.5K	25.5K	-39.3K
+1795048200	AUD	Unemployment Rate	4.9%	4.7%	4.7%
 1795090500	GBP	MPC Member Dhingra Speaks			
 1795095000	EUR	ECB President Lagarde Speaks			
 1795096200	USD	FOMC Member Hammack Speaks			
