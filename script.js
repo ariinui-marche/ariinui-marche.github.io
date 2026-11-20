@@ -2590,9 +2590,9 @@ function candleHasAlert(id) { // ligne d'alerte de prix (bleue) OU plan (PTP/OCO
 function candleInfo(id) {
   const dly = (candleDaily || {})[id], a = (dly || []).slice(-4);
   const days = ((candlePoh || {})[id] || []).filter((d) => Object.keys(d.c).length), day = days[days.length - 1];
-  // Fibo = les lignes sont réellement affichées à l'écran (D2 et D1 même sens ET au moins un niveau dans la zone des POH)
-  const fl = candleFibLevels(dly), sc = day ? candleScale(dly, day) : null;
-  const fibo = !!(fl && sc && fl.some((f) => f.v >= sc.lo && f.v <= sc.hi));
+  // Fibo = détection de début de journée : D2 et D1 de même couleur (même sens). Plus de condition sur la zone de prix des POH du jour (le prix peut avoir déjà quitté les niveaux).
+  const fl = candleFibLevels(dly);
+  const fibo = !!fl;
   const sweep = !!(day && candleSweep(dly, day));
   const bi = candleBias(id, false);
   return { fibo, sweep, both: fibo && sweep, alert: candleHasAlert(id), bias: bi.d !== 0 && bi.d === bi.h && bi.h === bi.u, doji: candleDojiRank(id) >= 0 };
