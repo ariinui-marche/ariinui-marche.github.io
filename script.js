@@ -1368,10 +1368,18 @@ function tvFormatLike(ev, v) {
 // ── Actual Forex Smart Alert en direct : proxy Vercel (api/fsa-calendar), fonctionne sur mobile ──
 // En cas d'échec (fetch silencieux) : TradingView prend le relais.
 const FSA_RELAY_URL = 'https://ariinui-api.vercel.app/api/fsa-calendar';
+let ecoFresh = false; // vrai seulement pendant les relectures programmées après une sortie de news
+async function ecoFetch(url, opts) { // relais Vercel mis en cache 5 min (économie du quota) sauf relecture après une news
+  const k = 'ecoC|' + url;
+  if (!ecoFresh) { try { const c = JSON.parse(localStorage.getItem(k) || 'null'); if (c && Date.now() - c.t < 300000) return new Response(c.x, { status: 200 }); } catch (e) { /* pas de cache */ } }
+  const r = await fetch(url, opts);
+  if (r.ok) { try { localStorage.setItem(k, JSON.stringify({ t: Date.now(), x: await r.clone().text() })); } catch (e) { /* quota */ } }
+  return r;
+}
 async function applyRelayActuals() {
   try {
     // Timeout court : sans relais (ou si Chrome attend l'autorisation réseau local), ne jamais bloquer l'affichage.
-    const res = await fetch(FSA_RELAY_URL, { cache: 'no-store', signal: AbortSignal.timeout(4000) });
+    const res = await ecoFetch(FSA_RELAY_URL, { cache: 'no-store', signal: AbortSignal.timeout(4000) });
     if (!res.ok) return false;
     const src = ((await res.json()).result || []).filter((t) => t.actual);
     let changed = false;
@@ -1398,7 +1406,7 @@ async function applyRelayActuals() {
 async function applyLiveActuals() {
   const relayChanged = await applyRelayActuals();
   try {
-    const res = await fetch(`${TV_ACTUALS_URL}?hours=12`, { cache: 'no-store' });
+    const res = await ecoFetch(`${TV_ACTUALS_URL}?hours=12`, { cache: 'no-store' });
     if (!res.ok) return relayChanged;
     const tv = ((await res.json()).result || []).filter((t) => t.actual != null);
     let changed = false;
@@ -1440,7 +1448,7 @@ async function pollLiveActuals() {
 // (sortie du High, retour sur l'app) pour voir l'actual dès qu'il est publié.
 let lastEcoRefresh = Date.now();
 function refreshEcoTracked() { lastEcoRefresh = Date.now(); return refreshEco(); }
-function scheduleReleaseRefresh() { [60000, 300000, 600000].forEach((ms) => setTimeout(refreshEcoTracked, ms)); }
+function scheduleReleaseRefresh() { [60000, 300000, 600000].forEach((ms) => setTimeout(() => { ecoFresh = true; Promise.resolve(refreshEcoTracked()).finally(() => { ecoFresh = false; }); }, ms)); }
 // plus de relecture du calendrier/actuals à chaque retour sur l'onglet (économie du quota Vercel)
 
 async function loadAll() {
@@ -3458,8 +3466,9 @@ alerteNotifState();
 function alerteSwitch(id, key, label) {
   const btn = document.getElementById(id);
   if (!btn) return;
-  const show = (on) => { btn.classList.toggle('on', !!on); btn.setAttribute('aria-pressed', String(!!on)); btn.textContent = `${label}: ${on ? 'on' : 'off'}`; };
+  const show = (on) => { try { localStorage.setItem('alSet|' + key, String(!!on)); } catch (e) { /* pas de cache */ } btn.classList.toggle('on', !!on); btn.setAttribute('aria-pressed', String(!!on)); btn.textContent = `${label}: ${on ? 'on' : 'off'}`; };
   const load = async () => {
+    try { const c = localStorage.getItem('alSet|' + key); if (c !== null) { show(c === 'true'); return; } } catch (e) { /* pas de cache */ } // réglage mémorisé : aucun appel serveur (quota Vercel)
     try { const r = await fetch(`${ALERTE_API}/alerte?settings=1`, { cache: 'no-store', signal: AbortSignal.timeout(10000) }); if (r.ok) { show((await r.json())[key] !== false); return; } } catch (e) { /* hors ligne */ }
     btn.textContent = `${label}: unavailable (tap to retry)`;
   };
