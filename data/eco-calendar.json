@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-20T09:29:42.826Z",
+  "timestamp": "2026-11-20T17:55:54.154Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -13511,6 +13511,15 @@
       "actual": "4.6%"
     },
     {
+      "title": "HMRC Payrolls Change",
+      "country": "GBP",
+      "date": "2026-11-17T02:00:00-05:00",
+      "impact": "Low",
+      "forecast": "9K",
+      "previous": "13K",
+      "actual": ""
+    },
+    {
       "title": "EU Economic Forecasts",
       "country": "EUR",
       "date": "2026-11-17T05:00:00-05:00",
@@ -14282,7 +14291,7 @@
       "impact": "Low",
       "forecast": "0.7%",
       "previous": "1.2%",
-      "actual": ""
+      "actual": "1.0%"
     },
     {
       "title": "Retail Sales m/m",
@@ -14291,7 +14300,7 @@
       "impact": "Low",
       "forecast": "0.7%",
       "previous": "1.2%",
-      "actual": ""
+      "actual": "0.8%"
     },
     {
       "title": "Consumer Confidence",
@@ -14300,7 +14309,7 @@
       "impact": "Low",
       "forecast": "-18",
       "previous": "-18",
-      "actual": ""
+      "actual": "-17"
     },
     {
       "title": "Revised UoM Consumer Sentiment",
@@ -14309,7 +14318,7 @@
       "impact": "Medium",
       "forecast": "51.7",
       "previous": "51.0",
-      "actual": ""
+      "actual": "51.5"
     },
     {
       "title": "Revised UoM Inflation Expectations",
@@ -14318,6 +14327,15 @@
       "impact": "Medium",
       "forecast": "",
       "previous": "4.3%",
+      "actual": "3.7%"
+    },
+    {
+      "title": "President Trump Speaks",
+      "country": "USD",
+      "date": "2026-11-20T12:00:00-05:00",
+      "impact": "Medium",
+      "forecast": "",
+      "previous": "",
       "actual": ""
     },
     {
