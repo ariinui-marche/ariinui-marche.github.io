@@ -2209,12 +2209,13 @@ function candleNiceStep(rng, n) {
   return (m < 1.5 ? 1 : m < 3 ? 2 : m < 7 ? 5 : 10) * p;
 }
 // Échelle de prix : calée sur les 9 POH (priorité d'affichage), journalières coupées sur les bords
-function candleScale(dly, day, hist) {
+function candleScale(dly, day, hist, withFib) {
   const dd = (dly || []).slice(-4), poh = Object.values((day && day.c) || {}); // POH : [o, h, l, c] ; daily : [t, o, h, l, c]
   const base = poh.length ? poh : dd.map((b) => b.slice(1, 5));
   if (!base.length && !(hist && hist.length)) return null; // replay : ni POH ni daily, seulement les barres visibles
   let hi = base.length ? Math.max(...base.map((c) => c[1])) : -Infinity, lo = base.length ? Math.min(...base.map((c) => c[2])) : Infinity;
   if (hist && hist.length) for (const b of hist.slice(-(CANDLE_HIST_N[candleHistTf] || 50))) { hi = Math.max(hi, b[2]); lo = Math.min(lo, b[3]); }
+  if (withFib) { const fz = candleFibLevels(dly); if (fz) for (const f of fz) { hi = Math.max(hi, f.v); lo = Math.min(lo, f.v); } } // D2 et D1 même sens : les Fibo de D1 sont toujours dans l'échelle, donc tracés automatiquement toute la journée
   const d0 = dd.length ? dd[dd.length - 1] : null;
   const minSpan = d0 ? (d0[2] - d0[3]) * 0.35 : 0; // évite un zoom extrême quand il n'y a encore qu'une ou deux bougies POH
   if (hi - lo < minSpan) { const mid = (hi + lo) / 2; hi = mid + minSpan / 2; lo = mid - minSpan / 2; }
@@ -2296,7 +2297,7 @@ function candleSvg(day, dly, view, id) {
   const hist = id ? candleHistBars(id) : null;
   const RP = !!(id && rp.on && rp.id === id); // replay : POH, Fibo, PDH/PDL et boîte 14H masqués (ils montreraient le futur)
   if (RP && !hist) return '';
-  const sc = candleScale(dly, day, hist), vw = view || CANDLE_DEF;
+  const sc = candleScale(dly, day, hist, !RP), vw = view || CANDLE_DEF;
   const baseRng = sc.hi - sc.lo, cenV = (sc.hi + sc.lo) / 2 + vw.yp * baseRng, rng = baseRng / vw.yz;
   const lo = cenV - rng / 2, hi = cenV + rng / 2; // fenêtre de prix affichée (zoom vertical + décalage)
   const y = (v) => TOP + (1 - (v - lo) / rng) * (H - TOP - BOT);
