@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-19T20:55:27.712Z",
+  "timestamp": "2026-11-20T01:56:32.675Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -14165,7 +14165,7 @@
       "impact": "Low",
       "forecast": "2.3%",
       "previous": "2.1%",
-      "actual": ""
+      "actual": "2.2%"
     },
     {
       "title": "FOMC Member Paulson Speaks",
@@ -14183,7 +14183,7 @@
       "impact": "Low",
       "forecast": "-22",
       "previous": "-24",
-      "actual": ""
+      "actual": "-22"
     },
     {
       "title": "1-y Loan Prime Rate",
@@ -14192,7 +14192,7 @@
       "impact": "Low",
       "forecast": "3.00%",
       "previous": "3.00%",
-      "actual": ""
+      "actual": "3.00%"
     },
     {
       "title": "5-y Loan Prime Rate",
@@ -14201,7 +14201,7 @@
       "impact": "Low",
       "forecast": "3.50%",
       "previous": "3.50%",
-      "actual": ""
+      "actual": "3.50%"
     },
     {
       "title": "Credit Card Spending y/y",

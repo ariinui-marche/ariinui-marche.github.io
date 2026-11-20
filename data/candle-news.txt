@@ -229,7 +229,7 @@
 1795109400	USD	FOMC Member Goolsbee Speaks			
 1795115700	USD	FOMC Member Barr Speaks			
 1795122000	USD	FOMC Member Barkin Speaks			
-1795131000	JPY	Inflation Rate YoY			2.1%
+1795131000	JPY	Inflation Rate YoY	2.3%		2.1%
 1795131000	USD	FOMC Member Paulson Speaks			
 1795158000	GBP	Retail Sales MoM		0%	-0.4%
 1795162500	EUR	ECB President Lagarde Speaks			
@@ -314,6 +314,6 @@
 1797513300	EUR	ECB Interest Rate Decision			
 1797514200	USD	Housing Starts			1.309M
 1797514200	USD	Building Permits Prel			1.295M
-1797550200	JPY	Inflation Rate YoY			
+1797550200	JPY	Inflation Rate YoY			2.3%
 1797561000	JPY	Interest Rate			
 1797577200	GBP	Retail Sales MoM			
