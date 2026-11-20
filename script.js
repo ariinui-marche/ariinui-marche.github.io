@@ -3158,6 +3158,23 @@ function candleMerge(j) { // par paire : on garde l'ancienne série si la nouvel
   candlePoh = Object.assign({}, candlePoh || {}, j.pairs);
   candleDaily = Object.assign({}, candleDaily || {}, j.daily || {});
   candleF50 = Object.assign({}, candleF50 || {}, j.f50 || {});
+  candleDailyAlign();
+}
+// D0 = journée de trading de la dernière journée POH. Si la bougie daily du jour n'est pas encore dans les fichiers (début de journée, jusqu'au prochain passage du job 1D), la dernière bougie daily connue serait prise à tort pour D0 : D1 et D2 (donc les Fibo) seraient décalés d'un jour.
+// On ajoute alors une bougie D0 provisoire (marquée 'syn') construite avec les POH du jour ; elle est remplacée dès que la vraie bougie arrive.
+function candleDailyAlign() {
+  for (const id of Object.keys(candleDaily || {})) {
+    const arr = (candleDaily[id] || []).filter((b) => b[5] !== 'syn');
+    const days = ((candlePoh || {})[id] || []).filter((d) => Object.keys(d.c || {}).length), day = days[days.length - 1];
+    if (day && arr.length) {
+      const lastDate = new Date((arr[arr.length - 1][0] + 7200) * 1000).toISOString().slice(0, 10);
+      if (lastDate < day.d) {
+        const ps = CANDLE_SLOTS.map(([k]) => day.c[k]).filter(Boolean);
+        if (ps.length) arr.push([Date.parse(day.d + 'T00:00:00Z') / 1000 - 7200 + 3720, ps[0][0], Math.max(...ps.map((p) => p[1])), Math.min(...ps.map((p) => p[2])), ps[ps.length - 1][3], 'syn']);
+      }
+    }
+    candleDaily[id] = arr;
+  }
 }
 async function candleLoad() {
   if (!candlePoh) { // affichage instantané : dernière série connue (localStorage), puis rafraîchie en direct
