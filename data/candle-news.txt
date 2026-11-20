@@ -257,8 +257,8 @@
 1796383800	USD	Non-Farm Employment Change			
 1796383800	USD	Unemployment Rate			
 1796391000	CAD	Unemployment Rate			6.7%
-1796391000	USD	Non Farm Payrolls			165K
-1796391000	USD	Unemployment Rate			4.1%
+1796391000	USD	Non Farm Payrolls		93K	165K
+1796391000	USD	Unemployment Rate		4.1%	4.1%
 1796396400	CAD	Ivey PMI			56.4
 1796396400	CAD	Ivey PMI s.a			58.3
 1796396400	USD	Michigan Consumer Sentiment Prel			51
