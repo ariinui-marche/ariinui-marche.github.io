@@ -50,11 +50,14 @@ const CURRENCY_NAMES = {
 const MARKET_DATA_URL = 'https://ariinui-api.vercel.app/api/market-data';
 
 async function fetchMarketRaw() {
+  try { const c = JSON.parse(localStorage.getItem('marketRawCache') || 'null'); if (c && Date.now() - c.t < 1800000 && c.d && Object.keys(c.d).length) return c.d; } catch (e) { /* pas de cache */ } // cache 30 min : économie du quota Vercel
   const res = await fetch(MARKET_DATA_URL);
   if (!res.ok) throw new Error(`market-data: HTTP ${res.status}`);
   const json = await res.json();
   if (json.error) throw new Error(json.error);
-  return json?.data || {};
+  const d = json?.data || {};
+  try { localStorage.setItem('marketRawCache', JSON.stringify({ t: Date.now(), d })); } catch (e) { /* quota */ }
+  return d;
 }
 
 function computeCurrencyStrength(raw) {
@@ -418,8 +421,11 @@ async function corrFetchIfReady() {
   corrRenderBody();
   try {
     const url = `${LIVE_CORR_URL}?pairs=${[...corrSelected].join(',')}&timeframe=${corrTimeframe}`;
-    const res = await fetch(url);
-    const body = await res.json().catch(() => ({}));
+    const ck = 'corrCache|' + [...corrSelected].sort().join(',') + '|' + corrTimeframe; let cached = null;
+    try { const c = JSON.parse(localStorage.getItem(ck) || 'null'); if (c && Date.now() - c.t < 43200000) cached = c.b; } catch (e) { /* pas de cache */ } // cache 12 h : économie du quota Vercel
+    const res = cached ? { ok: true } : await fetch(url);
+    const body = cached || await res.json().catch(() => ({}));
+    if (!cached && res.ok) { try { localStorage.setItem(ck, JSON.stringify({ t: Date.now(), b: body })); } catch (e) { /* quota */ } }
     if (seq !== corrFetchSeq) return; // a newer selection/timeframe change superseded this request
     if (!res.ok) throw new Error(body.error || `HTTP ${res.status}`);
     corrCombos = (body.combos || []).filter((c) => typeof c.r === 'number');
@@ -1435,9 +1441,7 @@ async function pollLiveActuals() {
 let lastEcoRefresh = Date.now();
 function refreshEcoTracked() { lastEcoRefresh = Date.now(); return refreshEco(); }
 function scheduleReleaseRefresh() { [60000, 300000, 600000].forEach((ms) => setTimeout(refreshEcoTracked, ms)); }
-document.addEventListener('visibilitychange', () => {
-  if (!document.hidden && Date.now() - lastEcoRefresh > 120000) refreshEcoTracked();
-});
+// plus de relecture du calendrier/actuals à chaque retour sur l'onglet (économie du quota Vercel)
 
 async function loadAll() {
   try {
@@ -2140,7 +2144,7 @@ function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bou
     : since ? stGet('.recent').then((j) => (j && j.bars[0][0] <= since ? Object.assign({}, j, { bars: j.bars.filter((b) => b[0] >= since) }) : stGet('').then((f) => f && Object.assign(f, { full: true }))))
       : stGet('');
   return staticFirst
-    .then((sj) => sj || fetch(`https://ariinui-api.vercel.app/api/poh-candles?pair=${id}&tf=${tf}${since ? '&since=' + since : ''}`, { cache: 'no-store', signal: AbortSignal.timeout(20000) }).then((r) => (r.ok ? r.json() : null)))
+    .then((sj) => sj) // plus de repli Vercel (économie du quota) : fichiers GitHub seulement
     .then((j) => {
       if (j && j.bars && j.bars.length) h.bars = since && !j.full ? h.bars.filter((b) => b[0] < since).concat(j.bars) : j.bars;
       if ((tf === candleHistTf || tf === '1D' || tf === '1W' || tf === '240' || tf === '60' || rp.on || ((candlePlans || candleZones) && tf === '1' && candleHistTf === '5')) && !(cg.mode)) candleRedraw(id, candleViewOf(id));
@@ -2173,7 +2177,7 @@ async function candleDeepLoad(id, h) {
 }
 // Repli : historique profond par l'API Vercel (fichiers MT5 privés) : pages de 50 000 barres plus anciennes, ajoutées à GAUCHE des barres déjà chargées
 async function candleDeepLoadApi(id, h) {
-  h.deep = true;
+  h.deep = true; return; // désactivé (économie du quota Vercel)
   try {
     for (let k = 0; k < 10 && h.bars.length; k++) {
       const r = await fetch(`https://ariinui-api.vercel.app/api/poh-candles?pair=${id}&tf=1&older=${h.bars[0][0]}&n=50000`, { signal: AbortSignal.timeout(30000) });
@@ -3131,7 +3135,7 @@ async function candleFetchStatic() { // repli quand Vercel est coupé : fichiers
 async function candleFetchProxy() { // POH + D1 : fichiers GitHub (0 requête Vercel) ; Vercel seulement en secours si les fichiers sont introuvables
   let j = null;
   try { j = await candleFetchStatic(); } catch (e) { if (e.message === 'static-throttle') throw e; }
-  if (!j) {
+  if (!j && false) { // secours Vercel désactivé (économie du quota)
     try {
       const res = await fetch('https://ariinui-api.vercel.app/api/poh-candles', { cache: 'no-store', signal: AbortSignal.timeout(15000) });
       const v = res.ok ? await res.json() : null;
