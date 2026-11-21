@@ -1,5 +1,3 @@
-1791392400	USD	President Trump Speaks			
-1791396000	USD	FOMC Meeting Minutes			
 1791446700	CHF	Gov Board Member Martin Speaks			
 1791448200	USD	FOMC Member Waller Speaks			
 1791450000	GBP	MPC Member Pill Speaks			
