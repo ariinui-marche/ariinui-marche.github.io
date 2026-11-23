@@ -1,5 +1,3 @@
-1791549000	CAD	Unemployment Rate	6.5%	6.5%	6.4%
-1791554400	USD	Michigan Consumer Sentiment Prel	46.3	47.8	47.8
 1791576000	USD	FOMC Member Collins Speaks			
 1791797400	GBP	MPC Member Breeden Speaks			
 1791809400	GBP	MPC Member Mann Speaks			
@@ -240,7 +238,7 @@
 1796038200	CAD	GDP m/m			
 1796045400	CAD	GDP Growth Rate Annualized			3.3%
 1796045400	CAD	GDP Growth Rate QoQ			0.8%
-1796119200	EUR	Inflation Rate YoY Flash			4%
+1796119200	EUR	Inflation Rate YoY Flash		3.9%	4%
 1796137200	USD	ISM Manufacturing PMI			55.5
 1796137200	USD	JOLTs Job Openings			7.523M
 1796164200	AUD	GDP q/q			

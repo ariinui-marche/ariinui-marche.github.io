@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-23T07:55:06.035Z",
+  "timestamp": "2026-11-23T19:36:14.790Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -14399,7 +14399,7 @@
       "impact": "Medium",
       "forecast": "49.8",
       "previous": "49.3",
-      "actual": ""
+      "actual": "47.9"
     },
     {
       "title": "French Flash Services PMI",
@@ -14408,7 +14408,7 @@
       "impact": "Medium",
       "forecast": "47.4",
       "previous": "48.4",
-      "actual": ""
+      "actual": "46.6"
     },
     {
       "title": "German Flash Manufacturing PMI",
@@ -14417,7 +14417,7 @@
       "impact": "Medium",
       "forecast": "54.1",
       "previous": "54.2",
-      "actual": ""
+      "actual": "55.0"
     },
     {
       "title": "German Flash Services PMI",
@@ -14426,7 +14426,7 @@
       "impact": "Medium",
       "forecast": "52.4",
       "previous": "51.7",
-      "actual": ""
+      "actual": "54.0"
     },
     {
       "title": "Flash Manufacturing PMI",
@@ -14435,7 +14435,7 @@
       "impact": "Low",
       "forecast": "52.7",
       "previous": "52.4",
-      "actual": ""
+      "actual": "52.9"
     },
     {
       "title": "Flash Services PMI",
@@ -14444,7 +14444,7 @@
       "impact": "Low",
       "forecast": "51.8",
       "previous": "51.7",
-      "actual": ""
+      "actual": "51.2"
     },
     {
       "title": "Flash Manufacturing PMI",
@@ -14453,7 +14453,7 @@
       "impact": "Medium",
       "forecast": "53.0",
       "previous": "52.8",
-      "actual": ""
+      "actual": "52.7"
     },
     {
       "title": "Flash Services PMI",
@@ -14462,7 +14462,7 @@
       "impact": "Medium",
       "forecast": "53.0",
       "previous": "53.1",
-      "actual": ""
+      "actual": "52.0"
     },
     {
       "title": "MPC Member Pill Speaks",
@@ -14476,11 +14476,11 @@
     {
       "title": "Corporate Profits q/q",
       "country": "CAD",
-      "date": "2026-11-23T08:30:00-05:00",
+      "date": "2026-11-23T08:32:00-05:00",
       "impact": "Low",
       "forecast": "",
       "previous": "8.7%",
-      "actual": ""
+      "actual": "1.9%"
     },
     {
       "title": "Flash Manufacturing PMI",
@@ -14489,7 +14489,7 @@
       "impact": "Medium",
       "forecast": "54.5",
       "previous": "56.0",
-      "actual": ""
+      "actual": "54.5"
     },
     {
       "title": "Flash Services PMI",
@@ -14498,7 +14498,7 @@
       "impact": "Medium",
       "forecast": "55.6",
       "previous": "57.9",
-      "actual": ""
+      "actual": "54.7"
     },
     {
       "title": "FOMC Member Williams Speaks",
@@ -14699,6 +14699,15 @@
       "actual": ""
     },
     {
+      "title": "Foreign Direct Investment ytd/y",
+      "country": "CNY",
+      "date": "2026-11-25T02:02:00-05:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "-4.3%",
+      "actual": ""
+    },
+    {
       "title": "UBS Economic Expectations",
       "country": "CHF",
       "date": "2026-11-25T04:00:00-05:00",
@@ -14747,7 +14756,7 @@
       "title": "Unemployment Claims",
       "country": "USD",
       "date": "2026-11-25T08:30:00-05:00",
-      "impact": "Medium",
+      "impact": "Low",
       "forecast": "201K",
       "previous": "203K",
       "actual": ""
