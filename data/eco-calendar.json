@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-22T19:28:19.994Z",
+  "timestamp": "2026-11-23T00:24:13.131Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -14354,7 +14354,7 @@
       "impact": "Low",
       "forecast": "0.8%",
       "previous": "0.7%",
-      "actual": ""
+      "actual": "1.4%"
     },
     {
       "title": "Retail Sales q/q",
@@ -14363,7 +14363,7 @@
       "impact": "Low",
       "forecast": "0.5%",
       "previous": "-0.5%",
-      "actual": ""
+      "actual": "2.2%"
     },
     {
       "title": "Flash Manufacturing PMI",
@@ -14372,7 +14372,7 @@
       "impact": "Low",
       "forecast": "",
       "previous": "49.7",
-      "actual": ""
+      "actual": "48.7"
     },
     {
       "title": "Flash Services PMI",
@@ -14381,7 +14381,7 @@
       "impact": "Low",
       "forecast": "",
       "previous": "47.8",
-      "actual": ""
+      "actual": "46.2"
     },
     {
       "title": "Bank Holiday",
