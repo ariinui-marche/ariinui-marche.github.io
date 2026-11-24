@@ -228,6 +228,7 @@
 1795566600	AUD	CPI m/m		0.4%	0.8%
 1795566600	AUD	CPI y/y		4.7%	4.3%
 1795566600	AUD	Trimmed Mean CPI m/m		0.3%	0.3%
+1795609500	USD	FOMC Member Bowman Speaks			
 1795613400	USD	Personal Spending MoM		0.4%	0.5%
 1795613400	USD	Core PCE Price Index MoM		0.3%	0.3%
 1795613400	USD	Personal Income MoM		0.4%	0.2%
