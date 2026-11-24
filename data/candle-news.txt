@@ -1,4 +1,3 @@
-1791576000	USD	FOMC Member Collins Speaks			
 1791797400	GBP	MPC Member Breeden Speaks			
 1791809400	GBP	MPC Member Mann Speaks			
 1791821400	USD	FOMC Member Hammack Speaks			
@@ -227,7 +226,7 @@
 1795523400	GBP	MPC Member Greene Speaks			
 1795541100	CAD	BOC Gov Macklem Speaks			
 1795566600	AUD	CPI m/m		0.4%	0.8%
-1795566600	AUD	CPI y/y		4.8%	4.3%
+1795566600	AUD	CPI y/y		4.7%	4.3%
 1795566600	AUD	Trimmed Mean CPI m/m		0.3%	0.3%
 1795613400	USD	Personal Spending MoM		0.4%	0.5%
 1795613400	USD	Core PCE Price Index MoM		0.3%	0.3%

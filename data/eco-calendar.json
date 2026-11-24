@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-23T19:36:14.790Z",
+  "timestamp": "2026-11-24T04:24:48.496Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -14516,7 +14516,7 @@
       "impact": "Low",
       "forecast": "53.5",
       "previous": "53.3",
-      "actual": ""
+      "actual": "53.7"
     },
     {
       "title": "Foreign Direct Investment ytd/y",
@@ -14532,7 +14532,7 @@
       "country": "EUR",
       "date": "2026-11-24T04:00:00-05:00",
       "impact": "Low",
-      "forecast": "90.6",
+      "forecast": "90.5",
       "previous": "90.2",
       "actual": ""
     },
@@ -14541,7 +14541,7 @@
       "country": "GBP",
       "date": "2026-11-24T06:00:00-05:00",
       "impact": "Low",
-      "forecast": "-24",
+      "forecast": "-27",
       "previous": "-10",
       "actual": ""
     },
@@ -14577,7 +14577,7 @@
       "country": "EUR",
       "date": "2026-11-24T09:00:00-05:00",
       "impact": "Low",
-      "forecast": "-9.3",
+      "forecast": "-9.4",
       "previous": "-9.8",
       "actual": ""
     },
@@ -14604,7 +14604,7 @@
       "country": "USD",
       "date": "2026-11-24T10:00:00-05:00",
       "impact": "Medium",
-      "forecast": "92.1",
+      "forecast": "92.4",
       "previous": "91.7",
       "actual": ""
     },
@@ -14613,7 +14613,7 @@
       "country": "USD",
       "date": "2026-11-24T10:00:00-05:00",
       "impact": "Low",
-      "forecast": "-3",
+      "forecast": "-2",
       "previous": "-2",
       "actual": ""
     },
@@ -14658,7 +14658,7 @@
       "country": "AUD",
       "date": "2026-11-24T19:30:00-05:00",
       "impact": "High",
-      "forecast": "4.8%",
+      "forecast": "4.7%",
       "previous": "4.3%",
       "actual": ""
     },
@@ -14775,7 +14775,7 @@
       "country": "USD",
       "date": "2026-11-25T08:30:00-05:00",
       "impact": "Low",
-      "forecast": "0.5%",
+      "forecast": "0.7%",
       "previous": "1.8%",
       "actual": ""
     },
@@ -14802,7 +14802,7 @@
       "country": "USD",
       "date": "2026-11-25T10:00:00-05:00",
       "impact": "Low",
-      "forecast": "649K",
+      "forecast": "650K",
       "previous": "676K",
       "actual": ""
     },
@@ -14820,7 +14820,7 @@
       "country": "USD",
       "date": "2026-11-25T12:00:00-05:00",
       "impact": "Low",
-      "forecast": "",
+      "forecast": "-19B",
       "previous": "20B",
       "actual": ""
     },
@@ -14838,7 +14838,7 @@
       "country": "AUD",
       "date": "2026-11-25T19:30:00-05:00",
       "impact": "Low",
-      "forecast": "4.4%",
+      "forecast": "4.5%",
       "previous": "-3.6%",
       "actual": ""
     },
@@ -14928,7 +14928,7 @@
       "country": "JPY",
       "date": "2026-11-26T18:30:00-05:00",
       "impact": "Medium",
-      "forecast": "2.9%",
+      "forecast": "3.0%",
       "previous": "2.6%",
       "actual": ""
     },
@@ -14937,7 +14937,7 @@
       "country": "EUR",
       "date": "2026-11-27T02:45:00-05:00",
       "impact": "Low",
-      "forecast": "0.2%",
+      "forecast": "0.1%",
       "previous": "-0.5%",
       "actual": ""
     },
@@ -14955,7 +14955,7 @@
       "country": "EUR",
       "date": "2026-11-27T02:45:00-05:00",
       "impact": "Low",
-      "forecast": "-0.1%",
+      "forecast": "-0.2%",
       "previous": "0.4%",
       "actual": ""
     },
@@ -14973,7 +14973,7 @@
       "country": "EUR",
       "date": "2026-11-27T03:00:00-05:00",
       "impact": "Low",
-      "forecast": "4.8%",
+      "forecast": "4.7%",
       "previous": "4.9%",
       "actual": ""
     },
@@ -15009,7 +15009,7 @@
       "country": "CAD",
       "date": "2026-11-27T08:30:00-05:00",
       "impact": "Low",
-      "forecast": "9.6B",
+      "forecast": "9.5B",
       "previous": "8.8B",
       "actual": ""
     },
@@ -15018,7 +15018,7 @@
       "country": "USD",
       "date": "2026-11-27T08:30:00-05:00",
       "impact": "Low",
-      "forecast": "-134.4B",
+      "forecast": "-135.9B",
       "previous": "-134.9B",
       "actual": ""
     },
@@ -15027,7 +15027,7 @@
       "country": "USD",
       "date": "2026-11-27T08:30:00-05:00",
       "impact": "Low",
-      "forecast": "0.7%",
+      "forecast": "0.5%",
       "previous": "0.6%",
       "actual": ""
     },
