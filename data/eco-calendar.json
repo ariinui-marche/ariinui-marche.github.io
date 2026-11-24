@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-24T08:10:24.809Z",
+  "timestamp": "2026-11-24T15:01:38.878Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -14534,7 +14534,7 @@
       "impact": "Low",
       "forecast": "90.5",
       "previous": "90.2",
-      "actual": ""
+      "actual": "90.6"
     },
     {
       "title": "CBI Realized Sales",
@@ -14543,7 +14543,7 @@
       "impact": "Low",
       "forecast": "-27",
       "previous": "-10",
-      "actual": ""
+      "actual": "9"
     },
     {
       "title": "MPC Member Greene Speaks",
@@ -14561,16 +14561,16 @@
       "impact": "Low",
       "forecast": "",
       "previous": "23.8K",
-      "actual": ""
+      "actual": "21.0K"
     },
     {
       "title": "CB Leading Index m/m",
       "country": "CNY",
-      "date": "2026-11-24T09:00:00-05:00",
+      "date": "2026-11-24T08:51:00-05:00",
       "impact": "Low",
       "forecast": "",
       "previous": "-0.1%",
-      "actual": ""
+      "actual": "-0.3%"
     },
     {
       "title": "Belgian NBB Business Climate",
@@ -14579,7 +14579,7 @@
       "impact": "Low",
       "forecast": "-9.4",
       "previous": "-9.8",
-      "actual": ""
+      "actual": "-14.7"
     },
     {
       "title": "HPI m/m",
@@ -14588,7 +14588,7 @@
       "impact": "Low",
       "forecast": "0.2%",
       "previous": "0.3%",
-      "actual": ""
+      "actual": "0.0%"
     },
     {
       "title": "S&P/CS Composite-20 HPI y/y",
@@ -14597,7 +14597,7 @@
       "impact": "Low",
       "forecast": "2.7%",
       "previous": "2.7%",
-      "actual": ""
+      "actual": "2.6%"
     },
     {
       "title": "CB Consumer Confidence",
@@ -14606,7 +14606,7 @@
       "impact": "Medium",
       "forecast": "92.4",
       "previous": "91.7",
-      "actual": ""
+      "actual": "103.3"
     },
     {
       "title": "Richmond Manufacturing Index",
@@ -14615,7 +14615,7 @@
       "impact": "Low",
       "forecast": "-2",
       "previous": "-2",
-      "actual": ""
+      "actual": "3"
     },
     {
       "title": "BOC Gov Macklem Speaks",

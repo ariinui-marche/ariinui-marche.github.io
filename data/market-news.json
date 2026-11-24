@@ -1,89 +1,187 @@
 {
-  "timestamp": "2026-11-24T08:10:24.809Z",
+  "timestamp": "2026-11-24T15:01:38.878Z",
   "items": [
+    {
+      "title": "Becton Dickinson stock hits 52-week high at 220.38 USD",
+      "link": "https://www.investing.com/news/company-news/becton-dickinson-stock-hits-52week-high-at-22038-usd-93CH-5048579",
+      "pubDate": "2026-11-24T14:56:41.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Bitcoin retreats to $60k amid rate, regulatory jitters",
+      "link": "https://www.investing.com/news/cryptocurrency-news/bitcoin-hovers-around-60k-amid-little-relief-from-rate-regulatory-jitters-5047126",
+      "pubDate": "2026-11-24T14:56:38.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Compass Minerals FY 2026 slides: pricing gains offset volume declines",
+      "link": "https://www.investing.com/news/company-news/compass-minerals-fy-2026-slides-pricing-gains-offset-volume-declines-93CH-5048578",
+      "pubDate": "2026-11-24T14:56:21.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Earnings call transcript: J. M. Smucker beats Q2 2026 estimates, lifts outlook",
+      "link": "https://www.investing.com/news/transcripts/earnings-call-transcript-j-m-smucker-beats-q2-2026-estimates-lifts-outlook-93CH-5048577",
+      "pubDate": "2026-11-24T14:56:07.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Guggenheim lifts CrowdStrike to Buy, sees 34% upside",
+      "link": "https://www.investing.com/news/stock-market-news/guggenheim-lifts-crowdstrike-to-buy-sees-34-upside-5048576",
+      "pubDate": "2026-11-24T14:56:06.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Glaukos stock hits all-time high at 255.35 USD",
+      "link": "https://www.investing.com/news/company-news/glaukos-stock-hits-alltime-high-at-25535-usd-93CH-5048575",
+      "pubDate": "2026-11-24T14:55:48.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Cogent Biosciences stock surges on FDA approval of EKITNA",
+      "link": "https://www.investing.com/news/stock-market-news/cogent-biosciences-stock-surges-on-fda-approval-of-ekitna-5048574",
+      "pubDate": "2026-11-24T14:55:43.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Tecnoglass Holdings stock hits 52-week high at 55.1 USD",
+      "link": "https://www.investing.com/news/company-news/tecnoglass-holdings-stock-hits-52week-high-at-551-usd-93CH-5048573",
+      "pubDate": "2026-11-24T14:55:22.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "MiniMed Q2 FY27 slides: margins expand as pipeline accelerates",
+      "link": "https://www.investing.com/news/company-news/minimed-q2-fy27-slides-margins-expand-as-pipeline-accelerates-93CH-5048572",
+      "pubDate": "2026-11-24T14:55:09.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Why is Bloom Energy stock sliding today?",
+      "link": "https://www.investing.com/news/stock-market-news/why-is-bloom-energy-stock-sliding-today-93CH-5048571",
+      "pubDate": "2026-11-24T14:55:08.000Z",
+      "description": "",
+      "source": "Investing.com"
+    },
+    {
+      "title": "Why Are Oil Prices Falling to 3-Month Lows?",
+      "link": "https://beincrypto.com/oil-price-three-month-low-opec-meeting/",
+      "pubDate": "2026-11-24T13:33:16.000Z",
+      "description": "Oil prices hovered near three-month lows on Tuesday as the war premium faded and supply concerns eased. Brent crude slipped below $90 per barrel, while WTI approached $80. Now, traders are turning to a key OPEC+ meeting. Its decision could ",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "America Readies New Tariffs on China. Will Bitcoin and Stocks Sink Again?",
+      "link": "https://beincrypto.com/us-new-tariffs-china-stocks-sink/",
+      "pubDate": "2026-11-24T13:19:55.000Z",
+      "description": "The US readies new tariffs on China and 15 other economies. See how stocks reacted the last 2 times tariffs hit China.\nThe post America Readies New Tariffs on China. Will Bitcoin and Stocks Sink Again? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Bank of Canada Governor Tiff Macklem to step down in June 2027",
+      "link": "https://www.bankofcanada.ca/2026/11/bank-of-canada-governor-tiff-macklem-to-step-down-in-june-2027/",
+      "pubDate": "2026-11-24T13:13:36.000Z",
+      "description": "The Board of Directors of the Bank of Canada announced today that Governor Tiff Macklem has informed them that he will not seek a second term as Governor when his seven-year term expires on June&nbsp;2, 2027.",
+      "source": "Bank of Canada"
+    },
+    {
+      "title": "XRP Price is Showing a Historical Pattern That Led to a 200% Rally",
+      "link": "https://beincrypto.com/xrp-price-historical-pattern-200-percent-rally-2027/",
+      "pubDate": "2026-11-24T12:35:23.000Z",
+      "description": "Four years ago, XRP holders were facing one of the darkest periods in crypto history. An exchange collapse had shattered investor confidence, prices were falling, and few expected an imminent recovery. Over the following two years, XRP gain",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "The &#8220;Dogecoin Millionaire&#8221; Shares Brutal Advices For Crypto Investors",
+      "link": "https://beincrypto.com/dogecoin-millionaire-advice-crypto-market/",
+      "pubDate": "2026-11-24T12:32:03.000Z",
+      "description": "Glauber Contessoto, widely known as the Dogecoin Millionaire, shared a raw warning about the emotional toll of crypto trading. His post arrived as markets slipped back into extreme fear. His advice is blunt and simple. Moreover, it comes fr",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Anthropic Falls Below IPO Price. The Threat Wasn’t Nvidia, It Came From Inside",
+      "link": "https://beincrypto.com/anthropic-stock-below-ipo-price-employees/",
+      "pubDate": "2026-11-24T12:28:10.000Z",
+      "description": "Anthropic stock fell below its $83 IPO price as an Axios report said staff fear unreleased AI models are unsafe to release.\nThe post Anthropic Falls Below IPO Price. The Threat Wasn’t Nvidia, It Came From Inside appeared first on BeInCrypto",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Argentina&#039;s Bonds Slide Into Distress: Will America Have to Rescue Milei Again?",
+      "link": "https://beincrypto.com/argentina-bonds-distress-milei-us-rescue/",
+      "pubDate": "2026-11-24T11:45:46.000Z",
+      "description": "Argentina's bond spread tops 1,000 points as Milei's 2027 odds fade. Bessent says a US rescue could happen again.\nThe post Argentina&#039;s Bonds Slide Into Distress: Will America Have to Rescue Milei Again? appeared first on BeInCrypto.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Hack or Sell-Off? Ansem&#039;s Wallet Dumps $2 Million as His Meme Coin Crashes 40%",
+      "link": "https://beincrypto.com/ansem-meme-coin-plunges-wallet-hack/",
+      "pubDate": "2026-11-24T11:15:04.000Z",
+      "description": "ANSEM meme coin drops 40% after Ansem's wallet sells. He blames a hack, but on-chain analysts are split on what happened.\nThe post Hack or Sell-Off? Ansem&#039;s Wallet Dumps $2 Million as His Meme Coin Crashes 40% appeared first on BeInCry",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Bitrue AI Adds Three Grid Strategy Options as Bitcoin Rebounds Toward $61,000",
+      "link": "https://beincrypto.com/bitrue-ai-adds-three-grid-strategy-options/",
+      "pubDate": "2026-11-24T11:00:22.000Z",
+      "description": "Bitrue AI adds three grid strategy options as Bitcoin rebounds toward $61,000, with a new Growth strategy joining the Balanced and Aggressive options on the Bitrue AI strategy page. Users of the global cryptocurrency exchange can now compar",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Boris Vujčić: Resilience in an age of shocks: lessons from central and eastern Europe",
+      "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261124~17928e5456.en.html",
+      "pubDate": "2026-11-24T11:00:00.000Z",
+      "description": "",
+      "source": "European Central Bank"
+    },
+    {
+      "title": "Silver Hits Its Most Oversold Level Since Covid, Without 2020&#039;s Rate Cuts",
+      "link": "https://beincrypto.com/silver-most-oversold-since-covid-fed-hike/",
+      "pubDate": "2026-11-24T10:50:16.000Z",
+      "description": "Silver&#8217;s selloff has pushed its weekly momentum gauge to the most oversold level since the 2020 COVID crash. The chart says sellers have gone too far, but trusting that call has already cost buyers this month. The metal trades near $4",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Dollar’s Fortunes Closely Linked to AI Trade",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQcmhxcnlVWWtmSkJUUjRLMldDNG5MbHU0YXhtcDV6UjBkUVBRdjkybVRqUnRCQkZoVEJ2ZkUtTlE4ZmpHSDFTUWlPLUR4YkQwazRIckpGQVhOMjhWcEdlbkhkUVY1SG5sbUJYMFZ5WnNlR1MyT0p3Nk1xdVJldkRZektYc1FQcTlicEtHM3I5YUJYdkNjaXh1VzR2ZkNhQkk?oc=5",
+      "pubDate": "2026-11-24T10:31:00.000Z",
+      "description": "Dollar’s Fortunes Closely Linked to AI Trade&nbsp;&nbsp;WSJ",
+      "source": "Google News"
+    },
+    {
+      "title": "3 Days After the Riemann Hypothesis, Claude Proves a Second Famous Math Problem Alone",
+      "link": "https://beincrypto.com/claude-proves-vp-vnp-anthropic/",
+      "pubDate": "2026-11-24T10:04:54.000Z",
+      "description": "Claude proves VP vs VNP, the algebraic cousin of P vs NP. No human has checked it, and Bitcoin's cryptography is unaffected.\nThe post 3 Days After the Riemann Hypothesis, Claude Proves a Second Famous Math Problem Alone appeared first on Be",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "Meme Coin Dominance Hits a Record Low. Why Are Buyers Walking Away?",
+      "link": "https://beincrypto.com/binance-altcoins-meme-coins-downtrend/",
+      "pubDate": "2026-11-24T09:26:35.000Z",
+      "description": "Two years ago, meme coins were the loudest bet in crypto. Today, they hold the smallest share of the altcoin market on record. Holders are still heading for the exit. On Binance, meme coin selling now outweighs buying by about $1.5 billion.",
+      "source": "BeInCrypto"
+    },
+    {
+      "title": "US Dollar Hits 20-Month High Before Wednesday&#039;s Big Inflation Test",
+      "link": "https://beincrypto.com/us-dollar-20-month-high-pce-inflation/",
+      "pubDate": "2026-11-24T08:35:21.000Z",
+      "description": "On Monday, Wall Street celebrated Jensen Huang&#8217;s return to Nvidia. Stocks, gold, and Bitcoin (BTC) bounced. So did the US dollar, which hit its highest level since March 2025. A strong dollar usually drains money from the other three.",
+      "source": "BeInCrypto"
+    },
     {
       "title": "2026-11-24 - Press release\t - Exploratory project for a Swiss Financial Ledger",
       "link": "https://www.snb.ch/en/publications/communication/press-releases/2026/pre_20261124_2",
       "pubDate": "2026-11-24T08:00:00.000Z",
       "description": "",
       "source": "Swiss National Bank"
-    },
-    {
-      "title": "Volkswagen begins wage talks as 100,000 job cuts loom",
-      "link": "https://www.investing.com/news/stock-market-news/volkswagen-begins-wage-talks-as-100000-job-cuts-loom-93CH-5047258",
-      "pubDate": "2026-11-24T07:51:12.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Standard Chartered investigated investment banking chief over conduct claims, Bloomberg reports",
-      "link": "https://www.investing.com/news/stock-market-news/standard-chartered-investigated-investment-banking-chief-over-conduct-claims-bloomberg-reports-93CH-5047257",
-      "pubDate": "2026-11-24T07:50:24.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Cranswick H1 adjusted profit rises 8% on volume growth, outlook unchanged",
-      "link": "https://www.investing.com/news/earnings/cranswick-h1-adjusted-profit-rises-8-on-volume-growth-outlook-unchanged-5047256",
-      "pubDate": "2026-11-24T07:50:08.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Analysis-Huang’s Nvidia return sparks relief for battered AI trade, but questions remain",
-      "link": "https://www.investing.com/news/stock-market-news/analysishuangs-stunning-nvidia-return-sparks-relief-for-battered-ai-trade-5046322",
-      "pubDate": "2026-11-24T07:48:35.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "PrimeStone calls for flatexDEGIRO strategic review",
-      "link": "https://www.investing.com/news/stock-market-news/primestone-calls-for-flatexdegiro-strategic-review-5047250",
-      "pubDate": "2026-11-24T07:47:53.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "NVIDIA EVP, general counsel Teter sells $4.54M in stock",
-      "link": "https://www.investing.com/news/insider-trading-news/nvidia-evp-general-counsel-teter-sells-454m-in-stock-93CH-5047249",
-      "pubDate": "2026-11-24T07:46:21.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "US blacklists Alibaba subsidiary and Megaspeed linked to Nvidia scandal",
-      "link": "https://www.investing.com/news/stock-market-news/us-to-blacklist-megaspeed-chip-firm-linked-to-nvidia-scandal-source-says-5046337",
-      "pubDate": "2026-11-24T07:42:23.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Compass Group weighs U.S. primary listing, resumes buybacks as profit rises 12%",
-      "link": "https://www.investing.com/news/earnings/compass-group-weighs-us-primary-listing-resumes-buybacks-as-profit-rises-12-5047233",
-      "pubDate": "2026-11-24T07:40:45.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Aixtron and Nokia expand InP photonics production for AI",
-      "link": "https://www.investing.com/news/stock-market-news/aixtron-and-nokia-expand-inp-photonics-production-for-ai-93CH-5047230",
-      "pubDate": "2026-11-24T07:39:33.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Computacenter hosts capital markets event on growth strategy",
-      "link": "https://www.investing.com/news/stock-market-news/computacenter-hosts-capital-markets-event-on-growth-strategy-93CH-5047229",
-      "pubDate": "2026-11-24T07:37:20.000Z",
-      "description": "",
-      "source": "Investing.com"
-    },
-    {
-      "title": "Who Sold Bitcoin&#039;s Nvidia Rally? The Answer Sits in Wall Street&#039;s Fund Data",
-      "link": "https://beincrypto.com/bitcoin-etf-outflows-huang-return-rally/",
-      "pubDate": "2026-11-24T07:36:59.000Z",
-      "description": "A boardroom U-turn at Nvidia sent crypto prices climbing on Monday. At the same time, Wall Street&#8217;s crypto exchange-traded funds (ETFs) were quietly losing hundreds of millions of dollars. By Tuesday, the rally had faded. The fund dat",
-      "source": "BeInCrypto"
     },
     {
       "title": "2026-11-24 - Press release\t - Issuance calendar for Confederation bonds and money market debt register claims in 2027",
@@ -93,53 +191,18 @@
       "source": "Swiss National Bank"
     },
     {
-      "title": "Two Signals Are Lining Up Against Zcash Heading Into December",
-      "link": "https://beincrypto.com/zcash-december-bearish-signals-outlook/",
-      "pubDate": "2026-11-24T06:57:52.000Z",
-      "description": "Zcash (ZEC) enters December with two warnings attached. Institutions are leaving the exchange-traded fund (ETF), and its December record has historically been weak. The token traded near $753 on Tuesday, well below its late September peak. ",
-      "source": "BeInCrypto"
+      "title": "South Korea Considers Potential $3 Billion Dollar Bond Sale",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVWt1Q241a09DQXB0MnV4TmhXRjNBTUVtQVNHd29vSUZzd0dMWVl3RV9NQUh1SHE5U081WDRIZzNPOFFabEd6TjliX1ZMS2FKLXAydG5IaTUxaEFuRW1VMGpuNklCQ2doM1FzSm9LQ2FKNzBMUnc3dC1GR2NadmdXeVVSelFKb1M4dm5TZDN5UTl5Qmp1NEtEMTdoVHEzb0lJVkk3Y29fNW91RUhuOHc?oc=5",
+      "pubDate": "2026-11-24T06:20:00.000Z",
+      "description": "South Korea Considers Potential $3 Billion Dollar Bond Sale&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
     },
     {
-      "title": "Ethereum Foundation Puts AI Ahead of Quantum. Here&#039;s What Holders Give Up",
-      "link": "https://beincrypto.com/ethereum-foundation-ai-quantum-security-threat/",
-      "pubDate": "2026-11-24T06:05:45.000Z",
-      "description": "Ethereum spent years preparing for quantum computers. Now the Ethereum Foundation (EF) says artificial intelligence (AI) poses the more urgent threat to the network&#8217;s security. That has made a long-planned cryptography rebuild its top",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "West Africa's rush to refine its own gold unleashes flood of capacity",
-      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQTGNqT2ZGcU9hQW1ldS1mb09xYjNjMVFqSkVieWxYQzk3bUVsbHJWTjhvYnZrcXduOVZydHI4ZlNodXdLWDVQMVFKMWMzaGUzTTR3Qm1mY0hJMlY4bVFZV2xNVklIYVZsRXNsZUN3cnhELXk5eFg0V1JNR09ETWgzRGVLUkNfZDF4aWF5Yk1KZUJiSnZ6Nm9IUlU3b0x4aG1ZT01wY0xfdm5Gd3JQN0x6Tg?oc=5",
-      "pubDate": "2026-11-24T06:03:00.000Z",
-      "description": "West Africa's rush to refine its own gold unleashes flood of capacity&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Grayscale Calls Bitcoin Oversold, but One Outside Risk Could Decide Its Path",
-      "link": "https://beincrypto.com/grayscale-bitcoin-oversold-ai-risks/",
-      "pubDate": "2026-11-24T05:09:52.000Z",
-      "description": "Grayscale believes Bitcoin (BTC) is oversold, with price and fund flow signals pointing that way. Yet the asset manager expects something outside crypto to set the next move. Grayscale says AI-related risks, more than blockchain fundamental",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Fidelity Analyst Says Bitcoin Quantum Threat Is Largely Solved: Will Holders Upgrade?",
-      "link": "https://beincrypto.com/fidelity-analyst-bitcoin-quantum-threat-solved/",
-      "pubDate": "2026-11-24T05:00:00.000Z",
-      "description": "A Fidelity analyst says the Bitcoin quantum threat is largely solved, but a decentralized network may adopt fixes slowly.\nThe post Fidelity Analyst Says Bitcoin Quantum Threat Is Largely Solved: Will Holders Upgrade? appeared first on BeInC",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Will S&#038;P 500 Volatility Persist After 27 Big Up and 27 Big Down Days?",
-      "link": "https://beincrypto.com/sp-500-volatility-big-swings-2026/",
-      "pubDate": "2026-11-24T04:48:53.000Z",
-      "description": "S&#038;P 500 volatility has produced 27 big up days and 27 big down days in 2026. See what the even split signals next.\nThe post Will S&#038;P 500 Volatility Persist After 27 Big Up and 27 Big Down Days? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "What Is Kymera and Why Did an Eczema Pill Outperform All AI Stocks on Monday?",
-      "link": "https://beincrypto.com/what-is-kymera-eczema-pill-stock/",
-      "pubDate": "2026-11-24T04:30:00.000Z",
-      "description": "Kymera Therapeutics (KYMR) stock rose 30.4% Monday after its once-daily eczema pill beat placebo in a mid-stage trial. Including after-hours trading, it outran every AI stock on Yahoo Finance&#8217;s top gainers list, even Nvidia. Nvidia&#8",
-      "source": "BeInCrypto"
+      "title": "Dollar climbs as renewed AI euphoria fuels Fed hike bets",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNanNiZVlvczY3SnoxTFdNOG9HNldIdFBDOU56cTFHQjdGU2xYRzh6YWE5MllkSXJSaWZNRlEtczJLaURrQW05aXNVaDNDZ1c1cFFvUlRnVFNBNVdldGtFanA0VnJkVWV4Y2I2NU5wb04tRDJuU05vWThkZnBpOHFRWHJ3bFZ0eGpKcXVn0gGQAUFVX3lxTE5nb3JUZU1KQV80MG9WTTdhUTZaMWxrMmpiZ3Q5NGU2eGdDSkxWa0RHVDJ2X3IzallVNWpaOHh4ZnBrd3c5b0s3ZFdlZlVCcDR5OWVTallOV0pIS0xkbzAwUFBoWFJsMEEtVy0ycVl1b2ZDQTl3bWZBSjFwN09JVU81ekYwUW1pOW1Dbnd0WWpqdA?oc=5",
+      "pubDate": "2026-11-24T04:16:00.000Z",
+      "description": "Dollar climbs as renewed AI euphoria fuels Fed hike bets&nbsp;&nbsp;CNBC",
+      "source": "Google News"
     },
     {
       "title": "Lula Fiscal Plan Approved in Bid to Calm Market After Real Tanks",
@@ -149,53 +212,11 @@
       "source": "Google News"
     },
     {
-      "title": "Michael Burry Sold Half His NVIDIA Puts Before Huang&#039;s Return Sparked a 31% Rally",
-      "link": "https://beincrypto.com/michael-burry-nvidia-puts-huang-rally/",
-      "pubDate": "2026-11-24T03:45:00.000Z",
-      "description": "Michael Burry sold half his NVIDIA puts before Jensen Huang's return lifted the stock 31%, but he still holds a hedge.\nThe post Michael Burry Sold Half His NVIDIA Puts Before Huang&#039;s Return Sparked a 31% Rally appeared first on BeInCry",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Dead Cat Bounce? AI Stocks Climb 20%+, but IREN, Applied Digital Stay Down 50%+",
-      "link": "https://beincrypto.com/ai-stocks-dead-cat-bounce-iren/",
-      "pubDate": "2026-11-24T03:05:00.000Z",
-      "description": "Is it a dead cat bounce? AI stocks jumped 20%+ on Huang's return, yet IREN and Applied Digital sit down 50%+ in a year.\nThe post Dead Cat Bounce? AI Stocks Climb 20%+, but IREN, Applied Digital Stay Down 50%+ appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Taiwan Stocks Jump 9%, Beating Korea and Japan on Huang&#039;s Nvidia Return",
-      "link": "https://beincrypto.com/taiwan-stocks-jump-huang-nvidia-return/",
-      "pubDate": "2026-11-24T02:54:12.000Z",
-      "description": "Taiwan stocks led Asia&#8217;s chip rally on Tuesday after Nvidia reinstated Jensen Huang as chief executive. The Taiex climbed about 9% by mid-morning, more than double Japan&#8217;s gain.&#160; Much of that lead traces back to TSMC, Nvidi",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Dow, Nasdaq and Bitcoin Jump on Huang&#039;s Return, but Why Did Bitcoin Reverse?",
-      "link": "https://beincrypto.com/bitcoin-reversal-huang-return-nasdaq/",
-      "pubDate": "2026-11-24T02:00:00.000Z",
-      "description": "Nasdaq held a 6.5% gain on Huang's return, but a Bitcoin reversal faded the spike. Here is what likely drove it.\nThe post Dow, Nasdaq and Bitcoin Jump on Huang&#039;s Return, but Why Did Bitcoin Reverse? appeared first on BeInCrypto.",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Trump Takes Credit for Nvidia&#039;s Rebound, Seeing His Shares Gain Up to $15 Million",
-      "link": "https://beincrypto.com/trump-nvidia-rebound-shares-gain-15m/",
-      "pubDate": "2026-11-24T01:34:26.000Z",
-      "description": "Trump takes credit for the Nvidia rebound as the FT estimates his shares gained up to $15 million after Huang's return.\nThe post Trump Takes Credit for Nvidia&#039;s Rebound, Seeing His Shares Gain Up to $15 Million appeared first on BeInCr",
-      "source": "BeInCrypto"
-    },
-    {
-      "title": "Dollar perky as renewed AI euphoria fuels Fed hike bets",
-      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWk01SnRnY1hzWHBOdlQ5eGdldmlIQkd5QUM4SFJ5S3Z5YWtVQnlYWVp3LXlqajM1QTA5UTBBSFNrOFdjVGdWME54WUJYdFRGUXJDYlVmUDFETjlITTZtYkFiWW9IcU9sVTM0R0otbjlmMXNCdC1HSEVNOXJMaDlIMC1YUnFBUDZNMXh6RlRwMVM5MDFRTy1YQXc3U21zYU0?oc=5",
-      "pubDate": "2026-11-24T01:14:00.000Z",
-      "description": "Dollar perky as renewed AI euphoria fuels Fed hike bets&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Gold edges lower as markets await US inflation data",
-      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOX2lLRXdXdmpCM0FsdHVpNkdYTWttMDRZd294U3VSZGtqczloSEN5N1VfTzBpbjJLZGYwWm55RDlXSmY0b2tod0tBUl9lbkl4TW13VDBuWEVDYjgxamc4anBNdGhtWTdvUUNiYUp5MDlJVU81Sl9qa283bUIzTUNCU0lZZ1VBdXo2UW5hQmoyT191dFpWODY2aldnOVJmRzVaaV9tZDF2U0hKbmRubUg0TllIendaRzg?oc=5",
-      "pubDate": "2026-11-24T00:57:00.000Z",
-      "description": "Gold edges lower as markets await US inflation data&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
+      "title": "WSJ Dollar Index Rises to New 52-Week High",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQMG04RW1jbHFlN1d1WlRibnRxVXRaZE5pTlVRbzNtV183OGNOckg3QktYTlJOLW9GZDE0N2djc1hleEFRa296TkZZTGZReldNRmhwY1JCVFhYWS00SjlEenNCLVNncXR1MmV2RUxtNllqZlpzb0lWeTUycDV6WW9Fd3pURnItbDlGUExqUnp3NW5reTVVZEtxRkQ2TXdLUm9IUWtfaVhLUHI3enZ5aHc?oc=5",
+      "pubDate": "2026-11-24T02:16:30.000Z",
+      "description": "WSJ Dollar Index Rises to New 52-Week High&nbsp;&nbsp;WSJ",
+      "source": "Google News"
     },
     {
       "title": "Statistics on Securities Financing Transactions in Japan",
@@ -219,46 +240,18 @@
       "source": "Google News"
     },
     {
-      "title": "Bank of Canada Governor Tiff Macklem to step down in June 2027",
-      "link": "https://www.bankofcanada.ca/2026/11/bank-of-canada-governor-tiff-macklem-to-step-down-in-june-2027/",
-      "pubDate": "2026-11-23T21:14:26.000Z",
-      "description": "The Board of Directors of the Bank of Canada announced today that Governor Tiff Macklem has informed them that he will not seek a second term as Governor when his seven-year term expires on June&nbsp;2, 2027.",
-      "source": "Bank of Canada"
-    },
-    {
-      "title": "Brazil’s Real Hits 19-Month Low as Post-Election Selloff Deepens",
+      "title": "Brazil’s Real Hits 19-Month Low as Post-Election Selloff Deepens - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPcTNBWkU4bUcyVXBJREpxeTctZXpZNUthRUtjWXc5bTA1S0ZSOE1HQzh1YkctUUNSTTZJQWNzVHllMjBkLWY3WmFNSlZJVjBxM0lzMUNkekEwaVhHZGJxbUU0VWdoYU5DaDJZSGNIdTFJd1VkaFRoZzRjS0dnVDVWVGVZWThCb2ZicklkRFdxS1M1cVZUbnUzUmlBMWV2cUN2dkdBMF9KSXdvcDFyRGtPS0Rudkg?oc=5",
       "pubDate": "2026-11-23T20:59:11.000Z",
-      "description": "Brazil’s Real Hits 19-Month Low as Post-Election Selloff Deepens&nbsp;&nbsp;Bloomberg.com",
+      "description": "Brazil’s Real Hits 19-Month Low as Post-Election Selloff Deepens&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
     },
     {
-      "title": "Goldman Says Dollar ‘Has Some Fight’ Left on Rates Path",
+      "title": "Goldman Says Dollar ‘Has Some Fight’ Left on Rates Path - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQT0pMNnBpRDVmQk50NXYzT1ZfdHFyd0pSM1I5SFhjZG1PSW53Ym5iNEdNNlVBUTV0Q3BITVp1NlQ3WVNZX1lxU0xNcGxIQlRwcFZLYXN1dzZfdzFHbXZvZ3RBWGdpcGFVS3dMeUpOdWZRT3FaM25HZGQ2Q2VhQTFIenhKQklDN05nenBRV0N6OGVHaUVhNUdzVHJMTTBDSXo0elFiQVEwblloYjFlcGFFWWNNRQ?oc=5",
       "pubDate": "2026-11-23T20:29:27.000Z",
-      "description": "Goldman Says Dollar ‘Has Some Fight’ Left on Rates Path&nbsp;&nbsp;Bloomberg.com",
+      "description": "Goldman Says Dollar ‘Has Some Fight’ Left on Rates Path&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
-    },
-    {
-      "title": "Canadian dollar falls for 10th straight session as oil slides",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPSGxKSDUwUzVISjNFazZQdXYySkdiVzlRWlkxT0t6Z2toY2lxNjQ4bkVHQmYwcDhreHc3bk11eWFySGRqMUtaZkxndm9HelJrQS1EalFfT1ZRYlZ6Vk1zOGJqREwteVpvck1wai1DRklkNFBTSDNtaWdBYmZzRjJBNUVtVUk3bXpBeDhwbXRBejBLUUJJN0tFcXU5VGR4N1dJT1Nr?oc=5",
-      "pubDate": "2026-11-23T18:27:43.000Z",
-      "description": "Canadian dollar falls for 10th straight session as oil slides&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Namib Minerals revives Zimbabwe's Redwing mine with first gold pour",
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQSjVtckRESmNwN2d1VWQxd0V1TWI0YW5sX0FGR195dWhPRGdLVHhhV2hxQl9PMkx0US1GdFRwRERnYkp6azdjRnJOSEpndmpIVlRYaU5mR3l5NUtjWUdPbkxfLUdJLW5qT0p3ZXJuWGNHTDVHZjFNZEQ4OVg5YS05cmF3VGpJUWo4WlIta3hCWEpFOVlWWi1XclBNQUpCU09JaVphTTdBRGs1V1p0cHliV0pOQ3lCZw?oc=5",
-      "pubDate": "2026-11-23T16:17:35.000Z",
-      "description": "Namib Minerals revives Zimbabwe's Redwing mine with first gold pour&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Is there still a case to buy Bitcoin? | The Exchange",
-      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5nS2czekpoSU9scXdUakNYQTA5NTMzVFpZU2tmWlVRZGNyODNfT0pPOHhrSTJwX2JXaEg3SHdIcWVnNG5ZTFRYelFaQVFVZnJDUDhXaWF0eThtWFVURmdEUHg5LS16R1UzaUZaQmVEU0hVMEhPanlCUFgxVmhkdw?oc=5",
-      "pubDate": "2026-11-23T15:43:52.000Z",
-      "description": "Is there still a case to buy Bitcoin? | The Exchange&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "Philip R. Lane: Climate change and monetary policy",
@@ -268,32 +261,11 @@
       "source": "European Central Bank"
     },
     {
-      "title": "Sterling nudges higher, economic backdrop in focus",
-      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPX09vRzJsR0JyOFppdVJPbkxlbkdGazZsdUxFSUtjTjhuVzNmSXdTYlphV2htTndHaGFqUS1vZWR2cUJSUHc0ZU45bGFiTmxhT2R5Z1Z0RmFDblYzQm5JVnQ0QW5QcFRJTVVsYjBpSjJRaWRqanRFZ2JkZDE3YWNTMjl5aEVUZ3YyNUtSdWQtNHpJNlloaWc?oc=5",
-      "pubDate": "2026-11-23T12:51:44.000Z",
-      "description": "Sterling nudges higher, economic backdrop in focus&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "This discount retailer offers protection in a volatile market, says Piper Sandler",
       "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9XUWVESDZQVkpoUDhpUW55NU4tOUF3dlo1akpaQ1R3WHh0WEJFRWRNS211ajZRN0VKVG5kYTI1UkRMcUtVQlZrTTZ4V0pKMGgtNWJpU2EyTDlwX21wUGpYWTZYN2MxYW54STlHNmZETmcxOEZXSDhvWExEd3pEUQ?oc=5",
       "pubDate": "2026-11-23T12:50:07.000Z",
       "description": "This discount retailer offers protection in a volatile market, says Piper Sandler&nbsp;&nbsp;CNBC",
       "source": "Google News"
-    },
-    {
-      "title": "How Nvidia’s billion-dollar turnaround in China is threatened by Huang’s exit",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMzBhLWJfeFVoaXlNajJPVmVaNHl3bFFPR3lveEhDV3dlNXU3MTNlcm1MNVp0OGM5MmtvcmVxVHg2SXBCZ0U1WkdBX0NGYmNZR1NrUXI2MVZFdXQtQnlhUXN6bm9SRGJOSnYxb1QzRklGZWd1bm9tdnlSNnVGLUpLWllkZFB2MVF0UXd3T3NDbWRUQUtmVzZkUml4cXJjdmhXVXFkYWdLZ3o4TGI0T2tIZG5KMHZlSWpSczNIVg?oc=5",
-      "pubDate": "2026-11-23T11:50:53.000Z",
-      "description": "How Nvidia’s billion-dollar turnaround in China is threatened by Huang’s exit&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Euro zone growth holds steady but France's deepening downturn clouds outlook, PMI shows",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQOEhfNVZTQlltZUg0ejVieWVmYU9HcnlPVVYzZGFiUnRLS0pTa1V1WC13RHVwWEI5MWsxNWN6Ti0wcWhhczJQN0Z5bTlnazdzd013Sm16Ulk5MnpheVJkNlI5anF5SE5Jb1ZwazJfVEVGU2pMZjNjbkNWUXR3ME1ZdTBuZHowWmRDd01sZWdNQmVSRVAwbHJSbEtPcE5FY0V0SDhoUC13UDRFRmFJLTgtOTEzbGFObElkTVkyVWsyYkdEdw?oc=5",
-      "pubDate": "2026-11-23T10:56:06.000Z",
-      "description": "Euro zone growth holds steady but France's deepening downturn clouds outlook, PMI shows&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
     },
     {
       "title": "General insurance stress test highlights value of rehearsing crisis response and recovery",
@@ -331,24 +303,17 @@
       "source": "Swiss National Bank"
     },
     {
-      "title": "South African rand gains as commodity prices rise and dollar weakens",
-      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPN1dzajc5TC1sVnNkQXJfS2hwXzNRdDJjN3d1WUVBamJNNmRQV3FQSXo2Y1BIMmhjYW1JYUg5UGJCVlA2dENsR1Y3SGY0TTQ1OHlFdXFrZnUxVDF3QjBLeDVmV1FQc1V5Y21HU0s0dGFxSUhkZWliQUZ5SGFRVW9aZDNiZXFqVjV0aWU5QWExc0lTTWJaanRYOFkyU0UxVWRTeU9UWW1DT1A0Wm5TU3I4?oc=5",
-      "pubDate": "2026-11-23T06:50:00.000Z",
-      "description": "South African rand gains as commodity prices rise and dollar weakens&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
-      "title": "Gold rises as bargain hunters step in after steep weekly drop",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPcnBFWkZLYUFtZG40ejNhc0xINGhEOGZWSnl2M1RabDhRbUstel9yOEtXTTczcW44cEw3b2lvbEMyaExOeDRLNnRWVFdOMU4xZDQ5bkd2YlJaUklBTWNMSDlFWDVZd2VxUEtpbXBqVUlMY3dDM0dmWXVfOW1CWG9oUVJIZ3BhWWltclFMZVF5ck1oZ2pUVUMwVWZVMVhlU1FrbmZuWGpLSW5jMUU?oc=5",
-      "pubDate": "2026-11-23T05:49:00.000Z",
-      "description": "Gold rises as bargain hunters step in after steep weekly drop&nbsp;&nbsp;Reuters",
-      "source": "Reuters"
-    },
-    {
       "title": "Dollar jumps on hawkish Fed bets, AI rally",
       "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPOHhrNEszNFNfNDl6dGloV2lRSHo4d3JlWTNKTG1YbzIzZGE3UFluMExISENNemxVRnB1UWZrV1RYd1k0SG02UTlUbjBKOGJiVWFXeEx5MWJtUjZfTkRLV1F0VXFFbkNFYVZxQWd4QWVlQ0ZWZGd0RVlLdkpTYXlyWm56ampta0NVeXZOekJlTTFHc1U5WnNKMGEtdVYtd9IBowFBVV95cUxPdjQwTTFINzlCTkxITDBxVzZwZHpwTW5YdUVyNUdEWnV2ZmZtUU5VeGR3cE5aRVdmV1pvR0dha1RlbmFmcmUycmJHeU5nRGN5TnF3Z0E5Uk9NLXlsZFdkTElnRGRoN01xR2N1UnI0RW5RRmxhdHU4ZElucFdEYzJiZndoYmEyb0pyc2hjQmw1cFlKbFB4S3NUZUg4anNrcExocGRn?oc=5",
       "pubDate": "2026-11-23T05:47:16.000Z",
       "description": "Dollar jumps on hawkish Fed bets, AI rally&nbsp;&nbsp;CNBC",
+      "source": "Google News"
+    },
+    {
+      "title": "Watch Goldman’s Trivedi Says ‘Dollar Still Has Some Fight in It’",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQWVZjZ2tYRnVVMVlGczZ2NkVXR2NScmdhMmYzSmNEUzludWJ5a0dxVTdYTTVwZDg4QzdsMi02MXl5SXkzal9qUDBsNTV5TzRxN29SMHZSQ29DTUgxQnpBeHNuV2U3OFVYWjh6UVRzUXNlUUhZbElycUtwUXlxMWNOcUxUYmQzQnZRTXRhdll4a0lpWGVpdnhBamtVeEplQ2FsSUZray1ub180dw?oc=5",
+      "pubDate": "2026-11-23T00:00:00.000Z",
+      "description": "Watch Goldman’s Trivedi Says ‘Dollar Still Has Some Fight in It’&nbsp;&nbsp;Bloomberg.com",
       "source": "Google News"
     },
     {
@@ -415,10 +380,10 @@
       "source": "Federal Reserve"
     },
     {
-      "title": "Dollar Heads for Fourth Week of Gains Following Anthropic IPO",
+      "title": "Dollar Heads for Fourth Week of Gains Following Anthropic IPO - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPZk10QjN0ZjR3OXFGdVI1OENkTC1WNzZFM2k4Z2VQMFk4bjFwalJtT2RxVTNFS2luNWUyYTVJZlpMcXduQmRnMHBtQ05ZTUlvUnJ3VGhGMlBRcUczbzZ2WkxEcXRadnFSckh5WWdaSnRVRHlTTGVqN0ZWdXl2NGFJYVVwTXJYYzFOVDNIZ2duSGttYklEYVZxamtWOExoT19yLW9XLVdKc1cwNDdHOTRUVVF3?oc=5",
       "pubDate": "2026-11-20T09:01:14.000Z",
-      "description": "Dollar Heads for Fourth Week of Gains Following Anthropic IPO&nbsp;&nbsp;Bloomberg.com",
+      "description": "Dollar Heads for Fourth Week of Gains Following Anthropic IPO&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
     },
     {
@@ -450,17 +415,10 @@
       "source": "Bank of Japan"
     },
     {
-      "title": "WSJ Dollar Index Rises to New 52-Week High",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQMG04RW1jbHFlN1d1WlRibnRxVXRaZE5pTlVRbzNtV183OGNOckg3QktYTlJOLW9GZDE0N2djc1hleEFRa296TkZZTGZReldNRmhwY1JCVFhYWS00SjlEenNCLVNncXR1MmV2RUxtNllqZlpzb0lWeTUycDV6WW9Fd3pURnItbDlGUExqUnp3NW5reTVVZEtxRkQ2TXdLUm9IUWtfaVhLUHI3enZ5aHc?oc=5",
-      "pubDate": "2026-11-19T22:41:00.000Z",
-      "description": "WSJ Dollar Index Rises to New 52-Week High&nbsp;&nbsp;WSJ",
-      "source": "Google News"
-    },
-    {
-      "title": "Offshore Chinese Yuan Drops to Weakest Level in Over a Month",
+      "title": "Offshore Chinese Yuan Drops to Weakest Level in Over a Month - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNMFhGSXExV082MEo0b0N6V1JhUmdvTkx4MTNyaHZVd3JBSnp6Yi1LU0J4cmRfUlFYMXBaNzJQbzJBTXZkZUl1dndZX1pRMVpKamREeGxTQTR3cGJ2b3dUbjZucEdBM3FFY3lhM3hONUVudzkzWm5KeUxWcUdST3dBclNUMXYzREliQldqUHA4M3lKQ194eXhVOHZyWEphNDhlT3Y1YjZRR1ZSTmMya1A5YTRwbUpKRExoUGV1OQ?oc=5",
       "pubDate": "2026-11-19T18:19:10.000Z",
-      "description": "Offshore Chinese Yuan Drops to Weakest Level in Over a Month&nbsp;&nbsp;Bloomberg.com",
+      "description": "Offshore Chinese Yuan Drops to Weakest Level in Over a Month&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
     },
     {
@@ -506,10 +464,10 @@
       "source": "Bank of Japan"
     },
     {
-      "title": "Australian Dollar Set to Shed 2026 Gain on RBA Rate-Cut Bets",
+      "title": "Australian Dollar Set to Shed 2026 Gain on RBA Rate-Cut Bets - Bloomberg",
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOTWpXY0Npa2JnU2NRb0hZaE1jc01pR2V0ZFp4WkdfaTJGOTJ4UW8xaGN4YU55U0NyZktsbkFBV2JuNzVOQVl6MnpnTmhIaWYxMFN1OGlUbk44YmxfTlRaTnNZVXN2ZGx5c2VFT2hqckZBaklpSU5xM1ZURnZtWTNMb1VnbVZuU25wcTRQWXRBNFFwcW5ERG16MDRaWVRPOHAwSVM2VjVYSjZ6LXdDOC1iWg?oc=5",
       "pubDate": "2026-11-19T05:04:00.000Z",
-      "description": "Australian Dollar Set to Shed 2026 Gain on RBA Rate-Cut Bets&nbsp;&nbsp;Bloomberg.com",
+      "description": "Australian Dollar Set to Shed 2026 Gain on RBA Rate-Cut Bets&nbsp;&nbsp;Bloomberg",
       "source": "Google News"
     },
     {
@@ -522,7 +480,7 @@
     {
       "title": "Just How Big Is ‘Grand Theft Auto VI’? The Multibillion-Dollar Frenzy in Charts",
       "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQMEdNaGdTb0NkZXhibnhvTW1qM2VqeFVBcTVnbzBNUGpMX2VGT2V1YXNOWEZ6RElielE2RldNNkhzcHEteFRVUmtPbElMdE90RW9BLVFnRlhCTl9uOUtMa2NZQlVXNE0tcHpfRzlLLVJsT1pTQ21GMXZ5amYyeVMyeGk3Nlp2ck5LNHJranNWdWpWcTJFLVJ3SFJsUTgzSnlxd0g1WWd6dDNOcHdvdkV2WlBkX3hJVDF1aWhrWA?oc=5",
-      "pubDate": "2026-11-19T01:00:00.000Z",
+      "pubDate": "2026-11-19T01:01:10.000Z",
       "description": "Just How Big Is ‘Grand Theft Auto VI’? The Multibillion-Dollar Frenzy in Charts&nbsp;&nbsp;WSJ",
       "source": "Google News"
     },
@@ -618,13 +576,6 @@
       "source": "Federal Reserve"
     },
     {
-      "title": "Deutsche Sees Asia Chip Boom Supporting Dollar Through Equities",
-      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOTlV1VU84TDdkN19OVjN3bEJTcFJZd3BQQUpqWlZqSWNNRGpyQzJQb3BqR1R5WHNkcU8xT0Q0RTJjZlFjc1c3cjJwTHRMcHpqUTVBMVV4bUFyaVRpajAza1VVdTlzWTBLcmRwdEtuQ0Z4TmZGWG9ON3lzTm5RMVhMRlpRTHNHSVNPekpWU1RPWS1oLTRkSjRfaVhJU0RCcTNmdzY4aHB1ckVJcXluVmJQazVnSjQ?oc=5",
-      "pubDate": "2026-11-17T06:45:00.000Z",
-      "description": "Deutsche Sees Asia Chip Boom Supporting Dollar Through Equities&nbsp;&nbsp;Bloomberg.com",
-      "source": "Google News"
-    },
-    {
       "title": "New Zealand Dollar Slumps to a Six-Year Low",
       "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNVE51QjM4enJIRTVfVlg0cGtQd3hNVkpZc0lCaGxrMV9VN0p2SDByNzZrbVFmVV9XSlpkYmpDb0FRbTN1Wnllbng0VE1NNWcwaFpWV1U4RDAzUG5KcklPblVXNlZIVFB4bzRMTDBtb1hpUHprRVpDUzB6bkhqejFrT1NJdnltcE9IY3AxcnVZQnpCZ1p1M2VvcWQyVVE?oc=5",
       "pubDate": "2026-11-17T04:59:00.000Z",
@@ -658,6 +609,55 @@
       "pubDate": "2026-11-16T22:54:00.000Z",
       "description": "WSJ Dollar Index Rises 0.12% to 98.46&nbsp;&nbsp;WSJ",
       "source": "Google News"
+    },
+    {
+      "title": "U.S. dollar’s AI-driven breakout could become a stock-market wrecking ball",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPWmd1WjB6Y0pLVVp0c0VTcjhWYmdid2Jsam5QV1Q1dGcyb2JCMk9nOWpoRGRMZXVucjJPUHZ5Y3dQZGQ1MEFOdGsyaFdHTFRzNm9xemNMOFJLTHc3dnBva2ZtNnlLRVl0Wm1TcmJUNG5rdWdkTkRNS2JQWXFNM2tIQmFXVmFIeWJ6Z2hOM3hMeV9YX19qdjVZOFlIWV9jRVZNMUhGaVd1bE0xc1lNLXY2d0FZWjJhdw?oc=5",
+      "pubDate": "2026-11-16T22:46:00.000Z",
+      "description": "U.S. dollar’s AI-driven breakout could become a stock-market wrecking ball&nbsp;&nbsp;MarketWatch",
+      "source": "Google News"
+    },
+    {
+      "title": "Dollar Erases Liberation Day Loss as ‘Sell America’ Fear Fades",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOHJRV0l1WW10Z2Ntdmd1dG1vcDFBaVlJdV83RUd2X2RXeGdObWp2Q0Y1RmRDVEpnVXNuTks1V1BuZFgzRHhuSzlORkxYeWNNU29idjJWa2JMaXBRcDdUaE1tU3NBV2NCZjZ6ZTd5aVY1b0VhRTlMMjZpQmZzenNJNU9vWjJ5b2l1QlJpVk9ZTEo1NTdKZG1RQmVCOUlQcDdfUFR2TmVtejNuQnQtVWRpMg?oc=5",
+      "pubDate": "2026-11-16T18:24:06.000Z",
+      "description": "Dollar Erases Liberation Day Loss as ‘Sell America’ Fear Fades&nbsp;&nbsp;Bloomberg.com",
+      "source": "Google News"
+    },
+    {
+      "title": "Warsh, Opening Remarks",
+      "link": "https://www.federalreserve.gov/newsevents/speech/warsh20261116a.htm",
+      "pubDate": "2026-11-16T17:00:00.000Z",
+      "description": "Speech At the Productivity and Jobs Task Force Conference, hosted by the Federal Reserve Board and the Federal Reserve Bank of San Francisco, San Francisco, California",
+      "source": "Federal Reserve"
+    },
+    {
+      "title": "Frank Elderson: Smart supervision for small banks",
+      "link": "https://www.ecb.europa.eu//press/inter/date/2026/html/ecb.in261116_1~11dd7f62af.en.html",
+      "pubDate": "2026-11-16T13:00:00.000Z",
+      "description": "",
+      "source": "European Central Bank"
+    },
+    {
+      "title": "Barr, Some Potential Financial Stability Implications of Artificial Intelligence",
+      "link": "https://www.federalreserve.gov/newsevents/speech/barr20261116a.htm",
+      "pubDate": "2026-11-16T10:00:00.000Z",
+      "description": "Speech At the Seventh Annual Association for Computing Machinery International Conference on Artificial Intelligence in Finance, Milan, Italy",
+      "source": "Federal Reserve"
+    },
+    {
+      "title": "2026-11-16 - Data portal - Important monetary policy data, 16 November 2026",
+      "link": "https://www.snb.ch/en/publications/statistical-publications/data-portal/2026/11/statpub_news_20261116_gwd",
+      "pubDate": "2026-11-16T09:00:00.000Z",
+      "description": "",
+      "source": "Swiss National Bank"
+    },
+    {
+      "title": "Boris Vujčić: Risks and resilience in the euro area financial system",
+      "link": "https://www.ecb.europa.eu//press/key/date/2026/html/ecb.sp261116~db374b56ab.en.html",
+      "pubDate": "2026-11-16T08:30:00.000Z",
+      "description": "",
+      "source": "European Central Bank"
     },
     {
       "title": "Highlights of the Outlook for Economic Activity and Prices (October 2026)",
