@@ -229,11 +229,11 @@
 1795566600	AUD	CPI y/y	4.9%	4.7%	4.3%
 1795566600	AUD	Trimmed Mean CPI m/m	0.5%	0.3%	0.3%
 1795609500	USD	FOMC Member Bowman Speaks			
-1795613400	USD	Personal Spending MoM		0.4%	0.5%
-1795613400	USD	Core PCE Price Index MoM		0.3%	0.3%
-1795613400	USD	Personal Income MoM		0.4%	0.2%
-1795613400	USD	GDP Growth Rate QoQ 2nd Est		3.5%	1.5%
-1795613400	USD	Durable Goods Orders MoM		0.6%	1.8%
+1795613400	USD	Personal Spending MoM	0.3%	0.4%	0.6%
+1795613400	USD	Core PCE Price Index MoM	0.3%	0.3%	0.3%
+1795613400	USD	Personal Income MoM	0.7%	0.4%	0.3%
+1795613400	USD	GDP Growth Rate QoQ 2nd Est	4.3%	3.5%	1.5%
+1795613400	USD	Durable Goods Orders MoM	0.2%	0.6%	1.8%
 1795783200	EUR	German Buba President Nagel Speaks			
 1796038200	CAD	GDP m/m			
 1796045400	CAD	GDP Growth Rate Annualized			3.3%
@@ -307,8 +307,8 @@
 1797550200	JPY	Inflation Rate YoY			2.3%
 1797561000	JPY	Interest Rate			
 1797577200	GBP	Retail Sales MoM			0.7%
-1798032600	USD	Personal Spending MoM			
-1798032600	USD	Core PCE Price Index MoM			
-1798032600	USD	Personal Income MoM			
+1798032600	USD	Personal Spending MoM			0.3%
+1798032600	USD	Core PCE Price Index MoM			0.3%
+1798032600	USD	Personal Income MoM			0.7%
 1798032600	USD	GDP Growth Rate QoQ Final			2.2%
-1798032600	USD	Durable Goods Orders MoM			
+1798032600	USD	Durable Goods Orders MoM			0.2%

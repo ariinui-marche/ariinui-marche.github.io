@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-25T05:42:10.603Z",
+  "timestamp": "2026-11-25T16:04:01.792Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -14696,7 +14696,7 @@
       "impact": "Low",
       "forecast": "0.2%",
       "previous": "0.2%",
-      "actual": ""
+      "actual": "0.1%"
     },
     {
       "title": "Foreign Direct Investment ytd/y",
@@ -14714,16 +14714,16 @@
       "impact": "Low",
       "forecast": "",
       "previous": "-15.3",
-      "actual": ""
+      "actual": "2.3"
     },
     {
       "title": "German 10-y Bond Auction",
       "country": "EUR",
-      "date": "2026-11-25T05:42:00-05:00",
+      "date": "2026-11-25T05:32:00-05:00",
       "impact": "Low",
       "forecast": "",
       "previous": "3.37|1.1",
-      "actual": ""
+      "actual": "3.22|1.4"
     },
     {
       "title": "FOMC Member Bowman Speaks",
@@ -14741,7 +14741,7 @@
       "impact": "High",
       "forecast": "0.3%",
       "previous": "0.3%",
-      "actual": ""
+      "actual": "0.3%"
     },
     {
       "title": "Prelim GDP q/q",
@@ -14750,7 +14750,7 @@
       "impact": "High",
       "forecast": "3.5%",
       "previous": "3.4%",
-      "actual": ""
+      "actual": "4.2%"
     },
     {
       "title": "Prelim GDP Price Index q/q",
@@ -14759,7 +14759,7 @@
       "impact": "Medium",
       "forecast": "2.3%",
       "previous": "2.3%",
-      "actual": ""
+      "actual": "1.9%"
     },
     {
       "title": "Unemployment Claims",
@@ -14768,7 +14768,7 @@
       "impact": "Low",
       "forecast": "201K",
       "previous": "203K",
-      "actual": ""
+      "actual": "189K"
     },
     {
       "title": "Core Durable Goods Orders m/m",
@@ -14777,7 +14777,7 @@
       "impact": "Low",
       "forecast": "0.5%",
       "previous": "0.5%",
-      "actual": ""
+      "actual": "0.5%"
     },
     {
       "title": "Durable Goods Orders m/m",
@@ -14786,7 +14786,7 @@
       "impact": "Low",
       "forecast": "0.7%",
       "previous": "1.8%",
-      "actual": ""
+      "actual": "0.2%"
     },
     {
       "title": "Personal Income m/m",
@@ -14795,7 +14795,7 @@
       "impact": "Low",
       "forecast": "0.4%",
       "previous": "0.2%",
-      "actual": ""
+      "actual": "0.7%"
     },
     {
       "title": "Personal Spending m/m",
@@ -14804,6 +14804,15 @@
       "impact": "Low",
       "forecast": "0.4%",
       "previous": "0.5%",
+      "actual": "0.3%"
+    },
+    {
+      "title": "Monetary Policy Report Hearings",
+      "country": "GBP",
+      "date": "2026-11-25T09:15:00-05:00",
+      "impact": "Medium",
+      "forecast": "",
+      "previous": "",
       "actual": ""
     },
     {
@@ -14813,7 +14822,7 @@
       "impact": "Low",
       "forecast": "650K",
       "previous": "676K",
-      "actual": ""
+      "actual": "701K"
     },
     {
       "title": "Crude Oil Inventories",
@@ -14822,7 +14831,7 @@
       "impact": "Low",
       "forecast": "2.0M",
       "previous": "3.4M",
-      "actual": ""
+      "actual": "1.1M"
     },
     {
       "title": "Natural Gas Storage",
