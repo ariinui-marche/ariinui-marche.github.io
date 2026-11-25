@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-24T23:48:42.988Z",
+  "timestamp": "2026-11-25T05:42:10.603Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -14642,7 +14642,7 @@
       "impact": "Low",
       "forecast": "3.6%",
       "previous": "3.7%",
-      "actual": ""
+      "actual": "4.2%"
     },
     {
       "title": "CPI m/m",
@@ -14651,7 +14651,7 @@
       "impact": "High",
       "forecast": "0.4%",
       "previous": "0.8%",
-      "actual": ""
+      "actual": "0.5%"
     },
     {
       "title": "CPI y/y",
@@ -14660,7 +14660,7 @@
       "impact": "High",
       "forecast": "4.7%",
       "previous": "4.3%",
-      "actual": ""
+      "actual": "4.9%"
     },
     {
       "title": "Trimmed Mean CPI m/m",
@@ -14669,7 +14669,7 @@
       "impact": "High",
       "forecast": "0.3%",
       "previous": "0.3%",
-      "actual": ""
+      "actual": "0.5%"
     },
     {
       "title": "Construction Work Done q/q",
@@ -14678,7 +14678,7 @@
       "impact": "Low",
       "forecast": "0.8%",
       "previous": "-2.1%",
-      "actual": ""
+      "actual": "0.9%"
     },
     {
       "title": "BOJ Core CPI y/y",
@@ -14687,7 +14687,7 @@
       "impact": "Low",
       "forecast": "2.5%",
       "previous": "2.4%",
-      "actual": ""
+      "actual": "2.3%"
     },
     {
       "title": "German Final GDP q/q",
@@ -14820,7 +14820,7 @@
       "country": "USD",
       "date": "2026-11-25T10:30:00-05:00",
       "impact": "Low",
-      "forecast": "",
+      "forecast": "2.0M",
       "previous": "3.4M",
       "actual": ""
     },
