@@ -1,4 +1,4 @@
-// Bougies POH (heure UTC-10, comme Arii SNIPER) des 31 symboles de Charts -> data/poh-candles.json
+// Bougies POH (heure UTC-10, comme Arii SNIPER) des symboles de CANDLE (31 paires + 6 indices, argent, 2 pétroles, SOL, XRP) -> data/poh-candles.json
 
 // Source : TradingView (WebSocket public, mêmes symboles que le widget du site), barres 1h ; la bougie 15h-17h agrège 2 barres 1h.
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
@@ -6,7 +6,7 @@ import WebSocket from 'ws';
 
 const PAIRS = ('EURUSD GBPUSD USDJPY AUDUSD USDCAD USDCHF NZDUSD XAUUSD BTCUSD ETHUSD ' +
   'EURJPY GBPJPY EURGBP EURAUD EURCAD EURCHF EURNZD GBPAUD GBPCAD GBPCHF GBPNZD ' +
-  'AUDJPY CADJPY CHFJPY NZDJPY AUDCAD AUDCHF AUDNZD CADCHF NZDCAD NZDCHF').split(' ');
+  'AUDJPY CADJPY CHFJPY NZDJPY AUDCAD AUDCHF AUDNZD CADCHF NZDCAD NZDCHF US30 USTEC US500 DE40 UK100 JP225 XAGUSD XTIUSD XBRUSD SOLUSD XRPUSD').split(' ');
 // Périodes POH d'Arii SNIPER (poh_periods) : heures UTC+2 [début, fin[ — durées variables
 const SLOTS = { '12': [0, 2], '14': [2, 3], '15': [3, 5], '17': [5, 10], '22': [10, 11], '23': [11, 14], '02': [14, 15], '03': [15, 19], '07': [19, 24] };
 const KEEP_DAYS = 3;

@@ -1,10 +1,10 @@
 // Bougies jaunes (sweeps de DTFX) : node scripts/build-sweeps.mjs  ->  <OUT>/sweeps.json
-// Pour les 31 paires et les unités 1h, 4h, daily : la dernière bougie CLÔTURÉE du flux IC est comparée à celle juste avant.
+// Pour les 42 symboles et les unités 1h, 4h, daily : la dernière bougie CLÔTURÉE du flux IC est comparée à celle juste avant.
 // Même règle que candleYellowLevel (script.js) et que f_checkSweep (DTFX.txt).
 import { writeFileSync, mkdirSync } from 'node:fs';
 import WebSocket from 'ws';
 
-const PAIRS = 'EURUSD GBPUSD USDJPY AUDUSD USDCAD USDCHF NZDUSD XAUUSD BTCUSD ETHUSD EURJPY GBPJPY EURGBP EURAUD EURCAD EURCHF EURNZD GBPAUD GBPCAD GBPCHF GBPNZD AUDJPY CADJPY CHFJPY NZDJPY AUDCAD AUDCHF AUDNZD CADCHF NZDCAD NZDCHF'.split(' ');
+const PAIRS = 'EURUSD GBPUSD USDJPY AUDUSD USDCAD USDCHF NZDUSD XAUUSD BTCUSD ETHUSD EURJPY GBPJPY EURGBP EURAUD EURCAD EURCHF EURNZD GBPAUD GBPCAD GBPCHF GBPNZD AUDJPY CADJPY CHFJPY NZDJPY AUDCAD AUDCHF AUDNZD CADCHF NZDCAD NZDCHF US30 USTEC US500 DE40 UK100 JP225 XAGUSD XTIUSD XBRUSD SOLUSD XRPUSD'.split(' ');
 const TFS = { 60: 3600, 240: 14400, '1D': 86400 };
 
 function fetchAll(tf) { // une seule connexion pour les 31 paires
