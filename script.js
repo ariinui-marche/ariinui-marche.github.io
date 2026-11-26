@@ -1988,6 +1988,60 @@ const CANDLE_HIST_MODES = ['0', '1', '5', '60', '240', '1D', '1W'], CANDLE_HIST_
 const CANDLE_HIST_N = { 1: 50, 5: 50, 60: 24, 240: 12, '1D': 8, '1W': 8 }; // bougies récentes prises pour caler l'échelle de prix (1 jour environ)
 if (!CANDLE_HIST_MODES.includes(candleHistTf)) candleHistTf = '0';
 const candleHistData = {}; // 'PAIR|tf' -> { bars: [[t,o,h,l,c]...], at, busy }
+// ===== IFVG et BPR des graphiques 1h / 4h : règles et réglages par défaut d'Arii SNIPER (indépendant du moteur CDX SW des 1 min / 5 min) =====
+// FVG source >= 0,2 ATR14 ; IFVG = clôture à travers le FVG dans les 30 barres avec corps >= 0,3 ATR ; BPR = recouvrement > 0,1 ATR avec un FVG opposé de 10 barres au plus ;
+// 5 zones de chaque au maximum ; 7 derniers jours ; zone atteinte en clôture = grisée et réduite ; clôture au-delà du bord lointain = supprimée. Création sur bougie clôturée seulement.
+function candleSniperZones(bars, tfSec, now) {
+  const ifvgs = [], bprs = [], rawBull = [], rawBear = [];
+  if (!bars || bars.length < 20) return { ifvgs, bprs };
+  const from = bars[bars.length - 1][0] - 7 * 86400;
+  let atr = 0, sum = 0;
+  const push = (arr, z) => { arr.push(z); if (arr.length > 5) arr.shift(); };
+  const update = (arr, c) => {
+    for (let k = arr.length - 1; k >= 0; k--) {
+      const z = arr[k];
+      if (z.bull ? c <= z.bot : c >= z.top) { arr.splice(k, 1); continue; }
+      if (c > z.top || c < z.bot) continue;
+      z.mit = true;
+      const nt = Math.min(c, z.top), nb = Math.max(c, z.bot);
+      if (z.bull && nt > z.bot && nt < z.oTop) z.top = nt;
+      if (!z.bull && nb < z.top && nb > z.oBot) z.bot = nb;
+    }
+  };
+  for (let i = 0; i < bars.length; i++) {
+    const [t, o, h, l, c] = bars[i];
+    const tr = i ? Math.max(h - l, Math.abs(h - bars[i - 1][4]), Math.abs(l - bars[i - 1][4])) : h - l;
+    if (i < 14) { sum += tr; if (i === 13) atr = sum / 14; } else atr = (atr * 13 + tr) / 14;
+    if (i >= 2 && t + tfSec <= now) {
+      const h2 = bars[i - 2][2], l2 = bars[i - 2][3], bullGap = l > h2, bearGap = h < l2, minGap = atr * 0.2;
+      for (const [arr, det, top, bot] of [[rawBull, bullGap, l, h2], [rawBear, bearGap, l2, h]]) {
+        if (t >= from && det && top - bot >= minGap) { arr.push({ top, bot, n: i, left: i - 2, inv: false, used: false }); if (arr.length > 50) arr.shift(); }
+        for (let k = arr.length - 1; k >= 0; k--) if (i - arr[k].n > 35) arr.splice(k, 1);
+      }
+      for (const [arr, srcBull] of [[rawBull, true], [rawBear, false]]) {
+        for (let k = arr.length - 1; k >= 0; k--) {
+          const r = arr[k];
+          if (r.inv || i - r.n > 30 || !(srcBull ? c < r.bot : c > r.top) || Math.abs(c - o) < atr * 0.3) continue;
+          r.inv = true;
+          push(ifvgs, { bull: !srcBull, ts: bars[r.left][0], top: r.top, bot: r.bot, oTop: r.top, oBot: r.bot, mit: false });
+        }
+      }
+      for (const [det, arr, bull, top, bot] of [[bullGap, rawBear, true, l, h2], [bearGap, rawBull, false, l2, h]]) {
+        if (!det || top - bot < minGap) continue;
+        for (let k = arr.length - 1; k >= 0; k--) {
+          const r = arr[k], ot = Math.min(top, r.top), ob = Math.max(bot, r.bot);
+          if (r.used || i - r.n > 10 || ot - ob <= atr * 0.1) continue;
+          r.used = true;
+          push(bprs, { bull, ts: bars[Math.min(i - 2, r.left)][0], top: ot, bot: ob, oTop: ot, oBot: ob, mit: false });
+          break;
+        }
+      }
+    }
+    update(ifvgs, c);
+    update(bprs, c);
+  }
+  return { ifvgs, bprs };
+}
 // ===== Plans Arii CDX SW sur CANDLE (graphiques 1 min / 5 min) : moteur cdx-engine.js, identique au moteur Python de référence =====
 let candlePlans = true, candleZones = true; // roue > « Plans » / « Zones » (enregistrés)
 try { candlePlans = localStorage.getItem('candlePlans') !== '0'; candleZones = localStorage.getItem('candleZones') !== '0'; } catch (e) { /* pas de stockage */ }
@@ -2467,6 +2521,21 @@ function candleSvg(day, dly, view, id) {
       }
     }
     candlePlanHits[id] = [];
+    if (!RP && candleZones && (candleHistTf === '60' || candleHistTf === '240')) { // IFVG / BPR 1h et 4h (Arii SNIPER) : bouton « Zones » de la roue
+      const sz = candleSniperZones(hist, tfSec, Date.now() / 1000);
+      const idxOf = (t) => { let a = 0, b = hist.length - 1; while (a < b) { const m = (a + b + 1) >> 1; if (hist[m][0] <= t) a = m; else b = m - 1; } return a; };
+      const xOf = (k) => edge - (Math.floor((hist.length - 1 - k) / sg) + 0.5) * hs;
+      for (const [list, isBpr] of [[sz.ifvgs, false], [sz.bprs, true]]) {
+        for (const z of list) {
+          const xa = xOf(idxOf(z.ts)) - hs / 2, xb = xOf(hist.length - 1) + hs / 2;
+          if (xb < 0 || xa > xMax) continue;
+          const yt = y(z.top), yb = y(z.bot), x0 = Math.max(-2, xa), w = Math.max(1, Math.min(xb, xMax + 2) - x0);
+          if (yb < TOP - 40 || yt > H) continue;
+          const col = z.mit ? '#808080' : isBpr ? (z.bull ? '#00E676' : '#FF1744') : (z.bull ? '#00C853' : '#FF1744');
+          zoneSvg += `<rect class="pc-sz ${isBpr ? 'pc-sz-bpr' : 'pc-sz-ifvg'}" x="${x0.toFixed(1)}" y="${yt.toFixed(1)}" width="${w.toFixed(1)}" height="${Math.max(1, yb - yt).toFixed(1)}" fill="${col}" fill-opacity="${z.mit ? 0.12 : isBpr ? 0.18 : 0.14}" stroke="${col}" stroke-opacity="${z.mit ? 0.32 : isBpr ? 0.38 : 0.34}" stroke-width="${isBpr ? 2 : 1}"${isBpr ? '' : ' stroke-dasharray="2 2"'}/>`;
+        }
+      }
+    }
     if (!RP && !is1D && (candleHistTf === '1' || candleHistTf === '5')) { // plans Arii CDX SW : boîte de risque (entrée -> stop) + boîte de gain jusqu'au pic en R, couleur de la session
       const pls = candlePlansGet(id, candleHistTf, hist);
       const idxOf = (t) => { let a = 0, b = hist.length - 1; while (a < b) { const m = (a + b + 1) >> 1; if (hist[m][0] <= t) a = m; else b = m - 1; } return a; };
