@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-25T16:04:01.792Z",
+  "timestamp": "2026-11-26T00:10:28.356Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -14840,7 +14840,7 @@
       "impact": "Low",
       "forecast": "-19B",
       "previous": "20B",
-      "actual": ""
+      "actual": "-24B"
     },
     {
       "title": "Beige Book",
