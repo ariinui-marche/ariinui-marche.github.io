@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-26T00:10:28.356Z",
+  "timestamp": "2026-11-26T08:07:36.992Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -14858,7 +14858,7 @@
       "impact": "Low",
       "forecast": "4.5%",
       "previous": "-3.6%",
-      "actual": ""
+      "actual": "12.2%"
     },
     {
       "title": "RBA Bulletin",
@@ -14876,7 +14876,7 @@
       "impact": "Low",
       "forecast": "-29.4",
       "previous": "-30.8",
-      "actual": ""
+      "actual": "-30.2"
     },
     {
       "title": "M3 Money Supply y/y",
@@ -14894,6 +14894,15 @@
       "impact": "Low",
       "forecast": "3.2%",
       "previous": "3.1%",
+      "actual": ""
+    },
+    {
+      "title": "Euro Summit",
+      "country": "EUR",
+      "date": "2026-11-26T04:15:00-05:00",
+      "impact": "Low",
+      "forecast": "",
+      "previous": "",
       "actual": ""
     },
     {
