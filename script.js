@@ -266,6 +266,13 @@ const CORR_ALL_PAIRS = [
   { id: 'NZDCAD', label: 'NZD/CAD', category: 'Minor' },
   { id: 'NZDCHF', label: 'NZD/CHF', category: 'Minor' },
 ];
+// Symboles de CANDLE = les 31 paires + 6 indices, argent, 2 pétroles, SOL et XRP (les autres sections gardent les 31 paires)
+const CANDLE_EXTRA = [['US30', 'US30', 'Index'], ['USTEC', 'US100', 'Index'], ['US500', 'US500', 'Index'], ['DE40', 'DAX 40', 'Index'], ['UK100', 'UK100', 'Index'], ['JP225', 'JP225', 'Index'],
+  ['XAGUSD', 'XAG/USD', 'Metal'], ['XTIUSD', 'WTI', 'Energy'], ['XBRUSD', 'BRENT', 'Energy'], ['SOLUSD', 'SOL/USD', 'Crypto'], ['XRPUSD', 'XRP/USD', 'Crypto']].map(([id, label, category]) => ({ id, label, category }));
+const CANDLE_PAIRS = CORR_ALL_PAIRS.concat(CANDLE_EXTRA);
+const candleLbl = (id) => (CANDLE_PAIRS.find((p) => p.id === id) || { label: id }).label;
+const CANDLE_IDX_CCY = { US30: 'USD', USTEC: 'USD', US500: 'USD', DE40: 'EUR', UK100: 'GBP', JP225: 'JPY' }; // devise des news affichées sur les indices
+const candleDec = (v) => (v >= 1000 ? 2 : v >= 20 ? 3 : 5); // décimales affichées
 const CORR_DEFAULT_COUNT = 10;
 const CORR_MIN_SELECT = 2;
 const CORR_MAX_SELECT = 3;
@@ -543,6 +550,7 @@ function chartsBuildEcoIndex() {
 }
 // Devises d'une paire qui comptent (XAU / BTC / ETH : seulement USD)
 function chartsPairCcys(pairId) {
+  if (CANDLE_IDX_CCY[pairId]) return [CANDLE_IDX_CCY[pairId]];
   return [pairId.slice(0, 3), pairId.slice(3, 6)].filter((c) => CHARTS_MAJORS.includes(c));
 }
 // Jours (clés de bougie) où une annonce High/Medium d'une des devises de la paire a eu lieu
@@ -2221,7 +2229,7 @@ function candleHistBars(id) {
   if (!h || !h.bars.length) return null;
   return rp.on && rp.id === id ? candleRpBars(h.bars, id) : h.bars;
 }
-const CANDLE_STATIC = new Set('EURUSD GBPUSD USDJPY AUDUSD USDCAD USDCHF NZDUSD XAUUSD BTCUSD ETHUSD EURJPY GBPJPY EURGBP EURAUD EURCAD EURCHF EURNZD GBPAUD GBPCAD GBPCHF GBPNZD AUDJPY CADJPY CHFJPY NZDJPY AUDCAD AUDCHF AUDNZD CADCHF NZDCAD NZDCHF'.split(' ').flatMap((p) => [p + '|1D', p + '|1W', p + '|60', p + '|240', p + '|5', p + '|1'])); // couples paire|timeframe servis par data/candles/<tf>/<paire>.json (workflow fetch-static-candles.yml)
+const CANDLE_STATIC = new Set('EURUSD GBPUSD USDJPY AUDUSD USDCAD USDCHF NZDUSD XAUUSD BTCUSD ETHUSD EURJPY GBPJPY EURGBP EURAUD EURCAD EURCHF EURNZD GBPAUD GBPCAD GBPCHF GBPNZD AUDJPY CADJPY CHFJPY NZDJPY AUDCAD AUDCHF AUDNZD CADCHF NZDCAD NZDCHF US30 USTEC US500 DE40 UK100 JP225 XAGUSD XTIUSD XBRUSD SOLUSD XRPUSD'.split(' ').flatMap((p) => [p + '|1D', p + '|1W', p + '|60', p + '|240', p + '|5', p + '|1'])); // couples paire|timeframe servis par data/candles/<tf>/<paire>.json (workflow fetch-static-candles.yml)
 function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bougies de la paire affichée, puis redessine EN PLACE
   if (!id || (candleHistTf === '0' && !tfx)) return;
   if (!tfx && (candlePlans || candleZones) && candleHistTf === '5') candleHistEnsure(id, '1'); // plans en 5 min : confirmation sur les barres 1 min
@@ -2343,7 +2351,7 @@ function candleBiasSync() { // des bougies sont arrivées : compteur « Bias » 
     if (!candlePoh) return;
     candleFilterUpdate();
     if (!candleF.bias || candleMini) return;
-    const want = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id] && candleInfo(p.id).bias).map((p) => p.id).sort().join(), have = [...candleSlides()].map((r) => r.dataset.id).sort().join();
+    const want = CANDLE_PAIRS.filter((p) => candlePoh[p.id] && candleInfo(p.id).bias).map((p) => p.id).sort().join(), have = [...candleSlides()].map((r) => r.dataset.id).sort().join();
     if (want !== have) { candleRender(); candleNavUpdate(); }
   }, 1000);
 }
@@ -2387,7 +2395,7 @@ function candleSvg(day, dly, view, id) {
   const baseRng = sc.hi - sc.lo, cenV = (sc.hi + sc.lo) / 2 + vw.yp * baseRng, rng = baseRng / vw.yz;
   const lo = cenV - rng / 2, hi = cenV + rng / 2; // fenêtre de prix affichée (zoom vertical + décalage)
   const y = (v) => TOP + (1 - (v - lo) / rng) * (H - TOP - BOT);
-  const dec = hi >= 1000 ? 2 : hi >= 100 ? 3 : 5;
+  const dec = candleDec(hi);
   const fmt = (v) => v.toFixed(dec);
   const stepP = candleNiceStep(rng, 8);
   let grid = '';
@@ -2444,7 +2452,7 @@ function candleSvg(day, dly, view, id) {
       if (fx >= 0 && fx <= W - AX) evb += `<line x1="${fx.toFixed(1)}" x2="${fx.toFixed(1)}" y1="0" y2="${H - BOT - 30}" stroke="#5cc8ff" stroke-width="1" stroke-dasharray="4 4" stroke-opacity=".8"/>` +
         `<path d="M${(fx - 7).toFixed(1)} ${H - BOT - 2} L${(fx + 7).toFixed(1)} ${H - BOT - 2} L${fx.toFixed(1)} ${H - BOT - 14} Z" fill="#5cc8ff"/>`;
     }
-    const tLast = hist[hist.length - 1][0], noClose = /^(BTC|ETH)/.test(id), xMax = W - AX, R = 12;
+    const tLast = hist[hist.length - 1][0], noClose = /^(BTC|ETH|SOL|XRP)/.test(id), xMax = W - AX, R = 12;
     const futStart = LEFT + xOff + step * cs.length; // le futur commence à droite du bloc des POH et se prolonge à l'infini
     const phase = (t) => ((t % 604800) + 604800) % 604800;
     const closedAt = (t) => !noClose && phase(t) >= 165600 && phase(t) < 338400; // marché fermé du vendredi 22:00 UTC au dimanche 22:00 UTC (pas de barres le week-end ; crypto : jamais)
@@ -2703,7 +2711,7 @@ function candleInfo(id) {
   return { fibo, sweep, both: fibo && sweep, alert: candleHasAlert(id), bias: bi.d !== 0 && bi.d === bi.h && bi.h === bi.u, doji: candleDojiRank(id) >= 0, yellow: candleYellowOf(id).length > 0 };
 }
 function candleFilterUpdate() {
-  const ids = CORR_ALL_PAIRS.filter((p) => candlePoh && candlePoh[p.id]).map((p) => p.id);
+  const ids = CANDLE_PAIRS.filter((p) => candlePoh && candlePoh[p.id]).map((p) => p.id);
   const n = { fibo: 0, sweep: 0, both: 0, alert: 0, bias: 0, doji: 0, yellow: 0 };
   for (const id of ids) { const i = candleInfo(id); if (i.fibo) n.fibo++; if (i.sweep) n.sweep++; if (i.both) n.both++; if (i.alert) n.alert++; if (i.bias) n.bias++; if (i.doji) n.doji++; if (i.yellow) n.yellow++; }
   const biasAll = ids.length && ids.every(candleBiasLoaded); // compteur « Bias » affiché seulement quand toutes les bougies sont chargées (sinon il serait faux)
@@ -2883,7 +2891,7 @@ function candleRender() {
   const list = document.getElementById('candleList');
   candleYellowLoad(); // relu au plus toutes les 2 min
   if (!candlePoh) { list.innerHTML = '<div class="charts-intro">POH candles unavailable right now.</div>'; return; }
-  const rows = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id] && (!candleF.fibo || candleInfo(p.id).fibo) && (!candleF.sweep || candleInfo(p.id).sweep) && (!candleF.both || candleInfo(p.id).both) && (!candleF.alert || candleInfo(p.id).alert) && (!candleF.bias || candleInfo(p.id).bias) && (!candleF.doji || candleInfo(p.id).doji) && (!candleF.yellow || candleInfo(p.id).yellow))
+  const rows = CANDLE_PAIRS.filter((p) => candlePoh[p.id] && (!candleF.fibo || candleInfo(p.id).fibo) && (!candleF.sweep || candleInfo(p.id).sweep) && (!candleF.both || candleInfo(p.id).both) && (!candleF.alert || candleInfo(p.id).alert) && (!candleF.bias || candleInfo(p.id).bias) && (!candleF.doji || candleInfo(p.id).doji) && (!candleF.yellow || candleInfo(p.id).yellow))
     .map((p) => ({ p, s: chartsCandles ? chartsScore(p.id) : { group: 2, move: 0 } }))
     .sort((x, y) => (candleMini || candleF.doji ? candleDojiRank(y.p.id) - candleDojiRank(x.p.id) : 0) || x.s.group - y.s.group || y.s.move - x.s.move); // 4 candles : doji le plus récent d'abord (14h, puis 15-17h, 22h, 02h prennent la tête à leur clôture), puis ordre habituel
   let date = '';
@@ -2954,7 +2962,7 @@ function candleNamesRender() {
   document.querySelectorAll('#candleStrip [data-d]').forEach((b) => b.setAttribute('aria-expanded', String(candleNamesOpen === b.dataset.d)));
   if (!candleNamesOpen) { box.hidden = true; return; }
   const curId = candleCurId();
-  const ids = candleNamesOpen === 'all' ? [...candleSlides()].map((r) => CORR_ALL_PAIRS.find((p) => p.id === r.dataset.id)).filter(Boolean) : CORR_ALL_PAIRS.filter((p) => candlePoh && candlePoh[p.id])
+  const ids = candleNamesOpen === 'all' ? [...candleSlides()].map((r) => CANDLE_PAIRS.find((p) => p.id === r.dataset.id)).filter(Boolean) : CANDLE_PAIRS.filter((p) => candlePoh && candlePoh[p.id])
     .map((p) => ({ p, s: chartsCandles ? chartsScore(p.id) : { group: 2, move: 0 } }))
     .sort((x, y) => x.s.group - y.s.group || y.s.move - x.s.move)
     .map((x) => x.p).filter((p) => candleInfo(p.id)[candleNamesOpen]);
@@ -3006,7 +3014,7 @@ document.getElementById('candleStrip')?.addEventListener('click', (e) => {
   const was = candleF[b.dataset.f];
   candleF[b.dataset.f] = !was;
   if (b.dataset.f === 'yellow') { candleF.fibo = candleF.sweep = candleF.both = candleF.alert = candleF.bias = candleF.doji = false; } else candleF.yellow = false; // « Yellow » est seul
-  if (b.dataset.f === 'yellow') { /* déjà traité */ } else if (b.dataset.f === 'doji') { candleF.fibo = candleF.sweep = candleF.both = candleF.alert = candleF.bias = false; } else if (b.dataset.f === 'bias') { candleF.doji = false; candleF.fibo = candleF.sweep = candleF.both = candleF.alert = false; if (candleF.bias) candlePoh && CORR_ALL_PAIRS.forEach((p) => { if (candlePoh[p.id]) candleBias(p.id, true); }); } else if (b.dataset.f === 'alert') { candleF.fibo = candleF.sweep = candleF.both = candleF.bias = candleF.doji = false; } else { candleF.alert = false; candleF.bias = false; candleF.doji = false; if (b.dataset.f === 'both') { candleF.fibo = false; candleF.sweep = false; } else candleF.both = false; } // « Alerts » est seul ; Fibo / Sweep / F+S l'annulent (et inversement) // « F+S » remplace Fibo+Sweep ; Fibo ou Sweep seul annule « F+S »
+  if (b.dataset.f === 'yellow') { /* déjà traité */ } else if (b.dataset.f === 'doji') { candleF.fibo = candleF.sweep = candleF.both = candleF.alert = candleF.bias = false; } else if (b.dataset.f === 'bias') { candleF.doji = false; candleF.fibo = candleF.sweep = candleF.both = candleF.alert = false; if (candleF.bias) candlePoh && CANDLE_PAIRS.forEach((p) => { if (candlePoh[p.id]) candleBias(p.id, true); }); } else if (b.dataset.f === 'alert') { candleF.fibo = candleF.sweep = candleF.both = candleF.bias = candleF.doji = false; } else { candleF.alert = false; candleF.bias = false; candleF.doji = false; if (b.dataset.f === 'both') { candleF.fibo = false; candleF.sweep = false; } else candleF.both = false; } // « Alerts » est seul ; Fibo / Sweep / F+S l'annulent (et inversement) // « F+S » remplace Fibo+Sweep ; Fibo ou Sweep seul annule « F+S »
   candleSelected = null;
   if (candlePoh) candleRender();
   document.getElementById('candleList').scrollLeft = 0;
@@ -3054,7 +3062,7 @@ const AL_SEEN_LS = 'alertLogSeenV1', AL_CLR_LS = 'alertLogClearedV1', AL_SORTS =
 const alP = { tab: 'alerts', sort: 'new', q: '', log: [], loaded: false };
 const alLsGet = (k) => { try { return +localStorage.getItem(k) || 0; } catch (e) { return 0; } };
 const alLsSet = (k, v) => { try { localStorage.setItem(k, String(v)); } catch (e) { /* pas de stockage */ } };
-const alPairLbl = (id) => `${id.slice(0, 3)}/${id.slice(3)}`;
+const alPairLbl = (id) => candleLbl(id);
 const alDec = (v) => (v >= 1000 ? 2 : v >= 100 ? 3 : 5);
 async function alLogFetch() {
   try { const r = await fetch(`${ALERTE_API}/alerte?alog=1`, { cache: 'no-store', signal: AbortSignal.timeout(10000) }); if (r.ok) alP.log = (await r.json()).log || []; } catch (e) { /* on garde le dernier journal */ }
@@ -3330,7 +3338,7 @@ let candleAutoBusy = false;
 let candleMiniRankSig = '';
 function candleRefreshInPlace() {
   if (candleMini && candlePoh) { // 4 candles : un doji vient d'apparaître / de changer de rang (clôture 14h, 15-17h, 22h, 02h) → la liste se réordonne toute seule
-    const sig = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id]).map((p) => p.id + ':' + candleDojiRank(p.id)).join();
+    const sig = CANDLE_PAIRS.filter((p) => candlePoh[p.id]).map((p) => p.id + ':' + candleDojiRank(p.id)).join();
     if (candleMiniRankSig && sig !== candleMiniRankSig && !(cg.pts && cg.pts.size)) { candleMiniRankSig = sig; candleRender(); return; }
     candleMiniRankSig = sig;
   }
@@ -3645,7 +3653,7 @@ alerteSwitch('alerteYD', 'yD', 'Yellow daily');
 })();
 
 // ===== REPLAY (façon TradingView) : barre de départ, lecture / pause, pas à pas, vitesse, changement de période, trading papier =====
-const rpPip = (id) => (/JPY$/.test(id) ? 0.01 : /^XAU/.test(id) ? 0.1 : /^(BTC|ETH)/.test(id) ? 1 : 0.0001);
+const rpPip = (id) => (/JPY$/.test(id) ? 0.01 : /^XAU/.test(id) ? 0.1 : /^(BTC|ETH)/.test(id) ? 1 : CANDLE_IDX_CCY[id] ? 1 : /^SOL/.test(id) ? 0.01 : /^(XTI|XBR|XAG)/.test(id) ? 0.01 : 0.0001);
 const rpEl = (i) => document.getElementById(i);
 function rpFull(id) { const h = candleHistData[(id || rp.id) + '|' + candleHistTf]; return h && h.bars.length ? h.bars : null; }
 function rpDec() { const b = rpFull(); const v = b ? b[b.length - 1][4] : 1; return v >= 1000 ? 2 : v >= 100 ? 3 : 5; }
@@ -3929,7 +3937,7 @@ function candleAlFilterSync() { // la liste des lignes a changé : compteur « A
   if (!candlePoh) return;
   candleFilterUpdate();
   if (!candleF.alert || candleMini) return;
-  const want = CORR_ALL_PAIRS.filter((p) => candlePoh[p.id] && candleHasAlert(p.id)).map((p) => p.id).sort().join(), have = [...candleSlides()].map((r) => r.dataset.id).sort().join();
+  const want = CANDLE_PAIRS.filter((p) => candlePoh[p.id] && candleHasAlert(p.id)).map((p) => p.id).sort().join(), have = [...candleSlides()].map((r) => r.dataset.id).sort().join();
   if (want !== have) candleRender();
 }
 function candleAlRedraw() { const id = candleCurId(); if (id && !(rp.on && rp.id === id)) candleRedraw(id, candleViewOf(id)); }
@@ -3974,7 +3982,7 @@ async function candleLiveLast(id) { return candleLastPx(id); // plus d'appel ser
   return candleLastPx(id);
 }
 function candleAlCreate(id, price) {
-  const label = (CORR_ALL_PAIRS.find((p) => p.id === id) || { label: id }).label, dec = price >= 1000 ? 2 : price >= 100 ? 3 : 5;
+  const label = (CANDLE_PAIRS.find((p) => p.id === id) || { label: id }).label, dec = candleDec(price);
   candleAlSheet(`Price alert · ${label}`, 'You will be notified (sound) when the price touches this level.', +price.toFixed(dec), 'Create alert', async (px, exp) => {
     if (!(px > 0)) throw new Error('Enter a valid price');
     const last = await candleLiveLast(id);
@@ -4051,7 +4059,7 @@ function candleAlCreate(id, price) {
     candleAlDrag = null;
     if (e.type === 'pointercancel' || !d.moved) { candleRedraw(d.id, candleViewOf(d.id)); return; }
     cg.swallow = Date.now() + 600;
-    const last = await candleLiveLast(d.id), dec = d.price >= 1000 ? 2 : d.price >= 100 ? 3 : 5, price = +d.price.toFixed(dec);
+    const last = await candleLiveLast(d.id), dec = candleDec(d.price), price = +d.price.toFixed(dec);
     try { await candleAlPost({ lineMove: { id: d.aid, price, dir: last === null || price >= last ? 'above' : 'below' } }); } catch (err) { candleRedraw(d.id, candleViewOf(d.id)); candleAlFetch(); }
   };
   const xhEnd = (e) => {
@@ -4079,6 +4087,6 @@ function candleAlCreate(id, price) {
     const rc = ch.getBoundingClientRect(), px = e.clientX - rc.left, py = e.clientY - rc.top;
     const hit = (candleAlHits[ch.dataset.pair] || []).find((h) => px >= h.x + h.w - 26 - 6 && px <= h.x + h.w + 6 && py >= h.y - 6 && py <= h.y + h.h + 6); // seulement le bouton ✕
     const a = hit && candleAl.find((x) => x.id === hit.aid);
-    if (a) candleAlSheet(`Alert · ${a.pair.slice(0, 3)}/${a.pair.slice(3)}`, `${a.dir === 'above' ? 'Rises to' : 'Falls to'} ${a.price}`, null, 'Delete alert', () => candleAlPost({ lineDelete: a.id }));
+    if (a) candleAlSheet(`Alert · ${candleLbl(a.pair)}`, `${a.dir === 'above' ? 'Rises to' : 'Falls to'} ${a.price}`, null, 'Delete alert', () => candleAlPost({ lineDelete: a.id }));
   });
 })();
