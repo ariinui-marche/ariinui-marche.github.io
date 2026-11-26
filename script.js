@@ -1980,7 +1980,7 @@ let candlePoh = null;
 let candleSelected = null;
 const CANDLE_SLOTS = [['12', '12h'], ['14', '14h'], ['15', '15h'], ['17', '17h'], ['22', '22h'], ['23', '23h'], ['02', '02h'], ['03', '03h'], ['07', '07h']];
 const CANDLE_SLOT_END = { '12': 2, '14': 3, '15': 5, '17': 10, '22': 11, '23': 14, '02': 15, '03': 19, '07': 24 }; // fin de chaque tranche POH, heure UTC+2 (14h UTC-10 = 02-03h UTC+2)
-function candleSlotClosed(dayStr, k) { // un doji n'existe qu'une fois la bougie CLÔTURÉE (jamais pendant sa formation)
+function candleSlotClosed(dayStr, k) { // tranche POH terminée (jamais pendant sa formation)
   const n = new Date(Date.now() + 7200 * 1000), today = n.toISOString().slice(0, 10);
   return dayStr < today || (dayStr === today && n.getUTCHours() >= CANDLE_SLOT_END[k]);
 }
@@ -2424,7 +2424,7 @@ function candleDay1h(id, day, rpCut) { // 24 cases (null = pas de bougie) : { c:
 function candleSvg(day, dly, view, id) {
   const rpx = candleRpPoh(id); // replay : POH / daily calculés à la position du replay
   if (rpx) { day = rpx.day; dly = rpx.dly; }
-  const dd = (dly || []).slice(-4).map((b, i, a) => ({ lbl: 'D' + (a.length - 1 - i), dn: CANDLE_DAYFR[new Date((b[0] + 7200) * 1000).getUTCDay()], c: b.slice(1, 5), ok: !!rpx || b[0] + 86400 <= Date.now() / 1000 })); // ok : bougie du jour clôturée (doji seulement alors) ; dn : jour de la semaine en français (jour de trading UTC+2) affiché à la place de D3..D0
+  const dd = (dly || []).slice(-4).map((b, i, a) => ({ lbl: 'D' + (a.length - 1 - i), dn: CANDLE_DAYFR[new Date((b[0] + 7200) * 1000).getUTCDay()], c: b.slice(1, 5), ok: !!rpx || b[0] + 86400 <= Date.now() / 1000 })); // dn : jour de la semaine en français (jour de trading UTC+2) affiché à la place de D3..D0
   const hrs = candleDay1h(id, day, rpx ? rp.t + (+candleHistTf || 1) * 60 : 0);
   // pos / wd : centre et largeur en unités ; libellé d'heure (UTC-10) seulement sous les heures des anciens POH
   const cs = dd.map((x, i) => Object.assign(x, { pos: 2 * i + 1, wd: 2 })).concat(hrs.map((b, k) => { const hr = (k + 12) % 24; return { lbl: '', dn: [12, 14, 17, 22, 2, 7].includes(hr) ? String(hr).padStart(2, '0') + 'h' : '', hour: true, pos: dd.length * 2 + 1 + k + 0.5, wd: 1, c: b && b.c, yl: b ? b.yl : null }; }));
@@ -2466,8 +2466,7 @@ function candleSvg(day, dly, view, id) {
     return (vis && lf >= 3.5 && (x.dn || x.lbl) ? `<text x="${cx.toFixed(1)}" y="${Math.min(H - 6 * lf / 11, Math.max(1.3 * lf, y(h) - 0.55 * lf)).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:${col};font-size:${lf.toFixed(1)}px">${x.dn || x.lbl}</text>` : '') +
       `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="0.9"/>` +
       (yel ? `<line class="pc-yline" x1="${(cx - step).toFixed(1)}" x2="${(cx + bw / 2).toFixed(1)}" y1="${y(x.yl).toFixed(1)}" y2="${y(x.yl).toFixed(1)}" stroke="${CANDLE_YEL_LINE}" stroke-width="1.4"/>` : '') +
-      `<rect class="${x.hour ? 'pc-h1' : 'pc-d'}${yel ? ' pc-yel' : ''}" x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o && !yel ? '#0b0b0b' : col}" stroke="${col}" stroke-width="0.9"/>` +
-      (vis && x.ok && lf >= 3.5 && h > l && Math.abs(c - o) <= 0.1 * (h - l) ? `<text x="${cx.toFixed(1)}" y="${Math.min(H - 2, y(l) + 1.1 * lf).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:#d1d4dc;font-size:${(lf * 0.9).toFixed(1)}px">Doji</text>` : '');
+      `<rect class="${x.hour ? 'pc-h1' : 'pc-d'}${yel ? ' pc-yel' : ''}" x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o && !yel ? '#0b0b0b' : col}" stroke="${col}" stroke-width="0.9"/>`;
   }).join('');
   const axT = []; // étiquettes des lignes : affichées DANS l'échelle de prix à droite (nom de la ligne à la place du prix), centrées sur la ligne
   let fib = '';
@@ -2732,7 +2731,7 @@ function candleSweep(dly, day) {
   return (lo ? '<span class="cd-sweep cd-sweep-lo">Sweep</span>' : '') + (hi ? '<span class="cd-sweep cd-sweep-hi">Sweep</span>' : '');
 }
 // Boutons Fibo / Sweep : affichent immédiatement les paires concernées (les deux actifs = les deux conditions)
-const candleF = { fibo: false, sweep: false, both: false, alert: false, bias: false, doji: false, yellow: false }; // bias = paires dont le biais D1, H4 et H1 est aligné (5e bouton)
+const candleF = { fibo: false, sweep: false, both: false, alert: false, bias: false, yellow: false }; // bias = paires dont le biais D1, H4 et H1 est aligné (5e bouton)
 // // both = Fibo ET Sweep (3e bouton « F+S ») ; alert = paires avec ligne bleue ou plan du tableau ALERTE (4e bouton)
 function candleHasAlert(id) { // ligne d'alerte de prix (bleue) OU plan (PTP/OCO) dans le tableau ALERTE
   if (candleAl.some((a) => a.pair === id)) return true;
@@ -2747,16 +2746,16 @@ function candleInfo(id) {
   const fibo = !!fl;
   const sweep = !!(day && candleSweep(dly, day));
   const bi = candleBias(id, false);
-  return { fibo, sweep, both: fibo && sweep, alert: candleHasAlert(id), bias: bi.d !== 0 && bi.d === bi.h && bi.h === bi.u, doji: candleDojiRank(id) >= 0, yellow: candleYellowOf(id).length > 0 };
+  return { fibo, sweep, both: fibo && sweep, alert: candleHasAlert(id), bias: bi.d !== 0 && bi.d === bi.h && bi.h === bi.u, yellow: candleYellowOf(id).length > 0 };
 }
 function candleFilterUpdate() {
   const ids = CANDLE_PAIRS.filter((p) => candlePoh && candlePoh[p.id]).map((p) => p.id);
-  const n = { fibo: 0, sweep: 0, both: 0, alert: 0, bias: 0, doji: 0, yellow: 0 };
-  for (const id of ids) { const i = candleInfo(id); if (i.fibo) n.fibo++; if (i.sweep) n.sweep++; if (i.both) n.both++; if (i.alert) n.alert++; if (i.bias) n.bias++; if (i.doji) n.doji++; if (i.yellow) n.yellow++; }
+  const n = { fibo: 0, sweep: 0, both: 0, alert: 0, bias: 0, yellow: 0 };
+  for (const id of ids) { const i = candleInfo(id); if (i.fibo) n.fibo++; if (i.sweep) n.sweep++; if (i.both) n.both++; if (i.alert) n.alert++; if (i.bias) n.bias++; if (i.yellow) n.yellow++; }
   const biasAll = ids.length && ids.every(candleBiasLoaded); // compteur « Bias » affiché seulement quand toutes les bougies sont chargées (sinon il serait faux)
   document.querySelectorAll('#candleStrip [data-f]').forEach((b) => {
     b.classList.toggle('on', candleF[b.dataset.f]);
-    b.textContent = b.dataset.f === 'bias' && !biasAll ? 'Bias' : `${{ fibo: 'Fibo', sweep: 'Sweep', both: 'F+S', alert: 'Alerts', bias: 'Bias', doji: 'Doji', yellow: 'Yellow' }[b.dataset.f]} (${n[b.dataset.f]})`;
+    b.textContent = b.dataset.f === 'bias' && !biasAll ? 'Bias' : `${{ fibo: 'Fibo', sweep: 'Sweep', both: 'F+S', alert: 'Alerts', bias: 'Bias', yellow: 'Yellow' }[b.dataset.f]} (${n[b.dataset.f]})`;
   });
 }
 // ===== Zoom / déplacement façon TradingView (pincer à deux doigts, glisser), enregistré par paire =====
@@ -2902,7 +2901,7 @@ function candleOnMove() {
 const CANDLE_LAST_LS = 'candleLastPair'; // dernier symbole affiché : retrouvé à la réouverture (même après fermeture de l'appli)
 function candleLastId() { try { return localStorage.getItem(CANDLE_LAST_LS) || null; } catch (e) { return null; } }
 function candleMiniSvg(day, W) { // 4 bougies d'origine : 14h, 15-17h, 22h, 02h (UTC-10), même couleurs et même style que les POH
-  const H = 150, TOP = 22, cs = [['14', '14h'], ['15', '15-17h'], ['22', '22h'], ['02', '02h']].map(([k, l]) => ({ l, c: day.c[k], ok: candleSlotClosed(day.d, k) })), isDoji = (x) => !!x.c && x.ok && x.c[1] > x.c[2] && Math.abs(x.c[3] - x.c[0]) <= 0.1 * (x.c[1] - x.c[2]), BOT = cs.some((x) => isDoji(x)) ? 22 : 8; // doji : corps <= 10 % de la hauteur, place réservée sous la mèche basse pour le libellé
+  const H = 150, TOP = 22, cs = [['14', '14h'], ['15', '15-17h'], ['22', '22h'], ['02', '02h']].map(([k, l]) => ({ l, c: day.c[k], ok: candleSlotClosed(day.d, k) })), BOT = 8;
   const vals = cs.filter((x) => x.c);
   if (!vals.length) return '';
   let hi = Math.max(...vals.map((x) => x.c[1])), lo = Math.min(...vals.map((x) => x.c[2]));
@@ -2914,25 +2913,16 @@ function candleMiniSvg(day, W) { // 4 bougies d'origine : 14h, 15-17h, 22h, 02h 
     const [o, h, l, c] = x.c, col = c >= o ? CANDLE_UP : CANDLE_DN, cx = 4 + step * (i + 0.5), top = y(Math.max(o, c)), ht = Math.max(1, Math.abs(y(o) - y(c)));
     return `<text x="${cx.toFixed(1)}" y="${Math.max(14, y(h) - 6).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:${col}">${x.l}</text>` +
       `<line x1="${cx.toFixed(1)}" x2="${cx.toFixed(1)}" y1="${y(h).toFixed(1)}" y2="${y(l).toFixed(1)}" stroke="${col}" stroke-width="0.9"/>` +
-      `<rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}" stroke-width="0.9"/>` +
-      (isDoji(x) ? `<text x="${cx.toFixed(1)}" y="${(y(l) + 12).toFixed(1)}" text-anchor="middle" class="pc-lbl" style="fill:#d1d4dc;font-size:10px">Doji</text>` : '');
+      `<rect x="${(cx - bw / 2).toFixed(1)}" y="${top.toFixed(1)}" width="${bw.toFixed(1)}" height="${ht.toFixed(1)}" fill="${c >= o ? '#0b0b0b' : col}" stroke="${col}" stroke-width="0.9"/>`;
   }).join('') + '</svg>';
-}
-// Vue 4 candles : rang du doji le plus récent de la journée (14h = 0, 15-17h = 1, 22h = 2, 02h = 3 ; -1 = aucun doji). Les paires au doji le plus récent passent en tête de liste.
-function candleDojiRank(id) {
-  const days = ((candlePoh || {})[id] || []).filter((d) => Object.keys(d.c).length), day = days[days.length - 1];
-  if (!day) return -1;
-  let r = -1;
-  ['14', '15', '22', '02'].forEach((k, i) => { const c = day.c[k]; if (c && candleSlotClosed(day.d, k) && c[1] > c[2] && Math.abs(c[3] - c[0]) <= 0.1 * (c[1] - c[2])) r = i; });
-  return r;
 }
 function candleRender() {
   const list = document.getElementById('candleList');
   candleYellowLoad(); // relu au plus toutes les 2 min
   if (!candlePoh) { list.innerHTML = '<div class="charts-intro">POH candles unavailable right now.</div>'; return; }
-  const rows = CANDLE_PAIRS.filter((p) => candlePoh[p.id] && (!candleF.fibo || candleInfo(p.id).fibo) && (!candleF.sweep || candleInfo(p.id).sweep) && (!candleF.both || candleInfo(p.id).both) && (!candleF.alert || candleInfo(p.id).alert) && (!candleF.bias || candleInfo(p.id).bias) && (!candleF.doji || candleInfo(p.id).doji) && (!candleF.yellow || candleInfo(p.id).yellow))
+  const rows = CANDLE_PAIRS.filter((p) => candlePoh[p.id] && (!candleF.fibo || candleInfo(p.id).fibo) && (!candleF.sweep || candleInfo(p.id).sweep) && (!candleF.both || candleInfo(p.id).both) && (!candleF.alert || candleInfo(p.id).alert) && (!candleF.bias || candleInfo(p.id).bias) && (!candleF.yellow || candleInfo(p.id).yellow))
     .map((p) => ({ p, s: chartsCandles ? chartsScore(p.id) : { group: 2, move: 0 } }))
-    .sort((x, y) => (candleMini || candleF.doji ? candleDojiRank(y.p.id) - candleDojiRank(x.p.id) : 0) || x.s.group - y.s.group || y.s.move - x.s.move); // 4 candles : doji le plus récent d'abord (14h, puis 15-17h, 22h, 02h prennent la tête à leur clôture), puis ordre habituel
+    .sort((x, y) => x.s.group - y.s.group || y.s.move - x.s.move);
   let date = '';
   const wasMini = !!list.querySelector(':scope > .cd-mini'); // la liste affichée est encore celle des 4 bougies : sa position ne dit rien sur la paire
   const keep = candleMini || wasMini ? 0 : candleIndex(), keepId = candleMini ? null : (!wasMini && list.clientWidth ? candleCurId() : null) || candleLastId(), keepTop = candleMini ? list.scrollTop : 0, Wm = Math.max(300, Math.round(window.innerWidth));
@@ -3017,7 +3007,7 @@ function candleNamesRender() {
 function candleGoTo(id) {
   if (candleMini) { const r = [...candleSlides()].find((x) => x.dataset.id === id); if (r) r.scrollIntoView({ block: 'start', behavior: 'smooth' }); return; }
   let i = [...candleSlides()].findIndex((r) => r.dataset.id === id);
-  if (i < 0) { candleF.fibo = false; candleF.sweep = false; candleF.both = false; candleF.alert = false; candleF.bias = false; candleF.doji = false; candleF.yellow = false; candleSelected = null; candleRender(); i = [...candleSlides()].findIndex((r) => r.dataset.id === id); } // la paire est masquée par un filtre : on l'enlève
+  if (i < 0) { candleF.fibo = false; candleF.sweep = false; candleF.both = false; candleF.alert = false; candleF.bias = false; candleF.yellow = false; candleSelected = null; candleRender(); i = [...candleSlides()].findIndex((r) => r.dataset.id === id); } // la paire est masquée par un filtre : on l'enlève
   const l = document.getElementById('candleList');
   if (i >= 0) l.scrollTo({ left: i * l.clientWidth, behavior: 'smooth' });
 }
@@ -3053,8 +3043,8 @@ document.getElementById('candleStrip')?.addEventListener('click', (e) => {
   candleAlFocusKey = '';
   const was = candleF[b.dataset.f];
   candleF[b.dataset.f] = !was;
-  if (b.dataset.f === 'yellow') { candleF.fibo = candleF.sweep = candleF.both = candleF.alert = candleF.bias = candleF.doji = false; } else candleF.yellow = false; // « Yellow » est seul
-  if (b.dataset.f === 'yellow') { /* déjà traité */ } else if (b.dataset.f === 'doji') { candleF.fibo = candleF.sweep = candleF.both = candleF.alert = candleF.bias = false; } else if (b.dataset.f === 'bias') { candleF.doji = false; candleF.fibo = candleF.sweep = candleF.both = candleF.alert = false; if (candleF.bias) candlePoh && CANDLE_PAIRS.forEach((p) => { if (candlePoh[p.id]) candleBias(p.id, true); }); } else if (b.dataset.f === 'alert') { candleF.fibo = candleF.sweep = candleF.both = candleF.bias = candleF.doji = false; } else { candleF.alert = false; candleF.bias = false; candleF.doji = false; if (b.dataset.f === 'both') { candleF.fibo = false; candleF.sweep = false; } else candleF.both = false; } // « Alerts » est seul ; Fibo / Sweep / F+S l'annulent (et inversement) // « F+S » remplace Fibo+Sweep ; Fibo ou Sweep seul annule « F+S »
+  if (b.dataset.f === 'yellow') { candleF.fibo = candleF.sweep = candleF.both = candleF.alert = candleF.bias = false; } else candleF.yellow = false; // « Yellow » est seul
+  if (b.dataset.f === 'yellow') { /* déjà traité */ } else if (b.dataset.f === 'bias') { candleF.fibo = candleF.sweep = candleF.both = candleF.alert = false; if (candleF.bias) candlePoh && CANDLE_PAIRS.forEach((p) => { if (candlePoh[p.id]) candleBias(p.id, true); }); } else if (b.dataset.f === 'alert') { candleF.fibo = candleF.sweep = candleF.both = candleF.bias = false; } else { candleF.alert = false; candleF.bias = false; if (b.dataset.f === 'both') { candleF.fibo = false; candleF.sweep = false; } else candleF.both = false; } // « Alerts » est seul ; Fibo / Sweep / F+S l'annulent (et inversement) // « F+S » remplace Fibo+Sweep ; Fibo ou Sweep seul annule « F+S »
   candleSelected = null;
   if (candlePoh) candleRender();
   document.getElementById('candleList').scrollLeft = 0;
@@ -3375,13 +3365,7 @@ async function candleLoad() {
 // Actualisation automatique (toutes les 20 s tant que CANDLE est ouvert) : met à jour bougies, sweep et compteurs EN PLACE,
 // sans toucher au carrousel, au zoom, au graphique TradingView ouvert ni à un geste en cours
 let candleAutoBusy = false;
-let candleMiniRankSig = '';
 function candleRefreshInPlace() {
-  if (candleMini && candlePoh) { // 4 candles : un doji vient d'apparaître / de changer de rang (clôture 14h, 15-17h, 22h, 02h) → la liste se réordonne toute seule
-    const sig = CANDLE_PAIRS.filter((p) => candlePoh[p.id]).map((p) => p.id + ':' + candleDojiRank(p.id)).join();
-    if (candleMiniRankSig && sig !== candleMiniRankSig && !(cg.pts && cg.pts.size)) { candleMiniRankSig = sig; candleRender(); return; }
-    candleMiniRankSig = sig;
-  }
   document.querySelectorAll('#candleList > .cd-row').forEach((r) => {
     const id = r.dataset.id;
     if (cg.pts.size && cg.id === id) return; // geste en cours sur ce graphique
@@ -3422,29 +3406,23 @@ document.getElementById('candleToggle')?.addEventListener('click', (e) => {
 });
 
 // Clic sur une notification : ouvre CANDLE sur la paire concernée (?pair=EURUSD au démarrage, ou message du service worker si l'appli est déjà ouverte)
-function candleOpenPair(id, tries = 0, doji = false, yellow = false) {
+function candleOpenPair(id, tries = 0, yellow = false) {
   id = String(id || '').toUpperCase();
   if (id && !/^[A-Z0-9]{3,12}$/.test(id)) return;
   if (focusMode) { focusMode = false; setFocusPanelsOpen(false); renderFocusViews(); } // le mode Focus masque la section CANDLE
   const tg = document.getElementById('candleToggle');
   if (tg && tg.getAttribute('aria-expanded') !== 'true') tg.click();
-  if (!candlePoh || !candleSlides().length) { if (tries < 60) setTimeout(() => candleOpenPair(id, tries + 1, doji, yellow), 500); return; } // données pas encore chargées
+  if (!candlePoh || !candleSlides().length) { if (tries < 60) setTimeout(() => candleOpenPair(id, tries + 1, yellow), 500); return; } // données pas encore chargées
   if (rp.on) candleRpExit();
   if (yellow) { // notification de plusieurs bougies jaunes : filtre « Yellow » actif, dès que sweeps.json est lu
     candleYellowAt = 0;
-    candleYellowLoad().then(() => { candleF.fibo = candleF.sweep = candleF.both = candleF.alert = candleF.bias = candleF.doji = false; candleF.yellow = true; candleSelected = null; candleRender(); document.getElementById('candleList').scrollLeft = 0; candleNavUpdate(); });
-    return;
-  }
-  if (doji) { // notification Doji : filtre « Doji » actif (comme les autres filtres), premier doji (le plus récent) affiché
-    candleF.fibo = candleF.sweep = candleF.both = candleF.alert = candleF.bias = candleF.yellow = false; candleF.doji = true; candleSelected = null;
-    candleRender(); const l = document.getElementById('candleList'); l.scrollLeft = 0; candleNavUpdate();
-    if (id) candleGoTo(id);
+    candleYellowLoad().then(() => { candleF.fibo = candleF.sweep = candleF.both = candleF.alert = candleF.bias = false; candleF.yellow = true; candleSelected = null; candleRender(); document.getElementById('candleList').scrollLeft = 0; candleNavUpdate(); });
     return;
   }
   candleGoTo(id);
 }
-if (navigator.serviceWorker) navigator.serviceWorker.addEventListener('message', (e) => { if (e.data && e.data.type === 'open-pair') candleOpenPair(e.data.pair, 0, !!e.data.doji, !!e.data.yellow); });
-try { const sp = new URLSearchParams(location.search), q = sp.get('pair') || '', dj = sp.get('doji') === '1', yl = sp.get('yellow') === '1'; if (q || dj || yl) { history.replaceState(null, '', location.pathname); setTimeout(() => candleOpenPair(q, 0, dj, yl), 0); } } catch (e) {}
+if (navigator.serviceWorker) navigator.serviceWorker.addEventListener('message', (e) => { if (e.data && e.data.type === 'open-pair') candleOpenPair(e.data.pair, 0, !!e.data.yellow); });
+try { const sp = new URLSearchParams(location.search), q = sp.get('pair') || '', yl = sp.get('yellow') === '1'; if (q || yl) { history.replaceState(null, '', location.pathname); setTimeout(() => candleOpenPair(q, 0, yl), 0); } } catch (e) {}
 
 document.getElementById('candleViewReset')?.addEventListener('click', () => {
   const id = candleCurId();
@@ -3544,7 +3522,7 @@ async function alerteFocus(id, t, keep, px) { // keep = on garde le filtre « Al
     try { localStorage.setItem('candleHistTf', '1'); } catch (e) { /* pas de stockage */ }
     if (window.candleHistSync) window.candleHistSync();
     for (let k = 0; k < 40 && !(candlePoh && candleDays[id]); k++) await wait(250); // attente du chargement des POH
-    if (!keep) { candleF.fibo = candleF.sweep = candleF.both = candleF.alert = candleF.bias = candleF.doji = candleF.yellow = false; candleSelected = null; }
+    if (!keep) { candleF.fibo = candleF.sweep = candleF.both = candleF.alert = candleF.bias = candleF.yellow = false; candleSelected = null; }
     candleFocusMark = t ? { id, t } : null;
     if (!keep || !was1) {
       candleRender();
@@ -3595,7 +3573,7 @@ document.getElementById('alerteToggle')?.addEventListener('click', (e) => {
   document.getElementById('alerteBody').classList.toggle('collapsed', expanded);
 });
 
-// Notifications téléphone éteint : abonnement Web Push, envoyé au serveur qui surveille les alertes de prix et les doji
+// Notifications téléphone éteint : abonnement Web Push, envoyé au serveur qui envoie les notifications des bougies jaunes
 const ALERTE_API = 'https://ariinui-api.vercel.app/api';
 function alerteKey(b64) {
   const p = '='.repeat((4 - (b64.length % 4)) % 4), raw = atob((b64 + p).replace(/-/g, '+').replace(/_/g, '/'));
@@ -3639,7 +3617,7 @@ document.getElementById('alerteNotif')?.addEventListener('click', async () => { 
   alerteNotifState();
 });
 alerteNotifState();
-// Interrupteur « Doji alerts » : réglages serveur (settings.json) — actifs par défaut ; mis à jour tout de suite, annulés si le serveur refuse
+// Interrupteurs « Yellow » : réglages serveur (settings.json) — actifs par défaut ; mis à jour tout de suite, annulés si le serveur refuse
 function alerteSwitch(id, key, label) {
   const btn = document.getElementById(id);
   if (!btn) return;
@@ -3663,7 +3641,6 @@ function alerteSwitch(id, key, label) {
   });
   load();
 }
-alerteSwitch('alerteDoji', 'doji', 'Doji alerts');
 alerteSwitch('alerteY60', 'y60', 'Yellow 1h');
 alerteSwitch('alerteY240', 'y240', 'Yellow 4h');
 alerteSwitch('alerteYD', 'yD', 'Yellow daily');
