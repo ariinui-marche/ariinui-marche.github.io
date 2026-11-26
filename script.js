@@ -3374,14 +3374,19 @@ document.getElementById('candleToggle')?.addEventListener('click', (e) => {
 });
 
 // Clic sur une notification : ouvre CANDLE sur la paire concernée (?pair=EURUSD au démarrage, ou message du service worker si l'appli est déjà ouverte)
-function candleOpenPair(id, tries = 0, doji = false) {
+function candleOpenPair(id, tries = 0, doji = false, yellow = false) {
   id = String(id || '').toUpperCase();
   if (id && !/^[A-Z0-9]{3,12}$/.test(id)) return;
   if (focusMode) { focusMode = false; setFocusPanelsOpen(false); renderFocusViews(); } // le mode Focus masque la section CANDLE
   const tg = document.getElementById('candleToggle');
   if (tg && tg.getAttribute('aria-expanded') !== 'true') tg.click();
-  if (!candlePoh || !candleSlides().length) { if (tries < 60) setTimeout(() => candleOpenPair(id, tries + 1, doji), 500); return; } // données pas encore chargées
+  if (!candlePoh || !candleSlides().length) { if (tries < 60) setTimeout(() => candleOpenPair(id, tries + 1, doji, yellow), 500); return; } // données pas encore chargées
   if (rp.on) candleRpExit();
+  if (yellow) { // notification de plusieurs bougies jaunes : filtre « Yellow » actif, dès que sweeps.json est lu
+    candleYellowAt = 0;
+    candleYellowLoad().then(() => { candleF.fibo = candleF.sweep = candleF.both = candleF.alert = candleF.bias = candleF.doji = false; candleF.yellow = true; candleSelected = null; candleRender(); document.getElementById('candleList').scrollLeft = 0; candleNavUpdate(); });
+    return;
+  }
   if (doji) { // notification Doji : filtre « Doji » actif (comme les autres filtres), premier doji (le plus récent) affiché
     candleF.fibo = candleF.sweep = candleF.both = candleF.alert = candleF.bias = candleF.yellow = false; candleF.doji = true; candleSelected = null;
     candleRender(); const l = document.getElementById('candleList'); l.scrollLeft = 0; candleNavUpdate();
@@ -3390,8 +3395,8 @@ function candleOpenPair(id, tries = 0, doji = false) {
   }
   candleGoTo(id);
 }
-if (navigator.serviceWorker) navigator.serviceWorker.addEventListener('message', (e) => { if (e.data && e.data.type === 'open-pair') candleOpenPair(e.data.pair, 0, !!e.data.doji); });
-try { const sp = new URLSearchParams(location.search), q = sp.get('pair') || '', dj = sp.get('doji') === '1'; if (q || dj) { history.replaceState(null, '', location.pathname); setTimeout(() => candleOpenPair(q, 0, dj), 0); } } catch (e) {}
+if (navigator.serviceWorker) navigator.serviceWorker.addEventListener('message', (e) => { if (e.data && e.data.type === 'open-pair') candleOpenPair(e.data.pair, 0, !!e.data.doji, !!e.data.yellow); });
+try { const sp = new URLSearchParams(location.search), q = sp.get('pair') || '', dj = sp.get('doji') === '1', yl = sp.get('yellow') === '1'; if (q || dj || yl) { history.replaceState(null, '', location.pathname); setTimeout(() => candleOpenPair(q, 0, dj, yl), 0); } } catch (e) {}
 
 document.getElementById('candleViewReset')?.addEventListener('click', () => {
   const id = candleCurId();
@@ -3611,6 +3616,9 @@ function alerteSwitch(id, key, label) {
   load();
 }
 alerteSwitch('alerteDoji', 'doji', 'Doji alerts');
+alerteSwitch('alerteY60', 'y60', 'Yellow 1h');
+alerteSwitch('alerteY240', 'y240', 'Yellow 4h');
+alerteSwitch('alerteYD', 'yD', 'Yellow daily');
 
 // Flèches ‹ › : POH seuls (—) / historique 1 min (1m) / historique 5 min (5m), sans molette
 (function candleHistCtl() {
