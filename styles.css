@@ -1229,6 +1229,7 @@ body.cc-lock { overflow: hidden; }
 .cc-chip { flex: 1 1 0; text-align: center; background: #14161a; color: #cfd2d6; border: 1px solid #2a2d33; border-radius: 8px; padding: 0 12px; height: 30px; font-size: 13px; cursor: pointer; white-space: nowrap; }
 .cd-sweep { float: right; font-size: 13px; font-weight: 700; letter-spacing: .5px; padding-top: 3px; margin-left: 8px; }
 .cd-sweep-hi { color: #ef5350; }
+.cd-yel { float: right; font-size: 12px; font-weight: 700; color: #000; background: #ffe500; border-radius: 5px; padding: 1px 5px; margin-left: 6px; }
 .cd-sweep-lo { color: #4aa3ff; }
 .cc-chip.on { background: #f5b642; color: #000; border-color: #f5b642; font-weight: 700; }
 .cc-nav span { font-size: 13px; color: #9aa0a6; min-width: 56px; text-align: center; }

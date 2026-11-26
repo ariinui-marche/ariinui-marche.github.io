@@ -25,6 +25,8 @@ jobs:
         with:
           node-version: 20
       - run: npm install --no-save --no-package-lock ws
+      - run: OUT=out node scripts/build-sweeps.mjs   # bougies jaunes (sweeps 1h / 4h / daily) : out/sweeps.json
+        continue-on-error: true
       - run: OUT=out node scripts/fetch-static-candles.mjs ALL 60
       - run: OUT=out node scripts/fetch-static-candles.mjs ALL 240
       - name: Publier sur candle-data (commit unique écrasé, le dépôt ne grossit pas)
