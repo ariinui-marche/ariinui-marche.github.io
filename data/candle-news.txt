@@ -1,6 +1,3 @@
-1791900000	USD	Existing Home Sales	3.99M	3.95M	3.93M
-1791907200	GBP	MPC Member Dhingra Speaks			
-1791910800	USD	FOMC Member Barkin Speaks			
 1791921600	USD	FOMC Member Collins Speaks			
 1791943800	EUR	ECB President Lagarde Speaks			
 1791948600	GBP	MPC Member Breeden Speaks			
@@ -230,27 +227,27 @@
 1795613400	USD	Durable Goods Orders MoM	0.2%	0.6%	1.8%
 1795783200	EUR	German Buba President Nagel Speaks			
 1796038200	CAD	GDP m/m			
-1796045400	CAD	GDP Growth Rate Annualized			3.3%
+1796045400	CAD	GDP Growth Rate Annualized		1.5%	3.3%
 1796045400	CAD	GDP Growth Rate QoQ			0.8%
-1796119200	EUR	Inflation Rate YoY Flash		4%	4%
-1796137200	USD	ISM Manufacturing PMI		55.2	55.5
-1796137200	USD	JOLTs Job Openings			7.523M
+1796119200	EUR	Inflation Rate YoY Flash		3.9%	4%
+1796137200	USD	ISM Manufacturing PMI		55	55.5
+1796137200	USD	JOLTs Job Openings		7.5M	7.523M
 1796164200	AUD	GDP q/q			
 1796171400	AUD	GDP Growth Rate QoQ		0.5%	0.4%
 1796187600	JPY	Consumer Confidence			35
 1796257800	AUD	Balance of Trade		A$1.561B	A$2.826B
-1796310000	USD	ISM Services PMI		54.5	54.5
+1796310000	USD	ISM Services PMI		54.6	54.5
 1796383800	CAD	Employment Change			
 1796383800	CAD	Unemployment Rate			
 1796383800	USD	Average Hourly Earnings m/m			
 1796383800	USD	Non-Farm Employment Change			
 1796383800	USD	Unemployment Rate			
-1796391000	CAD	Unemployment Rate			6.7%
+1796391000	CAD	Unemployment Rate		6.6%	6.7%
 1796391000	USD	Non Farm Payrolls		90K	165K
 1796391000	USD	Unemployment Rate		4.1%	4.1%
 1796396400	CAD	Ivey PMI			56.4
 1796396400	CAD	Ivey PMI s.a			58.3
-1796396400	USD	Michigan Consumer Sentiment Prel		51.8	51
+1796396400	USD	Michigan Consumer Sentiment Prel		52.5	51
 1796689800	AUD	NAB Business Confidence			-15
 1796700600	AUD	RBA Interest Rate Decision		4.85%	4.85%
 1796770800	NZD	Official Cash Rate			

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-27T10:09:56.316Z",
+  "timestamp": "2026-11-27T19:26:47.665Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -15016,11 +15016,11 @@
     {
       "title": "Italian 10-y Bond Auction",
       "country": "EUR",
-      "date": "2026-11-27T05:33:00-05:00",
+      "date": "2026-11-27T05:05:00-05:00",
       "impact": "Low",
       "forecast": "",
       "previous": "4.49|1.6",
-      "actual": ""
+      "actual": "4.33|1.5"
     },
     {
       "title": "German Buba President Nagel Speaks",
@@ -15038,7 +15038,7 @@
       "impact": "Low",
       "forecast": "9.5B",
       "previous": "8.8B",
-      "actual": ""
+      "actual": "4.5B"
     },
     {
       "title": "Goods Trade Balance",
@@ -15047,7 +15047,7 @@
       "impact": "Low",
       "forecast": "-135.9B",
       "previous": "-134.9B",
-      "actual": ""
+      "actual": "-149.5B"
     },
     {
       "title": "Prelim Wholesale Inventories m/m",
@@ -15056,7 +15056,7 @@
       "impact": "Low",
       "forecast": "0.5%",
       "previous": "0.6%",
-      "actual": ""
+      "actual": "0.9%"
     },
     {
       "title": "GDP m/m",
