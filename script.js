@@ -2326,6 +2326,25 @@ function candleFibLevels(dly) {
   const r = d1[2] - d1[3];
   return [[0.382, '38'], [0.5, '50'], [0.618, '61']].map(([p, t]) => ({ t, v: bu1 ? d1[3] + p * r : d1[2] - p * r }));
 }
+// PWH/PWL et PMH/PML : plus haut / plus bas de la semaine (lundi-dimanche) et du mois précédant celui de D0 (journées de trading UTC+2), depuis les bougies 1D [t, o, h, l, c]
+function candlePeriodLevels(bars, d0t) {
+  if (!bars || !bars.length || !d0t) return [];
+  const date = (t) => new Date((t + 7200) * 1000), week = (t) => Math.floor((Math.floor((t + 7200) / 86400) + 3) / 7), month = (t) => date(t).getUTCFullYear() * 12 + date(t).getUTCMonth();
+  const out = [];
+  for (const [key, th, tl, c] of [[week, 'PWH', 'PWL', '#22c55e'], [month, 'PMH', 'PML', '#3b82f6']]) {
+    const cur = key(d0t);
+    let k = null, hi = -Infinity, lo = Infinity;
+    for (let i = bars.length - 1; i >= 0; i--) {
+      const b = bars[i], kb = key(b[0]);
+      if (kb >= cur) continue;
+      if (k === null) k = kb; else if (kb !== k) break;
+      if (b[2] > hi) hi = b[2];
+      if (b[3] < lo) lo = b[3];
+    }
+    if (k !== null) out.push([hi, th, c], [lo, tl, c]);
+  }
+  return out;
+}
 const CANDLE_UP = '#00a3e0', CANDLE_DN = '#ffffff'; // couleurs des bougies comme TradingView (haussière bleue, baissière blanche)
 const CANDLE_G = { AX: 60, TOP: 44, BOT: 14, LEFT: 4 }; // géométrie du graphique (aussi utilisée par les gestes)
 if (candleClean) CANDLE_G.AX = 0;
@@ -2387,6 +2406,7 @@ function candleDayStart(day) { return day && day.d ? Date.parse(day.d + 'T00:00:
 function candleDayEnsure(id) { // charge les 1h (fichier horaire) et les 5 min récentes de la paire
   if (!id) return;
   candleHistEnsure(id, '60');
+  candleHistEnsure(id, '1D'); // PWH/PWL et PMH/PML (au plus toutes les 5 min)
   const m = candleDay5[id] || (candleDay5[id] = { bars: [], at: 0, busy: false });
   if (m.busy || Date.now() - m.at < 120000) return;
   m.busy = true;
@@ -2697,6 +2717,14 @@ function candleSvg(day, dly, view, id) {
       if (v < lo || v > hi) continue;
       axT.push({ y: y(v), t, c: '#F5B700' });
       pd += `<line x1="${xs.toFixed(1)}" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="#F5B700" stroke-opacity="0.85" stroke-width="0.7" stroke-dasharray="1 3"/>`;
+    }
+  }
+  if (pdD1 && !RP) { // PWH/PWL (vert) et PMH/PML (bleu) : même style et même départ que PDH/PDL, seulement s'ils sont dans l'échelle
+    const xs = LEFT + xOff + step * (pdD0 ? pdD0.pos - 1 : pdD1.pos + 1), h1d = id ? candleHistData[id + '|1D'] : null, d0b = (dly || [])[(dly || []).length - 1];
+    for (const [v, t, c] of candlePeriodLevels(h1d && h1d.bars, d0b && d0b[0])) {
+      if (v < lo || v > hi) continue;
+      axT.push({ y: y(v), t, c });
+      pd += `<line x1="${xs.toFixed(1)}" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="${c}" stroke-opacity="0.85" stroke-width="0.7" stroke-dasharray="1 3"/>`;
     }
   }
   { // étiquettes de lignes : jamais l'une sur l'autre ni sur l'étiquette du dernier prix (obstacle fixe), restent dans la zone du graphique
