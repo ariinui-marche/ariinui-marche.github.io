@@ -2309,22 +2309,26 @@ function candleScale(dly, day, hist, withFib) {
   if (!base.length && !(hist && hist.length)) return null; // replay : ni POH ni daily, seulement les barres visibles
   let hi = base.length ? Math.max(...base.map((c) => c[1])) : -Infinity, lo = base.length ? Math.min(...base.map((c) => c[2])) : Infinity;
   if (hist && hist.length) for (const b of hist.slice(-(CANDLE_HIST_N[candleHistTf] || 50))) { hi = Math.max(hi, b[2]); lo = Math.min(lo, b[3]); }
-  if (withFib) { const fz = candleFibLevels(dly); if (fz) for (const f of fz) { hi = Math.max(hi, f.v); lo = Math.min(lo, f.v); } } // D2 et D1 même sens : les Fibo de D1 sont toujours dans l'échelle, donc tracés automatiquement toute la journée
+  if (withFib) { const fz = candleFibLevels(dly); if (fz) for (const f of fz) { hi = Math.max(hi, f.v); lo = Math.min(lo, f.v); } } // les Fibo de D1 sont toujours dans l'échelle, donc tracés pour tous les symboles toute la journée
   const d0 = dd.length ? dd[dd.length - 1] : null;
   const minSpan = d0 ? (d0[2] - d0[3]) * 0.35 : 0; // évite un zoom extrême quand il n'y a encore qu'une ou deux bougies POH
   if (hi - lo < minSpan) { const mid = (hi + lo) / 2; hi = mid + minSpan / 2; lo = mid - minSpan / 2; }
   const m = (hi - lo || hi * 0.001) * 0.08;
   return { hi: hi + m, lo: lo - m };
 }
-// Fibonacci 38/50/61 sur D1 si D2 et D1 vont dans le même sens (mesuré depuis le plus bas si haussières, depuis le plus haut si baissières)
+// Fibonacci 38/50/61 sur D1, pour tous les symboles : mesuré dans le sens de D1 (depuis le plus bas si D1 haussière ou doji, depuis le plus haut si baissière)
 function candleFibLevels(dly) {
   const a = (dly || []).slice(-4);
-  if (a.length < 3) return null;
-  const d1 = a[a.length - 2], d2 = a[a.length - 3]; // [t, o, h, l, c]
-  const bu1 = d1[4] > d1[1], be1 = d1[4] < d1[1], bu2 = d2[4] > d2[1], be2 = d2[4] < d2[1];
-  if (!((bu1 && bu2) || (be1 && be2))) return null;
-  const r = d1[2] - d1[3];
-  return [[0.382, '38'], [0.5, '50'], [0.618, '61']].map(([p, t]) => ({ t, v: bu1 ? d1[3] + p * r : d1[2] - p * r }));
+  if (a.length < 2) return null;
+  const d1 = a[a.length - 2], up = d1[4] >= d1[1], r = d1[2] - d1[3]; // [t, o, h, l, c]
+  return [[0.382, '38'], [0.5, '50'], [0.618, '61']].map(([p, t]) => ({ t, v: up ? d1[3] + p * r : d1[2] - p * r }));
+}
+// Filtre « F+S » : D2 et D1 dans le même sens (règle inchangée)
+function candleFibSame(dly) {
+  const a = (dly || []).slice(-4);
+  if (a.length < 3) return false;
+  const d1 = a[a.length - 2], d2 = a[a.length - 3];
+  return (d1[4] > d1[1] && d2[4] > d2[1]) || (d1[4] < d1[1] && d2[4] < d2[1]);
 }
 // PWH/PWL et PMH/PML : plus haut / plus bas de la semaine (lundi-dimanche) et du mois précédant celui de D0 (journées de trading UTC+2), depuis les bougies 1D [t, o, h, l, c]
 function candlePeriodLevels(bars, d0t) {
@@ -2763,8 +2767,7 @@ function candleInfo(id) {
   const dly = (candleDaily || {})[id], a = (dly || []).slice(-4);
   const days = ((candlePoh || {})[id] || []).filter((d) => Object.keys(d.c).length), day = days[days.length - 1];
   // Fibo = détection de début de journée : D2 et D1 de même couleur (même sens). Plus de condition sur la zone de prix des POH du jour (le prix peut avoir déjà quitté les niveaux).
-  const fl = candleFibLevels(dly);
-  const fibo = !!fl;
+  const fibo = candleFibSame(dly);
   const sweep = !!(day && candleSweep(dly, day));
   const bi = candleBias(id, false);
   return { fibo, sweep, both: fibo && sweep, alert: candleHasAlert(id), bias: bi.d !== 0 && bi.d === bi.h && bi.h === bi.u, yellow: candleYellowOf(id).length > 0 };
