@@ -1359,7 +1359,7 @@ body.cc-lock { overflow: hidden; }
 .cd-mhead .cd-sweep:first-of-type { margin-left: auto; }
 .cd-mchart { display: block; width: 100%; padding-bottom: 8px; }
 .cd-mchart svg { display: block; width: 100%; height: 150px; }
-.cc-setmenu { position: absolute; right: 8px; bottom: calc(54px + env(safe-area-inset-bottom)); z-index: 30; min-width: 230px; background: #1c1c1e; border: 1px solid #2a2a2e; border-radius: 12px; padding: 6px; box-shadow: 0 8px 24px rgba(0, 0, 0, .6); }
+.cc-setmenu { position: absolute; right: 8px; bottom: calc(54px + env(safe-area-inset-bottom)); z-index: 30; min-width: 230px; background: #1c1c1e; border: 1px solid #2a2a2e; border-radius: 12px; padding: 6px; box-shadow: 0 8px 24px rgba(0, 0, 0, .6); max-height: calc(100% - 70px); overflow-y: auto; }
 .cc-top { justify-content: flex-end; }
 .cc-setmenu .cc-strip { display: flex; flex-direction: column; flex: none; gap: 6px; overflow: visible; padding: 8px 0 4px; margin-top: 6px; background: none; border: 0; border-top: 1px solid #2a2a2e; }
 .cc-setmenu .cc-grp { flex: none; display: flex; width: 100%; }
@@ -1396,3 +1396,11 @@ body.cc-lock { overflow: hidden; }
 #candleBody:not(.collapsed) .cd-head .cd-name { pointer-events: auto; cursor: pointer; }
 #candleBody.rp-mode .cc-top, #candleBody.rp-mode .cc-bottom { display: none; }
 #candleBody.rp-mode .cd-head .cd-name::after { content: ""; display: inline-block; width: 24px; height: 24px; margin-left: 8px; vertical-align: middle; border-radius: 50%; background: #2962ff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11 7 5.5 12l5.5 5zM18 7l-5.5 5 5.5 5z' fill='%23fff'/%3E%3C/svg%3E") center / 16px no-repeat; }
+
+/* Nombre de bougies par jeu (roue) */
+.cc-counts { flex: none; padding: 6px 12px 8px; border-top: 1px solid #2a2a2e; border-bottom: 1px solid #2a2a2e; margin: 4px 0; }
+.cc-counts-t { color: #787b86; font-size: 12px; margin-bottom: 4px; }
+.cc-count-row { display: flex; align-items: center; gap: 8px; padding: 2px 0; color: #e5e5e5; font-size: 14px; }
+.cc-count-row span { flex: 1; }
+.cc-count-row b { min-width: 24px; text-align: center; }
+.cc-setmenu .cc-count-row button { flex: 0 0 36px; width: 36px; height: 30px; padding: 0; align-items: center; justify-content: center; background: #14161a; border: 1px solid #2a2d33; font-size: 18px; }
