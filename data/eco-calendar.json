@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-27T01:48:36.704Z",
+  "timestamp": "2026-11-27T10:09:56.316Z",
   "events": [
     {
       "title": "Bank Holiday",
@@ -14966,7 +14966,7 @@
       "impact": "Low",
       "forecast": "0.1%",
       "previous": "-0.5%",
-      "actual": ""
+      "actual": "0.0%"
     },
     {
       "title": "French Final Private Payrolls q/q",
@@ -14975,7 +14975,7 @@
       "impact": "Low",
       "forecast": "-0.1%",
       "previous": "-0.1%",
-      "actual": ""
+      "actual": "-0.1%"
     },
     {
       "title": "French Prelim CPI m/m",
@@ -14984,7 +14984,7 @@
       "impact": "Low",
       "forecast": "-0.2%",
       "previous": "0.4%",
-      "actual": ""
+      "actual": "-0.7%"
     },
     {
       "title": "French Prelim GDP q/q",
@@ -14993,7 +14993,7 @@
       "impact": "Low",
       "forecast": "-0.1%",
       "previous": "-0.1%",
-      "actual": ""
+      "actual": "-0.2%"
     },
     {
       "title": "Spanish Flash CPI y/y",
@@ -15002,7 +15002,7 @@
       "impact": "Low",
       "forecast": "4.7%",
       "previous": "4.9%",
-      "actual": ""
+      "actual": "4.1%"
     },
     {
       "title": "German Unemployment Change",
@@ -15011,7 +15011,7 @@
       "impact": "Low",
       "forecast": "5K",
       "previous": "4K",
-      "actual": ""
+      "actual": "9K"
     },
     {
       "title": "Italian 10-y Bond Auction",
