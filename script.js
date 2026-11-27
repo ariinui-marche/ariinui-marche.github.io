@@ -1987,8 +1987,7 @@ function candleSlotClosed(dayStr, k) { // tranche POH terminée (jamais pendant 
 let candleDaily = null; // { PAIR: [[t,o,h,l,c], ...4 derniers jours D3..D0] }
 // Historique 1 min / 5 min à gauche des POH (flèches ‹ › dans l'en-tête) : '0' = POH seuls (vue habituelle), '1' / '5' = bougies 1 min / 5 min
 let candleHistTf = '0';
-let candleMini = false; // roue > « 4 candles » : liste défilante de tous les symboles avec leurs 4 bougies (14h, 15-17h, 22h, 02h), comme à l'origine (enregistré)
-try { candleMini = localStorage.getItem('candleMini') === '1'; } catch (e) { /* pas de stockage */ }
+let candleMini = false; // vue « 4 candles » retirée des réglages : toujours désactivée (même si elle était enregistrée sur l'appareil)
 let candleClean = false; // clic sur le nom du symbole : échelle de prix + rangée Fibo / Sweep / F+S masquées, jusqu'au prochain clic (enregistré)
 try { candleClean = localStorage.getItem('candleClean') === '1'; } catch (e) { /* pas de stockage */ }
 try { candleHistTf = localStorage.getItem('candleHistTf') || '0'; } catch (e) { /* pas de stockage */ }
@@ -2083,8 +2082,8 @@ function candleSniperZones(bars, tfSec, now) {
   return { ifvgs, bprs };
 }
 // ===== Plans Arii CDX SW sur CANDLE (graphiques 1 min / 5 min) : moteur cdx-engine.js, identique au moteur Python de référence =====
-let candlePlans = true, candleZones = true; // roue > « Plans » / « Zones » (enregistrés)
-try { candlePlans = localStorage.getItem('candlePlans') !== '0'; candleZones = localStorage.getItem('candleZones') !== '0'; } catch (e) { /* pas de stockage */ }
+let candlePlans = false, candleZones = true; // « Plans » retiré des réglages : toujours désactivé ; roue > « Zones » (enregistré)
+try { candleZones = localStorage.getItem('candleZones') !== '0'; } catch (e) { /* pas de stockage */ }
 // (candleSweepMarks et le calcul des plans / zones / sweeps sont dans cdx-plans.js, exécutés par cdx-worker.js hors du fil principal)
 const candlePlanHits = {}; // paire -> [{ x0, x1, y0, y1, p }] zones cliquables des plans (infobulle au clic)
 const candlePlanCache = {}; // 'PAIR|tf' -> { key, plans: [{ ts, te, lg, e, s, pic, vis, sid, kind }] }
