@@ -2407,7 +2407,12 @@ const CANDLE_SETS = [['30', '30m', 1800], ['60', '1h', 3600], ['240', '4h', 1440
 const CANDLE_SET_GAP = 2, CANDLE_SET_MAX = 20, CANDLE_SET_LS = 'candleSetCountV1';
 const candleSetN = { 30: 5, 60: 5, 240: 5, '1D': 5 };
 try { const j = JSON.parse(localStorage.getItem(CANDLE_SET_LS) || '{}'); for (const [k] of CANDLE_SETS) if (j[k] >= 1 && j[k] <= CANDLE_SET_MAX) candleSetN[k] = Math.round(j[k]); } catch (e) { /* pas de stockage : 5 par jeu */ }
-const candleRightUnits = () => CANDLE_SETS.reduce((a, [k]) => a + candleSetN[k], 0) + CANDLE_SET_GAP * (CANDLE_SETS.length - 1) + 2;
+// Jeux masqués (icône œil dans la roue ⚙), mémorisés sur l'appareil
+const CANDLE_SET_OFF_LS = 'candleSetHiddenV1', candleSetOff = new Set();
+try { for (const k of JSON.parse(localStorage.getItem(CANDLE_SET_OFF_LS) || '[]')) if (CANDLE_SETS.some((x) => x[0] === k)) candleSetOff.add(k); } catch (e) { /* pas de stockage : tout affiché */ }
+const candleSetsOn = () => CANDLE_SETS.filter(([k]) => !candleSetOff.has(k));
+const CANDLE_UNITS_MIN = 12; // plancher : la largeur des bougies de l'historique dépend de ce total, elle ne doit pas exploser quand on masque des jeux
+const candleRightUnits = () => { const on = candleSetsOn(); return Math.max(CANDLE_UNITS_MIN, on.reduce((a, [k]) => a + candleSetN[k], 0) + CANDLE_SET_GAP * Math.max(0, on.length - 1) + 2); };
 const candleDay5 = {}; // paire -> { bars, at, busy } : 5 min récentes, pour les bougies en formation et le jeu 30m
 function candleDayEnsure(id) { // charge les 1h, 4h, 1D et les 5 min récentes de la paire
   if (!id) return;
@@ -2471,7 +2476,7 @@ function candleTfBars(id, tf, sec, dly, rpCut) { // série [t,o,h,l,c] d'un jeu 
 }
 function candleSetsOf(id, dly, rpCut) { // [{ tf, name, items: [null | { t, c: [o,h,l,c], yl: niveau balayé ou null }] }]
   const now = Date.now() / 1000;
-  return CANDLE_SETS.map(([tf, name, sec]) => {
+  return candleSetsOn().map(([tf, name, sec]) => {
     const n = candleSetN[tf], bars = id ? candleTfBars(id, tf, sec, dly, rpCut) : [], items = [];
     for (let j = 0; j < n; j++) {
       const i = bars.length - n + j, b = i >= 0 ? bars[i] : null;
@@ -2503,7 +2508,7 @@ function candleSvg(day, dly, view, id) {
   const cs = candleSetsCandles(sets);
   const units = candleRightUnits();
   const vals = cs.filter((x) => x.c);
-  if (!vals.length && !(id && rp.on && rp.id === id)) return '';
+  if (!vals.length && sets.length && !(id && rp.on && rp.id === id)) return ''; // sets vide = tous les jeux masqués : le graphique reste (lignes, historique)
   const { W, H } = candleDims();
   const { AX, TOP, BOT, LEFT } = CANDLE_G;
   const hist = id ? candleHistBars(id) : null;
@@ -2524,7 +2529,11 @@ function candleSvg(day, dly, view, id) {
   const split = hist ? 0.5 : 0, plotW0 = W - AX - LEFT, stepB = plotW0 * (1 - split) / units;
   const step = stepB * vw.xz, xOff = vw.xp * (W - AX) + split * plotW0 * vw.xz; // zoom horizontal + décalage
   const hl = RP ? hist[hist.length - 1] : null;
-  const last = RP ? { c: [hl[1], hl[2], hl[3], hl[4]] } : [...cs].reverse().find((x) => x.c);
+  // dernier prix : indépendant des jeux affichés (5 min récentes, sinon dernière journalière)
+  const m5l = !RP && candleDay5[id] && candleDay5[id].bars.length ? candleDay5[id].bars[candleDay5[id].bars.length - 1] : null, d0l = (dly || [])[(dly || []).length - 1];
+  const live = m5l && (!d0l || m5l[0] >= d0l[0]) ? m5l : d0l;
+  const last = RP ? { c: [hl[1], hl[2], hl[3], hl[4]] } : [...cs].reverse().find((x) => x.c) || (live ? { c: live.slice(1, 5) } : null);
+  if (!last) return '';
   const lastC = last.c[3], lastCol = last.c[3] >= last.c[0] ? '#089981' : '#f23645'; // ligne du dernier prix : verte si haussière, rouge si baissière
   const body = cs.map((x, i) => {
     const cx = LEFT + xOff + step * x.pos, bw = Math.min(step * x.wd * 0.74, 120);
@@ -2549,7 +2558,7 @@ function candleSvg(day, dly, view, id) {
   const axT = []; // étiquettes des lignes : affichées DANS l'échelle de prix à droite (nom de la ligne à la place du prix), centrées sur la ligne
   let fib = '';
   const fibT = []; // étiquettes Fibo : toujours au centre exact de leur ligne (jamais décalées), taille ajustée au zoom
-  const daily = cs.filter((x) => x.tf === '1D'), x0d = daily[daily.length - 1], d1x = daily[daily.length - 2] || x0d;
+  const daily = cs.filter((x) => x.tf === '1D'), x0d = daily[daily.length - 1], d1x = daily[daily.length - 2] || x0d || { pos: 1.5 }; // jeu journalier masqué : les lignes partent du début de la partie droite
   const fl = RP ? null : candleFibLevels(dly);
   if (fl && d1x) {
     const x0 = LEFT + xOff + step * d1x.pos;
@@ -3321,13 +3330,27 @@ document.getElementById('candleSet')?.addEventListener('click', (e) => {
   m.hidden = !open;
   e.currentTarget.setAttribute('aria-expanded', String(open));
 });
+const CANDLE_EYE = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.8"/></svg>';
+const CANDLE_EYE_OFF = CANDLE_EYE.replace('</svg>', '<path d="M4 20 20 4"/></svg>');
 function candleCountsRender() {
   const box = document.getElementById('candleCounts');
-  if (box) box.innerHTML = '<div class="cc-counts-t">Candles per set</div>' + CANDLE_SETS.map(([k, name]) => `<div class="cc-count-row"><span>${name === 'D' ? 'Daily' : name}</span><button type="button" data-set="${k}" data-d="-1" aria-label="Fewer ${name} candles"${candleSetN[k] <= 1 ? ' disabled' : ''}>&minus;</button><b>${candleSetN[k]}</b><button type="button" data-set="${k}" data-d="1" aria-label="More ${name} candles"${candleSetN[k] >= CANDLE_SET_MAX ? ' disabled' : ''}>+</button></div>`).join('');
+  if (box) box.innerHTML = '<div class="cc-counts-t">Candles per set</div>' + CANDLE_SETS.map(([k, name]) => {
+    const off = candleSetOff.has(k), lbl = name === 'D' ? 'Daily' : name;
+    return `<div class="cc-count-row${off ? ' off' : ''}"><button type="button" class="cc-eye" data-eye="${k}" aria-pressed="${!off}" aria-label="${off ? 'Show' : 'Hide'} ${lbl} candles" title="${off ? 'Show' : 'Hide'}">${off ? CANDLE_EYE_OFF : CANDLE_EYE}</button><span>${lbl}</span><button type="button" data-set="${k}" data-d="-1" aria-label="Fewer ${name} candles"${off || candleSetN[k] <= 1 ? ' disabled' : ''}>&minus;</button><b>${candleSetN[k]}</b><button type="button" data-set="${k}" data-d="1" aria-label="More ${name} candles"${off || candleSetN[k] >= CANDLE_SET_MAX ? ' disabled' : ''}>+</button></div>`;
+  }).join('');
 }
 candleCountsRender();
 document.getElementById('candleCounts')?.addEventListener('click', (e) => { // le menu reste ouvert pendant le réglage
   e.stopPropagation();
+  const eye = e.target.closest('[data-eye]');
+  if (eye) {
+    const k = eye.dataset.eye;
+    if (!candleSetOff.delete(k)) candleSetOff.add(k);
+    try { localStorage.setItem(CANDLE_SET_OFF_LS, JSON.stringify([...candleSetOff])); } catch (err) { /* pas de stockage */ }
+    candleCountsRender();
+    if (candlePoh && !rp.on) candleRefreshInPlace();
+    return;
+  }
   const b = e.target.closest('[data-set]');
   if (!b || b.disabled) return;
   const k = b.dataset.set;

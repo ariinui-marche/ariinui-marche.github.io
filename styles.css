@@ -1404,3 +1404,6 @@ body.cc-lock { overflow: hidden; }
 .cc-count-row span { flex: 1; }
 .cc-count-row b { min-width: 24px; text-align: center; }
 .cc-setmenu .cc-count-row button { flex: 0 0 36px; width: 36px; height: 30px; padding: 0; align-items: center; justify-content: center; background: #14161a; border: 1px solid #2a2d33; font-size: 18px; }
+.cc-setmenu .cc-count-row button.cc-eye { border: 0; background: none; color: #00a3e0; }
+.cc-count-row.off .cc-eye { color: #787b86 !important; }
+.cc-count-row.off span, .cc-count-row.off b { color: #787b86; }
