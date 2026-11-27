@@ -2454,7 +2454,7 @@ function candleSvg(day, dly, view, id) {
   const { W, H } = candleDims();
   const { AX, TOP, BOT, LEFT } = CANDLE_G;
   const hist = id ? candleHistBars(id) : null;
-  const RP = !!(id && rp.on && rp.id === id); // replay : POH, Fibo, PDH/PDL et boîte 14H masqués (ils montreraient le futur)
+  const RP = !!(id && rp.on && rp.id === id); // replay : POH, Fibo et PDH/PDL masqués (ils montreraient le futur)
   if (RP && !hist) return '';
   const sc = candleScale(dly, Object.assign({}, day, { c: Object.assign({}, day.c, Object.fromEntries(hrs.map((b, k) => ['h' + k, b && b.c]).filter((e) => e[1]))) }), hist, !RP), vw = view || CANDLE_DEF;
   const baseRng = sc.hi - sc.lo, cenV = (sc.hi + sc.lo) / 2 + vw.yp * baseRng, rng = baseRng / vw.yz;
@@ -2699,13 +2699,6 @@ function candleSvg(day, dly, view, id) {
     }
     const dayPx = hs0 * 1440 / (tfMin || 1440), names = dayPx >= 70 ? CANDLE_DAYS : dayPx >= 34 ? CANDLE_DAYS_S : null; // noms des jours : discrets, au-dessus des pastilles, abrégés puis masqués quand on dézoome
     if (names && !is1D) for (const w of wdays) hb += `<text x="${w.x.toFixed(1)}" y="${H - BOT - 2 * R - 26}" text-anchor="middle" style="fill:#4a4a4a;font-size:11px;letter-spacing:1px;pointer-events:none">${names[w.d]}</text>`;
-    const s14 = RP || !day || !day.c ? null : day.c['14'], f = s14 && day.d === new Date(Date.now() + 7200 * 1000).toISOString().slice(0, 10) && candleSlotClosed(day.d, '14') ? { hi: s14[1], lo: s14[2], up: true, dn: true } : null; // niveaux calculés ICI depuis la bougie 14h du fichier GitHub (plus de Vercel) ; // lignes 14H : seulement la journée de trading en cours (UTC+2) ; elles disparaissent à minuit UTC+2 (12:00 UTC-10) et reviennent quand la bougie 14H de la nouvelle journée est terminée, comme Arii SNIPER
-    if (f) { // niveaux de la boîte 14H : Entry = bords, 50 % = bord ± R/2, TP = bord ± R (seulement s'ils sont dans l'échelle)
-      const R = f.hi - f.lo;
-      hb += [[f.hi + R, 'TP 14H', '#5cc8ff'], [f.hi + R / 2, 'H50% 14H', '#ff9f43', !!f.up], [f.hi, 'Entry 14H', '#5cc8ff'], [f.lo, 'Entry 14H', '#5cc8ff'], [f.lo - R / 2, 'L50% 14H', '#ff9f43', !!f.dn], [f.lo - R, 'TP 14H', '#5cc8ff']]
-        .filter(([v, , , touched]) => v >= lo && v <= hi && touched !== false)
-        .map(([v, t, c]) => { axT.push({ y: y(v), t, c }); return `<line x1="0" x2="${W - AX}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="${c}" stroke-opacity=".7" stroke-width="0.7" stroke-dasharray="1 4" stroke-linecap="round"/>`; }).join('');
-    }
   }
   const yl = Math.min(H - BOT, Math.max(TOP - 20, y(lastC))); // l'étiquette du dernier prix reste visible sur le bord
   // PDH / PDL : plus haut / plus bas de D1, comme Arii SNIPER (jaune #F5B700 opacité 0,85, pointillé 1 px, étiquette à droite), depuis le début de D0
