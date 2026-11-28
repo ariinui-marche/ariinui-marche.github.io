@@ -1,8 +1,3 @@
-1791943800	EUR	ECB President Lagarde Speaks			
-1791948600	GBP	MPC Member Breeden Speaks			
-1791955800	GBP	BOE Gov Bailey Speaks			
-1791957900	CAD	BOC Gov Macklem Speaks			
-1791966600	EUR	ECB President Lagarde Speaks			
 1791981000	USD	Core Inflation Rate MoM	0.3%	0.2%	0.3%
 1791981000	USD	Core Inflation Rate YoY	2.6%	2.5%	2.4%
 1791981000	USD	Inflation Rate MoM	0.6%	0.6%	0.4%
