@@ -1,4 +1,3 @@
-1791921600	USD	FOMC Member Collins Speaks			
 1791943800	EUR	ECB President Lagarde Speaks			
 1791948600	GBP	MPC Member Breeden Speaks			
 1791955800	GBP	BOE Gov Bailey Speaks			
