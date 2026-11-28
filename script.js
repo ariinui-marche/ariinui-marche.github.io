@@ -2401,6 +2401,50 @@ function candleBias(id, load = true) {
   candleBiasCache[id] = { sig, out };
   return out;
 }
+// ===== DTFX Algo Zones [SamuraiJack Mod] : copie fidèle du script Pine « DTFX Samurai.txt » (réglages par défaut), en D / 4h / 1h =====
+// Structure 10, toutes les zones, Fibo 0,3 / 0,5 / 0,7, remplissage, nettoyage du chevauchement, invalidation sur clôture. Calcul dans le navigateur (aucun appel serveur).
+// Comme dans le Pine, le point de structure reste affiché sur chaque bougie une fois le premier sommet / creux confirmé (variables « var » jamais vidées).
+const CANDLE_DTFX_LEN = 10, CANDLE_DTFX_TF = { 60: 1, 240: 1, '1D': 1 }, candleDtfxCache = {};
+let candleDtfx = true; // roue > « DTFX » (enregistré)
+try { candleDtfx = localStorage.getItem('candleDtfx') !== '0'; } catch (e) { /* pas de stockage */ }
+function candleDtfxCalc(bars) { // bars = [t,o,h,l,c] -> { zones (valides seulement), dots (par barre : 1 au-dessus, -1 en dessous, 0 rien) }
+  const L = CANDLE_DTFX_LEN, n = bars.length, dots = new Int8Array(n);
+  let dir = 0, tp = NaN, tb = 0, bp = NaN, bb = 0, upChk = false, dnChk = false, tDir = 0, sc = 0, live = null, prev = null, alive = [];
+  for (let i = 0; i < n; i++) {
+    const high = bars[i][2], low = bars[i][3], close = bars[i][4], tp1 = tp, bp1 = bp, c1 = i ? bars[i - 1][4] : NaN;
+    let upper = NaN, lower = NaN;
+    if (i >= L - 1) { upper = -Infinity; lower = Infinity; for (let q = i - L + 1; q <= i; q++) { if (bars[q][2] > upper) upper = bars[q][2]; if (bars[q][3] < lower) lower = bars[q][3]; } }
+    if (i >= L) {
+      if (dir >= 0 && bars[i - L][2] > upper) { dir = -1; tp = bars[i - L][2]; tb = i - L; }
+      if (dir <= 0 && bars[i - L][3] < lower) { dir = 1; bp = bars[i - L][3]; bb = i - L; }
+    }
+    if (!Number.isNaN(tp)) { upChk = true; sc = 1; }
+    if (!Number.isNaN(bp)) { dnChk = true; sc = -1; }
+    if (i >= L) dots[i - L] = sc;
+    const crossUp = close > tp && c1 <= tp1, crossDn = close < bp && c1 >= bp1;
+    const chochUp = crossUp && high === upper && tDir <= 0;
+    const chochDn = crossDn && low === lower && tDir >= 0;
+    if (chochUp) tDir = 1;
+    if (chochDn) tDir = -1;
+    const mssUp = chochUp || (crossUp && upChk && tDir >= 0);
+    const mssDn = chochDn || (crossDn && dnChk && tDir <= 0);
+    const make = (bull, left, top, bot) => { prev = live; live = { bull, left, right: i, x1: left, top, bot, dead: false }; alive.push(live); };
+    if (mssUp) { upChk = false; make(true, tb, tp, dir === -1 ? lower : dir === 1 ? bp : 0); }
+    if (mssDn) { dnChk = false; make(false, bb, dir === 1 ? upper : dir === -1 ? tp : 0, bp); }
+    if (prev) live.x1 = Math.max(live.dead ? 0 : live.left, prev.dead ? 0 : prev.right); // Clean-Up Level Overlap
+    let broke = false;
+    for (const z of alive) { // invalidation (Close) : sous le plus bas des Fibo actifs (hausse), au-dessus du plus haut (baisse)
+      const r = z.top - z.bot, a = z.bull ? z.bot + r * 0.3 : z.top - r * 0.3, b = z.bull ? z.bot + r * 0.7 : z.top - r * 0.7;
+      if (z.bull ? close < Math.min(a, b) : close > Math.max(a, b)) { z.dead = true; broke = true; }
+    }
+    if (broke) alive = alive.filter((z) => !z.dead);
+  }
+  return { zones: alive.slice(-100), dots }; // limite Pine : 500 lignes = 100 zones de 5 lignes
+}
+function candleDtfxGet(key, bars) {
+  const a = bars[0], z = bars[bars.length - 1], k = bars.length + '|' + a[0] + '|' + z[0] + '|' + z[2] + '|' + z[3] + '|' + z[4], c = candleDtfxCache[key];
+  return c && c.k === k ? c.v : (candleDtfxCache[key] = { k, v: candleDtfxCalc(bars) }).v;
+}
 // ===== Partie droite du graphique : jeux de bougies placés comme dans DTFX — 30m, 1h, 4h, journalier (de gauche à droite), les plus récentes à droite de chaque jeu, avec les bougies jaunes =====
 // Nombre de bougies réglable par jeu (roue ⚙, 1 à 20, 5 par défaut, mémorisé sur l'appareil). Données : fichiers GitHub UNIQUEMENT (aucun appel Vercel).
 const CANDLE_SETS = [['30', '30m', 1800], ['60', '1h', 3600], ['240', '4h', 14400], ['1D', 'D', 86400]];
@@ -2704,6 +2748,27 @@ function candleSvg(day, dly, view, id) {
           const col = z.mit ? '#808080' : isBpr ? (z.bull ? '#00E676' : '#FF1744') : (z.bull ? '#00C853' : '#FF1744');
           zoneSvg += `<rect class="pc-sz ${isBpr ? 'pc-sz-bpr' : 'pc-sz-ifvg'}" x="${x0.toFixed(1)}" y="${yt.toFixed(1)}" width="${w.toFixed(1)}" height="${Math.max(1, yb - yt).toFixed(1)}" fill="${col}" fill-opacity="${z.mit ? 0.12 : isBpr ? 0.18 : 0.14}" stroke="${col}" stroke-opacity="${z.mit ? 0.32 : isBpr ? 0.38 : 0.34}" stroke-width="${isBpr ? 2 : 1}"${isBpr ? '' : ' stroke-dasharray="2 2"'}/>`;
         }
+      }
+    }
+    if (!RP && candleDtfx && CANDLE_DTFX_TF[candleHistTf]) { // DTFX Samurai : zones, Fibo 0,3 / 0,5 / 0,7 prolongés jusqu'à la dernière barre, points de structure
+      const dx = candleDtfxGet(id + '|' + candleHistTf, hist), xOf = (k) => edge - (Math.floor((hist.length - 1 - k) / sg) + 0.5) * hs, xEnd = xOf(hist.length - 1);
+      const zBox = (xa, xb, top, bot, col) => {
+        if (xb < 0 || xa > xMax) return;
+        const x0 = Math.max(-2, xa), yt = y(Math.max(top, bot)), yb = y(Math.min(top, bot));
+        zoneSvg += `<rect class="pc-dtfx" x="${x0.toFixed(1)}" y="${yt.toFixed(1)}" width="${Math.max(1, Math.min(xb, xMax + 2) - x0).toFixed(1)}" height="${Math.max(0.5, yb - yt).toFixed(1)}" fill="${col}" fill-opacity="0.2"/>`;
+      };
+      for (const z of dx.zones) {
+        const col = z.bull ? '#00FF00' : '#800080', r = z.top - z.bot, lv = (f) => (z.bull ? z.bot + r * f : z.top - r * f), xs = xOf(z.x1);
+        zBox(xOf(z.left), xOf(z.right), z.top, z.bot, col);
+        zBox(xOf(z.left), xEnd, lv(0.3), lv(0.7), col);
+        if (xEnd < 0 || xs > xMax) continue;
+        for (const [f, c, dash] of [[0.3, '#FFFF00', '5 4'], [0.5, '#FFFFFF', ''], [0.7, '#FFFF00', '5 4']]) zoneSvg += `<line class="pc-dtfx-fib" x1="${Math.max(-2, xs).toFixed(1)}" x2="${Math.min(xEnd, xMax + 2).toFixed(1)}" y1="${y(lv(f)).toFixed(1)}" y2="${y(lv(f)).toFixed(1)}" stroke="${c}" stroke-width="0.9"${dash ? ` stroke-dasharray="${dash}"` : ''}/>`;
+      }
+      if (sg === 1) { // points de structure comme le Pine (masqués seulement quand les bougies sont regroupées, très dézoomé)
+        const rad = Math.max(0.8, Math.min(2.2, hs0 * 0.36)).toFixed(1);
+        let d = '';
+        for (let j = jMin; j <= jMax; j++) { const i = hist.length - 1 - j, m = i >= 0 ? dx.dots[i] : 0; if (m) d += `<circle class="pc-dtfx-dot" cx="${(edge - (j + 0.5) * hs).toFixed(1)}" cy="${(m > 0 ? y(hist[i][2]) - 5 : y(hist[i][3]) + 5).toFixed(1)}" r="${rad}" fill="#808080"/>`; }
+        hb += d;
       }
     }
     if (!RP && !is1D && (candleHistTf === '1' || candleHistTf === '5')) { // plans Arii CDX SW : boîte de risque (entrée -> stop) + boîte de gain jusqu'au pic en R, couleur de la session
@@ -3305,6 +3370,8 @@ function candleSetMenuUpdate() {
   const pl = m.querySelector('[data-a="plans"]'), zn = m.querySelector('[data-a="zones"]');
   if (pl) pl.setAttribute('aria-checked', String(candlePlans));
   if (zn) zn.setAttribute('aria-checked', String(candleZones));
+  const dtb = m.querySelector('[data-a="dtfx"]');
+  if (dtb) dtb.setAttribute('aria-checked', String(candleDtfx));
   if (ai) ai.disabled = candleMini;
 }
 let candleMiniBack = null; // { id, top } : paire ouverte depuis la liste « 4 candles » et position de défilement, pour y revenir exactement
@@ -3374,6 +3441,12 @@ document.getElementById('candleSetMenu')?.addEventListener('click', (e) => {
     candleSetMenuUpdate();
     const id = candleCurId();
     if (id) { candleHistEnsure(id); candleRedraw(id, candleViewOf(id)); }
+  } else if (a.dataset.a === 'dtfx') {
+    candleDtfx = !candleDtfx;
+    try { localStorage.setItem('candleDtfx', candleDtfx ? '1' : '0'); } catch (err) { /* pas de stockage */ }
+    candleSetMenuUpdate();
+    const id = candleCurId();
+    if (id) candleRedraw(id, candleViewOf(id));
   } else if (a.dataset.a === 'mini') {
     candleMini = !candleMini;
     try { localStorage.setItem('candleMini', candleMini ? '1' : '0'); } catch (err) { /* pas de stockage */ }
