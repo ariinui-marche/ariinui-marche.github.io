@@ -2479,12 +2479,22 @@ function candleDtfxMerge(hist, m5, tf, fresh5) { // fresh5 : le fichier 5 min es
   }
   return out;
 }
-// Boules de sweep en 1h : calculées sur les barres 5 min, même règle qu'en 1 min / 5 min (cdx-plans.js, sweepMarks) — petite boule = sweep d'une période POH, grosse = sweep daily ; jour de trading précédent + en cours
+// Boules de sweep en 1h : calculées sur les barres 5 min, même règle qu'en 1 min / 5 min (cdx-plans.js, sweepMarks) — petite boule = sweep d'une période POH, grosse = sweep daily. candleSweepBalls = repli (jour précédent + en cours)
 function candleSweepBalls(bars) {
   if (!window.CDXP || !window.CDX || !bars || bars.length < 3) return null;
   const n = bars.length - 1, prevU = Math.floor((bars[n][0] - 36000 - 43200) / 86400) * 86400 + 36000 + 43200 - 86400;
   let j0 = n; while (j0 > 0 && bars[j0][0] >= prevU - 2 * 86400) j0--;
   return { poh: window.CDXP.sweepMarks(bars, j0, prevU, window.CDX.pohIx, true), d: window.CDXP.sweepMarks(bars, j0, prevU, window.CDX.brokerKeys.d1, false) };
+}
+const candleBallsCache = {}; // paire -> résultat sur tout l'historique 5 min (recalculé seulement quand les barres changent, jamais pendant un déplacement du graphique)
+function candleSweepBallsAll(id, bars) { // tout le fichier 5 min ; les 2 premiers jours servent à amorcer la règle (période précédente incomplète : pas de boules)
+  if (!window.CDXP || !window.CDX || !bars || bars.length < 3) return null;
+  const lb = bars[bars.length - 1], c = candleBallsCache[id];
+  if (c && c.bars === bars && c.n === bars.length && c.k === lb[0] + '|' + lb[2] + '|' + lb[3] + '|' + lb[4]) return c.v;
+  const from = bars[0][0] + 2 * 86400;
+  const v = { poh: window.CDXP.sweepMarks(bars, 0, from, window.CDX.pohIx, true), d: window.CDXP.sweepMarks(bars, 0, from, window.CDX.brokerKeys.d1, false) };
+  candleBallsCache[id] = { bars, n: bars.length, k: lb[0] + '|' + lb[2] + '|' + lb[3] + '|' + lb[4], v };
+  return v;
 }
 function candleDtfxGet(key, bars) {
   const a = bars[0], z = bars[bars.length - 1], p = bars[bars.length - 2] || z, k = bars.length + '|' + a[0] + '|' + p[2] + '|' + p[3] + '|' + p[4] + '|' + z[0] + '|' + z[2] + '|' + z[3] + '|' + z[4], c = candleDtfxCache[key];
@@ -2832,7 +2842,7 @@ function candleSvg(day, dly, view, id) {
       }
     }
     if (!RP && candleZones && candleHistTf === '60') { // boules de sweep en 1h (bouton « Zones ») ; bougie en cours complétée par les 5 min GitHub
-      const h5 = candleHistData[id + '|5'], sb = candleSweepBalls(h5 && h5.bars.length > 600 ? h5.bars : candleDtfxLive(id, '60', hist)); // 5 min = mêmes boules qu'en 5 min ; sinon 1h en attendant
+      const h5 = candleHistData[id + '|5'], sb = h5 && h5.bars.length > 600 ? candleSweepBallsAll(id, h5.bars) : candleSweepBalls(candleDtfxLive(id, '60', hist)); // tout l'historique 5 min ; en attendant son arrivée : 2 derniers jours sur la 1h
       if (sb) {
         const xOfT = (t) => { let a = 0, b = hist.length - 1; while (a < b) { const m = (a + b + 1) >> 1; if (hist[m][0] <= t) a = m; else b = m - 1; } return edge - (Math.floor((hist.length - 1 - a) / sg) + 0.5) * hs; };
         for (const [list, rad, cHi, cLo, op] of [[sb.poh, 4, '#F23645', '#089981', 0.85], [sb.d, 6, '#FF8A80', '#00E676', 0.9]]) {
