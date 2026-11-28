@@ -2247,7 +2247,7 @@ function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bou
   return staticFirst
     .then((sj) => sj) // plus de repli Vercel (économie du quota) : fichiers GitHub seulement
     .then((j) => {
-      if (j && j.bars && j.bars.length) h.bars = since && !j.full ? h.bars.filter((b) => b[0] < since).concat(j.bars) : j.bars;
+      if (j && j.bars && j.bars.length) { h.bars = since && !j.full ? h.bars.filter((b) => b[0] < since).concat(j.bars) : j.bars; h.upd = Date.parse(j.updated) || 0; }
       if ((tf === candleHistTf || tf === '1D' || tf === '1W' || tf === '240' || tf === '60' || rp.on || ((candlePlans || candleZones) && tf === '1' && candleHistTf === '5')) && !(cg.mode)) candleRedraw(id, candleViewOf(id));
       if (!since && tf === '1' && (id === 'EURUSD' || id === 'XAUUSD') && h.bars.length && !h.deep) candleDeepLoad(id, h); // historique profond MT5 1 min : EURUSD 250 000, XAUUSD 500 000 barres
     })
@@ -2441,8 +2441,43 @@ function candleDtfxCalc(bars) { // bars = [t,o,h,l,c] -> { zones (valides seulem
   }
   return { zones: alive.slice(-100), dots }; // limite Pine : 500 lignes = 100 zones de 5 lignes
 }
+// Bougie en cours de DTFX : la série 1h / 4h / D du fichier est complétée avec les 5 min récentes (fichiers GitHub uniquement : AUCUN appel Vercel).
+// Seule la série du CALCUL est complétée, les bougies affichées à gauche ne changent pas. S'il manque des 5 min entre les deux fichiers, rien n'est ajouté (jamais de trou).
+const candleDtfxLiveCache = {};
+function candleDtfxLive(id, tf, hist) {
+  const m = candleDay5[id], h = candleHistData[id + '|' + tf];
+  if (!m || !m.bars.length || !hist.length) return hist;
+  const key = id + '|' + tf, hu = (h && h.upd) || 0, mu = m.upd || 0, c = candleDtfxLiveCache[key];
+  if (c && c.hist === hist && c.m5 === m.bars && c.hu === hu && c.mu === mu) return c.v;
+  const v = candleDtfxMerge(hist, m.bars, tf, mu >= hu);
+  candleDtfxLiveCache[key] = { hist, m5: m.bars, hu, mu, v };
+  return v;
+}
+function candleDtfxMerge(hist, m5, tf, fresh5) { // fresh5 : le fichier 5 min est au moins aussi récent que le fichier 1h / 4h / D (sinon la clôture du fichier est gardée)
+  const sec = tf === '1D' ? 86400 : tf * 60, last = hist[hist.length - 1], lastT = last[0];
+  const day = (t) => Math.floor((t + 7200) / 86400); // journée de trading UTC+2, comme le jeu D
+  const dayStart = (k) => k * 86400 - 7200;
+  if (m5[0][0] > (tf === '1D' ? dayStart(day(lastT) + 1) : lastT + sec)) return hist; // trou entre les deux fichiers
+  const part = m5.filter((b) => b[0] >= lastT);
+  if (!part.length) return hist;
+  const groups = new Map();
+  for (const b of part) {
+    const k = tf === '1D' ? day(b[0]) : Math.floor((b[0] - lastT) / sec); // 1h / 4h : rang après la dernière bougie du fichier (même calage)
+    const g = groups.get(k);
+    if (!g) groups.set(k, [b[0], b[1], b[2], b[3], b[4]]);
+    else { g[2] = Math.max(g[2], b[2]); g[3] = Math.min(g[3], b[3]); g[4] = b[4]; }
+  }
+  const out = hist.slice(), lastK = tf === '1D' ? day(lastT) : 0;
+  for (const [k, g] of groups) {
+    if (k === lastK) { out[out.length - 1] = [lastT, last[1], Math.max(last[2], g[2]), Math.min(last[3], g[3]), fresh5 ? g[4] : last[4]]; continue; }
+    const start = tf === '1D' ? dayStart(k) : lastT + k * sec;
+    if (tf === '1D' ? m5[0][0] > start : g[0] - start > 360) break; // début de la bougie manquant : on s'arrête là
+    out.push([tf === '1D' ? g[0] : start, g[1], g[2], g[3], g[4]]);
+  }
+  return out;
+}
 function candleDtfxGet(key, bars) {
-  const a = bars[0], z = bars[bars.length - 1], k = bars.length + '|' + a[0] + '|' + z[0] + '|' + z[2] + '|' + z[3] + '|' + z[4], c = candleDtfxCache[key];
+  const a = bars[0], z = bars[bars.length - 1], p = bars[bars.length - 2] || z, k = bars.length + '|' + a[0] + '|' + p[2] + '|' + p[3] + '|' + p[4] + '|' + z[0] + '|' + z[2] + '|' + z[3] + '|' + z[4], c = candleDtfxCache[key];
   return c && c.k === k ? c.v : (candleDtfxCache[key] = { k, v: candleDtfxCalc(bars) }).v;
 }
 // ===== Partie droite du graphique : jeux de bougies placés comme dans DTFX — 30m, 1h, 4h, journalier (de gauche à droite), les plus récentes à droite de chaque jeu, avec les bougies jaunes =====
@@ -2469,7 +2504,7 @@ function candleDayEnsure(id) { // charge les 1h, 4h, 1D et les 5 min récentes d
   m.at = Date.now(); // délai compté depuis le début de la lecture : la minute suivante relit bien
   fetch(`https://raw.githubusercontent.com/ariinui-marche/ariinui-marche.github.io/candle-data/5/${id}.recent.json`, { cache: 'no-store', signal: AbortSignal.timeout(15000) })
     .then((r) => (r.ok ? r.json() : null))
-    .then((j) => { if (j && j.bars && j.bars.length) { m.bars = j.bars; if (!cg.mode && !cg.pts.size && !rp.on) candleRedraw(id, candleViewOf(id)); } })
+    .then((j) => { if (j && j.bars && j.bars.length) { m.bars = j.bars; m.upd = Date.parse(j.updated) || 0; if (!cg.mode && !cg.pts.size && !rp.on) candleRedraw(id, candleViewOf(id)); } })
     .catch(() => { /* on garde les bougies déjà chargées */ })
     .finally(() => { m.busy = false; });
 }
@@ -2751,14 +2786,14 @@ function candleSvg(day, dly, view, id) {
       }
     }
     if (!RP && candleDtfx && CANDLE_DTFX_TF[candleHistTf]) { // DTFX Samurai : zones, Fibo 0,3 / 0,5 / 0,7 prolongés jusqu'à la dernière barre, points de structure
-      const dx = candleDtfxGet(id + '|' + candleHistTf, hist), xOf = (k) => edge - (Math.floor((hist.length - 1 - k) / sg) + 0.5) * hs, xEnd = xOf(hist.length - 1);
+      const dx = candleDtfxGet(id + '|' + candleHistTf, candleDtfxLive(id, candleHistTf, hist)), xOf = (k) => edge - (Math.floor((hist.length - 1 - Math.min(k, hist.length - 1)) / sg) + 0.5) * hs, xEnd = xOf(hist.length - 1); // bougie ajoutée par les 5 min : dessinée sur la dernière barre affichée
       const zBox = (xa, xb, top, bot, col) => {
         if (xb < 0 || xa > xMax) return;
         const x0 = Math.max(-2, xa), yt = y(Math.max(top, bot)), yb = y(Math.min(top, bot));
         zoneSvg += `<rect class="pc-dtfx" x="${x0.toFixed(1)}" y="${yt.toFixed(1)}" width="${Math.max(1, Math.min(xb, xMax + 2) - x0).toFixed(1)}" height="${Math.max(0.5, yb - yt).toFixed(1)}" fill="${col}" fill-opacity="0.2"/>`;
       };
       for (const z of dx.zones) {
-        const col = z.bull ? '#00FF00' : '#800080', r = z.top - z.bot, lv = (f) => (z.bull ? z.bot + r * f : z.top - r * f), xs = xOf(z.x1);
+        const col = z.bull ? '#00FF00' : '#800080', r = z.top - z.bot, lv = (f) => (z.bull ? z.bot + r * f : z.top - r * f), xs = xOf(Math.min(z.x1, hist.length - 2));
         zBox(xOf(z.left), xOf(z.right), z.top, z.bot, col);
         zBox(xOf(z.left), xEnd, lv(0.3), lv(0.7), col);
         if (xEnd < 0 || xs > xMax) continue;
