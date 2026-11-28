@@ -1,8 +1,3 @@
-1791981000	USD	Core Inflation Rate MoM	0.3%	0.2%	0.3%
-1791981000	USD	Core Inflation Rate YoY	2.6%	2.5%	2.4%
-1791981000	USD	Inflation Rate MoM	0.6%	0.6%	0.4%
-1791981000	USD	Inflation Rate YoY	3.7%	3.6%	3.4%
-1791999000	USD	FOMC Member Barkin Speaks			
 1792004400	USD	FOMC Member Goolsbee Speaks			
 1792024200	AUD	Employment Change		19.6K	39.5K
 1792024200	AUD	Unemployment Rate		4.6%	4.6%
