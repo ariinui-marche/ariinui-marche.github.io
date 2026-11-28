@@ -2490,6 +2490,21 @@ function candleDtfxGet(key, bars) {
   const a = bars[0], z = bars[bars.length - 1], p = bars[bars.length - 2] || z, k = bars.length + '|' + a[0] + '|' + p[2] + '|' + p[3] + '|' + p[4] + '|' + z[0] + '|' + z[2] + '|' + z[3] + '|' + z[4], c = candleDtfxCache[key];
   return c && c.k === k ? c.v : (candleDtfxCache[key] = { k, v: candleDtfxCalc(bars) }).v;
 }
+// ===== Bandes de Bollinger (copie de « Bollinger.txt », réglages par défaut) : SMA 20 de la clôture, 2 écarts-types, en 1h / 4h / D. Calcul dans le navigateur (aucun appel serveur). =====
+const CANDLE_BB_LEN = 20, CANDLE_BB_MULT = 2, CANDLE_BB_TF = { 60: 1, 240: 1, '1D': 1 };
+let candleBb = true; // roue > « BB » (enregistré)
+try { candleBb = localStorage.getItem('candleBb') !== '0'; } catch (e) { /* pas de stockage */ }
+function candleBbAt(bars, i) { // { m, u, l } à la barre i, ou null tant qu'il n'y a pas 20 barres ; écart-type de population, comme ta.stdev
+  const n = CANDLE_BB_LEN;
+  if (i < n - 1 || i >= bars.length) return null;
+  let sum = 0;
+  for (let q = i - n + 1; q <= i; q++) sum += bars[q][4];
+  const m = sum / n;
+  let v = 0;
+  for (let q = i - n + 1; q <= i; q++) { const d = bars[q][4] - m; v += d * d; }
+  const dev = CANDLE_BB_MULT * Math.sqrt(v / n);
+  return { m, u: m + dev, l: m - dev };
+}
 // ===== Partie droite du graphique : jeux de bougies placés comme dans DTFX — 30m, 1h, 4h, journalier (de gauche à droite), les plus récentes à droite de chaque jeu, avec les bougies jaunes =====
 // Nombre de bougies réglable par jeu (roue ⚙, 1 à 20, 5 par défaut, mémorisé sur l'appareil). Données : fichiers GitHub UNIQUEMENT (aucun appel Vercel).
 const CANDLE_SETS = [['30', '30m', 1800], ['60', '1h', 3600], ['240', '4h', 14400], ['1D', 'D', 86400]];
@@ -2827,6 +2842,19 @@ function candleSvg(day, dly, view, id) {
             hb += `<circle class="pc-ball" cx="${x.toFixed(1)}" cy="${yy.toFixed(1)}" r="${rad}" fill="${m.hi ? cHi : cLo}" fill-opacity="${op}"/>`;
           }
         }
+      }
+    }
+    if (!RP && candleBb && CANDLE_BB_TF[candleHistTf]) { // Bollinger sur les bougies affichées : centre bleu, bande haute rouge, bande basse verte, fond bleu à 5 %
+      const up = [], mid = [], low = [];
+      for (let j = jMax; j >= jMin; j--) {
+        const b = candleBbAt(hist, hist.length - 1 - j * sg);
+        if (!b) continue;
+        const x = (edge - (j + 0.5) * hs).toFixed(1);
+        up.push(x + ',' + y(b.u).toFixed(1)); mid.push(x + ',' + y(b.m).toFixed(1)); low.push(x + ',' + y(b.l).toFixed(1));
+      }
+      if (up.length > 1) {
+        zoneSvg += `<polygon class="pc-bbfill" points="${up.concat(low.slice().reverse()).join(' ')}" fill="#2196F3" fill-opacity="0.05"/>`;
+        for (const [pts, col] of [[mid, '#2962FF'], [up, '#F23645'], [low, '#089981']]) hb += `<polyline class="pc-bb" points="${pts.join(' ')}" fill="none" stroke="${col}" stroke-width="0.9" stroke-linejoin="round"/>`;
       }
     }
     if (!RP && !is1D && (candleHistTf === '1' || candleHistTf === '5')) { // plans Arii CDX SW : boîte de risque (entrée -> stop) + boîte de gain jusqu'au pic en R, couleur de la session
@@ -3430,6 +3458,8 @@ function candleSetMenuUpdate() {
   if (zn) zn.setAttribute('aria-checked', String(candleZones));
   const dtb = m.querySelector('[data-a="dtfx"]');
   if (dtb) dtb.setAttribute('aria-checked', String(candleDtfx));
+  const bbb = m.querySelector('[data-a="bb"]');
+  if (bbb) bbb.setAttribute('aria-checked', String(candleBb));
   if (ai) ai.disabled = candleMini;
 }
 let candleMiniBack = null; // { id, top } : paire ouverte depuis la liste « 4 candles » et position de défilement, pour y revenir exactement
@@ -3499,6 +3529,12 @@ document.getElementById('candleSetMenu')?.addEventListener('click', (e) => {
     candleSetMenuUpdate();
     const id = candleCurId();
     if (id) { candleHistEnsure(id); candleRedraw(id, candleViewOf(id)); }
+  } else if (a.dataset.a === 'bb') {
+    candleBb = !candleBb;
+    try { localStorage.setItem('candleBb', candleBb ? '1' : '0'); } catch (err) { /* pas de stockage */ }
+    candleSetMenuUpdate();
+    const id = candleCurId();
+    if (id) candleRedraw(id, candleViewOf(id));
   } else if (a.dataset.a === 'dtfx') {
     candleDtfx = !candleDtfx;
     try { localStorage.setItem('candleDtfx', candleDtfx ? '1' : '0'); } catch (err) { /* pas de stockage */ }
