@@ -2349,7 +2349,9 @@ function candlePeriodLevels(bars, d0t) {
   return out;
 }
 const CANDLE_UP = '#00a3e0', CANDLE_DN = '#ffffff'; // couleurs des bougies comme TradingView (haussière bleue, baissière blanche)
-const CANDLE_G = { AX: 60, TOP: 44, BOT: 14, LEFT: 4 }; // géométrie du graphique (aussi utilisée par les gestes)
+const CANDLE_AX = 42; // largeur de l'échelle de prix (minimum lisible en 10 px) : 7 caractères tiennent tels quels, au-delà le texte est resserré par candleAxFit
+const candleAxFit = (t) => (String(t).length > 7 ? ` textLength="${CANDLE_AX - 4}" lengthAdjust="spacingAndGlyphs"` : '');
+const CANDLE_G = { AX: CANDLE_AX, TOP: 44, BOT: 14, LEFT: 4 }; // géométrie du graphique (aussi utilisée par les gestes)
 if (candleClean) CANDLE_G.AX = 0;
 // Biais multi-timeframe (D1, H4, H1) : dernière clôture vs EMA 8 ET EMA 21 (▲ prix au-dessus des deux, ▼ en dessous des deux, 0 = mixte). 0 aussi = pas assez de bougies / pas encore chargées.
 // load = true : les bougies manquantes sont chargées en fond (4 à la fois), puis graphique / filtre « Bias » remis à jour. Résultat mis en cache tant que les bougies ne changent pas.
@@ -2602,7 +2604,7 @@ function candleSvg(day, dly, view, id) {
   const stepP = candleNiceStep(rng, 8);
   let grid = '';
   for (let v = Math.ceil(lo / stepP) * stepP; v <= hi; v += stepP) {
-    grid += `<text x="${W - AX + 6}" y="${(y(v) + 4).toFixed(1)}" class="pc-ax">${fmt(v)}</text>`; // seuls les chiffres de l'échelle : plus de lignes grises horizontales
+    grid += `<text x="${W - AX + 3}" y="${(y(v) + 4).toFixed(1)}" class="pc-ax pc-pax"${candleAxFit(fmt(v))}>${fmt(v)}</text>`; // seuls les chiffres de l'échelle : plus de lignes grises horizontales
   }
   // avec l'historique : les POH occupent la moitié droite, l'historique la moitié gauche ; zoom/déplacement s'appliquent à l'ensemble
   const split = hist ? 0.5 : 0, plotW0 = W - AX - LEFT, stepB = plotW0 * (1 - split) / units;
@@ -2891,7 +2893,7 @@ function candleSvg(day, dly, view, id) {
   }
   // taille des étiquettes Fibo : 16 px au maximum, réduite selon l'écart réel entre deux lignes. Écart trop petit pour les empiler (< 8 px) : 3 colonnes côte à côte, chacune toujours sur sa ligne.
   const fibGap = fibT.length > 1 ? Math.min(...fibT.map((a) => a.y).sort((a, b) => a - b).map((v, i, l) => (i ? v - l[i - 1] : Infinity))) : Infinity;
-  const fibCol = fibGap < 8, fibH = fibCol ? 9 : Math.min(16, fibGap), fibFs = fibCol ? 7.5 : Math.max(6.5, fibH * 0.625);
+  const fibCol = fibGap < 8, fibH = fibCol ? 9 : Math.min(16, fibGap), fibFs = fibCol ? 6.5 : Math.max(6.5, fibH * 0.625);
   { // étiquettes de lignes : jamais l'une sur l'autre, ni sur l'étiquette du dernier prix ou le groupe Fibo (obstacles fixes), restent dans la zone du graphique
     const obs = [{ y: yl, p: true, h: 20 }];
     if (fibT.length) { const ys = fibT.map((a) => a.y), y0 = Math.min(...ys) - fibH / 2, y1 = Math.max(...ys) + fibH / 2; obs.push({ y: (y0 + y1) / 2, p: true, h: y1 - y0 }); }
@@ -2910,7 +2912,7 @@ function candleSvg(day, dly, view, id) {
   }).join('');
   const tag = `<line x1="0" x2="${W - AX}" y1="${yl.toFixed(1)}" y2="${yl.toFixed(1)}" stroke="${lastCol}" stroke-width="0.7" stroke-dasharray="2 3"/>` +
     `<rect x="${W - AX + 1}" y="${(yl - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
-    `<text x="${W - AX + 6}" y="${(yl + 4).toFixed(1)}" class="pc-ax" style="fill:#fff">${fmt(lastC)}</text>`;
+    `<text x="${W - AX + 3}" y="${(yl + 4).toFixed(1)}" class="pc-ax pc-pax" style="fill:#fff"${candleAxFit(fmt(lastC))}>${fmt(lastC)}</text>`;
   return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${RP ? '' : grid}<g clip-path="url(#pcClip)">${sepSvg}${zoneSvg}${hb}${fib}${pd}${body}${evb}${RP ? candleRpOverlay(y, W - AX, fmt, lo, hi, lastC) : candleAlSvg(id, y, W - AX, lo, hi, fmt)}</g>${RP || !id ? '' : (() => { const bi = candleBias(id), c = (v) => (v > 0 ? '#089981' : v < 0 ? '#f23645' : '#787b86'), g = (v) => (v > 0 ? '▲' : v < 0 ? '▼' : '—'); return `<text x="${W - AX - 6}" y="14" text-anchor="end" class="pc-ax" style="font-size:10px"><tspan fill="#d1d4dc">BIAS</tspan><tspan fill="${c(bi.d)}" dx="6">D1 ${g(bi.d)}</tspan><tspan fill="${c(bi.h)}" dx="6">H4 ${g(bi.h)}</tspan><tspan fill="${c(bi.u)}" dx="6">H1 ${g(bi.u)}</tspan></text>`; })()}${RP ? '' : axl}${RP ? '' : tag}${RP ? '' : fibL}${!RP && candleXh && candleXh.id === id ? candleXhSvg(candleXh, W, H, AX, TOP, BOT, lo, rng, fmt, xhT) : ''}</svg>`;
 }
 
@@ -3257,7 +3259,7 @@ document.getElementById('candleClose')?.addEventListener('click', () => document
 function candleCleanApply() { // mode épuré : échelle de prix + rangée Fibo / Sweep / F+S masquées
   const b = document.getElementById('candleBody');
   if (b) b.classList.toggle('cc-clean', candleClean);
-  CANDLE_G.AX = rp.on || candleClean ? 0 : 60;
+  CANDLE_G.AX = rp.on || candleClean ? 0 : CANDLE_AX;
 }
 candleCleanApply();
 document.getElementById('candleList').addEventListener('click', (e) => { // clic sur le nom du symbole : bascule le mode épuré (enregistré)
@@ -3954,7 +3956,7 @@ function candleRpUi() { // texte d'état + boutons
 function candleRpMode(on) { // replay plein écran façon TradingView : plus de barre du haut (Fibo/Sweep/F+S), ni de barre du bas (périodes), ni d'échelle de prix à droite
   const body = document.getElementById('candleBody');
   if (body) body.classList.toggle('rp-mode', !!on);
-  CANDLE_G.AX = on || candleClean ? 0 : 60;
+  CANDLE_G.AX = on || candleClean ? 0 : CANDLE_AX;
 }
 function candleRpSync() { // le panneau n'apparaît que sur la paire en replay ; en changeant de paire, la lecture se met en pause
   const p = rpEl('candleRp');
@@ -4147,7 +4149,7 @@ function candleXhSvg(c, W, H, AX, TOP, BOT, lo, rng, fmt, tm) { // croix en poin
   let o = `<line x1="${x.toFixed(1)}" x2="${x.toFixed(1)}" y1="0" y2="${H - BOT}" ${ln}/><line x1="0" x2="${xr}" y1="${yy.toFixed(1)}" y2="${yy.toFixed(1)}" ${ln}/>` +
     `<rect x="${xr - 28}" y="${(yy - 11).toFixed(1)}" width="${AX + 27}" height="22" rx="3" fill="#2a2e39"/>` +
     `<circle cx="${xr - 15}" cy="${yy.toFixed(1)}" r="9.5" fill="none" stroke="#fff" stroke-width="1.4"/><path d="M${xr - 20} ${yy.toFixed(1)}h10M${xr - 15} ${(yy - 5).toFixed(1)}v10" stroke="#fff" stroke-width="1.4"/>` +
-    `<text x="${xr + 6}" y="${(yy + 4).toFixed(1)}" class="pc-ax" style="fill:#fff;font-size:11px">${fmt(px)}</text>`;
+    `<text x="${xr + 3}" y="${(yy + 4).toFixed(1)}" class="pc-ax pc-pax" style="fill:#fff"${candleAxFit(fmt(px))}>${fmt(px)}</text>`;
   if (tm) { const w = tm.length * 6.4 + 14, tx = Math.min(xr - w, Math.max(0, x - w / 2)); o += `<rect x="${tx.toFixed(1)}" y="${H - 21}" width="${w.toFixed(1)}" height="19" rx="3" fill="#2a2e39"/><text x="${(tx + w / 2).toFixed(1)}" y="${H - 8}" text-anchor="middle" style="fill:#fff;font-size:11px;pointer-events:none">${tm}</text>`; }
   return o;
 }

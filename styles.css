@@ -1202,6 +1202,7 @@ body.focus-on main > section:has(#trendGrid) { order: 4; }
 .pc-list { display: flex; flex-direction: column; gap: 14px; }
 .pc-svg { display: block; }
 .pc-ax { fill: #9aa0a6; font-size: 11px; }
+.pc-pax { font-size: 10px; font-variant-numeric: tabular-nums; }
 body.cc-lock { overflow: hidden; }
 #candleBody:not(.collapsed) { position: fixed; inset: 0; z-index: 1000; background: #0b0b0b; display: flex; flex-direction: column; }
 #candleBody:not(.collapsed) .cc-nav { flex: 0 0 48px; padding: 0; background: #0b0b0b; border-bottom: 1px solid #1d1f24; }
