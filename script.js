@@ -2232,6 +2232,7 @@ const CANDLE_STATIC = new Set('EURUSD GBPUSD USDJPY AUDUSD USDCAD USDCHF NZDUSD 
 function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bougies de la paire affichée, puis redessine EN PLACE
   if (!id || (candleHistTf === '0' && !tfx)) return;
   if (!tfx && (candlePlans || candleZones) && candleHistTf === '5') candleHistEnsure(id, '1'); // plans en 5 min : confirmation sur les barres 1 min
+  if (!tfx && candleZones && candleHistTf === '60') candleHistEnsure(id, '5'); // boules de sweep en 1h
   const tf = tfx || candleHistTf, key = id + '|' + tf, h = candleHistData[key] || (candleHistData[key] = { bars: [], at: 0, busy: false });
   if (h.busy || Date.now() - h.at < (tf === '1' || tf === '5' ? 25000 : 300000)) return; // 1h / 4h / 1D : fichiers plus lourds, rechargés au plus toutes les 5 min
   h.busy = true;
@@ -2248,7 +2249,7 @@ function candleHistEnsure(id, tfx) { // charge (au plus toutes les 25 s) les bou
     .then((sj) => sj) // plus de repli Vercel (économie du quota) : fichiers GitHub seulement
     .then((j) => {
       if (j && j.bars && j.bars.length) { h.bars = since && !j.full ? h.bars.filter((b) => b[0] < since).concat(j.bars) : j.bars; h.upd = Date.parse(j.updated) || 0; }
-      if ((tf === candleHistTf || tf === '1D' || tf === '1W' || tf === '240' || tf === '60' || rp.on || ((candlePlans || candleZones) && tf === '1' && candleHistTf === '5')) && !(cg.mode)) candleRedraw(id, candleViewOf(id));
+      if ((tf === candleHistTf || tf === '1D' || tf === '1W' || tf === '240' || tf === '60' || rp.on || (candleZones && tf === '5' && candleHistTf === '60') || ((candlePlans || candleZones) && tf === '1' && candleHistTf === '5')) && !(cg.mode)) candleRedraw(id, candleViewOf(id));
       if (!since && tf === '1' && (id === 'EURUSD' || id === 'XAUUSD') && h.bars.length && !h.deep) candleDeepLoad(id, h); // historique profond MT5 1 min : EURUSD 250 000, XAUUSD 500 000 barres
     })
     .catch(() => { /* on garde ce qui est affiché */ })
@@ -2478,6 +2479,13 @@ function candleDtfxMerge(hist, m5, tf, fresh5) { // fresh5 : le fichier 5 min es
   }
   return out;
 }
+// Boules de sweep en 1h : calculées sur les barres 5 min, même règle qu'en 1 min / 5 min (cdx-plans.js, sweepMarks) — petite boule = sweep d'une période POH, grosse = sweep daily ; jour de trading précédent + en cours
+function candleSweepBalls(bars) {
+  if (!window.CDXP || !window.CDX || !bars || bars.length < 3) return null;
+  const n = bars.length - 1, prevU = Math.floor((bars[n][0] - 36000 - 43200) / 86400) * 86400 + 36000 + 43200 - 86400;
+  let j0 = n; while (j0 > 0 && bars[j0][0] >= prevU - 2 * 86400) j0--;
+  return { poh: window.CDXP.sweepMarks(bars, j0, prevU, window.CDX.pohIx, true), d: window.CDXP.sweepMarks(bars, j0, prevU, window.CDX.brokerKeys.d1, false) };
+}
 function candleDtfxGet(key, bars) {
   const a = bars[0], z = bars[bars.length - 1], p = bars[bars.length - 2] || z, k = bars.length + '|' + a[0] + '|' + p[2] + '|' + p[3] + '|' + p[4] + '|' + z[0] + '|' + z[2] + '|' + z[3] + '|' + z[4], c = candleDtfxCache[key];
   return c && c.k === k ? c.v : (candleDtfxCache[key] = { k, v: candleDtfxCalc(bars) }).v;
@@ -2500,6 +2508,7 @@ function candleDayEnsure(id) { // charge les 1h, 4h, 1D et les 5 min récentes d
   candleHistEnsure(id, '60');
   candleHistEnsure(id, '240');
   candleHistEnsure(id, '1D'); // jeu journalier + PWH/PWL et PMH/PML (au plus toutes les 5 min)
+  if (candleZones && candleHistTf === '60') candleHistEnsure(id, '5'); // boules de sweep en 1h : calculées sur les 5 min (fichier GitHub)
   const m = candleDay5[id] || (candleDay5[id] = { bars: [], at: 0, busy: false });
   if (m.busy || Date.now() - m.at < 55000) return;
   m.busy = true;
@@ -2805,6 +2814,19 @@ function candleSvg(day, dly, view, id) {
         let d = '';
         for (let j = jMin; j <= jMax; j++) { const i = hist.length - 1 - j, m = i >= 0 ? dx.dots[i] : 0; if (m) d += `<circle class="pc-dtfx-dot" cx="${(edge - (j + 0.5) * hs).toFixed(1)}" cy="${(m > 0 ? y(hist[i][2]) - 5 : y(hist[i][3]) + 5).toFixed(1)}" r="${rad}" fill="#808080"/>`; }
         hb += d;
+      }
+    }
+    if (!RP && candleZones && candleHistTf === '60') { // boules de sweep en 1h (bouton « Zones ») ; bougie en cours complétée par les 5 min GitHub
+      const h5 = candleHistData[id + '|5'], sb = candleSweepBalls(h5 && h5.bars.length > 600 ? h5.bars : candleDtfxLive(id, '60', hist)); // 5 min = mêmes boules qu'en 5 min ; sinon 1h en attendant
+      if (sb) {
+        const xOfT = (t) => { let a = 0, b = hist.length - 1; while (a < b) { const m = (a + b + 1) >> 1; if (hist[m][0] <= t) a = m; else b = m - 1; } return edge - (Math.floor((hist.length - 1 - a) / sg) + 0.5) * hs; };
+        for (const [list, rad, cHi, cLo, op] of [[sb.poh, 4, '#F23645', '#089981', 0.85], [sb.d, 6, '#FF8A80', '#00E676', 0.9]]) {
+          for (const m of list) {
+            const x = xOfT(m.t), yy = y(m.p);
+            if (x < -10 || x > xMax + 10 || yy < TOP - 20 || yy > H) continue;
+            hb += `<circle class="pc-ball" cx="${x.toFixed(1)}" cy="${yy.toFixed(1)}" r="${rad}" fill="${m.hi ? cHi : cLo}" fill-opacity="${op}"/>`;
+          }
+        }
       }
     }
     if (!RP && !is1D && (candleHistTf === '1' || candleHistTf === '5')) { // plans Arii CDX SW : boîte de risque (entrée -> stop) + boîte de gain jusqu'au pic en R, couleur de la session
