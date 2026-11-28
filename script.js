@@ -2295,7 +2295,7 @@ async function candleDeepLoadApi(id, h) {
 // Dimensions réelles de la zone graphique (plein écran) : le SVG est dessiné à l'échelle 1:1, sans déformation
 function candleDims() {
   const rpp = rp.on ? document.getElementById('rpBar') : null; // replay : barres du haut et du bas masquées, seule la barre d'icônes du replay occupe le bas
-  return { W: Math.max(300, Math.round(window.innerWidth)), H: Math.max(300, Math.round(window.innerHeight) - (rpp && rpp.offsetHeight ? rpp.offsetHeight : rp.on ? 58 : candleClean ? 46 : 90)) };
+  return { W: Math.max(300, Math.round(window.innerWidth)), H: Math.max(300, Math.round(window.innerHeight) - (rpp && rpp.offsetHeight ? rpp.offsetHeight : rp.on ? 58 : 46)) };
 }
 function candleNiceStep(rng, n) {
   const raw = rng / n, p = Math.pow(10, Math.floor(Math.log10(raw))), m = raw / p;
@@ -2739,7 +2739,6 @@ function candleSvg(day, dly, view, id) {
         for (let j = jMax; j >= jMin; j--) { const i0 = hist.length - 1 - j * sg; if (i0 < n - 1 || i0 >= hist.length) continue; pts += `${(edge - (j + 0.5) * hs).toFixed(1)},${y(ev[i0]).toFixed(1)} `; }
         if (pts) hb += `<polyline points="${pts.trim()}" fill="none" stroke="${colM}" stroke-width="0.9" stroke-linejoin="round" stroke-opacity=".95"/>`;
       }
-      hb += `<text x="6" y="14" class="pc-ax" style="font-size:10px"><tspan fill="#FF9800">EMA 8</tspan><tspan fill="#E040FB" dx="10">EMA 21</tspan></text>`;
     }
     if (!is1D && futStart < xMax + 60) { // axe du temps du FUTUR (à droite des POH) : mêmes règles que l'historique, jours ouvrés seulement
       const nBar = (t) => Math.round(openSecs(tLast, t + barShift) / tfSec);
@@ -2913,7 +2912,7 @@ function candleSvg(day, dly, view, id) {
   const tag = `<line x1="0" x2="${W - AX}" y1="${yl.toFixed(1)}" y2="${yl.toFixed(1)}" stroke="${lastCol}" stroke-width="0.7" stroke-dasharray="2 3"/>` +
     `<rect x="${W - AX + 1}" y="${(yl - 10).toFixed(1)}" width="${AX - 2}" height="20" fill="${lastCol}"/>` +
     `<text x="${W - AX + 3}" y="${(yl + 4).toFixed(1)}" class="pc-ax pc-pax" style="fill:#fff"${candleAxFit(fmt(lastC))}>${fmt(lastC)}</text>`;
-  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${RP ? '' : grid}<g clip-path="url(#pcClip)">${sepSvg}${zoneSvg}${hb}${fib}${pd}${body}${evb}${RP ? candleRpOverlay(y, W - AX, fmt, lo, hi, lastC) : candleAlSvg(id, y, W - AX, lo, hi, fmt)}</g>${RP || !id ? '' : (() => { const bi = candleBias(id), c = (v) => (v > 0 ? '#089981' : v < 0 ? '#f23645' : '#787b86'), g = (v) => (v > 0 ? '▲' : v < 0 ? '▼' : '—'); return `<text x="${W - AX - 6}" y="14" text-anchor="end" class="pc-ax" style="font-size:10px"><tspan fill="#d1d4dc">BIAS</tspan><tspan fill="${c(bi.d)}" dx="6">D1 ${g(bi.d)}</tspan><tspan fill="${c(bi.h)}" dx="6">H4 ${g(bi.h)}</tspan><tspan fill="${c(bi.u)}" dx="6">H1 ${g(bi.u)}</tspan></text>`; })()}${RP ? '' : axl}${RP ? '' : tag}${RP ? '' : fibL}${!RP && candleXh && candleXh.id === id ? candleXhSvg(candleXh, W, H, AX, TOP, BOT, lo, rng, fmt, xhT) : ''}</svg>`;
+  return `<svg class="pc-svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" aria-hidden="true"><defs><clipPath id="pcClip"><rect x="0" y="0" width="${W - AX}" height="${H}"/></clipPath></defs>${RP ? '' : grid}<g clip-path="url(#pcClip)">${sepSvg}${zoneSvg}${hb}${fib}${pd}${body}${evb}${RP ? candleRpOverlay(y, W - AX, fmt, lo, hi, lastC) : candleAlSvg(id, y, W - AX, lo, hi, fmt)}</g>${RP || !id ? '' : (() => { const bi = candleBias(id), c = (v) => (v > 0 ? '#089981' : v < 0 ? '#f23645' : '#787b86'), g = (v) => (v > 0 ? '▲' : v < 0 ? '▼' : '—'); return `<text class="pc-ax pc-bias" x="12" y="46" style="font-size:10px"><tspan fill="#d1d4dc">BIAS</tspan><tspan fill="${c(bi.d)}" dx="6">D1 ${g(bi.d)}</tspan><tspan fill="${c(bi.h)}" dx="6">H4 ${g(bi.h)}</tspan><tspan fill="${c(bi.u)}" dx="6">H1 ${g(bi.u)}</tspan></text>`; })()}${RP ? '' : axl}${RP ? '' : tag}${RP ? '' : fibL}${!RP && candleXh && candleXh.id === id ? candleXhSvg(candleXh, W, H, AX, TOP, BOT, lo, rng, fmt, xhT) : ''}</svg>`;
 }
 
 // Sweep de la bougie daily précédente (même règle qu'Arii SNIPER) : D0 dépasse le haut de D1 et clôture dessous, ou casse son bas et clôture dessus
@@ -3255,7 +3254,7 @@ document.getElementById('candleStrip')?.addEventListener('click', (e) => {
     Promise.all([alerteLoad(), candleAlFetch()]).then(() => { if (candleF.alert && candlePoh) { candleRender(); document.getElementById('candleList').scrollLeft = 0; candleNavUpdate(); } });
   }
 });
-document.getElementById('candleClose')?.addEventListener('click', () => document.getElementById('candleToggle').click());
+document.getElementById('candleClose')?.addEventListener('click', () => { const m = document.getElementById('candleSetMenu'); if (m) m.hidden = true; document.getElementById('candleSet')?.setAttribute('aria-expanded', 'false'); document.getElementById('candleToggle').click(); }); // bouton dans la roue ⚙
 function candleCleanApply() { // mode épuré : échelle de prix + rangée Fibo / Sweep / F+S masquées
   const b = document.getElementById('candleBody');
   if (b) b.classList.toggle('cc-clean', candleClean);
